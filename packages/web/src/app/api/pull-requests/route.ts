@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { ApiResponse, PullRequest } from "@ui-as-code/shared";
+import type { ApiResponse, PullRequest } from "@/types";
 
 // In-memory store for MVP; will be replaced with Supabase
 const pullRequests: PullRequest[] = [];

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { GenerateDiffInput, GenerateDiffOutput } from "@ui-as-code/shared";
+import type { GenerateDiffInput, GenerateDiffOutput } from "@/types";
 
 export async function POST(req: NextRequest) {
   const body: GenerateDiffInput = await req.json();

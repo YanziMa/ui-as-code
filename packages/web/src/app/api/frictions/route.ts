@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { CreateFrictionInput, ApiResponse, Friction } from "@ui-as-code/shared";
+import type { CreateFrictionInput, ApiResponse, Friction } from "@/types";
 
 // In-memory store for MVP; will be replaced with Supabase
 const frictions: Friction[] = [];

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import type { ApiResponse, Friction } from "@ui-as-code/shared";
+import type { ApiResponse, Friction } from "@/types";
 
 // Returns top frictions grouped by component_name, sorted by frequency
 export async function GET() {
