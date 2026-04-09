@@ -1,131 +1,276 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Smooth scroll to section
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center px-6 pt-32 pb-20 text-center">
-        <h1 className="max-w-3xl text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-          Fix your SaaS UI in 30 minutes.
-          <br />
-          <span className="text-blue-600">No code required.</span>
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          UI-as-Code lets you modify any SaaS interface with natural language.
-          AI generates the code, you preview the change, and the best
-          improvements flow back to everyone.
-        </p>
-        <div className="mt-10 flex gap-4">
-          <a
-            href="#how-it-works"
-            className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-          >
-            How it Works
-          </a>
-          <a
-            href="#install"
-            className="rounded-full border border-zinc-200 px-6 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900"
-          >
-            Install Extension
-          </a>
+      <section className="relative overflow-hidden px-6 pt-32 pb-20 sm:pt-40 sm:pb-28">
+        {/* Background decoration */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-900/20" />
+        </div>
+
+        <div className="mx-auto max-w-4xl text-center">
+          {/* Badge */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-300">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" />
+            </span>
+            Now in Beta — Free to use
+          </div>
+
+          <h1 className="max-w-3xl mx-auto text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight">
+            Fix your SaaS UI{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
+              without writing code
+            </span>
+          </h1>
+
+          <p className="mt-6 max-w-xl mx-auto text-lg sm:text-xl leading-relaxed text-zinc-600 dark:text-zinc-400">
+            Select any element on a SaaS page, describe what you want changed,
+            and AI generates the code diff. Preview it, then submit as a PR.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => scrollTo("how-it-works")}
+              className="w-full sm:w-auto rounded-full bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 active:translate-y-0"
+            >
+              See How It Works →
+            </button>
+            <Link
+              href="/pr"
+              className="w-full sm:w-auto rounded-full border border-zinc-200 bg-white px-8 py-3.5 text-sm font-semibold text-zinc-700 transition-all hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-black dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-950"
+            >
+              Browse PRs →
+            </Link>
+          </div>
+
+          {/* Social proof */}
+          <div className="mt-12 flex items-center justify-center gap-6 text-xs text-zinc-400">
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              Open Source
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              Chrome Extension
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              AI-Powered
+            </div>
+          </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className="border-t border-zinc-100 bg-zinc-50 px-6 py-24 dark:border-zinc-900 dark:bg-zinc-950">
+      <section id="how-it-works" className="border-t border-zinc-100 bg-zinc-50/80 px-6 py-24 dark:border-zinc-900 dark:bg-zinc-950/80">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-3xl font-bold text-zinc-900 dark:text-zinc-50">
-            From frustration to fix in 4 steps
-          </h2>
-          <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">How it works</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
+              From frustration to fix in 4 steps
+            </h2>
+            <p className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto">
+              No coding knowledge required. Just point, describe, and let AI handle the rest.
+            </p>
+          </div>
+
+          <div className="grid gap-10 lg:gap-12">
             {[
               {
-                step: "1",
+                step: "01",
                 title: "Select",
-                desc: "Alt+Click any element on the page to inspect it",
+                desc: "Hold Alt and click any element on a SaaS page. Our extension detects React components automatically.",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+                  </svg>
+                ),
               },
               {
-                step: "2",
+                step: "02",
                 title: "Describe",
-                desc: "Tell AI what you want changed in plain language",
+                desc: 'Type what you want changed in plain English — "Make the header bigger" or "Change the button color to green".',
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                  </svg>
+                ),
               },
               {
-                step: "3",
+                step: "03",
                 title: "Preview",
-                desc: "See the change in a sandbox before committing",
+                desc: "AI generates a unified diff. Review it in split view, overlay mode, or raw diff format before committing.",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                ),
               },
               {
-                step: "4",
+                step: "04",
                 title: "Submit",
-                desc: "Adopt the change or submit as a PR for everyone",
+                desc: "Adopt the change and auto-submit as a PR. Other users can vote on it, and SaaS maintainers can merge it.",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                  </svg>
+                ),
               },
-            ].map((item) => (
-              <div key={item.step} className="flex flex-col items-center text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
-                  {item.step}
+            ].map((item, i) => (
+              <div key={item.step} className="group relative flex gap-6 lg:gap-8">
+                {/* Connector line */}
+                {i < 3 && (
+                  <div className="absolute left-[18px] top-12 hidden h-[calc(100%-2rem)] w-px bg-gradient-to-b from-blue-300 to-transparent lg:block dark:from-blue-800" />
+                )}
+                {/* Step number */}
+                <div className="relative shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-transform group-hover:scale-110">
+                  {item.icon}
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  {item.desc}
-                </p>
+                {/* Content */}
+                <div className="pt-1 pb-4">
+                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Supported SaaS */}
+      <section className="border-t border-zinc-100 bg-white px-6 py-20 dark:border-zinc-900 dark:bg-black">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-sm font-medium uppercase tracking-wider text-zinc-400">Works with</p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-50 grayscale">
+            {["HubSpot", "Salesforce", "Notion", "Linear", "Jira", "Figma", "Stripe", "Vercel"].map((name) => (
+              <span key={name} className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">{name}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
-      <section className="px-6 py-24">
+      <section id="pricing" className="border-t border-zinc-100 bg-zinc-50/80 px-6 py-24 dark:border-zinc-900 dark:bg-zinc-950/80">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-center text-3xl font-bold text-zinc-900 dark:text-zinc-50">
-            Simple pricing
-          </h2>
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Pricing</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
+              Start free, scale when ready
+            </h2>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-3">
             {[
               {
                 name: "Free",
                 price: "$0",
-                period: "/month",
-                features: ["5 AI generations / month", "Public PRs", "Community voting"],
+                period: "forever",
+                description: "For individuals exploring UI improvements",
+                features: [
+                  "5 AI generations / month",
+                  "Public PR submissions",
+                  "Community voting access",
+                  "Chrome extension",
+                ],
+                cta: "Get Started Free",
+                ctaStyle: "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-black dark:text-zinc-50 dark:hover:bg-zinc-900",
               },
               {
                 name: "Pro",
                 price: "$19",
                 period: "/month",
-                features: ["Unlimited generations", "Private PRs", "Priority queue"],
+                description: "For power users who modify UIs daily",
+                features: [
+                  "Unlimited AI generations",
+                  "Private PR submissions",
+                  "Priority processing queue",
+                  "Email support",
+                  "Usage analytics dashboard",
+                ],
                 highlight: true,
+                cta: "Start Pro Trial",
+                ctaStyle: "bg-blue-600 text-white shadow-lg shadow-blue-500/25 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-0.5",
               },
               {
                 name: "Team",
                 price: "$49",
                 period: "/seat/month",
-                features: ["Team collaboration", "Pain point analytics", "Slack integration"],
+                description: "For teams collaborating on UI improvements",
+                features: [
+                  "Everything in Pro",
+                  "Team workspace & sharing",
+                  "Pain point analytics",
+                  "Slack & webhook integrations",
+                  "Dedicated account manager",
+                ],
+                cta: "Contact Sales",
+                ctaStyle: "border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-black dark:text-zinc-50 dark:hover:bg-zinc-900",
               },
             ].map((plan) => (
               <div
                 key={plan.name}
-                className={`rounded-2xl border p-8 ${
+                className={`relative rounded-2xl p-8 ${
                   plan.highlight
-                    ? "border-blue-600 ring-2 ring-blue-600"
-                    : "border-zinc-200 dark:border-zinc-800"
+                    ? "border-2 border-blue-600 bg-white shadow-xl ring-1 ring-blue-600/20 dark:bg-zinc-900"
+                    : "border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900"
                 }`}
               >
-                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                  {plan.name}
-                </h3>
+                {plan.highlight && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">{plan.name}</h3>
+                <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{plan.description}</p>
                 <p className="mt-4">
-                  <span className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">
-                    {plan.price}
-                  </span>
-                  <span className="text-zinc-500">{plan.period}</span>
+                  <span className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">{plan.price}</span>
+                  <span className="text-sm text-zinc-500">{plan.period}</span>
                 </p>
                 <ul className="mt-6 space-y-3">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-                      <span className="text-blue-600">+</span> {f}
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-zinc-600 dark:text-zinc-400">
+                      <svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {f}
                     </li>
                   ))}
                 </ul>
+                <button
+                  className={`mt-8 w-full rounded-xl py-3 text-sm font-semibold transition-all ${plan.ctaStyle}`}
+                >
+                  {plan.cta}
+                </button>
               </div>
             ))}
           </div>
@@ -133,19 +278,32 @@ export default function Home() {
       </section>
 
       {/* Install CTA */}
-      <section id="install" className="border-t border-zinc-100 bg-zinc-50 px-6 py-24 text-center dark:border-zinc-900 dark:bg-zinc-950">
-        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
-          Ready to fix your SaaS?
-        </h2>
-        <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-          Install the Chrome extension and start modifying interfaces today.
-        </p>
-        <a
-          href="#"
-          className="mt-8 inline-block rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-        >
-          Add to Chrome
-        </a>
+      <section id="install" className="border-t border-zinc-100 bg-gradient-to-b from-blue-600 to-blue-700 px-6 py-24 text-center dark:from-blue-800 dark:to-blue-900">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            Ready to fix your SaaS?
+          </h2>
+          <p className="mt-4 text-lg text-blue-100">
+            Install the Chrome extension and start modifying interfaces in under a minute.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://github.com/YanziMa/ui-as-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-blue-700 shadow-lg transition-all hover:bg-blue-50 hover:-translate-y-0.5"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/10"
+            >
+              Go to Dashboard →
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );
