@@ -1,29 +1,46 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { CreateFrictionInput, ApiResponse, Friction } from "@/types";
-
-// In-memory store for MVP; will be replaced with Supabase
-const frictions: Friction[] = [];
+import { supabase } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
   const body: CreateFrictionInput = await req.json();
 
-  const friction: Friction = {
-    id: crypto.randomUUID(),
-    user_id: "anonymous", // TODO: get from auth
-    saas_name: body.saas_name,
-    component_name: body.component_name,
-    description: body.description,
-    screenshot_url: body.screenshot_url,
-    created_at: new Date().toISOString(),
-  };
+  const { data: friction, error } = await supabase
+    .from("frictions")
+    .insert({
+      user_id: null, // TODO: get from auth session
+      saas_name: body.saas_name,
+      component_name: body.component_name,
+      description: body.description,
+      screenshot_url: body.screenshot_url || null,
+    })
+    .select()
+    .single();
 
-  frictions.push(friction);
+  if (error) {
+    return NextResponse.json(
+      { error: `Failed to create friction: ${error.message}` },
+      { status: 500 }
+    );
+  }
 
   const response: ApiResponse<Friction> = { data: friction };
   return NextResponse.json(response, { status: 201 });
 }
 
 export async function GET() {
-  const response: ApiResponse<Friction[]> = { data: frictions };
+  const { data: frictions, error } = await supabase
+    .from("frictions")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    return NextResponse.json(
+      { error: `Failed to fetch frictions: ${error.message}` },
+      { status: 500 }
+    );
+  }
+
+  const response: ApiResponse<Friction[]> = { data: frictions || [] };
   return NextResponse.json(response);
 }

@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "displayName": "UI-as-Code",
-  "description": "Modify any SaaS interface with natural language. AI generates the code, you preview the change.",
+  "description": "Modify any SaaS interface with natural language. AI generates code, you preview the change.",
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
     "clean": "rm -rf .plasmo build dist"
   },
   "dependencies": {
-    "@ui-as-code/shared": "workspace:*",
     "plasmo": "^0.90",
     "react": "^19",
     "react-dom": "^19"
@@ -24,7 +23,14 @@
     "typescript": "^5"
   },
   "manifest": {
+    "name": "UI-as-Code",
+    "version": "0.1.0",
     "host_permissions": ["https://*/*"],
-    "permissions": ["activeTab", "storage"]
+    "permissions": ["activeTab", "storage"],
+    "icons": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
   }
 }
