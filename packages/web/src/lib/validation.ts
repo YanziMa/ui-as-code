@@ -14,9 +14,9 @@ export const GenerateDiffSchema = z.object({
   component_types: z.string().max(50_000).optional(),
   design_tokens: z.record(z.string(), z.unknown()).optional(),
   screenshot_base64: z
-    .string()
-    .max(10 * 1024 * 1024, "Screenshot too large (max 10MB)")
-    .optional(),
+    .union([z.string().max(10 * 1024 * 1024), z.null()])
+    .optional()
+    .nullable(),
   saas_name: z.string().max(100).optional(),
   component_name: z.string().max(200).optional(),
 });
