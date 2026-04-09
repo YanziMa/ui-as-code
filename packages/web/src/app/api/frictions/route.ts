@@ -1,46 +1,57 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { CreateFrictionInput, ApiResponse, Friction } from "@/types";
+import { CreateFrictionSchema, validateBody } from "@/lib/validation";
+import { withHandler, apiError, apiSuccess, getAuthUser } from "@/lib/api-middleware";
 import { supabase } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
-  const body: CreateFrictionInput = await req.json();
+  return withHandler(req, async () => {
+    const rawBody = await req.json();
+    const validation = validateBody(rawBody, CreateFrictionSchema);
+    if (!validation.success) return validation.error;
 
-  const { data: friction, error } = await supabase
-    .from("frictions")
-    .insert({
-      user_id: null, // TODO: get from auth session
-      saas_name: body.saas_name,
-      component_name: body.component_name,
-      description: body.description,
-      screenshot_url: body.screenshot_url || null,
-    })
-    .select()
-    .single();
+    const body = validation.data;
 
-  if (error) {
-    return NextResponse.json(
-      { error: `Failed to create friction: ${error.message}` },
-      { status: 500 }
-    );
-  }
+    // Get authenticated user
+    const user = await getAuthUser(req);
 
-  const response: ApiResponse<Friction> = { data: friction };
-  return NextResponse.json(response, { status: 201 });
+    const { data: friction, error } = await supabase
+      .from("frictions")
+      .insert({
+        user_id: user?.id || null,
+        saas_name: sanitizeInput(body.saas_name),
+        component_name: sanitizeInput(body.component_name),
+        description: body.description,
+        screenshot_url: body.screenshot_url || null,
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.error("[Friction POST]", error);
+      return apiError(`Failed to create friction record`, 500);
+    }
+
+    return apiSuccess(friction, 201);
+  });
 }
 
 export async function GET() {
-  const { data: frictions, error } = await supabase
-    .from("frictions")
-    .select("*")
-    .order("created_at", { ascending: false });
+  return withHandler(undefined, async () => {
+    const { data: frictions, error } = await supabase
+      .from("frictions")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(100);
 
-  if (error) {
-    return NextResponse.json(
-      { error: `Failed to fetch frictions: ${error.message}` },
-      { status: 500 }
-    );
-  }
+    if (error) {
+      console.error("[Friction GET]", error);
+      return apiError("Failed to fetch frictions", 500);
+    }
 
-  const response: ApiResponse<Friction[]> = { data: frictions || [] };
-  return NextResponse.json(response);
+    return apiSuccess(frictions || []);
+  });
+}
+
+function sanitizeInput(str: string): string {
+  return str.trim().slice(0, 200);
 }

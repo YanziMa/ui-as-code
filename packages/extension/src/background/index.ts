@@ -12,6 +12,53 @@ async function getApiUrl(): Promise<string> {
   return cachedApiUrl!
 }
 
+// ========== Request timeout wrapper ==========
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit,
+  timeoutMs: number = 30_000
+): Promise<Response> {
+  const controller = new AbortController()
+  const timer = setTimeout(() => controller.abort(), timeoutMs)
+
+  try {
+    const res = await fetch(url, { ...options, signal: controller.signal })
+    clearTimeout(timer)
+    return res
+  } catch (err) {
+    clearTimeout(timer)
+    if (err instanceof DOMException && err.name === "AbortError") {
+      throw new Error(`Request timed out after ${timeoutMs / 1000}s`)
+    }
+    throw err
+  }
+}
+
+// ========== User-friendly error messages ==========
+function formatApiError(status: number, body: string): string {
+  try {
+    const json = JSON.parse(body)
+    if (json.error) return json.error
+  } catch { /* not JSON */ }
+
+  switch (status) {
+    case 400:
+      return "Invalid request. Please check your input."
+    case 401:
+      return "Authentication required. Please sign in first."
+    case 422:
+      return "The request data was invalid. Try rephrasing your description."
+    case 429:
+      return "Too many requests. Please wait a moment and try again."
+    case 500:
+    case 502:
+    case 503:
+      return "Server is temporarily unavailable. Please try again later."
+    default:
+      return `Server error (${status}). Please try again.`
+  }
+}
+
 // Listen for messages from content scripts and popup
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === "GENERATE_DIFF") {
@@ -44,29 +91,25 @@ async function handleGenerateDiff(payload: {
 }) {
   const apiUrl = await getApiUrl()
 
-  try {
-    const res = await fetch(`${apiUrl}/api/generate-diff`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        component_code: payload.componentCode,
-        component_types: payload.componentTypes,
-        description: payload.description,
-        screenshot_base64: payload.screenshotBase64,
-      }),
-    })
+  // AI calls can take up to 60s
+  const res = await fetchWithTimeout(`${apiUrl}/api/generate-diff`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      component_code: payload.componentCode,
+      component_types: payload.componentTypes,
+      description: payload.description,
+      screenshot_base64: payload.screenshotBase64,
+    }),
+  }, 90_000)
 
-    if (!res.ok) {
-      const errorText = await res.text()
-      throw new Error(`API returned ${res.status}: ${errorText}`)
-    }
-
-    const data = await res.json()
-    return data
-  } catch (err) {
-    console.error("[UI-as-Code] Generate diff failed:", err)
-    throw err
+  if (!res.ok) {
+    const errorText = await res.text().catch(() => "")
+    throw new Error(formatApiError(res.status, errorText))
   }
+
+  const data = await res.json()
+  return { success: true, data }
 }
 
 async function handleAdoptDiff(payload: {
@@ -79,7 +122,7 @@ async function handleAdoptDiff(payload: {
 
   // Create friction record + PR in parallel
   const [fricRes, prRes] = await Promise.all([
-    fetch(`${apiUrl}/api/frictions`, {
+    fetchWithTimeout(`${apiUrl}/api/frictions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -87,8 +130,8 @@ async function handleAdoptDiff(payload: {
         component_name: payload.componentName,
         description: payload.description,
       }),
-    }),
-    fetch(`${apiUrl}/api/pull-requests`, {
+    }, 15_000),
+    fetchWithTimeout(`${apiUrl}/api/pull-requests`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -97,11 +140,14 @@ async function handleAdoptDiff(payload: {
         saas_name: payload.saasName,
         component_name: payload.componentName,
       }),
-    }),
+    }, 15_000),
   ])
 
   if (!fricRes.ok || !prRes.ok) {
-    throw new Error(`Failed to submit PR (${fricRes.status}/${prRes.status})`)
+    const fricError = fricRes.ok ? "" : `friction(${fricRes.status})`
+    const prError = prRes.ok ? "" : `PR(${prRes.status})`
+    const details = [fricError, prError].filter(Boolean).join(", ")
+    throw new Error(`Failed to submit (${details})`)
   }
 
   const prData = await prRes.json()
@@ -115,8 +161,7 @@ async function handleRejectDiff(payload: {
 }) {
   const apiUrl = await getApiUrl()
 
-  // Record as friction only (for analytics)
-  const res = await fetch(`${apiUrl}/api/frictions`, {
+  const res = await fetchWithTimeout(`${apiUrl}/api/frictions`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -124,10 +169,11 @@ async function handleRejectDiff(payload: {
       component_name: payload.componentName,
       description: payload.description,
     }),
-  })
+  }, 15_000)
 
   if (!res.ok) {
-    throw new Error(`Failed to record rejection (${res.status})`)
+    const errorText = await res.text().catch(() => "")
+    throw new Error(formatApiError(res.status, errorText))
   }
 
   return { success: true }

@@ -1,39 +1,67 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { GenerateDiffInput, GenerateDiffOutput } from "@/types";
+import { z } from "zod";
+import {
+  GenerateDiffSchema,
+  validateBody,
+} from "@/lib/validation";
+import {
+  withHandler,
+  checkRateLimit,
+  apiError,
+  apiSuccess,
+} from "@/lib/api-middleware";
 
-const AI_PROVIDER = process.env.AI_PROVIDER || "glm"; // "glm" | "claude" | "openai"
+const AI_PROVIDER = process.env.AI_PROVIDER || "glm";
 const AI_MODEL = process.env.AI_MODEL || "glm-5v-turbo";
 
 export async function POST(req: NextRequest) {
-  const body: GenerateDiffInput = await req.json();
+  return withHandler(req, async () => {
+    const rawBody = await req.json();
+    const validation = validateBody(rawBody, GenerateDiffSchema);
+    if (!validation.success) return validation.error;
 
-  try {
-    let diff: string;
+    const body = validation.data;
 
-    if (AI_PROVIDER === "claude") {
-      diff = await callClaude(body);
-    } else {
-      // Default: OpenAI-compatible (GLM, DeepSeek, GPT)
-      diff = await callOpenAICompatible(body);
+    // Check AI-specific rate limit (stricter)
+    const rateResult = checkRateLimit(req, {
+      windowMs: 60_000,
+      maxRequests: 5,
+    });
+    if (!rateResult.allowed) {
+      return apiError(
+        `AI rate limit exceeded. Try again in ${Math.ceil((rateResult.resetAt - Date.now()) / 1000)}s.`,
+        429
+      );
     }
 
-    const result: GenerateDiffOutput = {
-      diff,
-      success: diff.length > 0,
-      error: diff.length === 0 ? "No valid diff generated" : undefined,
-    };
+    try {
+      let diff: string;
 
-    return NextResponse.json(result);
-  } catch (err) {
-    return NextResponse.json(
-      { error: `Internal error: ${(err as Error).message}` },
-      { status: 500 }
-    );
-  }
+      if (AI_PROVIDER === "claude") {
+        diff = await callClaude(body);
+      } else {
+        diff = await callOpenAICompatible(body);
+      }
+
+      if (!diff || diff.trim().length === 0) {
+        return apiError("No valid diff generated. Try rephrasing your request.", 422);
+      }
+
+      return apiSuccess({ diff, success: true });
+    } catch (err) {
+      console.error("[GenerateDiff]", err);
+      return apiError(
+        `AI generation failed: ${(err as Error).message}`,
+        502
+      );
+    }
+  }, { rateLimit: { windowMs: 60_000, maxRequests: 10 } });
 }
 
 // ========== OpenAI-compatible (GLM / DeepSeek / GPT) ==========
-async function callOpenAICompatible(input: GenerateDiffInput): Promise<string> {
+async function callOpenAICompatible(
+  input: z.infer<typeof GenerateDiffSchema>
+): Promise<string> {
   const apiKey = getApiKey();
   if (!apiKey) throw new Error("AI_API_KEY not configured");
 
@@ -46,38 +74,48 @@ async function callOpenAICompatible(input: GenerateDiffInput): Promise<string> {
 
   const content = buildMultimodalContent(input);
 
-  const response = await fetch(`${baseUrl}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: AI_MODEL,
-      max_tokens: 4096,
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
-        },
-        { role: "user", content },
-      ],
-    }),
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 60_000); // 60s timeout
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`AI API error (${response.status}): ${error}`);
+  try {
+    const response = await fetch(`${baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: AI_MODEL,
+        max_tokens: 4096,
+        messages: [
+          {
+            role: "system",
+            content:
+              "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+          },
+          { role: "user", content },
+        ],
+      }),
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeout);
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => "Unknown error");
+      throw new Error(`AI API (${response.status}): ${errorText}`);
+    }
+
+    const data = await response.json();
+    const text = data.choices?.[0]?.message?.content || "";
+    return extractDiff(text);
+  } finally {
+    clearTimeout(timeout);
   }
-
-  const data = await response.json();
-  const text = data.choices?.[0]?.message?.content || "";
-  return extractDiff(text);
 }
 
 function buildMultimodalContent(
-  input: GenerateDiffInput
+  input: z.infer<typeof GenerateDiffSchema>
 ): string | Array<{ type: "text" | "image_url"; text?: string; image_url?: { url: string } }> {
   const parts: Array<{
     type: "text" | "image_url";
@@ -85,7 +123,6 @@ function buildMultimodalContent(
     image_url?: { url: string };
   }> = [];
 
-  // Text parts
   let textPrompt = `<component-code>\n${input.component_code}\n</component-code>\n`;
 
   if (input.component_types) {
@@ -98,7 +135,6 @@ function buildMultimodalContent(
 
   parts.push({ type: "text", text: textPrompt });
 
-  // Image part (if screenshot available)
   if (input.screenshot_base64) {
     parts.push({
       type: "image_url",
@@ -110,37 +146,51 @@ function buildMultimodalContent(
 }
 
 // ========== Claude (fallback) ==========
-async function callClaude(input: GenerateDiffInput): Promise<string> {
+async function callClaude(
+  input: z.infer<typeof GenerateDiffSchema>
+): Promise<string> {
   const apiKey = getApiKey();
   if (!apiKey) throw new Error("CLAUDE_API_KEY not configured");
 
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({
-      model: AI_MODEL,
-      max_tokens: 4096,
-      system:
-        "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
-      messages: [{ role: "user", content: buildTextPrompt(input) }],
-    }),
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 60_000);
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(`Claude API error: ${error}`);
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: AI_MODEL,
+        max_tokens: 4096,
+        system:
+          "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+        messages: [{ role: "user", content: buildTextPrompt(input) }],
+      }),
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeout);
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => "Unknown error");
+      throw new Error(`Claude API: ${errorText}`);
+    }
+
+    const data = await response.json();
+    const text = data.content?.[0]?.text || "";
+    return extractDiff(text);
+  } finally {
+    clearTimeout(timeout);
   }
-
-  const data = await response.json();
-  const text = data.content?.[0]?.text || "";
-  return extractDiff(text);
 }
 
-function buildTextPrompt(input: GenerateDiffInput): string {
+function buildTextPrompt(
+  input: z.infer<typeof GenerateDiffSchema>
+): string {
   let prompt = `<component-code>\n${input.component_code}\n</component-code>\n`;
 
   if (input.component_types) {
@@ -165,13 +215,11 @@ function getApiKey(): string | undefined {
 }
 
 function extractDiff(text: string): string {
-  // Try to find unified diff in code block
   const codeBlockMatch = text.match(/```diff\n([\s\S]*?)```/);
   if (codeBlockMatch) {
     return codeBlockMatch[1].trim();
   }
 
-  // Try raw diff pattern
   const diffMatch = text.match(
     /(?:---\s+a\/[^\n]+\n\+\+\+\s+b\/[^\n]+\n@@[\s\S]*?)(?:```|$)/
   );
@@ -179,7 +227,6 @@ function extractDiff(text: string): string {
     return diffMatch[0].replace(/```$/, "").trim();
   }
 
-  // Fallback: scan for diff markers
   const lines = text.split("\n");
   const diffLines: string[] = [];
   let inDiff = false;

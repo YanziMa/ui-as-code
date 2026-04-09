@@ -2,20 +2,42 @@ import { useState, useEffect } from "react"
 
 function IndexPopup() {
   const [apiUrl, setApiUrl] = useState("https://ui-as-code-web.vercel.app")
-  const [saved, setSaved] = useState(false)
-  const [status, setStatus] = useState<"idle" | "saving" | "saved">("idle")
+  const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">("idle")
+  const [connectionStatus, setConnectionStatus] = useState<"checking" | "ok" | "fail">("checking")
 
   useEffect(() => {
     chrome.storage.local.get("apiUrl", (result) => {
       if (result.apiUrl) setApiUrl(result.apiUrl)
     })
+
+    // Check API connectivity
+    checkConnection()
   }, [])
+
+  async function checkConnection() {
+    setConnectionStatus("checking")
+    try {
+      const stored = await chrome.storage.local.get("apiUrl")
+      const url = stored.apiUrl || "https://ui-as-code-web.vercel.app"
+      const res = await fetch(`${url}/api/frictions`, { method: "GET" })
+      setConnectionStatus(res.ok ? "ok" : "fail")
+    } catch {
+      setConnectionStatus("fail")
+    }
+  }
 
   const handleSave = async () => {
     setStatus("saving")
-    await chrome.storage.local.set({ apiUrl })
-    setStatus("saved")
-    setTimeout(() => setStatus("idle"), 2000)
+    try {
+      await chrome.storage.local.set({ apiUrl })
+      setStatus("saved")
+      setTimeout(() => setStatus("idle"), 2000)
+      // Re-check connection with new URL
+      checkConnection()
+    } catch {
+      setStatus("error")
+      setTimeout(() => setStatus("idle"), 2000)
+    }
   }
 
   return (
@@ -29,7 +51,7 @@ function IndexPopup() {
       }}
     >
       {/* Logo */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+      <div style={{ display: "flex", alignItems: center, gap: 10, marginBottom: 16 }}>
         <div
           style={{
             width: 36,
@@ -52,6 +74,56 @@ function IndexPopup() {
           </div>
           <div style={{ fontSize: 11, color: "#888" }}>v0.1.0</div>
         </div>
+      </div>
+
+      {/* Connection status */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          marginBottom: 12,
+          fontSize: 11,
+          padding: "6px 10px",
+          borderRadius: 6,
+          background: connectionStatus === "ok"
+            ? "#f0fdf4"
+            : connectionStatus === "fail"
+              ? "#fef2f2"
+              : "#f9fafb",
+          color: connectionStatus === "ok"
+            ? "#166534"
+            : connectionStatus === "fail"
+              ? "#991b1b"
+              : "#6b7280",
+          border: `1px solid ${
+            connectionStatus === "ok"
+              ? "#bbf7d0"
+              : connectionStatus === "fail"
+                ? "#fecaca"
+                : "#e5e7eb"
+          }`,
+        }}
+      >
+        <span
+          style={{
+            width: 7,
+            height: 7,
+            borderRadius: "50%",
+            background: connectionStatus === "ok"
+              ? "#22c55e"
+              : connectionStatus === "fail"
+                ? "#ef4444"
+                : "#d1d5db",
+            display: "inline-block",
+            animation: connectionStatus === "checking" ? "uac-pulse 1s infinite" : undefined,
+          }}
+        />
+        {connectionStatus === "checking"
+          ? "Checking connection..."
+          : connectionStatus === "ok"
+            ? "Connected to server"
+            : "Server unreachable — check URL below"}
       </div>
 
       {/* Instructions */}
@@ -101,7 +173,12 @@ function IndexPopup() {
         style={{
           width: "100%",
           padding: "9px 0",
-          backgroundColor: status === "saved" ? "#16a34a" : "#2563eb",
+          backgroundColor:
+            status === "saved"
+              ? "#16a34a"
+              : status === "error"
+                ? "#dc2626"
+                : "#2563eb",
           color: "white",
           border: "none",
           borderRadius: 6,
@@ -111,20 +188,26 @@ function IndexPopup() {
           transition: "all 0.15s",
         }}
       >
-        {status === "saving" ? "Saving..." : status === "saved" ? "Saved!" : "Save Settings"}
+        {status === "saving"
+          ? "Saving..."
+          : status === "saved"
+            ? "Saved!"
+            : status === "error"
+              ? "Error — Retry"
+              : "Save Settings"}
       </button>
 
       {/* Links */}
       <div style={{ marginTop: 14, textAlign: "center", fontSize: 11, color: "#9ca3af" }}>
         <a
-          href="https://github.com/YanziMa/ui-as-code"
+          href="https://github.com/yanzima/ui-as-code"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#6b7280", textDecoration: "none" }}
         >
           GitHub
         </a>{" "}
-        ·{" "}
+        &middot;{" "}
         <a
           href="https://vercel.com/yanzi-mas-projects/ui-as-code-web"
           target="_blank"
@@ -134,6 +217,13 @@ function IndexPopup() {
           Dashboard
         </a>
       </div>
+
+      <style>{`
+        @keyframes uac-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+      `}</style>
     </div>
   )
 }

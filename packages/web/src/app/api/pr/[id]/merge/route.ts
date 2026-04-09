@@ -1,47 +1,54 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
+import { withHandler, apiError, apiSuccess } from "@/lib/api-middleware";
 import { supabase } from "@/lib/supabase";
 
 export async function POST(
   _req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params;
+  return withHandler(_req, async () => {
+    const { id } = await params;
 
-  // Check if PR exists and is open
-  const { data: pr } = await supabase
-    .from("pull_requests")
-    .select("*")
-    .eq("id", id)
-    .single();
+    // Validate UUID format
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(id)) {
+      return apiError("Invalid PR ID format", 400);
+    }
 
-  if (!pr) {
-    return NextResponse.json({ error: "PR not found" }, { status: 404 });
-  }
+    // Check if PR exists and is open
+    const { data: pr } = await supabase
+      .from("pull_requests")
+      .select("*")
+      .eq("id", id)
+      .single();
 
-  if (pr.status !== "open") {
-    return NextResponse.json(
-      { error: `PR is already ${pr.status}` },
-      { status: 400 }
-    );
-  }
+    if (!pr) {
+      return apiError("PR not found", 404);
+    }
 
-  // Merge: update status and increment affected_users (simulated)
-  const { data: updated, error } = await supabase
-    .from("pull_requests")
-    .update({
-      status: "merged",
-      affected_users: pr.affected_users + Math.floor(pr.votes_for * 1.5),
-    })
-    .eq("id", id)
-    .select()
-    .single();
+    if (pr.status !== "open") {
+      return apiError(`PR is already ${pr.status}`, 409);
+    }
 
-  if (error) {
-    return NextResponse.json(
-      { error: `Merge failed: ${error.message}` },
-      { status: 500 }
-    );
-  }
+    // Merge: update status and boost affected_users based on votes
+    const boost = Math.floor(pr.votes_for * 1.5);
+    const { data: updated, error } = await supabase
+      .from("pull_requests")
+      .update({
+        status: "merged",
+        affected_users: pr.affected_users + boost,
+      })
+      .eq("id", id)
+      .select()
+      .single();
 
-  return NextResponse.json({ data: updated, message: "PR merged successfully!" });
+    if (error) {
+      console.error("[Merge POST]", error);
+      return apiError("Failed to merge PR", 500);
+    }
+
+    return apiSuccess({
+      ...updated,
+      message: "PR merged successfully!",
+    });
+  });
 }

@@ -1,65 +1,74 @@
 import { NextRequest, NextResponse } from "next/server";
-import type { ApiResponse, PullRequest } from "@/types";
+import { CreatePRSchema, validateBody } from "@/lib/validation";
+import { withHandler, apiError, apiSuccess, getAuthUser } from "@/lib/api-middleware";
 import { supabase } from "@/lib/supabase";
 
 export async function POST(req: NextRequest) {
-  const body = await req.json();
+  return withHandler(req, async () => {
+    const rawBody = await req.json();
+    const validation = validateBody(rawBody, CreatePRSchema);
+    if (!validation.success) return validation.error;
 
-  // First create friction record if not exists
-  let frictionId = body.friction_id;
-  if (!frictionId) {
-    const { data: newFriction } = await supabase
-      .from("frictions")
+    const body = validation.data;
+    const user = await getAuthUser(req);
+
+    // Auto-create friction if no friction_id provided
+    let frictionId = body.friction_id;
+    if (!frictionId) {
+      const { data: newFriction } = await supabase
+        .from("frictions")
+        .insert({
+          user_id: user?.id || null,
+          saas_name: (body.saas_name || "unknown").slice(0, 100),
+          component_name: (body.component_name || "unknown").slice(0, 200),
+          description: body.description,
+        })
+        .select("id")
+        .single();
+
+      if (!newFriction) {
+        return apiError("Failed to create associated friction record", 500);
+      }
+      frictionId = newFriction.id;
+    }
+
+    // Create PR
+    const { data: pr, error } = await supabase
+      .from("pull_requests")
       .insert({
-        user_id: null,
-        saas_name: body.saas_name || "unknown",
-        component_name: body.component_name || "unknown",
+        diff_id: frictionId,
+        user_id: user?.id || null,
         description: body.description,
+        affected_users: 1,
+        status: "open",
+        votes_for: 0,
+        votes_against: 0,
       })
-      .select("id")
+      .select()
       .single();
-    frictionId = newFriction?.id;
-  }
 
-  // Then create PR
-  const { data: pr, error } = await supabase
-    .from("pull_requests")
-    .insert({
-      diff_id: frictionId,
-      user_id: null, // TODO: get from auth session
-      description: body.description,
-      affected_users: 1,
-      status: "open",
-      votes_for: 0,
-      votes_against: 0,
-    })
-    .select()
-    .single();
+    if (error) {
+      console.error("[PR POST]", error);
+      return apiError(`Failed to create PR`, 500);
+    }
 
-  if (error) {
-    return NextResponse.json(
-      { error: `Failed to create PR: ${error.message}` },
-      { status: 500 }
-    );
-  }
-
-  const response: ApiResponse<PullRequest> = { data: pr };
-  return NextResponse.json(response, { status: 201 });
+    return apiSuccess(pr, 201);
+  });
 }
 
 export async function GET() {
-  const { data: prs, error } = await supabase
-    .from("pull_requests")
-    .select("*")
-    .order("created_at", { ascending: false });
+  return withHandler(undefined, async () => {
+    const { data: prs, error } = await supabase
+      .from("pull_requests")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(100);
 
-  if (error) {
-    return NextResponse.json(
-      { error: `Failed to fetch PRs: ${error.message}` },
-      { status: 500 }
-    );
-  }
+    if (error) {
+      console.error("[PR GET]", error);
+      return apiError("Failed to fetch PRs", 500);
+    }
 
-  const response: ApiResponse<PullRequest[]> = { data: prs || [] };
-  return NextResponse.json(response);
+    return apiSuccess(prs || []);
+  });
 }

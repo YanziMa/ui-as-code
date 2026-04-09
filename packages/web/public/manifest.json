@@ -1,0 +1,1 @@
+{"name": "UI-as-Code", "short_name": "UiAC", "description": "Modify any SaaS interface with natural language", "start_url": "/", "display": "standalone", "background_color": "#ffffff", "theme_color": "#3b82f6", "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml"}]}

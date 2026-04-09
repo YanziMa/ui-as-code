@@ -1,5 +1,5 @@
 import type { PlasmoCSConfig } from "plasmo"
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import { findNearestComponent } from "../lib/react-detector"
 import { captureScreenshot } from "../lib/screenshot"
 
@@ -29,7 +29,7 @@ const styles = `
     position: fixed;
     right: 0;
     top: 0;
-    width: 380px;
+    width: 400px;
     height: 100vh;
     background: #fff;
     border-left: 1px solid #e5e7eb;
@@ -152,8 +152,8 @@ const styles = `
   }
   .uac-diff-pre {
     font-size: 11px;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
+    background: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 8px;
     padding: 12px;
     overflow: auto;
@@ -161,8 +161,12 @@ const styles = `
     white-space: pre-wrap;
     word-break: break-all;
     line-height: 1.6;
-    color: #1f2937;
+    color: #c9d1d9;
   }
+  .uac-diff-line-add { color: #3fb950; }
+  .uac-diff-line-remove { color: #f85149; }
+  .uac-diff-line-hunk { color: #58a6ff; font-weight: bold; }
+  .uac-diff-line-context { color: #8b949e; }
   .uac-footer {
     padding: 14px 16px;
     border-top: 1px solid #e5e7eb;
@@ -182,8 +186,12 @@ const styles = `
     cursor: pointer;
     transition: all 0.15s;
   }
-  .uac-btn-adopt:hover {
+  .uac-btn-adopt:hover:not(:disabled) {
     background: #15803d;
+  }
+  .uac-btn-adopt:disabled {
+    opacity: 0.6;
+    cursor: wait;
   }
   .uac-btn-reject {
     flex: 1;
@@ -197,8 +205,12 @@ const styles = `
     cursor: pointer;
     transition: all 0.15s;
   }
-  .uac-btn-reject:hover {
+  .uac-btn-reject:hover:not(:disabled) {
     background: #fef2f2;
+  }
+  .uac-btn-reject:disabled {
+    opacity: 0.6;
+    cursor: wait;
   }
   .uac-step-indicator {
     display: inline-flex;
@@ -218,6 +230,41 @@ const styles = `
     border-radius: 50%;
     background: currentColor;
   }
+  .uac-error-banner {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #991b1b;
+    line-height: 1.5;
+  }
+  .uac-success-banner {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #166534;
+    line-height: 1.5;
+  }
+  .uac-url-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 `
 
 function InspectorOverlay() {
@@ -231,6 +278,10 @@ function InspectorOverlay() {
   const [description, setDescription] = useState("")
   const [loading, setLoading] = useState(false)
   const [diffResult, setDiffResult] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [successMsg, setSuccessMsg] = useState<string | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const messageTimeoutRef = useRef<ReturnType<typeof setTimeout>>()
 
   // Alt key toggle
   useEffect(() => {
@@ -278,6 +329,20 @@ function InspectorOverlay() {
           rect: component.element.getBoundingClientRect(),
         })
         setEnabled(false)
+      } else {
+        // Fallback: use element info even without React detection
+        const tag = target.tagName.toLowerCase()
+        const cls = target.className && typeof target.className === "string"
+          ? target.className.split(" ").slice(0, 2).join(".")
+          : ""
+        const id = target.id ? `#${target.id}` : ""
+        const fallbackName = `${tag}${id || (cls ? `.${cls}` : "")}`
+        setSelected({
+          name: fallbackName,
+          element: target as HTMLElement,
+          rect: target.getBoundingClientRect(),
+        })
+        setEnabled(false)
       }
     }
 
@@ -289,71 +354,169 @@ function InspectorOverlay() {
     }
   }, [enabled])
 
+  const clearMessage = useCallback(() => {
+    if (messageTimeoutRef.current) clearTimeout(messageTimeoutRef.current)
+  }, [])
+
+  const showMessage = useCallback((msg: string, type: "error" | "success") => {
+    clearMessage()
+    if (type === "error") {
+      setError(msg)
+      setSuccessMsg(null)
+    } else {
+      setSuccessMsg(msg)
+      setError(null)
+    }
+    messageTimeoutRef.current = setTimeout(() => {
+      setError(null)
+      setSuccessMsg(null)
+    }, 5000)
+  }, [clearMessage])
+
   const generateDiff = useCallback(async () => {
     if (!selected || !description.trim()) return
 
     setLoading(true)
+    setError(null)
+
     try {
       let screenshotBase64: string | undefined
       try {
         screenshotBase64 = await captureScreenshot(selected.rect)
       } catch (_) {}
 
-      chrome.runtime.sendMessage(
-        {
-          type: "GENERATE_DIFF",
-          payload: {
-            componentCode: selected.element.outerHTML,
-            description: description.trim(),
-            screenshotBase64,
+      // Use Promise-based messaging with timeout
+      const response = await new Promise<any>((resolve, reject) => {
+        const timer = setTimeout(() => {
+          reject(new Error("Request timed out. The AI server might be slow."))
+        }, 90_000) // 90s timeout for AI generation
+
+        chrome.runtime.sendMessage(
+          {
+            type: "GENERATE_DIFF",
+            payload: {
+              componentCode: selected.element.outerHTML,
+              description: description.trim(),
+              screenshotBase64,
+            },
           },
-        },
-        (response) => {
-          if (response?.success && response.diff) {
-            setDiffResult(response.diff)
-          } else {
-            alert(response?.error || "Failed to generate diff")
+          (response: any) => {
+            clearTimeout(timer)
+            if (chrome.runtime.lastError) {
+              reject(new Error(chrome.runtime.lastError.message))
+              return
+            }
+            resolve(response)
           }
-          setLoading(false)
-        }
-      )
-    } catch {
+        )
+      })
+
+      if (response?.success && response?.data?.diff) {
+        setDiffResult(response.data.diff)
+      } else {
+        const errMsg = response?.error || response?.data?.error || "Failed to generate diff"
+        throw new Error(errMsg)
+      }
+    } catch (err: any) {
+      console.error("[Inspector] Generate diff error:", err)
+      showMessage(err.message || "Unknown error occurred", "error")
+    } finally {
       setLoading(false)
     }
-  }, [selected, description])
+  }, [selected, description, showMessage])
 
   const adopt = useCallback(async () => {
     if (!diffResult || !selected) return
 
-    chrome.runtime.sendMessage(
-      {
-        type: "ADOPT_DIFF",
-        payload: {
-          diffId: crypto.randomUUID(),
-          description: description.trim(),
-          saasName: window.location.hostname,
-          componentName: selected.name,
-        },
-      },
-      () => reset()
-    )
-  }, [diffResult, selected, description])
+    setSubmitting(true)
+    setError(null)
+
+    try {
+      const response = await new Promise<any>((resolve, reject) => {
+        const timer = setTimeout(() => {
+          reject(new Error("Request timed out while submitting PR."))
+        }, 30_000)
+
+        chrome.runtime.sendMessage(
+          {
+            type: "ADOPT_DIFF",
+            payload: {
+              diffId: crypto.randomUUID(),
+              description: description.trim(),
+              saasName: window.location.hostname,
+              componentName: selected.name,
+            },
+          },
+          (res: any) => {
+            clearTimeout(timer)
+            if (chrome.runtime.lastError) {
+              reject(new Error(chrome.runtime.lastError.message))
+              return
+            }
+            resolve(res)
+          }
+        )
+      })
+
+      if (response?.success) {
+        showMessage("PR submitted successfully!", "success")
+        setTimeout(reset, 1500)
+      } else {
+        throw new Error(response?.error || "Failed to submit PR")
+      }
+    } catch (err: any) {
+      console.error("[Inspector] Adopt error:", err)
+      showMessage(err.message || "Failed to submit PR", "error")
+    } finally {
+      setSubmitting(false)
+    }
+  }, [diffResult, selected, description, showMessage])
 
   const reject = useCallback(async () => {
     if (!selected) return
 
-    chrome.runtime.sendMessage(
-      {
-        type: "REJECT_DIFF",
-        payload: {
-          saasName: window.location.hostname,
-          componentName: selected.name,
-          description: description.trim(),
-        },
-      },
-      () => reset()
-    )
-  }, [selected, description])
+    setSubmitting(true)
+    setError(null)
+
+    try {
+      const response = await new Promise<any>((resolve, reject) => {
+        const timer = setTimeout(() => {
+          reject(new Error("Request timed out."))
+        }, 15_000)
+
+        chrome.runtime.sendMessage(
+          {
+            type: "REJECT_DIFF",
+            payload: {
+              saasName: window.location.hostname,
+              componentName: selected.name,
+              description: description.trim(),
+            },
+          },
+          (res: any) => {
+            clearTimeout(timer)
+            if (chrome.runtime.lastError) {
+              reject(new Error(chrome.runtime.lastError.message))
+              return
+            }
+            resolve(res)
+          }
+        )
+      })
+
+      if (response?.success) {
+        showMessage("Feedback recorded. Thanks!", "success")
+        setTimeout(reset, 1000)
+      } else {
+        throw new Error(response?.error || "Failed to record feedback")
+      }
+    } catch (err: any) {
+      console.error("[Inspector] Reject error:", err)
+      showMessage(err.message || "Failed to record feedback", "error")
+    } finally {
+      setSubmitting(false)
+    }
+  }, [selected, description, showMessage])
 
   function reset() {
     setSelected(null)
@@ -361,7 +524,13 @@ function InspectorOverlay() {
     setDescription("")
     setEnabled(false)
     setHoveredRect(null)
+    setError(null)
+    setSuccessMsg(null)
+    setSubmitting(false)
   }
+
+  // Format diff with syntax highlighting
+  const highlightedDiff = useMemoHighlight(diffResult)
 
   // Nothing to render
   if (!enabled && !selected) return null
@@ -394,11 +563,30 @@ function InspectorOverlay() {
               <h2>UI-as-Code</h2>
               <div className="uac-component-name">{selected.name}</div>
             </div>
-            <button className="uac-close-btn" onClick={reset}>×</button>
+            <button className="uac-close-btn" onClick={reset}>&times;</button>
           </div>
 
           {/* Body */}
           <div className="uac-body">
+            {/* URL badge */}
+            <div className="uac-url-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+              </svg>
+              {window.location.hostname}
+            </div>
+
+            {/* Error / Success banners */}
+            {error && (
+              <div className="uac-error-banner">
+                <strong>Error:</strong> {error}
+              </div>
+            )}
+            {successMsg && (
+              <div className="uac-success-banner">{successMsg}</div>
+            )}
+
             {!diffResult ? (
               <>
                 <span className="uac-step-indicator">
@@ -425,7 +613,7 @@ function InspectorOverlay() {
                       Generating...
                     </>
                   ) : (
-                    "Generate Preview →"
+                    "Generate Preview &rarr;"
                   )}
                 </button>
 
@@ -436,12 +624,15 @@ function InspectorOverlay() {
             ) : (
               <>
                 <span className="uac-step-indicator">
-                  <span className="uac-step-dot" /> Step 2 of 2 — Review & Submit
+                  <span className="uac-step-dot" /> Step 2 of 2 — Review &amp; Submit
                 </span>
 
                 <label className="uac-label">Generated Diff</label>
                 <div className="uac-diff-viewer">
-                  <pre className="uac-diff-pre">{diffResult}</pre>
+                  <pre
+                    className="uac-diff-pre"
+                    dangerouslySetInnerHTML={{ __html: highlightedDiff }}
+                  />
                 </div>
               </>
             )}
@@ -450,11 +641,19 @@ function InspectorOverlay() {
           {/* Footer */}
           {diffResult && (
             <div className="uac-footer">
-              <button className="uac-btn-adopt" onClick={adopt}>
-                ✓ Adopt & Submit PR
+              <button
+                className="uac-btn-adopt"
+                onClick={adopt}
+                disabled={submitting}
+              >
+                {submitting ? "Submitting..." : "\u2713 Adopt & Submit PR"}
               </button>
-              <button className="uac-btn-reject" onClick={reject}>
-                ✕ Reject
+              <button
+                className="uac-btn-reject"
+                onClick={reject}
+                disabled={submitting}
+              >
+                {submitting ? "Recording..." : "\u2715 Reject"}
               </button>
             </div>
           )}
@@ -462,6 +661,21 @@ function InspectorOverlay() {
       )}
     </>
   )
+}
+
+// ========== Diff syntax highlighting helper ==========
+function useMemoHighlight(diff: string | null): string {
+  if (!diff) return ""
+
+  return diff
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/^(\+.*)$/gm, '<span class="uac-diff-line-add">$1</span>')
+    .replace(/^(-.*)$/gm, '<span class="uac-diff-line-remove">$1</span>')
+    .replace(/^(@@.*@@)$/gm, '<span class="uac-diff-line-hunk">$1</span>')
+    .replace(/^(\s+)$/gm, '<span class="uac-diff-line-context">$1</span>')
+    .replace(/\n/g, "<br>")
 }
 
 export default InspectorOverlay
