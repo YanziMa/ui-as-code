@@ -26,11 +26,6 @@
     "name": "UI-as-Code",
     "version": "0.1.0",
     "host_permissions": ["https://*/*"],
-    "permissions": ["activeTab", "storage"],
-    "icons": {
-      "16": "assets/icon.png",
-      "48": "assets/icon.png",
-      "128": "assets/icon.png"
-    }
+    "permissions": ["activeTab", "storage"]
   }
 }
