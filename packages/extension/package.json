@@ -1,0 +1,30 @@
+{
+  "name": "@ui-as-code/extension",
+  "version": "0.1.0",
+  "private": true,
+  "displayName": "UI-as-Code",
+  "description": "Modify any SaaS interface with natural language. AI generates the code, you preview the change.",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "clean": "rm -rf .plasmo build dist"
+  },
+  "dependencies": {
+    "@ui-as-code/shared": "workspace:*",
+    "plasmo": "^0.90",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "^4",
+    "@types/chrome": "^0.0.304",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3",
+    "typescript": "^5"
+  },
+  "manifest": {
+    "host_permissions": ["https://*/*"],
+    "permissions": ["activeTab", "storage"]
+  }
+}
