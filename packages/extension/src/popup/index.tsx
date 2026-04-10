@@ -91,7 +91,7 @@ function IndexPopup() {
               UI-as-Code
             </div>
             <div style={{ fontSize: 10.5, color: "rgba(255,255,255,0.7)", marginTop: 1 }}>
-              v0.1.0 — Beta
+              v0.2.0 — Beta
             </div>
           </div>
         </div>
@@ -250,43 +250,72 @@ function IndexPopup() {
               : "Save Settings"}
       </button>
 
-      {/* Links */}
+      {/* Quick Actions */}
       <div
         style={{
           marginTop: 12,
           paddingTop: 10,
           borderTop: "1px solid #f3f4f6",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          fontSize: 11,
-          color: "#9ca3af",
         }}
       >
-        <a
-          href="https://github.com/YanziMa/ui-as-code"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#6b7280", textDecoration: "none" }}
+        <div style={{ fontSize: 10, fontWeight: 600, color: "#9ca3af", marginBottom: 6, paddingLeft: 2 }}>
+          QUICK ACTIONS
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: 4,
+          }}
         >
-          GitHub
-        </a>
-        <a
-          href="https://vercel.com/yanzi-mas-projects/ui-as-code-web"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#6b7280", textDecoration: "none" }}
-        >
-          Dashboard
-        </a>
+          {[
+            { label: "Dashboard", url: "https://ui-as-code-web.vercel.app/dashboard" },
+            { label: "PRs", url: "https://ui-as-code-web.vercel.app/pr" },
+            { label: "API Docs", url: "https://ui-as-code-web.vercel.app/api-docs" },
+            { label: "Status", url: "https://ui-as-code-web.vercel.app/status" },
+            { label: "Analytics", url: "https://ui-as-code-web.vercel.app/analytics" },
+            { label: "GitHub", url: "https://github.com/YanziMa/ui-as-code" },
+          ].map((action) => (
+            <a
+              key={action.label}
+              href={action.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "block",
+                textAlign: "center",
+                padding: "5px 4px",
+                fontSize: 10.5,
+                color: "#6b7280",
+                textDecoration: "none",
+                borderRadius: 5,
+                background: "#f9fafb",
+                transition: "background 0.15s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = "#f3f4f6")}
+              onMouseLeave={(e) => (e.currentTarget.style.background = "#f9fafb")}
+            >
+              {action.label}
+            </a>
+          ))}
+        </div>
         <button
           onClick={() => {
             checkConnection()
             fetchStats()
           }}
-          style={{ color: "#6b7280", background: "none", border: "none", cursor: "pointer", fontSize: 11 }}
+          style={{
+            width: "100%",
+            marginTop: 8,
+            padding: "5px 0",
+            color: "#9ca3af",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            fontSize: 10.5,
+          }}
         >
-          Refresh
+          Refresh Status
         </button>
       </div>
 
