@@ -4679,3 +4679,36 @@ export type {
   RichTextEditorOptions,
   RichTextEditorInstance,
 } from "./rich-text-editor";
+
+// --- Form Builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Data Table ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+
+// --- Kanban Board ---
+export { createKanbanBoard } from "./kanban-board";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanBoardOptions,
+  KanbanBoardInstance,
+} from "./kanban-board";
