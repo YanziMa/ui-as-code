@@ -7958,3 +7958,40 @@ export type {
   TagGroupOptions,
   TagGroupInstance,
 } from "./tag";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+
+// --- Divider ---
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+} from "./divider";
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider";
+
+// --- Spin ---
+export {
+  SpinManager,
+  createSpin,
+} from "./spin";
+export type {
+  SpinType,
+  SpinSize,
+  SpinOptions,
+  SpinInstance,
+} from "./spin";
