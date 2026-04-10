@@ -15875,3 +15875,33 @@ export type {
   SelectOptions,
   SelectInstance,
 } from "./select";
+export {
+  ImageGalleryManager,
+  createImageGallery,
+} from "./image-gallery";
+export type {
+  GalleryImage,
+  ImageGalleryOptions,
+  ImageGalleryInstance,
+} from "./image-gallery";
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  mdToHtml,
+} from "./markdown-renderer";
+export type {
+  MdNode,
+  MdNodeType,
+  MdRenderOptions,
+  TocEntry,
+  FrontMatter,
+} from "./markdown-renderer";
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
