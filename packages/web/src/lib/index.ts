@@ -2224,3 +2224,30 @@ export {
   type DomNode, type AttributeMap, type StyleMap, type EventMap,
   type BuilderOptions, type DomPatch, type DiffResult,
 } from "./dom-builder";
+
+// --- Virtual Scroller ---
+export {
+  VirtualScroller,
+  type ScrollItem, type VisibleRange, type ScrollerConfig, type ScrollerState,
+  type ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Color Utils ---
+export {
+  parseColor, requireColor, rgbToHex, hexToRgb, rgbToHsl, hslToRgb,
+  rgbToHsv, hsvToHsl, toHexString, toRgbString, toHslString,
+  lighten, darken, saturate, desaturate, rotateHue, setOpacity, mix, invert,
+  luminance, contrastRatio, meetsAA, meetsAAA, contrastingText, minAlphaForContrast,
+  generatePalette, complementary, analogous, triadic, splitComplementary, tetradic,
+  generateScheme, linearGradient, radialGradient, gradientBetween, shimmerGradient,
+  colorTemperature, isWarmColor, hueCategory,
+  cssVariablesFromPalette, generateDesignTokens,
+  type RGB, type HSL, type HSV, type ColorStop, type ColorPalette,
+} from "./color-utils";
+
+// --- Animation Timeline ---
+export {
+  AnimationTimeline, easings, createTimeline,
+  type EasingFn, type TimelinePlaybackState, type Keyframe, type AnimationTrack,
+  type TimelineLabel, type TimelineEvent, type TimelineOptions, type TimelineState,
+} from "./animation-timeline";
