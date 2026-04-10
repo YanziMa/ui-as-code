@@ -4048,3 +4048,15 @@ export type { SidebarItem, SidebarGroup, SidebarOptions, SidebarInstance } from 
 // --- Breadcrumb ---
 export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
 export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
+
+// --- Tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } from "./tabs";
+
+// --- Accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion";
+
+// --- Carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
