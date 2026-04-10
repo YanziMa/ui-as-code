@@ -4892,3 +4892,31 @@ export type {
   SwitchOptions,
   SwitchInstance,
 } from "./switch";
+
+// --- Slider ---
+export { SliderManager, createSlider } from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Radio Group ---
+export { createRadioGroup } from "./radio-group";
+export type {
+  RadioSize,
+  RadioVariant,
+  RadioOption,
+  RadioGroupOptions,
+  RadioGroupInstance,
+} from "./radio-group";
+
+// --- Checkbox Group ---
+export { createCheckboxGroup } from "./checkbox-group";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOption,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox-group";
