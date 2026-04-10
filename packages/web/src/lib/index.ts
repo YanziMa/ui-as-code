@@ -6265,3 +6265,50 @@ export type {
   ObserverOptions,
   ObserverStats,
 } from "./observer-pattern";
+
+// --- Reactive Primitives ---
+export {
+  Signal,
+  Computed,
+  Effect,
+  signal,
+  computed,
+  effect,
+  batch,
+  untrack,
+  readonly,
+  deepSignal,
+  derived,
+  combine,
+} from "./reactive";
+export type {
+  EqualityFn,
+  EffectCleanup,
+  EffectFn,
+  ReactiveNode,
+  SignalOptions,
+  EffectOptions,
+} from "./reactive";
+
+// --- Scheduler ---
+export {
+  Scheduler,
+  parseCronExpression,
+  cronMatches,
+  getNextCronRun,
+} from "./scheduler";
+export type {
+  ScheduledJob,
+  JobStatus,
+  CronExpression,
+} from "./scheduler";
+
+// --- Cache ---
+export {
+  Cache,
+  defaultCache,
+  memoize,
+} from "./cache";
+export type {
+  CacheOptions,
+} from "./cache";
