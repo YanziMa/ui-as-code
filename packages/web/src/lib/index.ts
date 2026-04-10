@@ -189,3 +189,21 @@ export {
   searchText, searchArray, highlightMatches, SearchIndex,
   type SearchOptions, type SearchResult, type SearchMatch,
 } from "./search";
+export {
+  calculateVisibleItems, DynamicVirtualizer,
+  calculateGridCells, type VirtualItem, type VirtualizerOptions,
+  type GridVirtualizerOptions, type GridVirtualizerResult,
+} from "./virtualization";
+export {
+  sortByKey, multiSort, stableSort, naturalSort, createSorter,
+  type SortDirection, type SortRule,
+} from "./sort";
+export {
+  LOCALES, getPluralForm, formatLocaleNumber, formatCurrency,
+  formatRelativeTimeLocale, formatList, detectLocale,
+  TranslationDict, type LocaleConfig, type LocaleCode, type PluralRule,
+} from "./i18n-utils";
+export {
+  animateValue, springAnimate, cssKeyframes, KEYFRAMES, DURATION, transition,
+  EASING, type EasingName, type SpringConfig,
+} from "./animation";
