@@ -12699,3 +12699,35 @@ export type {
   TypingIndicatorOptions,
   TypingIndicatorInstance,
 } from "./typing-indicator";
+
+// --- Scroll Progress ---
+export {
+  createScrollProgress,
+} from "./scroll-progress";
+export type {
+  ProgressBarPosition,
+  ProgressBarVariant,
+  ScrollProgressOptions,
+  ScrollProgressInstance,
+} from "./scroll-progress";
+
+// --- Reading Progress ---
+export {
+  createReadingProgress,
+} from "./reading-progress";
+export type {
+  ProgressColor,
+  ProgressSize,
+  ProgressPosition,
+  ReadingProgressOptions,
+  ReadingProgressInstance,
+} from "./reading-progress";
+
+// --- Pull to Refresh ---
+export {
+  createPullToRefresh,
+} from "./pull-to-refresh";
+export type {
+  PullToRefreshOptions,
+  PullToRefreshInstance,
+} from "./pull-to-refresh";
