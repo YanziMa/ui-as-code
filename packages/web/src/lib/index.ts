@@ -11924,3 +11924,54 @@ export type {
   HslColor,
   Palette,
 } from "./color-picker";
+
+// --- Tree View ---
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
+
+// --- Table / Data Grid Utilities ---
+export {
+  createTableState,
+  getSortedData,
+  getFilteredData,
+  getPaginatedData,
+  getCellValue,
+  applyFilterOperator,
+  toggleSort,
+  setSearchTerm,
+  toggleFilter,
+  goToPage,
+  setPageSize,
+  toggleRowSelection,
+  toggleSelectAll,
+  toggleRowExpand,
+  resetTable,
+  exportTableAsCsv,
+} from "./table";
+export type {
+  Column,
+  TableState,
+  SortState,
+  FilterState,
+  FilterOperator,
+  PaginationState,
+  SelectionState,
+} from "./table";
+
+// --- File Upload ---
+export {
+  createUpload,
+} from "./upload";
+export type {
+  UploadStatus,
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+} from "./upload";
