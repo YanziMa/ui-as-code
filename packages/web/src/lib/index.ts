@@ -2071,3 +2071,29 @@ export {
   type RenderOptions, type SvgDiagram, type StateMachineModel,
   type AnimationFrame,
 } from "./state-machine-visual";
+
+// --- CSV Parser ---
+export {
+  parseCsv, serializeCsv, createStreamingParser,
+  validateAgainstSchema, queryCsv,
+  StreamingParser,
+  type CsvFieldType, type CsvField, type CsvRow, type CsvSchema,
+  type ParseOptions, type ParseResult, type ParseError,
+  type TypeInferenceOptions,
+} from "./csv-parser";
+
+// --- Chart.js Adapter ---
+export {
+  createChartConfig, quickChart, timeSeriesChart, dualAxisChart,
+  updateChartData, exportConfigJson,
+  type ChartType, type DataPoint, type Dataset, type AxisConfig,
+  type TooltipConfig, type LegendConfig, type AnimationConfig,
+  type ChartJsConfig, type AdapterOptions, type ColorPaletteName,
+} from "./chartjs-adapter";
+
+// --- WebSocket Reconnection ---
+export {
+  WebSocketManager, createWebSocket, createChatWebSocket, createStreamWebSocket,
+  type ConnectionState, type ReconnectOptions, type HeartbeatOptions,
+  type WsReconnectConfig, type WsEventListener, type ConnectionStats,
+} from "./websocket-reconnection";
