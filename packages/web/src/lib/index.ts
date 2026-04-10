@@ -15243,3 +15243,50 @@ export type {
   LogEntry,
   TransportOptions,
 } from "./logger-enhanced";
+export {
+  I18nManager,
+  createI18n,
+  getI18n,
+} from "./i18n-enhanced";
+export type {
+  LocaleCode,
+  LocaleDirection,
+  LocaleInfo,
+  MessageCatalog,
+  I18nOptions,
+  PluralForm,
+} from "./i18n-enhanced";
+export {
+  Router,
+  createRouter,
+  getRouter,
+} from "./router";
+export type {
+  RouteMode,
+  RouteParams,
+  QueryParams,
+  RouteDefinition,
+  RouterConfig,
+  RouteInfo,
+  NavigationResult,
+} from "./router";
+export {
+  Store,
+  createStore,
+  createComputed,
+  persistMiddleware,
+  connectDevTools,
+  registerStore,
+  getStore,
+  unregisterStore,
+} from "./store";
+export type {
+  Listener,
+  Selector,
+  EqualityFn,
+  PartialState as StorePartialState,
+  Middleware,
+  StoreOptions,
+  StoreApi,
+  PersistOptions,
+} from "./store";
