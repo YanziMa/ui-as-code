@@ -16222,3 +16222,40 @@ export type {
   IdleOptions,
   IdleInstance,
 } from "./idle";
+export {
+  ThemeManager,
+  getThemeManager,
+  useTheme,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+} from "./theme";
+export type {
+  ThemeColors,
+  ThemeConfig,
+} from "./theme";
+export {
+  createCssVars,
+  parseCssValue,
+  pxToRem,
+  remToPx,
+  resolveCssVarChain,
+} from "./css-variables";
+export type {
+  CssVarOptions,
+  CssVarInstance,
+} from "./css-variables";
+export {
+  ResponsiveManager,
+  getResponsiveManager,
+  matchesMedia,
+  watchMedia,
+  getSafeAreaInsets,
+  getViewportSize,
+  DEFAULT_BREAKPOINTS,
+} from "./responsive";
+export type {
+  Breakpoint,
+  ResponsiveOptions,
+  ResponsiveInfo,
+} from "./responsive";
