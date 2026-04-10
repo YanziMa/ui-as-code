@@ -12660,3 +12660,42 @@ export type {
   SignaturePadOptions,
   SignaturePadInstance,
 } from "./signature-pad";
+
+// --- Confetti ---
+export {
+  createConfetti,
+  confetti,
+  confettiFromElement,
+} from "./confetti";
+export type {
+  ParticleShape,
+  Particle,
+  ConfettiColors,
+  ConfettiPhysics,
+  ConfettiOptions,
+  ConfettiInstance,
+} from "./confetti";
+
+// --- Marquee ---
+export {
+  MarqueeManager,
+  createMarquee,
+} from "./marquee";
+export type {
+  MarqueeDirection,
+  MarqueeStyle,
+  MarqueeItem,
+  MarqueeOptions,
+  MarqueeInstance,
+} from "./marquee";
+
+// --- Typing Indicator ---
+export {
+  createTypingIndicator,
+} from "./typing-indicator";
+export type {
+  TypingAnimation,
+  TypingSize,
+  TypingIndicatorOptions,
+  TypingIndicatorInstance,
+} from "./typing-indicator";
