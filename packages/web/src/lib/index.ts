@@ -9200,3 +9200,44 @@ export type {
   HotkeyEvent,
   ParsedKeyCombo,
 } from "./hotkeys";
+
+// --- Resizable ---
+export {
+  makeResizable,
+  createSplitPane,
+} from "./resizable";
+export type {
+  ResizeOptions,
+  ResizeState,
+  ResizableController,
+  SplitPaneOptions,
+  SplitPaneController,
+} from "./resizable";
+
+// --- Split View ---
+export {
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+} from "./split-view";
+export type {
+  SplitDirection,
+  PaneConfig,
+  SplitViewOptions,
+  SplitViewState,
+  SplitViewInstance,
+} from "./split-view";
+
+// --- Anchor Positioning ---
+export {
+  computePosition,
+  createArrowStyles,
+  positionElement,
+} from "./anchor-positioning";
+export type {
+  Placement,
+  Alignment,
+  VirtualElement,
+  Rect,
+  PositionResult,
+} from "./anchor-positioning";
