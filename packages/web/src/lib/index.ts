@@ -4060,3 +4060,50 @@ export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance 
 // --- Carousel ---
 export { CarouselManager, createCarousel } from "./carousel";
 export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
+
+// --- Table ---
+export {
+  createTableState,
+  getSortedData,
+  getFilteredData,
+  getPaginatedData,
+  getCellValue,
+  applyFilterOperator,
+  toggleSort,
+  setSearchTerm,
+  toggleFilter,
+  goToPage,
+  setPageSize,
+  toggleRowSelection,
+  toggleSelectAll,
+  toggleRowExpand,
+  resetTable,
+  exportTableAsCsv,
+} from "./table";
+export type {
+  Column,
+  TableState,
+  SortState,
+  FilterState,
+  FilterOperator,
+  PaginationState,
+  SelectionState,
+} from "./table";
+
+// --- Tree View ---
+export { TreeView } from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
+
+// --- Timeline ---
+export { TimelineManager, createTimeline } from "./timeline";
+export type {
+  TimelineItem,
+  TimelineItemStatus,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
