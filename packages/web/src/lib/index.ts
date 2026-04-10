@@ -834,3 +834,21 @@ export {
   type ApiError, type NetworkError, type TimeoutError, type CacheConfig,
   type PaginationResult, type MockRule,
 } from "./api-client";
+export {
+  clamp, lerp, smoothStep, mapRange, roundTo, roundToMultiple, ceilToMultiple, floorToMultiple,
+  approxEqual, inRange, wrap, normalizeAngle, degToRad, radToDeg,
+  mean, median, mode, variance, stdev, percentile, quartiles, iqr, findOutliers,
+  covariance, correlation,
+  rangesOverlap, rangeIntersection, rangeUnion, inAnyRange, mergeRanges, subtractRanges,
+  type NumericRange,
+} from "./number-utils-v2";
+export {
+  Observable, ComputedValue, ReactiveStore, watch,
+  SeededRNG, rng, randInt, randFloat, randPick, shuffle, uuid,
+  formatNumber, formatCompact, formatBytes, formatPercent, formatCurrency, parseFormattedNumber,
+  celsiusToFahrenheit, fahrenheitToCelsius, celsiusToKelvin, kelvinToCelsius,
+  metersToFeet, feetToMeters, metersToMiles, milesToMeters, kmToMiles, milesToKm,
+  kgToPounds, poundsToKg,
+  msToSeconds, secondsToMs, minutesToMs, hoursToMs, daysToMs, msToReadable,
+  type Subscriber, type Unsubscribe, type StoreOptions, type StoreState, type WatchOptions,
+} from "./observer";
