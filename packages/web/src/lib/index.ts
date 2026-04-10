@@ -11690,3 +11690,37 @@ export type {
   RadioGroupOptions,
   RadioGroupInstance,
 } from "./radio-group";
+
+// --- Input ---
+export {
+  createInput,
+} from "./input";
+export type {
+  InputSize,
+  InputVariant,
+  InputState,
+  InputOptions,
+  InputInstance,
+} from "./input";
+
+// --- Select ---
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
+
+// --- Textarea ---
+export {
+  createTextarea,
+} from "./textarea";
+export type {
+  TextareaSize,
+  TextareaState,
+  TextareaOptions,
+  TextareaInstance,
+} from "./textarea";
