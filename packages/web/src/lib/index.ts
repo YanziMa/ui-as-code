@@ -7911,3 +7911,50 @@ export type {
   LoadingBarOptions,
   LoadingBarInstance,
 } from "./loading-bar";
+
+// --- Progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+
+// --- Tag ---
+export {
+  TagManager,
+  createTag,
+  createTagGroup,
+} from "./tag";
+export type {
+  TagVariant,
+  TagSize,
+  TagShape,
+  TagOptions,
+  TagInstance,
+  TagGroupOptions,
+  TagGroupInstance,
+} from "./tag";
