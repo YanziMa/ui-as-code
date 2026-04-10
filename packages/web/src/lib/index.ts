@@ -4378,3 +4378,30 @@ export type {
   BackToTopOptions,
   BackToTopInstance,
 } from "./back-to-top";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Reading Progress ---
+export { createReadingProgress } from "./reading-progress";
+export type {
+  ProgressColor,
+  ProgressSize,
+  ProgressPosition,
+  ReadingProgressOptions,
+  ReadingProgressInstance,
+} from "./reading-progress";
+
+// --- Sticky Header ---
+export { createStickyHeader } from "./sticky-header";
+export type {
+  StickyBehavior,
+  StickyShadow,
+  StickyHeaderOptions,
+  StickyHeaderInstance,
+} from "./sticky-header";
