@@ -627,3 +627,51 @@ export {
   type TextSettings, type Layer, type HistoryEntry, type ExportOptions,
   type DrawingTool, type ColorStop, type ToolConfig, type DrawingAppState,
 } from "./canvas-draw";
+export {
+  getImageDimensions, loadImage, imageToCanvas, resizeImage, cropImage, applyFilters,
+  convertFormat, generateThumbnail, compressImage, getDominantColor, getAverageColor,
+  createCollage, addWatermark, detectOrientation, getAspectRatio,
+  fileToDataUrl, fileToArrayBuffer, downloadImage, formatFileSize, isValidImageType,
+  getExifOrientation,
+  type ImageDimensions, type ImageProcessingOptions, type CropRegion, type FilterOptions,
+} from "./image-utils";
+export {
+  getNetworkStatus, onNetworkChange, isSlowConnection, isDataSaverEnabled,
+  fetchWithRetry, RequestQueue, syncWhenOnline, processOfflineQueue,
+  BandwidthEstimator, ConnectionHealthChecker,
+  type NetworkStatus, type RetryOptions, type RequestQueueItem,
+} from "./network-utils";
+export {
+  detectTextRegion, preprocessForOCR, analyzeTextLayout, extractTextFromPDF,
+  calculateAccuracy,
+  type OCRResult, type OCRWord, type OCRLine, type BoundingBox, type OCREngineConfig,
+} from "./ocr-utils";
+export {
+  getCurrentPosition, watchPosition, haversineDistance, pathDistance, midpointCoords,
+  isInBoundingBox, createBoundingBox, GeofenceManager, formatCoordinates, formatDistance,
+  generateMapLink, calculateSpeed, isStationary, getTimezoneForLocation,
+  type Coordinates, type LocationInfo, type Geofence, type BoundingBox as GeoBoundingBox, type DistanceResult,
+} from "./geolocation-utils";
+export {
+  printContent, printElement, printPreview, generateReceiptText, generateLabel,
+  injectPrintStyles, PRINT_STYLES, getPrintableArea, estimatePageCount, paginateContent, generatePDF,
+  type PrintOptions, type PageSettings,
+} from "./print-utils";
+export {
+  // Audio context management
+  AudioContextManager, AudioAnalyzer, AudioRecorder, AudioEffectsChain,
+  AudioVisualization, AudioPlayer, VolumeMeter,
+  // Utilities
+  formatAudioTime, dbToLinear, linearToDb, frequencyToNote, noteToFrequency,
+  generateTone, generateNoise, applyFadeInOut,
+  type AudioAnalysisData, type FrequencyBand, type RecordingState, type EffectSettings,
+  type VisualizationData, type PlaybackOptions,
+} from "./audio-utils";
+export {
+  encryptAES, decryptAES, generateAESKey, encryptRSA, decryptRSA, generateRSAKeyPair,
+  hashSHA256, hashSHA384, hashSHA512, hmacSHA256, deriveKeyPBKDF2,
+  randomBytes, randomUUID, randomString, randomIntInRange,
+  base64Encode, base64Decode, hexEncode, hexDecode, utf8ToArrayBuffer, arrayBufferToUtf8,
+  signECDSA, verifyECDSA, createToken, verifyToken, KeyManager,
+  type EncryptedData, type RSAKeyPair, type HashAlgorithm, type TokenPayload,
+} from "./encryption";
