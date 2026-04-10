@@ -129,3 +129,16 @@ export {
   mean, median, stddev, percentile, linearRegression,
   sum, minmax, normalize, movingAverage, ema,
 } from "./math";
+export {
+  globToRegex, isGlobMatch, wildcardMatch, levenshtein,
+  fuzzyScore, findBestMatch, camelToWords, kebabToWords, snakeToWords,
+} from "./pattern";
+export {
+  detectBrowser, supports, getViewport, isTouchDevice,
+  prefersReducedMotion, prefersDarkMode, getColorGamut,
+  type BrowserInfo,
+} from "./browser";
+export {
+  cssVar, setCssVar, breakpoint, BREAKPOINTS,
+  hexToRgb, rgbToHex, parseColor, mixColors, transparentize,
+} from "./css";
