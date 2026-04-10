@@ -2003,3 +2003,23 @@ export {
   type ContextMenuItem, type MenuContext, type ContextMenuOptions,
   type ContextMenuInstance, type ContextMenuItemId,
 } from "./context-menu-manager";
+
+// --- Resizable ---
+export {
+  makeResizable, createSplitPane,
+  type ResizeOptions, type ResizeState, type ResizableController,
+  type SplitPaneOptions as ResizableSplitPaneOptions, type SplitPaneController,
+} from "./resizable";
+
+// --- Split Pane ---
+export {
+  createSplitPane as createAdvancedSplitPane,
+  type SplitOrientation, type SplitCollapseDirection,
+  type SplitPaneInstance, type SplitPaneOptions as AdvancedSplitPaneOptions,
+} from "./split-pane";
+
+// --- Draggable Window ---
+export {
+  createDraggableWindow,
+  type DraggableWindowOptions, type DraggableWindowInstance, type WindowState, type WindowControl,
+} from "./draggable-window";
