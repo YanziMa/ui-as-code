@@ -10354,3 +10354,57 @@ export type {
   OtpInputOptions,
   OtpInputInstance,
 } from "./input-otp";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+
+// --- Date Picker ---
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+
+// --- File Upload ---
+export {
+  FileUploadManager,
+  createFileUpload,
+} from "./file-upload";
+export type {
+  FileUploadOptions,
+  UploadFile,
+  FileUploadInstance,
+} from "./file-upload";
