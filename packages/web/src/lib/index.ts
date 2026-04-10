@@ -3417,3 +3417,23 @@ export {
   type StatOptions, type StatInstance,
   type TrendDirection, type StatVariant, type TrendColor,
 } from "./statistic";
+
+// --- Upload Zone ---
+export {
+  UploadZoneManager, createUploadZone,
+  type UploadZoneOptions, type UploadZoneInstance,
+  type FileValidationRule, type UploadedFile,
+} from "./upload-zone";
+
+// --- Notification Center ---
+export {
+  NotificationCenterManager, createNotificationCenter,
+  type NotificationCenterOptions, type NotificationCenterInstance,
+  type NotificationItem, type NotificationType,
+} from "./notification-center";
+
+// --- Search Highlight ---
+export {
+  SearchHighlightManager, createSearchHighlight,
+  type SearchHighlightOptions, type SearchHighlightInstance,
+} from "./search-highlight";
