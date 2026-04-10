@@ -1886,3 +1886,28 @@ export {
   type UrlStateManager, type ParamDefinition, type UrlStateConfig,
   type ParamKey, type ParamValue, type StateDiff,
 } from "./url-state-manager";
+
+// --- Advanced Task Scheduler ---
+export {
+  AdvancedTaskScheduler, createAdvancedScheduler, PriorityQueue,
+  type Task, type TaskResult, type TaskId, type TaskStatus, type TaskPriority,
+  type WorkerPoolOptions, type SchedulerConfig, type SchedulerStats,
+  type DeadLetterEntry,
+} from "./task-scheduler-advanced";
+
+// --- Style Runtime ---
+export {
+  StyleRuntime, createStyleRuntime,
+  type StyleDeclaration, type StyleRule, type ThemeVariable, type ThemeDefinition,
+  type RuntimeStyleOptions, type BreakpointInfo, type ComputedStyle,
+  type StyleProperty, type StyleValue, type Selector, type ScopeSelector,
+} from "./style-runtime";
+
+// --- Event Bus v2 ---
+export {
+  EventBusV2, createEventBusV2,
+  type BaseEvent, type TypedEvent, type EventHandler, type SubscriptionOptions,
+  type SubscriptionHandle, type MiddlewareContext, type EventMiddleware,
+  type BusMetrics, type EventBusConfig,
+  type ChannelName, type EventName, type EventId, type SubscriberId, type MiddlewareId,
+} from "./event-bus-v2";
