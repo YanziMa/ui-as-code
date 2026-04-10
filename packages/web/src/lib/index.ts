@@ -10959,3 +10959,35 @@ export type {
   RatingOptions,
   RatingInstance,
 } from "./rating";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+} from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
