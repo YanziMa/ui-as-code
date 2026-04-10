@@ -1365,3 +1365,27 @@ export {
   type AggregationResult, type TimeBucket, type ColorPalette,
   type AxisFormatConfig,
 } from "./chart-adapter";
+export {
+  UndoRedoManager, createCommand, createPropertyCommand,
+  type Command, type HistoryBranch, type UndoRedoState,
+  type UndoRedoConfig, type BatchOptions,
+} from "./undo-redo-system";
+export {
+  AccessibilityAnnouncer, FocusTrap, RovingTabIndex,
+  prefersReducedMotion, prefersHighContrast, prefersDarkMode,
+  hasTouchCapability, detectScreenReader, watchMediaQuery,
+  getFocusableElements, focusElement, saveFocus, createSkipLink,
+  setAria, getAria, ariaPatterns,
+  contrastRatio, wcagLevel, suggestAccessibleColor,
+  validateHeadingStructure,
+  type A11yConfig, type FocusTrapConfig, type FocusableElement,
+  type LiveRegionPoliteness, type AriaRole, type AriaProperty,
+  type HeadingIssue,
+} from "./accessibility-engine";
+export {
+  Logger, ConsoleTransport, MemoryTransport, RemoteTransport,
+  getLogger, resetLogger, createModuleLogger,
+  generateCorrelationId, generateRequestId,
+  type LogEntry, type LogTransport, type LoggerConfig,
+  type TimerHandle, type LogLevel,
+} from "./logger-system";
