@@ -14614,3 +14614,25 @@ export type {
   HttpResponse,
   HttpError,
 } from "./http";
+export {
+  mdToHtml,
+  stripMd,
+} from "./markdown";
+export {
+  highlightCode,
+} from "./code-highlight";
+export type {
+  SupportedLang,
+  HighlightOptions,
+  HighlightResult,
+} from "./code-highlight";
+export {
+  createMask,
+  createSpotlight,
+} from "./mask";
+export type {
+  MaskMode,
+  MaskOptions,
+  CutoutOptions,
+  MaskInstance,
+} from "./mask";
