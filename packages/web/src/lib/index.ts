@@ -1161,3 +1161,20 @@ export {
   type SyncOperation, type RoomEvent, type RealtimeClientOptions,
   type RateLimitResult,
 } from "./websocket-realtime";
+export {
+  AdvancedFormState, FormPersistence, FormAnalytics,
+  required, minLength, maxLength, lengthRange, minValue, maxValue, rangeVal,
+  pattern, email, url, matchesField, notMatchesField, greaterThan, lessThan,
+  dateRange, futureDate, pastDate, custom,
+  trimTransform, lowercaseTransform, uppercaseTransform, numberTransform,
+  intTransform, floatTransform, boolTransform, nullIfEmptyTransform,
+  defaultIfEmptyTransform, clampTransform,
+  type FieldState, type FormState, type ValidationRule, type TransformRule,
+  type FieldConfig,
+} from "./form-state-advanced";
+export {
+  DataTableEngine, formatCellValue, aggregateColumn, generateCsv,
+  type Column, type RowData, type SortState, type FilterState,
+  type FilterOperator, type PaginationState, type SelectionState,
+  type GroupState, type TableState,
+} from "./data-table-engine";
