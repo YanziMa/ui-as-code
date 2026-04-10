@@ -4920,3 +4920,30 @@ export type {
   CheckboxGroupOptions,
   CheckboxGroupInstance,
 } from "./checkbox-group";
+
+// --- Select ---
+export { SelectManager, createSelect } from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
+
+// --- Input Group ---
+export { createInputGroup } from "./input-group";
+export type {
+  InputSize,
+  InputVariant,
+  ValidationState,
+  InputGroupOptions,
+  InputGroupInstance,
+} from "./input-group";
+
+// --- Progress Bar ---
+export { createProgressBar, createCircleProgress } from "./progress-bar";
+export type {
+  ProgressVariant,
+  ProgressSize,
+  ProgressBarOptions,
+  CircleProgressOptions,
+} from "./progress-bar";
