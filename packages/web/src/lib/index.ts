@@ -15743,3 +15743,51 @@ export type {
   TagInputOptions,
   TagInputInstance,
 } from "./tag-input";
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
