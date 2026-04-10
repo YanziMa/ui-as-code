@@ -15933,3 +15933,38 @@ export type {
   MarqueeOptions,
   MarqueeInstance,
 } from "./marquee";
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type {
+  ClipboardData,
+  ClipboardOptions,
+} from "./clipboard";
+export {
+  PrintManager,
+  createPrintManager,
+  quickPrint,
+  addPageBreakBefore,
+  addPageBreakAfter,
+  avoidBreakInside,
+} from "./print";
+export type {
+  PrintOptions,
+  PrintManagerInstance,
+} from "./print";
+export {
+  createBackToTop,
+} from "./back-to-top";
+export type {
+  BttPosition,
+  BttSize,
+  BttShape,
+  BackToTopOptions,
+  BackToTopInstance,
+} from "./back-to-top";
