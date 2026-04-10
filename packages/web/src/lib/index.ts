@@ -6220,3 +6220,48 @@ export type {
   QueueStats,
   BatchProcessorOptions,
 } from "./queue-utils";
+
+// --- Event Emitter ---
+export {
+  EventEmitter,
+  createEmitter,
+} from "./event-emitter";
+export type {
+  Listener,
+  AsyncListener,
+  EmitterOptions,
+  Subscription as EmitterSubscription,
+  EmitResult,
+  EmitterStats,
+} from "./event-emitter";
+
+// --- State Machine ---
+export {
+  FSM,
+  HSM,
+  createMachine,
+  interpret,
+  match,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+} from "./state-machine";
+export type {
+  StateValue,
+  TransitionHistoryEntry,
+  Machine,
+} from "./state-machine";
+
+// --- Observer Pattern ---
+export {
+  Observer,
+  createObserver,
+} from "./observer-pattern";
+export type {
+  EventHandler,
+  EventErrorHandler,
+  Subscription as ObserverSubscription,
+  ObserverOptions,
+  ObserverStats,
+} from "./observer-pattern";
