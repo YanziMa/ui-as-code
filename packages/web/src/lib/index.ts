@@ -7872,3 +7872,42 @@ export type {
   AlertOptions,
   AlertInstance,
 } from "./alert";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
+
+// --- Loading Bar ---
+export {
+  LoadingBarManager,
+  createLoadingBar,
+  getGlobalLoadingBar,
+  startLoading,
+  doneLoading,
+} from "./loading-bar";
+export type {
+  LoadingBarColor,
+  LoadingBarOptions,
+  LoadingBarInstance,
+} from "./loading-bar";
