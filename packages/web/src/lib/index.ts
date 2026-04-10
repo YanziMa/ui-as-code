@@ -9385,3 +9385,42 @@ export type {
   ModalOptions,
   ModalInstance,
 } from "./modal";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Dropdown ---
+export {
+  createDropdown,
+} from "./dropdown";
+export type {
+  DropdownPlacement,
+  DropdownItem,
+  DropdownSeparator,
+  DropdownGroup,
+  DropdownEntry,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
