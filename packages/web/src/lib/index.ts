@@ -1178,3 +1178,19 @@ export {
   type FilterOperator, type PaginationState, type SelectionState,
   type GroupState, type TableState,
 } from "./data-table-engine";
+export {
+  FeatureFlagStore, FlagAnalytics,
+  registerBuiltinHelpers as registerFlagHelpers,
+  type FeatureFlag, type FlagType, type FlagStatus,
+  type SegmentDefinition, type SegmentCondition,
+  type EvaluationContext, type EvaluationResult, type FlagChange,
+  type RemoteFlagProvider,
+} from "./feature-flag-system";
+export {
+  InMemoryEventStore, SagaOrchestrator,
+  serializeEvent, deserializeEvent, generateEventId, createCorrelationId,
+  validateEvent, eventHash,
+  type BaseEvent, type StoredEvent, type AggregateRoot, type Projection,
+  type Snapshot, type SagaStep, type SagaDefinition,
+  type EventType,
+} from "./event-sourcing";
