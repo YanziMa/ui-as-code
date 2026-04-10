@@ -4973,3 +4973,29 @@ export type {
   StepsOptions,
   StepsInstance,
 } from "./steps";
+
+// --- Alert ---
+export { AlertManager, createAlert } from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+
+// --- Divider ---
+export { createDivider, hDivider, vDivider, labeledDivider, sectionDivider } from "./divider";
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider";
+
+// --- Spinner ---
+export { createSpinner, miniSpinner, fullPageSpinner } from "./spinner";
+export type {
+  SpinnerVariant,
+  SpinnerSize,
+  SpinnerOptions,
+} from "./spinner";
