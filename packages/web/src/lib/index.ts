@@ -2273,3 +2273,27 @@ export {
   mdToHtml, quickMd, stripMarkdown, extractToc,
   type MdToHtmlOptions, type MdToken, type ConvertResult,
 } from "./markdown-to-html";
+
+// --- Clipboard API ---
+export {
+  ClipboardAPI,
+  requestClipboardPermission, copyToClipboard, readFromClipboard,
+  copyElement, copyElementRich,
+  type ClipboardFormat, type ClipboardItemData, type ClipboardResult,
+  type ClipboardOptions, type ClipboardPermissionState, type ClipboardHistoryEntry,
+} from "./clipboard-api";
+
+// --- Drag and Drop ---
+export {
+  DragDropManager, getDragDropManager,
+  type DragMode, type DropPosition, type DragItem, type DragOptions,
+  type DropZoneOptions, type DropResult, type SortableConfig,
+} from "./drag-and-drop";
+
+// --- Keyboard Shortcuts ---
+export {
+  ShortcutManager, ShortcutRecorder, ShortcutOverlay,
+  eventToCombo, normalizeKey, comboToString, parseCombo, comboMatches, comboHash,
+  commonShortcuts,
+  type KeyCombo, type ShortcutBinding, type ShortcutScope, type RecordedSequence,
+} from "./keyboard-shortcuts";
