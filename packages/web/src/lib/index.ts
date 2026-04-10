@@ -786,3 +786,51 @@ export {
   type EventCallback, type EventMiddleware, type Subscription,
   type EmittedEvent, type EventBusOptions,
 } from "./event-bus";
+export {
+  DataPipeline, filter, map as mapTransform, pick, omit, rename, derive,
+  sortBy, limit, offset, paginate, uniqBy, groupBy,
+  aggregate, aggregateBy, validate, validations as pipelineValidations,
+  innerJoin, leftJoin,
+  type TransformStep, type TransformContext, type PipelineResult,
+  type AggregationResult, type ValidationRule,
+} from "./data-pipeline";
+export {
+  EventBus, createEventBus,
+  type EventCallback, type EventMiddleware, type Subscription,
+  type EmittedEvent, type EventBusOptions,
+} from "./event-bus";
+export {
+  $, $$, closest, matches, findByDataAttr, getFocusableElements, getVisibleParent,
+  createElement, div, span, fragment, createSvgElement,
+  addClass, removeClass, toggleClass, hasClass, replaceClass, swapClasses,
+  setStyles, getStyle, show, hide, toggleVisibility, isVisible,
+  getRect, getPosition, scrollIntoView, scrollToTop, scrollToBottom,
+  setAttr, getData, setData,
+  delegate, delegateOnce,
+  observeMutations, waitForElement, waitForRemoval,
+  getFullSize, isPointInside, doElementsOverlap,
+  insertAfter, insertBefore, replaceElement, removeElement, empty, cloneDeep, wrap, unwrap,
+} from "./dom-utils-v2";
+export {
+  toTitleCase, toSentenceCase, toCamelCase, toKebabCase, toSnakeCase, toPascalCase, toConstantCase,
+  detectCase, convertCase as convertStringCase,
+  slugify, uniqueSlug, humanize,
+  truncateMiddle, truncateAtWord, smartTruncate,
+  countWords, readingTime, charCount, stringStats, isBlank, isPresent,
+  interpolate, html, repeat, pad,
+  startsWith, endsWith, includes, findAllOccurrences, countOccurrences, replaceAll,
+  escapeHtml, unescapeHtml,
+  splitKeep, joinWithAnd, initialism, acronym,
+  maskEmail, maskPhone, maskCard, maskString,
+} from "./string-utils-v2";
+export {
+  WebhookManager, verifySignature, WebhookDispatcher, WebhookReceiver,
+  EventSchemaRegistry, WebhookLog, SecretManager, IdempotencyHandler,
+  type WebhookPayload, type SignatureVerificationOptions, type DeliveryStatus,
+} from "./webhook-utils";
+export {
+  ApiClient, createApiClient, ResourceBuilder,
+  type ApiClientConfig, type RequestInterceptor, type ResponseInterceptor,
+  type ApiError, type NetworkError, type TimeoutError, type CacheConfig,
+  type PaginationResult, type MockRule,
+} from "./api-client";
