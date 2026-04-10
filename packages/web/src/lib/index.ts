@@ -8227,3 +8227,35 @@ export type {
   AudioVisualizerOptions,
   AudioVisualizerInstance,
 } from "./audio-visualizer";
+
+// --- Rating Input ---
+export {
+  createRatingInput,
+} from "./rating-input";
+export type {
+  RatingIcon,
+  RatingSize,
+  RatingInputOptions,
+  RatingInputInstance,
+} from "./rating-input";
+
+// --- Slider Range ---
+export {
+  createSliderRange,
+} from "./slider-range";
+export type {
+  SliderOrientation as SliderRangeOrientation,
+  SliderRangeOptions,
+  SliderRangeInstance,
+} from "./slider-range";
+
+// --- Avatar Uploader ---
+export {
+  createAvatarUploader,
+} from "./avatar-uploader";
+export type {
+  AvatarShape,
+  UploadMode,
+  AvatarUploaderOptions,
+  AvatarUploaderInstance,
+} from "./avatar-uploader";
