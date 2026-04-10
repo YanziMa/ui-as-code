@@ -8965,3 +8965,46 @@ export type {
   UploadFile,
   FileUploadInstance,
 } from "./file-upload";
+
+// --- Form Builder ---
+export {
+  FormBuilder,
+  createForm,
+  validations,
+} from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Virtual Scroll ---
+export {
+  createVirtualScroll,
+  createVirtualGrid,
+} from "./virtual-scroll";
+export type {
+  VirtualScrollItem,
+  VirtualScrollOptions,
+  VirtualScrollState,
+  VirtualScrollController,
+  VirtualGridOptions,
+  VirtualGridState,
+  VirtualGridController,
+} from "./virtual-scroll";
+
+// --- Rich Text Editor ---
+export {
+  createRichTextEditor,
+} from "./rich-text-editor";
+export type {
+  EditorCommand,
+  ToolbarButton,
+  RichTextEditorOptions,
+  RichTextEditorInstance,
+} from "./rich-text-editor";
