@@ -15290,3 +15290,43 @@ export type {
   StoreApi,
   PersistOptions,
 } from "./store";
+export {
+  httpRequest,
+  http,
+  retryHttp,
+  setBaseUrl,
+  getBaseUrl,
+} from "./http";
+export type {
+  HttpRequestConfig,
+  HttpResponse,
+  HttpError,
+} from "./http";
+export {
+  WebSocketManager,
+  WsRoomManager,
+  isWebSocketSupported,
+  getWebSocketUrl,
+  createWebSocketUrl,
+  parseWsUrl,
+} from "./websocket";
+export type {
+  WsEvent,
+  WebSocketData,
+  WebSocketState,
+  WebSocketStats,
+  ReconnectConfig,
+  HeartbeatConfig,
+  WebSocketOptions,
+} from "./websocket";
+export {
+  EventBus,
+  createEventBus,
+} from "./event-bus";
+export type {
+  EventCallback,
+  EventMiddleware,
+  Subscription,
+  EmittedEvent,
+  EventBusOptions,
+} from "./event-bus";
