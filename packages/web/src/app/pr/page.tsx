@@ -1,18 +1,26 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { PullRequest } from "@/types";
 import { useToast } from "@/components/toast";
 import { TableSkeleton } from "@/components/skeleton";
 
+interface SearchResult {
+  prs: PullRequest[];
+  frictions?: { id: string; saas_name: string; component_name: string; description: string }[];
+}
+
 export default function PRDashboardPage() {
   const [prs, setPrs] = useState<PullRequest[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchResult | null>(null);
+  const [isSearching, setIsSearching] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"all" | "open" | "merged" | "closed">("all");
   const [search, setSearch] = useState("");
   const [sortBy, setSortBy] = useState<"newest" | "votes" | "affected">("newest");
   const [error, setError] = useState<string | null>(null);
   const { addToast } = useToast();
+  const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     fetch("/api/pull-requests")
@@ -35,6 +43,13 @@ export default function PRDashboardPage() {
   }, [addToast]);
 
   const filtered = useMemo(() => {
+    // Use API search results when available
+    if (searchResults?.prs && searchResults.prs.length > 0) {
+      let result = searchResults.prs;
+      if (filter !== "all") result = result.filter((pr) => pr.status === filter);
+      return result;
+    }
+
     let result = prs
       .filter((pr) => filter === "all" || pr.status === filter)
       .filter(
@@ -58,7 +73,39 @@ export default function PRDashboardPage() {
     }
 
     return result;
-  }, [prs, filter, search, sortBy]);
+  }, [prs, filter, search, sortBy, searchResults]);
+
+  // Debounced API search
+  const handleSearch = useCallback((query: string) => {
+    if (searchTimeoutRef.current) clearTimeout(searchTimeoutRef.current);
+    setSearch("");
+
+    if (!query.trim()) return;
+
+    setIsSearching(true);
+    searchTimeoutRef.current = setTimeout(async () => {
+      try {
+        const res = await fetch("/api/search", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ q: query, type: "all", limit: 20 }),
+        });
+        const data = await res.json();
+        if (data.data?.results) {
+          setSearchResults(data.data.results as SearchResult);
+        }
+      } catch {
+        // Silent fail — fall back to client-side filtering
+      } finally {
+        setIsSearching(false);
+      }
+    }, 300);
+  }, []);
+
+  // Trigger search when search input changes
+  useEffect(() => {
+    handleSearch(search);
+  }, [search, handleSearch]);
 
   const handleVote = useCallback(async (id: string, direction: "for" | "against") => {
     try {
@@ -164,6 +211,9 @@ export default function PRDashboardPage() {
               onChange={(e) => setSearch(e.target.value)}
               className="w-full rounded-lg border border-zinc-200 bg-white py-2 pl-10 pr-3 text-sm outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-zinc-800 dark:bg-black dark:text-zinc-50"
             />
+            {isSearching && (
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-blue-500 animate-pulse">Searching...</span>
+            )}
           </div>
           <div className="flex gap-2 flex-wrap">
           {(["all", "open", "merged", "closed"] as const).map((f) => (
