@@ -308,3 +308,62 @@ export {
   mapTree, filterTree, type TreeNode,
 } from "./tree";
 export { Graph, type GraphNode, type GraphEdge } from "./graph";
+export {
+  getConsentState, saveConsent, isCategoryAllowed, acceptAllCookies,
+  rejectNonEssentialCookies, resetConsent, hasConsented, getConsentHeader,
+  type CookiePreferences, type ConsentState, type CookieCategory,
+} from "./cookie-consent";
+export {
+  announce, setFocus, focusFirst, focusLast, createA11yFocusTrap,
+  prefersReducedMotion, prefersHighContrast, generateAriaId, aria,
+  SKIP_LINK_DEFAULTS,
+} from "./a11y";
+export {
+  parseUrl, buildUrlFromParts, updateSearchParams, removeSearchParams,
+  getQueryParams, isSameOrigin, normalizeUrl, isAbsoluteUrl,
+  makeAbsoluteUrl, getDomainFromUrl, getPathnameFromUrl,
+  joinPathSegments, encodeUriComponentSafe, decodeUriComponentSafe, urlsEqual,
+  type ParsedUrl,
+} from "./url-utils";
+export {
+  createCustomEvent, dispatchCustomEvent, onCustomEvent, throttleEvent,
+  debounceEvent, once, waitForEvent, delegateEvent,
+  preventDefault, stopPropagation, stopEvent,
+} from "./event-utils";
+export {
+  cssVar, setCssVar, getCssVar, cssTransition, EASING_CSS, BREAKPOINTS,
+  mediaQuery, matchesMedia, isAtLeast, isBelow,
+  hexToRgb, rgbToHex, parseColor, mixColors, transparentize,
+  lightenColor, darkenColor,
+} from "./css-utils";
+export {
+  getImageDimensions, generateSrcSet, generateSizes, getAspectRatio,
+  fitToContainer, generateBlurPlaceholder, isValidImageUrl,
+  getDominantColor, fileToDataUrl, resizeImage,
+} from "./image";
+export {
+  parseMarkdown, renderMdToHtml, mdToHtml, stripMarkdown,
+  type MdNode,
+} from "./markdown-advanced";
+export {
+  detectBrowser, supportsFeature, getViewportSize, getDevicePixelRatio,
+  isDarkMode, isLightMode, onColorSchemeChange, isPageVisible,
+  onVisibilityChange, getConnectionInfo, isSlowConnection, getMemoryInfo,
+  type BrowserInfo,
+} from "./browser-utils";
+export {
+  createFormState, setFieldValue, setFormValues, touchField, touchAllFields,
+  resetForm, getFormData, hasErrors, getFormErrors, setSubmitting,
+  type FormField, type FormState, type FieldValidator,
+} from "./form-state";
+export {
+  httpRequest, http, retryHttp, setBaseUrl, getBaseUrl,
+  type HttpRequestConfig, type HttpResponse, type HttpError,
+} from "./http";
+export {
+  now, nowSeconds, delay, measureTime, toISOString, parseISODate,
+  isToday, isYesterday, isWithinLastDays, timeAgo,
+  startOfDay, endOfDay, startOfWeek, endOfWeek, startOfMonth, endOfMonth,
+  addDays, addWeeks, addMonths, diffDays, diffHours, isSameDay,
+  formatDateLocale, formatTimeLocale, getTimezoneOffset,
+} from "./time";
