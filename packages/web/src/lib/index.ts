@@ -716,3 +716,28 @@ export {
   getPluralRule,
   type LocaleConfig, type I18nMessage, type I18nOptions, type PluralRule,
 } from "./i18n-engine";
+export {
+  FormBuilder, createForm, validations,
+  type FormSchema, type FormField, type FormSection, type FormState,
+  type FieldValidation, type FieldError, type SelectOption, type FieldType,
+} from "./form-builder";
+export {
+  toCsv, parseCsv, downloadCsv, copyCsvToClipboard, streamParseCsv, templateCsv,
+  isValidCsvFormat, getCsvStats,
+  type CsvOptions, type ParseOptions, type ParsedCsv, type StreamParseOptions,
+} from "./csv-export";
+export {
+  AnalyticsEngine, EventTracker, PageViewTracker, PerformanceMonitor,
+  FunnelTracker, CohortAnalyzer, SessionManager, ErrorTracker,
+  UserProperties, ABTestTracker, DataExporter, PrivacyControls,
+  generateMockAnalytics,
+  type AnalyticsEvent, type WebVitals, type FunnelStep, type CohortData,
+  type SessionData, type ErrorEvent, type MockDashboardData,
+} from "./analytics-utils";
+export {
+  VNode, VirtualDOM, DiffEngine, PatchOp, Reconciler, EventDelegator,
+  Scheduler, ComponentLifecycle, Memo, ContextProvider, ErrorBoundary,
+  createVNode, h, fragment, render, hydrate, mount,
+  type VNodeProps, type PatchType, type FiberNode, type WorkPriority,
+  type ComponentHooks, type DevToolsHook,
+} from "./virtual-dom";
