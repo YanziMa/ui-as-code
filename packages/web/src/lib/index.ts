@@ -3038,3 +3038,27 @@ export {
   type EventBusOptions, type Subscription, type EmittedEvent,
   type EventCallback, type EventMiddleware,
 } from "./event-bus";
+
+// --- Intersection Observer ---
+export {
+  IntersectionManager, createIntersectionObserver,
+  whenVisible, whenHidden, isInViewport, getVisibilityPercent,
+  type IntersectionObserverOptions, type IntersectionObserverInstance,
+  type IntersectionObserverEntry,
+} from "./intersection";
+
+// --- Mutation Observer ---
+export {
+  MutationWatcher, createMutationObserver,
+  waitForElement, waitForRemoval,
+  type MutationObserverOptions, type MutationObserverInstance,
+  type SimplifiedMutationRecord, type MutationFilter,
+} from "./mutation-observer";
+
+// --- Resize Observer ---
+export {
+  ResizeWatcher, createResizeObserver,
+  matchParentSize, whenSizeExceeds,
+  type ResizeObserverOptions, type ResizeObserverInstance,
+  type ResizeObserverEntry, type ResizeBox,
+} from "./resize-observer";
