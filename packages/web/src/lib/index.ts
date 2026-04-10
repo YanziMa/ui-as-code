@@ -10631,3 +10631,56 @@ export type {
   ThemeColors,
   ThemeConfig,
 } from "./theme";
+
+// --- State Machine ---
+export {
+  FSM,
+  HSM,
+  createMachine,
+  interpret,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+  match,
+  stateEquals,
+} from "./state-machine";
+export type {
+  StateId,
+  EventId,
+  MachineContext,
+  GuardFn,
+  ActionFn,
+  TransitionDef,
+  StateConfig,
+  MachineConfig,
+  InvalidEventStrategy,
+  HistoryMode,
+  ChoiceConfig,
+  JunctionConfig,
+  StateValue,
+  TransitionHistoryEntry,
+  Service,
+} from "./state-machine";
+
+// --- Event Bus ---
+export {
+  EventBus,
+  createEventBus,
+} from "./event-bus";
+export type {
+  EventCallback,
+  EventMiddleware,
+  Subscription,
+  EmittedEvent,
+  EventBusOptions,
+} from "./event-bus";
+
+// --- Storage ---
+export {
+  storageGet,
+  storageSet,
+  storageRemove,
+  storageKeys,
+  storageClear,
+} from "./storage";
