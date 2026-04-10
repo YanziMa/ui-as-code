@@ -1911,3 +1911,28 @@ export {
   type BusMetrics, type EventBusConfig,
   type ChannelName, type EventName, type EventId, type SubscriberId, type MiddlewareId,
 } from "./event-bus-v2";
+
+// --- Form Engine ---
+export {
+  FormEngine, createFormEngine, validators,
+  type FieldDefinition, type FieldValidationRule, type ValidationContext,
+  type FieldError, type FieldType, type FormState, type StepDefinition,
+  type FormConfig, type ValidationResult, type FieldName, type FormId,
+} from "./form-engine";
+
+// --- I18n Manager ---
+export {
+  I18nManager, createI18n,
+  type LocaleData, type MessageCatalog, type Locale, type MessageKey,
+  type Namespace, type PluralRuleSet, type LocaleFormats, type I18nConfig,
+  type InterpolationOptions, type I18nStats,
+} from "./i18n-manager";
+
+// --- Permission System ---
+export {
+  PermissionEngine,
+  type Permission, type Role, type Condition, type TimeConstraint,
+  type UserIdentity, type ResourceContext, type EvaluationContext,
+  type EvaluationResult, type Policy, type AuditLogEntry,
+  type PermissionAction,
+} from "./permission-system";
