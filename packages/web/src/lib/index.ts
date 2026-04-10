@@ -3746,3 +3746,23 @@ export {
   createNotificationBell,
   type NotificationItem, type NotificationBellOptions, type NotificationBellInstance,
 } from "./notification-bell";
+
+// --- Tabs ---
+export {
+  TabsManager, createTabs,
+  type TabItem, type TabOptions as TabsOptions, type TabInstance,
+  type TabOrientation, type TabVariant,
+} from "./tabs";
+
+// --- Accordion ---
+export {
+  AccordionManager, createAccordion,
+  type AccordionItem, type AccordionOptions, type AccordionInstance,
+  type AccordionMode,
+} from "./accordion";
+
+// --- Pagination ---
+export {
+  PaginationManager, createPagination,
+  type PaginationOptions, type PaginationInstance,
+} from "./pagination";
