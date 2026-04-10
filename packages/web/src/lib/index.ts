@@ -13619,3 +13619,33 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+export {
+  createDescriptionList,
+} from "./description-list";
+export type {
+  DlLayout,
+  DlSize,
+  DlItem,
+  DescriptionListOptions,
+  DescriptionListInstance,
+} from "./description-list";
