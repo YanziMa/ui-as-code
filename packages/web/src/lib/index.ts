@@ -7227,3 +7227,35 @@ export type {
   BreadcrumbOptions,
   BreadcrumbInstance,
 } from "./breadcrumb";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
