@@ -15365,3 +15365,47 @@ export type {
   FormOptions,
   FormInstance,
 } from "./form";
+export {
+  parseJwt,
+  isJwtExpired,
+  isJwtExpiringSoon,
+  jwtTimeToExpiry,
+  getJwtSubject,
+  decodeJwtHeader,
+  checkPasswordStrength,
+  buildOAuthUrl,
+  parseOAuthCallback,
+  AuthManager,
+} from "./auth";
+export type {
+  JwtPayload,
+  AuthState,
+  AuthConfig,
+  PasswordStrengthResult,
+  OAuthProvider,
+} from "./auth";
+export {
+  EnhancedACL,
+} from "./permission-enhanced";
+export type {
+  Action,
+  Resource,
+  RoleDefinition,
+  Permission,
+  AttributeCondition,
+  Policy,
+  TimeConstraint,
+  UserContext,
+  EvaluationResult,
+  RolePermissionMap,
+} from "./permission-enhanced";
+export {
+  SessionManager,
+} from "./session";
+export type {
+  SessionData,
+  SessionConfig,
+  SessionState,
+  SessionEventType,
+  SessionListener,
+} from "./session";
