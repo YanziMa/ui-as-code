@@ -1448,3 +1448,23 @@ export {
   type StateObserver, type HistoryEntry, type StateStore,
   type ConflictStrategy, type QuotaCleanupStrategy, type StorageBackend as SpStorageBackend,
 } from "./state-persistence";
+export {
+  VirtualScroller,
+  type ScrollItem, type VisibleRange, type ScrollerConfig, type ScrollerState,
+  type ScrollToOptions,
+} from "./virtual-scroller";
+export {
+  ImageOptimizer,
+  detectImageFormat, generateSrcset, generateSizes, createBlurPlaceholder,
+  optimizeImage, applyResponsiveAttributes, preloadImages,
+  type ImageSrc, type ImageOptimizeConfig, type ImageStats,
+  type ArtDirectionSource, type ImageFormat,
+} from "./image-optimizer";
+export {
+  ClipboardManager,
+  requestClipboardPermission, requestReadPermission,
+  isClipboardApiAvailable, sanitizeHtml,
+  type ClipboardData, type ClipboardDataType, type ClipboardPermission,
+  type CopyOptions, type PasteOptions, type ClipboardHistoryEntry,
+  type ClipboardConfig,
+} from "./clipboard-manager";
