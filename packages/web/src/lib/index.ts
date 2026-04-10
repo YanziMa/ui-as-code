@@ -2805,3 +2805,27 @@ export {
   InfiniteScroll,
   type InfiniteScrollItem, type InfiniteScrollOptions, type InfiniteScrollState,
 } from "./infinite-scroll";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown, renderToHtml, mdToHtml,
+  generateToc, renderToc,
+  extractFrontMatter, extractText, countWords, readingTime,
+  type MdNode, type MdNodeType, type MdRenderOptions,
+  type TocEntry, type FrontMatter,
+} from "./markdown-renderer";
+
+// --- Code Editor ---
+export {
+  CodeEditorManager, createCodeEditor,
+  type CodeEditorOptions, type CodeEditorInstance,
+} from "./code-editor";
+
+// --- Chart Utils ---
+export {
+  calculateAxisScale, formatAxisLabel, valueToPixel, pixelToValue,
+  aggregateByInterval, movingAverage, calculatePercentChanges, findExtrema,
+  generateChartColors, interpolateColor, getDataStats,
+  type DataPoint, type DataSeries, type ChartConfig,
+  type AxisScale, type DataStats, type ColorPaletteName,
+} from "./chart-utils";
