@@ -3944,3 +3944,15 @@ export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from 
 // --- Badge ---
 export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
 export type { BadgeOptions, BadgeVariant, BadgePosition, BadgeSize, StatusDotOptions } from "./badge";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// --- Progress ---
+export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
+export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
