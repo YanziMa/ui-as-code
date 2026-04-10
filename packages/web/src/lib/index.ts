@@ -12043,3 +12043,36 @@ export type {
   NotificationBellOptions,
   NotificationBellInstance,
 } from "./notification-bell";
+
+// --- Stat Card ---
+export {
+  createStatCard,
+} from "./stat-card";
+export type {
+  TrendDirection,
+  StatCardVariant,
+  StatCardOptions,
+} from "./stat-card";
+
+// --- Pricing Table ---
+export {
+  createPricingTable,
+} from "./pricing-table";
+export type {
+  PricingFeature,
+  PricingPlan,
+  PricingTableOptions,
+  PricingTableInstance,
+} from "./pricing-table";
+
+// --- Testimonial / Review Card ---
+export {
+  createTestimonial,
+} from "./testimonial";
+export type {
+  TestimonialLayout,
+  TestimonialSize,
+  TestimonialItem,
+  TestimonialOptions,
+  TestimonialInstance,
+} from "./testimonial";
