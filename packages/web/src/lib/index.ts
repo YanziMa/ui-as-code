@@ -1781,3 +1781,31 @@ export {
   type CacheEventType, type CacheEvent, type CacheEventEmitter,
   type StorageAdapter,
 } from "./cache-manager";
+
+// --- Auth Manager ---
+export {
+  AuthManager, createAuthManager,
+  validatePassword, estimatePasswordStrength,
+  decodeJwtPayload, isJwtExpired, getJwtRemainingTtl,
+  getUserIdFromToken, getRolesFromToken,
+  type AuthUser, type AuthTokens, type AuthSession,
+  type LoginCredentials, type RegisterData, type PasswordPolicy,
+  type MfaSetup, type AuthEvent, type AuthConfig, type AuthResult,
+} from "./auth-manager";
+
+// --- Resource Pool ---
+export {
+  ResourcePool, ConnectionPool,
+  createResourcePool, createConnectionPool,
+  type ResourceWrapper, type PoolOptions, type PoolMetrics,
+  type AcquireOptions, type PoolStatus, type ResourceId,
+  type ConnectionPoolOptions,
+} from "./resource-pool";
+
+// --- PubSub Bus ---
+export {
+  PubSubBus, createPubSubBus, MemoryBusStorage,
+  type PubSubMessage, type Subscriber, type SubscriptionFilter,
+  type DeadLetterEntry, type BusStats, type BusConfig,
+  type BusStorageAdapter, type Topic, type MessageId, type SubscriberId,
+} from "./pubsub-bus";
