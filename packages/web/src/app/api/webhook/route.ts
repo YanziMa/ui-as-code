@@ -6,7 +6,7 @@ import { supabase } from "@/lib/supabase";
 
 const WebhookSchema = z.object({
   event: z.enum(["pr:created", "pr:merged", "pr:closed", "friction:created", "vote:cast"]),
-  data: z.record(z.unknown()).optional(),
+  data: z.record(z.string(), z.unknown()).optional(),
 });
 
 /**
@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
           status: "open",
           votes_for: 0,
           votes_against: 0,
-        }).onConflict("id");
+        }, { onConflict: "id" });
         break;
       }
 
