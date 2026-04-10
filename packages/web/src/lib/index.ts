@@ -12111,3 +12111,39 @@ export type {
   HeroBannerOptions,
   HeroBannerInstance,
 } from "./hero-banner";
+
+// --- Sidebar Navigation ---
+export {
+  SidebarManager,
+  createSidebar,
+} from "./sidebar";
+export type {
+  SidebarItem,
+  SidebarGroup,
+  SidebarOptions,
+  SidebarInstance,
+} from "./sidebar";
+
+// --- Tab Bar ---
+export {
+  createTabBar,
+} from "./tab-bar";
+export type {
+  TabItem,
+  TabSize,
+  TabVariant,
+  TabBarOptions,
+  TabBarInstance,
+} from "./tab-bar";
+
+// --- Page Footer ---
+export {
+  createFooter,
+} from "./footer";
+export type {
+  FooterLink,
+  FooterColumn,
+  SocialLink,
+  FooterOptions,
+  FooterInstance,
+} from "./footer";
