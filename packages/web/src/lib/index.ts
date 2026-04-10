@@ -1287,3 +1287,23 @@ export {
   type ContrastResult, type GradientStop, type GradientDef,
   type PaletteColor, type ColorPalette, type ScaleStep,
 } from "./color-design-tokens";
+export {
+  signal, computed, effect, batch, flushPending,
+  isSignal, isComputed, untrack, peek,
+  not, mapSignal, filterSignal,
+  asyncEffect,
+  getDependencyGraph, getPendingCount, getBatchDepth,
+  shallowEqual as signalShallowEqual, deepEqual,
+  type EqualityFn, type SignalOptions, type ComputedOptions,
+  type EffectOptions, type ReactionNode,
+} from "./reactive-signals";
+export {
+  TaskScheduler,
+  type Task, type TaskStatus, type TaskPriority, type RetryStrategy,
+  type SchedulerConfig, type SchedulerMetrics, type WorkerPoolOptions,
+} from "./task-scheduler";
+export {
+  parse, render, extractText, extractFrontMatter, generateTableOfContents,
+  type MdNode, type MdNodeType, type TocEntry, type FrontMatter,
+  type ParseOptions, type RenderOptions, type MdExtension,
+} from "./markdown-processor";
