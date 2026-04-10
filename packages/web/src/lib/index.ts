@@ -12211,3 +12211,49 @@ export type {
   PrintButtonOptions,
   PrintButtonInstance,
 } from "./print-button";
+
+// --- Progress Bar ---
+export {
+  createProgressBar,
+  createCircleProgress,
+} from "./progress-bar";
+export type {
+  ProgressVariant,
+  ProgressSize,
+  ProgressBarOptions,
+  CircleProgressOptions,
+} from "./progress-bar";
+
+// --- Skeleton Loading ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
