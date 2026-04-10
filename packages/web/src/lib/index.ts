@@ -1109,3 +1109,21 @@ export {
   type TaskStatus, type TaskResult, type TaskError, type ScheduleOptions,
   type Job, type ResourcePoolConfig, type CronJob,
 } from "./scheduler-v3";
+export {
+  IpcManager, WindowManager, TrayManager, MenuBuilder,
+  NativeNotificationManager, ShellBridge, ClipboardBridge,
+  AutoUpdater, DeepLinkHandler, getSystemInfo,
+  CrashReporter, PowerMonitor, ScreenManager,
+  type IpcChannel, type IpcListener, type ElectronIpcEvent, type IpcMessage,
+  type WindowOptions, type DialogOptions, type FileDialogOptions, type TrayOptions,
+  type MenuItemOptions, type NotificationOptions as ElectronNotifOptions,
+  type AutoUpdateInfo, type SystemInfo, type DisplayInfo,
+  type ContextBridgeAPI,
+} from "./electron-bridge";
+export {
+  ActionExecutor, DataExtractor, FormFiller, WorkflowEngine,
+  Assertions, TestReport,
+  type Selector, type AutomationOptions, type StepResult, type WorkflowStep,
+  type ExtractedData, type FormFillRule, type RecordedAction, type ActionType,
+  type StepOptions, type AssertionResult,
+} from "./automation-framework";
