@@ -1073,3 +1073,23 @@ export {
   createRoveList,
   type AriaAttrs, type ContrastResult, type ModalOptions,
 } from "./accessibility-v3";
+export {
+  createGraph, addNode, removeNode, addEdge, removeEdge,
+  neighbors, inDegree, outDegree, areAdjacent, getEdge,
+  topologicalSort, topologicalSortDFS, hasCycle, findCycles,
+  findShortestPath, dijkstra, findAllPaths,
+  stronglyConnectedComponents, isConnected,
+  resolveDependencies, getDependencyTree,
+  WorkflowEngine,
+  exportGraph, importGraph,
+  type FlowGraph, type GraphNode, type GraphEdge,
+  type WorkflowNode, type WorkflowExecution, type WorkflowNodeStatus, type DependencyTreeNode,
+} from "./flow-graph";
+export {
+  colorPalettes, getColor, createColorScale,
+  formatNumber, formatPercent, formatCurrency, autoFormat,
+  calculateStats, histogramBins,
+  ChartBase, BarChart, LineChart, PieChart,
+  interpolateColor,
+  type ChartConfig, type DataPoint, type SeriesData, type AxisConfig, type LegendConfig, type TooltipConfig, type StatsResult,
+} from "./data-visualization";
