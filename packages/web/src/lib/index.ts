@@ -8329,3 +8329,34 @@ export type {
   CodeEditorOptions,
   CodeEditorInstance,
 } from "./code-editor";
+
+// --- Kanban Board ---
+export {
+  createKanbanBoard,
+} from "./kanban-board";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanBoardOptions,
+  KanbanBoardInstance,
+} from "./kanban-board";
+
+// --- Gantt Chart ---
+export {
+  createGanttChart,
+} from "./gantt-chart";
+export type {
+  GanttTask,
+  GanttChartOptions,
+  GanttChartInstance,
+} from "./gantt-chart";
+
+// --- Org Chart ---
+export {
+  createOrgChart,
+} from "./org-chart";
+export type {
+  OrgNode,
+  OrgChartOptions,
+  OrgChartInstance,
+} from "./org-chart";
