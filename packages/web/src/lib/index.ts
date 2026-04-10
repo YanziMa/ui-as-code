@@ -13231,3 +13231,30 @@ export type {
   SkeletonLayout,
   SkeletonScreenInstance,
 } from "./skeleton-screen";
+export {
+  createCarousel,
+  CarouselManager,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+export {
+  createSplitter,
+} from "./drawer";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./drawer";
