@@ -7541,3 +7541,39 @@ export type {
   FileTreeOptions,
   FileTreeInstance,
 } from "./file-tree";
+
+// --- Calendar ---
+export {
+  CalendarManager,
+  createCalendar,
+} from "./calendar";
+export type {
+  CalendarView,
+  WeekStartDay,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
+
+// --- Statistics ---
+export {
+  createStatCard,
+} from "./statistics";
+export type {
+  TrendDirection,
+  SparklineType,
+  StatCardOptions,
+  StatisticsInstance,
+} from "./statistics";
