@@ -3501,3 +3501,24 @@ export {
   OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays,
   type OverlayOptions, type OverlayInstance, type OverlayType,
 } from "./overlay";
+
+// --- Countdown ---
+export {
+  CountdownManager, createCountdown,
+  type CountdownOptions, type CountdownInstance,
+  type CountdownSize, type CountdownVariant,
+} from "./countdown";
+
+// --- Marquee ---
+export {
+  MarqueeManager, createMarquee,
+  type MarqueeOptions, type MarqueeInstance,
+  type MarqueeDirection, type MarqueeStyle, type MarqueeItem,
+} from "./marquee";
+
+// --- Avatar Stack ---
+export {
+  AvatarStackManager, createAvatarStack,
+  type AvatarStackOptions, type AvatarStackInstance,
+  type AvatarStackSize, type AvatarStatus, type AvatarStackItem,
+} from "./avatar-stack";
