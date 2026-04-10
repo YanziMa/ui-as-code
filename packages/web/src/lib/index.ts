@@ -3522,3 +3522,27 @@ export {
   type AvatarStackOptions, type AvatarStackInstance,
   type AvatarStackSize, type AvatarStatus, type AvatarStackItem,
 } from "./avatar-stack";
+
+// --- Progress Bar ---
+export {
+  createProgressBar, createCircleProgress,
+  type ProgressBarOptions, type CircleProgressOptions,
+  type ProgressVariant, type ProgressSize,
+} from "./progress-bar";
+
+// --- Skeleton ---
+export {
+  createSkeleton, createTextSkeleton, createHeadingSkeleton,
+  createAvatarSkeleton, createCardSkeleton, createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions, type SkeletonTextOptions,
+  type SkeletonAvatarOptions, type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Tooltip ---
+export {
+  TooltipManager, getTooltipManager, tooltip,
+  type TooltipOptions, type TooltipInstance,
+  type TooltipPlacement, type TooltipTrigger,
+} from "./tooltip";
