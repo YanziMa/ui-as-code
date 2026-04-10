@@ -3165,3 +3165,27 @@ export {
   type RecognitionResult, type RecognitionOptions,
   type SpeechRecognitionInstance,
 } from "./speech-recognition";
+
+// --- Fullscreen ---
+export {
+  FullscreenManager, createFullscreenManager, isSupported as isFullscreenSupported,
+  type FullscreenState, type FullscreenOptions, type FullscreenError,
+  type FullscreenErrorType, type FullscreenManagerInstance,
+} from "./fullscreen";
+
+// --- Media Query / Responsive ---
+export {
+  ResponsiveManager, createResponsiveManager,
+  matchesQuery, getCurrentBreakpoint,
+  type BreakpointName, type Breakpoint, type BreakpointConfig,
+  type MediaQueryOptions, type MediaQueryInstance,
+  type ResponsiveManagerInstance,
+} from "./media-query";
+
+// --- Color Scheme ---
+export {
+  ColorSchemeManager, createColorScheme,
+  prefersDarkMode, hasForcedColors,
+  type ColorScheme, type ContrastMode, type ColorSchemeState,
+  type ColorSchemeOptions, type ColorSchemeInstance,
+} from "./color-scheme";
