@@ -11833,3 +11833,40 @@ export type {
   DrawerOptions,
   DrawerInstance,
 } from "./drawer-panel";
+
+// --- Typeahead / Autocomplete ---
+export {
+  TypeaheadManager,
+  createTypeahead,
+} from "./typeahead";
+export type {
+  TypeaheadItem,
+  TypeaheadOptions,
+  TypeaheadInstance,
+} from "./typeahead";
+
+// --- Command Menu / Palette ---
+export {
+  CommandMenuManager,
+  createCommandMenu,
+} from "./command-menu";
+export type {
+  CommandItem,
+  CommandCategory,
+  CommandMenuOptions,
+  CommandMenuInstance,
+} from "./command-menu";
+
+// --- Toast Notification System ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
