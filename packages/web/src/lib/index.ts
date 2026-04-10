@@ -10480,3 +10480,40 @@ export type {
   RichTextEditorOptions,
   RichTextEditorInstance,
 } from "./rich-text-editor";
+
+// --- Kanban Board ---
+export {
+  createKanbanBoard,
+} from "./kanban-board";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanBoardOptions,
+  KanbanBoardInstance,
+} from "./kanban-board";
+
+// --- Calendar ---
+export {
+  CalendarManager,
+  createCalendar,
+} from "./calendar";
+export type {
+  CalendarView,
+  WeekStartDay,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar";
+
+// --- Chart ---
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
