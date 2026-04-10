@@ -15508,3 +15508,51 @@ export type {
   TooltipOptions,
   TooltipInstance,
 } from "./tooltip";
+export {
+  createTableState,
+  getSortedData,
+  getFilteredData,
+  getPaginatedData,
+  getCellValue,
+  applyFilterOperator,
+  toggleSort,
+  setSearchTerm,
+  toggleFilter,
+  goToPage,
+  setPageSize,
+  toggleRowSelection,
+  toggleSelectAll,
+  toggleRowExpand,
+  resetTable,
+  exportTableAsCsv,
+} from "./table";
+export type {
+  Column,
+  TableState,
+  SortState,
+  FilterState,
+  FilterOperator,
+  PaginationState,
+  SelectionState,
+} from "./table";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
