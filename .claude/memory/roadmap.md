@@ -162,10 +162,36 @@
 - Chrome Web Store listing prep: STORE_LISTING.md
   - Full metadata: name, descriptions, categories, permissions, screenshots guide
 
-**Batch 12** (commit pending):
+**Batch 12** (commit 0ad121f):
 - Enhanced 404 page: emoji overlay, quick nav links (Home/Dashboard/PR/API Docs)
 - GitHub issue link for bug reports
-- Zod validation, rate limiting, auth middleware
-- ErrorBoundary, Toast, Skeleton components
-- SEO meta, favicon, sitemap, robots.txt
-- Vercel deployment + GitHub repo
+- Roadmap update with all session logs
+
+### 2026-04-10 Session 3 (Autonomous Batches 13-16)
+
+**Batch 13** (commit 6c8646c):
+- Changelog page (/changelog) with release history v0.1.0 → v0.2.0
+- Color-coded item types (feature/improvement/fix)
+- Enhanced /api/health: endpoint list, env info, version 0.2.0
+
+**Batch 14** (commit a192890):
+- BackToTop floating button component (appears after 400px scroll)
+- PR card copy-link button (clipboard API with checkmark feedback)
+- Relative timestamps on PR cards (formatRelativeTime helper)
+
+**Batch 15** (commit bb8826d):
+- Privacy Policy page (/privacy) — data collection, AI processing, user rights
+- Terms of Service page (/terms) — 9 sections covering all legal bases
+- Required for Chrome Web Store compliance
+- Footer links: Privacy + Terms added
+
+**Batch 16** (commit ac7da4b):
+- GET /api/stats endpoint (public, cached) — aggregated platform stats
+- Landing page stats bar (SaaS sites, APIs, code lines, possibilities)
+- Total: 19 routes, 12 API endpoints, 8 static pages
+
+---
+
+## Production Merges
+- **Merge 1**: main ← dev (after Batch 12) — commit a7aeccb
+- **Merge 2**: main ← dev (after Batch 15) — commit 0918b73
