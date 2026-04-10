@@ -4181,4 +4181,16 @@ export {
   withOpacity,
   generatePaletteAdvanced,
 } from "./color-picker";
-export type { RgbColor, HslColor, FilterOperator as ColorFilterOperator, Palette } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Dropzone ---
+export { DropzoneManager, createDropzone } from "./dropzone";
+export type { DropzoneFile, DropzoneOptions, DropzoneInstance, FileValidationRule, FileValidationError } from "./dropzone";
+
+// --- Pagination ---
+export { PaginationManager, createPagination } from "./pagination";
+export type { PaginationOptions, PaginationInstance } from "./pagination";
+
+// --- Search Input ---
+export { SearchInputManager, createSearchInput } from "./search-input";
+export type { SuggestionItem, SearchHistoryEntry, SearchInputOptions, SearchInputInstance } from "./search-input";
