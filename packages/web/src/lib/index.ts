@@ -7293,3 +7293,36 @@ export type {
   SelectOptions,
   SelectInstance,
 } from "./select";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Input Mask ---
+export {
+  InputMaskManager,
+  createInputMask,
+} from "./input-mask";
+export type {
+  MaskType,
+  MaskOptions,
+  MaskInstance,
+} from "./input-mask";
