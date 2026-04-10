@@ -2148,3 +2148,27 @@ export {
   type ChangeType, type ChangeInfo, type DiffResult, type Snapshot,
   type DetectorOptions,
 } from "./change-detector";
+
+// --- Text Diff ---
+export {
+  diffText, merge3Way, applyPatch, reversePatch,
+  type DiffOp, type DiffHunk, type DiffResult, type DiffStats,
+  type DiffFormat, type TextDiffOptions, type Patch, type MergeResult,
+} from "./text-diff";
+
+// --- Schema Validator ---
+export {
+  validate, str, num, int, bool, nullable, obj, arr, enumer, constant,
+  inferSchema,
+  type Schema, type SchemaType, type ValidationError,
+  type ValidationResult, type ValidationContext, type ValidatorOptions,
+} from "./schema-validator";
+
+// --- Event Aggregator ---
+export {
+  EventAggregator,
+  type MetricId, type MetricType,
+  type CounterValue, type GaugeValue, type HistogramBucket,
+  type HistogramValue, type TimerValue, type AggregatedMetrics,
+  type AlertRule, type AlertEvent,
+} from "./event-aggregator";
