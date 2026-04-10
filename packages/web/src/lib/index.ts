@@ -14677,3 +14677,30 @@ export type {
   FocusScopeOptions,
   FocusManagerConfig,
 } from "./focus-manager";
+export {
+  generateUuid,
+  randomString,
+  hashString,
+} from "./crypto";
+export {
+  isValidUrl,
+  getDomain,
+  getPathname,
+  getQueryParams,
+  isAbsoluteUrl,
+  isSameOrigin,
+  joinPath as urlJoinPath,
+  resolveUrl,
+  stripQueryAndHash,
+  getUrlExtension,
+} from "./url";
+export {
+  getExtension,
+  getBasename,
+  getDirname,
+  joinPath,
+  normalizePath,
+  isAbsolute,
+  isUrlPath,
+  relativePath,
+} from "./file";
