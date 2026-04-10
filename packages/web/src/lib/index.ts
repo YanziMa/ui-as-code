@@ -8846,3 +8846,35 @@ export type {
   CarouselOptions,
   CarouselInstance,
 } from "./carousel";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+
+// --- Tree View ---
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
