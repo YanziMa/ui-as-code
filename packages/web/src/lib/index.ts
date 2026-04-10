@@ -7382,3 +7382,36 @@ export type {
   CascaderOptions,
   CascaderInstance,
 } from "./cascader";
+
+// --- Transfer ---
+export {
+  TransferManager,
+  createTransfer,
+} from "./transfer";
+export type {
+  TransferItem,
+  TransferOptions,
+  TransferInstance,
+} from "./transfer";
+
+// --- Mention ---
+export {
+  MentionManager,
+  createMention,
+} from "./mention";
+export type {
+  MentionOption,
+  MentionOptions,
+  MentionInstance,
+} from "./mention";
+
+// --- Tree Select ---
+export {
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+export type {
+  TreeNodeData,
+  TreeSelectOptions,
+  TreeSelectInstance,
+} from "./tree-select";
