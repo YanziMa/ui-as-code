@@ -10727,3 +10727,42 @@ export type {
   IntersectionManagerOptions,
   IntersectionManagerInstance,
 } from "./intersection-manager";
+
+// --- Scroll Lock ---
+export {
+  ScrollLockManager,
+  getScrollLockManager,
+  lockScroll,
+  withScrollLock,
+  withScrollLockAsync,
+  setupAutoResizeScrollLock,
+} from "./scroll-lock";
+export type {
+  ScrollLockOptions,
+  ScrollLockInstance,
+} from "./scroll-lock";
+
+// --- Focus Trap ---
+export {
+  FocusTrapManager,
+  createFocusTrap,
+  FocusTrapStack,
+} from "./focus-trap";
+export type {
+  FocusTrapOptions,
+  FocusTrapInstance,
+} from "./focus-trap";
+
+// --- Modal Manager ---
+export {
+  ModalManager,
+  getModalManager,
+} from "./modal-manager";
+export type {
+  ModalSize,
+  ModalAnimation,
+  ModalOptions,
+  ModalAction,
+  ModalInstance,
+  ConfirmOptions,
+} from "./modal-manager";
