@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { ToastProvider } from "@/components/toast";
 import { ErrorMonitor } from "@/components/error-monitor";
+import { BackToTop } from "@/components/back-to-top";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,6 +110,9 @@ export default function RootLayout({
                     <a href="/dashboard" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Dashboard</a>
                     <a href="/pr" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">PR Dashboard</a>
                     <a href="/api-docs" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">API Docs</a>
+                    <a href="/changelog" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Changelog</a>
+                    <a href="/privacy" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Privacy</a>
+                    <a href="/terms" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Terms</a>
                     <a
                       href="https://github.com/yanzima/ui-as-code"
                       target="_blank"
@@ -122,6 +126,7 @@ export default function RootLayout({
               </div>
             </footer>
           </ErrorBoundary>
+          <BackToTop />
         </ToastProvider>
       </body>
     </html>

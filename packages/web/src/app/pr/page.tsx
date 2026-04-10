@@ -233,6 +233,14 @@ function PRCard({
   onVote: (id: string, d: "for" | "against") => void;
   onMerge: (id: string) => void;
 }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(`${window.location.origin}/pr#${pr.id}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const statusColors: Record<string, string> = {
     open: "bg-yellow-50 text-yellow-700 border-yellow-200 dark:bg-yellow-950 dark:text-yellow-400 dark:border-yellow-900",
     merged: "bg-green-50 text-green-700 border-green-200 dark:bg-green-950 dark:text-green-400 dark:border-green-900",
@@ -250,8 +258,23 @@ function PRCard({
               #{String(pr.id).slice(0, 6)} &middot; {pr.status}
             </span>
             <span className="text-xs text-zinc-400">
-              {new Date(pr.created_at).toLocaleDateString()}
+              {formatRelativeTime(pr.created_at)}
             </span>
+            <button
+              onClick={handleCopyLink}
+              className="rounded-md p-1 text-zinc-400 hover:text-zinc-600 hover:bg-zinc-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800 transition-colors"
+              title="Copy link"
+            >
+              {copied ? (
+                <svg className="h-3.5 w-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              ) : (
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5" />
+                </svg>
+              )}
+            </button>
           </div>
           <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
             {pr.description}
@@ -293,4 +316,16 @@ function PRCard({
       </div>
     </div>
   );
+}
+
+function formatRelativeTime(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60_000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.floor(hours / 24);
+  if (days < 7) return `${days}d ago`;
+  return new Date(dateStr).toLocaleDateString();
 }
