@@ -1344,3 +1344,24 @@ export {
   type FieldType, type ValidationRuleType, type FieldValidation,
   type ValidationResult, type WizardStep,
 } from "./schema-form-builder";
+export {
+  HotkeyManager,
+  normalizeKeyEvent, parseCombo, buildCombo, combosEqual,
+  type HotkeyBinding, type HotkeyEvent, type RecordedHotkey,
+  type HotkeyHint, type HotkeyStats, type KeyModifier, type Scope, type HotkeyPriority,
+} from "./hotkey-manager";
+export {
+  FuzzyFinder,
+  type FinderItem, type FinderOptions, type SearchResult,
+  type FinderState, type FinderHistory,
+} from "./fuzzy-finder";
+export {
+  normalizeData, pivotToSeries, flattenSeries,
+  aggregateBy, bucketByTime,
+  stats, detectOutliers, correlation, linearRegression,
+  Palettes, getPaletteColors, makeColorblindSafe,
+  formatValue, toChartJsFormat,
+  type DataPoint, type SeriesData, type ChartDataset,
+  type AggregationResult, type TimeBucket, type ColorPalette,
+  type AxisFormatConfig,
+} from "./chart-adapter";
