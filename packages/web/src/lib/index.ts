@@ -2766,3 +2766,23 @@ export {
   type TabItem, type TabsOptions, type TabsInstance,
   type TabOrientation, type TabVariant,
 } from "./tabs";
+
+// --- Accordion ---
+export {
+  AccordionManager, createAccordion,
+  type AccordionItem, type AccordionOptions, type AccordionInstance,
+  type AccordionMode,
+} from "./accordion";
+
+// --- Carousel ---
+export {
+  CarouselManager, createCarousel,
+  type CarouselSlide, type CarouselOptions, type CarouselInstance,
+} from "./carousel";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNodeData, type TreeNode, type TreeViewConfig,
+  type CheckMode,
+} from "./tree-view";
