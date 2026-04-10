@@ -15041,3 +15041,28 @@ export type {
   DeviceType,
   DeviceInfo,
 } from "./device";
+export {
+  reportMetric,
+  getSessionMetrics,
+  observeWebVitals,
+  markRender,
+} from "./performance";
+export type {
+  PerformanceMetric,
+} from "./performance";
+export {
+  createInlineWorker,
+  runInWorker,
+  TaskQueue,
+  BatchingProcessor,
+  requestIdleCallback,
+  cancelIdleCallback,
+} from "./worker";
+export {
+  Cache,
+  defaultCache,
+  memoize,
+} from "./cache";
+export type {
+  CacheOptions,
+} from "./cache";
