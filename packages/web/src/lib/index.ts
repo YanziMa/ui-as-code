@@ -154,3 +154,7 @@ export {
   unicodeEscape, unicodeUnescape, encodeQuery,
   xorCipher, xorDecipher, simpleHash,
 } from "./encoding";
+export {
+  isValidIP, isValidIPv6, isValidMac, isValidHexColor, isValidDate,
+  isValidPort, isValidHostname, isJsonObject, validateAll, and, or as orValidator,
+} from "./validation-helpers";
