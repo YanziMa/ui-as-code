@@ -5974,3 +5974,81 @@ export type {
   BoundingBox,
   DistanceResult,
 } from "./geolocation-utils";
+
+// --- Storage Utils ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+} from "./storage-utils";
+export type {
+  StorageBackend,
+  StorageEntry,
+  StorageOptions,
+  StorageStats,
+  StorageMigration,
+} from "./storage-utils";
+
+// --- Animation Utils ---
+export {
+  Tween,
+  tween,
+  tweenPromise,
+  SpringAnimation,
+  springTo,
+  stagger,
+  staggerFadeIn,
+  scrollAnimate,
+  parallax,
+  mouseParallax,
+  animate as waapiAnimate,
+  fadeIn,
+  fadeOut,
+  slideUp,
+  slideDown,
+  scaleIn,
+  shake,
+  pulse,
+  easings,
+} from "./animation-utils";
+export type {
+  TweenOptions,
+  SpringConfig,
+  AnimationFrame,
+  EasingName,
+} from "./animation-utils";
+
+// --- A11y Helpers ---
+export {
+  createAnnouncer,
+  announce,
+  announceError,
+  announceStatus,
+  captureFocus,
+  focusFirst,
+  focusLast,
+  getFirstFocusable,
+  getLastFocusable,
+  getFocusableElements,
+  isFocusable,
+  setupRovingTabindex,
+  createSkipLink,
+  setAria,
+  removeAria,
+  setBusy,
+  setExpanded,
+  toggleExpanded,
+  setSelected,
+  setPressed,
+  setDisabled,
+  hideVisually,
+  showVisually,
+  injectScreenReaderOnlyStyles,
+  prefersReducedMotion,
+  onReducedMotionChange,
+  getSafeDuration,
+  setupDialog,
+  ensureLabel,
+  autoLabelForm,
+} from "./a11y-helpers";
