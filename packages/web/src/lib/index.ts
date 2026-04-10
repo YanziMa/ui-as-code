@@ -3355,3 +3355,23 @@ export {
   EmptyStateManager, createEmptyState,
   type EmptyStateOptions, type EmptyStateInstance, type EmptyStateVariant,
 } from "./empty-state";
+
+// --- Comment Thread ---
+export {
+  CommentThreadManager, createCommentThread,
+  type CommentThreadOptions, type CommentThreadInstance,
+  type Comment, type CommentAuthor,
+} from "./comment-thread";
+
+// --- Chat Bubble ---
+export {
+  ChatBubbleManager, createChatBubble,
+  type ChatBubbleOptions, type ChatBubbleInstance,
+  type ChatMessage, type MessageRole,
+} from "./chat-bubble";
+
+// --- Code Block ---
+export {
+  CodeBlockManager, createCodeBlock,
+  type CodeBlockOptions, type CodeBlockInstance, type CodeTheme,
+} from "./code-block";
