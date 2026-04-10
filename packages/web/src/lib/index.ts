@@ -179,3 +179,13 @@ export {
   isVercel, isServerless, getDeploymentInfo,
 } from "./env-detection";
 export { Observable, Computed, ReactiveStore } from "./observable";
+export {
+  Logger, log, apiLog, dbLog, extLog,
+  setGlobalLogLevel, getGlobalLogLevel,
+  type LogLevel, type LogEntry,
+} from "./logger";
+export { Cache, defaultCache, memoize, type CacheOptions } from "./cache";
+export {
+  searchText, searchArray, highlightMatches, SearchIndex,
+  type SearchOptions, type SearchResult, type SearchMatch,
+} from "./search";
