@@ -15999,3 +15999,31 @@ export type {
   ModalOptions,
   ModalInstance,
 } from "./modal";
+export {
+  createSplitter,
+} from "./drawer";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./drawer";
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
