@@ -4830,3 +4830,38 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+
+// --- Chips ---
+export { createChipGroup, createChipElement } from "./chips";
+export type {
+  ChipVariant,
+  ChipSize,
+  ChipOptions,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chips";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+
+// --- Avatar ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
