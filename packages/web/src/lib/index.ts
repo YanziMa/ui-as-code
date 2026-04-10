@@ -6760,3 +6760,46 @@ export type {
   Breakpoints,
   KeyframeRule,
 } from "./css-in-js";
+
+// --- ORM Lite ---
+export {
+  Model,
+  QueryBuilder,
+  OrmLiteDB,
+  createDatabase,
+} from "./orm-lite";
+export type {
+  FieldType,
+  FieldDefinition,
+  SchemaDefinition,
+  ModelInstance,
+  QueryOptions,
+  FilterCondition,
+  FilterOperator,
+  OrderByClause,
+  RelationInclude,
+  MigrationOperation,
+  MigrationResult,
+} from "./orm-lite";
+
+// --- Form Validation ---
+export {
+  FormValidator,
+  createFormValidator,
+  BuiltInRules,
+} from "./form-validation";
+export type {
+  ValidationRule,
+  ValidationContext,
+  FieldConfig,
+  FormValidationOptions,
+  ValidationError,
+  ValidationResult,
+  FormValidatorInstance,
+} from "./form-validation";
+
+// --- Markdown ---
+export {
+  mdToHtml,
+  stripMd,
+} from "./markdown";
