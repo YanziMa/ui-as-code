@@ -2023,3 +2023,34 @@ export {
   createDraggableWindow,
   type DraggableWindowOptions, type DraggableWindowInstance, type WindowState, type WindowControl,
 } from "./draggable-window";
+
+// --- Color Utils ---
+export {
+  parseColor, requireColor, rgbToHex, hexToRgb, rgbToHsl, hslToRgb, rgbToHsv, hsvToHsl,
+  toHexString, toRgbString, toHslString,
+  lighten, darken, saturate, desaturate, rotateHue, setOpacity, mix, invert,
+  luminance, contrastRatio, meetsAA, meetsAAA, contrastingText, minAlphaForContrast,
+  generatePalette, complementary, analogous, triadic, splitComplementary, tetradic, generateScheme,
+  linearGradient, radialGradient, gradientBetween, shimmerGradient,
+  colorTemperature, isWarmColor, hueCategory,
+  cssVariablesFromPalette, generateDesignTokens,
+  type RGB, type HSL, type HSV, type ColorStop, type ColorPalette,
+} from "./color-utils";
+
+// --- Math 3D ---
+export {
+  Vec2, Vec3, Vec4, Mat3, Mat4, Quat, Ray, AABB, Frustum,
+} from "./math-3d";
+
+// --- Crypto Wallet ---
+export {
+  randomBytes, randomInt, randomHex,
+  sha256, sha512, hmacSha256, pbkdf2,
+  generateEd25519KeyPair, signEd25519, verifyEd25519,
+  encrypt, decrypt,
+  deriveAddress, deriveHDAddress,
+  generateMnemonic, validateMnemonic, mnemonicToSeed,
+  bytesToHex, hexToBase64, base64ToHex,
+  type KeyPair, type WalletAddress, type Signature, type EncryptedData,
+  type MnemonicWordlist, type HashResult,
+} from "./crypto-wallet";
