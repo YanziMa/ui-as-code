@@ -3113,3 +3113,32 @@ export {
   type NotificationManagerOptions, type NotificationManagerInstance,
   type PermissionStatus,
 } from "./notification-permissions";
+
+// --- Biometrics / WebAuthn ---
+export {
+  BiometricManager, createBiometricManager,
+  toBase64Url as credentialToBase64Url,
+  fromBase64Url as base64UrlToCredential,
+  type WebAuthnOptions, type AssertionOptions, type CredentialResult,
+  type BiometricManagerOptions, type BiometricManagerInstance, type BiometricError,
+  type AuthenticatorTransport, type UserVerification, type AttestationConveyance,
+  type ResidentKeyRequirement,
+} from "./biometrics";
+
+// --- Share API ---
+export {
+  ShareManager, createShareManager,
+  quickShare, isShareAvailable,
+  type ShareData, type ShareOptions, type ShareTarget,
+  type ShareManagerInstance,
+} from "./share";
+
+// --- Screen Orientation ---
+export {
+  ScreenOrientationManager, createScreenOrientation,
+  isPortraitMode, isLandscapeMode,
+  lockOrientation, unlockOrientation,
+  type OrientationType, type OrientationLockType,
+  type OrientationState, type ScreenOrientationOptions,
+  type ScreenOrientationInstance,
+} from "./screen-orientation";
