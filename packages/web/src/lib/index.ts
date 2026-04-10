@@ -9565,3 +9565,38 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+
+// --- Breadcrumbs ---
+export {
+  createBreadcrumbs,
+} from "./breadcrumbs";
+export type {
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumbs";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
