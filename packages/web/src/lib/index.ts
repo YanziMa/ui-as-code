@@ -13483,3 +13483,37 @@ export type {
   CommentOptions,
   CommentInstance,
 } from "./comment";
+export {
+  createStat,
+  StatManager,
+} from "./statistic";
+export type {
+  TrendDirection,
+  StatVariant,
+  TrendColor,
+  StatOptions,
+  StatInstance,
+} from "./statistic";
+export {
+  createResult,
+} from "./result";
+export type {
+  ResultStatus,
+  ResultVariant,
+  ResultOptions,
+  ResultInstance,
+} from "./result";
+export {
+  createTag,
+  TagManager,
+  createTagGroup,
+} from "./tag";
+export type {
+  TagVariant,
+  TagSize,
+  TagShape,
+  TagOptions,
+  TagInstance,
+  TagGroupOptions,
+  TagGroupInstance,
+} from "./tag";
