@@ -11311,3 +11311,38 @@ export type {
   MentionOptions,
   MentionInstance,
 } from "./mention";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
+
+// --- Statistics ---
+export {
+  createStatCard,
+} from "./statistics";
+export type {
+  TrendDirection,
+  SparklineType,
+  StatCardOptions,
+  StatisticsInstance,
+} from "./statistics";
+
+// --- Sidebar ---
+export {
+  SidebarManager,
+  createSidebar,
+} from "./sidebar";
+export type {
+  SidebarItem,
+  SidebarGroup,
+  SidebarOptions,
+  SidebarInstance,
+} from "./sidebar";
