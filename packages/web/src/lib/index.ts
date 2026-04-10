@@ -12076,3 +12076,38 @@ export type {
   TestimonialOptions,
   TestimonialInstance,
 } from "./testimonial";
+
+// --- Comment Section ---
+export {
+  createCommentSection,
+} from "./comment-section";
+export type {
+  CommentAuthor,
+  Comment,
+  CommentSectionOptions,
+  CommentSectionInstance,
+} from "./comment-section";
+
+// --- Chat Bubble ---
+export {
+  ChatBubbleManager,
+  createChatBubble,
+} from "./chat-bubble";
+export type {
+  MessageRole,
+  ChatMessage,
+  ChatBubbleOptions,
+  ChatBubbleInstance,
+} from "./chat-bubble";
+
+// --- Hero Banner ---
+export {
+  createHeroBanner,
+} from "./hero-banner";
+export type {
+  HeroLayout,
+  HeroSize,
+  HeroButton,
+  HeroBannerOptions,
+  HeroBannerInstance,
+} from "./hero-banner";
