@@ -15905,3 +15905,31 @@ export {
   generateQrCanvas,
   validateQrInput,
 } from "./qr-code";
+export {
+  CountUpManager,
+  createCountUp,
+} from "./count-up";
+export type {
+  EasingFn,
+  CountUpOptions,
+  CountUpInstance,
+} from "./count-up";
+export {
+  TypewriterManager,
+  createTypewriter,
+} from "./typewriter";
+export type {
+  TypewriterOptions,
+  TypewriterInstance,
+} from "./typewriter";
+export {
+  MarqueeManager,
+  createMarquee,
+} from "./marquee";
+export type {
+  MarqueeDirection,
+  MarqueeStyle,
+  MarqueeItem,
+  MarqueeOptions,
+  MarqueeInstance,
+} from "./marquee";
