@@ -7326,3 +7326,59 @@ export type {
   MaskOptions,
   MaskInstance,
 } from "./input-mask";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+
+// --- Autocomplete ---
+export {
+  AutocompleteManager,
+  createAutocomplete,
+} from "./autocomplete";
+export type {
+  AutocompleteOption,
+  AutocompleteOptions,
+  AutocompleteInstance,
+} from "./autocomplete";
+
+// --- Cascader ---
+export {
+  CascaderManager,
+  createCascader,
+} from "./cascader";
+export type {
+  CascaderOption,
+  CascaderColumn,
+  CascaderOptions,
+  CascaderInstance,
+} from "./cascader";
