@@ -9941,3 +9941,14 @@ export type {
   VideoPlayerOptions,
   VideoPlayerInstance,
 } from "./video-player";
+
+// --- Emoji Picker ---
+export {
+  createEmojiPicker,
+} from "./emoji-picker";
+export type {
+  EmojiCategory,
+  EmojiData,
+  EmojiPickerOptions,
+  EmojiPickerInstance,
+} from "./emoji-picker";
