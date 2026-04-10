@@ -3189,3 +3189,24 @@ export {
   type ColorScheme, type ContrastMode, type ColorSchemeState,
   type ColorSchemeOptions, type ColorSchemeInstance,
 } from "./color-scheme";
+
+// --- Persistent Storage ---
+export {
+  PersistentStorageManager, createPersistentStorage,
+  type StorageBackend, type StorageItem, type PersistentStorageOptions,
+  type PersistentStorageInstance,
+} from "./storage-persistent";
+
+// --- History Manager ---
+export {
+  HistoryManager, createHistoryManager,
+  type HistoryState, type NavigationGuard,
+  type HistoryManagerOptions, type HistoryManagerInstance,
+} from "./history";
+
+// --- Selection / Range API ---
+export {
+  SelectionManager, createSelectionManager,
+  type SelectionRange, type CaretPosition,
+  type SelectionManagerOptions, type SelectionManagerInstance,
+} from "./selection";
