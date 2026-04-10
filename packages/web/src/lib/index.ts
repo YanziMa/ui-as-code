@@ -12958,3 +12958,52 @@ export type {
   TimelineInstance,
   TimelineItemStatus,
 } from "./timeline";
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+export {
+  createFileManager,
+} from "./file-manager";
+export type {
+  FileManagerFile,
+  FileManagerOptions,
+  FileManagerInstance,
+} from "./file-manager";
+export {
+  createTerminal,
+} from "./terminal";
+export type {
+  TerminalLine,
+  TerminalTheme,
+  TerminalCommand,
+  TerminalOptions,
+  TerminalInstance,
+} from "./terminal";
