@@ -8360,3 +8360,35 @@ export type {
   OrgChartOptions,
   OrgChartInstance,
 } from "./org-chart";
+
+// --- Rich Text Editor ---
+export {
+  createRichTextEditor,
+} from "./rich-text-editor";
+export type {
+  EditorCommand,
+  ToolbarButton,
+  RichTextEditorOptions,
+  RichTextEditorInstance,
+} from "./rich-text-editor";
+
+// --- Markdown Editor ---
+export {
+  createMarkdownEditor,
+} from "./markdown-editor";
+export type {
+  MarkdownEditorOptions,
+  MarkdownEditorInstance,
+} from "./markdown-editor";
+
+// --- JSON Editor ---
+export {
+  createJsonEditor,
+} from "./json-editor";
+export type {
+  JsonNodeType,
+  JsonNode,
+  JsonSchemaProperty,
+  JsonEditorOptions,
+  JsonEditorInstance,
+} from "./json-editor";
