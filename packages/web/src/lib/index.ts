@@ -9884,3 +9884,35 @@ export type {
   CommentThreadOptions,
   CommentThreadInstance,
 } from "./comment-thread";
+
+// --- Scheduler ---
+export {
+  Scheduler,
+  parseCronExpression,
+  cronMatches,
+  getNextCronRun,
+} from "./scheduler";
+export type {
+  ScheduledJob,
+  CronExpression,
+} from "./scheduler";
+
+// --- Gantt Chart ---
+export {
+  createGanttChart,
+} from "./gantt-chart";
+export type {
+  GanttTask,
+  GanttChartOptions,
+  GanttChartInstance,
+} from "./gantt-chart";
+
+// --- Mind Map ---
+export {
+  createMindMap,
+} from "./mind-map";
+export type {
+  MindMapNode,
+  MindMapOptions,
+  MindMapInstance,
+} from "./mind-map";
