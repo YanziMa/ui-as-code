@@ -2437,3 +2437,38 @@ export {
   type RateLimitStore, type DistributedRateLimiterConfig,
   type PriorityQueueOptions,
 } from "./rate-limiter";
+
+// --- Data Structures ---
+export {
+  LinkedList, DoublyLinkedList, Stack, Queue,
+  BinaryHeap, Trie, LRUCache, BloomFilter, RingBuffer,
+  type ListNode, type DListNode, type HeapEntry,
+  type HeapType, type TrieNode, type LRUCacheEntry,
+} from "./data-structures";
+
+// --- Graph Utils ---
+export {
+  Graph, bfs, dfs, dfsRecursive,
+  bfsShortestPath, dijkstra, dijkstraShortestPath,
+  astar, topologicalSort, findConnectedComponents,
+  hasCycle, findCycle, hasCycleUnionFind,
+  UnionFind, primMST, mstTotalWeight, computeCentrality,
+  type GraphNodeId, type GraphEdge, type GraphPath,
+  type TraversalResult, type CentralityResult,
+} from "./graph-utils";
+
+// --- String Utils ---
+export {
+  isBlank, isPresent, collapseWhitespace, stripDiacritics,
+  escapeRegex, escapeHtmlEntities, unescapeHtmlEntities,
+  toCamelCaseString, toPascalCaseString, toKebabCaseString, toSnakeCaseString,
+  capitalizeWords, smartTruncate, repeatWithSeparator, centerPad,
+  isAscii, looksLikeEmail, looksLikeUrl, extractNumbers,
+  replaceMultiple, stringToId, countOccurrences, reverseWords, trimLines,
+  detectCase, slugify, levenshtein, isSimilar, soundex,
+  randomString, randomHex, generateId,
+  wordCount, charFrequency, mostCommonChars, uniqueWords,
+  pluralize, singularize, acronym, abbreviate,
+  maskString, maskEmail, detectIndentation, indentText,
+  simpleDiff, type DiffSegment,
+} from "./string-utils";
