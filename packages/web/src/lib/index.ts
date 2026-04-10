@@ -1468,3 +1468,41 @@ export {
   type CopyOptions, type PasteOptions, type ClipboardHistoryEntry,
   type ClipboardConfig,
 } from "./clipboard-manager";
+
+// --- DOM Diff & Patch ---
+export {
+  domToTree,
+  diff,
+  patch,
+  syncDOM,
+  renderDOM,
+  type PatchOp,
+  type DomNode,
+  type DiffOptions,
+  type DiffResult,
+  type PatchResult,
+} from "./dom-diff";
+
+// --- Gesture Recognizer ---
+export {
+  GestureRecognizer,
+  type Point,
+  type GestureEvent,
+  type GestureConfig,
+  type GestureHandler,
+} from "./gesture-recognizer";
+
+// --- I18n Framework ---
+export {
+  I18n,
+  getI18n,
+  _,
+  type LocaleCode,
+  type LocaleInfo,
+  type MessageParams,
+  type MessageEntry,
+  type PluralRule,
+  type I18nConfig,
+  type NumberFormatOptions,
+  type DateFormatOptions,
+} from "./i18n-framework";
