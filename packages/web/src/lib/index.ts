@@ -237,3 +237,31 @@ export {
 export {
   retryWithBackoff, CircuitBreaker, type RetryOptions, type CircuitBreakerOptions,
 } from "./retry";
+export { gql, parseGqlOperation, extractVariables, extractFields, executeGql, fragment } from "./graphql";
+export {
+  FeatureFlagStore, DEFAULT_FLAGS, featureFlags, isFeatureEnabled,
+  type FeatureFlag, type FlagContext,
+} from "./feature-flags";
+export {
+  runPipeline, parallel, waterfall, raceWithCleanup,
+  type PipelineStep, type PipelineContext, type PipelineResult,
+} from "./waterfall";
+export {
+  toTitleCase, toSentenceCase, toKebabCase, toSnakeCase, toCamelCase, toPascalCase,
+  truncateText, wordWrap, removeWhitespace, normalizeWhitespace, reverseString,
+  countWords, countChars, estimateReadingTime, getInitials, slugifyText,
+  stripAnsiCodes, isHtml, stripHtmlTags, padText, repeatText,
+} from "./text-processing";
+export {
+  mapValues, groupAndAggregate, pivot, unpivot, flattenObject, unflattenObject, deepMergeCustom,
+  type PivotOptions,
+} from "./transform";
+export {
+  secureRandomString, cryptoUuid, fastHash, sha256, sha512, hmacSha256, verifyHmacSha256,
+  encodeSimpleToken, decodeSimpleToken, type TokenPayload,
+} from "./crypto-advanced";
+export {
+  valid, invalid, required, minLength, maxLength, range, pattern, emailValidator, urlValidator,
+  oneOf, allOf, anyOf, not, when, validateObject,
+  type Validator, type ValidationResult, type FieldValidators,
+} from "./validation-advanced";
