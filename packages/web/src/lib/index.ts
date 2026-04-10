@@ -6487,3 +6487,72 @@ export {
 export type {
   LogLevel,
 } from "./logger";
+
+// --- Plugin System ---
+export {
+  PluginManager,
+  parseSemver,
+  satisfiesConstraint,
+} from "./plugin-system";
+export type {
+  PluginStatus,
+  HookType,
+  PluginPermission,
+  PluginManifest,
+  PluginContext,
+  HookHandler,
+  EventHandler,
+  HookOptions,
+  RegisteredHook,
+  PluginInstance,
+  PluginLogger,
+  PluginStorage,
+  PluginLoadResult,
+  SystemStats,
+} from "./plugin-system";
+
+// --- Feature Flags ---
+export {
+  FeatureFlagStore,
+  featureFlags,
+  isFeatureEnabled,
+  DEFAULT_FLAGS,
+} from "./feature-flags";
+export type {
+  FeatureFlag,
+  FlagContext,
+} from "./feature-flags";
+
+// --- Rate Limiter ---
+export {
+  TokenBucketRateLimiter,
+  SlidingWindowLogRateLimiter,
+  SlidingWindowCounterRateLimiter,
+  FixedWindowRateLimiter,
+  LeakyBucketRateLimiter,
+  AdaptiveRateLimiter,
+  CircuitBreaker,
+  Bulkhead,
+  RequestCoalescer,
+  DistributedRateLimiter,
+  StatsCollector,
+  createRateLimiter,
+  debounce as rateLimitDebounce,
+  throttle as rateLimitThrottle,
+} from "./rate-limiter";
+export type {
+  RateLimitResult,
+  BaseRateLimitConfig,
+  CircuitState,
+  RateLimiterStats,
+  AdaptiveLimitResult,
+  AdaptiveLimiterOptions,
+  CircuitBreakerConfig,
+  CircuitBreakerResult,
+  BulkheadConfig,
+  BulkheadResult,
+  ThrottleOptions,
+  RateLimitStore,
+  DistributedRateLimiterConfig,
+  StatsTrackable,
+} from "./rate-limiter";
