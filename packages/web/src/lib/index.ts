@@ -13040,3 +13040,39 @@ export type {
   DiffResult,
   FileDiff,
 } from "./diff-viewer";
+export {
+  FormBuilder,
+  createForm,
+  validations,
+} from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+export {
+  DataTableManager,
+  createDataTable,
+} from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+export {
+  createRichTextEditor,
+} from "./rich-text-editor";
+export type {
+  EditorCommand,
+  ToolbarButton,
+  RichTextEditorOptions,
+  RichTextEditorInstance,
+} from "./rich-text-editor";
