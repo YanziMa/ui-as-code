@@ -12873,3 +12873,60 @@ export type {
   PricingTableOptions,
   PricingTableInstance,
 } from "./pricing-table";
+
+// --- Org Chart ---
+export {
+  createOrgChart,
+} from "./org-chart";
+export type {
+  OrgNode,
+  OrgChartOptions,
+  OrgChartInstance,
+} from "./org-chart";
+
+// --- Mind Map ---
+export {
+  createMindMap,
+} from "./mind-map";
+export type {
+  MindMapNode,
+  MindMapOptions,
+  MindMapInstance,
+} from "./mind-map";
+
+// --- Flow Graph ---
+export {
+  createGraph,
+  addNode,
+  removeNode,
+  addEdge,
+  removeEdge,
+  neighbors,
+  inDegree,
+  outDegree,
+  areAdjacent,
+  getEdge,
+  topologicalSort,
+  topologicalSortDFS,
+  hasCycle,
+  findCycles,
+  findShortestPath,
+  dijkstra,
+  findAllPaths,
+  stronglyConnectedComponents,
+  isConnected,
+  resolveDependencies,
+  getDependencyTree,
+  exportGraph,
+  importGraph,
+  WorkflowEngine,
+} from "./flow-graph";
+export type {
+  GraphNode,
+  GraphEdge,
+  FlowGraph,
+  WorkflowNodeStatus,
+  WorkflowNode,
+  WorkflowExecution,
+  DependencyTreeNode,
+} from "./flow-graph";
