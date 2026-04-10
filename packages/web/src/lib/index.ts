@@ -1140,3 +1140,24 @@ export {
   type TemplateContext, type TemplateOptions, type TemplateError,
   type PartialTemplate, type HelperFunction,
 } from "./template-engine";
+export {
+  Vec3, Mat4, Quaternion,
+  createCube, createSphere, createCylinder, createPlane, createTorus,
+  SceneNode, Scene, Camera,
+  Light, LightType,
+  createDirectionalLight, createPointLight, createSpotLight, createAmbientLight, createHemisphereLight,
+  Material, createMaterial,
+  Ray3D, AABB3D, SphereBounds, Frustum,
+  KeyframeAnimation3D, Keyframe,
+  isWebGLSupported, isWebGL2Supported, getWebGLInfo, createDefaultShaderSource,
+  type Transform, type MeshData,
+} from "./3d-graphics";
+export {
+  RealtimeClient, RoomManager, PresenceSystem, SyncEngine,
+  createRealtimeClient,
+  signMessage, verifySignature, rateLimitByConnection,
+  type ConnectionState, type ConnectionMetrics, type ReconnectStrategy,
+  type MessageEnvelope, type MessageType, type RoomInfo, type PresenceData,
+  type SyncOperation, type RoomEvent, type RealtimeClientOptions,
+  type RateLimitResult,
+} from "./websocket-realtime";
