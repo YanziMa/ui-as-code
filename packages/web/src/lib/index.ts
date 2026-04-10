@@ -12514,3 +12514,38 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+} from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
