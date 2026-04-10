@@ -12,6 +12,11 @@ async function getApiUrl(): Promise<string> {
   return cachedApiUrl!
 }
 
+/** Invalidate cached API URL (call after settings save) */
+export function invalidateApiCache(): void {
+  cachedApiUrl = null
+}
+
 // ========== Request timeout wrapper ==========
 async function fetchWithTimeout(
   url: string,
@@ -59,27 +64,48 @@ function formatApiError(status: number, body: string): string {
   }
 }
 
+// ========== Message type constants ==========
+const MESSAGE_TYPES = {
+  GENERATE_DIFF: "GENERATE_DIFF",
+  ADOPT_DIFF: "ADOPT_DIFF",
+  REJECT_DIFF: "REJECT_DIFF",
+} as const
+
+// ========== Logging helper ==========
+function bgLog(action: string, detail?: string): void {
+  console.log(`[Background] ${action}${detail ? ` — ${detail}` : ""}`)
+}
+
 // Listen for messages from content scripts and popup
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-  if (message.type === "GENERATE_DIFF") {
-    handleGenerateDiff(message.payload)
-      .then(sendResponse)
-      .catch((err) => sendResponse({ success: false, error: err.message }))
-    return true // async response
-  }
+  const type = message?.type as string
 
-  if (message.type === "ADOPT_DIFF") {
-    handleAdoptDiff(message.payload)
-      .then(sendResponse)
-      .catch((err) => sendResponse({ success: false, error: err.message }))
-    return true
-  }
+  switch (type) {
+    case MESSAGE_TYPES.GENERATE_DIFF:
+      bgLog("GENERATE_DIFF received")
+      handleGenerateDiff(message.payload)
+        .then((result) => { bgLog("GENERATE_DIFF success"); sendResponse(result) })
+        .catch((err) => { bgLog("GENERATE_DIFF error", err.message); sendResponse({ success: false, error: err.message }) })
+      return true // async response
 
-  if (message.type === "REJECT_DIFF") {
-    handleRejectDiff(message.payload)
-      .then(sendResponse)
-      .catch((err) => sendResponse({ success: false, error: err.message }))
-    return true
+    case MESSAGE_TYPES.ADOPT_DIFF:
+      bgLog("ADOPT_DIFF received")
+      handleAdoptDiff(message.payload)
+        .then((result) => { bgLog("ADOPT_DIFF success"); sendResponse(result) })
+        .catch((err) => { bgLog("ADOPT_DIFF error", err.message); sendResponse({ success: false, error: err.message }) })
+      return true
+
+    case MESSAGE_TYPES.REJECT_DIFF:
+      bgLog("REJECT_DIFF received")
+      handleRejectDiff(message.payload)
+        .then((result) => { bgLog("REJECT_DIFF success"); sendResponse(result) })
+        .catch((err) => { bgLog("REJECT_DIFF error", err.message); sendResponse({ success: false, error: err.message }) })
+      return true
+
+    default:
+      bgLog("Unknown message type", type)
+      sendResponse({ success: false, error: `Unknown message type: ${type}` })
+      return false
   }
 })
 
@@ -91,7 +117,7 @@ async function handleGenerateDiff(payload: {
 }) {
   const apiUrl = await getApiUrl()
 
-  // AI calls can take up to 60s
+  // AI calls can take up to 90s
   const res = await fetchWithTimeout(`${apiUrl}/api/generate-diff`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
