@@ -4468,3 +4468,24 @@ export type {
   ToggleGroupOptions,
   ToggleGroupInstance,
 } from "./toggle-group";
+
+// --- Image Gallery ---
+export { ImageGalleryManager, createImageGallery } from "./image-gallery";
+export type {
+  GalleryImage,
+  ImageGalleryOptions,
+  ImageGalleryInstance,
+} from "./image-gallery";
+
+// --- QR Code ---
+export { generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput } from "./qr-code";
+export type { QrOptions } from "./qr-code";
+
+// --- Signature Pad ---
+export { SignaturePadManager, createSignaturePad } from "./signature-pad";
+export type {
+  StrokePoint,
+  Stroke,
+  SignaturePadOptions,
+  SignaturePadInstance,
+} from "./signature-pad";
