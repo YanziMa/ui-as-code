@@ -1194,3 +1194,14 @@ export {
   type Snapshot, type SagaStep, type SagaDefinition,
   type EventType,
 } from "./event-sourcing";
+export {
+  UndoManager, transform as transformOperation,
+  type Command, type BranchInfo, type UndoState, type UndoListener,
+  type RedoResult, type ApplyFn, type InvertFn, type TransformOperation,
+} from "./undo-redo-v2";
+export {
+  GridEngine, ResponsiveGridBuilder, GridPresets, GridDebugOverlay,
+  type TrackSize, type GridAlign, type GridItem, type GridTemplate,
+  type Breakpoint, type ComputedGrid, type PlacedItem, type GridAreaDef,
+  type SpanDef,
+} from "./css-grid-system";
