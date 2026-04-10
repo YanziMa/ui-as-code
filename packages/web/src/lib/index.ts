@@ -10517,3 +10517,36 @@ export type {
   ChartOptions,
   ChartInstance,
 } from "./chart";
+
+// --- Virtual Scroller ---
+export {
+  VirtualScroller,
+} from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Lazy Image ---
+export {
+  createLazyImage,
+} from "./lazy-image";
+export type {
+  LazyImageFit,
+  LazyImageLoading,
+  LazyImageOptions,
+  LazyImageInstance,
+} from "./lazy-image";
