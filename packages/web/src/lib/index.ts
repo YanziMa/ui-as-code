@@ -8392,3 +8392,45 @@ export type {
   JsonEditorOptions,
   JsonEditorInstance,
 } from "./json-editor";
+
+// --- Form Builder ---
+export {
+  FormBuilder,
+  createForm,
+  validations,
+} from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Data Table Advanced ---
+export {
+  createDataTable,
+} from "./data-table-advanced";
+export type {
+  SortDirection,
+  AlignType,
+  ColumnDef,
+  TableRow,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table-advanced";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
