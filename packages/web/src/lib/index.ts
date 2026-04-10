@@ -11724,3 +11724,41 @@ export type {
   TextareaOptions,
   TextareaInstance,
 } from "./textarea";
+
+// --- Button ---
+export {
+  createButton,
+  createButtonGroup,
+} from "./button";
+export type {
+  ButtonVariant,
+  ButtonSize,
+  ButtonOptions,
+  ButtonGroupOptions,
+  ButtonGroupInstance,
+} from "./button";
+
+// --- Card ---
+export {
+  createCard,
+} from "./card";
+export type {
+  CardVariant,
+  CardSize,
+  CardHeaderOptions,
+  CardImageOptions,
+  CardOptions,
+  CardInstance,
+} from "./card";
+
+// --- List ---
+export {
+  createList,
+} from "./list";
+export type {
+  ListSelectionMode,
+  ListVariant,
+  ListItem,
+  ListOptions,
+  ListInstance,
+} from "./list";
