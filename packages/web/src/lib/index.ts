@@ -6664,3 +6664,99 @@ export type {
   WorkflowHook,
   WorkflowOptions,
 } from "./workflow";
+
+// --- WebSocket ---
+export {
+  WebSocketManager,
+  WsRoomManager,
+  isWebSocketSupported,
+  getWebSocketUrl,
+  createWebSocketUrl,
+  parseWsUrl,
+} from "./websocket";
+export type {
+  WsEvent,
+  WebSocketData,
+  OpenHandler,
+  CloseHandler,
+  ErrorHandler,
+  MessageHandler,
+  ReconnectingHandler,
+  WebSocketState,
+  WebSocketStats,
+  ReconnectConfig,
+  HeartbeatConfig,
+  WebSocketOptions,
+  RoomMessage,
+} from "./websocket";
+
+// --- SSR (Server-Side Rendering) ---
+export {
+  Router,
+  buildHTML,
+  createSSRResponse,
+  StreamRenderer,
+  serializeHydrationData,
+  parseHydrationData,
+  generateHydrationId,
+  redirect,
+  notFound,
+  serverError,
+  isServer,
+  isBrowser,
+  isNode,
+  isWorker,
+  getEnvironment,
+  parseURL,
+  buildURL,
+} from "./ssr";
+export type {
+  Route,
+  SSRContext,
+  RenderResult,
+  HydrationData,
+  StreamOptions,
+} from "./ssr";
+
+// --- CSS-in-JS ---
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animate,
+  animations,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+  mediaQueries,
+} from "./css-in-js";
+export type {
+  Breakpoints,
+  KeyframeRule,
+} from "./css-in-js";
