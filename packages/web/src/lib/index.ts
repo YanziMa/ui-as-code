@@ -773,3 +773,16 @@ export {
   matchGlob, globMatch, diffTrees,
   type FsNode, type FsTreeDiff, type GlobOptions,
 } from "./file-system-v2";
+export {
+  DataPipeline, filter, map as mapTransform, pick, omit, rename, derive,
+  sortBy, limit, offset, paginate, uniqBy, groupBy,
+  aggregate, aggregateBy, validate, validations as pipelineValidations,
+  innerJoin, leftJoin,
+  type TransformStep, type TransformContext, type PipelineResult,
+  type AggregationResult, type ValidationRule,
+} from "./data-pipeline";
+export {
+  EventBus, createEventBus,
+  type EventCallback, type EventMiddleware, type Subscription,
+  type EmittedEvent, type EventBusOptions,
+} from "./event-bus";
