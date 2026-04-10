@@ -1936,3 +1936,27 @@ export {
   type EvaluationResult, type Policy, type AuditLogEntry,
   type PermissionAction,
 } from "./permission-system";
+
+// --- Virtual Scroller ---
+export {
+  VirtualScroller, SizeCache,
+  type ScrollItem, type VisibleRange, type ScrollerConfig, type ScrollerState,
+  type ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Drag and Drop ---
+export {
+  DragDropManager, getDragDropManager,
+  type DragItem, type DragOptions, type DropZoneOptions, type DropResult,
+  type SortableConfig, type DragMode, type DropPosition,
+} from "./drag-and-drop";
+
+// --- Clipboard Manager ---
+export {
+  ClipboardManager,
+  requestClipboardPermission, requestReadPermission,
+  isClipboardApiAvailable, sanitizeHtml,
+  type ClipboardData, type ClipboardPermission, type CopyOptions,
+  type PasteOptions, type ClipboardHistoryEntry, type ClipboardConfig,
+  type ClipboardDataType,
+} from "./clipboard-manager";
