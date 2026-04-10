@@ -7617,3 +7617,38 @@ export type {
   StepsOptions,
   StepsInstance,
 } from "./steps";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+
+// --- Notification Bar ---
+export {
+  NotificationBarManager,
+  createNotificationBar,
+} from "./notification-bar";
+export type {
+  NotificationType,
+  NotificationBarOptions,
+  NotificationBarInstance,
+} from "./notification-bar";
+
+// --- Avatar Group ---
+export {
+  AvatarGroupManager,
+  createAvatarGroup,
+} from "./avatar-group";
+export type {
+  AvatarSize,
+  StackDirection,
+  AvatarItem,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
