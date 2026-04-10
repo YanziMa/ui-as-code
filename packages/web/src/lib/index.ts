@@ -11762,3 +11762,37 @@ export type {
   ListOptions,
   ListInstance,
 } from "./list";
+
+// --- Spinner ---
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+} from "./spinner";
+export type {
+  SpinnerVariant,
+  SpinnerSize,
+  SpinnerOptions,
+} from "./spinner";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
