@@ -11346,3 +11346,44 @@ export type {
   SidebarOptions,
   SidebarInstance,
 } from "./sidebar";
+
+// --- Code Block ---
+export {
+  CodeBlockManager,
+  createCodeBlock,
+} from "./code-block";
+export type {
+  CodeTheme,
+  CodeBlockOptions,
+  CodeBlockInstance,
+} from "./code-block";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  extractText,
+  countWords,
+  readingTime,
+  mdToHtml,
+} from "./markdown-renderer";
+export type {
+  MdNodeType,
+  MdNode,
+  MdRenderOptions,
+  TocEntry,
+  FrontMatter,
+} from "./markdown-renderer";
+
+// --- Virtual List ---
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
