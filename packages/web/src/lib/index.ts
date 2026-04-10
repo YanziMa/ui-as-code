@@ -9679,3 +9679,40 @@ export type {
   SearchInputOptions,
   SearchInputInstance,
 } from "./search-input";
+
+// --- Data Table ---
+export {
+  DataTableManager,
+  createDataTable,
+} from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+
+// --- Chart ---
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+
+// --- Date Picker ---
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
