@@ -8628,3 +8628,40 @@ export type {
   DividerStyle,
   DividerOptions,
 } from "./divider";
+
+// --- Chip ---
+export {
+  createChip,
+  createChipGroup,
+} from "./chip";
+export type {
+  ChipSize,
+  ChipVariant,
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chip";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+
+// --- Radio Group ---
+export {
+  createRadioGroup,
+} from "./radio-group";
+export type {
+  RadioSize,
+  RadioVariant,
+  RadioOption,
+  RadioGroupOptions,
+  RadioGroupInstance,
+} from "./radio-group";
