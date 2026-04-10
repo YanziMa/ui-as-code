@@ -2251,3 +2251,25 @@ export {
   type EasingFn, type TimelinePlaybackState, type Keyframe, type AnimationTrack,
   type TimelineLabel, type TimelineEvent, type TimelineOptions, type TimelineState,
 } from "./animation-timeline";
+
+// --- Undo/Redo History ---
+export {
+  UndoHistory,
+  type UndoItem, type UndoBranch, type UndoHistoryOptions, type UndoState,
+  type UndoChangeListener,
+} from "./undo-redo";
+
+// --- Reactive Store ---
+export {
+  ReactiveStore, createStore,
+  loggerMiddleware, throttleMiddleware, immutabilityCheckMiddleware,
+  type Listener, type Selector, type Middleware, type EqualityFn,
+  type StoreAction, type StoreOptions, type ComputedConfig,
+  type SubscriptionInfo, type StoreStats,
+} from "./reactive-store";
+
+// --- Markdown to HTML ---
+export {
+  mdToHtml, quickMd, stripMarkdown, extractToc,
+  type MdToHtmlOptions, type MdToken, type ConvertResult,
+} from "./markdown-to-html";
