@@ -3846,3 +3846,23 @@ export {
   ImageGalleryManager, createImageGallery,
   type GalleryImage, type ImageGalleryOptions, type ImageGalleryInstance,
 } from "./image-gallery";
+
+// --- Data Table ---
+export {
+  DataTableManager, createDataTable,
+  type Column, type DataTableOptions, type DataTableInstance,
+  type SortDirection, type SortState, type FilterState,
+} from "./data-table";
+
+// --- Form Builder ---
+export {
+  FormBuilder, createForm, validations,
+  type FormField, type FormSchema, type FormSection, type FieldType,
+  type SelectOption, type FieldValidation, type FormState, type FieldError,
+} from "./form-builder";
+
+// --- Search Autocomplete ---
+export {
+  AutocompleteManager, createAutocomplete,
+  type SuggestionItem, type AutocompleteOptions, type AutocompleteInstance,
+} from "./search-autocomplete";
