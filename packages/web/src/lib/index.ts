@@ -9271,3 +9271,37 @@ export type {
   LazyLoadInstance,
   BatchLazyOptions,
 } from "./lazy-load";
+
+// --- Countdown ---
+export {
+  CountdownManager,
+  createCountdown,
+} from "./countdown";
+export type {
+  CountdownSize,
+  CountdownVariant,
+  CountdownOptions,
+  CountdownInstance,
+} from "./countdown";
+
+// --- Typing Indicator ---
+export {
+  createTypingIndicator,
+} from "./typing-indicator";
+export type {
+  TypingAnimation,
+  TypingSize,
+  TypingIndicatorOptions,
+  TypingIndicatorInstance,
+} from "./typing-indicator";
+
+// --- Rating Stars ---
+export {
+  createRatingStars,
+} from "./rating-stars";
+export type {
+  StarIcon,
+  RatingSize,
+  RatingStarsOptions,
+  RatingStarsInstance,
+} from "./rating-stars";
