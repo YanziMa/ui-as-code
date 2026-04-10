@@ -533,3 +533,32 @@ export {
   type AiPipelineConfig, type AiMessage, type ContentBlock, type ToolDefinition,
   type SendOptions, type AiResponse, type StreamChunk,
 } from "./ai-pipeline";
+export {
+  getCurrentLocation, watchLocation, calculateDistance, isWithinRadius,
+  midpoint, toDMS, formatCoordinates,
+  getTimezoneInfo, getCommonTimezones, convertTime, formatDateInTimezone,
+  type Coordinates, type LocationInfo, type DistanceResult, type TimezoneInfo,
+} from "./location";
+export {
+  levenshtein, damerauLevenshtein, jaroWinkler, cosineSimilarity,
+  sorensenDice, fuzzySearch, findBestMatch, approximatelyEqual, suggestSpelling,
+  type FuzzySearchOptions, type FuzzySearchResult,
+} from "./fuzzy";
+export {
+  MarkdownRenderer, renderMarkdownToText,
+  type MarkdownRendererProps, type MarkdownComponents,
+} from "./markdown-components";
+export {
+  isValidEmail, validateEmailDetailed, isDisposableEmail, isBusinessEmail,
+  normalizeEmail, parseEmailAddress, parseEmailList, extractEmails, getDomain,
+  formatEmailAddress, maskEmail, obfuscateEmail, generateGravatarUrl,
+  renderEmailTemplate, inlineCss, generateReplyToHeader, createUnsubscribeUrl,
+  generateEmailHeaders, buildMailtoLink,
+  type EmailValidationResult,
+} from "./email";
+export {
+  parseCsv, generateCsv, csvToHtmlTable, csvToMarkdown,
+  inferCsvSchema, validateCsvAgainstSchema, transformCsv, filterCsv, sortCsv,
+  aggregateCsv, downloadCsv,
+  type CsvParseOptions, type CsvRow, type CsvWriteOptions, type CsvSchemaField,
+} from "./csv-advanced";
