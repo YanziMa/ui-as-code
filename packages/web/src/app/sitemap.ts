@@ -53,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
     {
+      url: `${BASE_URL}/analytics`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+    {
       url: `${BASE_URL}/redirects/[slug]`,
       lastModified: new Date(),
       changeFrequency: "monthly",
