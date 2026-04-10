@@ -4222,3 +4222,36 @@ export type {
 // --- Code Editor ---
 export { CodeEditorManager, createCodeEditor } from "./code-editor";
 export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
+
+// --- Form Builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type {
+  FieldType,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldValidation,
+  SelectOption,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Data Grid ---
+export { DataGridManager, createDataGrid } from "./data-grid";
+export type {
+  GridColumn,
+  GridRow,
+  GridGrouping,
+  GridOptions,
+  DataGridInstance,
+} from "./data-grid";
+
+// --- Chart ---
+export { ChartManager, createChart } from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
