@@ -10805,3 +10805,36 @@ export type {
   PopoverOptions,
   PopoverInstance,
 } from "./popover";
+
+// --- Splitter / Drawer ---
+export {
+  createSplitter,
+} from "./drawer";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./drawer";
+
+// --- Sheet ---
+export {
+  createSheet,
+} from "./sheet";
+export type {
+  SheetSnapPoint,
+  SheetOptions,
+  SheetInstance,
+} from "./sheet";
+
+// --- Accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
