@@ -10874,3 +10874,50 @@ export type {
   BreadcrumbOptions,
   BreadcrumbInstance,
 } from "./breadcrumb";
+
+// --- Skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Avatar ---
+export {
+  getInitials,
+  createAvatar,
+  createAvatarGroup,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
