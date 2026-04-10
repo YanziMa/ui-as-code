@@ -10408,3 +10408,45 @@ export type {
   UploadFile,
   FileUploadInstance,
 } from "./file-upload";
+
+// --- Form Builder ---
+export {
+  FormBuilder,
+  createForm,
+  validations,
+} from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Data Table ---
+export {
+  DataTableManager,
+  createDataTable,
+} from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
