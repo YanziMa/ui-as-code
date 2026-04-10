@@ -8810,3 +8810,39 @@ export type {
   AlertOptions,
   AlertInstance,
 } from "./alert";
+
+// --- Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
+
+// --- Drawer ---
+export {
+  createDrawer,
+} from "./drawer";
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
