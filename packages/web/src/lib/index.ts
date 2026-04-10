@@ -6312,3 +6312,46 @@ export {
 export type {
   CacheOptions,
 } from "./cache";
+
+// --- Pub/Sub ---
+export {
+  PubSub,
+  createPubSub,
+} from "./pub-sub";
+export type {
+  MessageHandler,
+  TopicPattern,
+  Message,
+  Subscription as PubSubSubscription,
+  PubSubOptions,
+  PubSubStats,
+} from "./pub-sub";
+
+// --- Mediator ---
+export {
+  Mediator,
+  createMediator,
+} from "./mediator";
+export type {
+  RequestHandler,
+  Middleware,
+  MediatorContext,
+  HandlerRegistration,
+  MediatorOptions,
+  MediatorStats,
+} from "./mediator";
+
+// --- Command Pattern ---
+export {
+  BaseCommand,
+  MacroCommand,
+  CommandManager,
+  createCommand,
+} from "./command";
+export type {
+  Command,
+  CommandResult,
+  CommandConstructor,
+  CommandHistoryEntry,
+  CommandManagerOptions,
+} from "./command";
