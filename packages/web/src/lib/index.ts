@@ -1039,3 +1039,37 @@ export {
   type UserId, type CursorPosition, type PresenceInfo, type OtOperation,
   type TransformResult, type SyncMessage, type ConflictInfo, type Resolution, type UserActivity,
 } from "./realtime-collab";
+export {
+  TerminalEmulator, TerminalBuffer, AnsiParser,
+  DEFAULT_THEME, LIGHT_THEME,
+  resolveColor, unpackRgb,
+  type TerminalConfig, type TerminalTheme, type Cell, type CursorState,
+} from "./terminal-emulator";
+export {
+  parseMarkdown, renderToHtml, generateToc, renderToc,
+  extractFrontMatter, extractText, countWords, readingTime, mdToHtml,
+  type MdNode, type MdNodeType, type MdRenderOptions, type TocEntry, type FrontMatter,
+} from "./markdown-renderer";
+export {
+  RigidBody2D, PhysicsWorld,
+  BodyDef, Contact, RaycastResult, WorldSettings,
+  type Shape as PhysicsShape,
+} from "./physics-engine";
+export {
+  ShortcutManager, ShortcutRecorder, ShortcutOverlay,
+  eventToCombo, normalizeKey, comboToString, parseCombo, comboMatches, comboHash,
+  commonShortcuts,
+  type KeyCombo, type ShortcutBinding, type ShortcutScope, type RecordedSequence,
+} from "./keyboard-shortcuts";
+export {
+  setAria, getAria,
+  createFocusTrap, navigateFocus, focusElement,
+  announce, announceAssertive, createLiveRegion,
+  contrastRatio, checkContrast,
+  createSkipLinks,
+  AccessibleModal,
+  linkErrorToInput, clearInputError, createFieldSet, markRequired,
+  prefersReducedMotion, safeDuration, applyMotion, prefersHighContrast, forcedColorsActive,
+  createRoveList,
+  type AriaAttrs, type ContrastResult, type ModalOptions,
+} from "./accessibility-v3";
