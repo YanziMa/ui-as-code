@@ -12293,3 +12293,40 @@ export type {
   TooltipOptions,
   TooltipInstance,
 } from "./tooltip";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabItem as TabsTabItem,
+  TabOrientation,
+  TabVariant,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
