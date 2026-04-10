@@ -7259,3 +7259,37 @@ export type {
   RatingOptions,
   RatingInstance,
 } from "./rating";
+
+// --- Date Picker ---
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+  DatePickerMode,
+  TimeFormat,
+} from "./date-picker";
+
+// --- Time Picker ---
+export {
+  createTimePicker,
+} from "./time-picker";
+export type {
+  TimePickerOptions,
+  TimePickerInstance,
+  TimeFormat as TimePickerFormat,
+  TimePickerMode,
+} from "./time-picker";
+
+// --- Select ---
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
