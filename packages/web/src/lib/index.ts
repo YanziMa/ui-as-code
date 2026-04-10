@@ -4947,3 +4947,29 @@ export type {
   ProgressBarOptions,
   CircleProgressOptions,
 } from "./progress-bar";
+
+// --- Pagination ---
+export { PaginationManager, createPagination } from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+
+// --- Breadcrumb ---
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Steps ---
+export { StepsManager, createSteps } from "./steps";
+export type {
+  StepStatus,
+  StepItem,
+  StepsOrientation,
+  StepsVariant,
+  StepsOptions,
+  StepsInstance,
+} from "./steps";
