@@ -1093,3 +1093,14 @@ export {
   interpolateColor,
   type ChartConfig, type DataPoint, type SeriesData, type AxisConfig, type LegendConfig, type TooltipConfig, type StatsResult,
 } from "./data-visualization";
+export {
+  normalizePath, joinPath, dirname, basename, extname, parsePath, isAbsolute, isParent, relative,
+  globMatch, globToRegex, glob,
+  VirtualFileSystem, OpfsWrapper,
+  detectMimeType, detectMimeTypeFromBytes,
+  type PathComponents, type VFile, type FsEvent, type GlobOptions,
+} from "./file-system-v3";
+export {
+  NotificationCenter, PushNotificationManager,
+  type Notification, type NotificationType, type NotificationPriority, type NotificationConfig,
+} from "./notification-system";
