@@ -3586,3 +3586,25 @@ export {
   SliderManager, createSlider,
   type SliderOptions, type SliderInstance, type SliderMark,
 } from "./slider";
+
+// --- Select ---
+export {
+  SelectManager, createSelect,
+  type SelectOptions, type SelectInstance, type SelectOption,
+} from "./select";
+
+// --- Checkbox & Radio ---
+export {
+  createCheckbox, createRadio, createCheckboxGroup,
+  type CheckboxOptions, type CheckboxInstance,
+  type RadioOptions, type RadioInstance,
+  type CheckboxGroupOptions, type CheckboxGroupInstance,
+  type CheckboxSize, type CheckboxVariant,
+} from "./checkbox";
+
+// --- Input Field ---
+export {
+  createInputField,
+  type InputFieldOptions, type InputInstance,
+  type InputVariant, type InputSize, type InputState,
+} from "./input-field";
