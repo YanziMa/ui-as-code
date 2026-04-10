@@ -8878,3 +8878,35 @@ export type {
   CheckMode,
   TreeViewConfig,
 } from "./tree-view";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Lightbox ---
+export {
+  LightboxManager,
+  createLightbox,
+} from "./lightbox";
+export type {
+  LightboxImage,
+  LightboxOptions,
+  LightboxInstance,
+} from "./lightbox";
+
+// --- Skeleton Screen ---
+export {
+  createSkeletonScreen,
+} from "./skeleton-screen";
+export type {
+  SkeletonLayout,
+  SkeletonScreenOptions,
+  SkeletonScreenInstance,
+} from "./skeleton-screen";
