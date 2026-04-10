@@ -169,3 +169,12 @@ export {
   SKIP_LINK_ID, skipLinkAttrs, prefersReducedMotion, animationDuration,
   focusTrap, srOnly, ROLES,
 } from "./accessibility";
+export {
+  getExtension, getBasename, getDirname, joinPath,
+  normalizePath, isAbsolute, isUrlPath, relativePath,
+} from "./file";
+export {
+  isDev, isProd, isTest, getEnv, isFeatureEnabled,
+  requireEnv, getEnv, getEnvNumber, getEnvBool,
+  isVercel, isServerless, getDeploymentInfo,
+} from "./env-detection";
