@@ -16055,3 +16055,33 @@ export type {
   InfiniteScrollOptions,
   InfiniteScrollState,
 } from "./infinite-scroll";
+export {
+  createAnchor,
+} from "./anchor";
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
+export {
+  createTour,
+} from "./tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour";
+export {
+  HotkeyManager,
+  createAppHotkeys,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  ParsedKeyCombo,
+} from "./hotkeys";
