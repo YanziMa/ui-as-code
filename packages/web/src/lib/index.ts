@@ -265,3 +265,46 @@ export {
   oneOf, allOf, anyOf, not, when, validateObject,
   type Validator, type ValidationResult, type FieldValidators,
 } from "./validation-advanced";
+export {
+  Scheduler, parseCronExpression, cronMatches, getNextCronRun,
+  type ScheduledJob, type CronExpression,
+} from "./scheduler";
+export {
+  MessageBroker, subscribePattern, type Message, type MessageContext,
+  type MessageHandler, type SubscriptionOptions,
+} from "./pubsub";
+export {
+  createInlineWorker, runInWorker, TaskQueue, BatchingProcessor,
+  requestIdleCallback, cancelIdleCallback,
+} from "./worker";
+export {
+  getComputedStyleValue, getElementRect, isInViewport, getVisibilityPercent,
+  scrollIntoViewCentered, measureText, closestAncestor, getAncestors,
+  insertAfter, replaceElement, containsOrIs, getFocusableElements, createFocusTrap,
+} from "./dom-utils";
+export {
+  clampNumber, lerpNumber, mapRangeNumber, roundTo, roundToMultiple,
+  floorToMultiple, ceilToMultiple, formatBytesAuto, formatCompactNumber,
+  formatWithSeparators, percentChange, approximatelyEqual, randomIntInRange,
+  randomFloatInRange, normalizeAngleDeg, normalizeAngleRad, degToRad, radToDeg,
+  gcd, lcm, isInRange, wrapNumber,
+} from "./number-utils";
+export {
+  chunkArray, splitAt, partitionArray, slidingWindow, groupConsecutive,
+  deepFlatten, uniqueBy, intersectArrays, differenceArrays, symmetricDifference,
+  rotateArray, sampleArray, shuffleArray, zipArrays, fillArray,
+  argMin, argMax,
+} from "./array-utils";
+export {
+  isBlank, isPresent, collapseWhitespace, stripDiacritics, escapeRegex,
+  escapeHtmlEntities, unescapeHtmlEntities, toCamelCaseString, toPascalCaseString,
+  toKebabCaseString, toSnakeCaseString, capitalizeWords, smartTruncate,
+  repeatWithSeparator, centerPad, isAscii, looksLikeEmail, looksLikeUrl,
+  extractNumbers, replaceMultiple, stringToId, countOccurrences, reverseWords, trimLines,
+} from "./string-utils";
+export {
+  createTreeNode, buildTree, flattenTree, flattenTreeWithDepth,
+  findNodeById, findNodes, getPathToNode, getTreeDepth, countNodes,
+  mapTree, filterTree, type TreeNode,
+} from "./tree";
+export { Graph, type GraphNode, type GraphEdge } from "./graph";
