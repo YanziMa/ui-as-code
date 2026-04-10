@@ -5079,3 +5079,29 @@ export type {
   MentionAutocompleteOptions,
   MentionAutocompleteInstance,
 } from "./mention-autocomplete";
+
+// --- Color Picker ---
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Date Picker ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+
+// --- Time Picker ---
+export { createTimePicker } from "./time-picker";
+export type {
+  TimeFormat,
+  TimePickerMode,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker";
