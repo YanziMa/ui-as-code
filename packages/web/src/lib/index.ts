@@ -5054,3 +5054,28 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Stat Card ---
+export { createStatCard } from "./stat-card";
+export type {
+  TrendDirection,
+  StatCardVariant,
+  StatCardOptions,
+} from "./stat-card";
+
+// --- Comment ---
+export { createCommentSystem } from "./comment";
+export type {
+  CommentAuthor,
+  CommentData,
+  CommentOptions,
+  CommentInstance,
+} from "./comment";
+
+// --- Mention Autocomplete ---
+export { createMentionAutocomplete } from "./mention-autocomplete";
+export type {
+  MentionItem,
+  MentionAutocompleteOptions,
+  MentionAutocompleteInstance,
+} from "./mention-autocomplete";
