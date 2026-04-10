@@ -2720,3 +2720,26 @@ export {
   ModalManager, getModalManager, alertModal, confirmModal,
   type ModalSize, type ModalPlacement, type ModalOptions, type ModalInstance,
 } from "./modal";
+
+// --- Notification ---
+export {
+  NotificationManager, getNotificationManager, toast,
+  type Notification, type NotificationOptions, type NotificationPosition,
+  type NotificationType,
+} from "./notification";
+
+// --- Skeleton ---
+export {
+  createSkeleton, createTextSkeleton, createHeadingSkeleton,
+  createAvatarSkeleton, createCardSkeleton, createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions, type SkeletonTextOptions,
+  type SkeletonAvatarOptions, type SkeletonCardOptions, type SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Avatar ---
+export {
+  createAvatar, createAvatarGroup, getInitials,
+  type AvatarOptions, type AvatarGroupOptions,
+  type AvatarSize, type AvatarShape,
+} from "./avatar";
