@@ -2848,3 +2848,21 @@ export {
   TypeaheadManager, createTypeahead,
   type TypeaheadItem, type TypeaheadOptions, type TypeaheadInstance,
 } from "./typeahead";
+
+// --- Select ---
+export {
+  SelectManager, createSelect,
+  type SelectOptions, type SelectOption, type SelectInstance,
+} from "./select";
+
+// --- Slider ---
+export {
+  SliderManager, createSlider,
+  type SliderOptions, type SliderInstance, type SliderMark,
+} from "./slider";
+
+// --- Rating ---
+export {
+  RatingManager, createRating,
+  type RatingOptions, type RatingInstance, type StarIconType,
+} from "./rating";
