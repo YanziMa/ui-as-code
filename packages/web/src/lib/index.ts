@@ -8295,3 +8295,37 @@ export type {
   CommandLogOptions,
   CommandLogInstance,
 } from "./command-log";
+
+// --- Notification Center ---
+export {
+  createNotificationCenter,
+  NotificationCenterManager,
+} from "./notification-center";
+export type {
+  NotificationType,
+  NotificationItem,
+  NotificationCenterOptions,
+  NotificationCenterInstance,
+} from "./notification-center";
+
+// --- File Tree ---
+export {
+  createFileTree,
+  FileManager,
+} from "./file-tree";
+export type {
+  FileType,
+  FileTreeNode,
+  FileTreeOptions,
+  FileTreeInstance,
+} from "./file-tree";
+
+// --- Code Editor ---
+export {
+  createCodeEditor,
+  CodeEditorManager,
+} from "./code-editor";
+export type {
+  CodeEditorOptions,
+  CodeEditorInstance,
+} from "./code-editor";
