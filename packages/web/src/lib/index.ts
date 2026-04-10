@@ -143,3 +143,14 @@ export {
   hexToRgb, rgbToHex, parseColor, mixColors, transparentize,
 } from "./css";
 export { AsyncQueue, RateLimiter, BatchingQueue } from "./queue";
+export {
+  distance, distanceSquared, midpoint, angle,
+  degToRad, radToDeg, pointInRect, rectCenter, rectsIntersect,
+  rectIntersection, boundingRect, scaleRect, clampPoint, aspectRatio, fitSize,
+  type Point, type Rect, type Size,
+} from "./geometry";
+export {
+  base64Encode, base64Decode, safeEncode, safeDecode,
+  unicodeEscape, unicodeUnescape, encodeQuery,
+  xorCipher, xorDecipher, simpleHash,
+} from "./encoding";
