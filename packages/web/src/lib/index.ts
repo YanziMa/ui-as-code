@@ -12480,3 +12480,37 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu";
+
+// --- Notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  NotificationType,
+  Notification,
+  NotificationOptions,
+  NotificationPosition,
+} from "./notification";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
