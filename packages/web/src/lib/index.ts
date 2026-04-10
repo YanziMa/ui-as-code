@@ -6803,3 +6803,87 @@ export {
   mdToHtml,
   stripMd,
 } from "./markdown";
+
+// --- Color ---
+export {
+  parseColor,
+  toRgb,
+  toHsl,
+  toHsv,
+  toHex,
+  toCss,
+  rgbToHsl,
+  hslToRgb,
+  rgbToHsv,
+  hsvToRgb,
+  hslToHex,
+  hexToHsl,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  rotateHue,
+  setOpacity,
+  mix,
+  lerpColor,
+  invert,
+  grayscale,
+  complement,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  luminance,
+  contrastRatio,
+  passesWCAGAA,
+  passesWCAGAAA,
+  getContrastColor,
+  bestContrast,
+  stringToColor,
+  generatePalette,
+  generateGradientPalette,
+  shadeScale,
+  tailwindPalette,
+  getStatusColor,
+  STATUS_COLORS,
+} from "./color";
+export type {
+  RgbColor,
+  HslColor,
+  HsvColor,
+  HwbColor,
+  ColorInput,
+  StatusColor,
+} from "./color";
+
+// --- DOM Utils ---
+export {
+  getComputedStyleValue,
+  getElementRect,
+  isInViewport,
+  getVisibilityPercent,
+  scrollIntoViewCentered,
+  measureText,
+  closestAncestor,
+  getAncestors,
+  insertAfter,
+  replaceElement,
+  containsOrIs,
+  getFocusableElements,
+  createFocusTrap,
+} from "./dom-utils";
+
+// --- Animation ---
+export {
+  EASING,
+  animateValue,
+  springAnimate,
+  cssKeyframes,
+  KEYFRAMES,
+  DURATION,
+  transition,
+} from "./animation";
+export type {
+  EasingName,
+  SpringConfig,
+} from "./animation";
