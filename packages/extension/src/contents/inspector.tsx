@@ -309,6 +309,32 @@ function InspectorOverlay() {
     }
   }, [selected])
 
+  // Keyboard shortcuts: Enter to submit (step 1), Escape to close
+  const generateRef = useRef<() => void>()
+  generateRef.current = () => { if (selected && description.trim() && !loading && !diffResult) { /* trigger will be handled below */ } }
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      // Enter / Ctrl+Enter: submit description
+      if ((e.key === "Enter" || (e.key === "Enter" && e.ctrlKey)) && selected && !diffResult && !loading) {
+        const textarea = document.querySelector(".uac-textarea") as HTMLTextAreaElement
+        if (document.activeElement === textarea || !textarea) {
+          e.preventDefault()
+          // Find and click the generate button
+          const btn = document.querySelector(".uac-btn-primary") as HTMLElement
+          btn?.click()
+        }
+      }
+      // Escape: go back from diff view
+      if (e.key === "Escape" && diffResult) {
+        setDiffResult(null)
+        setError(null)
+      }
+    }
+    document.addEventListener("keydown", onKey)
+    return () => document.removeEventListener("keydown", onKey)
+  }, [selected, description, loading, diffResult])
+
   // Hover tracking
   useEffect(() => {
     if (!enabled) return
@@ -609,6 +635,11 @@ function InspectorOverlay() {
                   placeholder='e.g., "Make the title font larger and change color to dark blue"'
                   autoFocus
                   maxLength={2000}
+                />
+                <div className="flex items-center gap-3 text-[10px] text-gray-400 mt-1.5">
+                  <span><kbd className="bg-gray-100 px-1 py-0.5 rounded text-[9px]">Enter</kbd> to submit</span>
+                  <span><kbd className="bg-gray-100 px-1 py-0.5 rounded text-[9px]">Esc</kbd> to close</span>
+                </div>
                 />
 
                 <button
