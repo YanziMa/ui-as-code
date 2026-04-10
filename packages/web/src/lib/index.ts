@@ -9125,3 +9125,37 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+
+// --- Comment Thread ---
+export {
+  CommentThreadManager,
+  createCommentThread,
+} from "./comment-thread";
+export type {
+  CommentAuthor,
+  Comment,
+  CommentThreadOptions,
+  CommentThreadInstance,
+} from "./comment-thread";
+
+// --- Mention ---
+export {
+  MentionManager,
+  createMention,
+} from "./mention";
+export type {
+  MentionOption,
+  MentionOptions,
+  MentionInstance,
+} from "./mention";
+
+// --- Tour Guide ---
+export {
+  TourManager,
+  createTour,
+} from "./tour-guide";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour-guide";
