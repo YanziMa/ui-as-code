@@ -16027,3 +16027,31 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu";
+export {
+  createAffix,
+} from "./affix";
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  createVirtualScroll,
+  createVirtualGrid,
+} from "./virtual-scroll";
+export type {
+  VirtualScrollItem,
+  VirtualScrollOptions,
+  VirtualScrollState,
+  VirtualScrollController,
+  VirtualGridOptions,
+  VirtualGridState,
+  VirtualGridController,
+} from "./virtual-scroll";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
