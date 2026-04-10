@@ -3785,3 +3785,26 @@ export {
   TreeView,
   type TreeNodeData, type TreeNode, type CheckMode, type TreeViewConfig,
 } from "./tree-view";
+
+// --- Timeline ---
+export {
+  TimelineManager, createTimeline,
+  type TimelineItem, type TimelineOptions, type TimelineInstance,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- Carousel ---
+export {
+  CarouselManager, createCarousel,
+  type CarouselSlide, type CarouselOptions, type CarouselInstance,
+} from "./carousel";
+
+// --- Color Picker ---
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity,
+  generatePaletteAdvanced,
+  type RgbColor, type HslColor, type Palette,
+} from "./color-picker";
