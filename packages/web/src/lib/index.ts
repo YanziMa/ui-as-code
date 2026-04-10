@@ -9716,3 +9716,60 @@ export type {
   DatePickerOptions,
   DatePickerInstance,
 } from "./date-picker";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+
+// --- Notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  NotificationType,
+  Notification,
+  NotificationOptions,
+  NotificationPosition,
+} from "./notification";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
