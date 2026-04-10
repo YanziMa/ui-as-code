@@ -9810,3 +9810,36 @@ export type {
   KanbanOptions,
   KanbanInstance,
 } from "./kanban";
+
+// --- Markdown Editor ---
+export {
+  createMarkdownEditor,
+} from "./markdown-editor";
+export type {
+  MarkdownEditorOptions,
+  MarkdownEditorInstance,
+} from "./markdown-editor";
+
+// --- File Tree ---
+export {
+  FileManager,
+  createFileTree,
+} from "./file-tree";
+export type {
+  FileType,
+  FileTreeNode,
+  FileTreeOptions,
+  FileTreeInstance,
+} from "./file-tree";
+
+// --- Terminal ---
+export {
+  createTerminal,
+} from "./terminal";
+export type {
+  TerminalLine,
+  TerminalTheme,
+  TerminalCommand,
+  TerminalOptions,
+  TerminalInstance,
+} from "./terminal";
