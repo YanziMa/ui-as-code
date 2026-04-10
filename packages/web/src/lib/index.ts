@@ -10921,3 +10921,41 @@ export type {
   BadgeOptions,
   StatusDotOptions,
 } from "./badge";
+
+// --- Progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  formatProgress,
+  createStepProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
+
+// --- Spinner ---
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+} from "./spinner";
+export type {
+  SpinnerVariant,
+  SpinnerSize,
+  SpinnerOptions,
+} from "./spinner";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
