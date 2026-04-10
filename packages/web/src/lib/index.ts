@@ -2999,3 +2999,21 @@ export {
   ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock,
   type ScrollLockOptions, type ScrollLockInstance,
 } from "./scroll-lock";
+
+// --- Focus Trap ---
+export {
+  FocusTrapManager, createFocusTrap, FocusTrapStack,
+  type FocusTrapOptions, type FocusTrapInstance,
+} from "./focus-trap";
+
+// --- Animate ---
+export {
+  transition, stagger, springs, prefersReducedMotion,
+} from "./animate";
+
+// --- Gesture ---
+export {
+  GestureManager, createGesture, swipeGestures, tapGesture,
+  type GestureConfig, type GestureInstance, type GestureEvent,
+  type GestureType, type SwipeDirection, type Point, type GestureHandlerConfig,
+} from "./gesture";
