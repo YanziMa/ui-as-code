@@ -2981,3 +2981,21 @@ export {
   NavbarManager, createNavbar,
   type NavbarOptions, type NavbarInstance, type NavItem, type UserMenuConfig,
 } from "./navbar";
+
+// --- Overlay ---
+export {
+  OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays,
+  type OverlayOptions, type OverlayInstance, type OverlayType,
+} from "./overlay";
+
+// --- Portal ---
+export {
+  createPortal, PortalManager, getPortalManager,
+  type PortalOptions, type PortalInstance, type PortalTarget,
+} from "./portal";
+
+// --- Scroll Lock ---
+export {
+  ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock,
+  type ScrollLockOptions, type ScrollLockInstance,
+} from "./scroll-lock";
