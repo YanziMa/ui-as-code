@@ -2172,3 +2172,25 @@ export {
   type HistogramValue, type TimerValue, type AggregatedMetrics,
   type AlertRule, type AlertEvent,
 } from "./event-aggregator";
+
+// --- CSS Transform ---
+export {
+  transformCss, minifyCss, extractCustomProperties, needsPrefix,
+  type CssTransformOptions, type CssRule, type CssAtRule,
+  type TransformResult,
+} from "./css-transform";
+
+// --- Key-Value Store ---
+export {
+  KvStore, CancellationToken,
+  type KvStoreOptions, type KvEntry, type StoreStats,
+  type StoreBackend, type Transaction,
+} from "./key-value-store";
+
+// --- Task Runner ---
+export {
+  TaskRunner, CancellationToken,
+  type Task, type TaskResult, type TaskStatus, type TaskPriority,
+  type ConcurrencyOptions, type RunnerStats, type ProgressCallback,
+  type TaskFilter,
+} from "./task-runner";
