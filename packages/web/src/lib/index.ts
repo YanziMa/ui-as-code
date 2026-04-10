@@ -3608,3 +3608,24 @@ export {
   type InputFieldOptions, type InputInstance,
   type InputVariant, type InputSize, type InputState,
 } from "./input-field";
+
+// --- Button ---
+export {
+  createButton, createButtonGroup,
+  type ButtonOptions, type ButtonGroupOptions, type ButtonGroupInstance,
+  type ButtonVariant, type ButtonSize,
+} from "./button";
+
+// --- Card ---
+export {
+  createCard,
+  type CardOptions, type CardInstance,
+  type CardVariant, type CardSize, type CardHeaderOptions, type CardImageOptions,
+} from "./card";
+
+// --- Modal ---
+export {
+  createModal,
+  type ModalOptions, type ModalInstance,
+  type ModalSize, type ModalPosition,
+} from "./modal";
