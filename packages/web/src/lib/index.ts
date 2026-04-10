@@ -9008,3 +9008,39 @@ export type {
   RichTextEditorOptions,
   RichTextEditorInstance,
 } from "./rich-text-editor";
+
+// --- Kanban Board ---
+export {
+  createKanbanBoard,
+} from "./kanban-board";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanBoardOptions,
+  KanbanBoardInstance,
+} from "./kanban-board";
+
+// --- Chart ---
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+
+// --- Notification Center ---
+export {
+  NotificationCenterManager,
+  createNotificationCenter,
+} from "./notification-center";
+export type {
+  NotificationType,
+  NotificationItem,
+  NotificationCenterOptions,
+  NotificationCenterInstance,
+} from "./notification-center";
