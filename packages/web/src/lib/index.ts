@@ -9495,3 +9495,41 @@ export type {
   BadgeOptions,
   StatusDotOptions,
 } from "./badge";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
+
+// --- Chip ---
+export {
+  createChip,
+  createChipGroup,
+} from "./chip";
+export type {
+  ChipSize,
+  ChipVariant,
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chip";
+
+// --- Select ---
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
