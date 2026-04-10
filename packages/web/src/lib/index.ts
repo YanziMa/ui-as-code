@@ -478,3 +478,34 @@ export {
   googleProvider, githubProvider, microsoftProvider, discordProvider,
   parseCallbackUrl, buildLogoutUrl,
 } from "./oauth";
+export {
+  createVirtualScroll, VirtualScrollController, type VirtualScrollOptions,
+  type VirtualScrollItem, type VirtualScrollState,
+  createVirtualGrid, VirtualGridController, type VirtualGridOptions, type VirtualGridState,
+} from "./virtual-scroll";
+export {
+  FormValidator, required, minLength, maxLength, pattern, email, urlValidator,
+  range, matchesField, asyncValidator, custom,
+  type FieldConfig, type FieldValidationResult, type FormValidationResult,
+  type ValidatorFn, type FormValidatorOptions,
+} from "./form-validator";
+export {
+  ThemeManager, getThemeManager, useTheme, LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES,
+  type ThemeConfig, type ThemeColors,
+} from "./theme";
+export {
+  calculateAxisScale, formatAxisLabel, valueToPixel, pixelToValue,
+  aggregateByInterval, movingAverage, calculatePercentChanges, findExtrema,
+  generateChartColors, interpolateColor, getDataStats,
+  type DataPoint, type DataSeries, type ChartConfig, type AxisScale,
+  type DataStats, type ColorPaletteName,
+} from "./chart-utils";
+export {
+  TokenType, tokenize, tokenizeCode, getTokenFrequency, getTopTokens,
+  getVocabulary, lexicalDiversity, findTokenPattern, tokensToString,
+  type Token, type CodeToken,
+} from "./tokenizer";
+export {
+  AuditLog, auditWrap, maskSensitiveData, AuditLogExporter,
+  type AuditEvent, type AuditLogOptions, type AuditQueryFilters, type AuditStats,
+} from "./audit-log";
