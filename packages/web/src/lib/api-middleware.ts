@@ -20,10 +20,18 @@ const GENERATE_DIFF_LIMIT: RateLimitConfig = {
   maxRequests: 5, // AI calls are expensive
 };
 
+export function getRateLimitHeaders(info: { limit: number; remaining: number; resetAt: number }): Record<string, string> {
+  return {
+    "X-RateLimit-Limit": String(info.limit),
+    "X-RateLimit-Remaining": String(info.remaining),
+    "X-RateLimit-Reset": String(Math.ceil(info.resetAt / 1000)),
+  };
+}
+
 export function checkRateLimit(
   req: NextRequest,
   config: RateLimitConfig = DEFAULT_RATE_LIMIT
-): { allowed: boolean; remaining: number; resetAt: number } {
+): { allowed: boolean; remaining: number; resetAt: number; limit: number } {
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     req.headers.get("x-real-ip") ||
@@ -35,15 +43,15 @@ export function checkRateLimit(
   if (!entry || now > entry.resetAt) {
     // New window
     rateLimitMap.set(ip, { count: 1, resetAt: now + config.windowMs });
-    return { allowed: true, remaining: config.maxRequests - 1, resetAt: now + config.windowMs };
+    return { allowed: true, remaining: config.maxRequests - 1, resetAt: now + config.windowMs, limit: config.maxRequests };
   }
 
   if (entry.count >= config.maxRequests) {
-    return { allowed: false, remaining: 0, resetAt: entry.resetAt };
+    return { allowed: false, remaining: 0, resetAt: entry.resetAt, limit: config.maxRequests };
   }
 
   entry.count++;
-  return { allowed: true, remaining: config.maxRequests - entry.count, resetAt: entry.resetAt };
+  return { allowed: true, remaining: config.maxRequests - entry.count, resetAt: entry.resetAt, limit: config.maxRequests };
 }
 
 // Cleanup stale entries every 5 minutes
@@ -136,8 +144,10 @@ export async function withHandler(
   options?: { rateLimit?: RateLimitConfig; requireAuth?: boolean }
 ): Promise<NextResponse> {
   // Rate limit check (only if request is available)
+  let rateLimitInfo: ReturnType<typeof checkRateLimit> | undefined;
   if (options?.rateLimit && req) {
     const result = checkRateLimit(req, options.rateLimit);
+    rateLimitInfo = result;
     if (!result.allowed) {
       return NextResponse.json(
         {
@@ -146,7 +156,10 @@ export async function withHandler(
         },
         {
           status: 429,
-          headers: { "Retry-After": String(Math.ceil((result.resetAt - Date.now()) / 1000)) },
+          headers: {
+            "Retry-After": String(Math.ceil((result.resetAt - Date.now()) / 1000)),
+            ...getRateLimitHeaders(result),
+          },
         }
       );
     }
@@ -159,7 +172,15 @@ export async function withHandler(
   }
 
   try {
-    return await (handler ?? (() => apiSuccess(null)))();
+    const response = await (handler ?? (() => apiSuccess(null)))();
+    // Attach rate limit headers if rate limiting is active
+    if (rateLimitInfo) {
+      const headers = getRateLimitHeaders(rateLimitInfo);
+      for (const [key, value] of Object.entries(headers)) {
+        response.headers.set(key, value);
+      }
+    }
+    return response;
   } catch (err) {
     console.error("[API Error]", err);
     const message = err instanceof Error ? err.message : "Internal server error";

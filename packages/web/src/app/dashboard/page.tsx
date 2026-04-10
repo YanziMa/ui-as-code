@@ -18,10 +18,18 @@ interface TopFriction {
   latest_at: string;
 }
 
+interface StatsData {
+  frictions: { total: number; recent_7d: number };
+  pull_requests: { total: number; open: number; merged: number; recent_7d: number };
+  votes: { for: number; against: number; total: number };
+  saas_sites: number;
+}
+
 export default function DashboardPage() {
   const [prs, setPrs] = useState<PullRequest[]>([]);
   const [frictions, setFrictions] = useState<Friction[]>([]);
   const [topFrictions, setTopFrictions] = useState<TopFriction[]>([]);
+  const [stats, setStats] = useState<StatsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { addToast } = useToast();
@@ -29,22 +37,25 @@ export default function DashboardPage() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const [prRes, fricRes, topRes] = await Promise.all([
+        const [prRes, fricRes, topRes, statsRes] = await Promise.all([
           fetch("/api/pull-requests"),
           fetch("/api/frictions"),
           fetch("/api/frictions/top"),
+          fetch("/api/stats").catch(() => null),
         ]);
 
         if (!prRes.ok || !fricRes.ok) throw new Error("Failed to load data");
 
-        const [prData, fricData, topData] = await Promise.all([
+        const [prData, fricData, topData, statsData] = await Promise.all([
           prRes.json(),
           fricRes.json(),
           topRes.json().catch(() => ({ data: [] })),
+          statsRes?.ok ? statsRes.json().catch(() => ({ data: null })) : Promise.resolve({ data: null }),
         ]);
         setPrs(prData.data || []);
         setFrictions(fricData.data || []);
         setTopFrictions(topData.data || []);
+        if (statsData?.data) setStats(statsData.data);
       } catch (err) {
         const message = err instanceof Error ? err.message : "Unknown error";
         setError(message);
@@ -93,11 +104,13 @@ export default function DashboardPage() {
     );
   }
 
-  const totalSubmissions = frictions.length;
-  const adoptedCount = prs.filter((pr) => pr.status === "merged").length;
-  const openPRCount = prs.filter((pr) => pr.status === "open").length;
-  const totalVotes = prs.reduce((sum, pr) => sum + pr.votes_for + pr.votes_against, 0);
-  const uniqueSaaS = [...new Set(frictions.map((f) => f.saas_name))].length;
+  // Use live API stats when available, otherwise compute from fetched data
+  const totalSubmissions = stats?.frictions?.total ?? frictions.length;
+  const adoptedCount = stats?.pull_requests?.merged ?? prs.filter((pr) => pr.status === "merged").length;
+  const openPRCount = stats?.pull_requests?.open ?? prs.filter((pr) => pr.status === "open").length;
+  const totalVotes = stats?.votes?.total ?? prs.reduce((sum, pr) => sum + pr.votes_for + pr.votes_against, 0);
+  const uniqueSaaS = stats?.saas_sites ?? [...new Set(frictions.map((f) => f.saas_name))].length;
+  const recentSubmissions = stats?.frictions?.recent_7d ?? null;
 
   // Compute daily activity data for chart
   const activityData = useMemo(() => {
@@ -122,7 +135,16 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
       <header className="border-b border-zinc-200 bg-white px-6 py-4 dark:border-zinc-800 dark:bg-black">
         <div className="mx-auto max-w-6xl flex items-center justify-between">
-          <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">Dashboard</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">Dashboard</h1>
+            <span className="flex items-center gap-1.5 rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-600 dark:bg-green-950 dark:text-green-400">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-500" />
+              </span>
+              System Online
+            </span>
+          </div>
           <a href="/" className="text-sm text-blue-600 hover:text-blue-700">Back to Home</a>
         </div>
       </header>
@@ -130,7 +152,7 @@ export default function DashboardPage() {
       <main className="mx-auto max-w-6xl px-6 py-8">
         {/* Stats */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 mb-6">
-          <StatCard label="Submissions" value={totalSubmissions} icon="📝" />
+          <StatCard label="Submissions" value={totalSubmissions} icon="📝" badge={recentSubmissions ? `+${recentSubmissions} this week` : undefined} />
           <StatCard label="PRs Created" value={prs.length} icon="🔀" accent />
           <StatCard label="Merged" value={adoptedCount} icon="✅" success />
           <StatCard label="Open PRs" value={openPRCount} icon="📌" />
@@ -306,12 +328,14 @@ function StatCard({
   icon,
   accent,
   success,
+  badge,
 }: {
   label: string;
   value: number | string;
   icon?: string;
   accent?: boolean;
   success?: boolean;
+  badge?: string;
 }) {
   return (
     <div
@@ -326,6 +350,9 @@ function StatCard({
       {icon && <span className="text-lg mb-1 block">{icon}</span>}
       <p className="text-xs text-zinc-500">{label}</p>
       <p className="mt-1 text-2xl font-bold text-zinc-900 dark:text-zinc-50">{value}</p>
+      {badge && (
+        <p className="mt-1 text-[10px] font-medium text-blue-500 dark:text-blue-400">{badge}</p>
+      )}
     </div>
   );
 }

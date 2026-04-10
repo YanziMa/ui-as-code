@@ -245,6 +245,21 @@ const styles = `
     color: #991b1b;
     line-height: 1.5;
   }
+  .uac-error-banner .uac-retry-btn {
+    margin-top: 6px;
+    display: inline-block;
+    padding: 3px 10px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .uac-error-banner .uac-retry-btn:hover {
+    background: #b91c1c;
+  }
   .uac-success-banner {
     background: #f0fdf4;
     border: 1px solid #bbf7d0;
@@ -308,6 +323,32 @@ function InspectorOverlay() {
       document.removeEventListener("keyup", onUp)
     }
   }, [selected])
+
+  // Keyboard shortcuts: Enter to submit (step 1), Escape to close
+  const generateRef = useRef<() => void>()
+  generateRef.current = () => { if (selected && description.trim() && !loading && !diffResult) { /* trigger will be handled below */ } }
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      // Enter / Ctrl+Enter: submit description
+      if ((e.key === "Enter" || (e.key === "Enter" && e.ctrlKey)) && selected && !diffResult && !loading) {
+        const textarea = document.querySelector(".uac-textarea") as HTMLTextAreaElement
+        if (document.activeElement === textarea || !textarea) {
+          e.preventDefault()
+          // Find and click the generate button
+          const btn = document.querySelector(".uac-btn-primary") as HTMLElement
+          btn?.click()
+        }
+      }
+      // Escape: go back from diff view
+      if (e.key === "Escape" && diffResult) {
+        setDiffResult(null)
+        setError(null)
+      }
+    }
+    document.addEventListener("keydown", onKey)
+    return () => document.removeEventListener("keydown", onKey)
+  }, [selected, description, loading, diffResult])
 
   // Hover tracking
   useEffect(() => {
@@ -586,6 +627,11 @@ function InspectorOverlay() {
             {error && (
               <div className="uac-error-banner">
                 <strong>Error:</strong> {error}
+                {!loading && !diffResult && (
+                  <button className="uac-retry-btn" onClick={generateDiff}>
+                    Retry
+                  </button>
+                )}
               </div>
             )}
             {successMsg && (
@@ -609,6 +655,11 @@ function InspectorOverlay() {
                   placeholder='e.g., "Make the title font larger and change color to dark blue"'
                   autoFocus
                   maxLength={2000}
+                />
+                <div className="flex items-center gap-3 text-[10px] text-gray-400 mt-1.5">
+                  <span><kbd className="bg-gray-100 px-1 py-0.5 rounded text-[9px]">Enter</kbd> to submit</span>
+                  <span><kbd className="bg-gray-100 px-1 py-0.5 rounded text-[9px]">Esc</kbd> to close</span>
+                </div>
                 />
 
                 <button

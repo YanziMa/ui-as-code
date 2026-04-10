@@ -2,15 +2,12 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 /**
- * Middleware: Apply CORS headers to all /api/* routes.
- * Also handles OPTIONS preflight requests.
+ * Proxy: Apply CORS headers to all /api/* routes.
+ * Handles OPTIONS preflight requests.
+ *
+ * Next.js 16: renamed from middleware.ts to proxy.ts
  */
-export function middleware(req: NextRequest) {
-  // Only apply to API routes
-  if (!req.nextUrl.pathname.startsWith("/api/")) {
-    return;
-  }
-
+export function proxy(req: NextRequest) {
   const origin = req.headers.get("origin") ?? "";
 
   // Handle preflight (OPTIONS)
@@ -20,15 +17,14 @@ export function middleware(req: NextRequest) {
       headers: {
         "Access-Control-Allow-Origin": origin || "*",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Webhook-Signature",
         "Access-Control-Max-Age": "86400",
         Vary: "Origin",
       },
     });
   }
 
-  // For actual requests, CORS is handled per-route in response headers.
-  // This middleware just ensures consistent behavior.
+  // For actual requests, set CORS headers on the response
   const response = NextResponse.next();
   response.headers.set("Access-Control-Allow-Origin", origin || "*");
   response.headers.set("Vary", "Origin");

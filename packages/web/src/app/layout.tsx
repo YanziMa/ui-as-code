@@ -6,6 +6,7 @@ import { ErrorBoundary } from "@/components/error-boundary";
 import { ToastProvider } from "@/components/toast";
 import { ErrorMonitor } from "@/components/error-monitor";
 import { BackToTop } from "@/components/back-to-top";
+import { EmbedBadge } from "@/components/embed-badge";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -111,6 +112,7 @@ export default function RootLayout({
                     <a href="/pr" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">PR Dashboard</a>
                     <a href="/api-docs" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">API Docs</a>
                     <a href="/changelog" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Changelog</a>
+                    <a href="/status" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Status</a>
                     <a href="/privacy" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Privacy</a>
                     <a href="/terms" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Terms</a>
                     <a
@@ -121,6 +123,9 @@ export default function RootLayout({
                     >
                       GitHub
                     </a>
+                  </div>
+                  <div className="mt-4 flex justify-center">
+                    <EmbedBadge compact />
                   </div>
                 </div>
               </div>

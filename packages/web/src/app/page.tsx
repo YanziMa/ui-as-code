@@ -3,14 +3,30 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+interface LiveStats {
+  frictions: { total: number; recent_7d: number };
+  pull_requests: { total: number; open: number; merged: number; recent_7d: number };
+  votes: { for: number; against: number; total: number };
+  saas_sites: number;
+}
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [liveStats, setLiveStats] = useState<LiveStats | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Fetch live stats
+  useEffect(() => {
+    fetch("/api/stats")
+      .then((res) => res.json())
+      .then((data) => data.data && setLiveStats(data.data))
+      .catch(() => {});
   }, []);
 
   // Smooth scroll to section
@@ -84,17 +100,38 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats bar */}
+          {/* Stats bar — live data from /api/stats */}
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
             {[
-              { value: "8+", label: "SaaS Sites Supported", icon: "🌐" },
-              { value: "10", label: "API Endpoints", icon: "📡" },
-              { value: "0", label: "Code Lines Written by You", icon: "✨" },
-              { value: "∞", label: "Possibilities", icon: "🚀" },
+              {
+                value: liveStats ? String(liveStats.saas_sites) : "—",
+                label: "SaaS Sites",
+                sub: liveStats?.frictions?.recent_7d ? `+${liveStats.frictions.recent_7d} this week` : undefined,
+                icon: "🌐",
+              },
+              {
+                value: liveStats ? String(liveStats.pull_requests.total) : "—",
+                label: "PRs Submitted",
+                sub: liveStats?.pull_requests?.merged ? `${liveStats.pull_requests.merged} merged` : undefined,
+                icon: "🔀",
+              },
+              {
+                value: liveStats ? String(liveStats.votes.total) : "—",
+                label: "Community Votes",
+                sub: liveStats?.votes?.for ? `${liveStats.votes.for} for` : undefined,
+                icon: "🗳",
+              },
+              {
+                value: liveStats ? String(liveStats.frictions.total) : "—",
+                label: "Issues Reported",
+                sub: "and counting",
+                icon: "📝",
+              },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-50">{stat.value}</div>
                 <div className="mt-1 text-xs text-zinc-500">{stat.label}</div>
+                {stat.sub && <div className="text-[10px] text-blue-500 mt-0.5">{stat.sub}</div>}
               </div>
             ))}
           </div>

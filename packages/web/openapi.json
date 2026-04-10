@@ -1,0 +1,935 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "UI-as-Code API",
+    "description": "API for UI-as-Code - modify SaaS UIs through natural language + AI-generated diffs",
+    "version": "0.2.0",
+    "contact": {
+      "name": "YanziMa",
+      "url": "https://github.com/YanziMa/ui-as-code"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/YanziMa/ui-as-code/blob/main/LICENSE"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://ui-as-code-web.vercel.app/api",
+      "description": "Production"
+    },
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Local development"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "operationId": "getHealth",
+        "tags": [
+          "System"
+        ],
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service unhealthy"
+          }
+        }
+      }
+    },
+    "/stats": {
+      "get": {
+        "summary": "Platform statistics",
+        "operationId": "getStats",
+        "tags": [
+          "Public"
+        ],
+        "parameters": [
+          {
+            "name": "refresh",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Platform stats",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/generate-diff": {
+      "post": {
+        "summary": "Generate UI diff from AI",
+        "operationId": "generateDiff",
+        "tags": [
+          "Core"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateDiffRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Diff generated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenerateDiffResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation error"
+          },
+          "422": {
+            "description": "Unprocessable input"
+          },
+          "429": {
+            "description": "Rate limited"
+          },
+          "500": {
+            "description": "AI generation failed"
+          }
+        }
+      }
+    },
+    "/frictions": {
+      "post": {
+        "summary": "Record a friction point",
+        "operationId": "createFriction",
+        "tags": [
+          "Frictions"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFrictionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Recorded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FrictionResponse"
+                }
+              }
+            }
+          },
+          "400": {},
+          "429": {}
+        }
+      },
+      "get": {
+        "summary": "List friction points",
+        "operationId": "listFrictions",
+        "tags": [
+          "Frictions"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "saas_name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FrictionListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frictions/top": {
+      "get": {
+        "summary": "Top friction points",
+        "operationId": "topFrictions",
+        "tags": [
+          "Frictions"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 10,
+              "maximum": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ranked list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopFrictionItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frictions/export": {
+      "get": {
+        "summary": "Export frictions as CSV",
+        "operationId": "exportFrictions",
+        "tags": [
+          "Frictions"
+        ],
+        "responses": {
+          "200": {
+            "description": "CSV download",
+            "content": {
+              "text/csv": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "401": {}
+        }
+      }
+    },
+    "/pull-requests": {
+      "get": {
+        "summary": "List pull requests",
+        "operationId": "listPullRequests",
+        "tags": [
+          "Pull Requests"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "open",
+                "merged",
+                "closed"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PRListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pr/{id}/vote": {
+      "post": {
+        "summary": "Vote on a PR",
+        "operationId": "votePR",
+        "tags": [
+          "Pull Requests"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Vote recorded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoteResponse"
+                }
+              }
+            }
+          },
+          "404": {},
+          "422": {}
+        }
+      }
+    },
+    "/pr/{id}/merge": {
+      "post": {
+        "summary": "Merge a PR",
+        "operationId": "mergePR",
+        "tags": [
+          "Pull Requests"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Merged",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeResponse"
+                }
+              }
+            }
+          },
+          "404": {}
+        }
+      }
+    },
+    "/search": {
+      "post": {
+        "summary": "Search frictions and PRs",
+        "operationId": "search",
+        "tags": [
+          "Search"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "429": {}
+        }
+      }
+    },
+    "/webhook": {
+      "post": {
+        "summary": "Webhook receiver",
+        "operationId": "webhook",
+        "tags": [
+          "Integrations"
+        ],
+        "security": [
+          {
+            "webhookSecret": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebhookRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WebhookResponse"
+                }
+              }
+            }
+          },
+          "401": {},
+          "422": {}
+        }
+      }
+    },
+    "/auth/callback": {
+      "get": {
+        "summary": "OAuth callback",
+        "operationId": "authCallback",
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect"
+          },
+          "500": {}
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "webhookSecret": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-webhook-signature"
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ok"
+          },
+          "version": {
+            "type": "string",
+            "example": "0.2.0"
+          },
+          "uptime": {
+            "type": "number",
+            "example": 86400
+          },
+          "database": {
+            "type": "object",
+            "properties": {
+              "connected": {
+                "type": "boolean"
+              },
+              "latency_ms": {
+                "type": "number"
+              }
+            }
+          },
+          "endpoints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "environment": {
+            "type": "object",
+            "properties": {
+              "node_env": {
+                "type": "string"
+              },
+              "ai_provider": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "StatsResponse": {
+        "type": "object",
+        "properties": {
+          "total_frictions": {
+            "type": "integer",
+            "example": 142
+          },
+          "total_prs": {
+            "type": "integer",
+            "example": 38
+          },
+          "total_votes": {
+            "type": "integer",
+            "example": 256
+          },
+          "unique_saas_sites": {
+            "type": "integer",
+            "example": 12
+          },
+          "merged_prs": {
+            "type": "integer"
+          },
+          "open_prs": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "total_frictions",
+          "total_prs",
+          "total_votes",
+          "unique_saas_sites"
+        ]
+      },
+      "GenerateDiffRequest": {
+        "type": "object",
+        "properties": {
+          "component_code": {
+            "type": "string",
+            "description": "JSX source code of target component"
+          },
+          "description": {
+            "type": "string",
+            "description": "Natural language description of changes",
+            "minLength": 3,
+            "maxLength": 2000
+          },
+          "screenshot_base64": {
+            "type": "string",
+            "description": "Base64 screenshot"
+          },
+          "component_types": {
+            "type": "string",
+            "description": "TypeScript types"
+          },
+          "saas_name": {
+            "type": "string"
+          },
+          "component_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "component_code",
+          "description"
+        ]
+      },
+      "GenerateDiffResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "diff": {
+            "type": "string",
+            "description": "Unified diff output"
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "model_used": {
+            "type": "string"
+          },
+          "tokens_used": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "success",
+          "diff"
+        ]
+      },
+      "CreateFrictionRequest": {
+        "type": "object",
+        "properties": {
+          "saas_name": {
+            "type": "string"
+          },
+          "component_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "screenshot_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "saas_name",
+          "component_name",
+          "description"
+        ]
+      },
+      "FrictionResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "saas_name": {
+            "type": "string"
+          },
+          "component_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "FrictionListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FrictionResponse"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
+      "TopFrictionItem": {
+        "type": "object",
+        "properties": {
+          "saas_name": {
+            "type": "string"
+          },
+          "component_name": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "rank": {
+            "type": "integer"
+          }
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "total_pages": {
+            "type": "integer"
+          }
+        }
+      },
+      "PRListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PRItem"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
+      "PRItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "merged",
+              "closed"
+            ]
+          },
+          "votes_for": {
+            "type": "integer"
+          },
+          "votes_against": {
+            "type": "integer"
+          },
+          "affected_users": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "VoteRequest": {
+        "type": "object",
+        "properties": {
+          "vote_type": {
+            "type": "string",
+            "enum": [
+              "for",
+              "against"
+            ]
+          }
+        },
+        "required": [
+          "vote_type"
+        ]
+      },
+      "VoteResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "votes_for": {
+            "type": "integer"
+          },
+          "votes_against": {
+            "type": "integer"
+          }
+        }
+      },
+      "MergeResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "example": "merged"
+          }
+        }
+      },
+      "SearchRequest": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "Search query",
+            "minLength": 2
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "friction",
+              "pr",
+              "all"
+            ],
+            "default": "all"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      },
+      "SearchResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/FrictionResponse"
+                },
+                {
+                  "$ref": "#/components/schemas/PRItem"
+                }
+              ]
+            }
+          },
+          "total": {
+            "type": "integer"
+          },
+          "query": {
+            "type": "string"
+          }
+        }
+      },
+      "WebhookRequest": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string",
+            "enum": [
+              "pr:created",
+              "pr:merged",
+              "pr:closed",
+              "friction:created",
+              "vote:cast"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "event"
+        ]
+      },
+      "WebhookResponse": {
+        "type": "object",
+        "properties": {
+          "received": {
+            "type": "boolean"
+          },
+          "event": {
+            "type": "string"
+          },
+          "processed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "System",
+      "description": "Health check and system endpoints"
+    },
+    {
+      "name": "Core",
+      "description": "AI-powered diff generation"
+    },
+    {
+      "name": "Frictions",
+      "description": "Friction reporting and analytics"
+    },
+    {
+      "name": "Pull Requests",
+      "description": "PR management and voting"
+    },
+    {
+      "name": "Search",
+      "description": "Full-text search"
+    },
+    {
+      "name": "Integrations",
+      "description": "Webhook receiver"
+    },
+    {
+      "name": "Auth",
+      "description": "Authentication callbacks"
+    },
+    {
+      "name": "Public",
+      "description": "Publicly accessible endpoints"
+    }
+  ]
+}
