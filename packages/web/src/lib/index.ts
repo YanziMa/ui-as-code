@@ -13948,3 +13948,36 @@ export type {
   RatingOptions,
   RatingInstance,
 } from "./rating";
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+} from "./checkbox";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOptions,
+  CheckboxInstance,
+  RadioOptions,
+  RadioInstance,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox";
