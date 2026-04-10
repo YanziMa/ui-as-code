@@ -4489,3 +4489,30 @@ export type {
   SignaturePadOptions,
   SignaturePadInstance,
 } from "./signature-pad";
+
+// --- Mention Input ---
+export { createMentionInput } from "./mention-input";
+export type {
+  MentionUser,
+  MentionOptions,
+  MentionInputInstance,
+} from "./mention-input";
+
+// --- Color Palette ---
+export { ColorPaletteManager, createColorPalette, contrastRatio } from "./color-palette";
+export type {
+  PaletteScheme,
+  ColorShade,
+  PaletteColor,
+  ColorPalette,
+  ColorPaletteOptions,
+  ColorPaletteInstance,
+} from "./color-palette";
+
+// --- Slider ---
+export { SliderManager, createSlider } from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
