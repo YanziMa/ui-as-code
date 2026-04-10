@@ -14636,3 +14636,44 @@ export type {
   CutoutOptions,
   MaskInstance,
 } from "./mask";
+export {
+  announce,
+  setFocus,
+  focusFirst,
+  focusLast,
+  createA11yFocusTrap,
+  prefersReducedMotion,
+  prefersHighContrast,
+  generateAriaId,
+  aria,
+  SKIP_LINK_DEFAULTS,
+} from "./a11y";
+export {
+  mean,
+  median,
+  stddev,
+  percentile,
+  linearRegression,
+  sum,
+  minmax,
+  normalize,
+  movingAverage,
+  ema,
+} from "./math";
+export {
+  getFocusHistory,
+  clearFocusHistory,
+  startFocusTracking,
+  getFocusedElement,
+  applyFocusRing,
+  createFocusScope,
+  makeFocusable,
+  findNextFocusable,
+} from "./focus-manager";
+export type {
+  FocusEntry,
+  FocusHistoryOptions,
+  FocusRingOptions,
+  FocusScopeOptions,
+  FocusManagerConfig,
+} from "./focus-manager";
