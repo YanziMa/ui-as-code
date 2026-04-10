@@ -3688,3 +3688,21 @@ export {
   type StickyHeaderOptions, type StickyHeaderInstance,
   type StickyBehavior, type StickyShadow,
 } from "./sticky-header";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollOptions, type InfiniteScrollState, type InfiniteScrollItem,
+} from "./infinite-scroll";
+
+// --- Pull to Refresh ---
+export {
+  createPullToRefresh,
+  type PullToRefreshOptions, type PullToRefreshInstance,
+} from "./pull-to-refresh";
+
+// --- Virtual List ---
+export {
+  createVirtualList,
+  type VirtualListOptions, type VirtualListInstance, type VirtualListItem,
+} from "./virtual-list";
