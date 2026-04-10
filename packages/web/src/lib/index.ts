@@ -10838,3 +10838,39 @@ export type {
   AccordionOptions,
   AccordionInstance,
 } from "./accordion";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
