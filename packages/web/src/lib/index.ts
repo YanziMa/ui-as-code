@@ -7507,3 +7507,37 @@ export type {
   CountdownOptions,
   CountdownInstance,
 } from "./countdown";
+
+// --- Image Cropper ---
+export {
+  ImageCropperManager,
+  createImageCropper,
+} from "./image-cropper";
+export type {
+  AspectRatio,
+  CropRegion,
+  ImageCropperOptions,
+  ImageCropperInstance,
+} from "./image-cropper";
+
+// --- Code Editor ---
+export {
+  CodeEditorManager,
+  createCodeEditor,
+} from "./code-editor";
+export type {
+  CodeEditorOptions,
+  CodeEditorInstance,
+} from "./code-editor";
+
+// --- File Tree ---
+export {
+  FileManager,
+  createFileTree,
+} from "./file-tree";
+export type {
+  FileType,
+  FileTreeNode,
+  FileTreeOptions,
+  FileTreeInstance,
+} from "./file-tree";
