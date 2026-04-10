@@ -8700,3 +8700,40 @@ export type {
   InputOptions,
   InputInstance,
 } from "./input";
+
+// --- Textarea ---
+export {
+  createTextarea,
+} from "./textarea";
+export type {
+  TextareaSize,
+  TextareaState,
+  TextareaOptions,
+  TextareaInstance,
+} from "./textarea";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  formatProgress,
+  createStepProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
