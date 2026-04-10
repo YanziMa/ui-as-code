@@ -367,3 +367,35 @@ export {
   addDays, addWeeks, addMonths, diffDays, diffHours, isSameDay,
   formatDateLocale, formatTimeLocale, getTimezoneOffset,
 } from "./time";
+export {
+  base64Encode, base64Decode, base64UrlEncode, base64UrlDecode,
+  dataUriEncode, dataUriDecode, isValidBase64, base64EncodeObject, base64DecodeObject,
+} from "./base64";
+export {
+  debounce as advancedDebounce, throttle as advancedThrottle,
+  raf, cancelRaf, rafLoop, setIntervalRaf,
+  type DebounceOptions, type ThrottleOptions,
+} from "./debounce-advanced";
+export {
+  uuidv4, uuidv4Compact, NIL_UUID, isValidUuid,
+  shortId, nanoid, cuid, cuidWithLength, ulid, parseUlid, sortedId,
+} from "./ids";
+export {
+  LogLevel, LEVEL_NAMES, LEVEL_COLORS, LogEntry,
+  formatLogEntry, formatJsonLogEntry, parseLogLine,
+  createConsoleLogger, type ConsoleLoggerOptions,
+} from "./log-formatter";
+export {
+  escapeRegexString, testRegex, extractMatches, replaceAll, splitByRegex,
+  isValidEmailRegex, isValidUrlRegex, isValidHexColor, isValidRgbColor,
+  globToRegex, isGlobMatch, filterGlob, createRegex,
+  wordBoundary, digitPattern, whitespacePattern, newlinePattern,
+  extractWords, extractNumbersRegex, countPattern, removeDiacritics, wildcardMatch,
+} from "./regex";
+export { MetricsCollector, type MetricsConfig, type MetricSnapshot } from "./metrics";
+export {
+  localeNames, localeFlags, getLocaleInfo, getLocaleByCode,
+  formatNumberLocale, formatDateLocaleAdvanced, formatRelativeTimeAdvanced,
+  getWeekStartDay, isRTL, getDirection, getTimezoneList,
+  type LocaleInfo, type LocaleCode,
+} from "./locale";
