@@ -16166,3 +16166,37 @@ export type {
   CarouselOptions,
   CarouselInstance,
 } from "./carousel";
+export {
+  ConfigManager,
+  createConfig,
+} from "./config";
+export type {
+  ConfigValue,
+  ConfigSchema,
+  ConfigSchemaEntry,
+  Environment,
+  ConfigOptions,
+  ConfigSource,
+  ConfigValidationResult,
+} from "./config";
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+export {
+  AnalyticsManager,
+  getAnalytics,
+  initAnalytics,
+} from "./analytics";
+export type {
+  AnalyticsEvent,
+  PageView,
+  PerformanceMetric,
+  AnalyticsConfig,
+  AnalyticsState,
+} from "./analytics";
