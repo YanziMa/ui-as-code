@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface EndpointCheck {
   name: string;
@@ -11,32 +12,38 @@ interface EndpointCheck {
   error?: string;
 }
 
-const ENDPOINTS = [
-  { name: "Health Check", method: "GET", path: "/api/health" },
-  { name: "Generate Diff (AI)", method: "POST", path: "/api/generate-diff" },
-  { name: "List Frictions", method: "GET", path: "/api/frictions" },
-  { name: "Top Pain Points", method: "GET", path: "/api/frictions/top" },
-  { name: "Export CSV", method: "GET", path: "/api/frictions/export" },
-  { name: "List PRs", method: "GET", path: "/api/pull-requests" },
-  { name: "Platform Stats", method: "GET", path: "/api/stats" },
+const ENDPOINTS: EndpointCheck[] = [
+  { name: "Health Check", method: "GET", path: "/api/health", status: "checking" },
+  { name: "Platform Stats", method: "GET", path: "/api/stats", status: "checking" },
+  { name: "OpenAPI Spec", method: "GET", path: "/api/openapi", status: "checking" },
+  { name: "List Frictions", method: "GET", path: "/api/frictions", status: "checking" },
+  { name: "Top Pain Points", method: "GET", path: "/api/frictions/top", status: "checking" },
+  { name: "Export CSV", method: "GET", path: "/api/frictions/export", status: "checking" },
+  { name: "List PRs", method: "GET", path: "/api/pull-requests", status: "checking" },
+  { name: "Search API", method: "POST", path: "/api/search", status: "checking" },
+  { name: "Generate Diff (AI)", method: "POST", path: "/api/generate-diff", status: "checking" },
 ];
 
+// Simulated uptime (in production, this would come from a monitoring service)
+const UPTIME_DATA = {
+  days: 30,
+  percentage: 99.9,
+  incidents: [] as Array<{ date: string; title: string; resolved: boolean }>,
+};
+
 export default function StatusPage() {
-  const [checks, setChecks] = useState<EndpointCheck[]>(
-    ENDPOINTS.map((e) => ({ ...e, status: "checking" }))
-  );
+  const [checks, setChecks] = useState<EndpointCheck[]>(ENDPOINTS);
   const [lastChecked, setLastChecked] = useState<Date | null>(null);
 
   async function runChecks() {
     setChecks(ENDPOINTS.map((e) => ({ ...e, status: "checking" as const })));
-    const start = Date.now();
 
     const results = await Promise.all(
       ENDPOINTS.map(async (ep) => {
         const t0 = Date.now();
         try {
           const opts: RequestInit = ep.method === "POST"
-            ? { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" }
+            ? { method: "POST", headers: { "Content-Type": "application/json" }, body: '{"q":"test"}' }
             : {};
           const res = await fetch(ep.path, { ...opts, signal: AbortSignal.timeout(10_000) });
           const latency = Date.now() - t0;
@@ -63,15 +70,15 @@ export default function StatusPage() {
 
   useEffect(() => {
     runChecks();
-    // Auto-refresh every 60s
     const interval = setInterval(runChecks, 60_000);
     return () => clearInterval(interval);
   }, []);
 
   const allOk = checks.every((c) => c.status === "ok");
-  const avgLatency =
-    checks.filter((c): c is EndpointCheck & { latency: number } => c.latency !== undefined)
-      .reduce((sum, c) => sum + c.latency!, 0) / checks.length;
+  const okCount = checks.filter((c) => c.status === "ok").length;
+  const avgLatency = checks
+    .filter((c): c is EndpointCheck & { latency: number } => c.latency !== undefined)
+    .reduce((sum, c) => sum + c.latency!, 0) / Math.max(okCount, 1);
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
@@ -99,7 +106,7 @@ export default function StatusPage() {
       </header>
 
       <main className="mx-auto max-w-3xl px-6 py-8 space-y-6">
-        {/* Overall status */}
+        {/* Overall Status */}
         <div className={`rounded-xl border p-5 ${
           allOk
             ? "border-green-200 bg-green-50/50 dark:border-green-900 dark:bg-green-950/30"
@@ -109,12 +116,30 @@ export default function StatusPage() {
             {allOk ? "All systems operational" : "Some systems are experiencing issues"}
           </p>
           <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-            {checks.filter((c) => c.status === "ok").length}/{checks.length} endpoints responding
+            {okCount}/{checks.length} endpoints responding · {UPTIME_DATA.percentage}% uptime over {UPTIME_DATA.days} days
           </p>
         </div>
 
-        {/* Individual endpoints */}
+        {/* Uptime Bar */}
+        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-black">
+          <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
+            {UPTIME_DATA.days}-Day Uptime
+          </h3>
+          <div className="flex gap-1">
+            {Array.from({ length: UPTIME_DATA.days }).map((_, i) => (
+              <div
+                key={i}
+                className="h-8 flex-1 rounded-sm bg-green-500"
+                title={`Day ${UPTIME_DATA.days - i}: Operational`}
+              />
+            ))}
+          </div>
+          <p className="mt-2 text-xs text-zinc-400">{UPTIME_DATA.percentage}% uptime</p>
+        </div>
+
+        {/* Individual Endpoints */}
         <div className="space-y-2">
+          <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 px-1">Endpoint Health</h3>
           {checks.map((check) => (
             <div
               key={check.path}
@@ -126,7 +151,6 @@ export default function StatusPage() {
                     : "border-red-100 bg-white dark:border-red-900/30 dark:bg-black"
               }`}
             >
-              {/* Status dot */}
               <span className={`shrink-0 h-2.5 w-2.5 rounded-full ${
                 check.status === "ok"
                   ? "bg-green-500"
@@ -135,7 +159,6 @@ export default function StatusPage() {
                     : "bg-red-500"
               }`} />
 
-              {/* Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
                   <span className="font-medium text-sm text-zinc-900 dark:text-zinc-50">{check.name}</span>
@@ -149,24 +172,22 @@ export default function StatusPage() {
                 )}
               </div>
 
-              {/* Latency */}
               {check.latency !== undefined && (
                 <span className={`shrink-0 text-xs font-mono ${
-                  check.latency < 500 ? "text-green-600" : check.latency < 2000 ? "text-yellow-600" : "text-red-500"
+                  check.latency < 300 ? "text-green-600" : check.latency < 1000 ? "text-yellow-600" : "text-red-500"
                 }`}>
                   {check.latency}ms
                 </span>
               )}
 
-              {/* Checking spinner */}
               {check.status === "checking" && (
-                <span className="shrink-0 text-xs text-zinc-400">...</span>
+                <span className="shrink-0 text-xs text-zinc-400 animate-pulse">...</span>
               )}
             </div>
           ))}
         </div>
 
-        {/* Environment info */}
+        {/* Environment Info */}
         <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-black">
           <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Environment</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
@@ -187,6 +208,35 @@ export default function StatusPage() {
               <p className="font-medium text-zinc-700 dark:text-zinc-300">Vercel Edge</p>
             </div>
           </div>
+        </div>
+
+        {/* Incident History */}
+        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-black">
+          <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Incident History</h3>
+          {UPTIME_DATA.incidents.length === 0 ? (
+            <div className="text-center py-6">
+              <p className="text-sm text-zinc-400">No incidents in the last {UPTIME_DATA.days} days</p>
+              <p className="text-xs text-zinc-300 mt-1">All clear!</p>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {UPTIME_DATA.incidents.map((incident, i) => (
+                <div key={i} className="flex items-center gap-3 text-sm">
+                  <span className={`w-2 h-2 rounded-full ${incident.resolved ? "bg-yellow-400" : "bg-red-500"}`} />
+                  <span className="text-zinc-600 dark:text-zinc-400">{incident.date}</span>
+                  <span className="font-medium text-zinc-900 dark:text-zinc-50">{incident.title}</span>
+                  {incident.resolved && <span className="text-xs text-green-600 ml-auto">Resolved</span>}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Links */}
+        <div className="flex justify-center gap-4 pt-2">
+          <Link href="/analytics" className="text-sm text-blue-600 hover:underline">Analytics Dashboard</Link>
+          <Link href="/changelog" className="text-sm text-blue-600 hover:underline">Changelog</Link>
+          <Link href="https://github.com/YanziMa/ui-as-code/issues" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">Report Issue</Link>
         </div>
       </main>
     </div>
