@@ -8585,3 +8585,46 @@ export type {
   TooltipOptions,
   TooltipInstance,
 } from "./tooltip";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+
+// --- Divider ---
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+} from "./divider";
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider";
