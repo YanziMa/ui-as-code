@@ -1861,3 +1861,28 @@ export {
   type FinallyInterceptor, type ClientConfig, type BatchRequestItem,
   type ClientMetrics, type HttpMethod,
 } from "./api-gateway-client";
+
+// --- Animation Timeline ---
+export {
+  AnimationTimeline, createTimeline, easings,
+  type AnimationTrack, type Keyframe, type TimelineLabel, type TimelineEvent,
+  type TimelineOptions, type TimelineState, type TimelinePlaybackState,
+  type EasingFn,
+} from "./animation-timeline";
+
+// --- Data Query Engine ---
+export {
+  DataQueryEngine, InMemoryDatabase, QueryBuilder,
+  createQueryEngine, createDatabase, query,
+  type Row, type TableSchema, type QueryResult, type QueryConfig,
+  type SelectColumn, type WhereClause, type GroupByClause, type OrderByClause,
+  type JoinClause, type ComparisonOp, type LogicalOp, type AggregateFn,
+  type JoinType, type TableName, type ColumnName, type Value,
+} from "./data-query-engine";
+
+// --- URL State Manager ---
+export {
+  UrlStateManagerImpl, createUrlStateManager, createTypedUrlStateManager,
+  type UrlStateManager, type ParamDefinition, type UrlStateConfig,
+  type ParamKey, type ParamValue, type StateDiff,
+} from "./url-state-manager";
