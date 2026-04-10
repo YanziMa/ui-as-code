@@ -1707,3 +1707,29 @@ export {
   type CommandPaletteConfig,
   type CommandPaletteState,
 } from "./command-palette";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNode,
+  type TreeNodeData,
+  type TreeViewConfig,
+  type CheckMode,
+} from "./tree-view";
+
+// --- Split Pane ---
+export {
+  createSplitPane,
+  type SplitPaneOptions,
+  type SplitPaneInstance,
+  type SplitOrientation,
+  type SplitCollapseDirection,
+} from "./split-pane";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
