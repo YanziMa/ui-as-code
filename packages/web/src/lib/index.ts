@@ -11141,3 +11141,57 @@ export type {
   DropdownOptions,
   DropdownInstance,
 } from "./dropdown";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+
+// --- Date Picker ---
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
