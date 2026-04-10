@@ -6052,3 +6052,92 @@ export {
   ensureLabel,
   autoLabelForm,
 } from "./a11y-helpers";
+
+// --- I18n Utils ---
+export {
+  LOCALES,
+  getPluralForm,
+  formatLocaleNumber,
+  formatCurrency as i18nFormatCurrency,
+  formatRelativeTimeLocale,
+  formatList,
+  detectLocale,
+  TranslationDict,
+} from "./i18n-utils";
+export type {
+  LocaleConfig,
+  LocaleCode,
+  PluralRule,
+} from "./i18n-utils";
+
+// --- Schema Validation ---
+export {
+  isValidEmail,
+  isValidUrl,
+  isValidPhone,
+  isValidCreditCard,
+  detectCardType,
+  isValidIban,
+  isValidIPv4,
+  isValidIPv6,
+  isValidIP,
+  isValidMacAddress,
+  isValidUuid,
+  isValidUuidV4,
+  isValidSemver,
+  parseSemver,
+  compareSemver,
+  isValidSlug,
+  isValidHexColor,
+  validatePassword,
+  validateRules,
+  validateRulesAsync,
+  createValidator,
+  allOf,
+  anyOf,
+  required,
+  minLength,
+  maxLength,
+  range,
+  pattern,
+  oneOf,
+  email as emailRule,
+  url as urlRule,
+  custom,
+  fieldsMatch,
+  fieldGreaterThan,
+  whenField,
+} from "./schema-validation";
+export type {
+  ValidationResult,
+  FieldValidationResult,
+  ValidationRule,
+  AsyncValidationRule,
+  FormValidationContext,
+  PasswordStrengthResult,
+} from "./schema-validation";
+
+// --- React Interop ---
+export {
+  createLazyComponent,
+  importKey,
+  preload,
+  ErrorBoundary,
+  withErrorBoundary,
+  createContextFactory,
+  PortalManager,
+  getPortalManager,
+  mergeRefs,
+  useRefWithPrevious,
+  useCallbackRef,
+  useMeasure,
+  createCompoundComponent,
+  isServer,
+  isBrowser,
+  useHydratedState,
+  useMountedCallback,
+  getWindowSize,
+  isElementType,
+  containsElementType,
+  getChildrenByType,
+} from "./react-interop";
