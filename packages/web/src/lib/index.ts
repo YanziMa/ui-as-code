@@ -4546,3 +4546,33 @@ export type {
   SparklineOptions,
   SparklineInstance,
 } from "./sparkline-chart";
+
+// --- Accordion List ---
+export { createAccordionList } from "./accordion-list";
+export type {
+  AccordionMode,
+  ExpandIcon,
+  AccordionItem,
+  AccordionListOptions,
+  AccordionListInstance,
+} from "./accordion-list";
+
+// --- Context Panel ---
+export { createContextPanel } from "./context-panel";
+export type {
+  PanelSide,
+  PanelSize,
+  PanelSection,
+  BreadcrumbItem,
+  ContextPanelOptions,
+  ContextPanelInstance,
+} from "./context-panel";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
