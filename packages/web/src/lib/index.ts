@@ -4140,3 +4140,45 @@ export type {
   ToastAction,
   ToastManagerOptions,
 } from "./notification-toast";
+
+// --- Context Menu ---
+export { ContextMenuManager } from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Modal ---
+export { createModal } from "./modal";
+export type { ModalSize, ModalPosition, ModalOptions, ModalInstance } from "./modal";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, FilterOperator as ColorFilterOperator, Palette } from "./color-picker";
