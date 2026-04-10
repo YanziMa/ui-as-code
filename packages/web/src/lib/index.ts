@@ -13348,3 +13348,29 @@ export type {
   SliderOptions,
   SliderInstance,
 } from "./slider";
+export {
+  createDatePicker,
+  DatePickerManager,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+export {
+  createUpload,
+} from "./upload";
+export type {
+  UploadStatus,
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+} from "./upload";
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
