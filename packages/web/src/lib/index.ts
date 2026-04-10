@@ -14704,3 +14704,35 @@ export {
   isUrlPath,
   relativePath,
 } from "./file";
+export {
+  isToday,
+  isYesterday,
+  startOfDay,
+  endOfDay,
+  timeAgoLabel,
+  toISODate,
+} from "./date";
+export {
+  round,
+  clamp,
+  lerp,
+  mapRange,
+  formatBytes,
+  formatCompact,
+  percentOf,
+  randomInt,
+  approximately,
+  parseNumber,
+} from "./number";
+export {
+  capitalize,
+  toTitleCase,
+  camelToKebab,
+  kebabToCamel,
+  truncateMiddle,
+  maskEmail,
+  maskString,
+  isJsonString,
+  repeat,
+  stripHtml,
+} from "./string";
