@@ -2647,3 +2647,31 @@ export {
   type ContextMenuItem, type ContextMenuPosition,
   type ContextMenuOptions, type ContextMenuInstance,
 } from "./context-menu";
+
+// --- Clipboard Utilities ---
+export {
+  copyToClipboard, copyRich, copyImage, copyFiles,
+  readClipboardText, readClipboard, cutToClipboard,
+  requestClipboardPermission, checkClipboardReadPermission, isClipboardSupported,
+  selectAll, selectRange, clearSelection, getSelectedText, getSelectionTarget,
+  ClipboardHistory, detectClipboardFormats, hasImageInClipboard, hasFilesInClipboard,
+  copyWithFeedback, copySelection, onClipboardChange,
+  type ClipboardData, type CopyOptions, type PasteOptions,
+  type PasteResult, type ClipboardHistoryEntry, type ClipboardHistoryOptions,
+} from "./clipboard-utils";
+
+// --- Drag and Drop ---
+export {
+  DragDropManager, getDragDropManager,
+  type DragMode, type DropPosition, type DragItem,
+  type DragOptions, type DropZoneOptions, type DropResult,
+  type SortableConfig,
+} from "./drag-and-drop";
+
+// --- Virtual Scroll ---
+export {
+  createVirtualScroll, createVirtualGrid,
+  type VirtualScrollItem, type VirtualScrollOptions, type VirtualScrollState,
+  type VirtualScrollController, type VirtualGridOptions, type VirtualGridState,
+  type VirtualGridController,
+} from "./virtual-scroll";
