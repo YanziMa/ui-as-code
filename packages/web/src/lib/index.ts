@@ -9159,3 +9159,44 @@ export type {
   TourOptions,
   TourInstance,
 } from "./tour-guide";
+
+// --- Search Highlight ---
+export {
+  SearchHighlightManager,
+  createSearchHighlight,
+} from "./search-highlight";
+export type {
+  SearchHighlightOptions,
+  SearchHighlightInstance,
+} from "./search-highlight";
+
+// --- Clipboard ---
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type {
+  ClipboardData,
+  ClipboardOptions,
+} from "./clipboard";
+
+// --- Hotkeys ---
+export {
+  HotkeyManager,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  createAppHotkeys,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  ParsedKeyCombo,
+} from "./hotkeys";
