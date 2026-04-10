@@ -17,6 +17,12 @@ const AI_MODEL = process.env.AI_MODEL || "glm-5v-turbo";
 export async function POST(req: NextRequest) {
   return withHandler(req, async () => {
     const rawBody = await req.json();
+
+    // Sanitize: strip null/undefined values that Zod doesn't accept
+    if (rawBody.screenshot_base64 === null || rawBody.screenshot_base64 === undefined) {
+      delete rawBody.screenshot_base64;
+    }
+
     const validation = validateBody(rawBody, GenerateDiffSchema);
     if (!validation.success) return validation.error;
 

@@ -277,6 +277,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section id="faq" className="border-t border-zinc-100 px-6 py-24 dark:border-zinc-900">
+        <div className="mx-auto max-w-3xl">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">FAQ</p>
+            <h2 className="mt-3 text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+              Frequently asked questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "Does this work with any website?",
+                a: "UI-as-Code works with any SaaS application built with React. It detects React component boundaries automatically, and falls back to DOM element selection for non-React pages.",
+              },
+              {
+                q: "Is my data secure?",
+                a: "Yes. Component code is analyzed locally by AI and sent only to our API for diff generation. We don't store your page content — only the friction reports and PRs you explicitly submit.",
+              },
+              {
+                q: "What happens after I submit a PR?",
+                a: "Your change is submitted as a pull request that other users can vote on. When enough people support it, the SaaS maintainer can merge it, and the improvement benefits everyone using that product.",
+              },
+              {
+                q: "Do I need to know how to code?",
+                a: "Not at all! That's the whole point. You describe what you want in plain language (e.g., \"make the button bigger\"), and AI generates the code changes for you to preview and approve.",
+              },
+              {
+                q: "Is it really free?",
+                a: "The free tier includes 5 AI generations per month, which is plenty for casual use. Pro and Team plans offer unlimited generations and additional features.",
+              },
+              {
+                q: "How is this different from browser DevTools?",
+                a: "DevTools lets you temporarily modify styles but those changes disappear on refresh. UI-as-Code generates real code diffs that can be submitted as permanent improvements through the PR process.",
+              },
+            ].map((item) => (
+              <details
+                key={item.q}
+                className="group rounded-xl border border-zinc-200 bg-white transition-colors hover:border-blue-200 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-blue-800"
+              >
+                <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-left font-medium text-zinc-900 dark:text-zinc-50">
+                  {item.q}
+                  <svg className="h-5 w-5 shrink-0 text-zinc-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <p className="px-6 pb-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Install CTA */}
       <section id="install" className="border-t border-zinc-100 bg-gradient-to-b from-blue-600 to-blue-700 px-6 py-24 text-center dark:from-blue-800 dark:to-blue-900">
         <div className="mx-auto max-w-2xl">
