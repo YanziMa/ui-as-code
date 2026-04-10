@@ -183,7 +183,11 @@ function IndexPopup() {
           Alt
         </kbd>
         {" "}
-        + click any element on a page.
+        + click any element on a SaaS page.
+        <br />
+        <span style={{ fontSize: 10.5, opacity: 0.75 }}>
+          Describe your change → AI generates diff → Preview &amp; submit
+        </span>
       </div>
 
       {/* API URL */}

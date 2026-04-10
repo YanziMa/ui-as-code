@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { PullRequest, Friction } from "@/types";
 import { useToast } from "@/components/toast";
+import { ActivityChart } from "@/components/activity-chart";
 import {
   StatCardSkeleton,
   CardSkeleton,
@@ -98,6 +99,25 @@ export default function DashboardPage() {
   const totalVotes = prs.reduce((sum, pr) => sum + pr.votes_for + pr.votes_against, 0);
   const uniqueSaaS = [...new Set(frictions.map((f) => f.saas_name))].length;
 
+  // Compute daily activity data for chart
+  const activityData = useMemo(() => {
+    const dailyMap = new Map<string, number>();
+    // Initialize last 14 days
+    for (let i = 13; i >= 0; i--) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      dailyMap.set(d.toISOString().slice(0, 10), 0);
+    }
+    // Count frictions per day
+    for (const f of frictions) {
+      const day = f.created_at.slice(0, 10);
+      dailyMap.set(day, (dailyMap.get(day) || 0) + 1);
+    }
+    return Array.from(dailyMap.entries())
+      .map(([date, count]) => ({ date, count }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+  }, [frictions]);
+
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950">
       <header className="border-b border-zinc-200 bg-white px-6 py-4 dark:border-zinc-800 dark:bg-black">
@@ -109,7 +129,7 @@ export default function DashboardPage() {
 
       <main className="mx-auto max-w-6xl px-6 py-8">
         {/* Stats */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 mb-10">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 mb-6">
           <StatCard label="Submissions" value={totalSubmissions} icon="📝" />
           <StatCard label="PRs Created" value={prs.length} icon="🔀" accent />
           <StatCard label="Merged" value={adoptedCount} icon="✅" success />
@@ -117,6 +137,19 @@ export default function DashboardPage() {
           <StatCard label="Total Votes" value={totalVotes} icon="🗳" />
           <StatCard label="SaaS Sites" value={uniqueSaaS} icon="🌐" />
         </div>
+
+        {/* Activity Chart */}
+        <section className="mb-10">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+              📈 Activity (14 days)
+            </h2>
+            <span className="text-xs text-zinc-400">Daily submissions</span>
+          </div>
+          <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-black">
+            <ActivityChart data={activityData} days={14} height={70} />
+          </div>
+        </section>
 
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Top Pain Points */}
