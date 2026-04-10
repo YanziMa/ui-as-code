@@ -91,6 +91,11 @@ const styles = `
     display: block;
     margin-bottom: 6px;
   }
+  .uac-label-count {
+    float: right;
+    font-weight: 400;
+    color: #9ca3af;
+  }
   .uac-textarea {
     width: 100%;
     height: 90px;
@@ -593,13 +598,17 @@ function InspectorOverlay() {
                   <span className="uac-step-dot" /> Step 1 of 2 — Describe your change
                 </span>
 
-                <label className="uac-label">What do you want to change?</label>
+                <label className="uac-label">
+                  What do you want to change?
+                  <span className="uac-label-count">{description.length}/2000</span>
+                </label>
                 <textarea
                   className="uac-textarea"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder='e.g., "Make the title font larger and change color to dark blue"'
                   autoFocus
+                  maxLength={2000}
                 />
 
                 <button
@@ -623,12 +632,42 @@ function InspectorOverlay() {
               </>
             ) : (
               <>
-                <span className="uac-step-indicator">
-                  <span className="uac-step-dot" /> Step 2 of 2 — Review &amp; Submit
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="uac-step-indicator">
+                    <span className="uac-step-dot" /> Step 2 of 2 — Review &amp; Submit
+                  </span>
+                  <button
+                    onClick={() => { setDiffResult(null); setError(null); }}
+                    className="flex items-center gap-1 rounded-md px-2 py-1 text-[10px] text-zinc-500 hover:text-zinc-700 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:bg-zinc-800 transition-colors"
+                  >
+                    ← Back to edit
+                  </button>
+                </div>
 
                 <label className="uac-label">Generated Diff</label>
                 <div className="uac-diff-viewer">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] text-zinc-400">{diffResult.split("\n").length} lines</span>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(diffResult).then(() => {
+                          const btn = document.activeElement as HTMLButtonElement;
+                          if (btn) {
+                            const orig = btn.textContent;
+                            btn.textContent = "Copied!";
+                            setTimeout(() => { btn.textContent = orig }, 1500);
+                          }
+                        }).catch(() => {});
+                      }}
+                      className="flex items-center gap-1 rounded-md border border-zinc-200 bg-white px-2 py-1 text-[10px] font-medium text-zinc-600 hover:bg-zinc-50 dark:border-zinc-700 dark:bg-black dark:text-zinc-400 transition-colors"
+                      title="Copy diff to clipboard"
+                    >
+                      <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      Copy
+                    </button>
+                  </div>
                   <pre
                     className="uac-diff-pre"
                     dangerouslySetInnerHTML={{ __html: highlightedDiff }}
