@@ -2317,3 +2317,26 @@ export {
   type AvatarShape, type AvatarStyle, type AvatarOptions, type AvatarResult,
   type GradientStop, type PatternConfig,
 } from "./avatar-generator";
+
+// --- Screen Capture ---
+export {
+  ScreenCapture,
+  type CaptureSource, type CaptureFormat, type CaptureState,
+  type CaptureOptions, type RegionSelection, type Annotation,
+  type RecordingOptions, type CaptureResult,
+} from "./screen-capture";
+
+// --- Audio Processor ---
+export {
+  AudioProcessor,
+  type AudioState, type AudioNodeChain, type AudioEffect,
+  type VisualizationOptions, type AudioAnalysis, type RecordingOptions as AudioRecordingOptions,
+} from "./audio-processor";
+
+// --- File System ---
+export {
+  VirtualFileSystem,
+  type VfsEntry, type FileType, type WatchEventType,
+  type FileSystemOptions, type WatchEvent, type FileSystemStats,
+  type SearchResult, type TreeViewNode,
+} from "./file-system";
