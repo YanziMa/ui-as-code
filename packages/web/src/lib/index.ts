@@ -7835,3 +7835,40 @@ export type {
   DropdownMenuOptions,
   DropdownMenuInstance,
 } from "./dropdown-menu";
+
+// --- Modal ---
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+
+// --- Dialog ---
+export {
+  createDialog,
+  alertDialog,
+  confirmDialog,
+  dangerDialog,
+} from "./dialog";
+export type {
+  DialogVariant,
+  DialogOptions,
+  DialogInstance,
+} from "./dialog";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
