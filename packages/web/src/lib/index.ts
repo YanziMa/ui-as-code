@@ -207,3 +207,33 @@ export {
   animateValue, springAnimate, cssKeyframes, KEYFRAMES, DURATION, transition,
   EASING, type EasingName, type SpringConfig,
 } from "./animation";
+export { validate, validateField, createValidator, type SchemaRule, type FieldSchema, type ValidationResult } from "./schema";
+export {
+  UndoableStore, EventBus, globalEvents,
+  type HistoryState,
+} from "./state";
+export {
+  formatFileSize, formatDurationHuman, formatOrdinal, formatListNatural,
+  truncateId, formatChange, formatRatio, formatPhone, maskCardNumber,
+  formatAddress, formatVersion, formatDiffStats, type Address,
+} from "./formatters-advanced";
+export {
+  parseUnifiedDiff, textDiff, getDiffStats,
+  type DiffHunk, type DiffLine, type FileDiff,
+} from "./diff-utils";
+export {
+  hasPermission, hasRoleLevel, getPermissions, ACL, appACL, type Role, type Permission,
+} from "./permission";
+export { renderTemplate, parseConditionalBlocks, Template, type TemplateBlock } from "./template";
+export { parseCsv, generateCsv, csvToHtmlTable, type CsvOptions } from "./csv";
+export {
+  SlidingWindowRateLimiter, TokenBucketRateLimiter, FixedWindowRateLimiter,
+  type RateLimitResult,
+} from "./rate-limiter";
+export {
+  IdempotencyStore, generateIdempotencyKey, extractIdempotencyKey,
+  type IdempotencyEntry,
+} from "./idempotency";
+export {
+  retryWithBackoff, CircuitBreaker, type RetryOptions, type CircuitBreakerOptions,
+} from "./retry";
