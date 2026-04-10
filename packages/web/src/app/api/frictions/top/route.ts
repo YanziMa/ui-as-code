@@ -47,6 +47,6 @@ export async function GET() {
       .sort((a, b) => b.count - a.count)
       .slice(0, 20);
 
-    return apiSuccess(result);
+    return apiSuccess(result, 200, "public, max-age=30, stale-while-revalidate=60");
   });
 }

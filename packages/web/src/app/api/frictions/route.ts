@@ -48,7 +48,7 @@ export async function GET() {
       return apiError("Failed to fetch frictions", 500);
     }
 
-    return apiSuccess(frictions || []);
+    return apiSuccess(frictions || [], 200, "public, max-age=15, stale-while-revalidate=30");
   });
 }
 

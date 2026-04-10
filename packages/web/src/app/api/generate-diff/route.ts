@@ -17,6 +17,12 @@ const AI_MODEL = process.env.AI_MODEL || "glm-5v-turbo";
 export async function POST(req: NextRequest) {
   return withHandler(req, async () => {
     const rawBody = await req.json();
+
+    // Sanitize: strip null/undefined values that Zod doesn't accept
+    if (rawBody.screenshot_base64 === null || rawBody.screenshot_base64 === undefined) {
+      delete rawBody.screenshot_base64;
+    }
+
     const validation = validateBody(rawBody, GenerateDiffSchema);
     if (!validation.success) return validation.error;
 
@@ -37,11 +43,8 @@ export async function POST(req: NextRequest) {
     try {
       let diff: string;
 
-      if (AI_PROVIDER === "claude") {
-        diff = await callClaude(body);
-      } else {
-        diff = await callOpenAICompatible(body);
-      }
+      // Call AI with automatic retry for transient failures
+      diff = await callAIWithRetry(body);
 
       if (!diff || diff.trim().length === 0) {
         return apiError("No valid diff generated. Try rephrasing your request.", 422);
@@ -91,7 +94,18 @@ async function callOpenAICompatible(
           {
             role: "system",
             content:
-              "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+              "You are a senior frontend engineer specializing in React UI modifications. Generate a precise unified diff based on the user's request.\n\n" +
+              "STRICT RULES:\n" +
+              "1. Output ONLY valid unified diff format (--- a/path +++ b/path @@ -x,y +x,y @@)\n" +
+              "2. Wrap the diff in ```diff code block\n" +
+              "3. NEVER modify import statements or add new imports\n" +
+              "4. NEVER change component props interface or add new props\n" +
+              "5. ONLY change what the user explicitly requested — no extra \"improvements\"\n" +
+              "6. Use Tailwind CSS classes for styling (this project uses Tailwind v4)\n" +
+              "7. Preserve existing className patterns and design tokens\n" +
+              "8. If the request is ambiguous, make minimal, safe changes\n" +
+              "9. Each hunk must have correct line numbers matching the source\n" +
+              "10. Output NOTHING outside the diff code block",
           },
           { role: "user", content },
         ],
@@ -167,7 +181,18 @@ async function callClaude(
         model: AI_MODEL,
         max_tokens: 4096,
         system:
-          "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+          "You are a senior frontend engineer specializing in React UI modifications. Generate a precise unified diff based on the user's request.\n\n" +
+          "STRICT RULES:\n" +
+          "1. Output ONLY valid unified diff format (--- a/path +++ b/path @@ -x,y +x,y @@)\n" +
+          "2. Wrap the diff in ```diff code block\n" +
+          "3. NEVER modify import statements or add new imports\n" +
+          "4. NEVER change component props interface or add new props\n" +
+          "5. ONLY change what the user explicitly requested — no extra \"improvements\"\n" +
+          "6. Use Tailwind CSS classes for styling (this project uses Tailwind v4)\n" +
+          "7. Preserve existing className patterns and design tokens\n" +
+          "8. If the request is ambiguous, make minimal, safe changes\n" +
+          "9. Each hunk must have correct line numbers matching the source\n" +
+          "10. Output NOTHING outside the diff code block",
         messages: [{ role: "user", content: buildTextPrompt(input) }],
       }),
       signal: controller.signal,
@@ -202,6 +227,51 @@ function buildTextPrompt(
   prompt += `<request>\n${input.description}\n</request>`;
 
   return prompt;
+}
+
+// ========== AI Retry Wrapper ==========
+const MAX_RETRIES = 2;
+const RETRY_DELAY_MS = 1000;
+
+async function callAIWithRetry(
+  input: z.infer<typeof GenerateDiffSchema>
+): Promise<string> {
+  let lastError: Error | null = null;
+
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const result =
+        AI_PROVIDER === "claude"
+          ? await callClaude(input)
+          : await callOpenAICompatible(input);
+
+      if (!result || result.trim().length === 0) {
+        throw new Error("Empty response from AI provider");
+      }
+
+      return result;
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      console.error(`[GenerateDiff] Attempt ${attempt + 1}/${MAX_RETRIES + 1}:`, lastError.message);
+
+      // Don't retry on auth/bad-request errors
+      const msg = lastError.message.toLowerCase();
+      if (
+        msg.includes("401") ||
+        msg.includes("403") ||
+        msg.includes("422") ||
+        msg.includes("authentication")
+      ) {
+        break;
+      }
+
+      if (attempt < MAX_RETRIES) {
+        await new Promise((r) => setTimeout(r, RETRY_DELAY_MS * (attempt + 1)));
+      }
+    }
+  }
+
+  throw lastError || new Error("AI call failed");
 }
 
 // ========== Utils ==========

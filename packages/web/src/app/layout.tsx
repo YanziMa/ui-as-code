@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { ToastProvider } from "@/components/toast";
+import { ErrorMonitor } from "@/components/error-monitor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,11 +87,18 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        Skip to main content
+      </a>
       <body className="min-h-full flex flex-col">
         <ToastProvider>
+          <ErrorMonitor />
           <ErrorBoundary>
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <footer className="border-t border-zinc-200 bg-zinc-50 py-8 dark:border-zinc-800 dark:bg-zinc-900">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
@@ -100,6 +108,7 @@ export default function RootLayout({
                   <div className="flex gap-6 text-sm text-zinc-500">
                     <a href="/dashboard" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Dashboard</a>
                     <a href="/pr" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">PR Dashboard</a>
+                    <a href="/api-docs" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">API Docs</a>
                     <a
                       href="https://github.com/yanzima/ui-as-code"
                       target="_blank"

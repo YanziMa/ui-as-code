@@ -69,6 +69,6 @@ export async function GET() {
       return apiError("Failed to fetch PRs", 500);
     }
 
-    return apiSuccess(prs || []);
+    return apiSuccess(prs || [], 200, "public, max-age=15, stale-while-revalidate=30");
   });
 }
