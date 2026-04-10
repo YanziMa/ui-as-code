@@ -10267,3 +10267,40 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+
+// --- Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
+
+// --- Confirm Dialog ---
+export {
+  createConfirmDialog,
+} from "./confirm-dialog";
+export type {
+  ConfirmDialogVariant,
+  ConfirmButtonVariant,
+  ConfirmButton,
+  ConfirmDialogOptions,
+  ConfirmDialogInstance,
+} from "./confirm-dialog";
+
+// --- Lightbox ---
+export {
+  LightboxManager,
+  createLightbox,
+} from "./lightbox";
+export type {
+  LightboxImage,
+  LightboxOptions,
+  LightboxInstance,
+} from "./lightbox";
