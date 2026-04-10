@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import type { PullRequest } from "@/types";
 import { useToast } from "@/components/toast";
 import { TableSkeleton } from "@/components/skeleton";
@@ -10,6 +10,7 @@ export default function PRDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"all" | "open" | "merged" | "closed">("all");
   const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState<"newest" | "votes" | "affected">("newest");
   const [error, setError] = useState<string | null>(null);
   const { addToast } = useToast();
 
@@ -33,14 +34,31 @@ export default function PRDashboardPage() {
       .finally(() => setLoading(false));
   }, [addToast]);
 
-  const filtered = prs
-    .filter((pr) => filter === "all" || pr.status === filter)
-    .filter(
-      (pr) =>
-        !search ||
-        pr.description.toLowerCase().includes(search.toLowerCase()) ||
-        (pr as unknown as Record<string, unknown>).saas_name?.toString().toLowerCase().includes(search.toLowerCase())
-    );
+  const filtered = useMemo(() => {
+    let result = prs
+      .filter((pr) => filter === "all" || pr.status === filter)
+      .filter(
+        (pr) =>
+          !search ||
+          pr.description.toLowerCase().includes(search.toLowerCase()) ||
+          (pr as unknown as Record<string, unknown>).saas_name?.toString().toLowerCase().includes(search.toLowerCase())
+      );
+
+    // Sort
+    switch (sortBy) {
+      case "newest":
+        result.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+        break;
+      case "votes":
+        result.sort((a, b) => (b.votes_for + b.votes_against) - (a.votes_for + a.votes_against));
+        break;
+      case "affected":
+        result.sort((a, b) => b.affected_users - a.affected_users);
+        break;
+    }
+
+    return result;
+  }, [prs, filter, search, sortBy]);
 
   const handleVote = useCallback(async (id: string, direction: "for" | "against") => {
     try {
@@ -162,6 +180,17 @@ export default function PRDashboardPage() {
             </button>
           ))}
           </div>
+
+          {/* Sort */}
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+            className="rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-sm outline-none focus:border-blue-500 dark:border-zinc-800 dark:bg-black dark:text-zinc-50"
+          >
+            <option value="newest">Newest first</option>
+            <option value="votes">Most votes</option>
+            <option value="affected">Most affected</option>
+          </select>
         </div>
 
         {/* Error banner */}
@@ -238,12 +267,20 @@ function PRCard({
         <div className="ml-4 flex flex-col gap-2 shrink-0">
           {pr.status === "open" && (
             <>
-              <button
-                onClick={() => onVote(pr.id, "for")}
-                className="rounded-lg border border-green-200 px-3 py-1.5 text-xs font-medium text-green-600 hover:bg-green-50 dark:border-green-900 dark:hover:bg-green-950 transition-colors"
-              >
-                + Vote For
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => onVote(pr.id, "for")}
+                  className="rounded-lg border border-green-200 px-3 py-1.5 text-xs font-medium text-green-600 hover:bg-green-50 dark:border-green-900 dark:hover:bg-green-950 transition-colors"
+                >
+                  + For
+                </button>
+                <button
+                  onClick={() => onVote(pr.id, "against")}
+                  className="rounded-lg border border-red-200 px-3 py-1.5 text-xs font-medium text-red-500 hover:bg-red-50 dark:border-red-900 dark:hover:bg-red-950 transition-colors"
+                >
+                  − Against
+                </button>
+              </div>
               <button
                 onClick={() => onMerge(pr.id)}
                 className="rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-blue-700 transition-colors"

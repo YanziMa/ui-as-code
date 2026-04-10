@@ -108,6 +108,7 @@ export default function RootLayout({
                   <div className="flex gap-6 text-sm text-zinc-500">
                     <a href="/dashboard" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Dashboard</a>
                     <a href="/pr" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">PR Dashboard</a>
+                    <a href="/api-docs" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">API Docs</a>
                     <a
                       href="https://github.com/yanzima/ui-as-code"
                       target="_blank"
