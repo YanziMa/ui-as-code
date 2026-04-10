@@ -1389,3 +1389,20 @@ export {
   type LogEntry, type LogTransport, type LoggerConfig,
   type TimerHandle, type LogLevel,
 } from "./logger-system";
+export {
+  UrlRouter,
+  parseQueryString, buildQueryString, joinPath, normalizePath,
+  type RouteDefinition, type RouteMatch, type RouteParams,
+  type QueryParams, type NavigationResult, type RouterState,
+  type RouterConfig, type RouteMethod,
+} from "./url-router";
+export {
+  EventBus, createEventBus,
+  type EventCallback, type Subscription, type EmittedEvent,
+  type EventBusOptions, type EventMiddleware,
+} from "./event-bus";
+export {
+  StorageManager,
+  type StorageEntry, type StorageOptions, type StorageStats,
+  type MigrationPlan, type StorageBackend,
+} from "./storage-manager";
