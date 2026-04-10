@@ -4024,3 +4024,15 @@ export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode 
 // --- Slider ---
 export { SliderManager, createSlider } from "./slider";
 export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
+
+// --- KBD (Keyboard) ---
+export { createKbd } from "./kbd";
+export type { KbdOptions, KbdSize, KbdStyle } from "./kbd";
+
+// --- Chip ---
+export { createChip, createChipGroup } from "./chip";
+export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, ChipSize, ChipVariant } from "./chip";
+
+// --- Stepper ---
+export { StepperManager, createStepper } from "./stepper";
+export type { StepperOptions, StepperInstance, StepConfig, StepStatus } from "./stepper";
