@@ -1324,3 +1324,23 @@ export {
   type VirtualItem, type VirtualListConfig, type VisibleRange,
   type RenderState, type ScrollPosition, type VirtualListMetrics,
 } from "./virtualized-list";
+export {
+  DndManager,
+  type DragItem, type DropZone, type DragData,
+  type DragConstraints, type GhostOptions, type AutoScrollConfig,
+  type DropPosition, type DropEffect, type DragPhase,
+  type DndConfig, type DndEvent,
+} from "./drag-drop-system";
+export {
+  easings, getEasing,
+  springAnimate, AnimationTimeline,
+  createScrollAnimation, staggerElements, animateCounter, createParallax,
+  type EasingFunction, type SpringConfig, type SpringState,
+  type Keyframe, type AnimationTrack, type ScrollAnimationConfig,
+} from "./animation-engine";
+export {
+  FormBuilder, WizardController,
+  type SchemaField, type FormSchema, type FormState,
+  type FieldType, type ValidationRuleType, type FieldValidation,
+  type ValidationResult, type WizardStep,
+} from "./schema-form-builder";
