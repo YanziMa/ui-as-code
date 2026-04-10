@@ -158,3 +158,4 @@ export {
   isValidIP, isValidIPv6, isValidMac, isValidHexColor, isValidDate,
   isValidPort, isValidHostname, isJsonObject, validateAll, and, or as orValidator,
 } from "./validation-helpers";
+export { FiniteStateMachine, createToggle, type FSMState, type FSMTransition, type FSMConfig } from "./fsm";
