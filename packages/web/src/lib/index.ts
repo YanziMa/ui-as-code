@@ -1018,3 +1018,24 @@ export {
   AudioUtils, MasterVolume,
   type AudioEngineOptions, type SoundOptions, type SpatialConfig, type AnalyserData,
 } from "./audio-engine";
+export {
+  Matrix, dot, norm, normalize, euclideanDist, manhattanDist, cosineSimilarity,
+  activations, softmax, logSoftmax,
+  losses,
+  NeuralNetwork, LayerConfig, TrainingConfig,
+  kMeans, KNNClassifier,
+  pca, PCAResult,
+  linearRegression, RegressionResult,
+  accuracy, precisionScore, recallScore, f1Score, confusionMatrix,
+  standardize, normalizeData, oneHotEncode, binarize, polynomialFeatures,
+  type ActivationFn, type LossFn, type ClusterResult,
+} from "./machine-learning";
+export {
+  CrdtDocument, generateOpId,
+  transform as otTransform, compose as otCompose,
+  PresenceManager, CollaborativeUndoManager,
+  SyncMessageType, createSyncMessage,
+  VectorClock, ConflictStrategy, resolveConflict, ActivityTracker,
+  type UserId, type CursorPosition, type PresenceInfo, type OtOperation,
+  type TransformResult, type SyncMessage, type ConflictInfo, type Resolution, type UserActivity,
+} from "./realtime-collab";
