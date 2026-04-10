@@ -9916,3 +9916,28 @@ export type {
   MindMapOptions,
   MindMapInstance,
 } from "./mind-map";
+
+// --- Audio Player / Image Compare ---
+export {
+  createImageCompare,
+} from "./audio-player";
+export type {
+  CompareDirection,
+  HandleStyle,
+  InteractionMode,
+  ImageCompareOptions,
+  ImageCompareInstance,
+} from "./audio-player";
+
+// --- Video Player ---
+export {
+  createVideoPlayer,
+} from "./video-player";
+export type {
+  VideoTrack,
+  QualityOption,
+  Chapter,
+  PlaylistItem,
+  VideoPlayerOptions,
+  VideoPlayerInstance,
+} from "./video-player";
