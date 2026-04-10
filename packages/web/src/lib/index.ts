@@ -4516,3 +4516,33 @@ export type {
   SliderOptions,
   SliderInstance,
 } from "./slider";
+
+// --- Virtual Scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Heatmap ---
+export { createHeatmap } from "./heatmap";
+export type {
+  HeatmapType,
+  ColorScale,
+  HeatmapCell,
+  HeatmapOptions,
+  HeatmapInstance,
+} from "./heatmap";
+
+// --- Sparkline Chart ---
+export { createSparklineChart } from "./sparkline-chart";
+export type {
+  SparklineType,
+  TrendIndicator as SparkTrendIndicator,
+  SparklinePoint,
+  SparklineOptions,
+  SparklineInstance,
+} from "./sparkline-chart";
