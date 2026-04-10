@@ -5029,3 +5029,28 @@ export type {
   CollapseGroupOptions,
   CollapseGroupInstance,
 } from "./collapse";
+
+// --- Rating ---
+export { RatingManager, createRating } from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+
+// --- File Upload ---
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type {
+  FileUploadOptions,
+  UploadFile,
+  FileUploadInstance,
+} from "./file-upload";
+
+// --- Timeline ---
+export { TimelineManager, createTimeline } from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
