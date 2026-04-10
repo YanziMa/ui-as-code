@@ -562,3 +562,27 @@ export {
   aggregateCsv, downloadCsv,
   type CsvParseOptions, type CsvRow, type CsvWriteOptions, type CsvSchemaField,
 } from "./csv-advanced";
+export {
+  isFileSystemAccessSupported, openFilePicker, openDirectoryPicker,
+  readFileAsText, readFileAsBuffer, readFileAsDataUrl, saveFile,
+  listDirectory, getFileExtension, guessMimeType, formatFileSize,
+  formatLastModified, matchesPattern,
+  type FileSystemEntry, type FileSystemOptions,
+} from "./filesystem";
+export {
+  WebSocketManager, WsRoomManager,
+  isWebSocketSupported, getWebSocketUrl, createWebSocketUrl, parseWsUrl,
+  type WebSocketOptions, type WsEvent, type WsEventHandler,
+  type WebSocketState, type WebSocketStats,
+} from "./websocket";
+export {
+  StateMachine, createToggle, createLoadingMachine, createWizardMachine,
+  type MachineConfig, type StateConfig, type TransitionConfig,
+  type MachineState, type StateChangeListener, type TransitionResult,
+  type StateId, type EventId,
+} from "./state-machine";
+export {
+  BinaryHeap, PriorityQueue, RateLimitedQueue, RingBuffer,
+  type PriorityQueueItem, type PriorityQueueOptions,
+  type RateLimitedQueueOptions,
+} from "./priority-queue";
