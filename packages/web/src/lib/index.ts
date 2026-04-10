@@ -586,3 +586,20 @@ export {
   type PriorityQueueItem, type PriorityQueueOptions,
   type RateLimitedQueueOptions,
 } from "./priority-queue";
+export {
+  HotkeyManager, parseKeyCombo, eventMatchesCombo, formatKeyDisplay,
+  createAppHotkeys, areModifiersDown, getModifierString,
+  type HotkeyBinding, type ParsedKeyCombo,
+} from "./hotkeys-v2";
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  generatePaletteAdvanced, blendColors, lighten, darken, saturate, desaturate,
+  invertColor, withOpacity,
+  type RgbColor, type HslColor, type Palette,
+} from "./color-picker";
+export {
+  ThemeManager, getThemeManager, useTheme, LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES,
+  type ThemeConfig, type ThemeColors,
+} from "./theme-v2";
