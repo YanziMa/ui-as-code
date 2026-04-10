@@ -179,6 +179,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why UI-as-Code? */}
+      <section className="border-t border-zinc-100 bg-zinc-50/80 px-6 py-24 dark:border-zinc-900 dark:bg-zinc-950/80">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">Why UI-as-Code?</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
+              Built differently from day one
+            </h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "No Code Required",
+                desc: "Describe changes in plain language. AI handles the code generation, diff creation, and PR formatting automatically.",
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Real Code Diffs",
+                desc: "Not just CSS tweaks — generates actual unified diffs that can be reviewed, tested, and merged into production codebases.",
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Community Driven",
+                desc: "Changes are voted on by the community. The best improvements rise to the top and get merged by product maintainers.",
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                ),
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-xl border border-zinc-200 bg-white p-7 dark:border-zinc-800 dark:bg-black">
+                <div className="mb-4 inline-flex rounded-lg bg-blue-50 p-2.5 text-blue-600 dark:bg-blue-950 dark:text-blue-400">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="border-t border-zinc-100 bg-zinc-50/80 px-6 py-24 dark:border-zinc-900 dark:bg-zinc-950/80">
         <div className="mx-auto max-w-4xl">
