@@ -1960,3 +1960,26 @@ export {
   type PasteOptions, type ClipboardHistoryEntry, type ClipboardConfig,
   type ClipboardDataType,
 } from "./clipboard-manager";
+
+// --- Undo Manager ---
+export {
+  UndoManager,
+  type Command, type HistoryEntry, type Branch, type UndoManagerConfig,
+  type UndoStats, type CommandId, type BranchId, type GroupId,
+} from "./undo-manager";
+
+// --- Notification System ---
+export {
+  NotificationCenter, PushNotificationManager,
+  type Notification, type NotificationConfig, type NotificationType,
+  type NotificationPriority,
+} from "./notification-system";
+
+// --- Keyboard Shortcuts ---
+export {
+  ShortcutManager, ShortcutRecorder, ShortcutOverlay,
+  eventToCombo, normalizeKey, comboToString, parseCombo,
+  comboMatches, comboHash, commonShortcuts,
+  type KeyCombo, type ShortcutBinding, type ShortcutScope,
+  type RecordedSequence,
+} from "./keyboard-shortcuts";
