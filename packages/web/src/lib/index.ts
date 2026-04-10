@@ -12446,3 +12446,37 @@ export type {
   CardOptions,
   CardInstance,
 } from "./card";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+
+// --- Splitter (Resizable Panes) ---
+export {
+  createSplitter,
+} from "./drawer";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./drawer";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
