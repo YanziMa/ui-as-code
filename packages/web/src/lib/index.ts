@@ -3667,3 +3667,24 @@ export {
   MasonryManager, createMasonry,
   type MasonryOptions, type MasonryInstance, type MasonryItem,
 } from "./masonry";
+
+// --- Scroll Progress ---
+export {
+  createScrollProgress,
+  type ScrollProgressOptions, type ScrollProgressInstance,
+  type ProgressBarPosition, type ProgressBarVariant,
+} from "./scroll-progress";
+
+// --- Back to Top ---
+export {
+  createBackToTop,
+  type BackToTopOptions, type BackToTopInstance,
+  type BttPosition, type BttSize, type BttShape,
+} from "./back-to-top";
+
+// --- Sticky Header ---
+export {
+  createStickyHeader,
+  type StickyHeaderOptions, type StickyHeaderInstance,
+  type StickyBehavior, type StickyShadow,
+} from "./sticky-header";
