@@ -10991,3 +10991,44 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+
+// --- Checkbox ---
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+} from "./checkbox";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOptions,
+  RadioOptions,
+  CheckboxInstance,
+  RadioInstance,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox";
+
+// --- Radio Group ---
+export {
+  RadioGroupManager,
+  createRadioGroup,
+} from "./radio";
+export type {
+  RadioSize,
+  RadioVariant,
+  RadioOption,
+  RadioGroupOptions,
+  RadioGroupInstance,
+} from "./radio";
