@@ -2523,3 +2523,30 @@ export {
   formatBytes, parseBytes,
   type JWTPayload, type DecodedJWT, type ParsedURL,
 } from "./encoding-utils";
+
+// --- DOM Observer ---
+export {
+  DomObserverManager,
+  takeSnapshot, compareSnapshots,
+  createRouteChangeDetector, createLazyLoader,
+  type ObserveTarget, type MutationOptions, type IntersectionOptions,
+  type ResizeOptions, type MutationRecordEx, type DomSnapshot,
+  type ObserverCallbacks, type ObserverStats,
+} from "./dom-observer";
+
+// --- Storage Utils ---
+export {
+  StorageManager,
+  createLocalStorage, createSessionStorage, createMemoryStore,
+  type StorageBackend, type StorageEntry, type StorageOptions,
+  type StorageStats, type StorageMigration,
+} from "./storage-utils";
+
+// --- Network Utils ---
+export {
+  getNetworkStatus, onNetworkChange, isSlowConnection, isDataSaverEnabled,
+  fetchWithRetry, RequestQueue,
+  syncWhenOnline, processOfflineQueue,
+  BandwidthEstimator, ConnectionHealthChecker,
+  type NetworkStatus, type RetryOptions, type RequestQueueItem,
+} from "./network-utils";
