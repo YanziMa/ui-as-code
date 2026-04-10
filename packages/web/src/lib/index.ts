@@ -6887,3 +6887,41 @@ export type {
   EasingName,
   SpringConfig,
 } from "./animation";
+
+// --- Storage ---
+export {
+  storageGet,
+  storageSet,
+  storageRemove,
+  storageKeys,
+  storageClear,
+} from "./storage";
+
+// --- Clipboard ---
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type {
+  ClipboardData,
+  ClipboardOptions,
+} from "./clipboard";
+
+// --- Keyboard ---
+export {
+  KeyboardManager,
+  createKeyboardManager,
+  formatShortcut,
+  matchesShortcut,
+} from "./keyboard";
+export type {
+  KeyBinding,
+  KeyChord,
+  KeyboardManagerOptions,
+  KeyboardManagerInstance,
+} from "./keyboard";
