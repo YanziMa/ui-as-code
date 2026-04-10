@@ -3210,3 +3210,24 @@ export {
   type SelectionRange, type CaretPosition,
   type SelectionManagerOptions, type SelectionManagerInstance,
 } from "./selection";
+
+// --- Drag & Drop File ---
+export {
+  DragDropFileManager, createDropZone,
+  type FileValidationRule, type DroppedFile, type DropZoneOptions,
+  type DropZoneInstance, type FileValidationError,
+} from "./drag-and-drop-file";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem, type ContextMenuOptions, type ContextMenuInstance,
+  type ContextMenuPosition,
+} from "./context-menu";
+
+// --- Tooltip ---
+export {
+  TooltipManager, getTooltipManager, tooltip,
+  type TooltipOptions, type TooltipInstance,
+  type TooltipPlacement, type TooltipTrigger,
+} from "./tooltip";
