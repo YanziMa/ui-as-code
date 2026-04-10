@@ -1506,3 +1506,36 @@ export {
   type NumberFormatOptions,
   type DateFormatOptions,
 } from "./i18n-framework";
+
+// --- Notification System ---
+export {
+  NotificationCenter,
+  PushNotificationManager,
+  type Notification,
+  type NotificationType,
+  type NotificationPriority,
+  type NotificationConfig,
+} from "./notification-system";
+
+// --- Modal Manager ---
+export {
+  ModalManager,
+  getModalManager,
+  type ModalOptions,
+  type ModalSize,
+  type ModalAnimation,
+  type ModalAction,
+  type ModalInstance,
+  type ConfirmOptions,
+} from "./modal-manager";
+
+// --- Tooltip Engine ---
+export {
+  TooltipEngine,
+  getTooltipEngine,
+  type TooltipOptions,
+  type TooltipPlacement,
+  type TooltipTrigger,
+  type TooltipInstance,
+  type PositionedTooltip,
+} from "./tooltip-engine";
