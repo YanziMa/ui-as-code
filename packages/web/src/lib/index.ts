@@ -4255,3 +4255,35 @@ export type {
   ChartOptions,
   ChartInstance,
 } from "./chart";
+
+// --- Kanban ---
+export { KanbanManager, createKanban } from "./kanban";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanSwimlane,
+  KanbanLabel,
+  CardPriority,
+  CardSize,
+  KanbanOptions,
+  KanbanInstance,
+} from "./kanban";
+
+// --- Calendar ---
+export { CalendarManager, createCalendar } from "./calendar";
+export type {
+  CalendarView,
+  WeekStartDay,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar";
+
+// --- Command Menu ---
+export { CommandMenuManager, createCommandMenu } from "./command-menu";
+export type {
+  CommandItem,
+  CommandCategory,
+  CommandMenuOptions,
+  CommandMenuInstance,
+} from "./command-menu";
