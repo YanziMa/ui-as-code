@@ -7761,3 +7761,40 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- Accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+
+// --- Side Sheet ---
+export {
+  SideSheetManager,
+  createSideSheet,
+} from "./side-sheet";
+export type {
+  SheetSide,
+  SheetSize,
+  SheetOptions,
+  SheetInstance,
+} from "./side-sheet";
