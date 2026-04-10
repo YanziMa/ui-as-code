@@ -9952,3 +9952,25 @@ export type {
   EmojiPickerOptions,
   EmojiPickerInstance,
 } from "./emoji-picker";
+
+// --- QR Code ---
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
+export type {
+  QrOptions,
+} from "./qr-code";
+
+// --- Signature Pad ---
+export {
+  createSignaturePad,
+} from "./signature-pad";
+export type {
+  StrokePoint,
+  Stroke,
+  SignaturePadOptions,
+  SignaturePadInstance,
+} from "./signature-pad";
