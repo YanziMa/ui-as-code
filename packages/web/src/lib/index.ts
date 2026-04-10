@@ -4036,3 +4036,15 @@ export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, Ch
 // --- Stepper ---
 export { StepperManager, createStepper } from "./stepper";
 export type { StepperOptions, StepperInstance, StepConfig, StepStatus } from "./stepper";
+
+// --- Navbar ---
+export { NavbarManager, createNavbar } from "./navbar";
+export type { NavItem, UserMenuConfig, NavbarOptions, NavbarInstance } from "./navbar";
+
+// --- Sidebar ---
+export { SidebarManager, createSidebar } from "./sidebar";
+export type { SidebarItem, SidebarGroup, SidebarOptions, SidebarInstance } from "./sidebar";
+
+// --- Breadcrumb ---
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
