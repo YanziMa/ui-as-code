@@ -16346,3 +16346,42 @@ export type {
   ValidationRule,
   ValidatorFn,
 } from "./validate";
+export {
+  uuidv4,
+  uuidv7,
+  nanoId,
+  shortId,
+  prefixedId,
+  isUuid,
+  getUuidVersion,
+} from "./uuid";
+export {
+  sha256,
+  sha384,
+  sha512,
+  simpleHash,
+  hashToInt,
+  hashObject,
+  combineHashes,
+  hashColor,
+  hashHexColor,
+  fingerprint,
+  timingSafeEqual,
+} from "./hash";
+export {
+  secureRandomInt,
+  secureRandomFloat,
+  securePick,
+  secureShuffle,
+  weightedRandom,
+  createWeightedPicker,
+  createSeededRng,
+  seededInt,
+  seededPick,
+  seededShuffle,
+  normalRandom,
+  clampedNormal,
+  randomString,
+  randomHex,
+  generatePassword,
+} from "./random";
