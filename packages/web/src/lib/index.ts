@@ -2550,3 +2550,42 @@ export {
   BandwidthEstimator, ConnectionHealthChecker,
   type NetworkStatus, type RetryOptions, type RequestQueueItem,
 } from "./network-utils";
+
+// --- CSS Utils ---
+export {
+  cssVar, setCssVar, getCssVar,
+  cssTransition, EASING_CSS, BREAKPOINTS,
+  mediaQuery, matchesMedia, isAtLeast, isBelow,
+  hexToRgb, rgbToHex, parseColor,
+  mixColors, transparentize, lightenColor, darkenColor,
+} from "./css-utils";
+
+// --- Image Utils ---
+export {
+  getImageDimensions, loadImage, imageToCanvas,
+  resizeImage, cropImage, applyFilters,
+  convertFormat, generateThumbnail, compressImage,
+  getDominantColor, getAverageColor, createCollage, addWatermark,
+  detectOrientation, getAspectRatio,
+  fileToDataUrl, fileToArrayBuffer, downloadImage,
+  formatFileSize, isValidImageType, getExifOrientation,
+  type ImageDimensions, type ImageProcessingOptions,
+  type CropRegion, type FilterOptions,
+} from "./image-utils";
+
+// --- Accessibility Utils ---
+export {
+  setAria, getAria, setRole, setAccessibleName,
+  hideFromScreenReader, showToScreenReader,
+  getFocusableElements, focusFirst, focusLast, isFocusable,
+  createFocusTrap, setupRovingTabindex,
+  announce, announceAssertive,
+  checkContrast, suggestTextColor,
+  getHeadingHierarchy, validateHeadingHierarchy,
+  findLandmarks, hasProperLandmarks,
+  prefersReducedMotion, prefersHighContrast,
+  prefersDarkMode, prefersLightMode, onPreferenceChange,
+  createSkipLink, openAccessibleModal,
+  type ContrastResult, type FocusableElement,
+  type HeadingInfo, type LandmarkInfo,
+} from "./accessibility-utils";
