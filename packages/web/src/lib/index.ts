@@ -1417,3 +1417,34 @@ export {
   type EvaluationContext, type EvaluationResult, type Policy, type Condition,
   type TimeConstraint, type AuditLogEntry, type PermissionAction,
 } from "./permission-system";
+export {
+  injectStyle, removeStyle, updateStyle,
+  setCssVar, getCssVar, setCssVars, getRootVar, setRootVar,
+  getCurrentBreakpoint, isMinWidth, isMaxWidth, onBreakpointChange,
+  isMobile, isTablet, isDesktop, getDevicePixelRatio, isRetina,
+  mq, mediaQueries, matchesMedia, subscribeMedia,
+  isDarkMode, isLightMode, toggleDarkMode, setDarkMode, onDarkModeChange,
+  buildKeyframes, registerKeyframes, animations, animate,
+  toggleClass, classIf, setClasses, hasAnyClass,
+  bringToFront, sendToBack,
+  type Breakpoints, type KeyframeRule,
+} from "./css-in-js";
+export {
+  Schema, string_, number_, boolean_, object, array, enum_, literal, nullable, any_, unknown_,
+  ValidationException,
+  type ValidatorResult, type ValidationError, type ValidationContext,
+  type ValidatorOptions, type SchemaValidator,
+} from "./data-validator";
+export {
+  createStore, createSimpleStore, createSecureStore, createSessionStore, createCacheStore,
+  StorageAdapter, SyncEngine, UndoRedoStack, DevToolsConnector, QuotaManager,
+  Compression, Encryption,
+  isBrowser, isSecureContext, uid, deepClone, isExpired, createMetadata, runMigrations,
+  batchUpdates, inspectStorage, exportAllData, importData,
+  type StorageResult, type EntryMetadata, type StorageEnvelope,
+  type MigrationFunction, type MigrationStep, type SchemaMigration,
+  type SyncConfig, type EncryptionConfig, type CompressionConfig,
+  type QuotaConfig, type PersistOptions, type StateAction,
+  type StateObserver, type HistoryEntry, type StateStore,
+  type ConflictStrategy, type QuotaCleanupStrategy, type StorageBackend as SpStorageBackend,
+} from "./state-persistence";
