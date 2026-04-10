@@ -3968,3 +3968,11 @@ export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from ".
 // --- Divider ---
 export { createDivider, hDivider, vDivider, labeledDivider, sectionDivider } from "./divider";
 export type { DividerOptions, DividerOrientation, DividerStyle } from "./divider";
+
+// --- Switch ---
+export { createSwitch } from "./switch";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch";
+
+// --- Checkbox & Radio ---
+export { createCheckbox, createRadio, createCheckboxGroup } from "./checkbox";
+export type { CheckboxOptions, CheckboxInstance, RadioOptions, RadioInstance, CheckboxGroupOptions, CheckboxGroupInstance, CheckboxSize, CheckboxVariant } from "./checkbox";
