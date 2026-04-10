@@ -6447,3 +6447,43 @@ export type {
   TrieNode,
   LRUCacheEntry,
 } from "./data-structures";
+
+// --- Graph ---
+export {
+  Graph,
+} from "./graph";
+export type {
+  GraphNode,
+  GraphEdge,
+} from "./graph";
+
+// --- Stream ---
+export {
+  Stream,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+} from "./stream";
+export type {
+  StreamSubscriber,
+  StreamErrorHandler,
+  StreamCompleteHandler,
+  TeardownLogic,
+  OperatorFunction,
+  Observer,
+  Subscription as StreamSubscription,
+} from "./stream";
+
+// --- Logger ---
+export {
+  Logger,
+  log,
+  apiLog,
+  dbLog,
+  extLog,
+  setGlobalLogLevel,
+  getGlobalLogLevel,
+} from "./logger";
+export type {
+  LogLevel,
+} from "./logger";
