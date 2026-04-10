@@ -11975,3 +11975,38 @@ export type {
   UploadOptions,
   UploadInstance,
 } from "./upload";
+
+// --- Dropdown Menu ---
+export {
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
+export type {
+  MenuItemType,
+  MenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
+
+// --- Tag / Chip Input ---
+export {
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+export type {
+  TagItem,
+  TagInputOptions,
+  TagInputInstance,
+} from "./tag-input";
+
+// --- Timeline Component ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
