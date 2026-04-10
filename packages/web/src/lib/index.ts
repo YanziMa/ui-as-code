@@ -3706,3 +3706,25 @@ export {
   createVirtualList,
   type VirtualListOptions, type VirtualListInstance, type VirtualListItem,
 } from "./virtual-list";
+
+// --- Hotkeys ---
+export {
+  HotkeyManager, createAppHotkeys,
+  parseKeyCombo, eventMatchesCombo, formatKeyDisplay,
+  areModifiersDown, getModifierString,
+  type HotkeyBinding, type HotkeyEvent, type HotkeyListener, type ParsedKeyCombo,
+} from "./hotkeys";
+
+// --- Clipboard ---
+export {
+  copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard,
+  isClipboardAvailable, canReadClipboard, watchClipboard,
+  type ClipboardData, type ClipboardOptions,
+} from "./clipboard";
+
+// --- Print ---
+export {
+  PrintManager, createPrintManager, quickPrint,
+  addPageBreakBefore, addPageBreakAfter, avoidBreakInside,
+  type PrintOptions, type PrintManagerInstance,
+} from "./print";
