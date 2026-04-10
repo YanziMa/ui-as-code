@@ -3142,3 +3142,26 @@ export {
   type OrientationState, type ScreenOrientationOptions,
   type ScreenOrientationInstance,
 } from "./screen-orientation";
+
+// --- Vibration ---
+export {
+  VibrationManager, createVibrationManager,
+  vibrate, vibratePreset, cancelVibration,
+  type VibrationPreset, type VibrationPattern,
+  type VibrationManagerOptions, type VibrationManagerInstance,
+} from "./vibration";
+
+// --- Speech Synthesis (TTS) ---
+export {
+  SpeechSynthesisManager, createSpeechSynthesisManager,
+  speak as speakText,
+  type VoiceInfo, type SpeechOptions, type SpeechManagerInstance,
+} from "./speech-synthesis";
+
+// --- Speech Recognition ---
+export {
+  SpeechRecognitionManager, createSpeechRecognition,
+  recognizeOnce,
+  type RecognitionResult, type RecognitionOptions,
+  type SpeechRecognitionInstance,
+} from "./speech-recognition";
