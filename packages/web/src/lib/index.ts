@@ -2194,3 +2194,33 @@ export {
   type ConcurrencyOptions, type RunnerStats, type ProgressCallback,
   type TaskFilter,
 } from "./task-runner";
+
+// --- Form Validator v2 ---
+export {
+  FormValidator, validateForm, createValidator,
+  type ValidationTrigger, type FieldType,
+  type FieldRule, type FormSchema, type FieldError,
+  type FormValidationResult, type ValidatorOptions,
+} from "./form-validator-v2";
+
+// --- i18n Number ---
+export {
+  I18nNumber,
+  formatNumber, formatCurrency, formatPercent, formatFileSize, timeAgo,
+  escapeHtml, unescapeHtml,
+  type NumberFormatStyle, type CurrencyDisplay, type CompactDisplay,
+  type Notation, type SignDisplay, type RoundingMode,
+  type RelativeTimeUnit, type ListType, type MeasurementSystem,
+  type NumberFormatOptions, type CurrencyInfo, type RelativeTimeOptions,
+  type ListFormatOptions, type UnitConversion, type MeasurementFormatOptions,
+} from "./i18n-number";
+
+// --- DOM Builder ---
+export {
+  DomBuilder,
+  createElement, createFragment, createText, createComment, createSvgElement,
+  builderToString, domDiff, applyPatches,
+  escapeHtml as domEscapeHtml, unescapeHtml as domUnescapeHtml,
+  type DomNode, type AttributeMap, type StyleMap, type EventMap,
+  type BuilderOptions, type DomPatch, type DiffResult,
+} from "./dom-builder";
