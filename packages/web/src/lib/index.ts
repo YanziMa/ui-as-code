@@ -10450,3 +10450,33 @@ export type {
   CommandPaletteConfig,
   CommandPaletteState,
 } from "./command-palette";
+
+// --- Markdown Editor ---
+export {
+  createMarkdownEditor,
+} from "./markdown-editor";
+export type {
+  MarkdownEditorOptions,
+  MarkdownEditorInstance,
+} from "./markdown-editor";
+
+// --- Code Editor ---
+export {
+  CodeEditorManager,
+  createCodeEditor,
+} from "./code-editor";
+export type {
+  CodeEditorOptions,
+  CodeEditorInstance,
+} from "./code-editor";
+
+// --- Rich Text Editor ---
+export {
+  createRichTextEditor,
+} from "./rich-text-editor";
+export type {
+  EditorCommand,
+  ToolbarButton,
+  RichTextEditorOptions,
+  RichTextEditorInstance,
+} from "./rich-text-editor";
