@@ -1104,3 +1104,8 @@ export {
   NotificationCenter, PushNotificationManager,
   type Notification, type NotificationType, type NotificationPriority, type NotificationConfig,
 } from "./notification-system";
+export {
+  Scheduler as SchedulerV3, CronScheduler, TokenBucketRateLimiter, DeadlineManager,
+  type TaskStatus, type TaskResult, type TaskError, type ScheduleOptions,
+  type Job, type ResourcePoolConfig, type CronJob,
+} from "./scheduler-v3";
