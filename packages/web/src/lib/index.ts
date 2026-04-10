@@ -2472,3 +2472,54 @@ export {
   maskString, maskEmail, detectIndentation, indentText,
   simpleDiff, type DiffSegment,
 } from "./string-utils";
+
+// --- Validation Utils ---
+export {
+  isString, isNumber, isInteger, isFiniteNumber,
+  isObject, isArray, isValidDate, isBoolean,
+  isFunction, isNil, isNotNil, isEmpty,
+  isMap, isSet, isPromise,
+  isEmail, isURL, isUUID, isUUIDv4,
+  isHexColor, isIPv4, isIPv6, isIP,
+  isMACAddress, isCreditCard, detectCardBrand,
+  isPhoneNumber, isISODate, isISODateTime, isJSON,
+  matchesPattern, isLength, isArraySize, inRange,
+  isOneOf, every, some,
+  validate, validateAsync,
+  rules, assert, assertType,
+  type ValidationResult, type ValidationError, type ValidationWarning,
+  type ValidationRule, type FieldSchema, type ObjectSchema,
+} from "./validation-utils";
+
+// --- Math Utils ---
+export {
+  mean, median, mode, variance, stddev,
+  covariance, correlation, linearRegression, percentile,
+  Vec2, Vec3, Matrix,
+  dist2D, dist3D, angleBetweenPoints,
+  pointInPolygon, polygonArea, polygonCentroid, boundingBox, lineIntersection,
+  lerp, clamp, mapRange, smoothStep,
+  bezierQuad, bezierCubic, catmullRom,
+  gcd, lcm, isPrime, sieveOfEratosthenes,
+  factorial, fibonacci, fibonacciSequence,
+  combinations, permutations, modPow,
+  angle, temperature, length as lengthUnits, weight,
+  randomNormal, randomUniform, randomInt, randomPick, shuffle, weightedRandom,
+  type Vector2D, type Vector3D,
+} from "./math-utils";
+
+// --- Encoding Utils ---
+export {
+  base64Encode, base64Decode, base64UrlEncode, base64UrlDecode, base64Wrap,
+  base32Encode, base32Decode,
+  base58Encode, base58Decode,
+  hexEncode, hexDecode, isHex,
+  urlEncode, urlDecode, queryStringify, queryParse, parseUrl,
+  normalizeUnicode, codePoints, isBMP, reverseUnicode,
+  htmlEncode, htmlDecode,
+  parseCSV, generateCSV,
+  decodeBuffer, encodeBuffer, uint8ToBinaryString, binaryStringToUint8,
+  decodeJWT, isJWTExpired, createUnsignedJWT,
+  formatBytes, parseBytes,
+  type JWTPayload, type DecodedJWT, type ParsedURL,
+} from "./encoding-utils";
