@@ -5257,3 +5257,37 @@ export type {
   RichTextEditorOptions,
   RichTextEditorInstance,
 } from "./rich-text-editor";
+
+// --- Chart ---
+export { ChartManager, createChart } from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+
+// --- Canvas Drawing ---
+export { createDrawing } from "./canvas-drawing";
+export type {
+  ToolType,
+  StrokeCap,
+  StrokeJoin,
+  Point,
+  Stroke,
+  DrawingLayer,
+  DrawingOptions,
+  DrawingInstance,
+} from "./canvas-drawing";
+
+// --- Animation Engine ---
+export { easings, getEasing, springAnimate, AnimationTimeline, createScrollAnimation, staggerElements, animateCounter, createParallax } from "./animation-engine";
+export type {
+  EasingFunction,
+  SpringConfig,
+  SpringState,
+  Keyframe,
+  AnimationTrack,
+  ScrollAnimationConfig,
+} from "./animation-engine";
