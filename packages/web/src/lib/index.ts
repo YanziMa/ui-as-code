@@ -2622,3 +2622,28 @@ export {
   type TimingResult, type MemoryUsage, type FPSStats,
   type WebVitals, type NavigationTiming,
 } from "./performance-utils";
+
+// --- File Download ---
+export {
+  downloadFile, saveBlob, revokeBlobUrl, downloadMultiple,
+  DownloadQueue, createDraggableDownload,
+  downloadText, downloadJSON, downloadCSV,
+  readFileAsArrayBuffer, readAsText, readAsDataURL, createFileLink,
+  type DownloadProgress, type DownloadOptions, type DownloadResult,
+  type DownloadTask, type DownloadQueueOptions, type DownloadPriority,
+} from "./file-download";
+
+// --- Form Builder ---
+export {
+  FormBuilder, createForm, validations,
+  type FieldType, type FieldValidation, type SelectOption,
+  type FormField, type FormSection, type FormSchema,
+  type FieldError, type FormState,
+} from "./form-builder";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem, type ContextMenuPosition,
+  type ContextMenuOptions, type ContextMenuInstance,
+} from "./context-menu";
