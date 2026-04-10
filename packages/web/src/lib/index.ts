@@ -10592,3 +10592,42 @@ export type {
   ClipboardData,
   ClipboardOptions,
 } from "./clipboard";
+
+// --- Analytics ---
+export {
+  AnalyticsManager,
+  getAnalytics,
+  initAnalytics,
+} from "./analytics";
+export type {
+  AnalyticsEvent,
+  PageView,
+  PerformanceMetric,
+  AnalyticsConfig,
+  AnalyticsState,
+} from "./analytics";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+
+// --- Theme ---
+export {
+  ThemeManager,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+  getThemeManager,
+  useTheme,
+} from "./theme";
+export type {
+  ThemeColors,
+  ThemeConfig,
+} from "./theme";
