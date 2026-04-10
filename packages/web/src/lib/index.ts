@@ -15066,3 +15066,36 @@ export {
 export type {
   CacheOptions,
 } from "./cache";
+export {
+  cssVar,
+  setCssVar,
+  breakpoint,
+  BREAKPOINTS,
+  hexToRgb,
+  rgbToHex,
+  parseColor,
+  mixColors,
+  transparentize,
+} from "./css";
+export {
+  EventDelegate,
+  createBodyDelegate,
+  createDelegate,
+} from "./event-delegate";
+export type {
+  DelegateOptions,
+  DelegatedEvent,
+  DelegateHandler,
+  EventDelegateInstance,
+} from "./event-delegate";
+export {
+  DOMMutationObserver,
+  observeMutations,
+  waitForElement,
+} from "./mutation";
+export type {
+  MutationFilter,
+  MutationObserverOptions,
+  MutationChange,
+  MutationObserverInstance,
+} from "./mutation";
