@@ -1406,3 +1406,14 @@ export {
   type StorageEntry, type StorageOptions, type StorageStats,
   type MigrationPlan, type StorageBackend,
 } from "./storage-manager";
+export {
+  WebSocketManager,
+  type WsConfig, type WsMessage, type ChannelSubscription,
+  type PendingRequest, type WsStats, type MessageType, type ConnectionState,
+} from "./websocket-manager";
+export {
+  PermissionEngine,
+  type Permission, type Role, type UserIdentity, type ResourceContext,
+  type EvaluationContext, type EvaluationResult, type Policy, type Condition,
+  type TimeConstraint, type AuditLogEntry, type PermissionAction,
+} from "./permission-system";
