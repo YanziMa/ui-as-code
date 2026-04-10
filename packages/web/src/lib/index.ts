@@ -8117,3 +8117,39 @@ export type {
   RecorderStats,
   ScreenRecorderInstance,
 } from "./screen-recorder";
+
+// --- Marquee Carousel ---
+export {
+  createMarqueeCarousel,
+} from "./marquee-carousel";
+export type {
+  MarqueeDirection as MarqueeCarouselDirection,
+  MarqueeItem,
+  MarqueeLane,
+  MarqueeCarouselOptions,
+  MarqueeCarouselInstance,
+} from "./marquee-carousel";
+
+// --- Masonry Grid ---
+export {
+  createMasonryGrid,
+} from "./masonry-grid";
+export type {
+  MasonryItem,
+  MasonryGridOptions,
+  LayoutInfo,
+  MasonryGridInstance,
+} from "./masonry-grid";
+
+// --- Parallax Scroller ---
+export {
+  createParallaxScroller,
+} from "./parallax-scroller";
+export type {
+  ParallaxDirection,
+  ParallaxLayer,
+  ScrollAnimation,
+  TiltConfig,
+  ParallaxScrollerOptions,
+  ParallaxScrollerInstance,
+} from "./parallax-scroller";
