@@ -3336,3 +3336,22 @@ export {
   TreeView,
   type TreeNodeData, type TreeNode, type CheckMode, type TreeViewConfig,
 } from "./tree-view";
+
+// --- Timeline ---
+export {
+  TimelineManager, createTimeline,
+  type TimelineItem, type TimelineOptions, type TimelineInstance,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- Carousel ---
+export {
+  CarouselManager, createCarousel,
+  type CarouselSlide, type CarouselOptions, type CarouselInstance,
+} from "./carousel";
+
+// --- Empty State ---
+export {
+  EmptyStateManager, createEmptyState,
+  type EmptyStateOptions, type EmptyStateInstance, type EmptyStateVariant,
+} from "./empty-state";
