@@ -10162,3 +10162,37 @@ export type {
   DropdownMenuOptions,
   DropdownMenuInstance,
 } from "./dropdown-menu";
+
+// --- Tree Select ---
+export {
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+export type {
+  TreeNodeData,
+  TreeSelectOptions,
+  TreeSelectInstance,
+} from "./tree-select";
+
+// --- Time Picker ---
+export {
+  createTimePicker,
+} from "./time-picker";
+export type {
+  TimeFormat,
+  TimePickerMode,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
