@@ -16200,3 +16200,25 @@ export type {
   AnalyticsConfig,
   AnalyticsState,
 } from "./analytics";
+export {
+  createWatermark,
+} from "./watermark";
+export type {
+  WatermarkOptions,
+  WatermarkInstance,
+} from "./watermark";
+export {
+  createFullscreen,
+} from "./screen-full";
+export type {
+  FullscreenOptions,
+  FullscreenInstance,
+} from "./screen-full";
+export {
+  createIdleDetector,
+} from "./idle";
+export type {
+  IdleState,
+  IdleOptions,
+  IdleInstance,
+} from "./idle";
