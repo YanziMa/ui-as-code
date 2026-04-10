@@ -7057,3 +7057,63 @@ export type {
   AvatarOptions,
   AvatarGroupOptions,
 } from "./avatar";
+
+// --- Table ---
+export {
+  createTableState,
+  getSortedData,
+  getFilteredData,
+  getPaginatedData,
+  getCellValue,
+  applyFilterOperator,
+  toggleSort,
+  setSearchTerm,
+  toggleFilter,
+  goToPage,
+  setPageSize,
+  toggleRowSelection,
+  toggleSelectAll,
+  toggleRowExpand,
+  resetTable,
+  exportTableAsCsv,
+} from "./table";
+export type {
+  Column,
+  TableState,
+  SortState,
+  FilterState,
+  FilterOperator,
+  PaginationState,
+  SelectionState,
+} from "./table";
+
+// --- Chart ---
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+
+// --- Tree ---
+export {
+  createTreeNode,
+  buildTree,
+  flattenTree,
+  flattenTreeWithDepth,
+  findNodeById,
+  findNodes,
+  getPathToNode,
+  getTreeDepth,
+  countNodes,
+  mapTree,
+  filterTree,
+} from "./tree";
+export type {
+  TreeNode,
+} from "./tree";
