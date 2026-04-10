@@ -4576,3 +4576,27 @@ export type {
   CommandPaletteConfig,
   CommandPaletteState,
 } from "./command-palette";
+
+// --- File Preview ---
+export { FilePreviewManager, createFilePreview } from "./file-preview";
+export type {
+  FileType,
+  FilePreviewOptions,
+  FilePreviewInstance,
+} from "./file-preview";
+
+// --- Time Picker ---
+export { createTimePicker } from "./time-picker";
+export type {
+  TimeFormat,
+  TimePickerMode,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker";
+
+// --- Avatar Editor ---
+export { createAvatarEditor } from "./avatar-editor";
+export type {
+  AvatarEditorOptions,
+  AvatarEditorInstance,
+} from "./avatar-editor";
