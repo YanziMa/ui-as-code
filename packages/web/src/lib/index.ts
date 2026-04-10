@@ -12147,3 +12147,34 @@ export type {
   FooterOptions,
   FooterInstance,
 } from "./footer";
+
+// --- Search Dialog ---
+export {
+  createSearchDialog,
+} from "./search-dialog";
+export type {
+  SearchResult,
+  SearchCategory,
+  SearchDialogOptions,
+  SearchDialogInstance,
+} from "./search-dialog";
+
+// --- QR Code Generator ---
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
+export type {
+  QrOptions,
+} from "./qr-code";
+
+// --- Avatar Editor ---
+export {
+  createAvatarEditor,
+} from "./avatar-editor";
+export type {
+  AvatarEditorOptions,
+  AvatarEditorInstance,
+} from "./avatar-editor";
