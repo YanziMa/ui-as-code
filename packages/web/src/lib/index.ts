@@ -3648,3 +3648,22 @@ export {
   DropdownMenuManager, createDropdownMenu,
   type DropdownMenuOptions, type DropdownMenuInstance, type MenuItem, type MenuItemType,
 } from "./dropdown-menu";
+
+// --- Toast ---
+export {
+  ToastManager, getToastManager, showToast,
+  type ToastOptions, type ToastInstance, type ToastType,
+  type ToastPosition, type ToastManagerConfig,
+} from "./toast";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type Command, type CommandPaletteConfig, type CommandPaletteState,
+} from "./command-palette";
+
+// --- Masonry ---
+export {
+  MasonryManager, createMasonry,
+  type MasonryOptions, type MasonryInstance, type MasonryItem,
+} from "./masonry";
