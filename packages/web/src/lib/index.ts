@@ -159,3 +159,8 @@ export {
   isValidPort, isValidHostname, isJsonObject, validateAll, and, or as orValidator,
 } from "./validation-helpers";
 export { FiniteStateMachine, createToggle, type FSMState, type FSMTransition, type FSMConfig } from "./fsm";
+export {
+  toMap, toSet, uniqueBy, partition, groupBy, countBy,
+  findFirst, findLast, all, any,
+  intersection, difference, deepFlatten, zip, rotateLeft, sample, sampleMany,
+} from "./collection";
