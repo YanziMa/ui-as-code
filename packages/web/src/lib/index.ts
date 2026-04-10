@@ -3546,3 +3546,23 @@ export {
   type TooltipOptions, type TooltipInstance,
   type TooltipPlacement, type TooltipTrigger,
 } from "./tooltip";
+
+// --- Badge ---
+export {
+  createBadge, createPositionedBadge, createStatusDot,
+  addDotBadge, addCountBadge,
+  type BadgeOptions, type StatusDotOptions,
+  type BadgeVariant, type BadgePosition, type BadgeSize,
+} from "./badge";
+
+// --- Divider ---
+export {
+  createDivider, hDivider, vDivider, labeledDivider, sectionDivider,
+  type DividerOptions, type DividerOrientation, type DividerStyle,
+} from "./divider";
+
+// --- Spinner ---
+export {
+  createSpinner, miniSpinner, fullPageSpinner,
+  type SpinnerOptions, type SpinnerVariant, type SpinnerSize,
+} from "./spinner";
