@@ -10304,3 +10304,53 @@ export type {
   LightboxOptions,
   LightboxInstance,
 } from "./lightbox";
+
+// --- Notification Channels ---
+export {
+  NotificationManager,
+  ChannelRateLimiter,
+  TemplateEngine,
+  createNotificationManager,
+  createSaaSNotifier,
+} from "./notification-channels";
+export type {
+  NotificationChannelType,
+  NotificationMessage,
+  EmailChannelConfig,
+  PushChannelConfig,
+  SmsChannelConfig,
+  WebhookChannelConfig,
+  SlackChannelConfig,
+  DiscordChannelConfig,
+  ChannelProvider,
+  RateLimitConfig,
+  TemplateVariable,
+  UserNotificationPreference,
+  NotificationStats,
+  NotificationHistoryEntry,
+  NotificationManagerConfig,
+  NotificationSendResult,
+  SaaSNotifierInstance,
+} from "./notification-channels";
+
+// --- Tree View ---
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
+
+// --- Input OTP ---
+export {
+  createOtpInput,
+} from "./input-otp";
+export type {
+  OtpInputVariant,
+  OtpSize,
+  OtpInputOptions,
+  OtpInputInstance,
+} from "./input-otp";
