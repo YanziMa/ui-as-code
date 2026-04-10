@@ -3276,3 +3276,24 @@ export {
   type SkeletonAvatarOptions, type SkeletonCardOptions,
   type SkeletonTableOptions,
 } from "./skeleton";
+
+// --- Progress Bar ---
+export {
+  createProgressBar, createCircleProgress,
+  type ProgressBarOptions, type CircleProgressOptions,
+  type ProgressVariant, type ProgressSize,
+} from "./progress-bar";
+
+// --- Badge ---
+export {
+  createBadge, createPositionedBadge, createStatusDot,
+  addDotBadge, addCountBadge,
+  type BadgeOptions, type StatusDotOptions,
+  type BadgeVariant, type BadgePosition, type BadgeSize,
+} from "./badge";
+
+// --- Divider ---
+export {
+  createDivider, hDivider, vDivider, labeledDivider, sectionDivider,
+  type DividerOptions, type DividerOrientation, type DividerStyle,
+} from "./divider";
