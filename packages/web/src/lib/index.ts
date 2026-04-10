@@ -5336,3 +5336,25 @@ export { progressBarAttrs, switchAttrs, liveRegion, announce, skipLinkAttrs, SKI
 
 // --- Storage ---
 export { storageGet, storageSet, storageRemove, storageKeys, storageClear } from "./storage";
+
+// --- Logger ---
+export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
+export type {
+  LogLevel,
+} from "./logger";
+
+// --- Event Bus ---
+export { EventBus, createEventBus } from "./event-bus";
+export type {
+  EventCallback,
+  EventMiddleware,
+  Subscription,
+  EmittedEvent,
+  EventBusOptions,
+} from "./event-bus";
+
+// --- Performance ---
+export { reportMetric, getSessionMetrics, observeWebVitals, markRender } from "./performance";
+export type {
+  PerformanceMetric,
+} from "./performance";
