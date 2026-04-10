@@ -9600,3 +9600,38 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+
+// --- Drawer ---
+export {
+  createDrawer,
+} from "./drawer";
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
+
+// --- Splitter ---
+export {
+  createSplitter,
+} from "./splitter";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./splitter";
