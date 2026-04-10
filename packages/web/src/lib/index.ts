@@ -3766,3 +3766,22 @@ export {
   PaginationManager, createPagination,
   type PaginationOptions, type PaginationInstance,
 } from "./pagination";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager, createBreadcrumb,
+  type BreadcrumbItem, type BreadcrumbOptions, type BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Rating ---
+export {
+  RatingManager, createRating,
+  type RatingOptions, type RatingInstance,
+  type StarIconType,
+} from "./rating";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNodeData, type TreeNode, type CheckMode, type TreeViewConfig,
+} from "./tree-view";
