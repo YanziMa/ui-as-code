@@ -10096,3 +10096,36 @@ export type {
   MultiProgressController,
   StepProgressController,
 } from "./progress";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
