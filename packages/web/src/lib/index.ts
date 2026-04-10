@@ -2297,3 +2297,23 @@ export {
   commonShortcuts,
   type KeyCombo, type ShortcutBinding, type ShortcutScope, type RecordedSequence,
 } from "./keyboard-shortcuts";
+
+// --- PDF Generator ---
+export {
+  PdfDocument, createPdf, quickPdf, htmlToPdf,
+  type PdfOptions, type FontOptions, type CellOptions, type ImageOptions,
+  type AnnotationOptions,
+} from "./pdf-generator";
+
+// --- QR Code ---
+export {
+  generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput,
+  type QrOptions,
+} from "./qr-code";
+
+// --- Avatar Generator ---
+export {
+  AvatarGenerator, generateAvatar, avatarDataUri, userAvatar,
+  type AvatarShape, type AvatarStyle, type AvatarOptions, type AvatarResult,
+  type GradientStop, type PatternConfig,
+} from "./avatar-generator";
