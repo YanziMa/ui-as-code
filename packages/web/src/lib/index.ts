@@ -2391,3 +2391,49 @@ export {
   type Notification, type NotificationConfig,
   type NotificationType, type NotificationPriority,
 } from "./notification-system";
+
+// --- State Machine ---
+export {
+  FSM, HSM,
+  createMachine, interpret, match, stateEquals,
+  evaluateChoice, evaluateJunction,
+  deepHistoryTarget, shallowHistoryTarget,
+  type StateId, type EventId, type MachineContext, type EventPayload,
+  type GuardFn, type ActionFn, type StateListener, type InvalidEventStrategy,
+  type TransitionTarget, type TransitionDef, type StateConfig, type MachineConfig,
+  type HistoryMode, type ChoiceConfig, type JunctionConfig,
+  type StateValue, type TransitionHistoryEntry, type Service,
+} from "./state-machine";
+
+// --- Event Bus ---
+export {
+  EventBus, createEventBus,
+  type EventCallback, type EventMiddleware, type Subscription,
+  type EmittedEvent, type EventBusOptions,
+} from "./event-bus";
+
+// --- Rate Limiter ---
+export {
+  TokenBucketRateLimiter,
+  SlidingWindowLogRateLimiter,
+  SlidingWindowCounterRateLimiter,
+  FixedWindowRateLimiter,
+  LeakyBucketRateLimiter,
+  AdaptiveRateLimiter,
+  CircuitBreaker,
+  Bulkhead,
+  debounce, throttle,
+  RequestCoalescer,
+  PriorityQueue, Priority,
+  DistributedRateLimiter,
+  StatsCollector,
+  createRateLimiter,
+  type RateLimitResult, type BaseRateLimitConfig,
+  type CircuitState, type CircuitBreakerConfig, type CircuitBreakerResult,
+  type AdaptiveLimitResult, type AdaptiveLimiterOptions,
+  type BulkheadConfig, type BulkheadResult,
+  type ThrottleOptions,
+  type RateLimiterStats, type StatsTrackable,
+  type RateLimitStore, type DistributedRateLimiterConfig,
+  type PriorityQueueOptions,
+} from "./rate-limiter";
