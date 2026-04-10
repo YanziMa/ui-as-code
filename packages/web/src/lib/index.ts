@@ -3017,3 +3017,24 @@ export {
   type GestureConfig, type GestureInstance, type GestureEvent,
   type GestureType, type SwipeDirection, type Point, type GestureHandlerConfig,
 } from "./gesture";
+
+// --- i18n ---
+export {
+  t, getLocale, setLocale,
+  type Locale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+
+// --- Theme ---
+export {
+  ThemeManager, getThemeManager, useTheme,
+  LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES,
+  type ThemeConfig, type ThemeColors,
+} from "./theme";
+
+// --- Event Bus ---
+export {
+  EventBus, createEventBus,
+  type EventBusOptions, type Subscription, type EmittedEvent,
+  type EventCallback, type EventMiddleware,
+} from "./event-bus";
