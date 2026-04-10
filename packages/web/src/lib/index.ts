@@ -8072,3 +8072,48 @@ export type {
   ConfettiOptions,
   ConfettiInstance,
 } from "./confetti";
+
+// --- Image Compare ---
+export {
+  createImageCompare,
+} from "./image-compare";
+export type {
+  CompareDirection,
+  HandleStyle,
+  InteractionMode,
+  ImageCompareOptions,
+  ImageCompareInstance,
+} from "./image-compare";
+
+// --- Photo Editor ---
+export {
+  createPhotoEditor,
+  getFilterPresets,
+} from "./photo-editor";
+export type {
+  FilterName,
+  FilterPreset,
+  AdjustmentValues,
+  CropRegion,
+  TextOverlay,
+  StickerItem,
+  DrawStroke,
+  PhotoEditorOptions,
+  PhotoEditorInstance,
+} from "./photo-editor";
+
+// --- Screen Recorder ---
+export {
+  createScreenRecorder,
+  isScreenRecordingSupported,
+  isCameraAvailable,
+} from "./screen-recorder";
+export type {
+  RecorderSource,
+  OutputFormat,
+  RecorderStatus,
+  RecorderConstraints,
+  RecorderOptions,
+  RecorderStats,
+  ScreenRecorderInstance,
+} from "./screen-recorder";
