@@ -10766,3 +10766,42 @@ export type {
   ModalInstance,
   ConfirmOptions,
 } from "./modal-manager";
+
+// --- Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
