@@ -7798,3 +7798,40 @@ export type {
   SheetOptions,
   SheetInstance,
 } from "./side-sheet";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+
+// --- Dropdown Menu ---
+export {
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
+export type {
+  MenuItemType,
+  MenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
