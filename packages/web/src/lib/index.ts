@@ -9241,3 +9241,33 @@ export type {
   Rect,
   PositionResult,
 } from "./anchor-positioning";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Pull to Refresh ---
+export {
+  createPullToRefresh,
+} from "./pull-to-refresh";
+export type {
+  PullToRefreshOptions,
+  PullToRefreshInstance,
+} from "./pull-to-refresh";
+
+// --- Lazy Load ---
+export {
+  createLazyLoad,
+  initBatchLazy,
+} from "./lazy-load";
+export type {
+  LazyLoadOptions,
+  LazyLoadInstance,
+  BatchLazyOptions,
+} from "./lazy-load";
