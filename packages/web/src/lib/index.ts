@@ -11066,3 +11066,40 @@ export type {
   TextareaOptions,
   TextareaInstance,
 } from "./textarea";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+
+// --- Notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast as toastUtil,
+} from "./notification";
+export type {
+  NotificationType,
+  NotificationPosition,
+  NotificationOptions,
+  Notification,
+} from "./notification";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
