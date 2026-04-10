@@ -509,3 +509,27 @@ export {
   AuditLog, auditWrap, maskSensitiveData, AuditLogExporter,
   type AuditEvent, type AuditLogOptions, type AuditQueryFilters, type AuditStats,
 } from "./audit-log";
+export {
+  makeResizable, createSplitPane,
+  type ResizeOptions, type ResizeState, type ResizableController,
+  type SplitPaneOptions, type SplitPaneController,
+} from "./resizable";
+export {
+  OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays,
+  type OverlayType, type OverlayOptions, type OverlayInstance,
+} from "./overlay";
+export {
+  UndoHistory, type UndoItem, type UndoBranch, type UndoHistoryOptions,
+  type UndoState, type UndoChangeListener,
+} from "./undo-redo";
+export {
+  generatePassword, generatePassphrase, checkPasswordStrength,
+  isCommonPassword, hashPasswordSimple, maskPassword,
+  type PasswordGeneratorOptions, type PasswordStrengthResult,
+} from "./password";
+export {
+  AiPipeline, CostTracker, SemanticCache, AiError,
+  createPromptTemplate, diffGenerationPrompt, codeReviewPrompt, summarizePrompt,
+  type AiPipelineConfig, type AiMessage, type ContentBlock, type ToolDefinition,
+  type SendOptions, type AiResponse, type StreamChunk,
+} from "./ai-pipeline";
