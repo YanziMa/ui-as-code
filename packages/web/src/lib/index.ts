@@ -7446,3 +7446,32 @@ export type {
   BackTopOptions,
   BackTopInstance,
 } from "./back-top";
+
+// --- Anchor ---
+export {
+  createAnchor,
+} from "./anchor";
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
+
+// --- Watermark ---
+export {
+  createWatermark,
+} from "./watermark";
+export type {
+  WatermarkOptions,
+  WatermarkInstance,
+} from "./watermark";
+
+// --- Tour ---
+export {
+  createTour,
+} from "./tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour";
