@@ -7117,3 +7117,41 @@ export {
 export type {
   TreeNode,
 } from "./tree";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Resizable ---
+export {
+  makeResizable,
+  createSplitPane,
+} from "./resizable";
+export type {
+  ResizeOptions,
+  ResizeState,
+  ResizableController,
+  SplitPaneOptions,
+  SplitPaneController,
+} from "./resizable";
+
+// --- Split View ---
+export {
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+} from "./split-view";
+export type {
+  SplitDirection,
+  PaneConfig,
+  SplitViewOptions,
+  SplitViewState,
+  SplitViewInstance,
+} from "./split-view";
