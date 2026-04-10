@@ -178,3 +178,4 @@ export {
   requireEnv, getEnv, getEnvNumber, getEnvBool,
   isVercel, isServerless, getDeploymentInfo,
 } from "./env-detection";
+export { Observable, Computed, ReactiveStore } from "./observable";
