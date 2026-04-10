@@ -5105,3 +5105,40 @@ export type {
   TimePickerOptions,
   TimePickerInstance,
 } from "./time-picker";
+
+// --- Notification System ---
+export { NotificationCenter, PushNotificationManager } from "./notification-system";
+export type {
+  Notification,
+  NotificationConfig,
+  NotificationType,
+  NotificationPriority,
+} from "./notification-system";
+
+// --- Onboarding Tour ---
+export { TourManager, createTour } from "./onboarding-tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./onboarding-tour";
+
+// --- Keyboard Shortcuts ---
+export {
+  ShortcutManager,
+  ShortcutRecorder,
+  ShortcutOverlay,
+  commonShortcuts,
+  eventToCombo,
+  normalizeKey,
+  comboToString,
+  parseCombo,
+  comboMatches,
+  comboHash,
+} from "./keyboard-shortcuts";
+export type {
+  KeyCombo,
+  ShortcutBinding,
+  ShortcutScope,
+  RecordedSequence,
+} from "./keyboard-shortcuts";
