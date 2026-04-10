@@ -3932,3 +3932,15 @@ export type { ScrollItem, VisibleRange, ScrollerConfig, ScrollerState, ScrollToO
 // --- Infinite Scroll ---
 export { InfiniteScroll } from "./infinite-scroll";
 export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
+
+// --- Skeleton ---
+export { createSkeleton, createTextSkeleton, createHeadingSkeleton, createAvatarSkeleton, createCardSkeleton, createTableSkeleton, wrapWithSkeleton } from "./skeleton";
+export type { SkeletonOptions, SkeletonTextOptions, SkeletonAvatarOptions, SkeletonCardOptions, SkeletonTableOptions } from "./skeleton";
+
+// --- Avatar ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar";
+
+// --- Badge ---
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeOptions, BadgeVariant, BadgePosition, BadgeSize, StatusDotOptions } from "./badge";
