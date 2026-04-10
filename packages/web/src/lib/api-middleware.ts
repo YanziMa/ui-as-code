@@ -103,12 +103,17 @@ export function requireAuth(req: NextRequest) {
 
 // ========== Response Helpers ==========
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Vary": "Origin",
+};
+
 export function apiError(message: string, status: number = 400): NextResponse {
-  return NextResponse.json({ error: message }, { status });
+  return NextResponse.json({ error: message }, { status, headers: CORS_HEADERS });
 }
 
 export function apiSuccess<T>(data: T, status: number = 200): NextResponse {
-  return NextResponse.json({ data }, { status });
+  return NextResponse.json({ data }, { status, headers: CORS_HEADERS });
 }
 
 // ========== Standard API Wrapper ==========
