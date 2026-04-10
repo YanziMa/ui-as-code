@@ -14040,3 +14040,32 @@ export type {
   PopoverOptions,
   PopoverInstance,
 } from "./popover";
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+export {
+  createSplitter,
+} from "./drawer";
+export type {
+  SplitterOrientation,
+  SplitterPaneOptions,
+  SplitterOptions,
+  SplitterInstance,
+} from "./drawer";
+export {
+  createDialog,
+  alertDialog,
+  confirmDialog,
+  dangerDialog,
+} from "./dialog";
+export type {
+  DialogVariant,
+  DialogOptions,
+  DialogInstance,
+} from "./dialog";
