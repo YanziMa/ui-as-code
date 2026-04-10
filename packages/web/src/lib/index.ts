@@ -4999,3 +4999,33 @@ export type {
   SpinnerSize,
   SpinnerOptions,
 } from "./spinner";
+
+// --- Context Menu ---
+export { ContextMenuManager } from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Tab Bar ---
+export { createTabBar } from "./tab-bar";
+export type {
+  TabItem,
+  TabSize,
+  TabVariant,
+  TabBarOptions,
+  TabBarInstance,
+} from "./tab-bar";
+
+// --- Collapse ---
+export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
