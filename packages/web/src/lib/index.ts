@@ -2589,3 +2589,36 @@ export {
   type ContrastResult, type FocusableElement,
   type HeadingInfo, type LandmarkInfo,
 } from "./accessibility-utils";
+
+// --- i18n System ---
+export {
+  I18nEngine, initI18n, getI18n, t,
+  parseLocale, getLocaleDirection, isSameLanguage, matchLocale,
+  getBrowserLocales,
+  getPluralForm,
+  formatNumber, formatCurrency, formatPercent, formatCompact, formatBytes,
+  formatDate, formatRelativeTime, formatDateRange,
+  type Locale, type LocaleDirection, type PluralRule,
+  type MessageCatalog, type Namespace, type I18nConfig,
+  type InterpolationContext, type FormatOptions, type DateFormatOptions,
+  type I18nStats,
+} from "./i18n-system";
+
+// --- Logger ---
+export {
+  Logger, log, apiLog, dbLog, extLog,
+  setGlobalLogLevel, getGlobalLogLevel,
+  type LogLevel,
+} from "./logger";
+
+// --- Performance Utils ---
+export {
+  PerfObserver,
+  measureSync, measureAsync, perfMark, perfMeasure, measureBetween,
+  FPSCounter, getMemoryUsage, getMemoryPercent, MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming, collectWebVitals,
+  getResourceTiming, findSlowResources, CustomMetric,
+  type TimingResult, type MemoryUsage, type FPSStats,
+  type WebVitals, type NavigationTiming,
+} from "./performance-utils";
