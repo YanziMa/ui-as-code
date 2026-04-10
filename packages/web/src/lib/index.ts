@@ -12589,3 +12589,39 @@ export type {
   DividerStyle,
   DividerOptions,
 } from "./divider";
+
+// --- Spinner ---
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+} from "./spinner";
+export type {
+  SpinnerVariant,
+  SpinnerSize,
+  SpinnerOptions,
+} from "./spinner";
+
+// --- Skeleton Loader ---
+export {
+  createSkeleton,
+} from "./skeleton-loader";
+export type {
+  SkeletonShape,
+  SkeletonAnimation,
+  SkeletonItem,
+  SkeletonOptions,
+  SkeletonInstance,
+} from "./skeleton-loader";
+
+// --- Back to Top ---
+export {
+  createBackToTop,
+} from "./back-to-top";
+export type {
+  BttPosition,
+  BttSize,
+  BttShape,
+  BackToTopOptions,
+  BackToTopInstance,
+} from "./back-to-top";
