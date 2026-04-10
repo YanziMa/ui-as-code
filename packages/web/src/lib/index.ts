@@ -1809,3 +1809,29 @@ export {
   type DeadLetterEntry, type BusStats, type BusConfig,
   type BusStorageAdapter, type Topic, type MessageId, type SubscriberId,
 } from "./pubsub-bus";
+
+// --- Advanced Rate Limiter ---
+export {
+  AdvancedRateLimiter, createAdvancedRateLimiter,
+  createRateLimitMiddleware,
+  type LimitAlgorithm, type RateLimitResult, type RateLimitConfig,
+  type MultiDimensionalLimit, type RateLimiterMetrics,
+  type DistributedCoordinator,
+} from "./rate-limiter-advanced";
+
+// --- Inverted Index (Full-Text Search) ---
+export {
+  InvertedIndex, createInvertedIndex,
+  type SearchDocument, type SearchResult, type SearchOptions,
+  type FacetResult, type IndexStats, type AutocompleteOptions,
+  type Suggestion, type DocumentId, type Term,
+} from "./inverted-index";
+
+// --- Advanced Circuit Breaker ---
+export {
+  AdvancedCircuitBreaker, CircuitBreakerRegistry,
+  createCircuitBreaker, createCircuitBreakerRegistry,
+  type CircuitState, type CircuitEvent, type CircuitBreakerConfig,
+  type CircuitBreakerState, type CircuitBreakerMetrics,
+  type CircuitBreakerEventDetail, type CircuitResult,
+} from "./circuit-breaker-advanced";
