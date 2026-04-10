@@ -3062,3 +3062,28 @@ export {
   type ResizeObserverOptions, type ResizeObserverInstance,
   type ResizeObserverEntry, type ResizeBox,
 } from "./resize-observer";
+
+// --- Performance Observer ---
+export {
+  PerformanceWatcher, createPerformanceObserver,
+  measureAsync, measureSync, reportWebVitals, getPageLoadMetrics,
+  type PerformanceObserverOptions, type PerformanceObserverInstance,
+  type NormalizedPerformanceEntry, type CoreWebVitals,
+  type ResourceTimingSummary, type PerformanceEntryType,
+} from "./performance-observer";
+
+// --- Clipboard ---
+export {
+  copyToClipboard, copyRichToClipboard,
+  readFromClipboard, readRichFromClipboard,
+  isClipboardAvailable, canReadClipboard, watchClipboard,
+  type ClipboardData, type ClipboardOptions,
+} from "./clipboard";
+
+// --- Keyboard Shortcuts ---
+export {
+  KeyboardManager, createKeyboardManager,
+  formatShortcut, matchesShortcut,
+  type KeyBinding, type KeyChord, type KeyboardManagerOptions,
+  type KeyboardManagerInstance,
+} from "./keyboard";
