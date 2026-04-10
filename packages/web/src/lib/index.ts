@@ -6925,3 +6925,52 @@ export type {
   KeyboardManagerOptions,
   KeyboardManagerInstance,
 } from "./keyboard";
+
+// --- Drag & Drop ---
+export {
+  createDropZone,
+  createSortableList,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  getFileInfo,
+} from "./drag-drop";
+export type {
+  DragItem,
+  DropZoneConfig,
+  DndState,
+  DropZoneController,
+  FileInfo,
+  SortableItem,
+  SortableConfig,
+  SortableController,
+} from "./drag-drop";
+
+// --- Virtual Scroll ---
+export {
+  createVirtualScroll,
+  createVirtualGrid,
+} from "./virtual-scroll";
+export type {
+  VirtualScrollItem,
+  VirtualScrollOptions,
+  VirtualScrollState,
+  VirtualScrollController,
+  VirtualGridOptions,
+  VirtualGridState,
+  VirtualGridController,
+} from "./virtual-scroll";
+
+// --- Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
