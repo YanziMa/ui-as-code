@@ -5320,3 +5320,19 @@ export type {
   RouteInfo,
   NavigationResult,
 } from "./router";
+
+// --- Theme System ---
+export { ThemeManager, createThemeManager, getThemeManager, readCSSVar, hexToRgb, luminance, contrastRatio } from "./theme-system";
+export type {
+  ThemeMode,
+  ColorScheme,
+  DesignToken,
+  ThemeTokens,
+  ThemeConfig,
+} from "./theme-system";
+
+// --- Accessibility ---
+export { progressBarAttrs, switchAttrs, liveRegion, announce, skipLinkAttrs, SKIP_LINK_ID, prefersReducedMotion, animationDuration, focusTrap, srOnly, ROLES } from "./accessibility";
+
+// --- Storage ---
+export { storageGet, storageSet, storageRemove, storageKeys, storageClear } from "./storage";
