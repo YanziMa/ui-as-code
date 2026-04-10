@@ -2123,3 +2123,28 @@ export {
   type RateLimitConfig, type RateLimitContext, type RateLimitMetrics,
   type StorageAdapter,
 } from "./rate-limiter-v2";
+
+// --- DOM Observer ---
+export {
+  DomObserverManager, takeSnapshot, compareSnapshots,
+  createRouteChangeDetector, createLazyLoader,
+  type ObserveTarget, type MutationOptions, type IntersectionOptions,
+  type ResizeOptions, type MutationRecordEx, type DomSnapshot,
+  type ObserverCallbacks, type ObserverStats,
+} from "./dom-observer";
+
+// --- URL Pattern Matcher ---
+export {
+  compilePattern, matchUrl, quickMatch, UrlRouter,
+  generatePath, validateParams,
+  type RouteMatch, type RoutePattern, type MatchOptions,
+  type RouterConfig,
+} from "./url-pattern-matcher";
+
+// --- Change Detector ---
+export {
+  ChangeDetector, diffValues, deepEquals, getChangedPaths,
+  getChangeMap, applyChanges, simpleHash,
+  type ChangeType, type ChangeInfo, type DiffResult, type Snapshot,
+  type DetectorOptions,
+} from "./change-detector";
