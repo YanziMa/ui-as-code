@@ -12930,3 +12930,31 @@ export type {
   WorkflowExecution,
   DependencyTreeNode,
 } from "./flow-graph";
+export {
+  createKanbanBoard,
+} from "./kanban-board";
+export type {
+  KanbanCard,
+  KanbanColumn,
+  KanbanBoardOptions,
+  KanbanBoardInstance,
+} from "./kanban-board";
+export {
+  createGanttChart,
+} from "./gantt-chart";
+export type {
+  GanttTask,
+  GanttDependency,
+  GanttChartOptions,
+  GanttChartInstance,
+} from "./gantt-chart";
+export {
+  createTimeline,
+  TimelineManager,
+} from "./timeline";
+export type {
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+  TimelineItemStatus,
+} from "./timeline";
