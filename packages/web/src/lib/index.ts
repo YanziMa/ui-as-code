@@ -7577,3 +7577,43 @@ export type {
   StatCardOptions,
   StatisticsInstance,
 } from "./statistics";
+
+// --- Drawer ---
+export {
+  createDrawer,
+} from "./drawer";
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
+
+// --- Collapse ---
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+} from "./collapse";
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
+
+// --- Steps ---
+export {
+  StepsManager,
+  createSteps,
+} from "./steps";
+export type {
+  StepStatus,
+  StepItem,
+  StepsOrientation,
+  StepsVariant,
+  StepsOptions,
+  StepsInstance,
+} from "./steps";
