@@ -6,6 +6,7 @@ import { ErrorBoundary } from "@/components/error-boundary";
 import { ToastProvider } from "@/components/toast";
 import { ErrorMonitor } from "@/components/error-monitor";
 import { BackToTop } from "@/components/back-to-top";
+import { EmbedBadge } from "@/components/embed-badge";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -122,6 +123,9 @@ export default function RootLayout({
                     >
                       GitHub
                     </a>
+                  </div>
+                  <div className="mt-4 flex justify-center">
+                    <EmbedBadge compact />
                   </div>
                 </div>
               </div>
