@@ -14069,3 +14069,37 @@ export type {
   DialogOptions,
   DialogInstance,
 } from "./dialog";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+} from "./collapse";
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
