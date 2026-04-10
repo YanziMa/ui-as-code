@@ -696,3 +696,23 @@ export {
   type WSMessage, type WSConfig, type RoomConfig, type PresenceEvent,
   type AckRequest, type ConnectionInfo,
 } from "./websocket-utils";
+export {
+  generateWebsiteSchema, generateArticleSchema, generateBreadcrumbSchema,
+  generateOrganizationSchema, generateFaqSchema, generateSoftwareSchema,
+  generateOpenGraph, generateTwitterCard, generateRssFeed, generateSitemap,
+  generateSitemapIndex, generateRobotsTxt, generateManifest,
+  injectStructuredData, removeStructuredData,
+  type JsonLdContext, type OpenGraphData, type TwitterCardData,
+  type RssItem, type RssFeedOptions, type SitemapEntry, type WebAppManifest,
+} from "./structured-data";
+export {
+  easings, getEasing, springAnimate, AnimationTimeline,
+  createScrollAnimation, staggerElements, animateCounter, createParallax,
+  type EasingFunction, type SpringConfig, type SpringState,
+  type Keyframe, type AnimationTrack, type ScrollAnimationConfig,
+} from "./animation-engine";
+export {
+  I18nEngine, detectBrowserLocale, loadLocale, defineMessages,
+  getPluralRule,
+  type LocaleConfig, type I18nMessage, type I18nOptions, type PluralRule,
+} from "./i18n-engine";
