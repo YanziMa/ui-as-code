@@ -115,6 +115,7 @@ export default function RootLayout({
                     <a href="/status" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Status</a>
                     <a href="/privacy" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Privacy</a>
                     <a href="/terms" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Terms</a>
+                    <a href="/getting-started" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Guide</a>
                     <a
                       href="https://github.com/yanzima/ui-as-code"
                       target="_blank"
