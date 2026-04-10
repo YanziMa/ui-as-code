@@ -3908,3 +3908,15 @@ export {
   type DragItem, type DropZoneConfig, type DndState, type DropZoneController,
   type SortableItem, type SortableConfig, type SortableController, type FileInfo,
 } from "./drag-drop";
+
+// --- Step Wizard ---
+export { StepWizardManager, createStepWizard } from "./step-wizard";
+export type { WizardStep, WizardOptions, WizardInstance } from "./step-wizard";
+
+// --- Stats Card ---
+export { StatsCardManager, createStatsCard } from "./stats-card";
+export type { StatsCardOptions, StatsCardInstance, TrendDirection, StatsVariant, SparklinePoint } from "./stats-card";
+
+// --- Waterfall / Pipeline ---
+export { runPipeline, parallel, waterfall, raceWithCleanup } from "./waterfall";
+export type { PipelineStep, PipelineContext, PipelineResult } from "./waterfall";
