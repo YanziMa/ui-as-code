@@ -2963,3 +2963,21 @@ export {
   LoadingSpinnerManager, createLoadingSpinner,
   type LoadingSpinnerOptions, type SpinnerInstance, type SpinnerType, type SpinnerSize,
 } from "./loading-spinner";
+
+// --- Sidebar ---
+export {
+  SidebarManager, createSidebar,
+  type SidebarOptions, type SidebarInstance, type SidebarItem, type SidebarGroup,
+} from "./sidebar";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager, createBreadcrumb,
+  type BreadcrumbOptions, type BreadcrumbInstance, type BreadcrumbItem,
+} from "./breadcrumb";
+
+// --- Navbar ---
+export {
+  NavbarManager, createNavbar,
+  type NavbarOptions, type NavbarInstance, type NavItem, type UserMenuConfig,
+} from "./navbar";
