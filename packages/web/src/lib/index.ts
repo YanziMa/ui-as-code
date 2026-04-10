@@ -3728,3 +3728,21 @@ export {
   addPageBreakBefore, addPageBreakAfter, avoidBreakInside,
   type PrintOptions, type PrintManagerInstance,
 } from "./print";
+
+// --- Anchor Nav ---
+export {
+  createAnchorNav,
+  type AnchorLink, type AnchorNavOptions, type AnchorNavInstance,
+} from "./anchor-nav";
+
+// --- Feature Tour ---
+export {
+  FeatureTourManager, createFeatureTour,
+  type TourStep, type TourOptions, type TourInstance,
+} from "./feature-tour";
+
+// --- Notification Bell ---
+export {
+  createNotificationBell,
+  type NotificationItem, type NotificationBellOptions, type NotificationBellInstance,
+} from "./notification-bell";
