@@ -245,6 +245,21 @@ const styles = `
     color: #991b1b;
     line-height: 1.5;
   }
+  .uac-error-banner .uac-retry-btn {
+    margin-top: 6px;
+    display: inline-block;
+    padding: 3px 10px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .uac-error-banner .uac-retry-btn:hover {
+    background: #b91c1c;
+  }
   .uac-success-banner {
     background: #f0fdf4;
     border: 1px solid #bbf7d0;
@@ -612,6 +627,11 @@ function InspectorOverlay() {
             {error && (
               <div className="uac-error-banner">
                 <strong>Error:</strong> {error}
+                {!loading && !diffResult && (
+                  <button className="uac-retry-btn" onClick={generateDiff}>
+                    Retry
+                  </button>
+                )}
               </div>
             )}
             {successMsg && (
