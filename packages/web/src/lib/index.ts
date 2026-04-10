@@ -603,3 +603,27 @@ export {
   ThemeManager, getThemeManager, useTheme, LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES,
   type ThemeConfig, type ThemeColors,
 } from "./theme-v2";
+export {
+  normalizePointerEvent, pointDistance, midpoint, angleBetween, rotatePoint, lerpPoint,
+  createGestureRecognizer,
+  TouchTracker,
+  type Point, type PointerEvent, type GestureConfig, type SwipeGesture,
+  type PinchGesture, type RotationGesture, type GestureHandler, type GestureController,
+  type TouchChange,
+} from "./pointer";
+export {
+  parseUrl, buildUrl, getQueryParams, buildQueryString, setQueryParam, removeQueryParam,
+  isSameOrigin, isAbsoluteUrl, resolveUrl, getDomain, getPathname, getHash,
+  isHttps, isDataUri, encodeUriComponent, decodeUriComponent, joinPath, normalizePath,
+  getUrlExtension, stripQueryAndHash, urlsEqual, parseMailtoLink, buildMailtoLink,
+  isValidUrl, sanitizeUrl,
+  type ParsedUrl, type UrlParts,
+} from "./url-builder";
+export {
+  CanvasDrawEngine, BrushEngine, ShapeEngine, TextEngine, EraserEngine,
+  LayerManager, HistoryManager, ExportManager, ColorPickerUI, ToolPaletteUI,
+  createDrawingApp,
+  type DrawOptions, type Point2D, type Rect, type BrushSettings, type ShapeSettings,
+  type TextSettings, type Layer, type HistoryEntry, type ExportOptions,
+  type DrawingTool, type ColorStop, type ToolConfig, type DrawingAppState,
+} from "./canvas-draw";
