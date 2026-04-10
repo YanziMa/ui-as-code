@@ -3808,3 +3808,21 @@ export {
   generatePaletteAdvanced,
   type RgbColor, type HslColor, type Palette,
 } from "./color-picker";
+
+// --- File Upload ---
+export {
+  FileUploadManager, createFileUpload,
+  type FileUploadOptions, type FileUploadInstance, type UploadFile,
+} from "./file-upload";
+
+// --- QR Code ---
+export {
+  generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput,
+} from "./qr-code";
+
+// --- Signature Pad ---
+export {
+  SignaturePadManager, createSignaturePad,
+  type SignaturePadOptions, type SignaturePadInstance,
+  type StrokePoint, type Stroke,
+} from "./signature-pad";
