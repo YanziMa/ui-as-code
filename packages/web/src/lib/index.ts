@@ -3375,3 +3375,26 @@ export {
   CodeBlockManager, createCodeBlock,
   type CodeBlockOptions, type CodeBlockInstance, type CodeTheme,
 } from "./code-block";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown, renderToHtml, mdToHtml,
+  generateToc, renderToc,
+  extractFrontMatter, extractText, countWords, readingTime,
+  type MdNode, type MdNodeType, type MdRenderOptions,
+  type TocEntry, type FrontMatter,
+} from "./markdown-renderer";
+
+// --- Rating ---
+export {
+  RatingManager, createRating,
+  type RatingOptions, type RatingInstance,
+  type StarIconType,
+} from "./rating";
+
+// --- Steps ---
+export {
+  StepsManager, createSteps,
+  type StepsOptions, type StepsInstance,
+  type StepItem, type StepStatus, type StepsOrientation, type StepsVariant,
+} from "./steps";
