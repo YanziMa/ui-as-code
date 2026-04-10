@@ -12798,3 +12798,44 @@ export type {
   StatCardVariant,
   StatCardOptions,
 } from "./stat-card";
+
+// --- Feature Tour ---
+export {
+  FeatureTourManager,
+  createFeatureTour,
+} from "./feature-tour";
+export type {
+  TourStep as FeatureTourStep,
+  TourOptions as FeatureTourOptions,
+  TourInstance as FeatureTourInstance,
+} from "./feature-tour";
+
+// --- Onboarding Tour ---
+export {
+  TourManager,
+  createTour,
+} from "./onboarding-tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./onboarding-tour";
+
+// --- Hotkey Manager ---
+export {
+  HotkeyManager,
+  normalizeKeyEvent,
+  parseCombo,
+  buildCombo,
+  combosEqual,
+} from "./hotkey-manager";
+export type {
+  KeyModifier,
+  Scope,
+  HotkeyPriority,
+  HotkeyBinding,
+  HotkeyEvent,
+  RecordedHotkey,
+  HotkeyHint,
+  HotkeyStats,
+} from "./hotkey-manager";
