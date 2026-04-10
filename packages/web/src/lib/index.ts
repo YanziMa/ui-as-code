@@ -7692,3 +7692,38 @@ export type {
   ResultPageOptions,
   ResultPageInstance,
 } from "./result-page";
+
+// --- List ---
+export {
+  createList,
+} from "./list";
+export type {
+  ListSelectionMode,
+  ListVariant,
+  ListItem,
+  ListOptions,
+  ListInstance,
+} from "./list";
+
+// --- Grid ---
+export {
+  createGrid,
+} from "./grid";
+export type {
+  GridGap,
+  GridJustify,
+  GridAlign,
+  GridItem,
+  GridOptions,
+  GridInstance,
+} from "./grid";
+
+// --- Virtual List ---
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
