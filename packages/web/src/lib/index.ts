@@ -3297,3 +3297,24 @@ export {
   createDivider, hDivider, vDivider, labeledDivider, sectionDivider,
   type DividerOptions, type DividerOrientation, type DividerStyle,
 } from "./divider";
+
+// --- Accordion ---
+export {
+  AccordionManager, createAccordion,
+  type AccordionItem, type AccordionOptions, type AccordionInstance,
+  type AccordionMode,
+} from "./accordion";
+
+// --- Tabs ---
+export {
+  TabsManager, createTabs,
+  type TabItem, type TabsOptions, type TabsInstance,
+  type TabOrientation, type TabVariant,
+} from "./tabs";
+
+// --- Collapse ---
+export {
+  CollapseManager, createCollapse, createCollapseGroup,
+  type CollapseOptions, type CollapseInstance,
+  type CollapseSize, type CollapseVariant,
+} from "./collapse";
