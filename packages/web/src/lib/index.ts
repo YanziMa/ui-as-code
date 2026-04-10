@@ -4323,3 +4323,30 @@ export type {
   AnchorNavOptions,
   AnchorNavInstance,
 } from "./anchor-nav";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+
+// --- Drawer ---
+export { createDrawer } from "./drawer";
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
