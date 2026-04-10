@@ -6355,3 +6355,95 @@ export type {
   CommandHistoryEntry,
   CommandManagerOptions,
 } from "./command";
+
+// --- Virtual DOM ---
+export {
+  h,
+  createTextVNode,
+  Fragment,
+  createComponentVNode,
+  createElement,
+  applyProps,
+  diff,
+  computePropsDiff,
+  patch,
+  mount,
+  updateTree,
+  unmount,
+  enqueueUpdate,
+  startBatch,
+  endBatch,
+  flushBatchedUpdates,
+  renderWithErrorBoundary,
+  scheduler,
+  beginFiberWork,
+  memo,
+  shallowEqual,
+  createContext,
+  readContext,
+  subscribeToContext,
+  createDevToolsHook,
+  registerRendererWithDevTools,
+  createRenderer,
+  Priority,
+  PatchType,
+  PROPERTY_ATTRIBUTES,
+  EVENT_HANDLER_RE,
+} from "./virtual-dom";
+export type {
+  VNode,
+  VNodeType,
+  VNodeProps,
+  ComponentFunction,
+  ComponentLifecycle,
+  ComponentInstance,
+  ErrorInfo,
+  Patch,
+  PropsDiff,
+  SyntheticEvent,
+  Context,
+  MemoCompareFunction,
+  MemoizedComponent,
+  DevToolsHook,
+  VNodeWork,
+  ScheduledWork,
+  RendererConfig,
+  VDOMRendererOptions,
+} from "./virtual-dom";
+
+// --- Template Engine ---
+export {
+  TemplateEngine,
+  registerBuiltinHelpers,
+  unescapeHtml,
+  createTemplateEngine,
+  renderTemplate,
+} from "./template-engine";
+export type {
+  TemplateContext,
+  TemplateOptions,
+  TemplateError,
+  PartialTemplate,
+  HelperFunction,
+} from "./template-engine";
+
+// --- Data Structures ---
+export {
+  LinkedList,
+  DoublyLinkedList,
+  Stack,
+  Queue as DSQueue,
+  BinaryHeap,
+  Trie,
+  LRUCache,
+  BloomFilter,
+  RingBuffer,
+} from "./data-structures";
+export type {
+  ListNode,
+  DListNode,
+  HeapType,
+  HeapEntry,
+  TrieNode,
+  LRUCacheEntry,
+} from "./data-structures";
