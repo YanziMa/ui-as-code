@@ -83,6 +83,21 @@ export default function Home() {
               AI-Powered
             </div>
           </div>
+
+          {/* Stats bar */}
+          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            {[
+              { value: "8+", label: "SaaS Sites Supported", icon: "🌐" },
+              { value: "10", label: "API Endpoints", icon: "📡" },
+              { value: "0", label: "Code Lines Written by You", icon: "✨" },
+              { value: "∞", label: "Possibilities", icon: "🚀" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-50">{stat.value}</div>
+                <div className="mt-1 text-xs text-zinc-500">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
