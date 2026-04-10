@@ -8025,3 +8025,50 @@ export type {
   AnchorOptions,
   AnchorInstance,
 } from "./anchor";
+
+// --- Color Thief ---
+export {
+  getDominantColor,
+  getPalette,
+  getPaletteWithCounts,
+  getColorAnalysis,
+  generateScheme,
+  colorToCss,
+  colorToHex,
+  parseColor,
+} from "./color-thief";
+export type {
+  Color,
+  ColorWithCount,
+  ColorThiefOptions,
+} from "./color-thief";
+
+// --- Lottie Player ---
+export {
+  createLottiePlayer,
+  loadLottieData,
+} from "./lottie-player";
+export type {
+  LottieData,
+  LottieLayer,
+  LottiePlayerOptions,
+  LottiePlayerInstance,
+  AnimatableValue,
+  Keyframe,
+  BezierPathData,
+} from "./lottie-player";
+
+// --- Confetti ---
+export {
+  createConfetti,
+  confetti,
+  confettiFromElement,
+} from "./confetti";
+export type {
+  ParticleShape,
+  Particle,
+  ConfettiColors,
+  ConfettiPhysics,
+  ConfettiOptions,
+  ConfettiInstance,
+} from "./confetti";
