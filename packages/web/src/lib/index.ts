@@ -3231,3 +3231,24 @@ export {
   type TooltipOptions, type TooltipInstance,
   type TooltipPlacement, type TooltipTrigger,
 } from "./tooltip";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type Command, type CommandCategory, type CommandPaletteConfig,
+  type CommandPaletteState,
+} from "./command-palette";
+
+// --- Avatar ---
+export {
+  createAvatar, createAvatarGroup, getInitials,
+  type AvatarOptions, type AvatarGroupOptions,
+  type AvatarSize, type AvatarShape,
+} from "./avatar";
+
+// --- Hotkeys Display ---
+export {
+  HotkeyDisplayRenderer, renderHotkey, hotkeyHtml,
+  type KeyCombo, type KeyDisplayStyle, type HotkeyDisplayOptions,
+  type HotkeyDisplayInstance,
+} from "./hotkeys-display";
