@@ -12549,3 +12549,43 @@ export type {
   AvatarOptions,
   AvatarGroupOptions,
 } from "./avatar";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
+
+// --- Chip ---
+export {
+  createChip,
+  createChipGroup,
+} from "./chip";
+export type {
+  ChipSize,
+  ChipVariant,
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chip";
+
+// --- Divider ---
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+} from "./divider";
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider";
