@@ -9349,3 +9349,39 @@ export type {
   ToastInstance,
   ToastManagerConfig,
 } from "./toast";
+
+// --- Accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- Modal ---
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
