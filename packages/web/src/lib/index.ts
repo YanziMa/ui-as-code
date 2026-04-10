@@ -3988,3 +3988,15 @@ export type { TextareaOptions, TextareaInstance, TextareaSize, TextareaState } f
 // --- Select ---
 export { SelectManager, createSelect } from "./select";
 export type { SelectOptions, SelectInstance, SelectOption } from "./select";
+
+// --- Button ---
+export { createButton, createButtonGroup } from "./button";
+export type { ButtonOptions, ButtonGroupOptions, ButtonGroupInstance, ButtonVariant, ButtonSize } from "./button";
+
+// --- Card ---
+export { createCard } from "./card";
+export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOptions, CardImageOptions } from "./card";
+
+// --- List ---
+export { createList } from "./list";
+export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list";
