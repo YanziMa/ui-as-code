@@ -3887,3 +3887,24 @@ export {
   type ToastOptions, type Toast, type ToastAction,
   type ToastType, type ToastPosition, type ToastManagerOptions, type ToastManagerInstance,
 } from "./toast-manager";
+
+// --- Split Pane ---
+export {
+  createSplitPane,
+  type SplitPaneOptions, type SplitPaneInstance,
+  type SplitOrientation, type SplitCollapseDirection,
+} from "./split-pane";
+
+// --- Resizable ---
+export {
+  makeResizable, createSplitPane as createSplitPaneAlt,
+  type ResizeOptions, type ResizeState, type ResizableController,
+} from "./resizable";
+
+// --- Drag & Drop ---
+export {
+  createDropZone, readFileAsText, readFileAsDataURL, readFileAsArrayBuffer, getFileInfo,
+  createSortableList,
+  type DragItem, type DropZoneConfig, type DndState, type DropZoneController,
+  type SortableItem, type SortableConfig, type SortableController, type FileInfo,
+} from "./drag-drop";
