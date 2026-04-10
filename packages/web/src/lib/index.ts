@@ -13729,3 +13729,34 @@ export type {
   SidebarOptions,
   SidebarInstance,
 } from "./sidebar";
+export {
+  createHeader,
+} from "./header";
+export type {
+  HeaderSize,
+  HeaderVariant,
+  HeaderAction,
+  HeaderTab,
+  HeaderOptions,
+  HeaderInstance,
+} from "./header";
+export {
+  createFooter,
+} from "./footer";
+export type {
+  FooterLink,
+  FooterColumn,
+  SocialLink,
+  FooterOptions,
+  FooterInstance,
+} from "./footer";
+export {
+  createLayout,
+} from "./layout";
+export type {
+  LayoutMode,
+  SidebarPosition as LayoutSidebarPosition,
+  LayoutRegion,
+  LayoutOptions,
+  LayoutInstance,
+} from "./layout";
