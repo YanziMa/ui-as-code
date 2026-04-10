@@ -2923,3 +2923,21 @@ export {
   AlertManager, createAlert,
   type AlertOptions, type AlertInstance, type AlertSeverity,
 } from "./alert-banner";
+
+// --- Toast ---
+export {
+  ToastManager, getToastManager, showToast,
+  type ToastOptions, type ToastInstance, type ToastType, type ToastPosition, type ToastManagerConfig,
+} from "./toast";
+
+// --- Image Cropper ---
+export {
+  ImageCropperManager, createImageCropper,
+  type ImageCropperOptions, type ImageCropperInstance, type CropRegion, type AspectRatio,
+} from "./image-cropper";
+
+// --- File Upload ---
+export {
+  FileUploadManager, createFileUpload,
+  type FileUploadOptions, type FileUploadInstance, type UploadFile,
+} from "./file-upload";
