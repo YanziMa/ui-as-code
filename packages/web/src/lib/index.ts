@@ -8550,3 +8550,38 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+
+// --- Breadcrumb Navigation ---
+export {
+  createBreadcrumb,
+} from "./breadcrumb-nav";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb-nav";
+
+// --- Skeleton Loader ---
+export {
+  createSkeleton,
+} from "./skeleton-loader";
+export type {
+  SkeletonShape,
+  SkeletonAnimation,
+  SkeletonItem,
+  SkeletonOptions,
+  SkeletonInstance,
+} from "./skeleton-loader";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
