@@ -12330,3 +12330,46 @@ export type {
   SwitchOptions,
   SwitchInstance,
 } from "./switch";
+
+// --- Dropdown Menu ---
+export {
+  createDropdown,
+} from "./dropdown";
+export type {
+  DropdownPlacement,
+  DropdownItem,
+  DropdownSeparator,
+  DropdownGroup,
+  DropdownEntry,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown";
+
+// --- Checkbox & Radio ---
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+} from "./checkbox";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOptions,
+  CheckboxInstance,
+  RadioOptions,
+  RadioInstance,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox";
+
+// --- Radio Group ---
+export {
+  createRadioGroup,
+} from "./radio-group";
+export type {
+  RadioSize,
+  RadioVariant,
+  RadioOption,
+  RadioGroupOptions,
+  RadioGroupInstance,
+} from "./radio-group";
