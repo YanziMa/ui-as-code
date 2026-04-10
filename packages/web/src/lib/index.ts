@@ -4287,3 +4287,15 @@ export type {
   CommandMenuOptions,
   CommandMenuInstance,
 } from "./command-menu";
+
+// --- Split Pane ---
+export { createSplitPane } from "./split-pane";
+export type { SplitOrientation, SplitCollapseDirection, SplitPaneOptions, SplitPaneInstance } from "./split-pane";
+
+// --- Resizable ---
+export { makeResizable, createSplitPane as createSplitPaneAlt } from "./resizable";
+export type { ResizeOptions, ResizeState, ResizableController } from "./resizable";
+
+// --- Tour Guide ---
+export { TourManager, createTour } from "./tour-guide";
+export type { TourStep, TourOptions, TourInstance } from "./tour-guide";
