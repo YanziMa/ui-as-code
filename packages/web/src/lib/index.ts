@@ -9081,3 +9081,47 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  extractText,
+  countWords,
+  readingTime,
+  mdToHtml,
+} from "./markdown-renderer";
+export type {
+  MdNodeType,
+  MdNode,
+  MdRenderOptions,
+  TocEntry,
+  FrontMatter,
+} from "./markdown-renderer";
+
+// --- Avatar Group ---
+export {
+  AvatarGroupManager,
+  createAvatarGroup,
+} from "./avatar-group";
+export type {
+  AvatarSize,
+  StackDirection,
+  AvatarItem,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+} from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
