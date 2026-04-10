@@ -444,3 +444,37 @@ export {
   GitHubWebhookParser, StripeWebhookParser,
   isWebhookRequest, getWebhookSource,
 } from "./webhook";
+export {
+  createTableState, getSortedData, getFilteredData, getPaginatedData,
+  getCellValue, applyFilterOperator, toggleSort, setSearchTerm, toggleFilter,
+  goToPage, setPageSize, toggleRowSelection, toggleSelectAll, toggleRowExpand,
+  resetTable, exportTableAsCsv,
+  type Column, type TableState, type SortState, type FilterState,
+  type FilterOperator, type PaginationState, type SelectionState,
+} from "./table";
+export {
+  NotificationManager, getNotificationManager, toast,
+  type Notification, type NotificationType, type NotificationOptions,
+  type NotificationPosition,
+} from "./notification";
+export {
+  createDropZone, readFileAsText, readFileAsDataURL, readFileAsArrayBuffer,
+  getFileInfo, createSortableList,
+  type DragItem, type DropZoneConfig, type DndState, type DropZoneController,
+  type SortableItem, type SortableConfig, type SortableController, type FileInfo,
+} from "./drag-drop";
+export { PdfBuilder, type PdfOptions, type PdfTextOptions } from "./pdf";
+export {
+  I18nProvider, useI18n, useTranslation, useFormattedDate,
+  useFormattedNumber, useRelativeTime, LocaleSwitcher, Trans, RtlWrapper,
+  type I18nConfig, type I18nContextValue,
+} from "./i18n-react";
+export {
+  OAuthClient, OAuthConfig, OAuthToken,
+  generatePkceChallenge, verifyPkceChallenge,
+  generateState, validateState, storeState, retrieveState,
+  saveTokens, getTokens, clearTokens, isTokenExpired, getAccessToken,
+  hasScope, hasAnyScope, normalizeScopes,
+  googleProvider, githubProvider, microsoftProvider, discordProvider,
+  parseCallbackUrl, buildLogoutUrl,
+} from "./oauth";
