@@ -3920,3 +3920,15 @@ export type { StatsCardOptions, StatsCardInstance, TrendDirection, StatsVariant,
 // --- Waterfall / Pipeline ---
 export { runPipeline, parallel, waterfall, raceWithCleanup } from "./waterfall";
 export type { PipelineStep, PipelineContext, PipelineResult } from "./waterfall";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette";
+
+// --- Virtual Scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type { ScrollItem, VisibleRange, ScrollerConfig, ScrollerState, ScrollToOptions } from "./virtual-scroller";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
