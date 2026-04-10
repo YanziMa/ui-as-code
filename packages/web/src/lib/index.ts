@@ -13320,3 +13320,31 @@ export type {
   RadioGroupOptions,
   RadioGroupInstance,
 } from "./radio";
+export {
+  createInput,
+} from "./input";
+export type {
+  InputSize,
+  InputVariant,
+  InputState,
+  InputOptions,
+  InputInstance,
+} from "./input";
+export {
+  createTextarea,
+} from "./textarea";
+export type {
+  TextareaSize,
+  TextareaState,
+  TextareaOptions,
+  TextareaInstance,
+} from "./textarea";
+export {
+  createSlider,
+  SliderManager,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
