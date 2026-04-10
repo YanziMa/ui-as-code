@@ -2941,3 +2941,25 @@ export {
   FileUploadManager, createFileUpload,
   type FileUploadOptions, type FileUploadInstance, type UploadFile,
 } from "./file-upload";
+
+// --- Table (Data Grid) ---
+export {
+  createTableState, getSortedData, getFilteredData, getPaginatedData,
+  getCellValue, applyFilterOperator, toggleSort, setSearchTerm,
+  toggleFilter, goToPage, setPageSize, toggleRowSelection,
+  toggleSelectAll, toggleRowExpand, resetTable, exportTableAsCsv,
+  type Column, type TableState, type SortState, type FilterState,
+  type FilterOperator, type PaginationState, type SelectionState,
+} from "./table";
+
+// --- Empty State ---
+export {
+  EmptyStateManager, createEmptyState,
+  type EmptyStateOptions, type EmptyStateInstance, type EmptyStateVariant,
+} from "./empty-state";
+
+// --- Loading Spinner ---
+export {
+  LoadingSpinnerManager, createLoadingSpinner,
+  type LoadingSpinnerOptions, type SpinnerInstance, type SpinnerType, type SpinnerSize,
+} from "./loading-spinner";
