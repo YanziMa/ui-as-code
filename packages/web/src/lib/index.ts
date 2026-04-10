@@ -11103,3 +11103,41 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu";
+
+// --- Confirm Dialog ---
+export {
+  createConfirmDialog,
+} from "./confirm-dialog";
+export type {
+  ConfirmDialogVariant,
+  ConfirmButtonVariant,
+  ConfirmButton,
+  ConfirmDialogOptions,
+  ConfirmDialogInstance,
+} from "./confirm-dialog";
+
+// --- Split Button ---
+export {
+  createSplitButton,
+} from "./splitter";
+export type {
+  SplitButtonSize,
+  SplitButtonVariant,
+  SplitButtonItem,
+  SplitButtonOptions,
+  SplitButtonInstance,
+} from "./splitter";
+
+// --- Dropdown ---
+export {
+  createDropdown,
+} from "./dropdown";
+export type {
+  DropdownPlacement,
+  DropdownItem,
+  DropdownSeparator,
+  DropdownGroup,
+  DropdownEntry,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown";
