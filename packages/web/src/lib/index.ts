@@ -15099,3 +15099,41 @@ export type {
   MutationChange,
   MutationObserverInstance,
 } from "./mutation";
+export {
+  Animator,
+  easings,
+  resolveEasing,
+  staggerAnimate,
+  scrollTrigger,
+} from "./animate";
+export type {
+  Keyframe,
+  AnimationOptions,
+  AnimationInstance,
+  StaggerOptions,
+  TimelineOptions,
+} from "./animate";
+export {
+  transition,
+  stagger,
+  springs,
+  prefersReducedMotion,
+} from "./transition";
+export {
+  MotionValueImpl,
+  motionValue,
+  Spring,
+  createSpring,
+  inertia,
+  lerp,
+  interpolate,
+  clamp as motionClamp,
+  mapRange,
+} from "./motion";
+export type {
+  SpringConfig,
+  SpringState,
+  MotionValue,
+  MotionTransitionOptions,
+  InertiaOptions,
+} from "./motion";
