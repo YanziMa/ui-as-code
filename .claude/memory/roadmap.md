@@ -251,3 +251,39 @@
   /privacy, /terms, /analytics, /not-found, /error, /sitemap.xml
 - **Total code**: ~4000+ lines across web + extension + shared packages
 - **Production merges**: 4 (main branch fully up to date through Batch 27)
+
+**Batch 30** (commit 8c56990):
+- GET/POST /api/debug endpoint (dev-only, 403 in production)
+- Returns: environment info, feature flags, recent 20 API logs, memory usage
+- POST clears API log ring buffer
+- Extension background script: structured bgLog() logging, switch-based message
+  routing, MESSAGE_TYPES constants, unknown type fallback
+
+**Batch 31** (commit f83cc2a):
+- Security headers on API proxy: X-Content-Type-Options, X-Frame-Options,
+  X-XSS-Protection, Referrer-Policy, Permissions-Policy
+- Extension build verified clean (Plasmo v0.90.5, Chrome MV3)
+
+**Batch 32** (commit b66afcf):
+- Enhanced next.config.ts: reactStrictMode, turbopack root, image optimization
+  (AVIF/WebP), security headers (HSTS), redirects (/home, /help),
+  package import optimization, fetch logging
+- /getting-started page: 4-step guide with code blocks, troubleshooting FAQ,
+  CTA to Dashboard + API Docs
+
+**Batch 33** (commit 3d49197):
+- "Guide" link added to navbar + footer → /getting-started
+- /getting-started/loading.tsx skeleton state
+
+### Final State (after Batch 33, Session 4 Complete)
+- **Total routes**: 28 (15 static + 13 dynamic/API)
+- **API endpoints**: 15 (health, stats, openapi, debug, generate-diff,
+  frictions×3, pull-requests, pr/vote, pr/merge, search, export,
+  webhook, auth/callback)
+- **Static pages**: /, /dashboard, /pr, /api-docs, /changelog, /status,
+  /privacy, /terms, /analytics, /getting-started, /not-found, /error,
+  /sitemap.xml
+- **Extension**: Builds clean (Plasmo), v0.2.0, popup with quick actions grid
+- **Shared types**: Comprehensive (Webhook, Search, Vote, Stats, Health, etc.)
+- **Total code**: ~5000+ lines across web + extension + shared packages
+- **Production merges**: 6 (main branch fully up to date through Batch 33)
