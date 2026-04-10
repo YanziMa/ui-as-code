@@ -3976,3 +3976,15 @@ export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from ".
 // --- Checkbox & Radio ---
 export { createCheckbox, createRadio, createCheckboxGroup } from "./checkbox";
 export type { CheckboxOptions, CheckboxInstance, RadioOptions, RadioInstance, CheckboxGroupOptions, CheckboxGroupInstance, CheckboxSize, CheckboxVariant } from "./checkbox";
+
+// --- Input ---
+export { createInput } from "./input";
+export type { InputOptions, InputInstance, InputSize, InputVariant, InputState } from "./input";
+
+// --- Textarea ---
+export { createTextarea } from "./textarea";
+export type { TextareaOptions, TextareaInstance, TextareaSize, TextareaState } from "./textarea";
+
+// --- Select ---
+export { SelectManager, createSelect } from "./select";
+export type { SelectOptions, SelectInstance, SelectOption } from "./select";
