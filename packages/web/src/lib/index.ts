@@ -11650,3 +11650,43 @@ export type {
   BadgeOptions,
   StatusDotOptions,
 } from "./badge";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+
+// --- Checkbox ---
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+} from "./checkbox";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOptions,
+  RadioOptions,
+  CheckboxInstance,
+  RadioInstance,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox";
+
+// --- Radio Group ---
+export {
+  createRadioGroup,
+} from "./radio-group";
+export type {
+  RadioSize,
+  RadioVariant,
+  RadioOption,
+  RadioGroupOptions,
+  RadioGroupInstance,
+} from "./radio-group";
