@@ -12010,3 +12010,36 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Menu Bar ---
+export {
+  MenuBarManager,
+  createMenuBar,
+} from "./menu-bar";
+export type {
+  MenuBarItem,
+  MenuBarOptions,
+  MenuBarInstance,
+} from "./menu-bar";
+
+// --- Toolbar ---
+export {
+  createToolbar,
+} from "./toolbar";
+export type {
+  ToolbarAlignment,
+  ToolbarSize,
+  ToolbarItem,
+  ToolbarOptions,
+  ToolbarInstance,
+} from "./toolbar";
+
+// --- Notification Bell ---
+export {
+  createNotificationBell,
+} from "./notification-bell";
+export type {
+  NotificationItem,
+  NotificationBellOptions,
+  NotificationBellInstance,
+} from "./notification-bell";
