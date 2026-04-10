@@ -13374,3 +13374,31 @@ export type {
   CheckMode,
   TreeViewConfig,
 } from "./tree-view";
+export {
+  createPagination,
+  PaginationManager,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+export {
+  createSteps,
+  StepsManager,
+} from "./steps";
+export type {
+  StepStatus,
+  StepItem,
+  StepsOrientation,
+  StepsVariant,
+  StepsOptions,
+  StepsInstance,
+} from "./steps";
+export {
+  createAnchor,
+} from "./anchor";
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
