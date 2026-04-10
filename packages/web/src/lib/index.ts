@@ -7155,3 +7155,43 @@ export type {
   SplitViewState,
   SplitViewInstance,
 } from "./split-view";
+
+// --- Notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  Notification,
+  NotificationOptions,
+  NotificationPosition,
+  NotificationType,
+} from "./notification";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+} from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
