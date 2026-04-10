@@ -7475,3 +7475,35 @@ export type {
   TourOptions,
   TourInstance,
 } from "./tour";
+
+// --- QR Code ---
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
+
+// --- Signature Pad ---
+export {
+  SignaturePadManager,
+  createSignaturePad,
+} from "./signature-pad";
+export type {
+  StrokePoint,
+  Stroke,
+  SignaturePadOptions,
+  SignaturePadInstance,
+} from "./signature-pad";
+
+// --- Countdown ---
+export {
+  CountdownManager,
+  createCountdown,
+} from "./countdown";
+export type {
+  CountdownSize,
+  CountdownVariant,
+  CountdownOptions,
+  CountdownInstance,
+} from "./countdown";
