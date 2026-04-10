@@ -2866,3 +2866,21 @@ export {
   RatingManager, createRating,
   type RatingOptions, type RatingInstance, type StarIconType,
 } from "./rating";
+
+// --- Pagination ---
+export {
+  PaginationManager, createPagination,
+  type PaginationOptions, type PaginationInstance,
+} from "./pagination";
+
+// --- Stepper ---
+export {
+  StepperManager, createStepper,
+  type StepperOptions, type StepperInstance, type StepConfig, type StepStatus,
+} from "./stepper";
+
+// --- Timeline ---
+export {
+  TimelineManager, createTimeline,
+  type TimelineOptions, type TimelineInstance, type TimelineItem, type TimelineItemStatus,
+} from "./timeline";
