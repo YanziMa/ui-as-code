@@ -15620,3 +15620,32 @@ export type {
   SplitViewState,
   SplitViewInstance,
 } from "./split-view";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+export {
+  DragDropManager,
+  getDragDropManager,
+} from "./drag-and-drop";
+export type {
+  DragMode,
+  DropPosition,
+  DragItem,
+  DragOptions,
+  DropZoneOptions,
+  DropResult,
+  SortableConfig,
+} from "./drag-and-drop";
