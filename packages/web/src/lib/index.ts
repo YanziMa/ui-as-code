@@ -3398,3 +3398,22 @@ export {
   type StepsOptions, type StepsInstance,
   type StepItem, type StepStatus, type StepsOrientation, type StepsVariant,
 } from "./steps";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager, createImageGallery,
+  type ImageGalleryOptions, type ImageGalleryInstance, type GalleryImage,
+} from "./image-gallery";
+
+// --- File Preview ---
+export {
+  FilePreviewManager, createFilePreview,
+  type FilePreviewOptions, type FilePreviewInstance, type FileType,
+} from "./file-preview";
+
+// --- Statistic ---
+export {
+  StatManager, createStat,
+  type StatOptions, type StatInstance,
+  type TrendDirection, type StatVariant, type TrendColor,
+} from "./statistic";
