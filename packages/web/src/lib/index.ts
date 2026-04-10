@@ -9457,3 +9457,41 @@ export type {
   ImageGalleryOptions,
   ImageGalleryInstance,
 } from "./image-gallery";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Switch ---
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
