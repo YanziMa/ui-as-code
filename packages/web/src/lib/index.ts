@@ -13922,3 +13922,29 @@ export type {
   CalendarOptions,
   CalendarInstance,
 } from "./calendar";
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+export {
+  createTimePicker,
+} from "./time-picker";
+export type {
+  TimeFormat,
+  TimePickerMode,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker";
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
