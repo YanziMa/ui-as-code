@@ -8259,3 +8259,39 @@ export type {
   AvatarUploaderOptions,
   AvatarUploaderInstance,
 } from "./avatar-uploader";
+
+// --- Context Panel ---
+export {
+  createContextPanel,
+} from "./context-panel";
+export type {
+  PanelSide,
+  PanelSize,
+  PanelSection,
+  BreadcrumbItem,
+  ContextPanelOptions,
+  ContextPanelInstance,
+} from "./context-panel";
+
+// --- Split Pane Resizable ---
+export {
+  createSplitPane,
+} from "./split-pane-resizable";
+export type {
+  SplitDirection,
+  ResizeHandle,
+  PaneConfig,
+  SplitPaneOptions,
+  SplitPaneInstance,
+} from "./split-pane-resizable";
+
+// --- Command Log ---
+export {
+  createCommandLog,
+} from "./command-log";
+export type {
+  LogLevel,
+  LogEntry,
+  CommandLogOptions,
+  CommandLogInstance,
+} from "./command-log";
