@@ -15848,3 +15848,30 @@ export type {
   TransferOptions,
   TransferInstance,
 } from "./transfer";
+export {
+  AutoCompleteManager,
+  createAutoComplete,
+} from "./auto-complete";
+export type {
+  AutoCompleteOption,
+  AutoCompleteOptions,
+  AutoCompleteInstance,
+} from "./auto-complete";
+export {
+  MentionManager,
+  createMention,
+} from "./mention";
+export type {
+  MentionOption,
+  MentionOptions,
+  MentionInstance,
+} from "./mention";
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
