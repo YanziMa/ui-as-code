@@ -10129,3 +10129,36 @@ export type {
   SwitchOptions,
   SwitchInstance,
 } from "./switch";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+
+// --- Dropdown Menu ---
+export {
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
+export type {
+  MenuItemType,
+  MenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
