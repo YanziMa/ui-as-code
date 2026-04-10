@@ -3866,3 +3866,24 @@ export {
   AutocompleteManager, createAutocomplete,
   type SuggestionItem, type AutocompleteOptions, type AutocompleteInstance,
 } from "./search-autocomplete";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem, type ContextMenuOptions, type ContextMenuInstance,
+  type ContextMenuPosition,
+} from "./context-menu";
+
+// --- Modal Manager ---
+export {
+  ModalManager, getModalManager,
+  type ModalOptions, type ModalInstance, type ModalAction, type ConfirmOptions,
+  type ModalSize, type ModalAnimation,
+} from "./modal-manager";
+
+// --- Toast Manager ---
+export {
+  ToastManagerClass, createToastManager, getToastManager,
+  type ToastOptions, type Toast, type ToastAction,
+  type ToastType, type ToastPosition, type ToastManagerOptions, type ToastManagerInstance,
+} from "./toast-manager";
