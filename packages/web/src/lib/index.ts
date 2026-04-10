@@ -8773,3 +8773,40 @@ export type {
   ModalOptions,
   ModalInstance,
 } from "./modal";
+
+// --- Dropdown Menu ---
+export {
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
+export type {
+  MenuItemType,
+  MenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
