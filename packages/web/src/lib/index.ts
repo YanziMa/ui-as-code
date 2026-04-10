@@ -2368,3 +2368,26 @@ export {
   type WsState, type WebSocketOptions, type WsMessage, type WsRequest,
   type RoomInfo, type PresenceEntry, type WsMetrics,
 } from "./web-socket-manager";
+
+// --- Template Engine ---
+export {
+  TemplateEngine,
+  renderTemplate, createTemplateEngine, registerBuiltinHelpers,
+  unescapeHtml,
+  type TemplateContext, type TemplateOptions, type TemplateError,
+  type PartialTemplate, type HelperFunction, type CronExpression,
+} from "./template-engine";
+
+// --- Scheduler ---
+export {
+  Scheduler,
+  parseCronExpression, cronMatches, getNextCronRun,
+  type ScheduledJob, type JobStatus,
+} from "./scheduler";
+
+// --- Notification System ---
+export {
+  NotificationCenter, PushNotificationManager,
+  type Notification, type NotificationConfig,
+  type NotificationType, type NotificationPriority,
+} from "./notification-system";
