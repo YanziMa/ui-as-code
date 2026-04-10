@@ -3318,3 +3318,21 @@ export {
   type CollapseOptions, type CollapseInstance,
   type CollapseSize, type CollapseVariant,
 } from "./collapse";
+
+// --- Pagination ---
+export {
+  PaginationManager, createPagination,
+  type PaginationOptions, type PaginationInstance,
+} from "./pagination";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager, createBreadcrumb,
+  type BreadcrumbItem, type BreadcrumbOptions, type BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNodeData, type TreeNode, type CheckMode, type TreeViewConfig,
+} from "./tree-view";
