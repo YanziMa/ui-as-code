@@ -2829,3 +2829,22 @@ export {
   type DataPoint, type DataSeries, type ChartConfig,
   type AxisScale, type DataStats, type ColorPaletteName,
 } from "./chart-utils";
+
+// --- Resizable ---
+export {
+  makeResizable, createSplitPane,
+  type ResizeOptions, type ResizeState, type ResizableController,
+  type SplitPaneOptions, type SplitPaneController,
+} from "./resizable";
+
+// --- Anchor Positioning ---
+export {
+  computePosition, positionElement, createArrowStyles,
+  type Placement, type Alignment, type VirtualElement, type Rect, type PositionResult,
+} from "./anchor-positioning";
+
+// --- Typeahead ---
+export {
+  TypeaheadManager, createTypeahead,
+  type TypeaheadItem, type TypeaheadOptions, type TypeaheadInstance,
+} from "./typeahead";
