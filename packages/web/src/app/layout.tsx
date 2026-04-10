@@ -111,6 +111,7 @@ export default function RootLayout({
                     <a href="/pr" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">PR Dashboard</a>
                     <a href="/api-docs" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">API Docs</a>
                     <a href="/changelog" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Changelog</a>
+                    <a href="/status" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Status</a>
                     <a href="/privacy" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Privacy</a>
                     <a href="/terms" className="hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">Terms</a>
                     <a
