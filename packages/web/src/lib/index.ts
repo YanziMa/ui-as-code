@@ -10196,3 +10196,38 @@ export type {
   PopoverOptions,
   PopoverInstance,
 } from "./popover";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- Select ---
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
+
+// --- Alert ---
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
