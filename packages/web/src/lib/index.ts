@@ -14913,3 +14913,45 @@ export type {
   ChartOptions,
   ChartInstance,
 } from "./chart";
+export {
+  GestureManager,
+  createGesture,
+  swipeGestures,
+  tapGesture,
+} from "./gesture";
+export type {
+  GestureType,
+  SwipeDirection,
+  GestureConfig,
+  GestureHandlerConfig,
+  GestureEvent,
+  GestureInstance,
+} from "./gesture";
+export {
+  trackCursor,
+  getCursorPosition,
+  setCustomCursor,
+  setCursorStyle,
+  hideCursor,
+  createCursorTrail,
+  hideCursorOnIdle,
+  isNearCursor,
+  getCursorRelativeTo,
+  constrainToElement,
+} from "./cursor";
+export type {
+  CursorPosition,
+  CursorTrailOptions,
+  CustomCursorOptions,
+  CursorTrackerOptions,
+} from "./cursor";
+export {
+  SelectionManager,
+  createSelectionManager,
+} from "./selection";
+export type {
+  SelectionRange,
+  CaretPosition,
+  SelectionManagerOptions,
+  SelectionManagerInstance,
+} from "./selection";
