@@ -13432,3 +13432,29 @@ export type {
   ConfigSnapshot,
   ConfigProviderInstance,
 } from "./config-provider";
+export {
+  createWatermark,
+} from "./watermark";
+export type {
+  WatermarkOptions,
+  WatermarkInstance,
+} from "./watermark";
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
+export type {
+  QrOptions,
+} from "./qr-code";
+export {
+  createCountdown,
+  CountdownManager,
+} from "./countdown";
+export type {
+  CountdownSize,
+  CountdownVariant,
+  CountdownOptions,
+  CountdownInstance,
+} from "./countdown";
