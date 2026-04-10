@@ -8665,3 +8665,38 @@ export type {
   RadioGroupOptions,
   RadioGroupInstance,
 } from "./radio-group";
+
+// --- Checkbox Group ---
+export {
+  createCheckboxGroup,
+} from "./checkbox-group";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOption,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox-group";
+
+// --- Select ---
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
+
+// --- Input ---
+export {
+  createInput,
+} from "./input";
+export type {
+  InputSize,
+  InputVariant,
+  InputState,
+  InputOptions,
+  InputInstance,
+} from "./input";
