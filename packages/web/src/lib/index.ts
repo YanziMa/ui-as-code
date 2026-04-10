@@ -6556,3 +6556,45 @@ export type {
   DistributedRateLimiterConfig,
   StatsTrackable,
 } from "./rate-limiter";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+
+// --- Config ---
+export {
+  ConfigManager,
+  createConfig,
+} from "./config";
+export type {
+  ConfigValue,
+  ConfigSchema,
+  ConfigSchemaEntry,
+  Environment,
+  ConfigOptions,
+  ConfigSource,
+  ConfigValidationResult,
+} from "./config";
+
+// --- Permissions (RBAC) ---
+export {
+  RBAC,
+  createRBAC,
+  COMMON_ROLES,
+} from "./permissions";
+export type {
+  Permission,
+  RoleName,
+  Role,
+  User,
+  Policy,
+  CheckResult,
+  AuditEntry,
+} from "./permissions";
