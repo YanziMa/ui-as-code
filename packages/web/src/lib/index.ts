@@ -9424,3 +9424,36 @@ export type {
   PopoverOptions,
   PopoverInstance,
 } from "./popover";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+
+// --- Lightbox ---
+export {
+  LightboxManager,
+  createLightbox,
+} from "./lightbox";
+export type {
+  LightboxImage,
+  LightboxOptions,
+  LightboxInstance,
+} from "./lightbox";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager,
+  createImageGallery,
+} from "./image-gallery";
+export type {
+  GalleryImage,
+  ImageGalleryOptions,
+  ImageGalleryInstance,
+} from "./image-gallery";
