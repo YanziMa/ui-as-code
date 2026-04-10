@@ -14868,3 +14868,48 @@ export type {
   LayoutOptions,
   LayoutInstance,
 } from "./layout";
+export {
+  CanvasContext,
+  createCanvas,
+  drawGrid,
+  drawCheckerboard,
+} from "./canvas";
+export type {
+  Point2D as CanvasPoint,
+  CanvasSize,
+  DrawOptions,
+  TextOptions,
+  GradientStop,
+} from "./canvas";
+export {
+  SvgBuilder,
+  commandsToD,
+  parsePathD,
+  smoothCurve,
+  arcPath,
+  ringArcPath,
+  roundedRectPath,
+  starPath,
+  polygonPath,
+  arrowPath,
+  createSvg,
+  svg,
+} from "./svg";
+export type {
+  SvgPoint,
+  SvgSize,
+  SvgViewBox,
+  SvgOptions,
+  PathCommand,
+} from "./svg";
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
