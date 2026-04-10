@@ -142,3 +142,4 @@ export {
   cssVar, setCssVar, breakpoint, BREAKPOINTS,
   hexToRgb, rgbToHex, parseColor, mixColors, transparentize,
 } from "./css";
+export { AsyncQueue, RateLimiter, BatchingQueue } from "./queue";
