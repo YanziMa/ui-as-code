@@ -1733,3 +1733,37 @@ export {
   type InfiniteScrollOptions,
   type InfiniteScrollState,
 } from "./infinite-scroll";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem,
+  type ContextMenuOptions,
+  type ContextMenuPosition,
+  type ContextMenuInstance,
+} from "./context-menu";
+
+// --- Debounce & Throttle ---
+export {
+  Debounced,
+  Throttled,
+  debounce,
+  throttle,
+  debouncePromise,
+  rafThrottle,
+  idleThrottle,
+  type DebounceOptions,
+  type ThrottleOptions,
+  type RateLimitStats,
+} from "./debounce-throttle";
+
+// --- Observer Pattern ---
+export {
+  Observer,
+  createObserver,
+  type Subscription,
+  type ObserverOptions,
+  type ObserverStats,
+  type EventHandler,
+  type EventErrorHandler,
+} from "./observer-pattern";
