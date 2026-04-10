@@ -12257,3 +12257,39 @@ export type {
   BadgeOptions,
   StatusDotOptions,
 } from "./badge";
+
+// --- Accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+
+// --- Modal ---
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
