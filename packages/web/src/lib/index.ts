@@ -2884,3 +2884,24 @@ export {
   TimelineManager, createTimeline,
   type TimelineOptions, type TimelineInstance, type TimelineItem, type TimelineItemStatus,
 } from "./timeline";
+
+// --- Input Mask ---
+export {
+  InputMaskManager, createInputMask,
+  type MaskOptions, type MaskInstance, type MaskType,
+} from "./input-mask";
+
+// --- Form Validation ---
+export {
+  FormValidator, createFormValidator,
+  type FormValidationOptions, type FormValidatorInstance,
+  type ValidationRule, type FieldConfig, type ValidationResult, type ValidationError,
+  type ValidationContext,
+  BuiltInRules,
+} from "./form-validation";
+
+// --- Tag Input ---
+export {
+  TagInputManager, createTagInput,
+  type TagInputOptions, type TagInputInstance, type TagItem,
+} from "./tag-input";
