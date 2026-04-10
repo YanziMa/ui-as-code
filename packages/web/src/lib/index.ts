@@ -4405,3 +4405,35 @@ export type {
   StickyHeaderOptions,
   StickyHeaderInstance,
 } from "./sticky-header";
+
+// --- Comment Thread ---
+export { CommentThreadManager, createCommentThread } from "./comment-thread";
+export type {
+  CommentAuthor,
+  Comment,
+  CommentThreadOptions,
+  CommentThreadInstance,
+} from "./comment-thread";
+
+// --- Activity Feed ---
+export { ActivityFeedManager, createActivityFeed } from "./activity-feed";
+export type {
+  ActivityType,
+  ActivityGroupBy,
+  FeedDensity,
+  ActivityItem,
+  ActivityFeedOptions,
+  ActivityFeedInstance,
+} from "./activity-feed";
+
+// --- Stats Overview ---
+export { StatsOverviewManager, createStatsOverview } from "./stats-overview";
+export type {
+  TrendDirection,
+  StatCardSize,
+  TrendData,
+  SparklinePoint,
+  StatCard,
+  StatsOverviewOptions,
+  StatsOverviewInstance,
+} from "./stats-overview";
