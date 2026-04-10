@@ -3566,3 +3566,23 @@ export {
   createSpinner, miniSpinner, fullPageSpinner,
   type SpinnerOptions, type SpinnerVariant, type SpinnerSize,
 } from "./spinner";
+
+// --- Alert ---
+export {
+  AlertManager, createAlert,
+  type AlertOptions, type AlertInstance,
+  type AlertVariant, type AlertSize, type AlertAction,
+} from "./alert";
+
+// --- Toggle ---
+export {
+  ToggleManager, createToggle,
+  type ToggleOptions, type ToggleInstance,
+  type ToggleSize, type ToggleVariant,
+} from "./toggle";
+
+// --- Slider ---
+export {
+  SliderManager, createSlider,
+  type SliderOptions, type SliderInstance, type SliderMark,
+} from "./slider";
