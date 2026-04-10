@@ -13402,3 +13402,33 @@ export type {
   AnchorOptions,
   AnchorInstance,
 } from "./anchor";
+export {
+  createAffix,
+} from "./affix";
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  createBackTop,
+} from "./back-top";
+export type {
+  BackTopShape,
+  BackTopPosition,
+  BackTopOptions,
+  BackTopInstance,
+} from "./back-top";
+export {
+  createConfigProvider,
+  getConfig,
+  getToken,
+} from "./config-provider";
+export type {
+  Direction,
+  ThemeMode,
+  DesignTokens,
+  ComponentOverrides,
+  ConfigProviderOptions,
+  ConfigSnapshot,
+  ConfigProviderInstance,
+} from "./config-provider";
