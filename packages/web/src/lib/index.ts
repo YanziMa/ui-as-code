@@ -11246,3 +11246,35 @@ export type {
   TransferOptions,
   TransferInstance,
 } from "./transfer";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+
+// --- Upload ---
+export {
+  createUpload,
+} from "./upload";
+export type {
+  UploadStatus,
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+} from "./upload";
+
+// --- Tour ---
+export {
+  createTour,
+} from "./tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour";
