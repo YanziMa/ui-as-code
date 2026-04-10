@@ -1617,3 +1617,51 @@ export {
   type ColorStop,
   type ColorPalette,
 } from "./color-utils";
+
+// --- Markdown Parser ---
+export {
+  parseMarkdown,
+  renderToHtml,
+  mdToHtml,
+  extractToc,
+  countWords,
+  estimateReadingTime,
+  type MarkdownNode,
+  type MarkdownNodeType,
+  type ParseOptions,
+  type RenderOptions,
+} from "./markdown-parser";
+
+// --- Scheduler ---
+export {
+  Scheduler,
+  parseCronExpression,
+  cronMatches,
+  getNextCronRun,
+  type ScheduledJob,
+  type JobStatus,
+  type CronExpression,
+} from "./scheduler";
+
+// --- Crypto Utils ---
+export {
+  sha1, sha256, sha384, sha512, hash, hashHex,
+  hmac, hmacHex,
+  pbkdf2, deriveAesKey,
+  generateAesKey, aesGcmEncrypt, aesGcmDecrypt, aesGcmEncryptString, aesGcmDecryptString,
+  generateRsaOaepKeyPair, rsaOaepEncrypt, rsaOaepDecrypt,
+  generateEcdsaKeyPair, ecdsaSign, ecdsaVerify,
+  generateRsaPssKeyPair, rsaPssSign, rsaPssVerify,
+  exportKey, importKey, keyFingerprint, generateEcdhKeyPair,
+  ecdhDeriveSecret, ecdhDeriveAesKey,
+  randomBytes, secureRandomInt, secureRandomUuid, secureRandomString,
+  toBase64, fromBase64, toBase64Url, fromBase64Url, toHex, fromHex,
+  encodeUtf8, decodeUtf8,
+  estimatePasswordStrength, generatePassword,
+  generateTokenHex, generateTokenBase64Url, generateApiKey, generateSessionId,
+  type HashAlgorithm, type HmacAlgorithm, type AesKeyLength, type EcNamedCurve,
+  type RsaKeySize, type KeyFormat, type Pbkdf2Options, type AesGcmOptions,
+  type RsaKeyGenOptions, type EcdsaKeyGenOptions, type RsaPssSignOptions,
+  type PasswordStrengthResult, type PasswordGeneratorOptions, type ApiKeyOptions,
+  type AesGcmEncryptedData,
+} from "./crypto-utils";
