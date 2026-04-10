@@ -4000,3 +4000,15 @@ export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOption
 // --- List ---
 export { createList } from "./list";
 export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list";
+
+// --- Drawer ---
+export { createDrawer } from "./drawer";
+export type { DrawerOptions, DrawerInstance, DrawerSide, DrawerSize } from "./drawer";
+
+// --- Sheet ---
+export { createSheet } from "./sheet";
+export type { SheetOptions, SheetInstance, SheetSnapPoint } from "./sheet";
+
+// --- Dialog ---
+export { createDialog, alertDialog, confirmDialog, dangerDialog } from "./dialog";
+export type { DialogOptions, DialogInstance, DialogVariant } from "./dialog";
