@@ -2743,3 +2743,26 @@ export {
   type AvatarOptions, type AvatarGroupOptions,
   type AvatarSize, type AvatarShape,
 } from "./avatar";
+
+// --- Progress ---
+export {
+  createProgressTracker, createMultiProgressTracker, createStepProgress,
+  formatProgress,
+  type ProgressState, type ProgressCallback,
+  type ProgressController, type MultiProgressController, type StepProgressController,
+} from "./progress";
+
+// --- Badge ---
+export {
+  createBadge, createPositionedBadge, createStatusDot,
+  addDotBadge, addCountBadge,
+  type BadgeOptions, type BadgeVariant, type BadgePosition, type BadgeSize,
+  type StatusDotOptions,
+} from "./badge";
+
+// --- Tabs ---
+export {
+  TabsManager, createTabs,
+  type TabItem, type TabsOptions, type TabsInstance,
+  type TabOrientation, type TabVariant,
+} from "./tabs";
