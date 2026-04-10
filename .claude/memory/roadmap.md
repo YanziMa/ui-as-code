@@ -125,6 +125,46 @@
 - Plasmo browser extension
 - Unified diff parser
 - Sandbox preview (split/overlay/diff modes)
+
+### 2026-04-10 Session 2 (Autonomous Batches 7-12)
+
+**Batch 7** (commit 288897f):
+- Accessibility polish: skip-to-content link, focus-visible, scrollbar styling
+- globals.css: ::selection, :focus-visible outline, custom scrollbar, overflow-y:overlay
+- layout.tsx: skip-link a11y class, id="main-content" on main
+
+**Batch 8** (commit 2ed2ae2):
+- Error logging system: error-logger.ts with global handlers
+- ErrorMonitor client component (window.onerror, unhandledrejection)
+- ErrorBoundary integration with logError()
+- CSV export endpoint: GET /api/frictions/export
+- Dashboard Quick Actions: Export Data button (4-column grid)
+- AI prompt improvement: 10 strict rules for generate-diff
+- Cache-Control headers on GET API routes (stale-while-revalidate)
+- apiSuccess() extended with optional cacheControl param
+
+**Batch 9** (commit f6e9e47):
+- ActivityChart component (lightweight CSS bar chart, zero dependencies)
+- Dashboard: 14-day activity chart with daily submission counts
+- Extension popup: improved instructions with workflow description
+
+**Batch 10** (commit 5fd8273):
+- PR Dashboard: sort dropdown (newest/votes/affected)
+- PR Dashboard: "Vote Against" button alongside "Vote For"
+- PR Dashboard: useMemo for filtered+sorted list
+- API Docs page (/api-docs): full REST API reference
+  - All 10 endpoints documented with method/path/body/response
+  - Quick Start curl examples, Error responses table
+- Navbar + Footer + Sitemap: API Docs links added
+
+**Batch 11** (commit 075fd6b):
+- Landing page: "Why UI-as-Code?" differentiators section (3 cards)
+- Chrome Web Store listing prep: STORE_LISTING.md
+  - Full metadata: name, descriptions, categories, permissions, screenshots guide
+
+**Batch 12** (commit pending):
+- Enhanced 404 page: emoji overlay, quick nav links (Home/Dashboard/PR/API Docs)
+- GitHub issue link for bug reports
 - Zod validation, rate limiting, auth middleware
 - ErrorBoundary, Toast, Skeleton components
 - SEO meta, favicon, sitemap, robots.txt
