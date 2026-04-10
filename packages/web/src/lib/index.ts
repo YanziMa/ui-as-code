@@ -11796,3 +11796,40 @@ export type {
   StepperOptions,
   StepperInstance,
 } from "./stepper";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+
+// --- Collapse ---
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+} from "./collapse";
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
+
+// --- Drawer Panel ---
+export {
+  createDrawer,
+} from "./drawer-panel";
+export type {
+  DrawerPlacement,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer-panel";
