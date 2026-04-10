@@ -43,11 +43,8 @@ export async function POST(req: NextRequest) {
     try {
       let diff: string;
 
-      if (AI_PROVIDER === "claude") {
-        diff = await callClaude(body);
-      } else {
-        diff = await callOpenAICompatible(body);
-      }
+      // Call AI with automatic retry for transient failures
+      diff = await callAIWithRetry(body);
 
       if (!diff || diff.trim().length === 0) {
         return apiError("No valid diff generated. Try rephrasing your request.", 422);
@@ -208,6 +205,51 @@ function buildTextPrompt(
   prompt += `<request>\n${input.description}\n</request>`;
 
   return prompt;
+}
+
+// ========== AI Retry Wrapper ==========
+const MAX_RETRIES = 2;
+const RETRY_DELAY_MS = 1000;
+
+async function callAIWithRetry(
+  input: z.infer<typeof GenerateDiffSchema>
+): Promise<string> {
+  let lastError: Error | null = null;
+
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const result =
+        AI_PROVIDER === "claude"
+          ? await callClaude(input)
+          : await callOpenAICompatible(input);
+
+      if (!result || result.trim().length === 0) {
+        throw new Error("Empty response from AI provider");
+      }
+
+      return result;
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      console.error(`[GenerateDiff] Attempt ${attempt + 1}/${MAX_RETRIES + 1}:`, lastError.message);
+
+      // Don't retry on auth/bad-request errors
+      const msg = lastError.message.toLowerCase();
+      if (
+        msg.includes("401") ||
+        msg.includes("403") ||
+        msg.includes("422") ||
+        msg.includes("authentication")
+      ) {
+        break;
+      }
+
+      if (attempt < MAX_RETRIES) {
+        await new Promise((r) => setTimeout(r, RETRY_DELAY_MS * (attempt + 1)));
+      }
+    }
+  }
+
+  throw lastError || new Error("AI call failed");
 }
 
 // ========== Utils ==========
