@@ -1127,3 +1127,16 @@ export {
   type ExtractedData, type FormFillRule, type RecordedAction, type ActionType,
   type StepOptions, type AssertionResult,
 } from "./automation-framework";
+export {
+  TimeSeriesStore, AlertManager, HealthChecker, DashboardLayout,
+  MonitoringChartRenderer,
+  formatMetricBytes, formatUptime, calcPercentChange, getTrendIndicator, emaSmooth,
+  type MetricPoint, type MetricSeries, type AlertRule, type AlertEvent,
+  type HealthCheckResult, type DashboardWidget, type WidgetType, type WidgetConfig,
+} from "./monitoring-dashboard";
+export {
+  TemplateEngine, registerBuiltinHelpers, createTemplateEngine, renderTemplate,
+  unescapeHtml,
+  type TemplateContext, type TemplateOptions, type TemplateError,
+  type PartialTemplate, type HelperFunction,
+} from "./template-engine";
