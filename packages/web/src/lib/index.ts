@@ -3460,3 +3460,23 @@ export {
   setGlobalLogLevel, getGlobalLogLevel,
   type LogLevel,
 } from "./logger";
+
+// --- Virtual Keyboard ---
+export {
+  VirtualKeyboardManager, createVirtualKeyboard,
+  type VirtualKeyboardOptions, type VirtualKeyboardInstance,
+  type KeyboardLayout,
+} from "./virtual-keyboard";
+
+// --- Color Palette ---
+export {
+  ColorPaletteManager, createColorPalette,
+  type ColorPaletteOptions, type ColorPaletteInstance,
+  type ColorPalette, type PaletteColor, type ColorShade,
+  type PaletteScheme, contrastRatio,
+} from "./color-palette";
+
+// --- QR Code ---
+export {
+  generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput,
+} from "./qr-code";
