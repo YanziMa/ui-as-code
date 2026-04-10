@@ -13076,3 +13076,31 @@ export type {
   RichTextEditorOptions,
   RichTextEditorInstance,
 } from "./rich-text-editor";
+export {
+  NotificationCenterManager,
+  createNotificationCenter,
+} from "./notification-center";
+export type {
+  NotificationType,
+  NotificationItem,
+  NotificationCenterOptions,
+  NotificationCenterInstance,
+} from "./notification-center";
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
