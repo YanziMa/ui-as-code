@@ -4739,3 +4739,30 @@ export type {
   CommandMenuOptions,
   CommandMenuInstance,
 } from "./command-menu";
+
+// --- Carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+
+// --- Tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- Accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
