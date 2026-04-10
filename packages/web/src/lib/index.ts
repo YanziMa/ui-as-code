@@ -14103,3 +14103,30 @@ export type {
   CollapseGroupOptions,
   CollapseGroupInstance,
 } from "./collapse";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
