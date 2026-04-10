@@ -13835,3 +13835,39 @@ export type {
   HeadingOptions,
   ParagraphOptions,
 } from "./typography";
+export {
+  getImageDimensions,
+  generateSrcSet,
+  generateSizes,
+  getAspectRatio,
+  fitToContainer,
+  generateBlurPlaceholder,
+  isValidImageUrl,
+  getDominantColor,
+  fileToDataUrl,
+  resizeImage,
+} from "./image";
+export {
+  createAnchorGroup,
+  createBackToTop,
+} from "./anchor-link";
+export type {
+  AnchorLink,
+  AnchorGroupOptions,
+  AnchorGroupInstance,
+  BackToTopOptions,
+  BackToTopInstance,
+} from "./anchor-link";
+export {
+  OverlayProvider,
+  openModal,
+  openDrawer,
+  openConfirm,
+  openAlert,
+  closeAllOverlays,
+} from "./overlay";
+export type {
+  OverlayType,
+  OverlayOptions,
+  OverlayInstance,
+} from "./overlay";
