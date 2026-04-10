@@ -16134,3 +16134,35 @@ export type {
   TabsOptions,
   TabsInstance,
 } from "./tabs";
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
