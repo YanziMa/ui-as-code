@@ -12764,3 +12764,37 @@ export type {
   MasonryOptions,
   MasonryInstance,
 } from "./masonry";
+
+// --- Heatmap ---
+export {
+  createHeatmap,
+} from "./heatmap";
+export type {
+  HeatmapType,
+  ColorScale,
+  HeatmapCell,
+  HeatmapOptions,
+  HeatmapInstance,
+} from "./heatmap";
+
+// --- Sparkline Chart ---
+export {
+  createSparklineChart,
+} from "./sparkline-chart";
+export type {
+  SparklineType,
+  TrendIndicator,
+  SparklinePoint,
+  SparklineOptions,
+  SparklineInstance,
+} from "./sparkline-chart";
+
+// --- Stat Card ---
+export {
+  createStatCard,
+} from "./stat-card";
+export type {
+  TrendDirection,
+  StatCardVariant,
+  StatCardOptions,
+} from "./stat-card";
