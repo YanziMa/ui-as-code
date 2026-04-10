@@ -12178,3 +12178,36 @@ export type {
   AvatarEditorOptions,
   AvatarEditorInstance,
 } from "./avatar-editor";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager,
+  createImageGallery,
+} from "./image-gallery";
+export type {
+  GalleryImage,
+  ImageGalleryOptions,
+  ImageGalleryInstance,
+} from "./image-gallery";
+
+// --- Copy Button ---
+export {
+  createCopyButton,
+} from "./copy-button";
+export type {
+  CopyVariant,
+  CopySize,
+  CopyButtonOptions,
+  CopyButtonInstance,
+} from "./copy-button";
+
+// --- Print Button ---
+export {
+  createPrintButton,
+} from "./print-button";
+export type {
+  PrintVariant,
+  PrintSize,
+  PrintButtonOptions,
+  PrintButtonInstance,
+} from "./print-button";
