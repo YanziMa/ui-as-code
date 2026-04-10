@@ -13458,3 +13458,28 @@ export type {
   CountdownOptions,
   CountdownInstance,
 } from "./countdown";
+export {
+  createTour,
+} from "./tour";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour";
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+export {
+  createCommentSystem,
+} from "./comment";
+export type {
+  CommentAuthor,
+  CommentData,
+  CommentOptions,
+  CommentInstance,
+} from "./comment";
