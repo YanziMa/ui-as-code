@@ -3480,3 +3480,24 @@ export {
 export {
   generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput,
 } from "./qr-code";
+
+// --- Form Validator ---
+export {
+  FormValidator,
+  required, minLength, maxLength, pattern, email, urlValidator,
+  range, matchesField, asyncValidator, custom,
+  type FieldValidationResult, type FormValidationResult,
+  type FieldConfig, type FormValidatorOptions, type ValidatorFn,
+} from "./form-validator";
+
+// --- Table of Contents ---
+export {
+  TableOfContentsManager, createTableOfContents,
+  type TableOfContentsOptions, type TocInstance, type TocEntry,
+} from "./table-of-contents";
+
+// --- Overlay ---
+export {
+  OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays,
+  type OverlayOptions, type OverlayInstance, type OverlayType,
+} from "./overlay";
