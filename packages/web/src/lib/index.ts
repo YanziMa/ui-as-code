@@ -2340,3 +2340,31 @@ export {
   type FileSystemOptions, type WatchEvent, type FileSystemStats,
   type SearchResult, type TreeViewNode,
 } from "./file-system";
+
+// --- Crypto Wallet ---
+export {
+  randomBytes, randomInt, randomHex,
+  sha256, sha512, hmacSha256, pbkdf2,
+  generateEd25519KeyPair, signEd25519, verifyEd25519,
+  encrypt, decrypt,
+  deriveAddress, deriveHDAddress,
+  generateMnemonic, validateMnemonic, mnemonicToSeed,
+  bytesToHex, hexToBase64, base64ToHex,
+  type KeyPair, type WalletAddress, type Signature, type EncryptedData,
+  type MnemonicWordlist, type HashResult,
+} from "./crypto-wallet";
+
+// --- OAuth Client ---
+export {
+  OAuthClient,
+  PROVIDER_PRESETS,
+  type OAuthProviderConfig, type OAuthToken, type OAuthSession,
+  type OAuthFlow, type ResponseType, type GrantType, type OAuthOptions,
+} from "./oauth-client";
+
+// --- WebSocket Manager ---
+export {
+  WebSocketManager,
+  type WsState, type WebSocketOptions, type WsMessage, type WsRequest,
+  type RoomInfo, type PresenceEntry, type WsMetrics,
+} from "./web-socket-manager";
