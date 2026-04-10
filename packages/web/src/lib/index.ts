@@ -3437,3 +3437,26 @@ export {
   SearchHighlightManager, createSearchHighlight,
   type SearchHighlightOptions, type SearchHighlightInstance,
 } from "./search-highlight";
+
+// --- Context Provider ---
+export {
+  createContext,
+  ThemeContext, AuthContext, I18nContext, ResponsiveContext,
+  createResponsiveProvider,
+  type Context, type ContextOptions, type ProviderInstance,
+  type ConsumerHandle, type ThemeContextValue, type AuthContextValue,
+  type I18nContextValue, type ResponsiveContextValue,
+} from "./context-provider";
+
+// --- i18n ---
+export {
+  t, getLocale, setLocale, LOCALE_CHANGE_EVENT,
+  type Locale,
+} from "./i18n";
+
+// --- Logger ---
+export {
+  Logger, log, apiLog, dbLog, extLog,
+  setGlobalLogLevel, getGlobalLogLevel,
+  type LogLevel,
+} from "./logger";
