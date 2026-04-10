@@ -8191,3 +8191,39 @@ export type {
   MentionableOptions,
   MentionableInstance,
 } from "./mentionable";
+
+// --- Sticky Notes ---
+export {
+  createStickyNotes,
+} from "./sticky-notes";
+export type {
+  NoteColor as StickyNoteColor,
+  StickyNoteData,
+  StickyNotesOptions,
+  StickyNotesInstance,
+} from "./sticky-notes";
+
+// --- Drawing Board ---
+export {
+  createDrawingBoard,
+} from "./drawing-board";
+export type {
+  ToolName as DrawingToolName,
+  FillMode,
+  StrokeStyle,
+  DrawingTool,
+  DrawingBoardOptions,
+  DrawingBoardInstance,
+} from "./drawing-board";
+
+// --- Audio Visualizer ---
+export {
+  createAudioVisualizer,
+} from "./audio-visualizer";
+export type {
+  VizType,
+  AudioSource,
+  VisualizerColors,
+  AudioVisualizerOptions,
+  AudioVisualizerInstance,
+} from "./audio-visualizer";
