@@ -5142,3 +5142,38 @@ export type {
   ShortcutScope,
   RecordedSequence,
 } from "./keyboard-shortcuts";
+
+// --- Form Builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Data Table ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+
+// --- Modal Manager ---
+export { ModalManager, getModalManager } from "./modal-manager";
+export type {
+  ModalSize,
+  ModalAnimation,
+  ModalOptions,
+  ModalAction,
+  ModalInstance,
+  ConfirmOptions,
+} from "./modal-manager";
