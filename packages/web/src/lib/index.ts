@@ -4107,3 +4107,36 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Rating ---
+export { RatingManager, createRating } from "./rating";
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+
+// --- Avatar Group ---
+export { AvatarGroupManager, createAvatarGroup } from "./avatar-group";
+export type {
+  AvatarItem,
+  AvatarSize,
+  StackDirection,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
+
+// --- Notification Toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+  toastSuccess,
+  toastError,
+  toastWarning,
+  toastInfo,
+} from "./notification-toast";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastAction,
+  ToastManagerOptions,
+} from "./notification-toast";
