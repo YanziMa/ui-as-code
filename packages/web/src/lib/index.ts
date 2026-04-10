@@ -13104,3 +13104,36 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu";
+export {
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+} from "./split-view";
+export type {
+  SplitDirection,
+  PaneConfig,
+  SplitViewOptions,
+  SplitViewState,
+  SplitViewInstance,
+} from "./split-view";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
