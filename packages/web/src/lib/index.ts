@@ -2698,3 +2698,25 @@ export {
   type TooltipPlacement, type TooltipTrigger, type TooltipOptions,
   type TooltipInstance,
 } from "./tooltip";
+
+// --- Color Picker ---
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex,
+  parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity,
+  generatePaletteAdvanced,
+  type RgbColor, type HslColor, type Palette,
+} from "./color-picker";
+
+// --- Date Picker ---
+export {
+  DatePickerManager, createDatePicker,
+  type DatePickerOptions, type DatePickerInstance,
+} from "./date-picker";
+
+// --- Modal ---
+export {
+  ModalManager, getModalManager, alertModal, confirmModal,
+  type ModalSize, type ModalPlacement, type ModalOptions, type ModalInstance,
+} from "./modal";
