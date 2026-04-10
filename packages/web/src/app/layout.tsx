@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { ToastProvider } from "@/components/toast";
 import { ErrorMonitor } from "@/components/error-monitor";
+import { BackToTop } from "@/components/back-to-top";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -123,6 +124,7 @@ export default function RootLayout({
               </div>
             </footer>
           </ErrorBoundary>
+          <BackToTop />
         </ToastProvider>
       </body>
     </html>
