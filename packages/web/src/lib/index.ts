@@ -1307,3 +1307,20 @@ export {
   type MdNode, type MdNodeType, type TocEntry, type FrontMatter,
   type ParseOptions, type RenderOptions, type MdExtension,
 } from "./markdown-processor";
+export {
+  FileSystemManager, InMemoryBackend, LocalStorageBackend,
+  normalizePath, joinPath, dirname, basename, extname, isAbsolute, relative,
+  type FileSystemBackend, type FileEntry, type FileType, type Permission,
+  type FileSystemStats, type FileWatchEvent, type FileWatchCallback,
+  type GlobOptions,
+} from "./file-system-abstraction";
+export {
+  NotificationCenter, PushNotificationManager,
+  type Notification, type NotificationType, type NotificationPriority,
+  type NotificationConfig,
+} from "./notification-system";
+export {
+  VirtualList,
+  type VirtualItem, type VirtualListConfig, type VisibleRange,
+  type RenderState, type ScrollPosition, type VirtualListMetrics,
+} from "./virtualized-list";
