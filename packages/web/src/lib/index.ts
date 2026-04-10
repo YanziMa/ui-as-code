@@ -4299,3 +4299,27 @@ export type { ResizeOptions, ResizeState, ResizableController } from "./resizabl
 // --- Tour Guide ---
 export { TourManager, createTour } from "./tour-guide";
 export type { TourStep, TourOptions, TourInstance } from "./tour-guide";
+
+// --- Notification Bell ---
+export { createNotificationBell } from "./notification-bell";
+export type {
+  NotificationItem,
+  NotificationBellOptions,
+  NotificationBellInstance,
+} from "./notification-bell";
+
+// --- Feature Tour ---
+export { FeatureTourManager, createFeatureTour } from "./feature-tour";
+export type {
+  TourStep as FeatureTourStep,
+  TourOptions as FeatureTourOptions,
+  TourInstance as FeatureTourInstance,
+} from "./feature-tour";
+
+// --- Anchor Nav ---
+export { createAnchorNav } from "./anchor-nav";
+export type {
+  AnchorLink,
+  AnchorNavOptions,
+  AnchorNavInstance,
+} from "./anchor-nav";
