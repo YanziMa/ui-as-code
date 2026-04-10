@@ -195,3 +195,59 @@
 ## Production Merges
 - **Merge 1**: main ← dev (after Batch 12) — commit a7aeccb
 - **Merge 2**: main ← dev (after Batch 15) — commit 0918b73
+- **Merge 3**: main ← dev (after Batch 16) — commit ac7da4b
+- **Merge 4**: main ← dev (after Batch 27) — commit 4149273 (2401 lines)
+
+### 2026-04-10 Session 4 (Autonomous Batches 22-29)
+
+**Batch 22** (commit ef905c7):
+- Fix redirects/page.tsx: convert to dynamic [slug]/page.tsx with proper Next.js 16 params
+- Fix webhook route: z.record() → z.record(string, unknown) for Zod v4
+- Fix Supabase upsert onConflict syntax (options object format)
+- Include robots.txt and sitemap updates
+
+**Batch 23** (commit 9644ff6):
+- OpenAPI 3.1 spec (openapi.json): full 13-endpoint documentation
+- GET /api/openapi endpoint serving spec with proper MIME type
+- Enhanced CONTRIBUTING.md: env vars, tech stack table, error patterns, testing checklist
+- Total: 21 routes, 14 API endpoints
+
+**Batch 24** (commit 02a7280):
+- /analytics page: overview stats, PR status breakdown, top frictions with progress bars
+- lib/performance.ts: Core Web Vitals observer (LCP, CLS, FID, TTFB), markRender()
+- ErrorMonitor enhanced: now observes web vitals alongside error handlers
+- Analytics link added to navbar + sitemap
+- Total: 25 routes
+
+**Batch 25** (commit ebb427a):
+- Status page: 9 endpoint checks (was 7), 30-day uptime bar visualization
+- Incident history section, improved latency color thresholds
+- Quick links to Analytics, Changelog, GitHub Issues
+
+**Batch 26** (commit 3851e06):
+- Shared types package major expansion:
+  - WebhookEvent, SearchInput/Output, VoteType, PlatformStats, HealthCheckResponse
+  - RateLimitInfo, PaginatedResponse, enhanced ExtensionMessage types
+  - REDIRECT_SLUGS constant map, AI_RULES (10 rules), SUPPORTED_SAAS (15 products)
+- API middleware: getRateLimitHeaders(), rate limit headers on all responses
+
+**Batch 27** (commit 6b6b26e):
+- Rename middleware.ts → proxy.ts (Next.js 16 deprecation fix)
+- /analytics/loading.tsx skeleton state
+- Extension inspector: Retry button on error banners
+
+**Batch 28** (commit f47fd33):
+- app/error.tsx: custom error boundary with retry, error digest, links to GitHub/status
+
+**Batch 29** (commit 2cf475f):
+- lib/api-logger.ts: dev-only API request logging (ring buffer, sanitized paths)
+- Extension popup v0.2.0: Quick Actions grid (Dashboard, PRs, API Docs, etc.)
+
+### Current State (after Batch 29)
+- **Total routes**: 25 (12 static + 13 dynamic/API)
+- **API endpoints**: 14 (health, stats, openapi, generate-diff, frictions×3,
+  pull-requests, pr/vote, pr/merge, search, export, webhook, auth/callback)
+- **Static pages**: /, /dashboard, /pr, /api-docs, /changelog, /status,
+  /privacy, /terms, /analytics, /not-found, /error, /sitemap.xml
+- **Total code**: ~4000+ lines across web + extension + shared packages
+- **Production merges**: 4 (main branch fully up to date through Batch 27)
