@@ -119,3 +119,13 @@ export {
   SHORTCUTS, formatShortcut, matchesShortcut, getShortcutsByCategory,
   type Shortcut,
 } from "./keyboard";
+export {
+  isValidUrl as urlIsValid, getDomain, getPathname, getQueryParams,
+  isAbsoluteUrl, isSameOrigin, joinPath, resolveUrl, stripQueryAndHash, getUrlExtension,
+} from "./url";
+export { Timer, debounce as timedDebounce, throttle, delay, retry, withTimeout } from "./timer";
+export { mdToHtml, stripMd } from "./markdown";
+export {
+  mean, median, stddev, percentile, linearRegression,
+  sum, minmax, normalize, movingAverage, ema,
+} from "./math";
