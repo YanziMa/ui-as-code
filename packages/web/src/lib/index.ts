@@ -13137,3 +13137,39 @@ export type {
   AccordionOptions,
   AccordionInstance,
 } from "./accordion";
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
