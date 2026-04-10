@@ -9773,3 +9773,40 @@ export type {
   CommandPaletteConfig,
   CommandPaletteState,
 } from "./command-palette";
+
+// --- Virtual List ---
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+
+// --- Rich Text Editor ---
+export {
+  createRichTextEditor,
+} from "./rich-text-editor";
+export type {
+  EditorCommand,
+  ToolbarButton,
+  RichTextEditorOptions,
+  RichTextEditorInstance,
+} from "./rich-text-editor";
+
+// --- Kanban Board ---
+export {
+  KanbanManager,
+  createKanban,
+} from "./kanban";
+export type {
+  CardPriority,
+  CardSize,
+  KanbanLabel,
+  KanbanCard,
+  KanbanColumn,
+  KanbanSwimlane,
+  KanbanOptions,
+  KanbanInstance,
+} from "./kanban";
