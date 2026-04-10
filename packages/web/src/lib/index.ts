@@ -10684,3 +10684,46 @@ export {
   storageKeys,
   storageClear,
 } from "./storage";
+
+// --- Drag and Drop ---
+export {
+  DragDropManager,
+  getDragDropManager,
+} from "./drag-and-drop";
+export type {
+  DragMode,
+  DropPosition,
+  DragItem,
+  DragOptions,
+  DropZoneOptions,
+  DropResult,
+  SortableConfig,
+} from "./drag-and-drop";
+
+// --- Resize Observer ---
+export {
+  ResizeWatcher,
+  createResizeObserver,
+  matchParentSize,
+  whenSizeExceeds,
+} from "./resize-observer";
+export type {
+  ResizeBox,
+  ResizeObserverOptions,
+  ResizeObserverEntry,
+  ResizeObserverInstance,
+} from "./resize-observer";
+
+// --- Intersection Manager ---
+export {
+  IntersectionManager,
+  createIntersectionManager,
+  whenInView,
+  trackVisibility,
+  lazyLoadElements,
+} from "./intersection-manager";
+export type {
+  IntersectionTarget,
+  IntersectionManagerOptions,
+  IntersectionManagerInstance,
+} from "./intersection-manager";
