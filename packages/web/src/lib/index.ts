@@ -14497,3 +14497,32 @@ export type {
   ThemeColors,
   ThemeConfig,
 } from "./theme";
+export {
+  EASING,
+  animateValue,
+  springAnimate,
+  cssKeyframes,
+  KEYFRAMES,
+  DURATION,
+  transition,
+} from "./animation";
+export type {
+  EasingName,
+  SpringConfig,
+} from "./animation";
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+export {
+  storageGet,
+  storageSet,
+  storageRemove,
+  storageKeys,
+  storageClear,
+} from "./storage";
