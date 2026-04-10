@@ -5177,3 +5177,33 @@ export type {
   ModalInstance,
   ConfirmOptions,
 } from "./modal-manager";
+
+// --- Virtual Scroller ---
+export { VirtualScroller, SizeCache } from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Drag and Drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type {
+  DragMode,
+  DropPosition,
+  DragItem,
+  DragOptions,
+  DropZoneOptions,
+  DropResult,
+  SortableConfig,
+} from "./drag-and-drop";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
