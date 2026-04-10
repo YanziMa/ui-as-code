@@ -12731,3 +12731,36 @@ export type {
   PullToRefreshOptions,
   PullToRefreshInstance,
 } from "./pull-to-refresh";
+
+// --- Sticky Notes ---
+export {
+  createStickyNotes,
+} from "./sticky-notes";
+export type {
+  NoteColor,
+  StickyNoteData,
+  StickyNotesOptions,
+  StickyNotesInstance,
+} from "./sticky-notes";
+
+// --- Draggable Window ---
+export {
+  createDraggableWindow,
+} from "./draggable-window";
+export type {
+  WindowState,
+  WindowControl,
+  DraggableWindowOptions,
+  DraggableWindowInstance,
+} from "./draggable-window";
+
+// --- Masonry ---
+export {
+  MasonryManager,
+  createMasonry,
+} from "./masonry";
+export type {
+  MasonryItem,
+  MasonryOptions,
+  MasonryInstance,
+} from "./masonry";
