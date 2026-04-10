@@ -4712,3 +4712,30 @@ export type {
   KanbanBoardOptions,
   KanbanBoardInstance,
 } from "./kanban-board";
+
+// --- Notification Center ---
+export { NotificationCenterManager, createNotificationCenter } from "./notification-center";
+export type {
+  NotificationType,
+  NotificationItem,
+  NotificationCenterOptions,
+  NotificationCenterInstance,
+} from "./notification-center";
+
+// --- Search Dialog ---
+export { createSearchDialog } from "./search-dialog";
+export type {
+  SearchResult,
+  SearchCategory,
+  SearchDialogOptions,
+  SearchDialogInstance,
+} from "./search-dialog";
+
+// --- Command Menu ---
+export { CommandMenuManager, createCommandMenu } from "./command-menu";
+export type {
+  CommandItem,
+  CommandCategory,
+  CommandMenuOptions,
+  CommandMenuInstance,
+} from "./command-menu";
