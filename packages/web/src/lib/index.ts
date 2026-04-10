@@ -9044,3 +9044,40 @@ export type {
   NotificationCenterOptions,
   NotificationCenterInstance,
 } from "./notification-center";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+
+// --- Data Table ---
+export {
+  DataTableManager,
+  createDataTable,
+} from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
