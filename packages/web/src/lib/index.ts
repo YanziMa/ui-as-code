@@ -3087,3 +3087,29 @@ export {
   type KeyBinding, type KeyChord, type KeyboardManagerOptions,
   type KeyboardManagerInstance,
 } from "./keyboard";
+
+// --- Network ---
+export {
+  NetworkManager, createNetworkManager,
+  readConnectionInfo, parseQueryString, buildQueryString,
+  buildUrl, parseContentRange, fetchWithTimeout,
+  type NetworkStatus, type FetchOptions, type FetchResult,
+  type QueuedRequest, type NetworkManagerOptions, type NetworkManagerInstance,
+} from "./network";
+
+// --- Print ---
+export {
+  PrintManager, createPrintManager,
+  quickPrint, addPageBreakBefore, addPageBreakAfter, avoidBreakInside,
+  type PrintOptions, type PrintManagerInstance,
+} from "./print";
+
+// --- Notification Permissions ---
+export {
+  NotificationPermissionManager, createNotificationManager,
+  isSupported as isNotificationSupported,
+  quickNotify, requestNotificationPermission,
+  type NotificationOptions, type ScheduledNotification,
+  type NotificationManagerOptions, type NotificationManagerInstance,
+  type PermissionStatus,
+} from "./notification-permissions";
