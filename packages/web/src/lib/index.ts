@@ -12839,3 +12839,37 @@ export type {
   HotkeyHint,
   HotkeyStats,
 } from "./hotkey-manager";
+
+// --- Comment Section ---
+export {
+  createCommentSection,
+} from "./comment-section";
+export type {
+  CommentAuthor,
+  Comment,
+  CommentSectionOptions,
+  CommentSectionInstance,
+} from "./comment-section";
+
+// --- Testimonial ---
+export {
+  createTestimonial,
+} from "./testimonial";
+export type {
+  TestimonialLayout,
+  TestimonialSize,
+  TestimonialItem,
+  TestimonialOptions,
+  TestimonialInstance,
+} from "./testimonial";
+
+// --- Pricing Table ---
+export {
+  createPricingTable,
+} from "./pricing-table";
+export type {
+  PricingFeature,
+  PricingPlan,
+  PricingTableOptions,
+  PricingTableInstance,
+} from "./pricing-table";
