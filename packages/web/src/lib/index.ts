@@ -4194,3 +4194,31 @@ export type { PaginationOptions, PaginationInstance } from "./pagination";
 // --- Search Input ---
 export { SearchInputManager, createSearchInput } from "./search-input";
 export type { SuggestionItem, SearchHistoryEntry, SearchInputOptions, SearchInputInstance } from "./search-input";
+
+// --- File Tree ---
+export { FileManager, createFileTree } from "./file-tree";
+export type { FileTreeNode, FileType, FileTreeOptions, FileTreeInstance } from "./file-tree";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  extractText,
+  countWords,
+  readingTime,
+  mdToHtml,
+} from "./markdown-renderer";
+export type {
+  MdNode,
+  MdNodeType,
+  MdRenderOptions,
+  TocEntry,
+  FrontMatter,
+} from "./markdown-renderer";
+
+// --- Code Editor ---
+export { CodeEditorManager, createCodeEditor } from "./code-editor";
+export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
