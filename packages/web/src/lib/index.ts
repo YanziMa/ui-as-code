@@ -1767,3 +1767,17 @@ export {
   type EventHandler,
   type EventErrorHandler,
 } from "./observer-pattern";
+
+// --- Cache Manager ---
+export {
+  CacheManager, createCacheManager,
+  LRUCache, createLRUCache,
+  LFUCache, createLFUCache,
+  TTLCache, createTTLCache,
+  SWRCache, createSWRCache,
+  MemoryStorageAdapter, LocalStorageAdapter, SessionStorageAdapter, IndexedDBStorageAdapter,
+  type CacheEntry, type CacheKey, type CacheNamespace, type CacheValue,
+  type CacheOptions, type CacheConfig, type CacheStats,
+  type CacheEventType, type CacheEvent, type CacheEventEmitter,
+  type StorageAdapter,
+} from "./cache-manager";
