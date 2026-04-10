@@ -8153,3 +8153,41 @@ export type {
   ParallaxScrollerOptions,
   ParallaxScrollerInstance,
 } from "./parallax-scroller";
+
+// --- Color Picker Advanced ---
+export {
+  createColorPicker,
+} from "./color-picker-advanced";
+export type {
+  ColorMode as ColorPickerMode,
+  RgbColor,
+  HslColor,
+  HsvColor,
+  ColorSwatch,
+  ColorPickerOptions,
+  ColorPickerInstance,
+} from "./color-picker-advanced";
+
+// --- Emoji Picker ---
+export {
+  createEmojiPicker,
+} from "./emoji-picker";
+export type {
+  SkinTone,
+  EmojiData,
+  EmojiCategory,
+  CustomEmoji,
+  EmojiPickerOptions,
+  EmojiPickerInstance,
+} from "./emoji-picker";
+
+// --- Mentionable ---
+export {
+  createMentionable,
+} from "./mentionable";
+export type {
+  MentionItem,
+  MentionSearchFn,
+  MentionableOptions,
+  MentionableInstance,
+} from "./mentionable";
