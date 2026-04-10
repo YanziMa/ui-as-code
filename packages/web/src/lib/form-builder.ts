@@ -1,6 +1,7 @@
 /**
- * Dynamic form builder: schema-driven form generation, validation pipeline,
- * conditional fields, multi-step forms, async validation, field arrays.
+ * Dynamic Form Builder: Schema-driven form generation with validation pipeline,
+ * conditional fields, multi-step forms, async validation, field arrays,
+ * and real-time state management.
  */
 
 // --- Types ---
@@ -20,7 +21,6 @@ export interface FieldValidation {
   pattern?: { regex: RegExp; message: string } | string;
   custom?: (value: unknown, formValues: Record<string, unknown>) => string | null;
   asyncCustom?: (value: unknown, formValues: Record<string, unknown>) => Promise<string | null>;
-  /** Validate only when field is not empty */
   validateIfDirty?: boolean;
 }
 
@@ -41,29 +41,20 @@ export interface FormField<T = unknown> {
   defaultValue?: T;
   validation?: FieldValidation;
   options?: SelectOption[];
-  /** Show/hide condition based on other field values */
   showWhen?: Record<string, unknown>;
-  /** Disable condition */
   disableWhen?: Record<string, unknown>;
-  /** Grid layout: how many columns this field spans (1-12) */
   span?: number;
   className?: string;
-  /** Custom attributes */
   attrs?: Record<string, string>;
-  /** Group this field under a section */
   group?: string;
   order?: number;
-  /** For file uploads */
   accept?: string;
   multiple?: boolean;
   maxFiles?: number;
-  maxSize?: number; // bytes
-  /** For range/slider */
+  maxSize?: number;
   step?: number;
   marks?: Array<{ value: number; label: string }>;
-  /** For rating */
   maxRating?: number;
-  /** Dependencies - re-validate when these change */
   dependsOn?: string[];
 }
 
@@ -71,24 +62,19 @@ export interface FormSection {
   title: string;
   description?: string;
   collapsed?: boolean;
-  fields: string[]; // field names
+  fields: string[];
 }
 
 export interface FormSchema {
   fields: FormField[];
   sections?: FormSection[];
-  /** Global settings */
   name?: string;
   description?: string;
-  /** Submit configuration */
   submitLabel?: string;
   resetLabel?: string;
-  /** Layout */
   layout?: "vertical" | "horizontal" | "inline" | "grid";
   gridColumns?: number;
 }
-
-// --- Validation Result ---
 
 export interface FieldError {
   field: string;
@@ -135,13 +121,22 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
   // --- State Access ---
 
   getValues(): T { return { ...this.state.values }; }
+
   getFieldErrors(field: string): string[] {
     return this.state.errors.filter((e) => e.field === field).map((e) => e.message);
   }
+
   hasError(field: string): boolean { return this.state.errors.some((e) => e.field === field); }
   isTouched(field: string): boolean { return this.state.touched.has(field); }
   isDirty(field: string): boolean { return this.state.dirty.has(field); }
-  getState(): FormState<T> { return { ...this.state, touched: new Set(this.state.touched), dirty: new Set(this.state.dirty) }; }
+
+  getState(): FormState<T> {
+    return {
+      ...this.state,
+      touched: new Set(this.state.touched),
+      dirty: new Set(this.state.dirty),
+    };
+  }
 
   // --- Value Operations ---
 
@@ -151,8 +146,6 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     if (prev !== value) {
       this.state.dirty.add(field);
-
-      // Notify field listeners
       const listeners = this.fieldListeners.get(field);
       if (listeners) for (const fn of listeners) { try { fn(value, null); } catch {} }
     }
@@ -206,7 +199,11 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // Required check
     if (v.required && this.isEmpty(value)) {
-      errors.push({ field, message: typeof v.required === "string" ? v.required : `${fieldDef.label ?? field} is required`, type: "required" });
+      errors.push({
+        field,
+        message: typeof v.required === "string" ? v.required : `${fieldDef.label ?? field} is required`,
+        type: "required",
+      });
       this.updateErrors(errors);
       return errors;
     }
@@ -219,7 +216,9 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // MinLength
     if (v.minLength !== undefined) {
-      const cfg = typeof v.minLength === "object" ? v.minLength : { value: v.minLength, message: `Must be at least ${v.minLength} characters` };
+      const cfg = typeof v.minLength === "object"
+        ? v.minLength
+        : { value: v.minLength, message: `Must be at least ${v.minLength} characters` };
       if (typeof value === "string" && value.length < cfg.value) {
         errors.push({ field, message: cfg.message, type: "minLength" });
       }
@@ -227,7 +226,9 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // MaxLength
     if (v.maxLength !== undefined) {
-      const cfg = typeof v.maxLength === "object" ? v.maxLength : { value: v.maxLength, message: `Must be no more than ${v.maxLength} characters` };
+      const cfg = typeof v.maxLength === "object"
+        ? v.maxLength
+        : { value: v.maxLength, message: `Must be no more than ${v.maxLength} characters` };
       if (typeof value === "string" && value.length > cfg.value) {
         errors.push({ field, message: cfg.message, type: "maxLength" });
       }
@@ -235,7 +236,9 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // Min
     if (v.min !== undefined) {
-      const cfg = typeof v.min === "object" ? v.min : { value: v.min, message: `Must be at least ${v.min}` };
+      const cfg = typeof v.min === "object"
+        ? v.min
+        : { value: v.min, message: `Must be at least ${v.min}` };
       if (typeof value === "number" && value < cfg.value) {
         errors.push({ field, message: cfg.message, type: "min" });
       }
@@ -243,7 +246,9 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // Max
     if (v.max !== undefined) {
-      const cfg = typeof v.max === "object" ? v.max : { value: v.max, message: `Must be no more than ${v.max}` };
+      const cfg = typeof v.max === "object"
+        ? v.max
+        : { value: v.max, message: `Must be no more than ${v.max}` };
       if (typeof value === "number" && value > cfg.value) {
         errors.push({ field, message: cfg.message, type: "max" });
       }
@@ -251,7 +256,9 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
     // Pattern
     if (v.pattern !== undefined) {
-      const cfg = typeof v.pattern === "object" ? v.pattern : { regex: new RegExp(v.pattern), message: `Invalid format` };
+      const cfg = typeof v.pattern === "object"
+        ? v.pattern
+        : { regex: new RegExp(v.pattern), message: "Invalid format" };
       if (typeof value === "string" && !cfg.regex.test(value)) {
         errors.push({ field, message: cfg.message, type: "pattern" });
       }
@@ -337,7 +344,6 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
     this.notify();
 
     const valid = await this.validateAll();
-
     if (!valid) {
       this.state.isSubmitting = false;
       options?.onError?.(this.state.errors);
@@ -371,7 +377,10 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
     return () => this.listeners.delete(listener);
   }
 
-  subscribeField(field: string, listener: (value: unknown, error: string | null) => void): () => void {
+  subscribeField(
+    field: string,
+    listener: (value: unknown, error: string | null) => void,
+  ): () => void {
     if (!this.fieldListeners.has(field)) this.fieldListeners.set(field, new Set());
     this.fieldListeners.get(field)!.add(listener);
     listener(this.state.values[field], this.getFieldErrors(field)[0] ?? null);
@@ -428,7 +437,6 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
   }
 
   private updateErrors(newErrors: FieldError[]): void {
-    // Remove old errors for these fields
     const fields = new Set(newErrors.map((e) => e.field));
     this.state.errors = this.state.errors.filter((e) => !fields.has(e.field));
     this.state.errors = [...this.state.errors, ...newErrors];
@@ -450,7 +458,7 @@ export class FormBuilder<T extends Record<string, unknown> = Record<string, unkn
 
 // --- Utility Functions ---
 
-/** Create a form builder from a schema (convenience function) */
+/** Create a form builder from a schema */
 export function createForm<T extends Record<string, unknown> = Record<string, unknown>>(
   schema: FormSchema,
 ): FormBuilder<T> {
@@ -459,11 +467,27 @@ export function createForm<T extends Record<string, unknown> = Record<string, un
 
 /** Common validation presets */
 export const validations = {
-  required: (label = "This field"): FieldValidation => ({ required: true, ...{ required: `${label} is required` } }),
-  email: (): FieldValidation => ({ custom: (v) => (typeof v === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? null : "Invalid email address") }),
-  url: (): FieldValidation => ({ custom: (v) => { try { new URL(v as string); return null; } catch { return "Invalid URL"; } } }),
-  minLength: (n: number): FieldValidation => ({ minLength: { value: n, message: `Must be at least ${n} characters` } }),
-  maxLength: (n: number): FieldValidation => ({ maxLength: { value: n, message: `Must be no more than ${n} characters` } }),
+  required: (label = "This field"): FieldValidation => ({
+    required: true,
+    ...{ required: `${label} is required` },
+  }),
+  email: (): FieldValidation => ({
+    custom: (v) =>
+      typeof v === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
+        ? null
+        : "Invalid email address",
+  }),
+  url: (): FieldValidation => ({
+    custom: (v) => {
+      try { new URL(v as string); return null; } catch { return "Invalid URL"; }
+    },
+  }),
+  minLength: (n: number): FieldValidation => ({
+    minLength: { value: n, message: `Must be at least ${n} characters` },
+  }),
+  maxLength: (n: number): FieldValidation => ({
+    maxLength: { value: n, message: `Must be no more than ${n} characters` },
+  }),
   min: (n: number): FieldValidation => ({ min: { value: n, message: `Must be at least ${n}` } }),
   max: (n: number): FieldValidation => ({ max: { value: n, message: `Must be no more than ${n}` } }),
   pattern: (regex: RegExp, msg: string): FieldValidation => ({ pattern: { regex, message: msg } }),
@@ -478,7 +502,8 @@ export const validations = {
     },
   }),
   matchField: (fieldName: string, label?: string): FieldValidation => ({
-    custom: (v, form) => (v === form[fieldName] ? null : `Must match ${label ?? fieldName}`),
+    custom: (v, form) =>
+      v === form[fieldName] ? null : `Must match ${label ?? fieldName}`,
   }),
   uniqueAsync: (checkFn: (value: string) => Promise<boolean>): FieldValidation => ({
     asyncCustom: async (v) => {

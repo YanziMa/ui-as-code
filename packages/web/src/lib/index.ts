@@ -9635,3 +9635,47 @@ export type {
   SplitterOptions,
   SplitterInstance,
 } from "./splitter";
+
+// --- Upload / File Manager ---
+export {
+  UploadManager,
+  createUploadManager,
+} from "./upload";
+export type {
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+  UploadStatus,
+  UploadProgressEvent,
+  UploadResult,
+  UploadConfig,
+} from "./upload";
+
+// --- Form Builder ---
+export {
+  FormBuilder,
+  createForm,
+  validations,
+} from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- Search Input ---
+export {
+  SearchInputManager,
+  createSearchInput,
+} from "./search-input";
+export type {
+  SuggestionItem,
+  SearchHistoryEntry,
+  SearchInputOptions,
+  SearchInputInstance,
+} from "./search-input";
