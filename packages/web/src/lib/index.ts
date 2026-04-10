@@ -13258,3 +13258,31 @@ export type {
   SplitterOptions,
   SplitterInstance,
 } from "./drawer";
+export {
+  createPopconfirm,
+} from "./popconfirm";
+export type {
+  PopconfirmPlacement,
+  PopconfirmOptions,
+  PopconfirmInstance,
+} from "./popconfirm";
+export {
+  createAlert,
+  AlertManager,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
