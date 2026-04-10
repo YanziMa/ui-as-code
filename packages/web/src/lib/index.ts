@@ -15717,3 +15717,29 @@ export type {
   EmptyStateOptions,
   EmptyStateInstance,
 } from "./empty-state";
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+export {
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+export type {
+  TagItem,
+  TagInputOptions,
+  TagInputInstance,
+} from "./tag-input";
