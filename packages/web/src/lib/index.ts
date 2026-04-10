@@ -3252,3 +3252,27 @@ export {
   type KeyCombo, type KeyDisplayStyle, type HotkeyDisplayOptions,
   type HotkeyDisplayInstance,
 } from "./hotkeys-display";
+
+// --- Virtual Scroller ---
+export {
+  VirtualScroller,
+  type ScrollItem, type VisibleRange, type ScrollerConfig,
+  type ScrollerState, type ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem, type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Skeleton Loading ---
+export {
+  createSkeleton, createTextSkeleton, createHeadingSkeleton,
+  createAvatarSkeleton, createCardSkeleton, createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions, type SkeletonTextOptions,
+  type SkeletonAvatarOptions, type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
