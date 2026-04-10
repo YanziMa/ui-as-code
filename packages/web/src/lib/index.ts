@@ -11278,3 +11278,36 @@ export type {
   TourOptions,
   TourInstance,
 } from "./tour";
+
+// --- Autocomplete ---
+export {
+  AutocompleteManager,
+  createAutocomplete,
+} from "./autocomplete";
+export type {
+  AutocompleteOption,
+  AutocompleteOptions,
+  AutocompleteInstance,
+} from "./autocomplete";
+
+// --- Tag Input ---
+export {
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+export type {
+  TagItem,
+  TagInputOptions,
+  TagInputInstance,
+} from "./tag-input";
+
+// --- Mention ---
+export {
+  MentionManager,
+  createMention,
+} from "./mention";
+export type {
+  MentionOption,
+  MentionOptions,
+  MentionInstance,
+} from "./mention";
