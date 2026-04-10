@@ -960,3 +960,61 @@ export {
   type ComponentInstance, type LifecycleHooks, type DiffResult as VDomDiffResult,
   type DevToolsMessage,
 } from "./virtual-dom";
+export {
+  haversineDistance, vincentyDistance, euclideanDistance2D, manhattanDistance2D, euclideanDistance3D,
+  initialBearing, destinationPoint, midpoint,
+  boundingBoxFromPoints, isInBoundingBox, bboxCenter, expandBBox, mergeBBoxes, bboxArea, bboxesIntersect,
+  isWithinRadius, isInsidePolygon, geofenceCheck,
+  polygonArea, polygonCentroid, simplifyPolygon, convexHull,
+  latLngToTile, tileToLatLng, getTilesForBBox, buildTileUrl,
+  decimalToDms, dmsToDecimal, getUTMZone, getMGRSZone,
+  parseNmeaGga, encodePolyline, decodePolyline,
+  mercatorProject, mercatorInverse,
+  clampLat, normalizeLng, formatCoordinate,
+  type LatLng, type Point2D, type Point3D, type BoundingBox, type Circle,
+} from "./geo-spatial";
+export {
+  Message, ContentBlock, ToolDefinition, ToolResult, LLMRequest, LLMResponse, StreamChunk,
+  ProviderConfig, LLMProvider,
+  registerProvider, getProviderConfig, listProviders, unregisterProvider, setDefaultModel,
+  Conversation, AIClient, createClient,
+  getConversation, deleteConversation, listConversations,
+  RateLimiter, estimateTokens as llmEstimateTokens, countTokensAccurate, truncateToTokens,
+  PromptTemplate, requestJSON, withRetry,
+} from "./ai-sdk-wrapper";
+export {
+  PdfDocument, createPdf, quickPdf, htmlToPdf,
+  type PdfOptions, type FontOptions, type CellOptions, type ImageOptions, type AnnotationOptions,
+} from "./pdf-generator";
+export {
+  TextToSpeech, SpeechRecognizer, VoiceActivityDetector, AudioRecorder,
+  parseSsml, ssmlToSpeechCommands, speakSsml, scorePronunciation,
+  type VoiceInfo, type SpeechOptions, type RecognitionOptions, type PronunciationScore,
+  type SsmlNode, type VoiceActivityConfig,
+} from "./speech-utils";
+export {
+  createWorker, createSharedWorker, terminateWorker, WorkerPool,
+  postMessage, createMessageChannel, broadcast,
+  runInWorker, runTasksInParallel, WorkerTaskQueue,
+  PubSubWorker, RequestResponse, StreamWorker,
+  isWorkerContext, getWorkerInfo, measureWorkerPerformance, transferOwnership, createOffscreenCanvas,
+  WorkerErrorBoundary, DeadWorkerDetector,
+  type WorkerMetrics, type WorkerInfo as WorkerInfoType,
+} from "./web-workers";
+export {
+  CanvasEngine, createCanvas,
+  SceneNode, GroupNode, ShapeNode, TextNode, ImageNode,
+  Renderer, Layer, Camera,
+  AnimationController, Animator,
+  HitTester,
+  toDataURL as canvasToDataURL, toBlob as canvasToBlob, toImageBitmap, exportAsPNG,
+  type CanvasOptions, type Transform as CanvasTransform, type EasingFunction,
+} from "./canvas-engine";
+export {
+  AudioEngine, createAudioEngine,
+  SoundLoader, SoundCache, SoundInstance, PlaybackManager,
+  EffectChain, SpatialAudioManager, AudioAnalyzer, Visualizer,
+  AudioRecorder as AudioRecorderAdvanced, MidiManager,
+  AudioUtils, MasterVolume,
+  type AudioEngineOptions, type SoundOptions, type SpatialConfig, type AnalyserData,
+} from "./audio-engine";
