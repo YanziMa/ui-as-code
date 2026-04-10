@@ -8513,3 +8513,40 @@ export type {
   ActivityFeedOptions,
   ActivityFeedInstance,
 } from "./activity-feed";
+
+// --- Stats Card ---
+export {
+  StatsCardManager,
+  createStatsCard,
+} from "./stats-card";
+export type {
+  TrendDirection,
+  StatsVariant,
+  SparklinePoint,
+  StatsCardOptions,
+  StatsCardInstance,
+} from "./stats-card";
+
+// --- Progress Stepper ---
+export {
+  createProgressStepper,
+} from "./progress-stepper";
+export type {
+  StepStatus,
+  StepperOrientation,
+  StepperVariant,
+  StepItem,
+  ProgressStepperOptions,
+  ProgressStepperInstance,
+} from "./progress-stepper";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+} from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
