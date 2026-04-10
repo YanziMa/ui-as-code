@@ -675,3 +675,24 @@ export {
   signECDSA, verifyECDSA, createToken, verifyToken, KeyManager,
   type EncryptedData, type RSAKeyPair, type HashAlgorithm, type TokenPayload,
 } from "./encryption";
+export {
+  parseMarkdown, renderToHtml, mdToHtml, extractToc, countWords, estimateReadingTime,
+  type MarkdownNode, type MarkdownNodeType, type ParseOptions, type RenderOptions,
+} from "./markdown-parser";
+export {
+  createFocusTrap, setupFocusVisible, focusElement, setAria, announce, createLiveRegion,
+  prefersReducedMotion, onReducedMotionChange, getSafeDuration,
+  relativeLuminance, contrastRatio, wcagCompliance,
+  createRovingTabIndex, createSkipLink, createAccessibleDialog,
+  type RovingIndexOptions, type DialogOptions,
+} from "./a11y-v2";
+export {
+  SearchEngine, createSearchEngine, jaroWinkler, similarity,
+  type SearchDocument, type SearchResult, type SearchOptions, type FacetResult,
+} from "./search-engine";
+export {
+  WebSocketManager, TypedWebSocket, RoomManager, PresenceSystem,
+  RateLimiter, ConnectionPool, WebSocketStats,
+  type WSMessage, type WSConfig, type RoomConfig, type PresenceEvent,
+  type AckRequest, type ConnectionInfo,
+} from "./websocket-utils";
