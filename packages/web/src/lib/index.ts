@@ -14736,3 +14736,37 @@ export {
   repeat,
   stripHtml,
 } from "./string";
+export {
+  chunk,
+  unique,
+  groupBy,
+  sortBy,
+  flatten,
+  times,
+} from "./array";
+export {
+  deepClone,
+  pick,
+  omit,
+  isEmpty,
+  get,
+  set,
+  deepMerge,
+  deepFreeze,
+} from "./object";
+export {
+  createTreeNode,
+  buildTree,
+  flattenTree,
+  flattenTreeWithDepth,
+  findNodeById,
+  findNodes,
+  getPathToNode,
+  getTreeDepth,
+  countNodes,
+  mapTree,
+  filterTree,
+} from "./tree";
+export type {
+  TreeNode,
+} from "./tree";
