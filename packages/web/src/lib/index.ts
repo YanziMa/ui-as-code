@@ -15556,3 +15556,37 @@ export type {
   AccordionOptions,
   AccordionInstance,
 } from "./accordion";
+export {
+  createDropdown,
+} from "./dropdown";
+export type {
+  DropdownPlacement,
+  DropdownItem,
+  DropdownSeparator,
+  DropdownGroup,
+  DropdownEntry,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  formatProgress,
+  createStepProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
