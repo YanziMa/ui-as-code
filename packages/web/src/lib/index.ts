@@ -4865,3 +4865,30 @@ export type {
   AvatarOptions,
   AvatarGroupOptions,
 } from "./avatar";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+
+// --- Switch ---
+export { createSwitch } from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
