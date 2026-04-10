@@ -4012,3 +4012,15 @@ export type { SheetOptions, SheetInstance, SheetSnapPoint } from "./sheet";
 // --- Dialog ---
 export { createDialog, alertDialog, confirmDialog, dangerDialog } from "./dialog";
 export type { DialogOptions, DialogInstance, DialogVariant } from "./dialog";
+
+// --- Date Picker ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
+
+// --- Time Picker ---
+export { createTimePicker } from "./time-picker";
+export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker";
+
+// --- Slider ---
+export { SliderManager, createSlider } from "./slider";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
