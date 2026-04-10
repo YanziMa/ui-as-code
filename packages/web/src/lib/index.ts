@@ -6598,3 +6598,69 @@ export type {
   CheckResult,
   AuditEntry,
 } from "./permissions";
+
+// --- Crypto Wallet ---
+export {
+  randomBytes,
+  randomInt,
+  randomHex,
+  sha256,
+  sha512,
+  hmacSha256,
+  pbkdf2,
+  generateEd25519KeyPair,
+  signEd25519,
+  verifyEd25519,
+  encrypt,
+  decrypt,
+  deriveAddress,
+  deriveHDAddress,
+  generateMnemonic,
+  validateMnemonic,
+  mnemonicToSeed,
+  bytesToHex,
+  hexToBase64,
+  base64ToHex,
+} from "./crypto-wallet";
+export type {
+  KeyPair,
+  WalletAddress,
+  Signature,
+  EncryptedData,
+  MnemonicWordlist,
+  HashResult,
+} from "./crypto-wallet";
+
+// --- Search Engine ---
+export {
+  SearchEngine,
+  jaroWinkler,
+  similarity,
+  createSearchEngine,
+} from "./search-engine";
+export type {
+  SearchDocument,
+  SearchResult,
+  SearchOptions,
+  FacetResult,
+} from "./search-engine";
+
+// --- Workflow ---
+export {
+  WorkflowDefinition,
+  WorkflowExecutor,
+  runWorkflow,
+  sequentialWorkflow,
+  parallelWorkflow,
+} from "./workflow";
+export type {
+  TaskId,
+  WorkflowId,
+  TaskDefinition,
+  WorkflowContext,
+  WorkflowStatus,
+  TaskResult,
+  WorkflowResult,
+  WorkflowHook,
+  WorkflowOptions,
+} from "./workflow";
