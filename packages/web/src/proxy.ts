@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 /**
- * Proxy: Apply CORS headers to all /api/* routes.
+ * Proxy: Apply CORS, security headers to all /api/* routes.
  * Handles OPTIONS preflight requests.
  *
  * Next.js 16: renamed from middleware.ts to proxy.ts
@@ -24,10 +24,20 @@ export function proxy(req: NextRequest) {
     });
   }
 
-  // For actual requests, set CORS headers on the response
+  // For actual requests, set security + CORS headers on the response
   const response = NextResponse.next();
+
+  // CORS
   response.headers.set("Access-Control-Allow-Origin", origin || "*");
   response.headers.set("Vary", "Origin");
+
+  // Security headers
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+
   return response;
 }
 
