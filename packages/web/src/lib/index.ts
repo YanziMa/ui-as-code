@@ -15409,3 +15409,71 @@ export type {
   SessionEventType,
   SessionListener,
 } from "./session";
+export {
+  ThemeManager,
+  getThemeManager,
+  useTheme,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+} from "./theme";
+export type {
+  ThemeColors,
+  ThemeConfig,
+} from "./theme";
+export {
+  DesignTokenManager,
+} from "./design-tokens";
+export type {
+  ColorToken,
+  SpacingScale,
+  TypographyScale,
+  ShadowToken,
+  RadiusScale,
+  TransitionToken,
+  BreakpointDefinition,
+  DesignTokensConfig,
+  ResolvedTokens,
+} from "./design-tokens";
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  mq,
+  mediaQueries,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations,
+  animate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type {
+  Breakpoints,
+  KeyframeRule,
+} from "./css-in-js";
