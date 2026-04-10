@@ -164,3 +164,8 @@ export {
   findFirst, findLast, all, any,
   intersection, difference, deepFlatten, zip, rotateLeft, sample, sampleMany,
 } from "./collection";
+export {
+  progressBarAttrs, switchAttrs, liveRegion, announce,
+  SKIP_LINK_ID, skipLinkAttrs, prefersReducedMotion, animationDuration,
+  focusTrap, srOnly, ROLES,
+} from "./accessibility";
