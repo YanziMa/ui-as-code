@@ -7995,3 +7995,33 @@ export type {
   SpinOptions,
   SpinInstance,
 } from "./spin";
+
+// --- Affix ---
+export {
+  createAffix,
+} from "./affix";
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+
+// --- Back Top ---
+export {
+  createBackTop,
+} from "./back-top";
+export type {
+  BackTopShape,
+  BackTopPosition,
+  BackTopOptions,
+  BackTopInstance,
+} from "./back-top";
+
+// --- Anchor ---
+export {
+  createAnchor,
+} from "./anchor";
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
