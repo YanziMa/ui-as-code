@@ -1983,3 +1983,23 @@ export {
   type KeyCombo, type ShortcutBinding, type ShortcutScope,
   type RecordedSequence,
 } from "./keyboard-shortcuts";
+
+// --- Overlay Manager ---
+export {
+  OverlayManager,
+  type OverlayOptions, type OverlayInstance, type OverlayId, type OverlayRole,
+} from "./overlay-manager";
+
+// --- Tooltip Manager ---
+export {
+  TooltipManager,
+  type TooltipOptions, type TooltipInstance, type Placement, type TriggerMode,
+  type VirtualElement,
+} from "./tooltip-manager";
+
+// --- Context Menu Manager ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem, type MenuContext, type ContextMenuOptions,
+  type ContextMenuInstance, type ContextMenuItemId,
+} from "./context-menu-manager";
