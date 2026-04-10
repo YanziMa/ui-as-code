@@ -2097,3 +2097,29 @@ export {
   type ConnectionState, type ReconnectOptions, type HeartbeatOptions,
   type WsReconnectConfig, type WsEventListener, type ConnectionStats,
 } from "./websocket-reconnection";
+
+// --- Excel Exporter ---
+export {
+  ExcelExporter, quickExportExcel, quickExportArray,
+  colToLetter, letterToCol, cellRef, parseCellRef, parseRange,
+  type CellValue, type CellStyle, type Worksheet, type RowData,
+  type CellRef as ExcelCellRef, type ConditionalFormat, type DataValidation,
+  type WorkbookOptions, type BorderStyle,
+} from "./excel-exporter";
+
+// --- Notification Channels ---
+export {
+  NotificationManager, createNotificationManager, createSaaSNotifier,
+  type ChannelType, type NotificationPriority, type NotificationPayload,
+  type DeliveryResult, type SendResult, type ChannelConfig,
+  type UserPreferences, type NotificationTemplate, type NotificationStats,
+} from "./notification-channels";
+
+// --- Rate Limiter v2 ---
+export {
+  AdvancedRateLimiter, createRateLimiter, createApiMiddleware,
+  RATE_LIMIT_PRESETS,
+  type RateLimitAlgorithm, type LimitScope, type RateLimitResult,
+  type RateLimitConfig, type RateLimitContext, type RateLimitMetrics,
+  type StorageAdapter,
+} from "./rate-limiter-v2";
