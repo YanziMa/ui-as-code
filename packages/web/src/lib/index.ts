@@ -9974,3 +9974,40 @@ export type {
   SignaturePadOptions,
   SignaturePadInstance,
 } from "./signature-pad";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+
+// --- Modal ---
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
