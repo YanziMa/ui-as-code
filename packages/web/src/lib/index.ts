@@ -3956,3 +3956,15 @@ export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement 
 // --- Progress ---
 export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
 export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
+
+// --- Alert ---
+export { AlertManager, createAlert } from "./alert";
+export type { AlertOptions, AlertInstance, AlertVariant, AlertSize, AlertAction } from "./alert";
+
+// --- Empty State ---
+export { EmptyStateManager, createEmptyState } from "./empty-state";
+export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+
+// --- Divider ---
+export { createDivider, hDivider, vDivider, labeledDivider, sectionDivider } from "./divider";
+export type { DividerOptions, DividerOrientation, DividerStyle } from "./divider";
