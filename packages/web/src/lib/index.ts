@@ -2675,3 +2675,26 @@ export {
   type VirtualScrollController, type VirtualGridOptions, type VirtualGridState,
   type VirtualGridController,
 } from "./virtual-scroll";
+
+// --- Hotkeys ---
+export {
+  HotkeyManager, createAppHotkeys,
+  parseKeyCombo, eventMatchesCombo, formatKeyDisplay,
+  areModifiersDown, getModifierString,
+  type HotkeyBinding, type HotkeyEvent, type HotkeyListener,
+  type ParsedKeyCombo,
+} from "./hotkeys";
+
+// --- Undo/Redo ---
+export {
+  UndoHistory,
+  type UndoItem, type UndoBranch, type UndoHistoryOptions,
+  type UndoState, type UndoChangeListener,
+} from "./undo-redo";
+
+// --- Tooltip ---
+export {
+  TooltipManager, getTooltipManager, tooltip,
+  type TooltipPlacement, type TooltipTrigger, type TooltipOptions,
+  type TooltipInstance,
+} from "./tooltip";
