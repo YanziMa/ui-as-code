@@ -3826,3 +3826,23 @@ export {
   type SignaturePadOptions, type SignaturePadInstance,
   type StrokePoint, type Stroke,
 } from "./signature-pad";
+
+// --- Markdown Renderer ---
+export {
+  parseMarkdown, renderToHtml, mdToHtml,
+  generateToc, renderToc, extractFrontMatter, extractText, countWords, readingTime,
+  type MdNode, type MdNodeType, type MdRenderOptions, type TocEntry, type FrontMatter,
+} from "./markdown-renderer";
+
+// --- Code Highlighter ---
+export {
+  highlight, highlightToHtml, detectCodeLanguage, registerLanguage,
+  themes,
+  type Language as HighlightLanguage, type Theme, type HighlightToken, type HighlightOptions, type HighlightResult,
+} from "./code-highlighter";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager, createImageGallery,
+  type GalleryImage, type ImageGalleryOptions, type ImageGalleryInstance,
+} from "./image-gallery";
