@@ -1835,3 +1835,29 @@ export {
   type CircuitBreakerState, type CircuitBreakerMetrics,
   type CircuitBreakerEventDetail, type CircuitResult,
 } from "./circuit-breaker-advanced";
+
+// --- Data Sync Engine ---
+export {
+  DataSyncEngine, createDataSyncEngine, MemorySyncStore,
+  type SyncEntity, type SyncOperation, type SyncConflict, type SyncStatus,
+  type SyncConfig, type SyncPullResult, type SyncPushResult,
+  type ConflictStrategy, type SyncStorageAdapter,
+  type SyncId, type EntityId, type EntityType, type Revision,
+} from "./data-sync-engine";
+
+// --- Structured Logger ---
+export {
+  StructuredLogger, createStructuredLogger, getLogger, log,
+  type LogEntry, type LogLevel, type LogFormat, type LoggerConfig,
+  type LogSearchQuery, type LogStats, type CacheOptions as LogCacheOptions,
+} from "./structured-logger";
+
+// --- API Gateway Client ---
+export {
+  ApiGatewayClient, createApiClient,
+  type ApiRequestConfig, type ApiResponse, type ApiError,
+  type CacheOptions, type RetryOptions, type InterceptorContext,
+  type RequestInterceptor, type ResponseInterceptor, type ErrorInterceptor,
+  type FinallyInterceptor, type ClientConfig, type BatchRequestItem,
+  type ClientMetrics, type HttpMethod,
+} from "./api-gateway-client";
