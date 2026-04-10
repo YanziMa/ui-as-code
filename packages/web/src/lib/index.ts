@@ -5291,3 +5291,32 @@ export type {
   AnimationTrack,
   ScrollAnimationConfig,
 } from "./animation-engine";
+
+// --- i18n ---
+export { t, getLocale, setLocale, LOCALE_CHANGE_EVENT } from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+
+// --- State Manager ---
+export { createStore, combineStores } from "./state-manager";
+export type {
+  StoreOptions,
+  StoreInstance,
+  Listener,
+  Middleware,
+  Selector,
+  ComputedValue,
+} from "./state-manager";
+
+// --- Router ---
+export { Router, createRouter, getRouter } from "./router";
+export type {
+  RouteMode,
+  RouteParams,
+  QueryParams,
+  RouteDefinition,
+  RouterConfig,
+  RouteInfo,
+  NavigationResult,
+} from "./router";
