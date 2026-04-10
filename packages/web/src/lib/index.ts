@@ -11387,3 +11387,38 @@ export type {
   VirtualListOptions,
   VirtualListInstance,
 } from "./virtual-list";
+
+// --- Calendar ---
+export {
+  CalendarManager,
+  createCalendar,
+} from "./calendar";
+export type {
+  CalendarView,
+  WeekStartDay,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar";
+
+// --- Lightbox ---
+export {
+  LightboxManager,
+  createLightbox,
+} from "./lightbox";
+export type {
+  LightboxImage,
+  LightboxOptions,
+  LightboxInstance,
+} from "./lightbox";
+
+// --- Segmented Control ---
+export {
+  createSegmentedControl,
+} from "./segmented-control";
+export type {
+  SegmentedOption,
+  SegmentedSize,
+  SegmentedControlOptions,
+  SegmentedControlInstance,
+} from "./segmented-control";
