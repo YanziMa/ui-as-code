@@ -10550,3 +10550,45 @@ export type {
   LazyImageOptions,
   LazyImageInstance,
 } from "./lazy-image";
+
+// --- Tour Guide ---
+export {
+  TourManager,
+  createTour,
+} from "./tour-guide";
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour-guide";
+
+// --- Hotkeys ---
+export {
+  HotkeyManager,
+  createAppHotkeys,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  ParsedKeyCombo,
+} from "./hotkeys";
+
+// --- Clipboard ---
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type {
+  ClipboardData,
+  ClipboardOptions,
+} from "./clipboard";
