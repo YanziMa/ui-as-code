@@ -761,3 +761,15 @@ export {
   isValidCsvFormat, getCsvStats,
   type CsvOptions, type ParseOptions, type ParsedCsv, type StreamParseOptions,
 } from "./csv-export";
+export {
+  TaskQueue, createTaskQueue,
+  type Task, type TaskPriority, type TaskStatus, type TaskResult,
+  type WorkerPoolOptions, type QueueStats,
+} from "./task-queue";
+export {
+  VirtualFileSystem, normalizePath as fsNormalizePath, joinPath as fsJoinPath,
+  dirname as fsDirname, basename as fsBasename, extname as fsExtname,
+  isAbsolute as fsIsAbsolute, relative as fsRelative, resolvePath as fsResolvePath,
+  matchGlob, globMatch, diffTrees,
+  type FsNode, type FsTreeDiff, type GlobOptions,
+} from "./file-system-v2";
