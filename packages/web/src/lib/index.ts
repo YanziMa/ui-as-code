@@ -1665,3 +1665,45 @@ export {
   type PasswordStrengthResult, type PasswordGeneratorOptions, type ApiKeyOptions,
   type AesGcmEncryptedData,
 } from "./crypto-utils";
+
+// --- Animation Engine ---
+export {
+  easings,
+  getEasing,
+  springAnimate,
+  AnimationTimeline,
+  createScrollAnimation,
+  staggerElements,
+  animateCounter,
+  createParallax,
+  type EasingFunction,
+  type SpringConfig,
+  type SpringState,
+  type Keyframe,
+  type AnimationTrack,
+  type ScrollAnimationConfig,
+} from "./animation-engine";
+
+// --- Table Engine ---
+export {
+  TableEngine,
+  type Column,
+  type TableFilter,
+  type TableSort,
+  type PaginationState,
+  type SelectionState,
+  type TableConfig,
+  type TableState,
+  type SortDirection,
+  type FilterOperator,
+  type ColumnAlign,
+} from "./table-engine";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandCategory,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+} from "./command-palette";
