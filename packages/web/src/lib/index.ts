@@ -8434,3 +8434,43 @@ export type {
   TimelineOptions,
   TimelineInstance,
 } from "./timeline";
+
+// --- Calendar ---
+export {
+  CalendarManager,
+  createCalendar,
+} from "./calendar";
+export type {
+  CalendarView,
+  WeekStartDay,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar";
+
+// --- Color Palette ---
+export {
+  ColorPaletteManager,
+  createColorPalette,
+  contrastRatio,
+} from "./color-palette";
+export type {
+  PaletteScheme,
+  ColorShade,
+  PaletteColor,
+  ColorPalette,
+  ColorPaletteOptions,
+  ColorPaletteInstance,
+} from "./color-palette";
+
+// --- Signature Pad ---
+export {
+  SignaturePadManager,
+  createSignaturePad,
+} from "./signature-pad";
+export type {
+  StrokePoint,
+  Stroke,
+  SignaturePadOptions,
+  SignaturePadInstance,
+} from "./signature-pad";
