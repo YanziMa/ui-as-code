@@ -109,11 +109,23 @@ const CORS_HEADERS = {
 };
 
 export function apiError(message: string, status: number = 400): NextResponse {
-  return NextResponse.json({ error: message }, { status, headers: CORS_HEADERS });
+  return NextResponse.json({ error: message }, {
+    status,
+    headers: {
+      ...CORS_HEADERS,
+      "Cache-Control": "no-store, must-revalidate",
+    },
+  });
 }
 
-export function apiSuccess<T>(data: T, status: number = 200): NextResponse {
-  return NextResponse.json({ data }, { status, headers: CORS_HEADERS });
+export function apiSuccess<T>(data: T, status: number = 200, cacheControl?: string): NextResponse {
+  return NextResponse.json({ data }, {
+    status,
+    headers: {
+      ...CORS_HEADERS,
+      "Cache-Control": cacheControl || "no-store, must-revalidate",
+    },
+  });
 }
 
 // ========== Standard API Wrapper ==========

@@ -94,7 +94,18 @@ async function callOpenAICompatible(
           {
             role: "system",
             content:
-              "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+              "You are a senior frontend engineer specializing in React UI modifications. Generate a precise unified diff based on the user's request.\n\n" +
+              "STRICT RULES:\n" +
+              "1. Output ONLY valid unified diff format (--- a/path +++ b/path @@ -x,y +x,y @@)\n" +
+              "2. Wrap the diff in ```diff code block\n" +
+              "3. NEVER modify import statements or add new imports\n" +
+              "4. NEVER change component props interface or add new props\n" +
+              "5. ONLY change what the user explicitly requested — no extra \"improvements\"\n" +
+              "6. Use Tailwind CSS classes for styling (this project uses Tailwind v4)\n" +
+              "7. Preserve existing className patterns and design tokens\n" +
+              "8. If the request is ambiguous, make minimal, safe changes\n" +
+              "9. Each hunk must have correct line numbers matching the source\n" +
+              "10. Output NOTHING outside the diff code block",
           },
           { role: "user", content },
         ],
@@ -170,7 +181,18 @@ async function callClaude(
         model: AI_MODEL,
         max_tokens: 4096,
         system:
-          "You are a UI modification expert. Given a user's description, generate a unified diff for the provided React component.\n\nRules:\n- Only output unified diff format (--- a/file +++ b/file @@ ... @@)\n- Do NOT modify import statements\n- Do NOT make cross-file changes\n- Keep the component's existing API (props) unchanged\n- Only modify what the user requested, nothing else",
+          "You are a senior frontend engineer specializing in React UI modifications. Generate a precise unified diff based on the user's request.\n\n" +
+          "STRICT RULES:\n" +
+          "1. Output ONLY valid unified diff format (--- a/path +++ b/path @@ -x,y +x,y @@)\n" +
+          "2. Wrap the diff in ```diff code block\n" +
+          "3. NEVER modify import statements or add new imports\n" +
+          "4. NEVER change component props interface or add new props\n" +
+          "5. ONLY change what the user explicitly requested — no extra \"improvements\"\n" +
+          "6. Use Tailwind CSS classes for styling (this project uses Tailwind v4)\n" +
+          "7. Preserve existing className patterns and design tokens\n" +
+          "8. If the request is ambiguous, make minimal, safe changes\n" +
+          "9. Each hunk must have correct line numbers matching the source\n" +
+          "10. Output NOTHING outside the diff code block",
         messages: [{ role: "user", content: buildTextPrompt(input) }],
       }),
       signal: controller.signal,

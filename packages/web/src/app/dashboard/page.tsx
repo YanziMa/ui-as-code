@@ -212,7 +212,7 @@ export default function DashboardPage() {
         {/* Quick Actions */}
         <div className="mt-10 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-black">
           <h2 className="mb-4 text-sm font-semibold text-zinc-900 dark:text-zinc-50">⚡ Quick Actions</h2>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <a
               href="/pr"
               className="flex items-center gap-3 rounded-lg border border-dashed border-zinc-200 p-4 transition-colors hover:border-blue-300 hover:bg-blue-50/50 dark:border-zinc-700 dark:hover:border-blue-800 dark:hover:bg-blue-950/30"
@@ -248,6 +248,16 @@ export default function DashboardPage() {
               <div>
                 <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Install Extension</p>
                 <p className="text-xs text-zinc-500">Get the Chrome extension</p>
+              </div>
+            </a>
+            <a
+              href="/api/frictions/export"
+              className="flex items-center gap-3 rounded-lg border border-dashed border-zinc-200 p-4 transition-colors hover:border-orange-300 hover:bg-orange-50/50 dark:border-zinc-700 dark:hover:border-orange-800 dark:hover:bg-orange-950/30"
+            >
+              <span className="text-lg">📥</span>
+              <div>
+                <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Export Data</p>
+                <p className="text-xs text-zinc-500">Download frictions as CSV</p>
               </div>
             </a>
           </div>
