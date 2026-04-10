@@ -15791,3 +15791,31 @@ export type {
   SliderOptions,
   SliderInstance,
 } from "./slider";
+export {
+  FileUploadManager,
+  createFileUpload,
+} from "./file-upload";
+export type {
+  FileUploadOptions,
+  UploadFile,
+  FileUploadInstance,
+} from "./file-upload";
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchSize,
+  SwitchVariant,
+  SwitchOptions,
+  SwitchInstance,
+} from "./switch";
+export {
+  createCheckboxGroup,
+} from "./checkbox-group";
+export type {
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxOption,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox-group";
