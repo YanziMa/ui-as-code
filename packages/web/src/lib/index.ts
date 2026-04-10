@@ -2905,3 +2905,21 @@ export {
   TagInputManager, createTagInput,
   type TagInputOptions, type TagInputInstance, type TagItem,
 } from "./tag-input";
+
+// --- Popover ---
+export {
+  PopoverManager, createPopover,
+  type PopoverOptions, type PopoverInstance, type PopoverTrigger, type PopoverPlacement,
+} from "./popover";
+
+// --- Dropdown Menu ---
+export {
+  DropdownMenuManager, createDropdownMenu,
+  type DropdownMenuOptions, type DropdownMenuInstance, type MenuItem, type MenuItemType,
+} from "./dropdown-menu";
+
+// --- Alert Banner ---
+export {
+  AlertManager, createAlert,
+  type AlertOptions, type AlertInstance, type AlertSeverity,
+} from "./alert-banner";
