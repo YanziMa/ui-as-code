@@ -6141,3 +6141,82 @@ export {
   containsElementType,
   getChildrenByType,
 } from "./react-interop";
+
+// --- Regex Utils ---
+export {
+  RegexBuilder,
+  PATTERNS,
+  testRegex,
+  matchesPattern,
+  extractAll,
+  extractFirst,
+  replaceWith,
+  replaceTemplate,
+  analyzePerformance,
+  escapeRegexChars,
+  unescapeRegexChars,
+} from "./regex-utils";
+export type {
+  RegexTestResult,
+  RegexPerformance,
+} from "./regex-utils";
+
+// --- Encoding Utils ---
+export {
+  base64Encode,
+  base64Decode,
+  base64UrlEncode,
+  base64UrlDecode,
+  base64Wrap,
+  base32Encode,
+  base32Decode,
+  base58Encode,
+  base58Decode,
+  hexEncode,
+  hexDecode,
+  isHex,
+  urlEncode,
+  urlDecode,
+  queryStringify,
+  queryParse as encQueryParse,
+  parseUrl as encParseUrl,
+  normalizeUnicode,
+  codePoints,
+  isBMP,
+  reverseUnicode,
+  htmlEncode,
+  htmlDecode,
+  parseCSV,
+  generateCSV,
+  decodeBuffer,
+  encodeBuffer,
+  uint8ToBinaryString,
+  binaryStringToUint8,
+  decodeJWT,
+  isJWTExpired,
+  createUnsignedJWT,
+  formatBytes as encFormatBytes,
+  parseBytes as encParseBytes,
+} from "./encoding-utils";
+export type {
+  ParsedURL as EncParsedURL,
+  JWTPayload,
+  DecodedJWT,
+} from "./encoding-utils";
+
+// --- Queue Utils ---
+export {
+  Queue,
+  PriorityQueue,
+  CircularBuffer,
+  RateLimitedQueue,
+  ObservableQueue,
+  DebounceQueue,
+  AsyncTaskQueue,
+  BatchProcessor,
+} from "./queue-utils";
+export type {
+  QueueItem,
+  QueueStats,
+  BatchProcessorOptions,
+} from "./queue-utils";
