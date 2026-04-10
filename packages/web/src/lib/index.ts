@@ -7727,3 +7727,37 @@ export type {
   VirtualListOptions,
   VirtualListInstance,
 } from "./virtual-list";
+
+// --- Segmented Control ---
+export {
+  SegmentedControlManager,
+  createSegmentedControl,
+} from "./segmented";
+export type {
+  SegmentedSize,
+  SegmentedBlockMode,
+  SegmentedOption,
+  SegmentedOptions,
+  SegmentedInstance,
+} from "./segmented";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
