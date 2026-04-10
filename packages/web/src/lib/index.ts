@@ -1205,3 +1205,42 @@ export {
   type Breakpoint, type ComputedGrid, type PlacedItem, type GridAreaDef,
   type SpanDef,
 } from "./css-grid-system";
+export {
+  FSM, HSM,
+  createMachine, interpret, match, stateEquals,
+  evaluateChoice, evaluateJunction, deepHistoryTarget, shallowHistoryTarget,
+  type MachineConfig, type StateConfig, type TransitionDef,
+  type StateValue, type TransitionHistoryEntry,
+  type ChoiceConfig, type JunctionConfig,
+  type GuardFn, type ActionFn, type Service,
+  type HistoryMode, type InvalidEventStrategy,
+} from "./state-machine";
+export {
+  hash, hashHex, hashBase64, hmac, hmacHex,
+  pbkdf2, pbkdf2Hex,
+  generateAesKey, importAesKey, exportAesKey,
+  encrypt, decrypt, encryptString, decryptString,
+  generateRsaKeyPair, generateEcKeyPair, sign, verify,
+  rsaEncrypt, rsaDecrypt,
+  secureRandom, secureRandomInt, secureRandomPick, secureShuffle,
+  generateToken, generateUuid, uniqueId, nanoid,
+  analyzePassword,
+  createUnsignedJwt, parseJwt,
+  ecdhDeriveBits, generateEcdhKeyPair,
+  constantTimeEqual, isCryptoAvailable,
+  encode, decode, toBase64Url, fromBase64Url,
+  type HashAlgorithm, type SymmetricAlgorithm, type AsymmetricAlgorithm,
+  type Encoding, type KeyPairResult, type EncryptedData,
+  type PasswordStrengthResult, type TokenOptions,
+} from "./cryptography-toolkit";
+export {
+  I18nEngine, initI18n, getI18n, t as translate,
+  parseLocale, getLocaleDirection, isSameLanguage, matchLocale, getBrowserLocales,
+  getPluralForm,
+  formatNumber, formatCurrency, formatPercent, formatCompact, formatBytes,
+  formatDate, formatRelativeTime, formatDateRange,
+  type Locale, type LocaleDirection, type PluralRule,
+  type MessageCatalog, type Namespace, type I18nConfig,
+  type InterpolationContext, type FormatOptions, type DateFormatOptions,
+  type I18nStats,
+} from "./i18n-system";

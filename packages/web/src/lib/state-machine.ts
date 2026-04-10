@@ -23,6 +23,13 @@ export type StateId = string;
 /** A valid event identifier (string literal union or string) */
 export type EventId = string;
 
+/**
+ * Constrained string type for use as Record keys.
+ * Works around TS strict mode requiring `string | number | symbol` for Record key types.
+ * @internal
+ */
+type StringKey = string & {};
+
 /** Context data shared across the entire machine */
 export type MachineContext = Record<string, unknown>;
 
@@ -81,7 +88,7 @@ export interface StateConfig<S, E, C extends MachineContext> {
   /** Actions to run when exiting this state */
   onExit?: ActionFn<C> | ActionFn<C>[];
   /** Local transitions keyed by event ID */
-  on?: Partial<Record<E, TransitionDef<S, E, C> | TransitionDef<S, E, C>[]>>;
+  on?: Partial<Record<string, TransitionDef<S, E, C> | TransitionDef<S, E, C>[]>>;
   /** Child states (makes this a composite / hierarchical state) */
   states?: Record<string, StateConfig<S, E, C>>;
   /** Initial child state (required when `states` is present) */
@@ -109,7 +116,7 @@ export interface MachineConfig<S, E, C extends MachineContext> {
   /** Initial context value */
   context?: C;
   /** Global transitions (checked after local per-state transitions) */
-  on?: Partial<Record<E, TransitionDef<S, E, C> | TransitionDef<S, E, C>[]>>;
+  on?: Partial<Record<string, TransitionDef<S, E, C> | TransitionDef<S, E, C>[]>>;
   /** How to handle events with no matching transition (default: "ignore") */
   invalidEventStrategy?: InvalidEventStrategy;
   /** Action(s) to run once when the machine is created */
@@ -159,7 +166,7 @@ export interface StateValue<S, C extends MachineContext> {
   /** Whether the machine has reached a final state */
   done: boolean;
   /** Deferred events waiting to be processed */
-  deferredEvents: Array<{ event: E; payload?: EventPayload }>;
+  deferredEvents: Array<{ event: string; payload?: EventPayload }>;
 }
 
 /** One entry in the transition history log */
@@ -1018,7 +1025,11 @@ export function evaluateJunction<S, C extends MachineContext>(
  * @param fallback - Default state if no history has been recorded yet
  * @returns A function usable as a dynamic `target` in a transition definition
  */
-export function deepHistoryTarget<S, C extends MachineContext>(
+export function deepHistoryTarget<
+  S extends StateId,
+  E extends EventId,
+  C extends MachineContext,
+>(
   hsm: HSM<S, E, C>,
   parentState: S,
   fallback: S,
@@ -1043,7 +1054,11 @@ export function deepHistoryTarget<S, C extends MachineContext>(
  * @param fallback - Default child state if no history recorded
  * @returns A function usable as a dynamic `target` in a transition definition
  */
-export function shallowHistoryTarget<S, C extends MachineContext>(
+export function shallowHistoryTarget<
+  S extends StateId,
+  E extends EventId,
+  C extends MachineContext,
+>(
   hsm: HSM<S, E, C>,
   parentState: S,
   fallback: S,
@@ -1195,7 +1210,7 @@ export function interpret<
  * };
  * ```
  */
-export function match<T, V>(
+export function match<T extends string | number, V>(
   stateValue: T,
   matcher: Partial<Record<T | "_", V>>,
 ): V | undefined {
@@ -1237,4 +1252,5 @@ export type StateConfigAlias<S, E, C extends MachineContext> = StateConfig<S, E,
 export type TransitionAlias<S, E, C extends MachineContext> = TransitionDef<S, E, C>;
 
 /** Alias for the FSM class as `Machine` for API compatibility with common conventions */
-export type Machine<S, E, C extends MachineContext> = FSM<S, E, C>;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export type Machine<S extends StateId, E extends EventId, C extends MachineContext> = FSM<S, E, C>;
