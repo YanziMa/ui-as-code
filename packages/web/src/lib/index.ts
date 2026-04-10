@@ -14130,3 +14130,44 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+export {
+  createTreeNode,
+  buildTree,
+  flattenTree,
+  flattenTreeWithDepth,
+  findNodeById,
+  findNodes,
+  getPathToNode,
+  getTreeDepth,
+  countNodes,
+  mapTree,
+  filterTree,
+} from "./tree";
+export type {
+  TreeNode,
+} from "./tree";
+export {
+  KanbanManager,
+  createKanban,
+} from "./kanban";
+export type {
+  CardPriority,
+  KanbanLabel,
+  KanbanCard,
+  KanbanColumn,
+  KanbanSwimlane,
+  KanbanOptions,
+  KanbanInstance,
+} from "./kanban";
+export {
+  GanttManager,
+  createGantt,
+} from "./gantt";
+export type {
+  GanttTask,
+  GanttMilestone,
+  GanttZoom,
+  GanttViewMode,
+  GanttOptions,
+  GanttInstance,
+} from "./gantt";
