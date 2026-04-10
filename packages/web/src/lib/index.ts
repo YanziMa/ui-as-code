@@ -4437,3 +4437,34 @@ export type {
   StatsOverviewOptions,
   StatsOverviewInstance,
 } from "./stats-overview";
+
+// --- Filter Bar ---
+export { createFilterBar } from "./filter-bar";
+export type {
+  FilterType,
+  FilterOption,
+  FilterDefinition,
+  FilterState,
+  FilterBarOptions,
+  FilterBarInstance,
+} from "./filter-bar";
+
+// --- Badge List ---
+export { createBadgeList } from "./badge-list";
+export type {
+  BadgeColor,
+  BadgeSize,
+  BadgeItem,
+  BadgeListOptions,
+  BadgeListInstance,
+} from "./badge-list";
+
+// --- Toggle Group ---
+export { createToggleGroup } from "./toggle-group";
+export type {
+  ToggleSize,
+  ToggleVariant,
+  ToggleOption,
+  ToggleGroupOptions,
+  ToggleGroupInstance,
+} from "./toggle-group";
