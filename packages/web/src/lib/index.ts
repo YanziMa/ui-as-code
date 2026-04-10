@@ -11422,3 +11422,40 @@ export type {
   SegmentedControlOptions,
   SegmentedControlInstance,
 } from "./segmented-control";
+
+// --- Form ---
+export {
+  createForm,
+} from "./form";
+export type {
+  FieldType,
+  ValidationRule,
+  FormField,
+  FormGroup,
+  FormOptions,
+  FormInstance,
+} from "./form";
+
+// --- Chart ---
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+
+// --- Notification Card ---
+export {
+  createNotificationCard,
+} from "./notification-card";
+export type {
+  NotificationPriority,
+  NotificationType,
+  NotificationAction,
+  NotificationCardOptions,
+  NotificationCardInstance,
+} from "./notification-card";
