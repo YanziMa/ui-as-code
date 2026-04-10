@@ -2054,3 +2054,20 @@ export {
   type KeyPair, type WalletAddress, type Signature, type EncryptedData,
   type MnemonicWordlist, type HashResult,
 } from "./crypto-wallet";
+
+// --- Expression Parser ---
+export {
+  parseExpression, evaluate, evalNode,
+  type ExprNode, type ExprType, type ParseError,
+  type EvalContext, type ParseResult,
+} from "./expression-parser";
+
+// --- State Machine Visualizer ---
+export {
+  renderStateMachine, toMermaidDiagram, toPlantUmlDiagram,
+  createInteractiveViewer, StateMachineViewer,
+  buildModel, getReachableStates, findAllPaths, validateModel,
+  type VisualState, type VisualTransition, type LayoutOptions,
+  type RenderOptions, type SvgDiagram, type StateMachineModel,
+  type AnimationFrame,
+} from "./state-machine-visual";
