@@ -4600,3 +4600,30 @@ export type {
   AvatarEditorOptions,
   AvatarEditorInstance,
 } from "./avatar-editor";
+
+// --- Color Picker Utilities ---
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Date Range Picker ---
+export { createDateRangePicker } from "./date-range-picker";
+export type {
+  DateRangePreset,
+  DateRangePickerOptions,
+  DateRangePickerInstance,
+} from "./date-range-picker";
+
+// --- Rating Stars ---
+export { createRatingStars } from "./rating-stars";
+export type {
+  StarIcon,
+  RatingSize,
+  RatingStarsOptions,
+  RatingStarsInstance,
+} from "./rating-stars";
