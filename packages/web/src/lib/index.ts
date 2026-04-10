@@ -7011,3 +7011,49 @@ export type {
   TabsOptions,
   TabsInstance,
 } from "./tabs";
+
+// --- Progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
+
+// --- Skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
