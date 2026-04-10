@@ -4627,3 +4627,32 @@ export type {
   RatingStarsOptions,
   RatingStarsInstance,
 } from "./rating-stars";
+
+// --- Progress Stepper ---
+export { createProgressStepper } from "./progress-stepper";
+export type {
+  StepStatus,
+  StepperOrientation,
+  StepperVariant,
+  StepItem,
+  ProgressStepperOptions,
+  ProgressStepperInstance,
+} from "./progress-stepper";
+
+// --- Tree View ---
+export { TreeView } from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
+
+// --- Split Pane ---
+export { createSplitPane } from "./split-pane";
+export type {
+  SplitOrientation,
+  SplitCollapseDirection,
+  SplitPaneOptions,
+  SplitPaneInstance,
+} from "./split-pane";
