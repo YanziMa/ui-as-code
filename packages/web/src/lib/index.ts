@@ -41366,3 +41366,15 @@ export {
   copySelection,
   onClipboardChange,
 } from "./clipboard-utils";
+
+// --- notification-utils ---
+export type { NotificationType, NotificationPosition, NotificationOptions, NotificationInstance, NotificationManagerConfig } from "./notification-utils";
+export { NotificationManager } from "./notification-utils";
+
+// --- tooltip-utils ---
+export type { TooltipPlacement, TooltipTrigger, TooltipOptions, TooltipInstance } from "./tooltip-utils";
+export { createTooltip } from "./tooltip-utils";
+
+// --- modal-utils ---
+export type { ModalSize, ModalOptions, ModalInstance, FocusTrapConfig } from "./modal-utils";
+export { createModal, createFocusTrap as modalFocusTrap } from "./modal-utils";
