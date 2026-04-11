@@ -20614,3 +20614,31 @@ export type {
   AlertOptions,
   AlertInstance,
 } from "./alert";
+export {
+  DropzoneManager,
+  createDropzone,
+} from "./dropzone";
+export type {
+  FileValidationError,
+  FileValidationRule,
+  DropzoneFile,
+  DropzoneOptions,
+  DropzoneInstance,
+} from "./dropzone";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+export {
+  createCommentSystem,
+} from "./comment";
+export type {
+  CommentAuthor,
+  CommentData,
+  CommentOptions,
+  CommentInstance,
+} from "./comment";
