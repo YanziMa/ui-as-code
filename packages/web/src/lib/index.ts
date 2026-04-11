@@ -41102,3 +41102,47 @@ export {
   allOrThrow,
 } from "./async-utils";
 export type { RetryOptions as AsyncRetryOptions, PollOptions as AsyncPollOptions, ConcurrencyOptions as AsyncConcurrencyOptions, MemoizeOptions as AsyncMemoizeOptions } from "./async-utils";
+// --- dom-observer-utils ---
+export {
+  observeMutations,
+  observeOnce,
+  createDebouncedObserver,
+  watchAttributes,
+  watchChildren,
+  watchTextContent,
+  watchSize as domWatchSize,
+  getElementSize as domGetElementSize,
+  hasSize,
+  watchVisibility as domWatchVisibility,
+  whenVisible as domWhenVisible,
+  isInViewport as domIsInViewport,
+} from "./dom-observer-utils";
+export type { MutationRecord as DomMutationRecord, MutationSummary, SizeChange } from "./dom-observer-utils";
+
+// --- intersection-utils ---
+export {
+  EnhancedIntersectionObserver,
+  createVisibilityTracker,
+  createLazyLoad,
+  createScrollTrigger,
+  isInViewport,
+  getViewportVisibility,
+  whenInViewport,
+  batchScrollTriggers,
+} from "./intersection-utils";
+export type { IntersectionEntry as IntIntersectionEntry, ObserverConfig, VisibilityInstance, LazyLoadOptions, ScrollTriggerOptions } from "./intersection-utils";
+
+// --- resize-utils ---
+export {
+  EnhancedResizeObserver,
+  BreakpointTracker,
+  ViewportTracker,
+  createResizeHandle,
+  clamp as resizeClamp,
+  isResizeObserverSupported,
+  getElementSize as resizeGetElementSize,
+  hasOverflow,
+  matchMedia,
+  onMediaChange,
+} from "./resize-utils";
+export type { ResizeEntry, ResizeObserverConfig, Breakpoint, ViewportState, ResizeHandleOptions } from "./resize-utils";
