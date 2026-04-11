@@ -48638,3 +48638,40 @@ export type {
   RadioGroupOptions as RUOptionsType,
   RadioInstance as RUInstanceType,
 } from "./radio-utils";
+// --- radio.ts ---
+export {
+  RadioGroupManager,
+  type RadioSize as RGRadioSize,
+  type RadioVariant as RGRadioVariant,
+  type RadioOption as RGRadioOption,
+  type RadioGroupOptions as RGOptions,
+  type RadioGroupInstance as RGInstance,
+  createRadioGroup as RGCreate,
+} from "./radio";
+
+// --- random.ts ---
+export {
+  secureRandomInt,
+  secureRandomFloat,
+  securePick,
+  secureShuffle,
+  WeightedItem,
+  weightedRandom,
+  createWeightedPicker,
+  createSeededRng,
+  seededInt,
+  seededPick,
+  seededShuffle,
+  normalRandom,
+  clampedNormal,
+  randomString,
+  randomHex,
+  generatePassword,
+} from "./random";
+
+// --- range-slider.ts ---
+export {
+  type RangeSliderOptions as RSOptions,
+  type RangeSliderInstance as RSInstance,
+  createRangeSlider as RSCreate,
+} from "./range-slider";
