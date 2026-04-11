@@ -42126,3 +42126,7 @@ export { createVirtualList, type VirtualListOptions, type VirtualListInstance, t
 export { DragDropManager, getDragDropManager, type DragOptions, type DropZoneOptions, type DropResult, type SortableConfig, type DragItem, type DragMode, type DropPosition } from "./drag-and-drop";
 export { createSortableList, type SortableListOptions, type SortableListInstance, type SortableItem } from "./sortable-list";
 export { makeResizable, createSplitPane, type ResizeOptions, type ResizeState, type SplitPaneOptions, type ResizableController, type SplitPaneController } from "./resizable";
+// --- Batch 1348: Form Validator, Debounce/Throttle, Clipboard ---
+export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom, type FieldConfig, type FieldValidationResult, type FormValidationResult, type FormValidatorOptions, type ValidatorFn } from "./form-validator";
+export { Debounced, Throttled, debounce, throttle, debouncePromise, rafThrottle, idleThrottle, type DebounceOptions, type ThrottleOptions, type RateLimitStats } from "./debounce-throttle";
+export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard, type ClipboardData, type ClipboardOptions } from "./clipboard";
