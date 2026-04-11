@@ -41715,3 +41715,7 @@ export * from "./color-input";
 export * from "./mention-input";
 export * from "./tag-input";
 export * from "./password-strength";
+// --- Batch 1318: OTP Input, Masked Input, Rich Text Editor ---
+export * from "./otp-input";
+export * from "./masked-input";
+export * from "./richtext-editor";
