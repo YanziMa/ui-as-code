@@ -31840,3 +31840,31 @@ export {
   type TimelineItem,
   type TimelineItemStatus,
 } from "./timeline";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeViewConfig,
+  type TreeNodeData,
+  type TreeNode,
+  type CheckMode,
+} from "./tree-view";
+
+// --- Data Table ---
+export {
+  DataTableManager,
+  createDataTable,
+  type DataTableOptions,
+  type DataTableInstance,
+  type Column,
+  type SortState,
+  type FilterState,
+} from "./data-table";
+
+// --- Virtual Scroll ---
+export {
+  createVirtualScroll,
+  type VirtualScrollOptions,
+  type VirtualScrollInstance,
+  type VirtualItem,
+} from "./virtual-scroll";
