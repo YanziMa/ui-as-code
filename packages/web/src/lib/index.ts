@@ -29723,3 +29723,14 @@ export type { AccordionOptions, AccordionInstance, AccordionItem, AccordionMode 
 // --- tooltip ---
 export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
 export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+// --- carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselOptions, CarouselInstance, CarouselSlide } from "./carousel";
+
+// --- upload ---
+export { createUpload } from "./upload";
+export type { UploadOptions, UploadInstance, UploadFile, UploadStatus } from "./upload";
+
+// --- pagination ---
+export { PaginationManager, createPagination } from "./pagination";
+export type { PaginationOptions, PaginationInstance } from "./pagination";
