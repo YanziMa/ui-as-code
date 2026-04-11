@@ -28762,3 +28762,30 @@ export type { ThemeConfig, ThemeColors } from "./theme";
 // --- Logger ---
 export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
 export type { LogLevel } from "./logger";
+
+// --- clipboard ---
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+
+// --- print ---
+export {
+  PrintManager,
+  createPrintManager,
+  quickPrint,
+  addPageBreakBefore,
+  addPageBreakAfter,
+  avoidBreakInside,
+} from "./print";
+export type { PrintOptions, PrintManagerInstance } from "./print";
+
+// --- watermark ---
+export { createWatermark } from "./watermark";
+export type { WatermarkOptions, WatermarkInstance } from "./watermark";
