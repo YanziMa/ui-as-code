@@ -24854,3 +24854,15 @@ export type { NotificationItem, NotificationBellOptions, NotificationBellInstanc
 // --- Empty State ---
 export { EmptyStateManager, createEmptyState } from "./empty-state";
 export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+
+// --- Rating ---
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+export { RatingManager, createRating } from "./rating";
+
+// --- Slider ---
+export type { SliderMark, SliderOptions, SliderInstance } from "./slider";
+export { SliderManager, createSlider } from "./slider";
+
+// --- Toggle Switch ---
+export type { ToggleVariant, ToggleSize, ToggleOptions, ToggleInstance } from "./toggle-switch";
+export { ToggleManager, createToggle } from "./toggle-switch";
