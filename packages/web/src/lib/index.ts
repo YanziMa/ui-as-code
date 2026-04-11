@@ -51697,3 +51697,48 @@ export {
   type Stats_TrendDirection as Stats_TrendDirection,
   type Stats_SparklineType as Stats_SparklineType,
 } from "./statistics";
+
+// --- stats-card ---
+export type {
+  StsCrd_TrendDirection as TrendDirection,
+  StsCrd_StatsVariant as StatsVariant,
+  StsCrd_SparklinePoint as SparklinePoint,
+  StsCrd_StatsCardOptions as StatsCardOptions,
+  StsCrd_StatsCardInstance as StatsCardInstance,
+} from "./stats-card";
+export {
+  StsCrd_StatsCardManager as StatsCardManager,
+  StsCrd_createStatsCard as createStatsCard,
+} from "./stats-card";
+
+// --- stats-overview ---
+export type {
+  StsOv_TrendDirection as TrendDirection,
+  StsOv_StatCardSize as StatCardSize,
+  StsOv_TrendData as TrendData,
+  StsOv_SparklinePoint as SparklinePoint,
+  StsOv_StatCard as StatCard,
+  StsOv_StatsOverviewOptions as StatsOverviewOptions,
+  StsOv_StatsOverviewInstance as StatsOverviewInstance,
+} from "./stats-overview";
+export {
+  StsOv_StatsOverviewManager as StatsOverviewManager,
+  StsOv_createStatsOverview as createStatsOverview,
+} from "./stats-overview";
+
+// --- status-dot-utils ---
+export type {
+  StdDot_StatusDotVariant as StatusDotVariant,
+  StdDot_StatusDotSize as StatusDotSize,
+  StdDot_StatusDotShape as StatusDotShape,
+  StdDot_StatusDotPosition as StatusDotPosition,
+  StdDot_StatusDotOptions as StatusDotOptions,
+  StdDot_StatusDotInstance as StatusDotInstance,
+  StdDot_StatusListItem as StatusListItem,
+  StdDot_StatusListOptions as StatusListOptions,
+  StdDot_StatusListInstance as StatusListInstance,
+} from "./status-dot-utils";
+export {
+  StdDot_createStatusDot as createStatusDot,
+  StdDot_createStatusList as createStatusList,
+} from "./status-dot-utils";
