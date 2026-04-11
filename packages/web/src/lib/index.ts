@@ -41727,3 +41727,7 @@ export * from "./diff-viewer";
 export * from "./kanban-board";
 export * from "./gantt-chart";
 export * from "./timeline-viewer";
+// --- Batch 1321: Data Table, Pivot Table, Tree View ---
+export * from "./data-table";
+export * from "./pivot-table";
+export * from "./tree-view";
