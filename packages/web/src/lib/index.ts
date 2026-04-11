@@ -42049,3 +42049,10 @@ export { createSelectDropdown } from "./select-dropdown.js";
 export type { SelectDropdownOptions, SelectDropdownInstance, SelectOption, SelectGroup, SelectDropdownSize, SelectTriggerMode } from "./select-dropdown.js";
 export { createTextareaAutosize } from "./textarea-autosize.js";
 export type { TextareaAutosizeOptions, TextareaAutosizeInstance } from "./textarea-autosize.js";
+// --- Batch 1334: Slider, Rating, Color Picker ---
+export { createSlider } from "./slider.js";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider.js";
+export { createRating } from "./rating.js";
+export type { RatingOptions, RatingInstance, StarIconType } from "./rating.js";
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker.js";
+export type { RgbColor, HslColor, Palette } from "./color-picker.js";
