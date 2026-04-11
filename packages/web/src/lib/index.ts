@@ -45420,3 +45420,50 @@ export {
   combineHashes as hsCombineHashesNum,
   hashToHex as hsHashToHex,
 } from "./hash";
+
+// --- hashing ---
+export {
+  djb2 as hDjb2,
+  fnv1a as hFnv1a,
+  murmur3 as hMurmur3,
+  sdbm as hSdbm,
+  sha256 as hSha256,
+  sha1 as hSha1,
+  sha384 as hSha384,
+  sha512 as hSha512,
+  crc32 as hCrc32,
+  adler32 as hAdler32,
+  fingerprint as hFingerprint,
+  shortFingerprint as hShortFp,
+  consistentId as hConsistentId,
+  stringToColor as hStringToColor,
+  objectHash as hObjectHash,
+  serializeForHash as hSerialize,
+} from "./hashing";
+
+// --- header ---
+export type {
+  HeaderSize as HdSize,
+  HeaderVariant as HdVariant,
+  HeaderAction as HdAction,
+  HeaderTab as HdTab,
+  HeaderOptions as HdOptions,
+  HeaderInstance as HdInstance,
+} from "./header";
+export {
+  createHeader as hdCreate,
+} from "./header";
+
+// --- heatmap-chart ---
+export type {
+  HeatmapLayout as HmLayout,
+  ColorScale as HmColorScale,
+  AggregationMethod as HmAggMethod,
+  HeatmapCell as HmCell,
+  HeatmapColorStop as HmColorStop,
+  HeatmapOptions as HmOptions,
+  HeatmapInstance as HmInstance,
+} from "./heatmap-chart";
+export {
+  createHeatmap as hmCreate,
+} from "./heatmap-chart";
