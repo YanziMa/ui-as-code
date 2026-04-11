@@ -29767,3 +29767,14 @@ export type { VideoPlayerOptions, VideoPlayerInstance, VideoTrack, QualityOption
 // --- image-viewer ---
 export { ImageViewerManager, createImageViewer } from "./image-viewer";
 export type { ImageViewerOptions, ImageViewerInstance, ImageViewerImage, ImageViewerTool } from "./image-viewer";
+// --- infinite-scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
+
+// --- command-palette ---
+export { CommandPalette } from "./command-palette";
+export type { CommandPaletteConfig, CommandPaletteState, Command, CommandCategory } from "./command-palette";
+
+// --- search-highlight ---
+export { SearchHighlightManager, createSearchHighlight } from "./search-highlight";
+export type { SearchHighlightOptions, SearchHighlightInstance } from "./search-highlight";
