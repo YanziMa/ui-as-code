@@ -47344,3 +47344,41 @@ export {
   defaults,
   ensurePath,
 } from "./object-utils";
+
+// --- object.ts (simple utils) ---
+export {
+  deepClone as deepCloneObj,
+  pick as pickObj,
+  omit as omitObj,
+  isEmpty as isEmptyObj,
+  get as getObj,
+  set as setObj,
+  deepMerge as deepMergeObj,
+  deepFreeze as deepFreezeObj,
+} from "./object";
+
+// --- observable ---
+export type {
+  Unsubscribe,
+  SubscriberFn,
+} from "./observable";
+export {
+  Observable,
+  Computed,
+  ReactiveStore,
+} from "./observable";
+
+// --- observer-pattern ---
+export type {
+  EventHandler as OPEvtHandler,
+  EventErrorHandler as OPErrHandler,
+} from "./observer-pattern";
+export type {
+  Subscription as OPSub,
+  ObserverOptions as OPOpts,
+  ObserverStats as OPStats,
+} from "./observer-pattern";
+export {
+  Observer,
+  createObserver,
+} from "./observer-pattern";
