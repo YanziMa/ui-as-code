@@ -43986,3 +43986,55 @@ export {
   combineSelectors,
 } from "./react-compiler-utils";
 export type { MemoKey, MemoCache, DependencyTracker, ReactiveBridge } from "./react-compiler-utils";
+// --- react-dom-utils ---
+export {
+  createPortalContainer,
+  removePortalContainer,
+  measureElement,
+  isInViewport,
+  isPartiallyInViewport,
+  scrollIntoViewIfNeeded,
+  getScrollPosition,
+  lockBodyScroll,
+  createFocusTrap,
+  focusNextTabbable,
+  createEventDelegator,
+  animateTransition,
+  fadeIn,
+  fadeOut,
+  slideUp,
+  scaleIn,
+  applyTempStyles,
+  supportsCssProperty,
+  getSelectionText,
+  selectElementText,
+  copyToClipboard,
+} from "./react-dom-utils";
+export type { ElementMeasurements } from "./react-dom-utils";
+
+// --- react-error-boundary ---
+export {
+  ErrorBoundary,
+  DefaultErrorFallback,
+  InlineErrorFallback,
+  withErrorBoundary,
+  formatErrorForLogging,
+  createRecoveryAction,
+  IsolatedChildren,
+} from "./react-error-boundary";
+export type { ErrorBoundaryProps, ErrorBoundaryState, ErrorBoundaryInstance } from "./react-error-boundary";
+
+// --- react-form-utils ---
+export {
+  FormManager,
+  createFormManager,
+  required,
+  minLength,
+  maxLength,
+  pattern,
+  email,
+  min,
+  max,
+  custom,
+} from "./react-form-utils";
+export type { FormFieldValue, FieldValidationRule, FieldState, FormState, FormSubmitHandler, FormHelpers, FormOptions } from "./react-form-utils";
