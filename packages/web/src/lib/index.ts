@@ -41402,3 +41402,15 @@ export { createSkeleton, createSkeletonBlock, createCardSkeleton, createTableSke
 // --- avatar-utils ---
 export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar-utils";
 export { generateAvatarColor, getInitials, createAvatar, createAvatarGroup } from "./avatar-utils";
+
+// --- command-palette-utils ---
+export type { PaletteItem, CommandPaletteOptions, CommandPaletteInstance } from "./command-palette-utils";
+export { createCommandPalette } from "./command-palette-utils";
+
+// --- context-menu-utils ---
+export type { ContextMenuItem, ContextMenuContext, ContextMenuOptions, ContextMenuInstance } from "./context-menu-utils";
+export { createContextMenu } from "./context-menu-utils";
+
+// --- popover-utils ---
+export type { PopoverPlacement, PopoverTrigger, VirtualElement, PopoverOptions, PopoverInstance } from "./popover-utils";
+export { createPopover } from "./popover-utils";
