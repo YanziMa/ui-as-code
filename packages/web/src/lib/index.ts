@@ -28897,3 +28897,15 @@ export type { TemplateContext, TemplateOptions, TemplateError, PartialTemplate, 
 // --- html-sanitizer ---
 export { sanitizeHtml, sanitize, stripHtml, escapeHtmlEntities, scanForXss } from "./html-sanitizer";
 export type { SanitizeLevel, SanitizeOptions } from "./html-sanitizer";
+
+// --- url-pattern-router ---
+export { createRouter, matchUrl } from "./url-pattern-router";
+export type { RouteParams, RouteMatch, RouteHandler, RouteGuard, RouteMiddleware, RouteDefinition, RouterOptions, RouterInstance } from "./url-pattern-router";
+
+// --- hash-history ---
+export { createHashHistory } from "./hash-history";
+export type { HashHistoryEntry, HashHistoryOptions, HashHistoryInstance } from "./hash-history";
+
+// --- state-machine-viz ---
+export { visualizeStateMachine, renderMachine } from "./state-machine-viz";
+export type { StateId as VizStateId, EventLabel as VizEventLabel, StateNode as VizStateNode, TransitionEdge as VizTransitionEdge, MachineDefinition as VizMachineDefinition, VizOptions, VizColorTheme, VizInstance } from "./state-machine-viz";
