@@ -42077,3 +42077,10 @@ export { createToastManager } from "./toast-notification.js";
 export type { ToastManagerOptions, ToastInstance, ToastOptions, ToastType, ToastPosition } from "./toast-notification.js";
 export { createDrawer } from "./drawer.js";
 export type { DrawerOptions, DrawerInstance, DrawerSide, DrawerSize } from "./drawer.js";
+// --- Batch 1338: Split View, Stepper, Segmented Control ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view.js";
+export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, SplitDirection } from "./split-view.js";
+export { createStepper } from "./stepper.js";
+export type { StepperOptions, StepperInstance, StepConfig, StepStatus } from "./stepper.js";
+export { createSegmentedControl } from "./segmented-control.js";
+export type { SegmentedControlOptions, SegmentedControlInstance, SegmentedOption, SegmentedSize } from "./segmented-control.js";
