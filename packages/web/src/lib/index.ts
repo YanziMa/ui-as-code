@@ -28560,3 +28560,39 @@ export {
   type ContextMenuInstance,
   type ContextMenuItem,
 } from "./context-menu";
+
+// --- Batch 936: Command Palette, Markdown Renderer, Syntax Highlight ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+  type CommandCategory,
+} from "./command-palette";
+export {
+  parseMarkdown,
+  renderToHtml,
+  mdToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  countWords,
+  readingTime,
+  type MdNode,
+  type MdNodeType,
+  type MdRenderOptions,
+  type TocEntry,
+  type FrontMatter,
+} from "./markdown-renderer";
+export {
+  highlightCode,
+  highlightToHtml,
+  registerLanguage,
+  registerTheme,
+  getAvailableLanguages,
+  getAvailableThemes,
+  type HighlightOptions,
+  type HighlightTheme,
+  type Token,
+  type TokenType,
+} from "./syntax-highlight";
