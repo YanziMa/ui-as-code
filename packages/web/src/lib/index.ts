@@ -44274,3 +44274,33 @@ export type {
   SortableListInstance,
 } from "./sortable-list";
 export { createSortableList } from "./sortable-list";
+// --- sortable-table ---
+export type {
+  SortDirection as TableSortDirection,
+  SelectionMode,
+  Column as TableColumn,
+  TablePagination as TablePaginationInfo,
+  SortState as TableSortState,
+  FilterState as TableFilterState,
+  TableRow,
+  SortableTableOptions,
+  SortableTableInstance,
+} from "./sortable-table";
+export { createSortableTable } from "./sortable-table";
+
+// --- sortable-utils ---
+export type {
+  SortAnimation,
+  SortableItemConfig,
+  SortableListOptions as SortableUtilsOptions,
+  SortableListInstance as SortableUtilsInstance,
+} from "./sortable-utils";
+export { createSortableList as createSortableUtils } from "./sortable-utils";
+
+// --- sortable ---
+export type {
+  SortableItem as CoreSortableItem,
+  SortableOptions as CoreSortableOptions,
+  SortableInstance as CoreSortableInstance,
+} from "./sortable";
+export { SortableList, createSortable } from "./sortable";
