@@ -24842,3 +24842,15 @@ export type { TabItem, TabsOptions, TabsInstance, TabOrientation, TabVariant } f
 // --- Carousel ---
 export { CarouselManager, createCarousel } from "./carousel";
 export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+
+// --- Notification Bell ---
+export { createNotificationBell } from "./notification-bell";
+export type { NotificationItem, NotificationBellOptions, NotificationBellInstance } from "./notification-bell";
+
+// --- Empty State ---
+export { EmptyStateManager, createEmptyState } from "./empty-state";
+export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
