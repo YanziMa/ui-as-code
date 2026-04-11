@@ -50539,3 +50539,37 @@ export {
   serverOnly as srvServerOnly,
   detectContentType as srvDetectContentType,
 } from "./server-utils";
+
+// --- session-manager ---
+export type {
+  SessionData as SessMgr_Data,
+  SessionConfig as SessMgr_Config,
+  SessionState as SessMgr_State,
+  SessionListener as SessMgr_Listener,
+} from "./session-manager";
+export { SessionManager as SessTokenManager } from "./session-manager";
+
+// --- session ---
+export type {
+  SessionConfig as Sess_Config,
+  SessionData as Sess_Data,
+  SessionState as Sess_State,
+  SessionEventHandler as Sess_EventHandler,
+  SessionExpireHandler as Sess_ExpireHandler,
+} from "./session";
+export { SessionManager as SessManager, createSessionManager } from "./session";
+
+// --- share-api ---
+export type {
+  ShareData,
+  ShareOptions,
+  ShareTargetRegistration,
+  ShareInstance,
+} from "./share-api";
+export {
+  createShareApi,
+  shareContent,
+  isShareSupported,
+  generateShareTarget,
+  parseShareTargetFromUrl,
+} from "./share-api";
