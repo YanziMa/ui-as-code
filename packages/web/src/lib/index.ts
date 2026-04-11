@@ -51054,3 +51054,67 @@ export { type SplitDirection as SpltVw_SplitDirection, type PaneConfig as SpltVw
 export { type SplitterOrientation, type SplitterUnit, type SplitterPane as SpltUtl_SplitterPane, type SplitterOptions as SpltUtl_SplitterOptions, type SplitterInstance as SpltUtl_SplitterInstance, createSplitter } from "./splitter-utils";
 // --- splitter ---
 export { type SplitButtonSize as Splt_SplitButtonSize, type SplitButtonVariant, type SplitButtonItem, type SplitButtonOptions as Splt_SplitButtonOptions, type SplitButtonInstance as Splt_SplitButtonInstance, createSplitButton } from "./splitter";
+
+// --- spreadsheet ---
+export {
+  createSpreadsheet,
+  type SpreadsheetCell,
+  type SpreadsheetColumn,
+  type SpreadsheetOptions,
+  type SpreadsheetInstance,
+} from "./spreadsheet";
+export {
+  createSpreadsheet as Sprs_createSpreadsheet,
+  type SpreadsheetCell as Sprs_Cell,
+  type SpreadsheetColumn as Sprs_Column,
+  type SpreadsheetOptions as Sprs_Options,
+  type SpreadsheetInstance as Sprs_Instance,
+} from "./spreadsheet";
+
+// --- spring-physics ---
+export {
+  createSpring,
+  createPresetSpring,
+  solveSpring,
+  runSpringSimulation,
+  SpringPresets,
+  type SpringConfig,
+  type SpringOptions,
+  type SpringInstance,
+  type ChainableSpring,
+} from "./spring-physics";
+export {
+  createSpring as SprPhys_createSpring,
+  createPresetSpring as SprPhys_createPresetSpring,
+  solveSpring as SprPhys_solveSpring,
+  runSpringSimulation as SprPhys_runSpringSimulation,
+  SpringPresets as SprPhys_Presets,
+  type SpringConfig as SprPhys_Config,
+  type SpringOptions as SprPhys_Options,
+  type SpringInstance as SprPhys_Instance,
+  type ChainableSpring as SprPhys_ChainableSpring,
+} from "./spring-physics";
+
+// --- sse ---
+export {
+  createSseClient,
+  SseClient,
+  SseAggregator,
+  parseSseBuffer,
+  type SseConfig,
+  type SseMessage,
+  type SseConnectionState,
+  type SseClientInstance,
+  type SseAggregatorInstance,
+} from "./sse";
+export {
+  createSseClient as Sse_createClient,
+  SseClient as Sse_Client,
+  SseAggregator as Sse_Aggregator,
+  parseSseBuffer as Sse_parseBuffer,
+  type SseConfig as Sse_Config,
+  type SseMessage as Sse_Message,
+  type SseConnectionState as Sse_ConnectionState,
+  type SseClientInstance as Sse_ClientInstance,
+  type SseAggregatorInstance as Sse_AggregatorInstance,
+} from "./sse";
