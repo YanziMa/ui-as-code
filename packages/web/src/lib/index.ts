@@ -24621,3 +24621,15 @@ export type { CalloutOptions, CalloutInstance, CalloutVariant } from "./callout"
 // --- Toast ---
 export { showToast, getToastManager, ToastManager } from "./toast";
 export type { ToastOptions, ToastInstance, ToastManagerConfig, ToastType, ToastPosition } from "./toast";
+
+// --- Chips Input ---
+export { createChipsInput } from "./chips-input";
+export type { ChipsInputOptions, ChipsInputInstance, ChipData } from "./chips-input";
+
+// --- Mentionable ---
+export { createMentionable } from "./mentionable";
+export type { MentionableOptions, MentionableInstance, MentionItem, MentionSearchFn } from "./mentionable";
+
+// --- Rich Text Toolbar ---
+export { createRichTextToolbar } from "./rich-text-toolbar";
+export type { RichTextToolbarOptions, RichTextToolbarInstance, ToolbarButton, ToolbarButtonId } from "./rich-text-toolbar";
