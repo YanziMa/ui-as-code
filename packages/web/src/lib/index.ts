@@ -42635,3 +42635,29 @@ export {
   type ActionSheetOptions,
   type ActionSheetInstance,
 } from "./action-sheet";
+// --- activity-feed ---
+export {
+  ActivityFeedManager,
+  createActivityFeed,
+  type ActivityItem,
+  type ActivityType,
+  type ActivityGroupBy,
+  type FeedDensity,
+  type ActivityFeedOptions,
+  type ActivityFeedInstance,
+} from "./activity-feed";
+
+// --- affix ---
+export {
+  createAffix as createAffixBasic,
+  type AffixOptions as AffixOptionsBasic,
+  type AffixInstance as AffixInstanceBasic,
+} from "./affix";
+
+// --- affix-utils ---
+export {
+  createAffix as createAffixUtils,
+  type AffixPosition,
+  type AffixOptions as AffixUtilsOptions,
+  type AffixInstance as AffixUtilsInstance,
+} from "./affix-utils";
