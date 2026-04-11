@@ -24633,3 +24633,15 @@ export type { MentionableOptions, MentionableInstance, MentionItem, MentionSearc
 // --- Rich Text Toolbar ---
 export { createRichTextToolbar } from "./rich-text-toolbar";
 export type { RichTextToolbarOptions, RichTextToolbarInstance, ToolbarButton, ToolbarButtonId } from "./rich-text-toolbar";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+
+// --- Search Dialog ---
+export { createSearchDialog } from "./search-dialog";
+export type { SearchDialogOptions, SearchDialogInstance, SearchResult, SearchCategory } from "./search-dialog";
+
+// --- Quick Switcher ---
+export { createQuickSwitcher } from "./quick-switcher";
+export type { QuickSwitcherOptions, QuickSwitcherInstance, SwitcherItem } from "./quick-switcher";
