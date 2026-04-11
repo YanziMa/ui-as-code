@@ -44139,3 +44139,14 @@ export type { RenderNode, RenderContext } from "./renderer";
 // --- request ---
 export { HttpClient, http } from "./request";
 export type { RequestOptions, Response as RequestResponse, RequestError, InterceptorContext, RequestInterceptor, ResponseInterceptor, ErrorInterceptor } from "./request";
+// --- responsive ---
+export { ResponsiveManager, getResponsiveManager, matchesMedia, watchMedia, getSafeAreaInsets, getViewportSize, DEFAULT_BREAKPOINTS } from "./responsive";
+export type { Breakpoint as ResponsiveBreakpoint, ResponsiveOptions, ResponsiveInfo } from "./responsive";
+
+// --- ripple ---
+export { createRipple, initRipples } from "./ripple";
+export type { RippleOptions, RippleInstance } from "./ripple";
+
+// --- robot ---
+export { pressKey, typeText, click, hover, drag, fillForm, runSequence, getA11yTree, getInteractiveElements, takeSnapshot, compareSnapshots } from "./robot";
+export type { RobotOptions, StepResult, InteractiveElementInfo, ElementSnapshot, SnapshotDiff } from "./robot";
