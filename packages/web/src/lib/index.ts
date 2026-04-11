@@ -32275,3 +32275,31 @@ export {
   type ContextMenuOptions,
   type ContextMenuInstance,
 } from "./context-menu";
+
+// --- modal ---
+export {
+  createModal,
+  type ModalSize,
+  type ModalPosition,
+  type ModalOptions,
+  type ModalInstance,
+} from "./modal";
+
+// --- popover ---
+export {
+  PopoverManager,
+  createPopover,
+  type PopoverTrigger,
+  type PopoverPlacement,
+  type PopoverOptions,
+  type PopoverInstance,
+} from "./popover";
+
+// --- drawer ---
+export {
+  createDrawer,
+  type DrawerSide,
+  type DrawerSize,
+  type DrawerOptions,
+  type DrawerInstance,
+} from "./drawer";
