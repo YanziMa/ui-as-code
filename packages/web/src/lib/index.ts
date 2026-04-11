@@ -28596,3 +28596,25 @@ export {
   type Token,
   type TokenType,
 } from "./syntax-highlight";
+
+// --- Batch 937: Virtual Scroller, Infinite Scroll, Pagination ---
+export {
+  VirtualScroller,
+  type ScrollerConfig,
+  type ScrollerState,
+  type VisibleRange,
+  type ScrollItem,
+  type ScrollToOptions,
+} from "./virtual-scroller";
+export {
+  InfiniteScroll,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+  type InfiniteScrollItem,
+} from "./infinite-scroll";
+export {
+  createPagination,
+  PaginationManager,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination";
