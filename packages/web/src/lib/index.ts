@@ -45742,3 +45742,34 @@ export {
   formatRelativeTime as i18nUtilsFormatRelativeTime,
   formatList as i18nUtilsFormatList,
 } from "./i18n-utils";
+// i18n-v2
+export {
+  I18nV2,
+  type I18nV2Config,
+  type NamespaceBundle,
+  type FormatShortcuts,
+  getI18n as getI18nV2,
+  resetI18n,
+  applyDirection as applyI18nV2Direction,
+  flipProperty,
+  createPluralTranslator,
+  createGenderTranslator,
+} from "./i18n-v2";
+
+// i18n
+export {
+  t as uiT,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+
+// icon-picker
+export {
+  createIconPicker,
+  type IconCategory,
+  type IconSize,
+  type IconEntry,
+  type IconPickerOptions,
+  type IconPickerInstance,
+} from "./icon-picker";
