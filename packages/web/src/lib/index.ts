@@ -25084,3 +25084,31 @@ export {
   type RatingInstance,
   type StarIconType,
 } from "./rating";
+
+// --- Slider ---
+export {
+  SliderManager,
+  createSlider,
+  type SliderOptions,
+  type SliderInstance,
+  type SliderMark,
+} from "./slider";
+
+// --- Toggle Switch ---
+export {
+  ToggleManager,
+  createToggle,
+  type ToggleOptions,
+  type ToggleInstance,
+  type ToggleVariant,
+  type ToggleSize,
+} from "./toggle-switch";
+
+// --- Text Input ---
+export {
+  createTextInput,
+  type TextInputOptions,
+  type TextInputInstance,
+  type InputSize,
+  type InputState,
+} from "./text-input";
