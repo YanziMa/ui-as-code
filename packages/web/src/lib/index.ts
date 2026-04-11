@@ -25631,3 +25631,15 @@ export { createOnboarding } from "./onboarding";
 // --- feature-flag ---
 export type { FlagValueType, FlagConditionOperator, FlagCondition, FlagRule, FeatureFlag, UserContext, FeatureFlagOptions, FeatureFlagInstance } from "./feature-flag";
 export { createFeatureFlags, createBooleanFlag, createRolloutFlag } from "./feature-flag";
+
+// --- undo-redo ---
+export type { UndoItem, UndoBranch, UndoHistoryOptions, UndoState, UndoChangeListener } from "./undo-redo";
+export { UndoHistory } from "./undo-redo";
+
+// --- clipboard ---
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard } from "./clipboard";
+
+// --- shortcuts ---
+export type { ShortcutBinding, ShortcutGroup, ShortcutManagerOptions, ShortcutInstance } from "./shortcuts";
+export { createShortcutManager } from "./shortcuts";
