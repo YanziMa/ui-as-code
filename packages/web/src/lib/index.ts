@@ -28433,3 +28433,32 @@ export {
   type RadioSize,
   type RadioVariant,
 } from "./radio-group";
+
+// --- Batch 932: Checkbox, Text Input, Select ---
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+  type CheckboxOptions,
+  type RadioOptions,
+  type CheckboxInstance,
+  type RadioInstance,
+  type CheckboxGroupOptions,
+  type CheckboxGroupInstance,
+  type CheckboxSize,
+  type CheckboxVariant,
+} from "./checkbox";
+export {
+  createTextInput,
+  type TextInputOptions,
+  type TextInputInstance,
+  type InputSize,
+  type InputState,
+} from "./text-input";
+export {
+  createSelect,
+  SelectManager,
+  type SelectOptions,
+  type SelectInstance,
+  type SelectOption,
+} from "./select";
