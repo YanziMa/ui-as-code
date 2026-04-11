@@ -26007,3 +26007,39 @@ export {
   throttledSignal,
 } from "./signal";
 export type { Signal, ComputedSignal, EffectOptions, SignalArray } from "./signal";
+
+// --- State Manager ---
+export {
+  createStore as createStateStore,
+  combineStores,
+} from "./state-manager";
+export type { StoreOptions as SMOptions, StoreInstance, ComputedValue, Listener as SMListener, Middleware as SMMiddleware, Selector as SMSelector } from "./state-manager";
+
+// --- Store (Zustand-inspired) ---
+export {
+  Store,
+  createStore,
+  createComputed,
+  persistMiddleware,
+  connectDevTools,
+  registerStore,
+  getStore,
+  unregisterStore,
+} from "./store";
+export type { StoreOptions, StoreApi, PersistOptions, Listener, Selector, EqualityFn, Middleware } from "./store";
+
+// --- Atom (Jotai-inspired) ---
+export {
+  AtomStore,
+  atom,
+  atomRead,
+  atomWrite,
+  useAtomValue,
+  atomFamily,
+  selectAtom,
+  mapAtom,
+  filterAtom,
+  getAtomStore,
+  resetGlobalStore,
+} from "./atom";
+export type { AnyAtom, Atom, ReadAtom, WriteAtom, AtomOptions, AtomInstance } from "./atom";
