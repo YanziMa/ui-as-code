@@ -41692,3 +41692,10 @@ export { createQuickSwitcher } from "./quick-switcher";
 export type { QuickSwitcherOptions, QuickSwitcherInstance, SwitcherItem } from "./quick-switcher";
 export { createFuzzySearch, fuzzySearch, fuzzyTest, fuzzyHighlight } from "./search-fuzzy";
 export type { FuzzySearchInstance, FuzzyOptions, FuzzyResult } from "./search-fuzzy";
+// --- Batch 1313: Anchor Link, Scroll Spy, Countdown Timer ---
+export { createAnchorGroup, createBackToTop } from "./anchor-link";
+export type { AnchorLink, AnchorGroupOptions, AnchorGroupInstance, BackToTopOptions, BackToTopInstance } from "./anchor-link";
+export { createScrollSpy, createNavSpy } from "./scroll-spy";
+export type { ScrollSpyOptions, ScrollSpyInstance, SpyTarget, NavSpyOptions } from "./scroll-spy";
+export { createCountdownTimer } from "./countdown-timer";
+export type { CountdownTimerOptions, CountdownTimerInstance, CountdownDisplayMode, CountdownUnit } from "./countdown-timer";
