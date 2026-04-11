@@ -20583,3 +20583,34 @@ export type {
   InputGroupOptions,
   InputGroupInstance,
 } from "./input-group";
+export {
+  createForm,
+} from "./form";
+export type {
+  FieldType,
+  ValidationRule,
+  FormField,
+  FormGroup,
+  FormOptions,
+  FormInstance,
+} from "./form";
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
