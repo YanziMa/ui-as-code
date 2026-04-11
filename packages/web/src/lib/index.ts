@@ -27645,3 +27645,40 @@ export {
   type CarouselInstance,
   type CarouselSlide,
 } from "./carousel";
+
+// --- splitter ---
+export {
+  createSplitButton,
+  type SplitButtonOptions,
+  type SplitButtonInstance,
+  type SplitButtonItem,
+  type SplitButtonSize,
+  type SplitButtonVariant,
+} from "./splitter";
+
+// --- resizable ---
+export {
+  makeResizable,
+  createSplitPane,
+  type ResizeOptions,
+  type ResizeState,
+  type ResizableController,
+  type SplitPaneOptions,
+  type SplitPaneController,
+} from "./resizable";
+
+// --- dnd ---
+export {
+  createSortable,
+  createDropZone,
+  makeDraggable,
+  configureDnD,
+  getDnDConfig,
+  type SortableOptions,
+  type SortableInstance,
+  type DropZoneOptions,
+  type DragData,
+  type DraggableOptions,
+  type DnDManagerConfig,
+  type DnDMode,
+} from "./dnd";
