@@ -41519,3 +41519,41 @@ export {
   type LightboxInstance,
   type LightboxImage,
 } from "./lightbox";
+// --- Color Gradient ---
+export {
+  createLinearGradient,
+  createRadialGradient,
+  createConicGradient,
+  parseGradient,
+  interpolateGradients,
+  GRADIENT_PRESETS,
+  type GradientInstance,
+  type GradientStop,
+  type GradientType,
+  type ColorSpace,
+  type GradientUnit,
+  type LinearGradientOptions,
+  type RadialGradientOptions,
+  type ConicGradientOptions,
+} from "./color-gradient";
+
+// --- Font Picker ---
+export {
+  createFontPicker,
+  type FontPickerOptions,
+  type FontPickerInstance,
+  type FontEntry,
+  type FontCategory,
+  type FontWeight,
+  type FontStyle,
+} from "./font-picker";
+
+// --- Icon Picker ---
+export {
+  createIconPicker,
+  type IconPickerOptions,
+  type IconPickerInstance,
+  type IconEntry,
+  type IconCategory,
+  type IconSize,
+} from "./icon-picker";
