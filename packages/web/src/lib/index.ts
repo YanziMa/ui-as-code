@@ -26450,3 +26450,40 @@ export type {
   WsStateHandler,
   WsErrorHandler,
 } from "./ws-protocol";
+
+// --- API Gateway ---
+export {
+  ApiGateway,
+  createApiGateway,
+} from "./api-gateway";
+export type {
+  ServiceConfig,
+  GatewayRequest,
+  GatewayResponse,
+  RouteConfig,
+  GatewayMetrics,
+} from "./api-gateway";
+
+// --- Request Batcher ---
+export {
+  RequestBatcher,
+  createRequestBatcher,
+} from "./request-batcher";
+export type {
+  BatchConfig,
+  BatchableRequest,
+  BatchResponse,
+  BatchStats,
+} from "./request-batcher";
+
+// --- Polling ---
+export {
+  Poller,
+  createPoller,
+  poll,
+} from "./polling";
+export type {
+  PollingConfig,
+  PollingState,
+  PollingStatusHandler,
+} from "./polling";
