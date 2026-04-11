@@ -45863,3 +45863,40 @@ export {
   type ImageGalleryOptions,
   type ImageGalleryInstance,
 } from "./image-gallery";
+// image-lazy-load
+export {
+  createLazyImage,
+  createBatchLazyLoader,
+  preloadImage,
+  preloadImages as batchPreloadImages,
+  type LazyImageOptions,
+  type LazyImageInstance,
+  type BatchLazyOptions,
+  type BatchLazyInstance,
+} from "./image-lazy-load";
+
+// image-optimizer
+export {
+  ImageOptimizer,
+  optimizeImage,
+  applyResponsiveAttributes,
+  preloadImages as optimizerPreloadImages,
+  detectImageFormat,
+  generateSrcset,
+  generateSizes,
+  createBlurPlaceholder,
+  type ImageFormat as OptimizerImageFormat,
+  type ImageSrc,
+  type ImageOptimizeConfig,
+  type ImageStats,
+  type ArtDirectionSource,
+} from "./image-optimizer";
+
+// image-uploader
+export {
+  createImageUploader,
+  type UploadOptions as ImageUploadOptions,
+  type UploadResult,
+  type ValidationError as ImageValidationError,
+  type ImageUploaderInstance,
+} from "./image-uploader";
