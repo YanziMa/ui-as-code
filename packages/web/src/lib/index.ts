@@ -41915,3 +41915,27 @@ export type {
   SortableListOptions,
   SortableListInstance,
 } from "./sortable-list";
+
+// --- anchor ---
+export { createAnchor } from "./anchor";
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
+
+// --- breadcrumbs ---
+export { createBreadcrumbs } from "./breadcrumbs";
+export type {
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumbs";
+
+// --- pagination ---
+export { PaginationManager, createPagination } from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
