@@ -29701,3 +29701,14 @@ export type {
 // --- time-picker ---
 export { createTimePicker } from "./time-picker";
 export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker";
+// --- slider ---
+export { SliderManager, createSlider } from "./slider";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
+
+// --- select ---
+export { SelectManager, createSelect } from "./select";
+export type { SelectOptions, SelectInstance, SelectOption } from "./select";
+
+// --- tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabsOptions, TabsInstance, TabItem, TabOrientation, TabVariant } from "./tabs";
