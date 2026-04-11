@@ -40396,3 +40396,14 @@ export type { ScrollProgressOptions, ScrollProgressInstance, ProgressShape, Prog
 // --- Smooth Scroll ---
 export { createSmoothScroll } from "./smooth-scroll-utils";
 export type { SmoothScrollOptions, SmoothScrollInstance, ScrollToOptions, ParallaxOptions, ParallaxInstance, ParallaxLayer, EasingFn, EasingName } from "./smooth-scroll-utils";
+// --- Intersection Observer ---
+export { EnhancedIntersectionObserver, createVisibilityTracker, createLazyLoad, createScrollTrigger, isInViewport, getViewportVisibility, whenInViewport, batchScrollTriggers } from "./intersection-utils";
+export type { IntersectionEntry, ObserverConfig, VisibilityInstance, LazyLoadOptions, ScrollTriggerOptions } from "./intersection-utils";
+
+// --- Resize Observer ---
+export { createEnhancedResizeObserver } from "./resize-observer-utils";
+export type { ResizeObserverOptions, ResizeObserverInstance, SizeInfo, SizeDiff, Breakpoint } from "./resize-observer-utils";
+
+// --- Mutation Observer ---
+export { createEnhancedMutationObserver } from "./mutation-observer-utils";
+export type { MutationObserverOptions, MutationObserverInstance, MutationRecordEx, ChangeSummary, MutationFilter, MutationAction } from "./mutation-observer-utils";
