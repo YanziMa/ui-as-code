@@ -26691,3 +26691,14 @@ export type { UserJourney, JourneyConfig, JourneyEvent, JourneyPage, JourneyStat
 // --- Cohort Analysis ---
 export { CohortAnalyzer, createCohortAnalyzer } from "./cohort-analysis";
 export type { CohortDefinition, CohortMember, RetentionCell, RetentionTable, CohortComparison, SurvivalData, LTVCalculation } from "./cohort-analysis";
+// notification-system.ts
+export { NotificationCenter, PushNotificationManager } from "./notification-system";
+export type { Notification, NotificationConfig, NotificationType, NotificationPriority } from "./notification-system";
+
+// toast-container.ts
+export { ToastContainerManager, createToastContainer } from "./toast-container";
+export type { ToastMessage, ToastContainerOptions, ToastInstance, ToastType, ToastPosition, ToastVariant } from "./toast-container";
+
+// modal-manager.ts
+export { ModalManager, getModalManager } from "./modal-manager";
+export type { ModalOptions, ModalInstance, ModalAction, ConfirmOptions, ModalSize, ModalAnimation } from "./modal-manager";
