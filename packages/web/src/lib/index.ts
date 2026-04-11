@@ -45799,3 +45799,35 @@ export {
   generateIdempotencyKey,
   extractIdempotencyKey,
 } from "./idempotency";
+// idle
+export {
+  createIdleDetector,
+  type IdleState,
+  type IdleOptions,
+  type IdleInstance,
+} from "./idle";
+
+// ids
+export {
+  uuidv4,
+  uuidv4Compact,
+  NIL_UUID,
+  isValidUuid,
+  shortId as genShortId,
+  nanoid as genNanoid,
+  cuid as genCuid,
+  cuidWithLength,
+  ulid as genUlid,
+  parseUlid,
+  sortedId,
+} from "./ids";
+
+// image-compare
+export {
+  createImageCompare,
+  type CompareDirection,
+  type HandleStyle,
+  type InteractionMode,
+  type ImageCompareOptions,
+  type ImageCompareInstance,
+} from "./image-compare";
