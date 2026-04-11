@@ -28262,3 +28262,15 @@ export type { BarcodeOptions, BarcodeInstance, BarcodeType } from "./barcode";
 // --- PDF Preview ---
 export { createPdfPreview } from "./pdf-preview";
 export type { PdfPreviewOptions, PdfPreviewInstance } from "./pdf-preview";
+
+// --- OCR Engine ---
+export { createOcrEngine } from "./ocr-engine";
+export type { OcrOptions, OcrInstance, OcrResult, OcrWord, OcrRegion } from "./ocr-engine";
+
+// --- Image Compressor ---
+export { compressImage, batchCompressImages, resizeImage, imageToDataUri, getImageInfo } from "./image-compressor";
+export type { CompressOptions, CompressResult, BatchCompressOptions, BatchCompressResult, ImageFormat } from "./image-compressor";
+
+// --- EXIF Reader ---
+export { readExif, hasExifData, getExifOrientation as getExifOrientationFromExif, formatGpsCoordinates, generateMapsLink } from "./exif-reader";
+export type { ExifData, ExifCameraData, ExifPhotoData, ExifGpsData, ExifDateTime, ExifThumbnailData, ExifOrientation } from "./exif-reader";
