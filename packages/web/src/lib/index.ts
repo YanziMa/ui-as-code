@@ -25977,3 +25977,33 @@ export {
   getFocusableElements,
   createFocusTrap,
 } from "./style-utils";
+
+// --- Event Bus ---
+export {
+  EventBus,
+  createEventBus,
+} from "./event-bus";
+export type { EventCallback, EventMiddleware, Subscription as ESubscription, EmittedEvent, EventBusOptions } from "./event-bus";
+
+// --- Pub/Sub ---
+export {
+  PubSub,
+  createPubSub,
+} from "./pub-sub";
+export type { MessageHandler, TopicPattern, Message, Subscription as PSubscription, PubSubOptions, PubSubStats } from "./pub-sub";
+
+// --- Signal / Reactive Primitives ---
+export {
+  signal,
+  readonlySignal,
+  computed,
+  effect,
+  batch,
+  isBatching,
+  signalArray,
+  toggleSignal,
+  counterSignal,
+  debouncedSignal,
+  throttledSignal,
+} from "./signal";
+export type { Signal, ComputedSignal, EffectOptions, SignalArray } from "./signal";
