@@ -28215,3 +28215,15 @@ export type { SearchHighlightOptions, SearchHighlightInstance } from "./search-h
 // --- Marquee ---
 export { MarqueeManager, createMarquee } from "./marquee";
 export type { MarqueeOptions, MarqueeInstance, MarqueeItem, MarqueeDirection, MarqueeStyle } from "./marquee";
+
+// --- Countdown Timer ---
+export { createCountdownTimer } from "./countdown-timer";
+export type { CountdownTimerOptions, CountdownTimerInstance, CountdownDisplayMode, CountdownUnit } from "./countdown-timer";
+
+// --- Stopwatch ---
+export { createStopwatch } from "./stopwatch";
+export type { StopwatchOptions, StopwatchInstance, LapRecord } from "./stopwatch";
+
+// --- Clock ---
+export { createClock } from "./clock";
+export type { ClockOptions, ClockInstance, ClockStyle, ClockSize, SecondHandStyle, TimeZoneInfo } from "./clock";
