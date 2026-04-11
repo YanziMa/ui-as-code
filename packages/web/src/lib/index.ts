@@ -37085,3 +37085,85 @@ export {
   getPinchScale,
 } from "./touch-utils";
 export type { TouchPoint, TouchConfig, TouchHandler } from "./touch-utils";
+
+// --- form-utils ---
+export {
+  createForm,
+  serializeForm,
+  populateForm,
+  clearForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  linkErrorToField,
+  unlinkErrorFromField,
+  createFormAnnouncer,
+} from "./form-utils";
+export type {
+  FormFieldConfig,
+  FormValidationRule,
+  FormFieldState,
+  FormOptions,
+  FormInstance,
+  StepConfig,
+  MultiStepFormOptions,
+  MultiStepFormInstance,
+  ConditionRule,
+  ConditionalField,
+} from "./form-utils";
+
+// --- validation-utils ---
+export {
+  isString,
+  isNumber,
+  isInteger,
+  isFiniteNumber,
+  isObject,
+  isArray,
+  isValidDate,
+  isBoolean,
+  isFunction,
+  isNil,
+  isNotNil,
+  isEmpty,
+  isMap,
+  isSet,
+  isPromise,
+  isEmail,
+  isURL,
+  isUUID,
+  isUUIDv4,
+  isHexColor,
+  isIPv4,
+  isIPv6,
+  isIP,
+  isMACAddress,
+  isCreditCard,
+  detectCardBrand,
+  isPhoneNumber,
+  isISODate,
+  isISODateTime,
+  isJSON,
+  matchesPattern,
+  isLength,
+  isArraySize,
+  inRange,
+  isOneOf,
+  every,
+  some,
+  validate,
+  validateAsync,
+  rules,
+  assert,
+  assertType,
+} from "./validation-utils";
+export type { ValidationResult, ValidationError, ValidationWarning, ValidationRule, FieldSchema, ObjectSchema } from "./validation-utils";
+
+// --- notification-utils ---
+export { NotificationManager } from "./notification-utils";
+export type {
+  NotificationType,
+  NotificationPosition,
+  NotificationOptions,
+  NotificationInstance,
+  NotificationManagerConfig,
+} from "./notification-utils";
