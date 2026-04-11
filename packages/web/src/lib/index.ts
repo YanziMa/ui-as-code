@@ -48337,3 +48337,67 @@ export type {
   PollOptions as PUPollOptionsType,
   TaskQueueOptions as PUTaskQueueOptionsType,
 } from "./promise-utils";
+
+// --- pub-sub ---
+export {
+  MessageHandler as PSMessageHandler,
+  Message as PSMessage,
+  MessageContext,
+  SubscriptionOptions as PSSubOptions,
+  MessageBroker,
+} from "./pub-sub";
+export type {
+  MessageHandler as PSMessageHandlerType,
+  Message as PSMessageType,
+  MessageContext,
+  SubscriptionOptions as PSSubOptionsType,
+} from "./pub-sub";
+
+// --- pubsub-bus ---
+export {
+  Topic as PSBTopic,
+  MessageId as PSBMessageId,
+  SubscriberId as PSBSubscriberId,
+  PubSubMessage,
+  SubscriptionFilter,
+  Subscriber as PSBSubscriber,
+  DeadLetterEntry,
+  BusStats,
+  BusConfig,
+  BusStorageAdapter,
+  PubSubBus,
+  MemoryBusStorage,
+  createPubSubBus,
+} from "./pubsub-bus";
+export type {
+  Topic as PSBTopicType,
+  MessageId as PSBMessageIdType,
+  SubscriberId as PSBSubscriberIdType,
+  PubSubMessage,
+  SubscriptionFilter,
+  Subscriber as PSBSubscriberType,
+  DeadLetterEntry,
+  BusStats,
+  BusConfig,
+  BusStorageAdapter,
+} from "./pubsub-bus";
+
+// --- pubsub ---
+export {
+  MessageHandler as PubMessageHandler,
+  TopicPattern,
+  Message as PubMessage,
+  Subscription as PubSubscription,
+  PubSubOptions,
+  PubSubStats,
+  PubSub,
+  createPubSub,
+} from "./pubsub";
+export type {
+  MessageHandler as PubMessageHandlerType,
+  TopicPattern,
+  Message as PubMessageType,
+  Subscription as PubSubscriptionType,
+  PubSubOptions,
+  PubSubStats,
+} from "./pubsub";
