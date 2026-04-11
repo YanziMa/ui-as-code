@@ -26713,3 +26713,14 @@ export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement 
 // tooltip.ts
 export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
 export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+// dropdown.ts
+export { createDropdown } from "./dropdown";
+export type { DropdownOptions, DropdownInstance, DropdownItem, DropdownSeparator, DropdownGroup, DropdownEntry, DropdownPlacement } from "./dropdown";
+
+// context-menu.ts
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem, ContextMenuPosition } from "./context-menu";
+
+// sheet-manager.ts
+export { SheetManager, createSheetManager } from "./sheet-manager";
+export type { SheetOptions, SheetInstance, SheetAction, SheetSize, SheetSnapPoint } from "./sheet-manager";
