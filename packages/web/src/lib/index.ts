@@ -25410,3 +25410,33 @@ export {
   AlertManager,
   createAlert,
 } from "./alert";
+
+// --- accordion ---
+export {
+  type AccordionItem,
+  AccordionMode,
+  type AccordionOptions,
+  type AccordionInstance,
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+
+// --- carousel ---
+export {
+  type CarouselSlide,
+  type CarouselOptions,
+  type CarouselInstance,
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+
+// --- tabs ---
+export {
+  TabOrientation,
+  TabVariant,
+  type TabItem,
+  type TabsOptions,
+  type TabsInstance,
+  TabsManager,
+  createTabs,
+} from "./tabs";
