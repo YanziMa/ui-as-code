@@ -32031,3 +32031,33 @@ export {
   type QuickSwitcherInstance,
   type SwitcherItem,
 } from "./quick-switcher";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+  type TooltipOptions,
+  type TooltipInstance,
+  type TooltipPlacement,
+  type TooltipTrigger,
+} from "./tooltip";
+
+// --- Popconfirm ---
+export {
+  createPopconfirm,
+  type PopconfirmOptions,
+  type PopconfirmInstance,
+  type PopconfirmPlacement,
+} from "./popconfirm";
+
+// --- Split Button ---
+export {
+  SplitButtonManager,
+  createSplitButton,
+  type SplitButtonOptions,
+  type SplitButtonInstance,
+  type SplitAction,
+  type SplitButtonSize,
+  type SplitButtonVariant,
+} from "./split-button";
