@@ -31528,3 +31528,15 @@ export type { FloatingPlacement, MiddlewareFn, FloatingData, FloatingOptions, Fl
 // --- Sortable ---
 export { SortableList, createSortable } from "./sortable";
 export type { SortableItem, SortableOptions, SortableInstance } from "./sortable";
+
+// --- Overlay ---
+export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays } from "./overlay";
+export type { OverlayType, OverlayOptions, OverlayInstance } from "./overlay";
+
+// --- Portal ---
+export { createPortal, PortalManager, getPortalManager } from "./portal";
+export type { PortalTarget, PortalOptions, PortalInstance } from "./portal";
+
+// --- Focus Trap ---
+export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap";
+export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
