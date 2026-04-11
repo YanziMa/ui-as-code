@@ -28462,3 +28462,33 @@ export {
   type SelectInstance,
   type SelectOption,
 } from "./select";
+
+// --- Batch 933: Textarea, Button, Form Builder ---
+export {
+  createTextarea,
+  type TextareaOptions,
+  type TextareaInstance,
+  type TextareaSize,
+  type TextareaState,
+} from "./textarea";
+export {
+  createButton,
+  createButtonGroup,
+  type ButtonOptions,
+  type ButtonGroupOptions,
+  type ButtonGroupInstance,
+  type ButtonVariant,
+  type ButtonSize,
+} from "./button";
+export {
+  FormBuilder,
+  createForm,
+  validations,
+  type FormSchema,
+  type FormField,
+  type FormSection,
+  type FormState,
+  type FieldValidation,
+  type FieldError,
+  type FieldType,
+} from "./form-builder";
