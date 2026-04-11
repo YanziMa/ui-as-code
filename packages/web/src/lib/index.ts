@@ -32196,3 +32196,15 @@ export type { ClipboardData, ClipboardOptions } from "./clipboard";
 // --- undo-redo ---
 export { UndoHistory } from "./undo-redo";
 export type { UndoItem, UndoBranch, UndoHistoryOptions, UndoState, UndoChangeListener } from "./undo-redo";
+
+// --- scroll-lock ---
+export { ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock } from "./scroll-lock";
+export type { ScrollLockOptions, ScrollLockInstance } from "./scroll-lock";
+
+// --- measure ---
+export { getRect, getSize, getPosition, getOffset, getViewport, getElementInfo, isElementVisible, isElementFullyVisible, isOverlapping, containsPoint, containsElement, findScrollParent, scrollIntoView, rectsIntersect, getIntersection, distance, getCenter, getAspectRatio, sizeSimilarity, getCurrentBreakpoint, isMinBreakpoint, isMaxBreakpoint, onBreakpointChange, observeSize, observeVisibility } from "./measure";
+export type { Rect, Size, Position, Offset, ViewportInfo, ElementInfo, BreakpointName, BreakpointConfig } from "./measure";
+
+// --- focus-trap ---
+export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap";
+export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
