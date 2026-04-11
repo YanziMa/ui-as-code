@@ -43835,3 +43835,31 @@ export {
   prefersHighContrast,
   watchMediaPreference,
 } from "./permission-utils";
+
+// --- popconfirm-utils ---
+export {
+  type PopconfirmPlacement as PopconfirmPlacement,
+  type PopconfirmTrigger as PopconfirmTrigger,
+  type PopconfirmIconType,
+  type PopconfirmOptions,
+  type PopconfirmInstance as PopconfirmInstance,
+  createPopconfirm,
+} from "./popconfirm-utils";
+
+// --- popover-component ---
+export {
+  type PopoverPlacement as PopoverComponentPlacement,
+  type PopoverTrigger as PopoverComponentTrigger,
+  type PopoverOptions,
+  type PopoverInstance,
+  createPopover,
+} from "./popover-component";
+
+// --- popover-v2 ---
+export {
+  type PopoverPlacement as PopoverV2Placement,
+  type PopoverTrigger as PopoverV2Trigger,
+  type PopoverV2Options,
+  type PopoverV2Instance,
+  createPopoverV2,
+} from "./popover-v2";
