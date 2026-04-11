@@ -37298,3 +37298,33 @@ export {
   type TourInstance,
   type TourStep,
 } from "./tour-utils.js";
+// --- Batch 1194: Dialog, Popconfirm, Alert ---
+export {
+  createDialog,
+  confirmDialog,
+  alertDialog,
+  promptDialog,
+  dangerDialog,
+  createDialogManager,
+  type DialogOptions,
+  type DialogResult,
+  type DialogInstance,
+  type DialogManagerConfig,
+  type DialogManagerInstance,
+  type DialogType,
+} from "./dialog-utils.js";
+export {
+  createPopconfirm,
+  type PopconfirmOptions,
+  type PopconfirmInstance,
+  type PopconfirmPlacement,
+  type PopconfirmTrigger,
+  type PopconfirmIconType,
+} from "./popconfirm-utils.js";
+export {
+  createAlert,
+  type AlertOptions,
+  type AlertInstance,
+  type AlertVariant,
+  type AlertSize,
+} from "./alert-utils.js";
