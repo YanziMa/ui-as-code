@@ -48045,3 +48045,21 @@ export {
   PopconfirmPlacement, PopconfirmTrigger, PopconfirmIconType,
   PopconfirmOptions, PopconfirmInstance, createPopconfirm,
 } from "./popconfirm-utils";
+// --- popconfirm ---
+export {
+  PopconfirmPlacement as PCPlacement,
+  PopconfirmOptions as PCOptions, PopconfirmInstance as PCInstance,
+  createPopconfirm as createPC,
+} from "./popconfirm";
+// --- popover-component ---
+export {
+  PopoverPlacement as PopCompPlacement, PopoverTrigger as PopCompTrigger,
+  PopoverOptions as PopCompOptions, PopoverInstance as PopCompInstance,
+  createPopover as createPopComp,
+} from "./popover-component";
+// --- popover-lite ---
+export {
+  PopoverPlacement as PLitePlacement, PopoverTrigger as PLiteTrigger,
+  PopoverArrow, PopoverOptions as PLiteOptions, PopoverInstance as PLiteInstance,
+  createPopover as createPLite,
+} from "./popover-lite";
