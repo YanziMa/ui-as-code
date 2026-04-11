@@ -26952,3 +26952,33 @@ export {
   type StrokePoint,
   type Stroke,
 } from "./signature-pad";
+// --- Notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+  type Notification,
+  type NotificationOptions,
+  type NotificationType,
+  type NotificationPosition,
+} from "./notification";
+
+// --- Modal / Dialog ---
+export {
+  createModal,
+  type ModalOptions,
+  type ModalInstance,
+  type ModalSize,
+  type ModalPosition,
+} from "./modal";
+
+// --- Tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+  type TooltipOptions,
+  type TooltipInstance,
+  type TooltipPlacement,
+  type TooltipTrigger,
+} from "./tooltip";
