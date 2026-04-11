@@ -41685,3 +41685,10 @@ export { createDndList } from "./drag-drop-list";
 export type { DndListOptions, DndListInstance, DndListItem } from "./drag-drop-list";
 export { createSortableTable } from "./sortable-table";
 export type { SortableTableOptions, SortableTableInstance, Column, TableRow, SortState, FilterState, TablePagination, SelectionMode, SortDirection } from "./sortable-table";
+// --- Batch 1312: Command Palette, Quick Switcher, Fuzzy Search ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette";
+export { createQuickSwitcher } from "./quick-switcher";
+export type { QuickSwitcherOptions, QuickSwitcherInstance, SwitcherItem } from "./quick-switcher";
+export { createFuzzySearch, fuzzySearch, fuzzyTest, fuzzyHighlight } from "./search-fuzzy";
+export type { FuzzySearchInstance, FuzzyOptions, FuzzyResult } from "./search-fuzzy";
