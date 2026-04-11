@@ -37856,3 +37856,72 @@ export {
   SpatialGrid,
 } from "./geom-utils";
 export type { Point2D, Point3D, Rect, Circle, LineSegment, Polygon, Transform2D, SpatialGridOptions } from "./geom-utils";
+
+// --- canvas-utils ---
+export {
+  createCanvas, createOffscreenCanvas, getContext2D,
+  resizeCanvas, clearCanvas, clearRect,
+  applyDrawOptions, resetDrawOptions,
+  drawRect, drawRoundedRect, drawCircle, drawEllipse,
+  drawPolygon, drawStar, drawLine, drawPolyline, drawArrow,
+  createLinearGradient, createRadialGradient, createConicGradient,
+  GRADIENT_PRESETS,
+  applyTextOptions, drawText, drawWrappedText, measureText, getTextBounds,
+  drawImage, drawImageCover, drawImageContain,
+  loadImage, canvasToBlob, canvasToDataURL, downloadCanvas,
+  getPixelData, setPixelData, getPixel, setPixel,
+  applyPixelFilter, applyImageFilters,
+  withSavedContext, atPosition, atScale, rotateAround,
+  flipHorizontal, flipVertical,
+  LayerManager,
+  drawCheckerboard, drawGrid, drawDots, drawStripes,
+  pointInRect as canvasPointInRect, pointInCircle as canvasPointInCircle,
+  hexToRgb as canvasHexToRgb, rgbToHex as canvasRgbToHex,
+  parseColor as canvasParseColor, generateCanvasId,
+} from "./canvas-utils";
+export type {
+  Point2D as CanvasPoint2D, Size2D, Rect2D as CanvasRect2D,
+  ColorStop, CanvasLayer, DrawOptions, TextDrawOptions,
+  ImageFilterOptions, PixelData,
+} from "./canvas-utils";
+
+// --- svg-utils ---
+export {
+  getSvgNs, createSvgElement, createSvg, createSvgWithViewBox,
+  setSvgAttrs, getSvgAttr, removeSvgAttr, toggleSvgAttr,
+  rect as svgRect, circle as svgCircle, ellipse as svgEllipse,
+  line as svgLine, polyline, polygon, path,
+  PathBuilder,
+  roundedRectPath, regularPolygonPath, starPath,
+  smoothCurvePath, arcPath, pieSlicePath,
+  text as svgText, tspan, multilineText,
+  getOrCreateDefs, addLinearGradient, addRadialGradient,
+  addPattern, addClipPath, addMask, addFilter,
+  createDropShadowFilter, createBlurFilter,
+  parseViewBox, getViewBox, setViewBox,
+  zoomViewBox, panViewBox,
+  screenToSvg, svgToScreen,
+  appendChildren, insertBefore, removeElement,
+  replaceElement, clearChildren, wrapSvgElement, cloneSvg,
+  findByTag, findById,
+  serializeSvg, svgToDataUrl, svgToBlob, downloadSvg,
+  svgToPng, embedImages,
+  getBBox, getBoundingClientRect as svgGetBoundingClientRect,
+  getPathLength, getPointAtLength,
+  isPointInFill, isPointInStroke,
+} from "./svg-utils";
+export type {
+  SvgPoint, SvgSize, SvgRect, GradientStop,
+  LinearGradientDef, RadialGradientDef, ViewBox,
+} from "./svg-utils";
+
+// --- animation-utils ---
+export {
+  easings, Tween, tween, tweenPromise,
+  SpringAnimation, springTo,
+  stagger, staggerFadeIn,
+  scrollAnimate, parallax, mouseParallax,
+  animate, fadeIn, fadeOut, slideUp, slideDown,
+  scaleIn, shake, pulse,
+} from "./animation-utils";
+export type { TweenOptions, SpringConfig, AnimationFrame, ScrollAnimationOptions, EasingName } from "./animation-utils";
