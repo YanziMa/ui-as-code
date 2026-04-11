@@ -16678,3 +16678,31 @@ export type {
   GestureEvent,
   GestureInstance,
 } from "./gesture";
+export {
+  createFocusTrap,
+  applyFocusRing,
+  withRestoredFocus,
+  autofocusDescendant,
+  getTabOrder,
+  setTabOrderIndex,
+  disableOutsideFocus,
+  restoreFocusState,
+  createSkipLink,
+} from "./focus";
+export type { FocusTrapOptions, FocusTrapInstance, FocusRingOptions, SkipLinkOptions } from "./focus";
+export {
+  scrollToId,
+  scrollToTop,
+  getScrollPosition,
+  isInViewport as scrollIsInViewport,
+} from "./scroll";
+export {
+  createLayout,
+} from "./layout";
+export type {
+  LayoutMode,
+  SidebarPosition,
+  LayoutRegion,
+  LayoutOptions,
+  LayoutInstance,
+} from "./layout";
