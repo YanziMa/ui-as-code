@@ -31398,7 +31398,7 @@ export type { ToastOptions, ToastInstance, ToastManagerConfig, ToastType, ToastP
 
 // --- Modal ---
 export { createModal } from "./modal";
-export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "/modal";
+export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "./modal";
 // --- Tooltip ---
 export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
 export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
@@ -31409,4 +31409,16 @@ export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement 
 
 // --- Dropdown ---
 export { createDropdown } from "./dropdown";
-export type { DropdownItem, DropdownSeparator, DropdownGroup, DropdownEntry, DropdownOptions, DropdownInstance, DropdownPlacement } from "/dropdown";
+export type { DropdownItem, DropdownSeparator, DropdownGroup, DropdownEntry, DropdownOptions, DropdownInstance, DropdownPlacement } from "./dropdown";
+
+// --- Context Menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuItem, ContextMenuPosition, ContextMenuOptions, ContextMenuInstance } from "./context-menu";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+
+// --- Hotkeys ---
+export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString } from "./hotkeys";
+export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
