@@ -23704,3 +23704,32 @@ export type {
   PollOptions,
   TaskQueueOptions,
 } from "./promise-utils";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type { Locale } from "./i18n";
+
+// --- logger ---
+export {
+  Logger,
+  log,
+  apiLog,
+  dbLog,
+  extLog,
+  setGlobalLogLevel,
+  getGlobalLogLevel,
+} from "./logger";
+export type { LogLevel } from "./logger";
+
+// --- cache ---
+export {
+  Cache,
+  defaultCache,
+  memoize as cacheMemoize,
+} from "./cache";
+export type { CacheOptions } from "./cache";
