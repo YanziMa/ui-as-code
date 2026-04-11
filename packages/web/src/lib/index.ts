@@ -38940,3 +38940,28 @@ export {
   SchemaRegistry, isAcceptedBySchema, atLeastOneRequired, conditionalSchema, extractPaths, getDefault,
   type SchemaType, type BaseSchema, type StringSchema, type NumberSchema, type BooleanSchema, type NullSchema, type ArraySchema, type ObjectSchema, type AnyOfSchema, type OneOfSchema, type AllOfSchema, type NotSchema, type RefSchema, type JsonSchema, type SchemaValidationError, type SchemaValidationResult, type SchemaDiff,
 } from "./schema-utils";
+
+// --- i18n-utils ---
+export {
+  I18nManager,
+  getUserLanguage, getUserLanguages, matchLocale, resolveLocale,
+  getPluralForm as i18nGetPluralForm,
+  isRTL as i18nIsRtl, getDirection, applyDirection,
+  formatNumber as i18nFormatNumber, formatCurrency as i18nFormatCurrency, formatPercent, formatCompactNumber,
+  formatDateI18n, formatRelativeTime as i18nFormatRelativeTime,
+  formatList as i18nFormatList,
+  type I18nConfig, type TranslationEntry, type PluralForms,
+} from "./i18n-utils";
+
+// --- locale-utils ---
+export {
+  LOCALES, getLocale, getLocaleCodes, getRTLLocales, isLocaleRTL, getLocaleDisplayName,
+  getTimezoneId, getTimezoneOffsetMinutes, getTimezoneAbbreviation, observesDST, COMMON_TIMEZONES,
+  compareStrings, sortLocale, searchLocale,
+  type LocaleInfo,
+} from "./locale-utils";
+
+// --- format-utils ---
+export {
+  // Re-export from the pre-written format-utils (already has i18n/locale helpers)
+} from "./format-utils";
