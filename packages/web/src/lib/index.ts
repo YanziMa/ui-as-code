@@ -29995,3 +29995,48 @@ export {
   trackVisibility,
 } from "./intersection-helper";
 export type { IntersectionOptions, IntersectionEntry, IntersectionHelperInstance } from "./intersection-helper";
+
+// --- file-system-access ---
+export { FileSystemAccess } from "./file-system-access";
+export type {
+  FilePickerOptions,
+  SavePickerOptions,
+  DirPickerOptions,
+  FileSystemEntry,
+  ReadOptions,
+  WriteOptions,
+  CopyMoveOptions,
+  OpfsOptions,
+  FileSystemStats,
+} from "./file-system-access";
+
+// --- web-socket ---
+export { WebSocketManager, createWebSocket, quickConnect } from "./web-socket";
+export type { WSOptions, WSMessage, WSSendOptions, WSChannel, WSInstance, WSStats, WSReadyState } from "./web-socket";
+
+// --- performance-utils ---
+export {
+  PerfObserver,
+  measureSync,
+  measureAsync,
+  perfMark,
+  perfMeasure,
+  measureBetween,
+  FPSCounter,
+  getMemoryUsage,
+  getMemoryPercent,
+  MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming,
+  collectWebVitals,
+  getResourceTiming,
+  findSlowResources,
+  CustomMetric,
+} from "./performance-utils";
+export type {
+  TimingResult,
+  MemoryUsage,
+  FPSStats,
+  WebVitals,
+  NavigationTiming,
+} from "./performance-utils";
