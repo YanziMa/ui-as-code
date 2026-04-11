@@ -29924,3 +29924,21 @@ export {
   renderInto,
 } from "./dom-utils";
 export type { CreateElementOptions, QueryOptions, DomDiffResult } from "./dom-utils";
+
+// --- event-bus ---
+export { EventBus, createEventBus } from "./event-bus";
+export type {
+  EventCallback,
+  EventMiddleware,
+  Subscription,
+  EmittedEvent,
+  EventBusOptions,
+} from "./event-bus";
+
+// --- state-store ---
+export { StateStore, createStore, createCounter } from "./state-store";
+export type { StoreOptions, StoreInstance, Middleware, Selector } from "./state-store";
+
+// --- animation ---
+export { EASING, KEYFRAMES, DURATION, animateValue, springAnimate, cssKeyframes, transition } from "./animation";
+export type { EasingName, SpringConfig } from "./animation";
