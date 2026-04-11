@@ -37251,3 +37251,15 @@ export type { KeyBinding, HotkeyManagerOptions, HotkeyManagerInstance } from "./
 // --- command-palette-utils ---
 export { createCommandPalette } from "./command-palette-utils";
 export type { PaletteItem, CommandPaletteOptions, CommandPaletteInstance } from "./command-palette-utils";
+
+// --- virtual-list-utils ---
+export { createVirtualList } from "./virtual-list-utils";
+export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from "./virtual-list-utils";
+
+// --- infinite-scroll-utils ---
+export { createInfiniteScroll } from "./infinite-scroll-utils";
+export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-scroll-utils";
+
+// --- drag-drop-utils ---
+export { createDraggable, createDropZone, createSortable } from "./drag-drop-utils";
+export type { DragData, DropZoneOptions, DraggableOptions, SortableOptions, DragEvent, DraggableInstance, DropZoneInstance, SortableInstance, DragAxis, DragConstraint } from "./drag-drop-utils";
