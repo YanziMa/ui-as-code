@@ -29439,3 +29439,25 @@ export type {
   TooltipPlacement,
   TooltipTrigger,
 } from "./tooltip-v2.js";
+// --- Batch 987: Popover V2, Dialog V2, Drawer V2 ---
+export { createPopoverV2 } from "./popover-v2.js";
+export type {
+  PopoverV2Options,
+  PopoverV2Instance,
+  PopoverPlacement,
+  PopoverTrigger,
+} from "./popover-v2.js";
+export { createDialogV2 } from "./dialog-v2.js";
+export type {
+  DialogV2Options,
+  DialogV2Instance,
+  DialogSize,
+  DialogVariant,
+} from "./dialog-v2.js";
+export { createDrawerV2 } from "./drawer-v2.js";
+export type {
+  DrawerV2Options,
+  DrawerV2Instance,
+  DrawerSide,
+  DrawerSize,
+} from "./drawer-v2.js";
