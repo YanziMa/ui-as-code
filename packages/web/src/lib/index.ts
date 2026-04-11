@@ -27307,3 +27307,15 @@ export type { CountdownOptions, CountdownInstance, CountdownSize, CountdownVaria
 // --- typewriter ---
 export { createTypewriter, TypewriterManager } from "./typewriter.js";
 export type { TypewriterOptions, TypewriterInstance } from "./typewriter.js";
+
+// --- marquee ---
+export { createMarquee, MarqueeManager } from "./marquee.js";
+export type { MarqueeOptions, MarqueeInstance, MarqueeItem, MarqueeDirection, MarqueeStyle } from "./marquee.js";
+
+// --- parallax ---
+export { createParallax, ParallaxManager } from "./parallax.js";
+export type { ParallaxOptions, ParallaxInstance, ParallaxLayer, ParallaxMode, ParallaxDirection } from "./parallax.js";
+
+// --- lightbox ---
+export { createLightbox, LightboxManager } from "./lightbox.js";
+export type { LightboxOptions, LightboxInstance, LightboxImage } from "./lightbox.js";
