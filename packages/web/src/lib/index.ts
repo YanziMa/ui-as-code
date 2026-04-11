@@ -29712,3 +29712,14 @@ export type { SelectOptions, SelectInstance, SelectOption } from "./select";
 // --- tabs ---
 export { TabsManager, createTabs } from "./tabs";
 export type { TabsOptions, TabsInstance, TabItem, TabOrientation, TabVariant } from "./tabs";
+// --- modal ---
+export { createModal } from "./modal";
+export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "./modal";
+
+// --- accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionOptions, AccordionInstance, AccordionItem, AccordionMode } from "./accordion";
+
+// --- tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
