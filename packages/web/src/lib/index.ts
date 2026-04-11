@@ -49884,3 +49884,43 @@ export type {
 } from "./scheduler";
 export { Scheduler as SchBase } from "./scheduler";
 export { parseCronExpression, cronMatches, getNextCronRun } from "./scheduler";
+
+// --- schema-form-builder ---
+export {
+  FormBuilder,
+  type SchemaField,
+  type FieldValidation,
+  type FormState,
+  type WizardController,
+} from "./schema-form-builder";
+export { createFormBuilder } from "./schema-form-builder";
+
+// --- schema-utils ---
+export {
+  validateSchema as SchUt_validateSchema,
+  inferSchema as SchUt_inferSchema,
+  inferSchemaFromSamples as SchUt_inferSchemaFromSamples,
+  diffSchemas as SchUt_diffSchemas,
+  schemaToTypeScript as SchUt_schemaToTypeScript,
+  SchemaRegistry,
+  objectSchema as SchUt_objectSchema,
+  arraySchema as SchUt_arraySchema,
+  strProp as SchUt_strProp,
+  numProp as SchUt_numProp,
+  conditionalSchema as SchUt_conditionalSchema,
+  atLeastOneRequired as SchUt_atLeastOneRequired,
+  extractPaths as SchUt_extractPaths,
+  getDefault as SchUt_getDefault,
+} from "./schema-utils";
+
+// --- schema-validation-utils ---
+export {
+  validateSchema as SchVal_validateSchema,
+  SchemaDefinition,
+  SchemaProperty,
+  SchemaBuilder,
+  objectSchema as SchVal_objectSchema,
+  arraySchema as SchVal_arraySchema,
+  strProp as SchVal_strProp,
+  numProp as SchVal_numProp,
+} from "./schema-validation-utils";
