@@ -25472,3 +25472,31 @@ export {
   type ContextMenuInstance,
   ContextMenuManager,
 } from "./context-menu";
+
+// --- tree-select ---
+export {
+  type TreeNodeData,
+  type TreeSelectOptions,
+  type TreeSelectInstance,
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+
+// --- cascader ---
+export {
+  type CascaderOption,
+  type CascaderColumn,
+  type CascaderOptions,
+  type CascaderInstance,
+  CascaderManager,
+  createCascader,
+} from "./cascader";
+
+// --- transfer ---
+export {
+  type TransferItem,
+  type TransferOptions,
+  type TransferInstance,
+  TransferManager,
+  createTransfer,
+} from "./transfer";
