@@ -39548,3 +39548,32 @@ export type {
   SelectOptions,
   SelectInstance,
 } from "./select-utils";
+// --- Batch 1236: Checkbox, Radio, Toggle ---
+export { createCheckbox, createCheckboxGroup } from "./checkbox-utils";
+export type {
+  CheckboxOption,
+  CheckboxOptions,
+  CheckboxGroupOptions,
+  CheckboxInstance,
+  CheckboxGroupInstance,
+} from "./checkbox-utils";
+
+export { createRadioGroup } from "./radio-utils";
+export type {
+  RadioOption,
+  RadioGroupOptions,
+  RadioInstance,
+} from "./radio-utils";
+
+export {
+  createToggleButton,
+  createIconToggle,
+  createPressHoldToggle,
+  createLoadingToggle,
+} from "./toggle-utils";
+export type {
+  ToggleButtonOptions,
+  IconToggleOptions,
+  PressHoldToggleOptions,
+  LoadingToggleOptions,
+} from "./toggle-utils";
