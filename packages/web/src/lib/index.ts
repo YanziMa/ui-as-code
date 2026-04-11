@@ -31056,3 +31056,30 @@ export {
   assertType,
   expectType,
 } from "./type-guards";
+// --- Logger ---
+export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
+export type { LogLevel } from "./logger";
+
+// --- Validation ---
+export {
+  GenerateDiffSchema,
+  CreateFrictionSchema,
+  CreatePRSchema,
+  VoteSchema,
+  validateBody,
+} from "./validation";
+export type {
+  GenerateDiffInput,
+  CreateFrictionInput,
+  CreatePRInput,
+  VoteInput,
+} from "./validation";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type { Locale } from "./i18n";
