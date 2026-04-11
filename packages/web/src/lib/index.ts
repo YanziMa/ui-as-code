@@ -37012,3 +37012,76 @@ export {
   type LogFormatter,
   type LoggerOptions,
 } from "./logger-utils";
+
+// --- pointer-utils ---
+export {
+  hasPointerEvents,
+  hasTouch,
+  hasPenSupport,
+  getPrimaryInput,
+  hasMouse,
+  clientToPage,
+  pageToClient,
+  clientToLocal,
+  localToClient,
+  transformBetween,
+  getScrollOffset,
+  extractPointerState,
+  extractMouseState,
+  extractTouchState,
+  createPointerListener,
+  setPointerCapture,
+  releasePointerCapture,
+  requestPointerLock,
+  exitPointerLock,
+  isPointerLocked,
+  getMovementDelta,
+  normalizePressure,
+  classifyPressure,
+} from "./pointer-utils";
+export type { PointerState, PointerConfig, PointerHandler } from "./pointer-utils";
+
+// --- gesture-utils ---
+export {
+  GestureRecognizer,
+  distance,
+  angleBetween,
+  midpoint,
+  getDirection,
+  isInsideRect,
+  isInsideElement,
+  createTapDebounce,
+  detectSwipe,
+} from "./gesture-utils";
+export type {
+  Point,
+  SwipeGesture,
+  PinchGesture,
+  RotateGesture,
+  TapGesture,
+  LongPressGesture,
+  PanGesture,
+  Gesture,
+  GestureConfig,
+  GestureHandlers,
+} from "./gesture-utils";
+
+// --- touch-utils ---
+export {
+  isTouchDevice,
+  getMaxTouchPoints,
+  hasForceTouch,
+  hasRotationTouch,
+  getTouchCount,
+  extractTouches,
+  extractChangedTouches,
+  createTouchListener,
+  disablePinchZoom,
+  preventContextMenu,
+  getTouchCentroid,
+  touchDistance,
+  initialTouchDistance,
+  currentTouchDistance,
+  getPinchScale,
+} from "./touch-utils";
+export type { TouchPoint, TouchConfig, TouchHandler } from "./touch-utils";
