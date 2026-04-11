@@ -29461,3 +29461,29 @@ export type {
   DrawerSide,
   DrawerSize,
 } from "./drawer-v2.js";
+// --- Batch 988: Flow Chart, Spreadsheet, Calendar Grid ---
+export { createFlowChart } from "./flow-chart.js";
+export type {
+  FlowChartOptions,
+  FlowChartInstance,
+  FlowNode,
+  FlowEdge,
+  NodeShape,
+  EdgeType,
+  FlowLayout,
+} from "./flow-chart.js";
+export { createSpreadsheet } from "./spreadsheet.js";
+export type {
+  SpreadsheetOptions,
+  SpreadsheetInstance,
+  SpreadsheetCell,
+  SpreadsheetColumn,
+} from "./spreadsheet.js";
+export { createCalendarGrid } from "./calendar-grid.js";
+export type {
+  CalendarGridOptions,
+  CalendarGridInstance,
+  CalendarEvent,
+  CalendarSelectionMode,
+  CalendarWeekStart,
+} from "./calendar-grid.js";
