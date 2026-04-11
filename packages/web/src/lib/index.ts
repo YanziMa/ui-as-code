@@ -49046,3 +49046,47 @@ export {
   joinPaths as RRJoinPaths,
   resolvePath as RRResolvePath,
 } from "./react-router-utils";
+// --- react-scroll-utils ---
+export {
+  ScrollToOptions as RScrOptions,
+  ScrollSpyOptions as RScrSpyOptions,
+  ScrollProgress as RScrProgress,
+  scrollTo as RScrScrollTo,
+  scrollToTop as RScrScrollToTop,
+  scrollToBottom as RScrScrollToBottom,
+  createScrollSpy as RScrCreateSpy,
+  createScrollProgressTracker as RScrCreateProgress,
+  ScrollPositionManager as RScrPositionMgr,
+  isElementVisible as RScrIsVisible,
+  getElementScrollProgress as RScrGetElementProgress,
+} from "./react-scroll-utils";
+
+// --- react-state-persistence ---
+export type {
+  StorageBackend as RSPStorageBackend,
+  PersistenceOptions as RSPOptions,
+  PersistenceInstance as RSPInstance,
+} from "./react-state-persistence";
+export {
+  createPersistence as RSPCreate,
+  clearPersistedPrefix as RSClearPrefix,
+  migrateAll as RSMigrateAll,
+} from "./react-state-persistence";
+
+// --- react-table-utils ---
+export type {
+  ColumnDef as RTColumnDef,
+  SortDirection as RTSortDir,
+  SortState as RTSortState,
+  FilterState as RTFilterState,
+  PaginationState as RTPaginationState,
+  SelectionState as RTSelectionState,
+  TableState as RTTableState,
+} from "./react-table-utils";
+export {
+  applySorting as RTApplySorting,
+  applyFilters as RTApplyFilters,
+  paginate as RTPaginate,
+  getPaginationInfo as RTGetPaginationInfo,
+  TableStateManager as RTTableStateManager,
+} from "./react-table-utils";
