@@ -51026,3 +51026,10 @@ export { type VoiceInfo as SpchSyn_VoiceInfo, type SpeechOptions as SpchSyn_Spee
 export { type VoiceInfo as SpchUtl_VoiceInfo, type SpeechOptions as SpchUtl_SpeechOptions, type RecognitionOptions as SpchUtl_RecognitionOptions, type PronunciationScore, type VoiceActivityConfig, TextToSpeech, SpeechRecognizer, type SsmlNode, parseSsml, ssmlToSpeechCommands, speakSsml, scorePronunciation, VoiceActivityDetector, AudioRecorder } from "./speech-utils";
 // --- spin ---
 export { type SpinType, type SpinSize, type SpinOptions, type SpinInstance, SpinManager, createSpin } from "./spin";
+
+// --- spinner-lite ---
+export { type SpinnerVariant as SpnLt_SpinnerVariant, type SpinnerSize as SpnLt_SpinnerSize, type SpinnerOptions as SpnLt_SpinnerOptions, type FullPageSpinnerOptions, createSpinner as createSpnLtSpinner, fullPageSpinner as spnLtFullPageSpinner, miniSpinner as spnLtMiniSpinner } from "./spinner-lite";
+// --- spinner-utils ---
+export { type SpinnerType as SpnUtl_SpinnerType, type SpinnerSize as SpnUtl_SpinnerSize, type SpinnerOptions as SpnUtl_SpinnerOptions, type SpinnerInstance as SpnUtl_SpinnerInstance, createSpinner as createSpnUtlSpinner } from "./spinner-utils";
+// --- spinner ---
+export { type SpinnerVariant, type SpinnerSize as Spn_SpinnerSize, type SpinnerOptions as Spn_SpinnerOptions, createSpinner as createSpnSpinner, miniSpinner as spnMiniSpinner, fullPageSpinner } from "./spinner";
