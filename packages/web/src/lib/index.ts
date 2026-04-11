@@ -46060,3 +46060,17 @@ export type { IntersectionTarget, IntersectionManagerOptions, IntersectionManage
 // --- intersection-observer-v2 ---
 export { createIntersectionObserverV2, onceInViewport, lazyLoadImages } from "./intersection-observer-v2";
 export type { VisibilityDirection, IntersectionV2Entry, IntersectionObserverV2Options, IntersectionObserverV2Instance } from "./intersection-observer-v2";
+
+// --- intersection-observer ---
+export { IntersectionWatcher, createIntersectionObserver as createIoIntersectionObserver, lazyLoadImages as lazyLoadImagesIo, watchVisibility, createInfiniteScrollSentinel } from "./intersection-observer";
+export type { VisibilityState, ObserveMode, IntersectionOptions as IoIntersectionOptions, IntersectionEntry as IoIntersectionEntry, IntersectionInstance as IoIntersectionInstance } from "./intersection-observer";
+
+// --- intersection-utils ---
+export { EnhancedIntersectionObserver, createVisibilityTracker, createLazyLoad as createLazyLoadUtils, createScrollTrigger as createScrollTriggerUtils, isInViewport as isInViewportUtil, getViewportVisibility, whenInViewport as whenInViewportUtil, batchScrollTriggers } from "./intersection-utils";
+export type { IntersectionEntry as IuIntersectionEntry, ObserverConfig, VisibilityInstance, LazyLoadOptions, ScrollTriggerOptions } from "./intersection-utils";
+
+// --- intersection (base) ---
+
+// --- intersection (base) ---
+export { IntersectionManager as IntIntersectionManager, createIntersectionObserver as createIntIntersectionObserver, whenVisible as whenVisibleInt, whenHidden as whenHiddenInt, isInViewport as isInViewportInt, getVisibilityPercent as getVisibilityPercentInt } from "./intersection";
+export type { IntersectionObserverOptions as IntObserverOptions, IntersectionObserverEntry as IntObserverEntry, IntersectionObserverInstance as IntObserverInstance } from "./intersection";
