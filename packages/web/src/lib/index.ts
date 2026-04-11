@@ -21576,3 +21576,36 @@ export {
   makeResizable,
   createSplitPane,
 } from "./resizable";
+
+// --- Date Picker ---
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker";
+export {
+  DatePickerManager,
+  createDatePicker,
+} from "./date-picker";
+
+// --- Slider ---
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+
+// --- Popover ---
+export type {
+  PopoverTrigger,
+  PopoverPlacement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover";
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
