@@ -42138,3 +42138,7 @@ export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, form
 export { ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock, type ScrollLockOptions, type ScrollLockInstance } from "./scroll-lock";
 export { createClickOutside, onClickOutsideAuto, createPopupClose, type ClickOutsideOptions, type ClickOutsideInstance, type ContextClickOptions } from "./click-outside";
 export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDetector, createLazyLoader, type MutationOptions, type IntersectionOptions, type ResizeOptions, type ObserverCallbacks, type DomSnapshot, type ObserveTarget } from "./dom-observer";
+// --- Batch 1351: Portal, Overlay, Mask ---
+export { createPortal, PortalManager, getPortalManager, type PortalOptions, type PortalInstance, type PortalTarget } from "./portal";
+export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays, type OverlayOptions, type OverlayInstance, type OverlayType } from "./overlay";
+export { createMask, createSpotlight, type MaskOptions, type MaskInstance, type CutoutOptions, type MaskMode } from "./mask";
