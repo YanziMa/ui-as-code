@@ -26207,3 +26207,82 @@ export {
   createTaskQueue,
 } from "./task-queue";
 export type { Task, TaskResult, WorkerPoolOptions, QueueStats, TaskPriority, TaskStatus } from "./task-queue";
+
+// --- UUID ---
+export {
+  uuidv4,
+  uuidv7,
+  nanoId,
+  shortId,
+  prefixedId,
+  isUuid,
+  getUuidVersion,
+} from "./uuid";
+
+// --- Hash ---
+export {
+  sha256 as hashSha256,
+  sha384,
+  sha512,
+  simpleHash,
+  hashToInt,
+  hashObject,
+  combineHashes,
+  hashColor,
+  hashHexColor,
+  fingerprint,
+  timingSafeEqual,
+} from "./hash";
+
+// --- Crypto Utils ---
+export {
+  sha1,
+  sha256,
+  sha384,
+  sha512,
+  hash,
+  hashHex,
+  hmac,
+  hmacHex,
+  pbkdf2,
+  deriveAesKey,
+  generateAesKey,
+  aesGcmEncrypt,
+  aesGcmDecrypt,
+  aesGcmEncryptString,
+  aesGcmDecryptString,
+  generateRsaOaepKeyPair,
+  rsaOaepEncrypt,
+  rsaOaepDecrypt,
+  generateEcdsaKeyPair,
+  ecdsaSign,
+  ecdsaVerify,
+  generateRsaPssKeyPair,
+  rsaPssSign,
+  rsaPssVerify,
+  exportKey,
+  importKey,
+  keyFingerprint,
+  generateEcdhKeyPair,
+  ecdhDeriveSecret,
+  ecdhDeriveAesKey,
+  randomBytes,
+  secureRandomInt,
+  secureRandomUuid,
+  secureRandomString,
+  toBase64,
+  fromBase64,
+  toBase64Url,
+  fromBase64Url,
+  toHex,
+  fromHex,
+  encodeUtf8,
+  decodeUtf8,
+  estimatePasswordStrength,
+  generatePassword,
+  generateTokenHex,
+  generateTokenBase64Url,
+  generateApiKey,
+  generateSessionId,
+} from "./crypto-utils";
+export type { HashAlgorithm, HmacAlgorithm, AesKeyLength, EcNamedCurve, RsaKeySize, KeyFormat, Pbkdf2Options, AesGcmOptions, RsaKeyGenOptions, EcdsaKeyGenOptions, RsaPssSignOptions, PasswordStrengthResult, PasswordGeneratorOptions, ApiKeyOptions, AesGcmEncryptedData } from "./crypto-utils";
