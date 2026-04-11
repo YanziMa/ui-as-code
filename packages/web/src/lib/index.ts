@@ -29626,3 +29626,14 @@ export type { ChatWidgetOptions, ChatWidgetInstance, ChatMessage, ChatParticipan
 // --- comment-thread ---
 export { createCommentThread, CommentThreadManager } from "./comment-thread";
 export type { CommentThreadOptions, CommentThreadInstance, Comment, CommentAuthor } from "./comment-thread";
+// --- rating-stars ---
+export { createRatingStars } from "./rating-stars";
+export type { RatingStarsOptions, RatingStarsInstance, StarIcon, RatingSize } from "./rating-stars";
+
+// --- progress-stepper ---
+export { createProgressStepper } from "./progress-stepper";
+export type { ProgressStepperOptions, ProgressStepperInstance, StepItem, StepStatus, StepperOrientation, StepperVariant } from "./progress-stepper";
+
+// --- badge-list ---
+export { createBadgeList } from "./badge-list";
+export type { BadgeListOptions, BadgeListInstance, BadgeItem, BadgeColor, BadgeSize } from "./badge-list";
