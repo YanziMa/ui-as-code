@@ -47966,3 +47966,23 @@ export type {
   PhotoEditorInstance as PEInst,
 } from "./photo-editor";
 export { createPhotoEditor as PECreate, getFilterPresets as PEGetFilterPresets } from "./photo-editor";
+// --- physics-engine ---
+export {
+  Vec2, Vec3, AABB,
+  type Shape, type CircleShape, type PolygonShape, type CompoundShape, type ConvexShape,
+  RigidBody2D, BodyDef, BodyType, IntegrationMethod,
+  Contact, RaycastResult, WorldSettings, SerializedWorld, SerializedBody, ProfilingMetrics, DebugRenderOptions,
+  Constraint, DistanceConstraint, HingeConstraint, WeldConstraint, SpringConstraint, MotorConstraint,
+  CollisionSystem, PhysicsWorld, Forces, Inertia,
+  createGround, createBox, createCircle,
+  gjkTest, epaPenetration, raycastAll, debugRender,
+} from "./physics-engine";
+// --- physics-utils ---
+export {
+  Vec2 as PhyVec2, BodyState, Force, PhysicsWorldOptions, CollisionPair,
+  ParticleEmitterConfig, Particle, PhysicsWorld as PhyWorld,
+} from "./physics-utils";
+// --- pills-utils ---
+export {
+  PillVariant, PillSize, PillMode, PillItem, PillsOptions, PillsInstance, createPills,
+} from "./pills-utils";
