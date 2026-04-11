@@ -49135,3 +49135,70 @@ export {
   shallowCompareBy as RShallowCompareBy,
   arrayCompare as RArrayCompare,
 } from "./react";
+// --- reactive-signals (Solid.js-style) ---
+export type {
+  EqualityFn as RSigEqualityFn,
+  SignalOptions as RSigOptions,
+  ComputedOptions as RSigComputedOptions,
+  EffectOptions as RSigEffectOptions,
+  ReactionNode as RSigReactionNode,
+} from "./reactive-signals";
+export {
+  signal as RSigSignal,
+  isSignal as RSigIsSignal,
+  untrack as RSigUntrack,
+  peek as RSigPeek,
+  computed as RSigComputed,
+  isComputed as RSigIsComputed,
+  effect as RSigEffect,
+  batch as RSigBatch,
+  flushPending as RSigFlushPending,
+  not as RSigNot,
+  mapSignal as RSigMapSignal,
+  filterSignal as RSigFilterSignal,
+  asyncEffect as RSigAsyncEffect,
+  getDependencyGraph as RSigGetDepGraph,
+  getPendingCount as RSigGetPendingCount,
+  getBatchDepth as RSigGetBatchDepth,
+  shallowEqual as RSigShallowEqual,
+  deepEqual as RSigDeepEqual,
+} from "./reactive-signals";
+
+// --- reactive-store ---
+export type {
+  Listener as RStoListener,
+  Selector as RStoSelector,
+  Middleware as RStoMiddleware,
+  StoreAction as RStoAction,
+  StoreOptions as RStoOptions,
+  ComputedConfig as RStoComputedConfig,
+  SubscriptionInfo as RStoSubInfo,
+  StoreStats as RStoStats,
+} from "./reactive-store";
+export {
+  ReactiveStore,
+  createStore as RStoCreate,
+  loggerMiddleware as RStoLoggerMW,
+  throttleMiddleware as RStoThrottleMW,
+  immutabilityCheckMiddleware as RStoImmutabilityMW,
+} from "./reactive-store";
+
+// --- reactive-utils (simpler) ---
+export type {
+  Subscriber as RUtSubscriber,
+  EqualityFn as RUtEqualityFn,
+  Signal as RUtSignal,
+  Computed as RUtComputed,
+  EffectInstance as RUtEffectInstance,
+  SignalHistory as RUtSignalHistory,
+} from "./reactive-utils";
+export {
+  createSignal as RUtCreateSignal,
+  createComputed as RUtCreateComputed,
+  createEffect as RUtCreateEffect,
+  batch as RUtBatch,
+  watch as RUtWatch,
+  watchDebounced as RUtWatchDebounced,
+  watchThrottled as RUtWatchThrottled,
+  withHistory as RUtWithHistory,
+} from "./reactive-utils";
