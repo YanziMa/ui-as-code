@@ -46744,3 +46744,15 @@ export { MutationWatcher, createMutationObserver, waitForElement as waitForEleme
 // --- navbar-utils.ts ---
 export type { NavbarStyle, NavbarSize, NavItem, UserMenuConfig, SearchConfig, NavbarOptions, NavbarInstance } from "./navbar-utils";
 export { createNavbar } from "./navbar-utils";
+
+// --- navbar.ts ---
+export type { NavItem as NbNavItem, UserMenuConfig as NbUserMenuCfg, NavbarOptions as NbOpts, NavbarInstance as NbInst } from "./navbar";
+export { NavbarManager, createNavbar as createNb } from "./navbar";
+
+// --- network-graph.ts ---
+export type { GraphNode, GraphEdge, GraphLayoutMode, NetworkGraphOptions as NetGraphOpts, NetworkGraphInstance as NetGraphInst } from "./network-graph";
+export { createNetworkGraph } from "./network-graph";
+
+// --- network-protocol.ts ---
+export type { ParsedUrl, QueryParams, HttpHeaders, RpcRequest as NetRpcReq, RpcResponse as NetRpcResp, WsConfig, NetworkQualityReport as NetQualityReport } from "./network-protocol";
+export { HttpMethod, HttpStatusCategory, WsState, WebSocketManager, WireType, JsonRpcClient, RpcError, SseManager, parseUrl, buildUrl, normalizeUrl, parseQueryString, stringifyQuery, mergeQueryParams, joinPath, normalizePath, resolveUrl, encodeRfc3986, decodeRfc3986, matchUrlPattern, matchUrlRegex, parseContentType, parseAcceptHeader, parseCacheControl, getMaxAge, mustRevalidate, parseAcceptLanguage, parseAcceptEncoding, compareEtags, etagMatchesList, buildCookieHeader, basicAuthHeader, bearerAuthHeader, digestAuthHeader, buildCorsPreflight, formatHttpLog, encodeLengthPrefixedFrame, decodeLengthPrefixedFrame, encodeVarint, decodeVarint, encodeTag, decodeTag, encodeFieldValue, decodeFieldValue, serializeMessage, deserializeMessage, RpcErrorCode, createStreamingRpc, estimateBandwidth, measureLatency, detectConnectionType, watchOnlineStatus, computeNetworkQualityScore } from "./network-protocol";
