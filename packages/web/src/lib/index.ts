@@ -39188,3 +39188,75 @@ export {
   getMemoryInfo,
 } from "./browser-utils";
 export type { BrowserInfo } from "./browser-utils";
+// --- scroll-utils ---
+export {
+  getScrollPosition,
+  setScrollPosition,
+  scrollTo,
+  scrollToElement,
+  scrollToTop,
+  scrollToBottom,
+  trackScroll,
+  createScrollSpy,
+  createInfiniteScroll,
+  createParallax,
+  lockScroll,
+  createProgressBar,
+  isAtTop,
+  isAtBottom,
+  getScrollPercent,
+} from "./scroll-utils";
+export type {
+  ScrollPosition,
+  ScrollSpyOptions,
+  InfiniteScrollOptions,
+  ParallaxOptions,
+  ScrollLockOptions,
+} from "./scroll-utils";
+
+// --- clipboard-utils ---
+export {
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+} from "./clipboard-utils";
+export type {
+  ClipboardData,
+  CopyOptions,
+  PasteOptions,
+  PasteResult,
+  ClipboardHistoryEntry,
+  ClipboardHistoryOptions,
+} from "./clipboard-utils";
+
+// --- drag-utils ---
+export {
+  makeDraggable,
+  DropZoneManager,
+  createSortable,
+} from "./drag-utils";
+export type {
+  DragData,
+  DragOptions,
+  DropZone,
+  SortableConfig,
+} from "./drag-utils";
