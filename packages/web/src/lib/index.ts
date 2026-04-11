@@ -42170,3 +42170,10 @@ export { TimelineManager, createTimeline } from "./timeline";
 export type { TimelineItemStatus, TimelineItem, TimelineOptions, TimelineInstance } from "./timeline";
 export { TreeView } from "./tree-view";
 export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
+// --- Batch 1356: Data Table, File Upload, Search Input ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type { Column, SortDirection, SortState, FilterState, DataTableOptions, DataTableInstance } from "./data-table";
+export { createFileUpload } from "./file-upload";
+export type { FileUploadItem, FileUploadOptions, FileUploadInstance } from "./file-upload";
+export { SearchInputManager, createSearchInput } from "./search-input";
+export type { SuggestionItem, SearchHistoryEntry, SearchInputOptions, SearchInputInstance } from "./search-input";
