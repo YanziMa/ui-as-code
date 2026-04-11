@@ -42251,3 +42251,9 @@ export type { FunnelOrientation, FunnelStyle, FunnelDataPoint, FunnelChartOption
 export { useDebouncedValue, useThrottledCallback, useMounted, usePrevious, useToggle, useLocalStorage, useMediaQuery, useClickOutside, useIntersectionObserver, useClipboard } from "./hooks";
 export { createWizard } from "./wizard-stepper";
 export type { StepStatus, StepLayout, WizardStep, WizardOptions, WizardInstance } from "./wizard-stepper";
+export { createWordCloud } from "./word-cloud";
+export type { WordCloudItem, WordCloudShape, WordCloudSpiral, WordCloudOptions, WordCloudInstance } from "./word-cloud";
+export { createInlineWorker, createInlineModuleWorker, WorkerChannel, WorkerPool, isWorkerAvailable, isWorkerContext, getWorkerConcurrency } from "./worker-utils";
+export type { WorkerMessage, WorkerResponse, WorkerPoolOptions, PooledTask } from "./worker-utils";
+export { WorkflowDefinition, WorkflowExecutor, runWorkflow, sequentialWorkflow, parallelWorkflow } from "./workflow";
+export type { TaskId, WorkflowId, TaskDefinition, WorkflowContext, WorkflowStatus, TaskResult, WorkflowResult, WorkflowHook, WorkflowOptions } from "./workflow";
