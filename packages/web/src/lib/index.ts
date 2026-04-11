@@ -37179,3 +37179,15 @@ export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger 
 // --- dropdown-utils ---
 export { createDropdown } from "./dropdown-utils";
 export type { DropdownItem, DropdownOptions, DropdownInstance } from "./dropdown-utils";
+
+// --- tab-utils ---
+export { createTabs } from "./tab-utils";
+export type { TabItem, TabOptions, TabInstance, TabOrientation, TabActivation } from "./tab-utils";
+
+// --- accordion-utils ---
+export { createAccordion } from "./accordion-utils";
+export type { AccordionItem, AccordionOptions, AccordionInstance, AccordionMode } from "./accordion-utils";
+
+// --- carousel-utils ---
+export { createCarousel } from "./carousel-utils";
+export type { CarouselSlide, CarouselOptions, CarouselInstance, CarouselTransition, CarouselNavStyle } from "./carousel-utils";
