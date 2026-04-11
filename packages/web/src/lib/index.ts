@@ -27896,3 +27896,15 @@ export type { CountdownDisplayMode, CountdownUnit, CountdownTimerOptions, Countd
 // --- Infinite Scroll ---
 export { InfiniteScroll } from "./infinite-scroll";
 export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
+
+// --- Resizable ---
+export { makeResizable, createSplitPane } from "./resizable";
+export type { ResizeOptions, ResizeState, SplitPaneOptions, ResizableController, SplitPaneController } from "./resizable";
+
+// --- Split View ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type { SplitDirection, PaneConfig, SplitViewOptions, SplitViewState, SplitViewInstance } from "./split-view";
+
+// --- Tree View ---
+export { TreeView } from "./tree-view";
+export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
