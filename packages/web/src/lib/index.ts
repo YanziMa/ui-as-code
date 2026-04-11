@@ -46821,3 +46821,51 @@ export {
   createNotificationManager,
   createSaaSNotifier,
 } from "./notification-channels";
+
+// --- notification-hub ---
+export type {
+  NotificationLevel as NHLevel,
+  NotificationType as NHType,
+} from "./notification-hub";
+export type {
+  NotificationItem as NHItem,
+  NotificationHubOptions as NHOpts,
+  NotificationHubInstance as NHInst,
+} from "./notification-hub";
+export {
+  NotificationHubManager,
+  createNotificationHub,
+} from "./notification-hub";
+
+// --- notification-manager ---
+export type {
+  NotificationType as NMType,
+  NotificationPriority as NMPriority,
+} from "./notification-manager";
+export type {
+  NotificationAction as NMAction,
+  NotificationItem as NMItem,
+  NotificationCenterOptions as NMOpts,
+  NotificationCenterInstance as NMInst,
+} from "./notification-manager";
+export {
+  createNotificationCenter as createNMCenter,
+} from "./notification-manager";
+
+// --- notification-permissions ---
+export type {
+  PermissionStatus as NPStatus,
+} from "./notification-permissions";
+export type {
+  NotificationOptions as NPOpts,
+  ScheduledNotification as NPScheduled,
+  NotificationManagerOptions as NPMgrOpts,
+  NotificationManagerInstance as NPMgrInst,
+} from "./notification-permissions";
+export {
+  NotificationPermissionManager,
+  createNotificationManager as createNPermMgr,
+  isSupported,
+  quickNotify,
+  requestNotificationPermission,
+} from "./notification-permissions";
