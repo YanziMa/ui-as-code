@@ -40141,3 +40141,28 @@ export {
   type PopoverTrigger,
   type VirtualElement,
 } from "./popover-utils";
+// --- Sheet ---
+export {
+  createSheet,
+  type SheetOptions,
+  type SheetInstance,
+  type SheetSide,
+  type SheetSize,
+} from "./sheet-utils";
+
+// --- Lightbox ---
+export {
+  createLightbox,
+  type LightboxOptions,
+  type LightboxInstance,
+  type LightboxImage,
+  type LightboxZoomMode,
+} from "./lightbox-utils";
+
+// --- Tour ---
+export {
+  createTour,
+  type TourOptions,
+  type TourInstance,
+  type TourStep,
+} from "./tour-utils";
