@@ -29379,3 +29379,10 @@ export type {
   DonutChartInteractionMode,
   DonutChartLegendPosition,
 } from "./donut-chart.js";
+// --- Batch 982: Radar Chart, Treemap, Waterfall Chart ---
+export { createRadarChart } from "./radar-chart.js";
+export type { RadarChartOptions, RadarChartInstance, RadarAxis, RadarDataset } from "./radar-chart.js";
+export { createTreemap } from "./treemap.js";
+export type { TreemapOptions, TreemapInstance, TreemapNode, TreemapColorScale } from "./treemap.js";
+export { createWaterfallChart } from "./waterfall-chart.js";
+export type { WaterfallChartOptions, WaterfallChartInstance, WaterfallDataPoint, WaterfallBarStyle } from "./waterfall-chart.js";
