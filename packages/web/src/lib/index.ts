@@ -35027,3 +35027,48 @@ export {
   type LazyLoadOptions,
   type ScrollTriggerOptions,
 } from "./intersection-utils";
+
+// --- Batch 1152: Gesture, Drag, Swipe ---
+export {
+  GestureRecognizer,
+  distance,
+  angleBetween,
+  midpoint,
+  getDirection,
+  isInsideRect,
+  isInsideElement,
+  createTapDebounce,
+  detectSwipe,
+  type Point,
+  type SwipeGesture,
+  type PinchGesture,
+  type RotateGesture,
+  type TapGesture,
+  type LongPressGesture,
+  type PanGesture,
+  type Gesture,
+  type GestureConfig,
+  type GestureHandlers,
+} from "./gesture-utils";
+export {
+  makeDraggable,
+  DropZoneManager,
+  createSortable,
+  type DragData,
+  type DragOptions,
+  type DropZone,
+  type SortableConfig,
+} from "./drag-utils";
+export {
+  createSwipeDetector,
+  createSwipeToDismiss,
+  createSwipeableCards,
+  type SwipeConfig,
+  type SwipeHandlers,
+  type SwipeData,
+  type SwipeDirection,
+  type SwipeEdge,
+  type SwipeToDismissOptions,
+  type SwipeToDismissInstance,
+  type SwipeableCardOptions,
+} from "./swipe-utils";
