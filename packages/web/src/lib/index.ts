@@ -38268,3 +38268,53 @@ export type {
   WorkerPoolOptions,
   PooledTask,
 } from "./worker-utils";
+// --- Storage Utilities ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+} from "./storage-utils";
+export type {
+  StorageBackend,
+  StorageEntry,
+  StorageOptions,
+  StorageStats,
+  StorageMigration,
+} from "./storage-utils";
+
+// --- i18n Utilities ---
+export {
+  LOCALES,
+  getPluralForm,
+  formatLocaleNumber,
+  formatCurrency,
+  formatRelativeTimeLocale,
+  formatList,
+  detectLocale,
+  TranslationDict,
+} from "./i18n-utils";
+export type {
+  LocaleConfig,
+  LocaleCode,
+  PluralRule,
+} from "./i18n-utils";
+
+// --- Theme Utilities ---
+export {
+  getSystemColorScheme,
+  onSystemColorSchemeChange,
+  prefersReducedMotion,
+  prefersHighContrast,
+  prefersLightColor,
+  ThemeManager,
+  generateDesignTokens,
+  generateDarkTokens,
+  createLightDarkTheme,
+} from "./theme-utils";
+export type {
+  ThemeMode,
+  DesignToken,
+  ThemeDefinition,
+  ThemeManagerConfig,
+} from "./theme-utils";
