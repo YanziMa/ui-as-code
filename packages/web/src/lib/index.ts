@@ -50614,3 +50614,33 @@ export type {
   SheetInstance as ShMgr_Instance,
 } from "./sheet-manager";
 export { SheetManager, createSheetManager } from "./sheet-manager";
+
+// --- sheet-utils ---
+export type {
+  SheetSide as SheetUtil_Side,
+  SheetSize as SheetUtil_Size,
+  SheetOptions as SheetUtil_Options,
+  SheetInstance as SheetUtil_Instance,
+} from "./sheet-utils";
+export { createSheet as createSheetUtil } from "./sheet-utils";
+
+// --- sheet ---
+export type {
+  SheetSnapPoint as Sht_SnapPoint,
+  SheetOptions as Sht_Options,
+  SheetInstance as Sht_Instance,
+} from "./sheet";
+export { createSheet as createSht } from "./sheet";
+
+// --- shimmer-utils ---
+export type {
+  ShimmerDirection as ShimDir,
+  ShimmerSpeed as ShimSpeed,
+  ShimmerOptions as ShimOptions,
+  ShimmerInstance as ShimInstance,
+} from "./shimmer-utils";
+export {
+  createShimmer,
+  shimmerOnce,
+  createShimmerText,
+} from "./shimmer-utils";
