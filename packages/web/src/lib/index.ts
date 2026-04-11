@@ -40055,3 +40055,29 @@ export {
   type FooterLayout,
   type FooterSize,
 } from "./footer-utils";
+// --- Dropdown Menu Utilities ---
+export {
+  createDropdown,
+  type DropdownOptions,
+  type DropdownInstance,
+  type DropdownItem,
+  type DropdownPlacement,
+  type TriggerMode,
+} from "./dropdown-menu-utils";
+
+// --- Context Menu Utilities ---
+export {
+  createContextMenu,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  type ContextMenuItem,
+  type ContextMenuContext,
+} from "./context-menu-utils";
+
+// --- Command Menu Utilities ---
+export {
+  createCommandMenu,
+  type CommandMenuOptions,
+  type CommandMenuInstance,
+  type CommandMenuItem as CmdMenuItem,
+} from "./command-menu-utils";
