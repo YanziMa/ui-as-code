@@ -40440,3 +40440,62 @@ export type { LoggerOptions, LogEntry, LogTransport, LogFormatter, LogLevel } fr
 // --- Performance ---
 export { mark, measure, endMark, clearMarks, perfTimer, perfTimerAsync, createFPSMonitor, getMemoryInfo, formatBytes, formatMemoryInfo, getResourceTimings, getResourcesByType, getSlowestResources, getLargestResources, getNavigationTiming, observeLongTasks, observeLayoutShift, FrameBudgetTracker } from "./perf-utils";
 export type { PerformanceMark, FrameStats, MemoryInfo, ResourceTimingEntry, FPSMonitorOptions, FPSMonitorInstance } from "./perf-utils";
+// --- animation-utils ---
+export {
+  Tween,
+  SpringAnimation,
+  StaggerAnimation,
+  ScrollAnimation,
+  ParallaxHelper,
+  MouseParallax,
+  fadeIn,
+  fadeOut,
+  slideUp,
+  slideDown,
+  scaleIn,
+  shake,
+  pulse,
+} from "./animation-utils";
+
+// --- gesture-utils ---
+export {
+  GestureRecognizer,
+  distance,
+  angleBetween,
+  midpoint,
+  getDirection,
+  isInsideRect,
+  isInsideElement,
+  createTapDebounce,
+  detectSwipe,
+} from "./gesture-utils";
+export type {
+  Point,
+  SwipeGesture,
+  PinchGesture,
+  RotateGesture,
+  TapGesture,
+  LongPressGesture,
+  PanGesture,
+  Gesture,
+  GestureConfig,
+  GestureHandlers,
+} from "./gesture-utils";
+
+// --- hotkey-parser-utils ---
+export {
+  parseHotkey,
+  hotkeysMatch,
+  eventMatchesHotkey,
+  formatHotkey,
+  parseHotkeys,
+  findConflicts,
+  eventToHotkey,
+  hotkeyHash,
+} from "./hotkey-parser-utils";
+export type {
+  ParsedHotkey,
+  ModifierKey,
+  HotkeyParseOptions,
+  HotkeyCompareOptions,
+} from "./hotkey-parser-utils";
