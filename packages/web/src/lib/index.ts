@@ -45572,3 +45572,15 @@ export type { Child, AttrValue } from "./html-builder";
 // --- html-parser ---
 export { parseHtml, serializeHtml, querySelector as HpQuerySelector, querySelectorAll as HpQuerySelectorAll, walkNodes, extractText, stripHtmlTags, sanitizeHtml, htmlToDom, decodeHtmlEntities, encodeHtmlEntities } from "./html-parser";
 export type { HtmlNode, ParseOptions, QuerySelectorResult, SanitizeOptions } from "./html-parser";
+
+// --- html-sanitizer ---
+export { sanitizeHtml as HsSanitizeHtml, sanitize, stripHtml as HsStripHtml, escapeHtmlEntities as HsEscapeEntities, scanForXss } from "./html-sanitizer";
+export type { SanitizeOptions as HsSanitizeOptions, SanitizeLevel } from "./html-sanitizer";
+
+// --- http-client ---
+export { HttpClient as HcHttpClient, createHttpClient as HcCreateClient, HttpError } from "./http-client";
+export type { HttpClientConfig, HttpRequestOptions, HttpResponse as HcResponse, HttpMiddleware } from "./http-client";
+
+// --- http-utils ---
+export { HttpClient as HuHttpClient, createHttpClient as HuCreateClient, quickGet, quickPost, jsonp, buildQueryString, parseQueryString, getCurrentQueryParams } from "./http-utils";
+export type { HttpRequestConfig, HttpResponse as HuResponse, HttpError as HuHttpError, InterceptorContext, RequestInterceptor, ResponseInterceptor, ErrorInterceptor, HttpClientOptions } from "./http-utils";
