@@ -31813,3 +31813,30 @@ export {
   type CountdownSize,
   type CountdownVariant,
 } from "./countdown";
+
+// --- Kanban Board ---
+export {
+  createKanbanBoard,
+  type KanbanBoardOptions,
+  type KanbanBoardInstance,
+  type KanbanCard,
+  type KanbanColumn,
+} from "./kanban-board";
+
+// --- Gantt Chart ---
+export {
+  createGanttChart,
+  type GanttChartOptions,
+  type GanttChartInstance,
+  type GanttTask,
+} from "./gantt-chart";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineItem,
+  type TimelineItemStatus,
+} from "./timeline";
