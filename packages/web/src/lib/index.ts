@@ -42228,3 +42228,9 @@ export { IndexedDBManager, EnhancedLocalStorage, EnhancedSessionStorage, InMemor
 export type { IDBSchema, IDBConfig, IndexQueryOptions, QueryResult, CacheStrategy, SyncItem, SyncStatus, ConflictResolver, StorageOptions, ColumnDef, TableDef, MigrationStep, BackupMetadata } from "./database-utils";
 export { createDialogV2 } from "./dialog-v2";
 export type { DialogSize, DialogVariant, DialogV2Options, DialogV2Instance } from "./dialog-v2";
+export { parseDiff, applyDiff, quickApplyDiff, extractDiffFromResponse } from "./diff-parser";
+export type { Hunk, Change, ParsedDiff } from "./diff-parser";
+export { createDockLayout } from "./dock-layout";
+export type { DockLocation, DockTabPosition, DockPanel, DockLayoutOptions, DockLayoutInstance } from "./dock-layout";
+export { createDonutChart } from "./donut-chart";
+export type { DonutChartInteractionMode, DonutChartLegendPosition, DonutChartDataPoint, DonutChartOptions, DonutChartInstance } from "./donut-chart";
