@@ -48953,3 +48953,49 @@ export {
   containsElementType as RIContainsElementType,
   getChildrenByType as RIGetChildrenByType,
 } from "./react-interop";
+// --- react-motion.ts ---
+export {
+  type SpringConfig as RMotSpringConfig,
+  type AnimationOptions as RMotAnimOptions,
+  type EasingFn as RMotEasingFn,
+  easings as RMotEasings,
+  createSpring as RMotCreateSpring,
+  createTween as RMotCreateTween,
+  createStagger as RMotCreateStagger,
+  buildKeyframes as RMotBuildKeyframes,
+  generateKeyframeName as RMotGenerateKeyframeName,
+} from "./react-motion";
+
+// --- react-observables.ts ---
+export {
+  type UnsubscribeFn as RObxUnsubscribe,
+  type Observer as RObxObserver,
+  type CompletionFn as RObxCompletionFn,
+  type ErrorFn as RObxErrorFn,
+  type SubscriptionObserver as RObxSubObserver,
+  Observable as RObxObservable,
+  Subject as RObxSubject,
+  BehaviorSubject as RObxBehaviorSubject,
+  ReplaySubject as RObxReplaySubject,
+  fromEvent as RObxFromEvent,
+  fromPromise as RObxFromPromise,
+  interval as RObxInterval,
+  timer as RObxTimer,
+  merge as RObxMerge,
+  combineLatest as RObxCombineLatest,
+} from "./react-observables";
+
+// --- react-perf-utils.ts ---
+export {
+  type PerfMetric as RPMetric,
+  type PerfReport as RPReport,
+  RenderTracker as RPRenderTracker,
+  createRenderTracker as RPCreateTracker,
+  memoize as RPmemoize,
+  deepEqual as RPdeepEqual,
+  createBatchUpdater as RPBatchUpdater,
+  runWhenIdle as RPRunWhenIdle,
+  perfMark as RPPerfMark,
+  perfMeasure as RPPerfMeasure,
+  perfClearMarks as RPPerfClearMarks,
+} from "./react-perf-utils";
