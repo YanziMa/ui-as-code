@@ -33887,3 +33887,32 @@ export {
   type ScrollProgress,
   type ScrollSpyConfig,
 } from "./scroll-into-view-utils";
+
+// --- notification-utils ---
+export {
+  NotificationManager,
+  type NotificationType,
+  type NotificationPosition,
+  type NotificationOptions,
+  type NotificationInstance,
+  type NotificationManagerConfig,
+} from "./notification-utils";
+
+// --- tooltip-utils ---
+export {
+  createTooltip,
+  type TooltipPlacement,
+  type TooltipTrigger,
+  type TooltipOptions,
+  type TooltipInstance,
+} from "./tooltip-utils";
+
+// --- modal-utils ---
+export {
+  createModal,
+  createFocusTrap,
+  type ModalSize,
+  type ModalOptions,
+  type ModalInstance,
+  type FocusTrapConfig,
+} from "./modal-utils";
