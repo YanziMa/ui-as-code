@@ -34161,3 +34161,30 @@ export {
   type ContextMenuOptions,
   type ContextMenuInstance,
 } from "./context-menu-utils";
+
+// --- sheet-utils ---
+export {
+  createSheet,
+  type SheetSide,
+  type SheetSize,
+  type SheetOptions,
+  type SheetInstance,
+} from "./sheet-utils";
+
+// --- drawer-utils ---
+export {
+  createDrawer,
+  type DrawerSide,
+  type DrawerSize,
+  type DrawerOptions,
+  type DrawerInstance,
+} from "./drawer-utils";
+
+// --- offcanvas-utils ---
+export {
+  createOffCanvas,
+  type OffCanvasSide,
+  type OffCanvasMode,
+  type OffCanvasOptions,
+  type OffCanvasInstance,
+} from "./offcanvas-utils";
