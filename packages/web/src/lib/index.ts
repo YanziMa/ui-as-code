@@ -48767,3 +48767,33 @@ export {
   type RatingInputInstance as RIInstance,
   createRatingInput as RICreate,
 } from "./rating-input";
+// --- rating-review.ts ---
+export {
+  type RatingType as RRRatingType,
+  type SortReviews as RRSort,
+  type FilterRating as RRFilter,
+  type ReviewAuthor as RRAuthor,
+  Review as RReview,
+  type RatingSummary as RRRatingSummary,
+  type RatingReviewOptions as RROptions,
+  type RatingReviewInstance as RRInstance,
+  createRatingReview as RRCreate,
+} from "./rating-review";
+
+// --- rating-stars.ts ---
+export {
+  type StarIcon as RSStarIcon,
+  type RatingSize as RSSize,
+  type RatingStarsOptions as RSOptions,
+  type RatingStarsInstance as RSInstance,
+  createRatingStars as RSCreate,
+} from "./rating-stars";
+
+// --- rating-summary.ts ---
+export {
+  type RatingEntry as RSumEntry,
+  type RatingSummaryOptions as RSumOptions,
+  type RatingSummaryInstance as RSumInstance,
+  RatingSummary as RSumSummary,
+  createRatingSummary as RSumCreate,
+} from "./rating-summary";
