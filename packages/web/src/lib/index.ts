@@ -50115,3 +50115,33 @@ export {
   type ScrollLockOptions,
   type ScrollLockInstance,
 } from "./scroll-lock-utils";
+
+// --- scroll-lock ---
+export {
+  ScrollLockManager,
+  getScrollLockManager,
+  lockScroll as ScrLk_lockScroll,
+  withScrollLock,
+  withScrollLockAsync,
+  setupAutoResizeScrollLock,
+  type ScrollLockOptions as ScrLk_Options,
+  type ScrollLockInstance as ScrLk_Instance,
+} from "./scroll-lock";
+
+// --- scroll-progress-utils ---
+export {
+  createScrollProgress as ScrProgUtil_create,
+  type ProgressShape,
+  type ProgressPosition,
+  type ScrollProgressOptions as ScrProgUtil_Options,
+  type ScrollProgressInstance as ScrProgUtil_Instance,
+} from "./scroll-progress-utils";
+
+// --- scroll-progress ---
+export {
+  createScrollProgress as ScrProg_create,
+  type ProgressBarPosition,
+  type ProgressBarVariant,
+  type ScrollProgressOptions as ScrProg_Options,
+  type ScrollProgressInstance as ScrProg_Instance,
+} from "./scroll-progress";
