@@ -28274,3 +28274,15 @@ export type { CompressOptions, CompressResult, BatchCompressOptions, BatchCompre
 // --- EXIF Reader ---
 export { readExif, hasExifData, getExifOrientation as getExifOrientationFromExif, formatGpsCoordinates, generateMapsLink } from "./exif-reader";
 export type { ExifData, ExifCameraData, ExifPhotoData, ExifGpsData, ExifDateTime, ExifThumbnailData, ExifOrientation } from "./exif-reader";
+
+// --- Audio Recorder ---
+export { createAudioRecorder } from "./audio-recorder";
+export type { AudioRecorderOptions, AudioRecorderInstance, AudioRecordingResult, AudioFormat } from "./audio-recorder";
+
+// --- Video Player ---
+export { createVideoPlayer } from "./video-player";
+export type { VideoPlayerOptions, VideoPlayerInstance, PlaylistItem, Chapter, QualityOption, VideoTrack } from "./video-player";
+
+// --- Media Editor ---
+export { createMediaEditor } from "./media-editor";
+export type { MediaEditorInstance, FilterType, FilterConfig, CropRegion, AnnotationLine, AnnotationRect, TextOverlay, WatermarkOptions, AdjustmentParams, ExportOptions } from "./media-editor";
