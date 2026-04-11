@@ -40081,3 +40081,32 @@ export {
   type CommandMenuInstance,
   type CommandMenuItem as CmdMenuItem,
 } from "./command-menu-utils";
+// --- Alert Dialog ---
+export {
+  createAlertDialog,
+  type AlertDialogOptions,
+  type AlertDialogInstance,
+  type AlertDialogType,
+  type AlertDialogSize,
+  type AlertDialogButton,
+} from "./alert-dialog-utils";
+
+// --- Modal Dialog ---
+export {
+  createModal,
+  type ModalOptions,
+  type ModalInstance,
+  type ModalSize,
+  type ModalVariant,
+  type ModalHeaderOptions,
+  type ModalFooterButton,
+} from "./modal-dialog-utils";
+
+// --- Drawer ---
+export {
+  createDrawer,
+  type DrawerOptions,
+  type DrawerInstance,
+  type DrawerSide,
+  type DrawerSize,
+} from "./drawer-utils";
