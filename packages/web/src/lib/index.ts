@@ -28286,3 +28286,15 @@ export type { VideoPlayerOptions, VideoPlayerInstance, PlaylistItem, Chapter, Qu
 // --- Media Editor ---
 export { createMediaEditor } from "./media-editor";
 export type { MediaEditorInstance, FilterType, FilterConfig, CropRegion, AnnotationLine, AnnotationRect, TextOverlay, WatermarkOptions, AdjustmentParams, ExportOptions } from "./media-editor";
+
+// --- Animation Engine ---
+export { easings, getEasing, springAnimate, AnimationTimeline, createScrollAnimation, staggerElements, animateCounter, createParallax } from "./animation-engine";
+export type { EasingFunction, SpringConfig as AnimSpringConfig, SpringState, Keyframe, AnimationTrack, ScrollAnimationConfig } from "./animation-engine";
+
+// --- Spring Physics ---
+export { createSpring, createPresetSpring, SpringPresets } from "./spring-physics";
+export type { SpringConfig, SpringOptions, SpringInstance, ChainableSpring } from "./spring-physics";
+
+// --- Tween Engine ---
+export { createTween, tweenAll, tweenSequence, fadeIn, fadeOut, slideIn } from "./tween-engine";
+export type { TweenProps, TweenInstance, Tweenable, TweenValue, TweenProp } from "./tween-engine";
