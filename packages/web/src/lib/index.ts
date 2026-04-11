@@ -38614,3 +38614,86 @@ export type {
   Metric,
   MetricsRegistryConfig,
 } from "./metrics-utils";
+// --- Testing Utilities ---
+export {
+  expect,
+  doesNotThrow,
+  spyOn,
+  createMock,
+  TestRunner,
+  saveSnapshot,
+  matchSnapshot,
+  clearSnapshots,
+  Assert,
+  AssertionError,
+} from "./testing-utils";
+export type {
+  TestFn,
+  TestCase,
+  TestSuite,
+  TestResult,
+  SuiteResult,
+  AssertionContext,
+  Spy,
+} from "./testing-utils";
+
+// --- Performance Utilities ---
+export {
+  PerfObserver,
+  measureSync,
+  measureAsync,
+  perfMark,
+  perfMeasure,
+  measureBetween,
+  FPSCounter,
+  getMemoryUsage,
+  getMemoryPercent,
+  MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming,
+  collectWebVitals,
+  getResourceTiming,
+  findSlowResources,
+  CustomMetric,
+} from "./performance-utils";
+export type {
+  TimingResult,
+  MemoryUsage,
+  FPSStats,
+  WebVitals,
+  NavigationTiming,
+} from "./performance-utils";
+
+// --- Clipboard Utilities ---
+export {
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+} from "./clipboard-utils";
+export type {
+  ClipboardData,
+  CopyOptions,
+  PasteOptions,
+  PasteResult,
+  ClipboardHistoryEntry,
+  ClipboardHistoryOptions,
+} from "./clipboard-utils";
