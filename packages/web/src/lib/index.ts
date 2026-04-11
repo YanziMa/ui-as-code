@@ -29236,3 +29236,15 @@ export {
   type SplitPaneInstance,
   type SplitOrientation,
 } from "./split-pane.js";
+
+// --- Progress Stepper (Batch 971) ---
+export type { StepStatus, StepperOrientation, StepperVariant, StepItem, ProgressStepperOptions, ProgressStepperInstance } from "./progress-stepper.js";
+export { createProgressStepper } from "./progress-stepper.js";
+
+// --- Skeleton Loader (Batch 971) ---
+export type { SkeletonShape, SkeletonAnimation, SkeletonItem, SkeletonOptions, SkeletonInstance } from "./skeleton-loader.js";
+export { createSkeleton } from "./skeleton-loader.js";
+
+// --- Empty State (Batch 971) ---
+export type { EmptyStateVariant, EmptyStateOptions, EmptyStateInstance } from "./empty-state.js";
+export { EmptyStateManager, createEmptyState } from "./empty-state.js";
