@@ -28825,3 +28825,15 @@ export type { WakeLockOptions, WakeLockInstance } from "./screen-wake-lock";
 // --- share-api ---
 export { createShareApi, shareContent, isShareSupported, generateShareTarget, parseShareTargetFromUrl } from "./share-api";
 export type { ShareData, ShareOptions, ShareTargetRegistration, ShareInstance } from "./share-api";
+
+// --- notification-permissions ---
+export { NotificationPermissionManager, createNotificationManager, quickNotify, requestNotificationPermission, isSupported as isNotificationSupported } from "./notification-permissions";
+export type { PermissionStatus, NotificationOptions, ScheduledNotification, NotificationManagerOptions, NotificationManagerInstance } from "./notification-permissions";
+
+// --- push-api ---
+export { createPushApi, isPushSupported, isNotificationGranted as isPushNotificationGranted } from "./push-api";
+export type { PushSubscriptionInfo, PushApiOptions, PushInstance } from "./push-api";
+
+// --- broadcast-channel ---
+export { createBroadcast, isBroadcastSupported, quickBroadcast } from "./broadcast-channel";
+export type { ChannelMessage, BroadcastOptions, BroadcastInstance } from "./broadcast-channel";
