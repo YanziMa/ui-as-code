@@ -29814,3 +29814,29 @@ export type {
 // --- print ---
 export { createPrintManager, quickPrint, addPageBreakBefore, addPageBreakAfter, avoidBreakInside } from "./print";
 export type { PrintOptions, PrintManagerInstance } from "./print";
+
+// --- notification ---
+export { NotificationManager, getNotificationManager, toast } from "./notification";
+export type {
+  Notification,
+  NotificationOptions,
+  NotificationPosition,
+  NotificationType,
+} from "./notification";
+
+// --- geolocation ---
+export { GeoLocationManager, createGeoLocationManager, getCurrentLocation, geoDistance } from "./geolocation";
+export type { GeoPosition, GeoOptions, GeoWatchOptions, GeoError, GeoState, GeoListener } from "./geolocation";
+
+// --- local-storage ---
+export {
+  LocalStorageManager,
+  SessionStorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  lsSet,
+  lsGet,
+  lsRemove,
+  lsHas,
+} from "./local-storage";
+export type { StorageItem, StorageOptions, StorageInstance } from "./local-storage";
