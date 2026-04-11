@@ -32088,3 +32088,15 @@ export {
   type ChipData,
   type ChipSuggestion,
 } from "./chip-input";
+
+// --- time-picker ---
+export { createTimePicker } from "./time-picker";
+export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker";
+
+// --- calendar-view ---
+export { createCalendarView } from "./calendar-view";
+export type { CalendarViewOptions, CalendarViewInstance, CalendarEvent, CalendarViewMode, CalendarI18n } from "./calendar-view";
+
+// --- mention ---
+export { createMention, MentionManager } from "./mention";
+export type { MentionOptions, MentionInstance, MentionOption } from "./mention";
