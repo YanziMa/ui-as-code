@@ -25757,3 +25757,58 @@ export {
   NAMED_COLORS,
 } from "./color-system";
 export type { RgbColor, HslColor, HsvColor, BlendMode, HarmonyType } from "./color-system";
+
+// --- Breakpoint Utilities ---
+export {
+  getActiveBreakpoint,
+  isAtLeast,
+  isAtMost,
+  getMatchingBreakpoints,
+  resolveResponsiveValue,
+  fluidClamp,
+  generateFluidScale,
+  minWQuery,
+  maxWQuery,
+  rangeQuery,
+  containerQuery,
+  containerDefinition,
+  gridColumns,
+  gutterSize,
+  DEFAULT_BREAKPOINTS as BP_DEFAULTS,
+  BREAKPOINT_MAP as BP_MAP,
+  BREAKPOINT_ORDER as BP_ORDER,
+} from "./breakpoint-utils";
+export type { BreakpointKey, BreakpointDefinition, FluidScaleOptions, ResponsiveValue, ContainerQueryConfig } from "./breakpoint-utils";
+
+// --- Responsive Helpers ---
+export {
+  listenToMedia,
+  watchMedia,
+  watchHover,
+  watchTouch,
+  watchReducedMotion,
+  watchDarkMode,
+  watchPortrait,
+  watchLandscape,
+  watchHighContrast,
+  watchPrint,
+  buildSrcset,
+  buildPictureHtml,
+  pickBestImageSource,
+  getSafeAreaInsets,
+  applySafeAreaVars,
+  listenForPrint,
+  generatePrintStyles,
+  getVisualViewport,
+  hasDisplayNotch,
+} from "./responsive-helpers";
+export type { MediaListenerOptions, MediaQueryResult, ResponsiveImageSource, ResponsiveImageOptions, SafeAreaInsets, PrintOptions } from "./responsive-helpers";
+
+// --- Media Query Manager ---
+export {
+  ResponsiveManager,
+  createResponsiveManager,
+  matchesQuery,
+  getCurrentBreakpoint,
+} from "./media-query";
+export type { BreakpointName, Breakpoint, BreakpointConfig, MediaQueryOptions, MediaQueryInstance, ResponsiveManagerInstance } from "./media-query";
