@@ -28358,3 +28358,28 @@ export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from 
 // --- Badge ---
 export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
 export type { BadgeOptions, BadgeVariant, BadgeSize, BadgePosition, StatusDotOptions } from "./badge";
+
+// --- Batch 929: Progress Bar, Rating, Chip Input ---
+export {
+  createProgressBar,
+  createCircleProgress,
+  type ProgressBarOptions,
+  type CircleProgressOptions,
+  type ProgressVariant,
+  type ProgressSize,
+} from "./progress-bar";
+export {
+  createRating,
+  RatingManager,
+  type RatingOptions,
+  type RatingInstance,
+  type StarIconType,
+} from "./rating";
+export {
+  createChipInput,
+  ChipInputManager,
+  type ChipInputOptions,
+  type ChipInputInstance,
+  type ChipData,
+  type ChipSuggestion,
+} from "./chip-input";
