@@ -18160,3 +18160,32 @@ export type {
   AccordionItem,
   AccordionMode,
 } from "./accordion";
+export {
+  StepsManager,
+  createSteps,
+} from "./steps";
+export type {
+  StepsOptions,
+  StepsInstance,
+  StepItem,
+  StepStatus,
+  StepsOrientation,
+  StepsVariant,
+} from "./steps";
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+  BreadcrumbItem,
+} from "./breadcrumb";
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
