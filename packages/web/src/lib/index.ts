@@ -28227,3 +28227,15 @@ export type { StopwatchOptions, StopwatchInstance, LapRecord } from "./stopwatch
 // --- Clock ---
 export { createClock } from "./clock";
 export type { ClockOptions, ClockInstance, ClockStyle, ClockSize, SecondHandStyle, TimeZoneInfo } from "./clock";
+
+// --- Rating Summary ---
+export { createRatingSummary } from "./rating-summary";
+export type { RatingSummaryOptions, RatingSummaryInstance, RatingEntry } from "./rating-summary";
+
+// --- Mention ---
+export { MentionManager, createMention } from "./mention";
+export type { MentionOptions, MentionInstance, MentionOption } from "./mention";
+
+// --- Signature Pad ---
+export { SignaturePadManager, createSignaturePad } from "./signature-pad";
+export type { SignaturePadOptions, SignaturePadInstance, Stroke, StrokePoint } from "./signature-pad";
