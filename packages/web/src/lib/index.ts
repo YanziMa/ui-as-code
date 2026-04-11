@@ -20256,3 +20256,46 @@ export type {
   SearchHighlightOptions,
   SearchHighlightInstance,
 } from "./search-highlight";
+export {
+  computeDiff,
+  toUnifiedDiff,
+  applyPatch,
+  renderInlineDiffHtml,
+  renderSideBySideDiffHtml,
+  wordDiff,
+  renderWordDiffHtml,
+  getDiffStyles,
+  textSimilarity,
+  formatDiffStats,
+} from "./diff-viewer";
+export type {
+  DiffChunk,
+  DiffResult,
+  FileDiff,
+} from "./diff-viewer";
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  extractText,
+  countWords,
+  readingTime,
+  mdToHtml,
+} from "./markdown-renderer";
+export type {
+  MdNodeType,
+  MdNode,
+  MdRenderOptions,
+  TocEntry,
+  FrontMatter,
+} from "./markdown-renderer";
+export {
+  CodeEditorManager,
+  createCodeEditor,
+} from "./code-editor";
+export type {
+  CodeEditorOptions,
+  CodeEditorInstance,
+} from "./code-editor";
