@@ -40429,3 +40429,14 @@ export type { ClipboardData, CopyOptions, PasteOptions, PasteResult, ClipboardHi
 // --- Notification (Toast) ---
 export { NotificationManager } from "./notification-utils";
 export type { NotificationOptions, NotificationInstance, NotificationManagerConfig, NotificationType, NotificationPosition } from "./notification-utils";
+// --- i18n ---
+export { I18nManager, getUserLanguage, getUserLanguages, matchLocale, resolveLocale, getPluralForm, isRTL, getDirection, applyDirection, formatNumber, formatCurrency, formatPercent, formatCompactNumber, formatDateI18n, formatRelativeTime, formatList } from "./i18n-utils";
+export type { I18nConfig, TranslationEntry, PluralForms } from "./i18n-utils";
+
+// --- Logger ---
+export { Logger, getLogger, destroyLogger, createModuleLogger, textFormatter, jsonFormatter, compactFormatter, PerfTracker } from "./logger-utils";
+export type { LoggerOptions, LogEntry, LogTransport, LogFormatter, LogLevel } from "./logger-utils";
+
+// --- Performance ---
+export { mark, measure, endMark, clearMarks, perfTimer, perfTimerAsync, createFPSMonitor, getMemoryInfo, formatBytes, formatMemoryInfo, getResourceTimings, getResourcesByType, getSlowestResources, getLargestResources, getNavigationTiming, observeLongTasks, observeLayoutShift, FrameBudgetTracker } from "./perf-utils";
+export type { PerformanceMark, FrameStats, MemoryInfo, ResourceTimingEntry, FPSMonitorOptions, FPSMonitorInstance } from "./perf-utils";
