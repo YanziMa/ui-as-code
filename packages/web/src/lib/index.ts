@@ -23870,3 +23870,86 @@ export type {
   ThemeDefinition,
   ThemeEngineOptions,
 } from "./theme-engine";
+
+// --- dom-observer ---
+export {
+  DomObserverManager,
+  takeSnapshot,
+  compareSnapshots,
+  createRouteChangeDetector,
+  createLazyLoader,
+} from "./dom-observer";
+export type {
+  ObserveTarget,
+  MutationOptions,
+  IntersectionOptions,
+  ResizeOptions,
+  MutationRecordEx,
+  DomSnapshot,
+  ObserverCallbacks,
+  ObserverStats,
+} from "./dom-observer";
+
+// --- layout-utils ---
+export {
+  getRect,
+  getPositionInDocument,
+  getOffsetPosition,
+  getLayoutMetrics,
+  positionElement,
+  centerElement,
+  alignChildren,
+  getViewportSize,
+  getVisualViewport,
+  isInViewport as layoutIsInViewport,
+  findScrollParent,
+  scrollIntoViewIfNeeded,
+  gridTemplateColumns,
+  applyMasonryLayout,
+  constrainToContainer,
+  fillRemainingSpace,
+  getElementBreakpoint,
+  setResponsiveDisplay,
+} from "./layout-utils";
+export type { Rect, Position, Alignment, LayoutMetrics } from "./layout-utils";
+
+// --- css-in-js ---
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  mq,
+  mediaQueries,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode as cssIsDarkMode,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode as cssSetDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations,
+  animate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type { Breakpoints } from "./css-in-js";
