@@ -44870,3 +44870,13 @@ export { createFeatureFlags, createBooleanFlag, createRolloutFlag } from "./feat
 // --- field-utils ---
 export type { FieldVariant, FieldSize, FieldState, FieldOptions, FieldInstance, FieldGroupOptions } from "./field-utils";
 export { createField, createFieldGroup } from "./field-utils";
+
+// --- file-utils ---
+export { MIME_MAP, getMimeType, getExtension, getBaseName, categorizeFile, isFileType, FILE_EXTENSIONS, validateFile, validateFiles, sanitizeFilename, uniqueFilename, formatBytes as fuFormatBytes, formatFileSizeShort, getFileIcon, parseDropEvent, setupDropZone, readFileAsText, readFileAsDataURL, readFileAsArrayBuffer, readFileAsBinaryString, readFileHeader, splitFileIntoChunks, UploadTracker } from "./file-utils";
+export type { FileCategory, FileValidationOptions, FileValidationError, DropEvent, FileChunk, UploadProgress } from "./file-utils";
+// --- file-upload ---
+export type { FileUploadItem, FileUploadOptions, FileUploadInstance } from "./file-upload";
+export { createFileUpload } from "./file-upload";
+// --- file-system ---
+export type { FileType, WatchEventType, VfsEntry, FileSystemOptions, WatchEvent, FileSystemStats, SearchResult, TreeViewNode } from "./file-system";
+export { VirtualFileSystem } from "./file-system";
