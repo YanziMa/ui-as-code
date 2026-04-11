@@ -20056,3 +20056,29 @@ export type {
   BreadcrumbOptions,
   BreadcrumbInstance,
 } from "./breadcrumb";
+export {
+  createAffix,
+} from "./affix";
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
