@@ -51012,3 +51012,10 @@ export { type SortableItem as Srt_SortableItem, type SortableOptions as Srt_Sort
 export { type SpacerSize as SpcUtl_SpacerSize, type SpacerOptions as SpcUtl_SpacerOptions, type SpacerStackOptions as SpcUtl_SpacerStackOptions, createSpacer as createSpcUtlSpacer, vSpacer, hSpacer, lineBreak, createSpacerStack } from "./spacer-utils";
 // --- sparkline-chart ---
 export { type SparklineType, type TrendIndicator, type SparklinePoint, type SparklineOptions, type SparklineInstance, createSparklineChart } from "./sparkline-chart";
+
+// --- sparkline ---
+export { type SparklineType as Sprkln_SparklineType, type SparklineOptions as Sprkln_SparklineOptions, type SparklineInstance as Sprkln_SparklineInstance, createSparkline } from "./sparkline";
+// --- spectrum-analyzer ---
+export { type BarStyle, type GradientType, type SpectrumAnalyzerOptions, type SpectrumInstance, createSpectrumAnalyzer } from "./spectrum-analyzer";
+// --- speech-recognition ---
+export { type RecognitionResult, type RecognitionOptions, type SpeechRecognitionInstance, SpeechRecognitionManager, createSpeechRecognition, recognizeOnce } from "./speech-recognition";
