@@ -29604,3 +29604,14 @@ export type { GanttChartOptions, GanttChartInstance, GanttTask } from "./gantt-c
 // --- mind-map ---
 export { createMindMap } from "./mind-map";
 export type { MindMapOptions, MindMapInstance, MindMapNode } from "./mind-map";
+// --- org-chart ---
+export { createOrgChart } from "./org-chart";
+export type { OrgChartOptions, OrgChartInstance, OrgNode } from "./org-chart";
+
+// --- tree-view ---
+export { TreeView } from "./tree-view";
+export type { TreeNodeData, TreeNode, TreeViewConfig, CheckMode } from "./tree-view";
+
+// --- file-explorer ---
+export { createFileExplorer } from "./file-explorer";
+export type { FileExplorerOptions, FileExplorerInstance, FileEntry, ViewMode, SortField } from "./file-explorer";
