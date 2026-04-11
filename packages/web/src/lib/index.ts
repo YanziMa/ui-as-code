@@ -39731,3 +39731,10 @@ export { createCommandPalette } from "./command-palette-utils";
 export type { CommandPaletteOptions, CommandPaletteInstance, PaletteItem } from "./command-palette-utils";
 export { createSplitView } from "./split-view-utils";
 export type { SplitViewOptions, SplitViewInstance, SplitPaneConfig, SplitDirection, SplitCollapseMode } from "./split-view-utils";
+// --- Batch 1245: Tooltip, Popover, Modal ---
+export { createTooltip } from "./tooltip-utils";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip-utils";
+export { createPopover } from "./popover-utils";
+export type { PopoverOptions, PopoverInstance, PopoverPlacement, PopoverTrigger, VirtualElement } from "./popover-utils";
+export { createModal, createFocusTrap } from "./modal-utils";
+export type { ModalOptions, ModalInstance, ModalSize, FocusTrapConfig } from "./modal-utils";
