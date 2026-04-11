@@ -27816,3 +27816,11 @@ export { HotkeysManager, createHotkeysManager } from "./hotkeys-manager";
 export type { HotkeysManagerOptions, HotkeysInstance, HotkeyBinding, HotkeyCombo, HotkeyHintOptions, ParsedCombo } from "./hotkeys-manager";
 export { I18nManager, createI18n } from "./i18n-manager";
 export type { I18nConfig, I18nStats, LocaleData, LocaleFormats, PluralRuleSet, InterpolationOptions } from "./i18n-manager";
+
+// --- Batch 883: Clipboard API, Print Utils, DOM Observer ---
+export { ClipboardAPI, copyToClipboard, readFromClipboard, copyElement, copyElementRich } from "./clipboard-api";
+export type { ClipboardOptions, ClipboardResult, ClipboardItemData, ClipboardFormat, ClipboardPermissionState, ClipboardHistoryEntry } from "./clipboard-api";
+export { printContent, printPreview, printElement, generateReceiptText, generateLabel, injectPrintStyles, PRINT_STYLES, getPrintableArea, estimatePageCount, paginateContent, generatePDF } from "./print-utils";
+export type { PrintOptions, ReceiptOptions, PageSettings } from "./print-utils";
+export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDetector, createLazyLoader } from "./dom-observer";
+export type { ObserveTarget, MutationOptions, IntersectionOptions, ResizeOptions, MutationRecordEx, DomSnapshot, ObserverCallbacks, ObserverStats } from "./dom-observer";
