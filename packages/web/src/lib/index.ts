@@ -41849,3 +41849,39 @@ export type {
   CarouselOptions,
   CarouselInstance,
 } from "./carousel";
+
+// --- virtual-scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
+
+// --- infinite-scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
