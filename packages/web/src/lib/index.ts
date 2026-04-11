@@ -28334,3 +28334,15 @@ export type { ToastManagerOptions, ToastManagerInstance, Toast, ToastOptions, To
 // --- Alert Dialog ---
 export { createAlertDialog, alert, confirm as confirmDialog, prompt as promptDialog } from "./alert-dialog";
 export type { AlertDialogOptions, AlertDialogInstance, DialogType, DialogSize } from "./alert-dialog";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// --- Dropdown Menu ---
+export { DropdownMenuManager, createDropdownMenu } from "./dropdown-menu";
+export type { DropdownMenuOptions, DropdownMenuInstance, MenuItem, MenuItemType } from "./dropdown-menu";
