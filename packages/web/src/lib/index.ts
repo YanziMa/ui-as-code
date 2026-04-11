@@ -47654,3 +47654,42 @@ export {
   skip as DesSkip,
   zipIterators as DesZipIterators,
 } from "./patterns";
+
+// --- pdf-generator.ts ---
+export type {
+  PdfOptions as PdfGenOptions,
+  FontOptions as PdfGenFont,
+  CellOptions as PdfGenCell,
+  ImageOptions as PdfGenImage,
+  AnnotationOptions as PdfGenAnnotation,
+} from "./pdf-generator";
+export {
+  PdfDocument as PdfGenDoc,
+  createPdf as PdfGenCreate,
+  quickPdf as PdfGenQuick,
+  htmlToPdf as PdfGenHtml,
+} from "./pdf-generator";
+
+// --- pdf-preview.ts ---
+export type {
+  PdfPageInfo as PdfPrevPageInfo,
+  PdfPreviewOptions as PdfPrevOpts,
+  PdfPreviewInstance as PdfPrevInst,
+} from "./pdf-preview";
+export { createPdfPreview as PdfPrevCreate } from "./pdf-preview";
+
+// --- pdf-utils.ts ---
+export type {
+  PdfGenerationOptions as PdfUtilGenOpts,
+  PdfPageInfo as PdfUtilPageInfo,
+  TextMetrics as PdfUtilMetrics,
+} from "./pdf-utils";
+export {
+  generatePdfFromHtml as PdfUtilGenHtml,
+  elementToPdf as PdfUtilElementToPdf,
+  estimatePrintPages as PdfUtilEstPages,
+  downloadBlob as PdfUtilDownloadBlob,
+  blobToDataUrl as PdfUtilBlobToDataUrl,
+  dataUrlToBlob as PdfUtilDataUrlToBlob,
+  printElement as PdfUtilPrintElement,
+} from "./pdf-utils";
