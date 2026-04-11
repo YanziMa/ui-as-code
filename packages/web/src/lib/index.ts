@@ -25531,3 +25531,31 @@ export {
   type CreateRateLimiterOptions,
   createRateLimiter,
 } from "./rate-limit";
+
+// --- virtual-scroll ---
+export {
+  type VirtualItem,
+  type VirtualScrollOptions,
+  type VirtualScrollInstance,
+  createVirtualScroll,
+} from "./virtual-scroll";
+
+// --- infinite-scroll ---
+export {
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+  InfiniteScroll,
+} from "./infinite-scroll";
+
+// --- anchor-position ---
+export {
+  Placement,
+  Alignment,
+  type AnchorOptions,
+  type PositionResult,
+  type ArrowPosition,
+  computePosition,
+  computeArrowPosition,
+  createPositionObserver,
+} from "./anchor-position";

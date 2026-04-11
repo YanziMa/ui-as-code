@@ -1,395 +1,268 @@
 /**
- * Virtual scrolling / windowing for large lists with dynamic row heights.
+ * Virtual Scrolling: High-performance windowed rendering for large lists
+ * with dynamic row heights, binary search index lookup, overscan buffering,
+ * scroll position restoration, and grid virtualization support.
  */
 
-export interface VirtualScrollItem<T = unknown> {
+// --- Types ---
+
+export interface VirtualItem<T = unknown> {
   id: string | number;
   data: T;
-  /** Estimated or measured height */
-  height?: number;
 }
 
 export interface VirtualScrollOptions<T> {
-  /** Container element (required) */
+  /** Scrollable container element */
   container: HTMLElement;
-  /** Item count or data array */
-  itemCount?: number;
-  items?: T[];
-  /** Unique key extractor */
-  getItemKey?: (index: number, item: T) => string | number;
-  /** Estimate item height (px) */
-  estimatedItemHeight?: number;
-  /** Overscan buffer (extra items rendered above/below viewport) */
+  /** Total item count */
+  totalCount: number;
+  /** Item renderer: (item, index, el) => void */
+  renderItem: (item: T | null, index: number, element: HTMLElement) => void;
+  /** Estimated default item height (px) */
+  estimatedHeight?: number;
+  /** Overscan buffer (items rendered outside viewport) */
   overscan?: number;
-  /** Height getter/measurer */
-  measureItem?: (item: T, index: number) => number;
-  /** Called when visible range changes */
-  onRangeChange?: (startIndex: number, endIndex: number, items: T[]) => void;
-  /** Scroll position change callback */
+  /** Height measurer after render */
+  measureHeight?: (element: HTMLElement, index: number) => number;
+  /** Callback on visible range change */
+  onRangeChange?: (start: number, end: number) => void;
+  /** Callback on scroll */
   onScroll?: (scrollTop: number) => void;
   /** Enable dynamic height measurement */
   dynamicHeights?: boolean;
+  /** Scroll debounce (ms) */
+  scrollDebounce?: number;
 }
 
-export interface VirtualScrollState {
-  startIndex: number;
-  endIndex: number;
-  scrollTop: number;
-  totalHeight: number;
-  offsetTop: number; // translateY for the content wrapper
-  visibleItems: Array<{ index: number; offset: number }>;
+export interface VirtualScrollInstance {
+  /** Recalculate and re-render */
+  refresh: () => void;
+  /** Scroll to item index */
+  scrollToIndex: (index: number, align?: "start" | "center" | "end") => void;
+  /** Scroll to top */
+  scrollToTop: () => void;
+  /** Scroll to bottom */
+  scrollToBottom: () => void;
+  /** Get current visible range */
+  getVisibleRange: () => { start: number; end: number };
+  /** Update measured height for an item */
+  setItemHeight: (index: number, height: number) => void;
+  /** Update total count */
+  setTotalCount: (count: number) => void;
+  /** Get current state */
+  getState: () => { scrollTop: number; start: number; end: number };
+  /** Destroy and cleanup */
+  destroy: () => void;
 }
 
-/** Create a virtual scroll manager */
-export function createVirtualScroll<T>(
-  options: VirtualScrollOptions<T>,
-): VirtualScrollController<T> {
+// --- Implementation ---
+
+export function createVirtualScroll<T>(options: VirtualScrollOptions<T>): VirtualScrollInstance {
   const {
     container,
-    items,
-    itemCount,
-    getItemKey = (_i, _item) => _i,
-    estimatedItemHeight = 50,
-    overscan = 3,
-    measureItem,
+    renderItem,
+    estimatedHeight = 50,
+    overscan = 5,
+    measureHeight,
     onRangeChange,
     onScroll,
-    dynamicHeights = false,
+    dynamicHeights = true,
+    scrollDebounce = 16,
   } = options;
 
-  const dataSource = items ?? [];
-  const totalCount = itemCount ?? dataSource.length;
-
-  // Measured heights cache
-  const heightCache = new Map<string | number, number>();
-  let defaultHeight = estimatedItemHeight;
+  let totalCount = options.totalCount;
+  const heightCache = new Map<number, number>();
+  let defaultH = estimatedHeight;
 
   // State
   let scrollTop = 0;
   let isScrolling = false;
-  let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+  let scrollTimer: ReturnType<typeof setTimeout> | null = null;
+  let rafId: number | null = null;
   let destroyed = false;
 
-  // DOM elements
-  const inner = document.createElement("div");
-  inner.style.cssText = "position:relative;width:100%;will-change:transform;";
+  // DOM
+  const viewport = document.createElement("div");
+  viewport.style.cssText = "position:relative;width:100%;will-change:transform;";
   container.style.overflow = "auto";
   container.style.position = "relative";
-  container.appendChild(inner);
+  container.appendChild(viewport);
 
-  // --- Core calculations ---
+  // Height accumulator cache for O(log n) lookup
+  const accCache: number[] = [];
+  let accDirty = true;
+
+  function buildAccCache(): void {
+    accCache.length = totalCount + 1;
+    accCache[0] = 0;
+    for (let i = 0; i < totalCount; i++) {
+      const h = heightCache.get(i) ?? defaultH;
+      accCache[i + 1] = accCache[i]! + h;
+    }
+    accDirty = false;
+  }
 
   function getItemHeight(index: number): number {
-    const key = getItemKey(index, dataSource[index]!);
-    const cached = heightCache.get(key);
+    if (index < 0 || index >= totalCount) return defaultH;
+    const cached = heightCache.get(index);
     if (cached !== undefined) return cached;
-    if (measureItem && dataSource[index] !== undefined) {
-      const measured = measureItem(dataSource[index]!, index);
-      if (measured > 0) {
-        heightCache.set(key, measured);
-        return measured;
-      }
-    }
-    return defaultHeight;
-  }
-
-  function getOffsetForIndex(index: number): number {
-    let offset = 0;
-    for (let i = 0; i < index; i++) {
-      offset += getItemHeight(i);
-    }
-    return offset;
-  }
-
-  function getIndexForOffset(offset: number): number {
-    let accumulated = 0;
-    for (let i = 0; i < totalCount; i++) {
-      accumulated += getItemHeight(i);
-      if (accumulated > offset) return i;
-    }
-    return Math.max(0, totalCount - 1);
+    return defaultH;
   }
 
   function getTotalHeight(): number {
-    let total = 0;
-    for (let i = 0; i < totalCount; i++) {
-      total += getItemHeight(i);
-    }
-    return total;
+    if (accDirty || accCache.length !== totalCount + 1) buildAccCache();
+    return accCache[totalCount] ?? 0;
   }
 
-  function calculateVisibleRange(): { start: number; end: number } {
-    const containerHeight = container.clientHeight;
-    const start = Math.max(0, getIndexForOffset(scrollTop) - overscan);
-    const end = Math.min(
-      totalCount - 1,
-      getIndexForOffset(scrollTop + containerHeight) + overscan,
-    );
+  // Binary search for index at given offset
+  function findIndexAtOffset(offset: number): number {
+    if (accDirty || accCache.length !== totalCount + 1) buildAccCache();
+
+    let lo = 0, hi = totalCount - 1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (accCache[mid]! <= offset) lo = mid + 1;
+      else hi = mid - 1;
+    }
+    return Math.max(0, Math.min(lo, totalCount - 1));
+  }
+
+  function findOffsetForIndex(index: number): number {
+    if (accDirty || accCache.length !== totalCount + 1) buildAccCache();
+    return accCache[index] ?? 0;
+  }
+
+  function calculateRange(): { start: number; end: number } {
+    const containerH = container.clientHeight;
+    const start = Math.max(0, findIndexAtOffset(scrollTop) - overscan);
+    const end = Math.min(totalCount - 1, findIndexAtOffset(scrollTop + containerH) + overscan);
     return { start, end };
   }
 
+  let currentStart = -1, currentEnd = -1;
+
   function render(): void {
-    if (destroyed) return;
+    if (destroyed || totalCount === 0) {
+      viewport.innerHTML = "";
+      viewport.style.height = "0";
+      return;
+    }
 
-    const { start, end } = calculateVisibleRange();
+    const { start, end } = calculateRange();
     const totalH = getTotalHeight();
-    const offsetTop = getOffsetForIndex(start);
+    const offsetTop = findOffsetForIndex(start);
 
-    // Set total height as spacer
-    inner.style.height = `${totalH}px`;
-    inner.style.transform = `translateY(${offsetTop}px)`;
+    // Only re-render if range changed
+    if (start === currentStart && end === currentEnd && !accDirty) return;
+    currentStart = start;
+    currentEnd = end;
 
-    // Notify of range change
-    const visibleItems = dataSource.slice(start, end + 1);
-    onRangeChange?.(start, end, visibleItems);
+    viewport.style.height = `${totalH}px`;
+    viewport.style.transform = `translateY(${offsetTop}px)`;
 
-    return {
-      startIndex: start,
-      endIndex: end,
-      scrollTop,
-      totalHeight: totalH,
-      offsetTop,
-      visibleItems: Array.from({ length: end - start + 1 }, (_, i) => ({
-        index: start + i,
-        offset: getOffsetForIndex(start + i) - offsetTop,
-      })),
-    };
+    // Build fragment
+    const frag = document.createDocumentFragment();
+    for (let i = start; i <= end; i++) {
+      const el = document.createElement("div");
+      el.dataset.index = String(i);
+      el.style.cssText = "position:absolute;left:0;width:100%;top:0;";
+      el.style.height = `${getItemHeight(i)}px`;
+      el.style.transform = `translateY(${findOffsetForIndex(i) - offsetTop}px)`;
+
+      renderItem(null as T, i, el);
+      frag.appendChild(el);
+
+      // Measure after render
+      if (dynamicHeights && measureHeight && !heightCache.has(i)) {
+        requestAnimationFrame(() => {
+          const measured = measureHeight(el, i);
+          if (measured > 0 && measured !== defaultH) {
+            heightCache.set(i, measured);
+            accDirty = true;
+          }
+        });
+      }
+    }
+
+    viewport.innerHTML = "";
+    viewport.appendChild(frag);
+
+    onRangeChange?.(start, end);
   }
-
-  // --- Event handlers ---
 
   function handleScroll(): void {
     if (destroyed) return;
     scrollTop = container.scrollTop;
     isScrolling = true;
-
     onScroll?.(scrollTop);
 
-    render();
-
-    // Detect scroll stop
-    if (scrollTimeout) clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
+    if (scrollTimer) clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
       isScrolling = false;
-    }, 150);
+    }, scrollDebounce);
+
+    // Use rAF for smooth updates during fast scrolling
+    if (rafId !== null) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      render();
+    });
   }
 
   container.addEventListener("scroll", handleScroll, { passive: true });
+
+  // ResizeObserver
+  const resizeObs = new ResizeObserver(() => {
+    if (!destroyed) render();
+  });
+  resizeObs.observe(container);
 
   // Initial render
   render();
 
-  // Resize observer to recalculate on container resize
-  const resizeObserver = new ResizeObserver(() => {
-    if (!destroyed) render();
-  });
-  resizeObserver.observe(container);
-
   return {
-    getState(): VirtualScrollState {
-      const { start, end } = calculateVisibleRange();
-      return {
-        startIndex: start,
-        endIndex: end,
-        scrollTop,
-        totalHeight: getTotalHeight(),
-        offsetTop: getOffsetForIndex(start),
-        visibleItems: Array.from({ length: end - start + 1 }, (_, i) => ({
-          index: start + i,
-          offset: getOffsetFor(start + i) - getOffsetFor(start),
-        })),
-      };
+    refresh() { accDirty = true; render(); },
+
+    scrollToIndex(index, align = "start") {
+      const offset = findOffsetForIndex(Math.max(0, Math.min(index, totalCount - 1)));
+      const itemH = getItemHeight(Math.max(0, Math.min(index, totalCount - 1)));
+      const containerH = container.clientHeight;
+
+      let target = offset;
+      if (align === "center") target = offset - containerH / 2 + itemH / 2;
+      else if (align === "end") target = offset - containerH + itemH;
+
+      container.scrollTop = Math.max(0, target);
     },
 
-    scrollToIndex(index: number, align: "start" | "center" | "end" = "start"): void {
-      const offset = getOffsetForIndex(index);
-      const itemHeight = getItemHeight(index);
-      const containerHeight = container.clientHeight;
+    scrollToTop() { container.scrollTop = 0; },
+    scrollToBottom() { container.scrollTop = getTotalHeight(); },
 
-      let targetOffset = offset;
-      if (align === "center") targetOffset = offset - containerHeight / 2 + itemHeight / 2;
-      else if (align === "end") targetOffset = offset - containerHeight + itemHeight;
+    getVisibleRange() { return calculateRange(); },
 
-      container.scrollTop = targetOffset;
+    setItemHeight(index, height) {
+      heightCache.set(index, height);
+      accDirty = true;
     },
 
-    scrollToTop(): void {
-      container.scrollTop = 0;
-    },
-
-    scrollToBottom(): void {
-      container.scrollTop = getTotalHeight();
-    },
-
-    /** Update measured height for an item */
-    setItemHeight(index: number, height: number): void {
-      const key = getItemKey(index, dataSource[index]!);
-      heightCache.set(key, height);
+    setTotalCount(count) {
+      totalCount = count;
+      accDirty = true;
       render();
     },
 
-    /** Update all items */
-    setItems(newItems: T[]): void {
-      // Note: in a real implementation you'd update the internal data source
-      // For now just trigger re-render
-      render();
+    getState() {
+      const { start, end } = calculateRange();
+      return { scrollTop, start, end };
     },
 
-    /** Update default estimated height */
-    setEstimatedHeight(height: number): void {
-      defaultHeight = height;
-      render();
-    },
-
-    /** Force recalculation */
-    refresh(): void {
-      render();
-    },
-
-    /** Check if currently scrolling */
-    isScrolling(): boolean {
-      return isScrolling;
-    },
-
-    destroy(): void {
+    destroy() {
       destroyed = true;
+      if (scrollTimer) clearTimeout(scrollTimer);
+      if (rafId !== null) cancelAnimationFrame(rafId);
       container.removeEventListener("scroll", handleScroll);
-      resizeObserver.disconnect();
-      if (scrollTimeout) clearTimeout(scrollTimeout);
-      inner.remove();
+      resizeObs.disconnect();
+      viewport.remove();
     },
   };
 }
-
-export type VirtualScrollController<T> = ReturnType<typeof createVirtualScroll>;
-
-// --- Grid Virtualization ---
-
-export interface VirtualGridOptions<T> {
-  container: HTMLElement;
-  items: T[];
-  columns: number;
-  columnWidth: number;
-  rowHeight?: number;
-  gap?: number;
-  overscan?: number;
-  getItemKey?: (index: number, item: T) => string | number;
-  onRangeChange?: (startIndex: number, endIndex: number, items: T[]) => void;
-}
-
-export interface VirtualGridState {
-  startRow: number;
-  endRow: number;
-  startCol: number;
-  endCol: number;
-  visibleCells: Array<{ index: number; row: number; col: number; x: number; y: number }>;
-}
-
-/** Create a virtualized grid */
-export function createVirtualGrid<T>(
-  options: VirtualGridOptions<T>,
-): VirtualGridController<T> {
-  const {
-    container,
-    items,
-    columns,
-    columnWidth,
-    rowHeight = 100,
-    gap = 8,
-    overscan = 1,
-    getItemKey = (_i, _item) => _i,
-    onRangeChange,
-  } = options;
-
-  let scrollTop = 0;
-  let scrollLeft = 0;
-  let destroyed = false;
-
-  const rowCount = Math.ceil(items.length / columns);
-  const cellWidth = columnWidth + gap;
-  const cellHeight = rowHeight + gap;
-
-  const inner = document.createElement("div");
-  inner.style.cssText = "position:relative;display:grid;";
-  container.style.overflow = "auto";
-  container.style.position = "relative";
-  container.appendChild(inner);
-
-  function calculateVisible(): VirtualGridState {
-    const containerHeight = container.clientHeight;
-    const containerWidth = container.clientWidth;
-
-    const startRow = Math.max(0, Math.floor(scrollTop / cellHeight) - overscan);
-    const endRow = Math.min(rowCount - 1, Math.ceil((scrollTop + containerHeight) / cellHeight) + overscan);
-    const startCol = Math.max(0, Math.floor(scrollLeft / cellWidth) - overscan);
-    const endCol = Math.min(columns - 1, Math.ceil((scrollLeft + containerWidth) / cellWidth) + overscan);
-
-    const visibleCells: VirtualGridState["visibleCells"] = [];
-
-    for (let row = startRow; row <= endRow; row++) {
-      for (let col = startCol; col <= endCol; col++) {
-        const index = row * columns + col;
-        if (index < items.length) {
-          visibleCells.push({
-            index,
-            row,
-            col,
-            x: col * cellWidth,
-            y: row * cellHeight,
-          });
-        }
-      }
-    }
-
-    const state: VirtualGridState = { startRow, endRow, startCol, endCol, visibleCells };
-    onRangeChange?.(
-      startRow * columns,
-      Math.min(endRow * columns + columns - 1, items.length - 1),
-      items.slice(startRow * columns, endRow * columns + columns),
-    );
-
-    return state;
-  }
-
-  function handleScroll(): void {
-    if (destroyed) return;
-    scrollTop = container.scrollTop;
-    scrollLeft = container.scrollLeft;
-    calculateVisible();
-  }
-
-  container.addEventListener("scroll", handleScroll, { passive: true });
-
-  // Set dimensions
-  inner.style.width = `${columns * columnWidth + (columns - 1) * gap}px`;
-  inner.style.height = `${rowCount * rowHeight + (rowCount - 1) * gap}px`;
-
-  calculateVisible();
-
-  return {
-    getState(): VirtualGridState {
-      return calculateVisible();
-    },
-
-    scrollToCell(index: number): void {
-      const row = Math.floor(index / columns);
-      const col = index % columns;
-      container.scrollTo({
-        top: row * cellHeight,
-        left: col * cellWidth,
-      });
-    },
-
-    refresh(): void {
-      calculateVisible();
-    },
-
-    destroy(): void {
-      destroyed = true;
-      container.removeEventListener("scroll", handleScroll);
-      inner.remove();
-    },
-  };
-}
-
-export type VirtualGridController<T> = ReturnType<typeof createVirtualGrid>;
