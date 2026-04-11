@@ -27974,3 +27974,14 @@ export type { EventCallback, EventMiddleware, Subscription, EmittedEvent, EventB
 // --- State Machine ---
 export { FSM, HSM, createMachine, interpret, match, stateEquals, evaluateChoice, evaluateJunction, deepHistoryTarget, shallowHistoryTarget } from "./state-machine";
 export type { StateId, EventId, MachineContext, EventPayload, GuardFn, ActionFn, StateListener, InvalidEventStrategy, TransitionTarget, TransitionDef, StateConfig, HistoryMode, MachineConfig, ChoiceConfig, JunctionConfig, StateValue, TransitionHistoryEntry, Service } from "./state-machine";
+// --- CSS-in-JS ---
+export { injectStyle, removeStyle, updateStyle, setCssVar, getCssVar, setCssVars, getRootVar, setRootVar, getCurrentBreakpoint, isMinWidth, isMaxWidth, onBreakpointChange, isMobile, isTablet, isDesktop, getDevicePixelRatio, isRetina, mq, mediaQueries, matchesMedia, subscribeMedia, isDarkMode, isLightMode, toggleDarkMode, setDarkMode, onDarkModeChange, buildKeyframes, registerKeyframes, animations, animate, toggleClass, classIf, setClasses, hasAnyClass, bringToFront, sendToBack } from "./css-in-js";
+export type { Breakpoints } from "./css-in-js";
+
+// --- DOM Diff ---
+export { diff, patch, syncDOM, renderDOM, domToTree } from "./dom-diff";
+export type { PatchOp, DomNode, DiffOptions, DiffResult, PatchResult } from "./dom-diff";
+
+// --- Router ---
+export { Router, createRouter, getRouter } from "./router";
+export type { RouteMode, RouteParams, QueryParams, RouteDefinition, RouterConfig, RouteInfo, NavigationResult } from "./router";
