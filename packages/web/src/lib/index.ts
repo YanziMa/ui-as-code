@@ -34789,3 +34789,27 @@ export type {
   StackOptions,
   StackInstance,
 } from "./stack-utils";
+// --- Batch 1146: Tooltip Anchor, Popover, Dropdown ---
+export { createTooltipAnchor } from "./tooltip-anchor-utils";
+export type {
+  TooltipPlacement,
+  TooltipStrategy,
+  AnchorOptions,
+  AnchorInstance,
+} from "./tooltip-anchor-utils";
+
+export { createPopover } from "./popover-utils";
+export type {
+  PopoverPlacement,
+  PopoverTrigger,
+  VirtualElement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover-utils";
+
+export { createDropdown } from "./dropdown-utils";
+export type {
+  DropdownItem,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown-utils";
