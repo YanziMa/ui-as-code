@@ -49322,3 +49322,46 @@ export {
   removeDiacritics as RgxRemoveDiacritics,
   wildcardMatch as RgxWildcardMatch,
 } from "./regex";
+// --- region-picker ---
+export type {
+  Point as RPickPoint,
+  Rect as RPickRect,
+  RegionPickerOptions as RPickOptions,
+  RegionPickerInstance as RPickInstance,
+} from "./region-picker";
+export { createRegionPicker as RPickCreate } from "./region-picker";
+
+// --- relative-time ---
+export type {
+  RelativeTimeOptions as RRelTimeOptions,
+  TimeUnit as RRelTimeUnit,
+  RelativeTimeResult as RRelTimeResult,
+} from "./relative-time";
+export {
+  getRelativeTime as RRelTimeGet,
+  formatRelativeTime as RRelTimeFormat,
+  formatShort as RRelTimeFormatShort,
+  formatNumeric as RRelTimeFormatNumeric,
+  createAutoUpdatingTime as RRelTimeCreateAuto,
+  timeAgo as RRelTimeAgo,
+  timeInFuture as RRelTimeFuture,
+  formatDuration as RRelTimeFormatDuration,
+} from "./relative-time";
+
+// --- remotion ---
+export type {
+  EasingFn as REmoEasingFn,
+  Keyframe as REmoKeyframe,
+  TimelineOptions as REmoTimelineOpts,
+  SpringConfig as REmoSpringConfig,
+} from "./remotion";
+export {
+  easings as REmoEasings,
+  interpolate as REmoInterpolate,
+  interpolateKeyframes as REmoInterpolateKf,
+  Timeline as REmoTimeline,
+  createTimeline as REmoCreateTimeline,
+  simulateSpring as REmoSimulateSpring,
+  sequence as REmoSequence,
+  parallel as REmoParallel,
+} from "./remotion";
