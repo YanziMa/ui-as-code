@@ -17143,3 +17143,36 @@ export type {
   ClipboardMonitorOptions,
   ClipboardMonitorInstance,
 } from "./clipboard-advanced";
+export {
+  ThemeManager,
+  getThemeManager,
+  useTheme,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+} from "./theme";
+export type { ThemeColors, ThemeConfig } from "./theme";
+export {
+  EventBus,
+  createEventBus,
+} from "./event-bus";
+export type {
+  EventCallback,
+  EventMiddleware,
+  Subscription,
+  EmittedEvent,
+  EventBusOptions,
+} from "./event-bus";
+export {
+  GenerateDiffSchema,
+  CreateFrictionSchema,
+  CreatePRSchema,
+  VoteSchema,
+  validateBody,
+} from "./validation";
+export type {
+  GenerateDiffInput,
+  CreateFrictionInput,
+  CreatePRInput,
+  VoteInput,
+} from "./validation";
