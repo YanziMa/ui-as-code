@@ -45624,3 +45624,51 @@ export {
   I18n.getI18n as getI18nFramework,
   _ as __,
 } from "./i18n-framework";
+// i18n-manager
+export {
+  I18nManager,
+  type Locale as I18nMgrLocale,
+  type MessageKey,
+  type Namespace as I18nMgrNamespace,
+  type MessageCatalog as I18nMgrMessageCatalog,
+  type LocaleData as I18nMgrLocaleData,
+  type PluralRuleSet,
+  type LocaleFormats,
+  type I18nConfig as I18nMgrConfig,
+  type InterpolationOptions,
+  type I18nStats,
+  createI18n as createI18nManager,
+} from "./i18n-manager";
+
+// i18n-number
+export {
+  I18nNumber,
+  type NumberFormatStyle,
+  type CurrencyDisplay,
+  type CompactDisplay,
+  type Notation as I18nNumNotation,
+  type SignDisplay,
+  type RoundingMode,
+  type RelativeTimeUnit as I18nNumRelativeTimeUnit,
+  type ListType as I18nNumListType,
+  type MeasurementSystem,
+  type NumberFormatOptions as I18nNumFormatOptions,
+  type CurrencyInfo,
+  type RelativeTimeOptions,
+  type ListFormatOptions as I18nNumListFormatOptions,
+  type UnitConversion,
+  type MeasurementFormatOptions,
+  formatNumber as i18nFormatNumber,
+  formatCurrency as i18nFormatCurrency,
+  formatPercent as i18nFormatPercent,
+  formatFileSize,
+  timeAgo as i18nTimeAgo,
+} from "./i18n-number";
+
+// i18n-provider-utils
+export {
+  I18nProvider,
+  type TranslationEntry,
+  type LocaleData as I18nProvLocaleData,
+  type I18nConfig as I18nProvConfig,
+} from "./i18n-provider-utils";
