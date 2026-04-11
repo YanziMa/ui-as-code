@@ -22806,3 +22806,33 @@ export {
   type ChartOptions,
   type ChartInstance,
 } from "./chart";
+
+// --- command-palette ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandCategory,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+} from "./command-palette";
+
+// --- search ---
+export {
+  searchText,
+  searchArray,
+  highlightMatches,
+  SearchIndex,
+  type SearchOptions,
+  type SearchResult,
+  type SearchMatch,
+} from "./search";
+
+// --- drag-resize ---
+export {
+  DragResizeManager,
+  makeDragResizable,
+  type DragResizeOptions,
+  type DragResizeInstance,
+  type Point as DragPoint,
+  type Bounds,
+} from "./drag-resize";
