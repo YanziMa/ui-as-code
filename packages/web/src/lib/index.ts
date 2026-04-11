@@ -25559,3 +25559,15 @@ export {
   computeArrowPosition,
   createPositionObserver,
 } from "./anchor-position";
+
+// --- notification ---
+export type { Notification, NotificationOptions, NotificationPosition } from "./notification";
+export { NotificationManager, getNotificationManager, toast } from "./notification";
+
+// --- skeleton-loader ---
+export type { SkeletonShape, SkeletonAnimation, SkeletonItem, SkeletonOptions, SkeletonInstance } from "./skeleton-loader";
+export { createSkeleton } from "./skeleton-loader";
+
+// --- waterfall ---
+export type { PipelineStep, PipelineContext, PipelineResult } from "./waterfall";
+export { runPipeline, parallel, waterfall, raceWithCleanup } from "./waterfall";
