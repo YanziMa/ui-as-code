@@ -26405,3 +26405,48 @@ export type {
   HttpResponse,
   HttpMiddleware,
 } from "./http-client";
+
+// --- REST API Client ---
+export {
+  RestClient,
+  RestResourceHandler,
+  RestError,
+  createRestClient,
+} from "./rest-api";
+export type {
+  RestResourceConfig,
+  RestEndpointDefinition,
+  PaginatedResponse,
+  PaginationOptions,
+  RestClientConfig,
+} from "./rest-api";
+
+// --- SSE (Server-Sent Events) ---
+export {
+  SseClient,
+  SseAggregator,
+  createSseClient,
+} from "./sse";
+export type {
+  SseConfig,
+  SseMessage,
+  SseConnectionState,
+  SseEventHandler,
+  SseStateHandler,
+  SseErrorHandler,
+} from "./sse";
+
+// --- WebSocket Protocol ---
+export {
+  WsClient,
+  createWsClient,
+} from "./ws-protocol";
+export type {
+  WsConfig,
+  WsMessage,
+  WsConnectionState,
+  WsMessageHandler,
+  WsRawHandler,
+  WsStateHandler,
+  WsErrorHandler,
+} from "./ws-protocol";
