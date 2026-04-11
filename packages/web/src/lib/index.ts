@@ -16766,3 +16766,58 @@ export {
   Template,
 } from "./template";
 export type { TemplateBlock } from "./template";
+export {
+  Logger,
+  log,
+  apiLog,
+  dbLog,
+  extLog,
+  setGlobalLogLevel,
+  getGlobalLogLevel,
+} from "./logger";
+export type { LogLevel } from "./logger";
+export {
+  AppError,
+  NetworkError,
+  ValidationError,
+  NotFoundError,
+  AuthError,
+  RateLimitError,
+  TimeoutError,
+  CancelledError,
+  classifyError,
+  isRecoverable,
+  isUserFacing,
+  getUserMessage,
+  ErrorBoundary,
+  captureError,
+  safeAsync,
+  wrapWithErrorHandler,
+} from "./error";
+export type { ErrorCategory, ErrorBoundaryProps, ErrorBoundaryState } from "./error";
+export {
+  perfMark,
+  perfMeasure,
+  getPerfMeasures,
+  clearPerfMarks,
+  timeSync,
+  createFpsCounter,
+  getMemoryUsage,
+  formatMemoryBytes,
+  pollMemory,
+  getResourceTimings,
+  getPageLoadTiming,
+  observeLongTasks,
+  observeLayoutShifts,
+  getFCP,
+  observeLCP,
+  getCoreWebVitals,
+  reportCustomMetric,
+} from "./perf";
+export type {
+  PerfMark,
+  PerfMeasure as PerfMeasureType,
+  FpsStats,
+  MemoryInfo,
+  ResourceTimingEntry,
+} from "./perf";
