@@ -40352,3 +40352,14 @@ export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from ".
 // --- Keyboard Shortcuts ---
 export { createKeyboardShortcuts } from "./keyboard-shortcuts-utils";
 export type { ShortcutBinding, ShortcutGroup, KeyboardShortcutsOptions, KeyboardShortcutsInstance, ModifierKey, ShortcutScope } from "./keyboard-shortcuts-utils";
+// --- Context Menu ---
+export { createContextMenu } from "./context-menu-utils";
+export type { ContextMenuItem, ContextMenuOptions, ContextMenuInstance, ContextMenuContext } from "./context-menu-utils";
+
+// --- Command Palette ---
+export { createCommandPalette } from "./command-palette-utils";
+export type { PaletteItem, CommandPaletteOptions, CommandPaletteInstance } from "./command-palette-utils";
+
+// --- Autocomplete ---
+export { createAutocomplete } from "./autocomplete-utils";
+export type { AutocompleteItem, AutocompleteOptions, AutocompleteInstance } from "./autocomplete-utils";
