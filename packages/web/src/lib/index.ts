@@ -28801,3 +28801,15 @@ export type { NetworkInfo, NetworkOptions as NetworkStatusOptions, NetworkStatus
 // --- battery-api ---
 export { createBatteryMonitor, getBatteryInfo, isBatteryApiSupported, formatBatteryPercent, formatRemainingTime, runWithPowerAwareness } from "./battery-api";
 export type { BatteryInfo, BatteryOptions, BatteryInstance } from "./battery-api";
+
+// --- device-orientation ---
+export { createDeviceOrientation, isDeviceOrientationSupported, isDeviceMotionSupported } from "./device-orientation";
+export type { OrientationData, MotionData, DeviceOrientationOptions, DeviceOrientationInstance } from "./device-orientation";
+
+// --- gamepad ---
+export { createGamepadManager, isGamepadSupported, getGamepadsSnapshot } from "./gamepad";
+export type { GamepadState, GamepadButtonState, GamepadAxisState, GamepadOptions, GamepadInstance } from "./gamepad";
+
+// --- pointer-lock ---
+export { createPointerLock, isPointerLockSupported, isPointerLocked, requestPointerLock, exitPointerLock } from "./pointer-lock";
+export type { PointerLockOptions, PointerLockInstance } from "./pointer-lock";
