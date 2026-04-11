@@ -1,219 +1,405 @@
 /**
- * Advanced DOM manipulation and measurement utilities.
+ * DOM Utilities: Core DOM manipulation helpers including element creation,
+ * query shortcuts, DOM traversal, event delegation, template rendering,
+ * fragment operations, and DOM diffing utilities.
  */
 
-/** Get computed style value with caching */
-export function getComputedStyleValue(
-  element: Element,
-  property: string,
-): string {
-  return getComputedStyle(element).getPropertyValue(property);
+// --- Types ---
+
+export interface CreateElementOptions {
+  tag?: string;
+  id?: string;
+  className?: string | string[];
+  attrs?: Record<string, string>;
+  styles?: Record<string, string>;
+  text?: string;
+  html?: string;
+  children?: (HTMLElement | string)[];
+  events?: Record<string, EventListener>;
+  dataset?: Record<string, string>;
+  aria?: Record<string, string>;
 }
 
-/** Get element's bounding rect relative to viewport */
-export function getElementRect(element: Element): DOMRect {
-  return element.getBoundingClientRect();
+export interface QueryOptions {
+  /** Scope search to a container */
+  scope?: Element | Document;
+  /** Return all matches or just first? */
+  all?: boolean;
 }
 
-/** Check if element is visible in viewport */
-export function isInViewport(element: Element, threshold = 0): boolean {
-  const rect = element.getBoundingClientRect();
-  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+export interface DomDiffResult {
+  /** Elements that were added */
+  added: Element[];
+  /** Elements that were removed */
+  removed: Element[];
+  /** Elements that changed attributes */
+  modified: { el: Element; attr: string; oldValue: string; newValue: string }[];
+}
 
-  return (
-    rect.top <= viewportHeight - threshold &&
-    rect.bottom >= threshold &&
-    rect.left <= viewportWidth - threshold &&
-    rect.right >= threshold
+// --- Element Creation ---
+
+/**
+ * Create an HTML element with a fluent options API.
+ *
+ * @example
+ * createEl({ tag: "button", className: "btn", text: "Click", onClick: handler })
+ */
+export function createEl(options: CreateElementOptions = {}): HTMLElement {
+  const {
+    tag = "div",
+    id,
+    className,
+    attrs = {},
+    styles = {},
+    text,
+    html,
+    children = [],
+    events = {},
+    dataset = {},
+    aria = {},
+  } = options;
+
+  const el = document.createElement(tag);
+
+  if (id) el.id = id;
+
+  if (className) {
+    if (Array.isArray(className)) {
+      el.className = className.filter(Boolean).join(" ");
+    } else {
+      el.className = className;
+    }
+  }
+
+  for (const [key, value] of Object.entries(attrs)) {
+    if (value !== null && value !== undefined) {
+      el.setAttribute(key, value);
+    }
+  }
+
+  for (const [key, value] of Object.entries(styles)) {
+    (el.style as Record<string, string>)[key] = value;
+  }
+
+  for (const [key, value] of Object.entries(dataset)) {
+    el.dataset[key] = value;
+  }
+
+  for (const [key, value] of Object.entries(aria)) {
+    el.setAttribute(`aria-${key}`, value);
+  }
+
+  if (text) el.textContent = text;
+  if (html) el.innerHTML = html;
+
+  for (const child of children) {
+    if (typeof child === "string") {
+      el.appendChild(document.createTextNode(child));
+    } else {
+      el.appendChild(child);
+    }
+  }
+
+  for (const [event, listener] of Object.entries(events)) {
+    el.addEventListener(event, listener);
+  }
+
+  return el;
+}
+
+/** Shorthand to create a <div> with optional class and children */
+export function div(
+  className?: string | string[],
+  ...children: (HTMLElement | string)[]
+): HTMLElement {
+  return createEl({ tag: "div", className, children });
+}
+
+/** Shorthand to create a <span> */
+export function span(
+  className?: string | string[],
+  ...children: (HTMLElement | string)[]
+): HTMLElement {
+  return createEl({ tag: "span", className, children });
+}
+
+/** Shorthand to create a <p> */
+export function p(text?: string, className?: string): HTMLElement {
+  return createEl({ tag: "p", className, text });
+}
+
+/** Shorthand to create a button */
+export function btn(
+  text?: string,
+  className?: string,
+  onClick?: EventListener,
+): HTMLButtonElement {
+  const el = document.createElement("button");
+  if (text) el.textContent = text;
+  if (className) el.className = className;
+  if (onClick) el.addEventListener("click", onClick);
+  return el;
+}
+
+/** Create an SVG element */
+export function createSvg(
+  tagName: string,
+  attrs: Record<string, string | number> = {},
+): SVGElement {
+  const ns = "http://www.w3.org/2000/svg";
+  const el = document.createElementNS(ns, tagName);
+  for (const [k, v] of Object.entries(attrs)) {
+    el.setAttribute(k, String(v));
+  }
+  return el;
+}
+
+// --- Query Shortcuts ---
+
+/** Query selector shorthand — returns first match or null */
+export function $<T extends Element = Element>(
+  selector: string,
+  scope?: Element | Document,
+): T | null {
+  return (scope ?? document).querySelector<T>(selector);
+}
+
+/** Query selector all shorthand — returns array */
+export function $$<T extends Element = Element>(
+  selector: string,
+  scope?: Element | Document,
+): T[] {
+  return Array.from((scope ?? document).querySelectorAll<T>(selector));
+}
+
+/** Query with fallback — returns element or throws */
+export function requireSelector<T extends Element = Element>(
+  selector: string,
+  scope?: Element | Document,
+): T {
+  const el = $(selector, scope);
+  if (!el) throw new Error(`Element not found: ${selector}`);
+  return el;
+}
+
+/** Get element by ID */
+export function byId<T extends HTMLElement = HTMLElement>(id: string): T | null {
+  return document.getElementById(id) as T | null;
+}
+
+/** Get elements by class name */
+export function byClass(className: string, scope?: Element): HTMLElement[] {
+  return Array.from((scope ?? document).getElementsByClassName(className)) as HTMLElement[];
+}
+
+/** Get elements by tag name */
+export function byTag(tag: string, scope?: Element): HTMLElement[] {
+  return Array.from((scope ?? document).getElementsByTagName(tag)) as HTMLElement[];
+}
+
+// --- DOM Traversal ---
+
+/** Walk up the DOM tree from an element, calling visitor for each ancestor */
+export function walkUp(
+  start: Element,
+  visitor: (el: Element) => boolean | void,
+  stopAt?: Element,
+): void {
+  let current: Element | null = start.parentElement;
+  while (current && current !== stopAt && current !== document.documentElement) {
+    const result = visitor(current);
+    if (result === false) break; // Stop walking
+    current = current.parentElement;
+  }
+}
+
+/** Walk down the DOM tree (depth-first) */
+export function walkDown(
+  root: Element,
+  visitor: (el: Element) => boolean | void,
+): void {
+  const walker = document.createTreeWalker(
+    root,
+    NodeFilter.SHOW_ELEMENT,
+    {
+      acceptNode(node) {
+        return visitor(node as Element) === false
+          ? NodeFilter.FILTER_REJECT
+          : NodeFilter.FILTER_ACCEPT;
+      },
+    },
   );
+
+  let node = walker.nextNode();
+  while (node) {
+    node = walker.nextNode();
+  }
 }
 
-/** Get percentage of element that is visible in viewport */
-export function getVisibilityPercent(element: Element): number {
-  const rect = element.getBoundingClientRect();
-  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-  const visibleHeight = Math.max(0, Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0));
-  const visibleWidth = Math.max(0, Math.min(rect.right, viewportWidth) - Math.max(rect.left, 0));
-
-  const elementArea = rect.width * rect.height;
-  if (elementArea === 0) return 0;
-
-  return (visibleHeight * visibleWidth) / elementArea * 100;
+/** Get the next sibling element (skipping text nodes) */
+export function nextSibling(el: Element): Element | null {
+  let sib = el.nextElementSibling;
+  return sib;
 }
 
-/** Scroll element into view smoothly */
-export function scrollIntoViewCentered(element: Element, options?: ScrollIntoViewOptions): void {
-  element.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-    inline: "center",
-    ...options,
+/** Get the previous sibling element */
+export function prevSibling(el: Element): Element | null {
+  return el.previousElementSibling;
+}
+
+/** Get all siblings of an element (excluding itself) */
+export function siblings(el: Element): Element[] {
+  return Array.from(el.parentElement?.children ?? []).filter((c) => c !== el);
+}
+
+/** Get index of element among its siblings */
+export function siblingIndex(el: Element): number {
+  return Array.from(el.parentElement?.children ?? []).indexOf(el);
+}
+
+/** Check if an element is the last child */
+export function isLastChild(el: Element): boolean {
+  return el === el.parentElement?.lastElementChild;
+}
+
+/** Check if an element is the first child */
+export function isFirstChild(el: Element): boolean {
+  return el === el.parentElement?.firstElementChild;
+}
+
+// --- DOM Manipulation ---
+
+/** Remove all children from an element */
+export function empty(el: Element): void {
+  el.textContent = "";
+}
+
+/** Replace all children of an element */
+export function setChildren(el: Element, ...children: (Node | string)[]): void {
+  el.textContent = "";
+  for (const child of children) {
+    el.appendChild(typeof child === "string" ? document.createTextNode(child) : child);
+  }
+}
+
+/** Insert an element at a specific index among parent's children */
+export function insertAtIndex(parent: Element, child: Element, index: number): void {
+  const ref = parent.children[index];
+  if (ref) {
+    parent.insertBefore(child, ref);
+  } else {
+    parent.appendChild(child);
+  }
+}
+
+/** Move an element to a new position in its parent */
+export function moveToIndex(el: Element, newIndex: number): void {
+  const parent = el.parentElement;
+  if (!parent) return;
+  insertAtIndex(parent, el, newIndex);
+}
+
+/** Swap positions of two sibling elements */
+export function swapElements(a: Element, b: Element): void {
+  const parent = a.parentElement;
+  if (!parent || parent !== b.parentElement) return;
+
+  const aIdx = siblingIndex(a);
+  const bIdx = siblingIndex(b);
+
+  const placeholder = document.createElement("span");
+  parent.replaceChild(placeholder, a);
+  parent.replaceChild(a, b);
+  parent.replaceChild(b, placeholder);
+  parent.removeChild(placeholder);
+}
+
+/** Wrap an element with another element */
+export function wrap(inner: Element, wrapper: HTMLElement): HTMLElement {
+  inner.parentNode?.replaceChild(wrapper, inner);
+  wrapper.appendChild(inner);
+  return wrapper;
+}
+
+/** Unwrap an element (replace it with its children) */
+export function unwrap(el: Element): void {
+  const parent = el.parentNode;
+  if (!parent) return;
+  while (el.firstChild) {
+    parent.insertBefore(el.firstChild, el);
+  }
+  parent.removeChild(el);
+}
+
+// --- Fragment Operations ---
+
+/** Create a DocumentFragment from HTML string */
+export function htmlToFragment(html: string): DocumentFragment {
+  const range = document.createRange();
+  range.selectNodeContents(document.body);
+  return range.createContextualFragment(html);
+}
+
+/** Create multiple elements from HTML string and append to container */
+export function appendHtml(container: Element, html: string): void {
+  container.appendChild(htmlToFragment(html));
+}
+
+/** Prepend HTML to a container */
+export function prependHtml(container: Element, html: string): void {
+  const frag = htmlToFragment(html);
+  container.insertBefore(frag, container.firstChild);
+}
+
+// --- Event Delegation ---
+
+/**
+ * Set up event delegation on a container.
+ * Events on matching descendants will trigger the handler.
+ *
+ * @returns Unsubscribe function
+ */
+export function delegate<K extends keyof HTMLElementEventMap>(
+  container: Element,
+  eventType: K,
+  selector: string,
+  handler: (e: HTMLElementEventMap[K], target: HTMLElement) => void,
+): () => void {
+  const listener = (event: Event): void => {
+    const target = (event.target as Element)?.closest<HTMLElement>(selector);
+    if (target && container.contains(target)) {
+      handler(event as HTMLElementEventMap[K], target);
+    }
+  };
+
+  container.addEventListener(eventType, listener);
+  return () => container.removeEventListener(eventType, listener);
+}
+
+/** Delegate click events */
+export function delegateClick(
+  container: Element,
+  selector: string,
+  handler: (e: MouseEvent, target: HTMLElement) => void,
+): () => void {
+  return delegate(container, "click", selector, handler);
+}
+
+// --- Template Rendering ---
+
+/** Simple template engine: replace {{key}} placeholders with values */
+export function renderTemplate(template: string, data: Record<string, unknown>): string {
+  return template.replace(/\{\{(\w+)\}\}/g, (_, key) => {
+    const val = data[key];
+    return val !== undefined ? String(val) : "";
   });
 }
 
-/** Measure text dimensions in a hidden container */
-export function measureText(
-  text: string,
-  options?: {
-    fontSize?: string;
-    fontFamily?: string;
-    fontWeight?: string;
-    maxWidth?: number;
-    lineHeight?: string;
-  },
-): { width: number; height: number; lines: number } {
-  const {
-    fontSize = "16px",
-    fontFamily = "system-ui, sans-serif",
-    fontWeight = "normal",
-    maxWidth = Infinity,
-    lineHeight = "1.5",
-  } = options ?? {};
-
-  if (typeof document === "undefined") {
-    // Server-side fallback: rough estimation
-    const charWidth = parseFloat(fontSize) * 0.6;
-    const lines = maxWidth === Infinity ? 1 : Math.ceil(text.length / (maxWidth / charWidth));
-    return { width: text.length * charWidth, height: lines * parseFloat(fontSize) * parseFloat(lineHeight), lines };
-  }
-
-  const canvas = document.createElement("canvas");
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return { width: 0, height: 0, lines: 1 };
-
-  ctx.font = `${fontWeight} ${fontSize} ${fontFamily}`;
-
-  if (maxWidth === Infinity) {
-    const metrics = ctx.measureText(text);
-    return { width: metrics.width, height: parseFloat(fontSize) * parseFloat(lineHeight), lines: 1 };
-  }
-
-  // Multi-line measurement
-  const words = text.split(/\s+/);
-  let line = "";
-  let lineWidth = 0;
-  let maxLineWidth = 0;
-  let lineCount = 1;
-
-  for (const word of words) {
-    const wordWidth = ctx.measureWord ? ctx.measureWord(word).width : ctx.measureText(word + " ").width;
-    if (lineWidth + wordWidth > maxWidth && line !== "") {
-      maxLineWidth = Math.max(maxLineWidth, lineWidth);
-      line = word;
-      lineWidth = ctx.measureText(word).width;
-      lineCount++;
-    } else {
-      line += (line ? " " : "") + word;
-      lineWidth = ctx.measureText(line).width;
-    }
-  }
-  maxLineWidth = Math.max(maxLineWidth, lineWidth);
-
-  return {
-    width: maxLineWidth,
-    height: lineCount * parseFloat(fontSize) * parseFloat(lineHeight),
-    lines: lineCount,
-  };
-}
-
-/** Find the closest ancestor matching a selector */
-export function closestAncestor(
-  element: Element,
-  selector: string,
-): Element | null {
-  return element.closest(selector);
-}
-
-/** Get all ancestors up to (but not including) a stop element */
-export function getAncestors(
-  element: Element,
-  stopAt?: Element | null,
-): Element[] {
-  const ancestors: Element[] = [];
-  let current: Element | null = element.parentElement;
-
-  while (current && current !== stopAt && current !== document.body) {
-    ancestors.push(current);
-    current = current.parentElement;
-  }
-
-  return ancestors;
-}
-
-/** Insert element after a reference element */
-export function insertAfter(newNode: Node, referenceNode: Node): void {
-  referenceNode.parentNode?.insertBefore(newNode, referenceNode.nextSibling);
-}
-
-/** Replace element with another, preserving event listeners via cloning pattern */
-export function replaceElement(oldElement: Element, newElement: Element): void {
-  oldElement.parentNode?.replaceChild(newElement, oldElement);
-}
-
-/** Check if element contains or is another element */
-export function containsOrIs(parent: Element, child: Element): boolean {
-  return parent === child || parent.contains(child);
-}
-
-/** Get all focusable elements within a container */
-export function getFocusableElements(container: Element): HTMLElement[] {
-  const selector = [
-    'a[href]',
-    'button:not([disabled])',
-    'input:not([disabled])',
-    'select:not([disabled])',
-    'textarea:not([disabled])',
-    '[tabindex]:not([tabindex="-1"])',
-  ].join(", ");
-
-  return Array.from(container.querySelectorAll<HTMLElement>(selector))
-    .filter((el) => el.offsetParent !== null || getComputedStyle(el).position === "fixed");
-}
-
-/** Trap focus within an element */
-export function createFocusTrap(container: Element): { activate: () => void; deactivate: () => void } {
-  let active = false;
-  let previouslyFocused: HTMLElement | null = null;
-
-  function handleKeyDown(e: KeyboardEvent) {
-    if (e.key !== "Tab" || !active) return;
-
-    const focusable = getFocusableElements(container as HTMLElement);
-    if (focusable.length === 0) return;
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-
-    if (e.shiftKey) {
-      if (document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      }
-    } else {
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  }
-
-  return {
-    activate() {
-      if (active) return;
-      active = true;
-      previouslyFocused = document.activeElement as HTMLElement;
-      container.addEventListener("keydown", handleKeyDown);
-      const firstFocusable = getFocusableElements(container as HTMLElement)[0];
-      firstFocusable?.focus();
-    },
-    deactivate() {
-      if (!active) return;
-      active = false;
-      container.removeEventListener("keydown", handleKeyDown);
-      previouslyFocused?.focus();
-    },
-  };
+/** Render a template into a container element */
+export function renderInto(
+  container: Element,
+  template: string,
+  data: Record<string, unknown>,
+): void {
+  container.innerHTML = renderTemplate(template, data);
 }
