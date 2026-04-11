@@ -1,430 +1,394 @@
 /**
- * Layout Utilities: Element positioning, alignment, measurement,
- * responsive layout helpers, grid/flex utilities, viewport calculations,
- * and DOM geometry helpers.
+ * Layout Utilities: CSS layout pattern generators, flex/grid builders,
+ * stack layouts, aspect ratio utilities, spacing systems, and
+ * responsive layout composition helpers.
  */
 
 // --- Types ---
 
-export interface Rect {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
+export type FlexDirection = "row" | "column" | "row-reverse" | "column-reverse";
+export type FlexWrap = "nowrap" | "wrap" | "wrap-reverse";
+export type JustifyContent = "start" | "center" | "end" | "between" | "around" | "evenly";
+export type AlignItems = "start" | "center" | "end" | "stretch" | "baseline";
+export type AlignSelf = AlignItems | "auto";
+export type GapSize = "none" | "xs" | "sm" | "md" | "lg" | "xl";
+
+export interface FlexConfig {
+  direction?: FlexDirection;
+  wrap?: FlexWrap;
+  justify?: JustifyContent;
+  align?: AlignItems;
+  gap?: GapSize | number;
 }
 
-export interface Position {
-  x: number;
-  y: number;
+export interface GridConfig {
+  columns?: number | string;
+  rows?: number | string;
+  gap?: GapSize | number;
+  rowGap?: GapSize | number;
+  columnGap?: GapSize | number;
+  alignItems?: AlignItems;
+  justifyItems?: JustifyContent;
+  justifyContent?: JustifyContent;
+  autoFit?: boolean;
+  minColumnWidth?: number;
 }
 
-export interface Alignment {
-  horizontal: "start" | "center" | "end" | "stretch";
-  vertical: "start" | "center" | "end" | "stretch";
+export interface StackConfig {
+  direction?: "vertical" | "horizontal";
+  gap?: GapSize | number;
+  align?: AlignItems;
+  distribute?: JustifyContent;
+  reverse?: boolean;
+  fullWidth?: boolean;
 }
 
-export interface LayoutMetrics {
-  /** Element's bounding rect relative to viewport */
-  viewportRect: Rect;
-  /** Element's bounding rect relative to document */
-  documentRect: Rect;
-  /** Element's offset from its offset parent */
-  offsetPosition: Position;
-  /** Scroll position of the nearest scrollable ancestor */
-  scrollParentOffset: Position;
-  /** Available space around element */
-  availableSpace: { top: number; right: number; bottom: number; left: number };
-  /** Whether element is fully visible in viewport */
-  isFullyVisible: boolean;
-  /** Percentage visible (0-100) */
-  visibilityPercent: number;
+// --- Spacing Scale ---
+
+const GAP_MAP: Record<GapSize, string> = {
+  none: "0",
+  xs: "4px",
+  sm: "8px",
+  md: "16px",
+  lg: "24px",
+  xl: "32px",
+};
+
+function resolveGap(gap?: GapSize | number): string {
+  if (gap === undefined) return "0";
+  if (typeof gap === "number") return `${gap}px`;
+  return GAP_MAP[gap] ?? "0";
 }
 
-// --- Measurement ---
+const JUSTIFY_MAP: Record<JustifyContent, string> = {
+  start: "flex-start",
+  center: "center",
+  end: "flex-end",
+  between: "space-between",
+  around: "space-around",
+  evenly: "space-evenly",
+};
 
-/** Get element's bounding rectangle as a plain object */
-export function getRect(el: Element): Rect {
-  const r = el.getBoundingClientRect();
-  return { x: r.left, y: r.top, width: r.width, height: r.height };
-}
+const ALIGN_MAP: Record<AlignItems, string> = {
+  start: "flex-start",
+  center: "center",
+  end: "flex-end",
+  stretch: "stretch",
+  baseline: "baseline",
+};
 
-/** Get element's position relative to the document */
-export function getPositionInDocument(el: Element): Position {
-  const rect = el.getBoundingClientRect();
-  return {
-    x: rect.left + window.scrollX,
-    y: rect.top + window.scrollY,
+// --- Flex Layout ---
+
+export function flex(config: FlexConfig = {}): Record<string, string> {
+  const style: Record<string, string> = {
+    display: "flex",
+    flexDirection: config.direction ?? "row",
+    flexWrap: config.wrap ?? "nowrap",
+    justifyContent: JUSTIFY_MAP[config.justify ?? "start"],
+    alignItems: ALIGN_MAP[config.align ?? "stretch"],
+    gap: resolveGap(config.gap),
   };
+  Object.entries(style).forEach(([k, v]) => { if (v === "0") delete style[k]; });
+  return style;
 }
 
-/** Get element's offset position (like offsetLeft/offsetTop but accounts for positioned ancestors) */
-export function getOffsetPosition(el: HTMLElement): Position {
-  let x = 0;
-  let y = 0;
-  let current: HTMLElement | null = el;
-
-  while (current && current !== document.body) {
-    x += current.offsetLeft;
-    y += current.offsetTop;
-    current = current.offsetParent as HTMLElement;
-  }
-
-  return { x, y };
+export function applyFlex(element: HTMLElement, config: FlexConfig = {}): void {
+  Object.assign(element.style, flex(config));
 }
 
-/** Comprehensive layout metrics for an element */
-export function getLayoutMetrics(el: HTMLElement): LayoutMetrics {
-  const viewportRect = getRect(el);
-  const docPos = getPositionInDocument(el);
-  const offsetPos = getOffsetPosition(el);
-
-  // Find scroll parent
-  const scrollParent = findScrollParent(el);
-  const scrollParentOffset = scrollParent
-    ? { x: scrollParent.scrollLeft, y: scrollParent.scrollTop }
-    : { x: 0, y: 0 };
-
-  // Available space
-  const top = viewportRect.y;
-  const right = window.innerWidth - viewportRect.x - viewportRect.width;
-  const bottom = window.innerHeight - viewportRect.y - viewportRect.height;
-  const left = viewportRect.x;
-
-  // Visibility
-  const isFullyVisible =
-    viewportRect.x >= 0 &&
-    viewportRect.y >= 0 &&
-    viewportRect.x + viewportRect.width <= window.innerWidth &&
-    viewportRect.y + viewportRect.height <= window.innerHeight;
-
-  const visibleWidth = Math.max(0, Math.min(
-    viewportRect.x + viewportRect.width, window.innerWidth,
-  ) - Math.max(viewportRect.x, 0));
-  const visibleHeight = Math.max(0, Math.min(
-    viewportRect.y + viewportRect.height, window.innerHeight,
-  ) - Math.max(viewportRect.y, 0));
-  const totalArea = viewportRect.width * viewportRect.height || 1;
-  const visibleArea = visibleWidth * visibleHeight;
-
-  return {
-    viewportRect,
-    documentRect: { ...docPos, width: viewportRect.width, height: viewportRect.height },
-    offsetPosition: offsetPos,
-    scrollParentOffset,
-    availableSpace: { top, right, bottom, left },
-    isFullyVisible,
-    visibilityPercent: Math.round((visibleArea / totalArea) * 100),
-  };
+/** Horizontal flex row */
+export function hStack(element: HTMLElement, options?: Omit<FlexConfig, "direction">): void {
+  applyFlex(element, { ...options, direction: "row" });
 }
 
-// --- Positioning ---
-
-/** Position an element relative to a target with smart boundary detection */
-export function positionElement(
-  target: HTMLElement,
-  anchor: HTMLElement | Rect,
-  placement: "top" | "bottom" | "left" | "right" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end" | "right-start" | "right-end",
-  options?: { gap?: number; flip?: boolean; constrainToViewport?: boolean },
-): void {
-  const { gap = 4, flip = true, constrainToViewport = true } = options ?? {};
-
-  const anchorRect = anchor instanceof HTMLElement ? getRect(anchor) : anchor;
-  const targetRect = getRect(target);
-
-  let x: number;
-  let y: number;
-
-  // Calculate base position
-  switch (placement) {
-    case "top":
-      x = anchorRect.x + anchorRect.width / 2 - targetRect.width / 2;
-      y = anchorRect.y - targetRect.height - gap;
-      break;
-    case "bottom":
-      x = anchorRect.x + anchorRect.width / 2 - targetRect.width / 2;
-      y = anchorRect.y + anchorRect.height + gap;
-      break;
-    case "left":
-      x = anchorRect.x - targetRect.width - gap;
-      y = anchorRect.y + anchorRect.height / 2 - targetRect.height / 2;
-      break;
-    case "right":
-      x = anchorRect.x + anchorRect.width + gap;
-      y = anchorRect.y + anchorRect.height / 2 - targetRect.height / 2;
-      break;
-    case "top-start":
-      x = anchorRect.x;
-      y = anchorRect.y - targetRect.height - gap;
-      break;
-    case "top-end":
-      x = anchorRect.x + anchorRect.width - targetRect.width;
-      y = anchorRect.y - targetRect.height - gap;
-      break;
-    case "bottom-start":
-      x = anchorRect.x;
-      y = anchorRect.y + anchorRect.height + gap;
-      break;
-    case "bottom-end":
-      x = anchorRect.x + anchorRect.width - targetRect.width;
-      y = anchorRect.y + anchorRect.height + gap;
-      break;
-    case "left-start":
-      x = anchorRect.x - targetRect.width - gap;
-      y = anchorRect.y;
-      break;
-    case "left-end":
-      x = anchorRect.x - targetRect.width - gap;
-      y = anchorRect.y + anchorRect.height - targetRect.height;
-      break;
-    case "right-start":
-      x = anchorRect.x + anchorRect.width + gap;
-      y = anchorRect.y;
-      break;
-    case "right-end":
-      x = anchorRect.x + anchorRect.width + gap;
-      y = anchorRect.y + anchorRect.height - targetRect.height;
-      break;
-    default:
-      x = anchorRect.x;
-      y = anchorRect.y + anchorRect.height + gap;
-  }
-
-  // Flip if out of bounds
-  if (flip) {
-    if ((placement.startsWith("top") || placement.startsWith("bottom")) &&
-        (y < 0 || y + targetRect.height > window.innerHeight)) {
-      if (placement.startsWith("top")) {
-        y = anchorRect.y + anchorRect.height + gap;
-      } else {
-        y = anchorRect.y - targetRect.height - gap;
-      }
-    }
-    if ((placement.startsWith("left") || placement.startsWith("right")) &&
-        (x < 0 || x + targetRect.width > window.innerWidth)) {
-      if (placement.startsWith("left")) {
-        x = anchorRect.x + anchorRect.width + gap;
-      } else {
-        x = anchorRect.x - targetRect.width - gap;
-      }
-    }
-  }
-
-  // Constrain to viewport
-  if (constrainToViewport) {
-    x = Math.max(0, Math.min(x, window.innerWidth - targetRect.width));
-    y = Math.max(0, Math.min(y, window.innerHeight - targetRect.height));
-  }
-
-  target.style.position = "fixed";
-  target.style.left = `${x}px`;
-  target.style.top = `${y}px`;
+/** Vertical flex column */
+export function vStack(element: HTMLElement, options?: Omit<FlexConfig, "direction">): void {
+  applyFlex(element, { ...options, direction: "column" });
 }
 
-/** Center an element within a container or viewport */
-export function centerElement(
-  element: HTMLElement,
-  container?: HTMLElement | null,
-): void {
-  const containerEl = container ?? null;
-  const containerRect = containerEl ? getRect(containerEl) : {
-    x: 0, y: 0, width: window.innerWidth, height: window.innerHeight,
-  };
+// --- Grid Layout ---
 
-  const elRect = getRect(element);
-  const x = containerRect.x + (containerRect.width - elRect.width) / 2;
-  const y = containerRect.y + (containerRect.height - elRect.height) / 2;
+export function gridLayout(config: GridConfig = {}): Record<string, string> {
+  let templateColumns: string;
 
-  if (containerEl) {
-    element.style.position = "absolute";
-    element.style.left = `${x - containerRect.x}px`;
-    element.style.top = `${y - containerRect.y}px`;
+  if (typeof config.columns === "string") {
+    templateColumns = config.columns;
+  } else if (config.autoFit && config.minColumnWidth) {
+    templateColumns = `repeat(auto-fit, minmax(${config.minColumnWidth}px, 1fr))`;
+  } else if (config.columns) {
+    templateColumns = `repeat(${config.columns}, 1fr)`;
   } else {
-    element.style.position = "fixed";
-    element.style.left = `${x}px`;
-    element.style.top = `${y}px`;
+    templateColumns = "repeat(12, 1fr)";
+  }
+
+  const style: Record<string, string> = {
+    display: "grid",
+    gridTemplateColumns: templateColumns,
+    gap: resolveGap(config.gap),
+    alignItems: ALIGN_MAP[config.alignItems ?? "stretch"],
+    justifyItems: JUSTIFY_MAP[config.justifyItems ?? "start"],
+  };
+
+  if (config.rows) {
+    style.gridTemplateRows = typeof config.rows === "string"
+      ? config.rows
+      : `repeat(${config.rows}, 1fr)`;
+  }
+  if (config.rowGap !== undefined) style.rowGap = resolveGap(config.rowGap);
+  if (config.columnGap !== undefined) style.columnGap = resolveGap(config.columnGap);
+  if (config.justifyContent) style.justifyContent = JUSTIFY_MAP[config.justifyContent];
+  Object.entries(style).forEach(([k, v]) => { if (v === "0") delete style[k]; });
+
+  return style;
+}
+
+export function applyGrid(element: HTMLElement, config: GridConfig = {}): void {
+  Object.assign(element.style, gridLayout(config));
+}
+
+// --- Stack Layout ---
+
+export function applyStack(element: HTMLElement, config: StackConfig = {}): void {
+  const dir = config.direction ?? "vertical";
+  const isVertical = dir === "vertical";
+
+  const style: Record<string, string> = {
+    display: "flex",
+    flexDirection: isVertical
+      ? (config.reverse ? "column-reverse" : "column")
+      : (config.reverse ? "row-reverse" : "row"),
+    gap: resolveGap(config.gap),
+    alignItems: ALIGN_MAP[config.align ?? (isVertical ? "stretch" : "center")],
+    justifyContent: JUSTIFY_MAP[config.distribute ?? "start"],
+  };
+
+  if (isVertical && config.fullWidth) {
+    for (const child of Array.from(element.children) as HTMLElement[]) {
+      child.style.width = "100%";
+      child.style.flexShrink = "0";
+    }
+  }
+
+  Object.assign(element.style, style);
+}
+
+// --- Aspect Ratio ---
+
+export function parseAspectRatio(ratio: number | string): number {
+  if (typeof ratio === "number") return ratio;
+
+  const cleaned = ratio.replace(/\s+/g, "");
+  if (cleaned.includes(":")) {
+    const [w, h] = cleaned.split(":").map(Number);
+    if (w && h) return w / h;
+  }
+  if (cleaned.includes("/")) {
+    const [w, h] = cleaned.split("/").map(Number);
+    if (w && h) return w / h;
+  }
+
+  const parsed = parseFloat(cleaned);
+  return isNaN(parsed) ? 1 : parsed;
+}
+
+export function applyAspectRatio(
+  element: HTMLElement,
+  ratio: number | string,
+  objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down",
+): void {
+  const value = parseAspectRatio(ratio);
+  element.style.aspectRatio = `${value}`;
+  if (objectFit && element instanceof HTMLImageElement) {
+    element.style.objectFit = objectFit;
   }
 }
 
-// --- Alignment ---
+/** Create a wrapper div that maintains aspect ratio */
+export function createAspectContainer(
+  ratio: number | string,
+  content?: HTMLElement,
+): HTMLElement {
+  const wrapper = document.createElement("div");
+  wrapper.style.aspectRatio = `${parseAspectRatio(ratio)}`;
+  wrapper.style.position = "relative";
+  wrapper.style.overflow = "hidden";
 
-/** Apply flex-like alignment to children of a container */
-export function alignChildren(
-  container: HTMLElement,
-  alignment: Partial<Alignment>,
+  if (content) {
+    content.style.position = "absolute";
+    content.style.inset = "0";
+    wrapper.appendChild(content);
+  }
+
+  return wrapper;
+}
+
+// --- Spacing System ---
+
+/** Apply consistent spacing to an element's margin/padding */
+export function spacing(
+  element: HTMLElement,
+  opts: {
+    p?: GapSize | number;       // padding all sides
+    px?: GapSize | number;      // padding x
+    py?: GapSize | number;      // padding y
+    pt?: GapSize | number;      // padding top
+    pr?: GapSize | number;      // padding right
+    pb?: GapSize | number;      // padding bottom
+    pl?: GapSize | number;      // padding left
+    m?: GapSize | number;       // margin all sides
+    mx?: GapSize | number;      // margin x
+    my?: GapSize | number;      // margin y
+    mt?: GapSize | number;      // margin top
+    mr?: GapSize | number;      // margin right
+    mb?: GapSize | number;      // margin bottom
+    ml?: GapSize | number;      // margin left
+  },
 ): void {
-  const h = alignment.horizontal ?? "start";
-  const v = alignment.vertical ?? "start";
+  const map: [keyof typeof opts, string][] = [
+    ["p", "padding"], ["px", "paddingLeft", "paddingRight"],
+    ["py", "paddingTop", "paddingBottom"],
+    ["pt", "paddingTop"], ["pr", "paddingRight"],
+    ["pb", "paddingBottom"], ["pl", "paddingLeft"],
+    ["m", "margin"], ["mx", "marginLeft", "marginRight"],
+    ["my", "marginTop", "marginBottom"],
+    ["mt", "marginTop"], ["mr", "marginRight"],
+    ["mb", "marginBottom"], ["ml", "marginLeft"],
+  ];
 
-  const justifyContentMap: Record<string, string> = {
-    start: "flex-start", center: "center", end: "flex-end", stretch: "stretch",
-  };
-  const alignItemsMap: Record<string, string> = {
-    start: "flex-start", center: "center", end: "flex-end", stretch: "stretch",
-  };
+  for (const [opt, ...props] of map) {
+    const val = opts[opt];
+    if (val !== undefined) {
+      const resolved = resolveGap(val);
+      for (const prop of props) {
+        (element.style as Record<string, string>)[prop] = resolved;
+      }
+    }
+  }
+}
 
+// --- Divider / Separator ---
+
+/** Insert a horizontal or vertical divider after/before an element */
+export function insertDivider(
+  container: HTMLElement,
+  orientation: "horizontal" | "vertical" = "horizontal",
+  options?: { color?: string; thickness?: number; margin?: GapSize | number },
+): HTMLElement {
+  const divider = document.createElement("div");
+  const isHorizontal = orientation === "horizontal";
+
+  divider.setAttribute("role", "separator");
+  divider.setAttribute("aria-orientation", orientation);
+
+  const thickness = options?.thickness ?? 1;
+  const gap = resolveGap(options?.margin ?? "md");
+
+  if (isHorizontal) {
+    divider.style.width = "100%";
+    divider.style.height = `${thickness}px`;
+    divider.style.marginTop = gap;
+    divider.style.marginBottom = gap;
+  } else {
+    divider.style.width = `${thickness}px`;
+    divider.style.height = "100%";
+    divider.style.marginLeft = gap;
+    divider.style.marginRight = gap;
+  }
+
+  divider.style.backgroundColor = options?.color ?? "var(--color-border, #e2e8f0)";
+  divider.style.flexShrink = "0";
+
+  container.appendChild(divider);
+  return divider;
+}
+
+// --- Layout Composition Helpers ---
+
+/** Create a header + content + footer layout */
+export function createAppLayout(options?: {
+  headerHeight?: number;
+  footerHeight?: number;
+  maxWidth?: number;
+}): { container: HTMLElement; header: HTMLElement; main: HTMLElement; footer: HTMLElement } {
+  const container = document.createElement("div");
   container.style.display = "flex";
   container.style.flexDirection = "column";
-  container.style.justifyContent = justifyContentMap[h];
-  container.style.alignItems = alignItemsMap[v];
-}
-
-// --- Viewport & Scrolling ---
-
-/** Get the current viewport dimensions */
-export function getViewportSize(): { width: number; height: number } {
-  return {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
-}
-
-/** Get the visual viewport size (accounts for mobile zoom/keyboard) */
-export function getVisualViewport(): { width: number; height: number } | null {
-  if (!window.visualViewport) return null;
-  return { width: window.visualViewport.width, height: window.visualViewport.height };
-}
-
-/** Check if an element is in the viewport */
-export function isInViewport(el: Element, threshold = 0): boolean {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= -threshold &&
-    rect.left >= -threshold &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + threshold &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth) + threshold
-  );
-}
-
-/** Find the nearest scrollable ancestor element */
-export function findScrollParent(element: HTMLElement): HTMLElement | null {
-  if (!element) return null;
-
-  let current: HTMLElement | null = element.parentElement;
-  const excludeTags = new Set(["HTML", "BODY"]);
-
-  while (current && !excludeTags.has(current.tagName)) {
-    const style = getComputedStyle(current);
-    if (
-      (style.overflow === "auto" || style.overflow === "scroll" ||
-       style.overflowY === "auto" || style.overflowY === "scroll" ||
-       style.overflowX === "auto" || style.overflowX === "scroll") &&
-      (current.scrollHeight > current.clientHeight || current.scrollWidth > current.clientWidth)
-    ) {
-      return current;
-    }
-    current = current.parentElement;
+  container.style.minHeight = "100vh";
+  if (options?.maxWidth) {
+    container.style.maxWidth = `${options.maxWidth}px`;
+    container.style.marginLeft = "auto";
+    container.style.marginRight = "auto";
+    container.style.width = "100%";
   }
 
-  return null;
+  const header = document.createElement("header");
+  header.style.flexShrink = "0";
+  if (options?.headerHeight) header.style.height = `${options.headerHeight}px`;
+
+  const main = document.createElement("main");
+  main.style.flexGrow = "1";
+  main.style.overflow = "auto";
+
+  const footer = document.createElement("footer");
+  footer.style.flexShrink = "0";
+  if (options?.footerHeight) footer.style.height = `${options.footerHeight}px`;
+
+  container.append(header, main, footer);
+  return { container, header, main, footer };
 }
 
-/** Scroll an element into view with smooth behavior and optional padding */
-export function scrollIntoViewIfNeeded(
-  element: HTMLElement,
-  options?: { padding?: number; behavior?: "auto" | "smooth" | "instant"; block?: "start" | "center" | "end" | "nearest" },
-): void {
-  const { padding = 16, behavior = "smooth", block = "nearest" } = options ?? {};
+/** Create a sidebar + content layout */
+export function createSidebarLayout(options?: {
+  sidebarWidth?: number;
+  position?: "left" | "right";
+  collapsible?: boolean;
+}): { container: HTMLElement; sidebar: HTMLElement; content: HTMLElement; toggle?: () => void } {
+  const container = document.createElement("div");
+  container.style.display = "flex";
+  container.style.minHeight = "100vh";
 
-  if (!isInViewport(element, padding)) {
-    element.scrollIntoView({ behavior, block });
-  }
-}
+  const sbWidth = options?.sidebarWidth ?? 260;
+  const isLeft = options?.position !== "right";
 
-// --- Grid Helpers ---
+  const sidebar = document.createElement("aside");
+  sidebar.style.width = `${sbWidth}px`;
+  sidebar.style.flexShrink = "0";
+  sidebar.style.transition = "width 200ms ease, transform 200ms ease";
+  sidebar.style.overflow = "auto";
 
-/** Calculate CSS grid template columns for equal-width items */
-export function gridTemplateColumns(
-  itemCount: number,
-  minItemWidth = 200,
-  gap = 16,
-): string {
-  const viewportWidth = window.innerWidth;
-  const maxColumns = Math.floor((viewportWidth + gap) / (minItemWidth + gap));
-  const columns = Math.min(itemCount, Math.max(1, maxColumns));
+  const content = document.createElement("div");
+  content.style.flexGrow = "1";
+  content.style.minWidth = "0"; // Prevent overflow
+  content.style.overflow = "auto";
 
-  return `repeat(${columns}, minmax(${minItemWidth}px, 1fr))`;
-}
-
-/** Apply masonry-like layout using CSS columns */
-export function applyMasonryLayout(
-  container: HTMLElement,
-  columnCount = 3,
-  gap = 16,
-): void {
-  container.style.columnCount = String(columnCount);
-  container.style.columnGap = `${gap}px`;
-
-  for (const child of Array.from(container.children) as HTMLElement[]) {
-    child.style.breakInside = "avoid";
-    child.style.marginBottom = `${gap}px`;
-  }
-}
-
-// --- Size Constraints ---
-
-/** Constrain an element's size to fit within bounds while maintaining aspect ratio */
-export function constrainToContainer(
-  element: HTMLElement,
-  maxWidth: number,
-  maxHeight: number,
-): { width: number; height: number } {
-  const naturalWidth = element.naturalWidth ?? element.offsetWidth;
-  const naturalHeight = element.naturalHeight ?? element.offsetHeight;
-
-  if (naturalWidth <= maxWidth && naturalHeight <= maxHeight) {
-    return { width: naturalWidth, height: naturalHeight };
-  }
-
-  const aspectRatio = naturalWidth / naturalHeight;
-  let width: number;
-  let height: number;
-
-  if (maxWidth / aspectRatio <= maxHeight) {
-    width = maxWidth;
-    height = maxWidth / aspectRatio;
+  if (isLeft) {
+    container.append(sidebar, content);
   } else {
-    height = maxHeight;
-    width = maxHeight * aspectRatio;
+    container.append(content, sidebar);
   }
 
-  element.style.width = `${width}px`;
-  element.style.height = `${height}px`;
+  let collapsed = false;
+  const toggle = (): void => {
+    collapsed = !collapsed;
+    sidebar.style.width = collapsed ? "0" : `${sbWidth}px`;
+    sidebar.style.overflow = collapsed ? "hidden" : "auto";
+  };
 
-  return { width, height };
+  return { container, sidebar, content, ...(options?.collapsible ? { toggle } : {}) };
 }
 
-/** Make an element fill its remaining available space in a flex/grid context */
-export function fillRemainingSpace(element: HTMLElement): void {
-  element.style.flexGrow = "1";
-  element.style.flexShrink = "1";
-  element.style.flexBasis = "0%";
-  element.style.minWidth = "0";
-  element.style.minHeight = "0";
-  element.style.overflow = "auto";
-}
+/** Create a centered content area with max-width */
+export function createCenteredLayout(maxWidth = 800, padding = 24): HTMLElement {
+  const wrapper = document.createElement("div");
+  wrapper.style.display = "flex";
+  wrapper.style.justifyContent = "center";
+  wrapper.style.padding = `${padding}px`;
+  wrapper.style.minHeight = "100vh";
 
-// --- Responsive Helpers ---
+  const inner = document.createElement("div");
+  inner.style.width = "100%";
+  inner.style.maxWidth = `${maxWidth}px`;
 
-/** Match element's computed styles against breakpoints and return active breakpoint */
-export function getElementBreakpoint(
-  element: HTMLElement,
-  breakpoints: Record<string, number> = { sm: 640, md: 768, lg: 1024, xl: 1280 },
-): string {
-  const width = element.offsetWidth;
-  const sortedBps = Object.entries(breakpoints).sort((a, b) => b[1] - a[1]);
-
-  for (const [name, minWidth] of sortedBps) {
-    if (width >= minWidth) return name;
-  }
-  return "xs";
-}
-
-/** Set element display property based on breakpoint */
-export function setResponsiveDisplay(
-  element: HTMLElement,
-  displays: Record<string, "block" | "none" | "inline-block" | "flex" | "grid">,
-  breakpoints: Record<string, number> = { sm: 640, md: 768, lg: 1024, xl: 1280 },
-): void {
-  const bp = getElementBreakpoint(element, breakpoints);
-  element.style.display = displays[bp] ?? displays["lg"] ?? "block";
+  wrapper.appendChild(inner);
+  return inner;
 }

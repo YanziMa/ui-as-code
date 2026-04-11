@@ -25812,3 +25812,72 @@ export {
   getCurrentBreakpoint,
 } from "./media-query";
 export type { BreakpointName, Breakpoint, BreakpointConfig, MediaQueryOptions, MediaQueryInstance, ResponsiveManagerInstance } from "./media-query";
+
+// --- Layout Utilities ---
+export {
+  flex,
+  applyFlex,
+  hStack,
+  vStack,
+  gridLayout,
+  applyGrid,
+  applyStack,
+  parseAspectRatio,
+  applyAspectRatio,
+  createAspectContainer,
+  spacing,
+  insertDivider,
+  createAppLayout,
+  createSidebarLayout,
+  createCenteredLayout,
+} from "./layout-utils";
+export type { FlexConfig, GridConfig, StackConfig, FlexDirection, FlexWrap, JustifyContent, AlignItems, GapSize } from "./layout-utils";
+
+// --- Positioning ---
+export {
+  getRect,
+  getPositionInDocument,
+  getOffsetPosition,
+  getLayoutMetrics,
+  positionElement,
+  centerElement,
+  alignChildren,
+  getViewportSize as getVPSize,
+  getVisualViewport as getVVSize,
+  isInViewport,
+  findScrollParent,
+  scrollIntoViewIfNeeded,
+  gridTemplateColumns,
+  applyMasonryLayout,
+  constrainToContainer,
+  fillRemainingSpace,
+  getElementBreakpoint,
+  setResponsiveDisplay,
+} from "./positioning";
+export type { Rect, Position, Alignment, LayoutMetrics } from "./positioning";
+
+// --- Box Model ---
+export {
+  getBoxModel,
+  getBoxDimensions,
+  getOuterSize,
+  getInnerSize,
+  setContentSize,
+  setBorderBoxSize,
+  fillParent,
+  setPaddingPercent,
+  setMargin,
+  setPadding,
+  resetMargin,
+  resetPadding,
+  normalizeElement,
+  forceBorderBox,
+  isBorderBox,
+  setOverflow,
+  truncateText,
+  reserveScrollbarGutter,
+  getScrollbarWidth,
+  sameBoxSize,
+  diffBoxModel,
+} from "./box-model";
+export type { BoxModelValues, BoxDimensions, BoxSizingOptions } from "./box-model";
