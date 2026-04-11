@@ -24963,3 +24963,32 @@ export { AvatarGroupManager, createAvatarGroup } from "./avatar-group";
 // --- Breadcrumb ---
 export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
 export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination";
+
+// --- Tabs Navigation ---
+export {
+  TabsNavManager,
+  createTabsNav,
+  type TabItem,
+  type TabVariant,
+  type TabSize,
+  type TabsNavOptions,
+  type TabsNavInstance,
+} from "./tabs-nav";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+  type StepConfig,
+  type StepStatus,
+  type StepperOptions,
+  type StepperInstance,
+} from "./stepper";
