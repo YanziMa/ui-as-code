@@ -18526,3 +18526,41 @@ export type {
   ConfirmButtonVariant,
   ConfirmButton,
 } from "./confirm-dialog";
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  NotificationOptions,
+  NotificationType,
+  NotificationPosition,
+  Notification,
+} from "./notification";
+export {
+  createDotBadge,
+  createCountBadge,
+  createStatusDot,
+  addPositionedBadge,
+  addDotBadge,
+  addCountBadge,
+} from "./badge-lite";
+export type {
+  DotBadgeOptions,
+  CountBadgeOptions,
+  StatusDotOptions,
+  PositionedBadgeOptions,
+  BadgeVariant,
+  BadgeSize,
+} from "./badge-lite";
+export {
+  AvatarGroupManager,
+  createAvatarGroup,
+} from "./avatar-group";
+export type {
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+  AvatarItem,
+  AvatarSize,
+  StackDirection,
+} from "./avatar-group";
