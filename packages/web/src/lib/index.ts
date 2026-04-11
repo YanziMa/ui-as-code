@@ -46086,3 +46086,15 @@ export type { DocumentId, Term, SearchDocument as IiSearchDocument, SearchResult
 // --- json-editor ---
 export { createJsonEditor } from "./json-editor";
 export type { JsonNodeType, JsonNode, JsonSchemaProperty, JsonEditorOptions, JsonEditorInstance } from "./json-editor";
+
+// --- json-formatter ---
+export { formatJson, minifyJson, parseJson, safeParseJson, isValidJson, formatJsonHtml, jsonDiff, applyPatch, resolvePointer, setPointer, removePointer, deepClone as deepCloneJsonFmt, getJsonSize, truncateJson } from "./json-formatter";
+export type { JsonFormatOptions, JsonColorTheme, JsonDiffResult, JsonChange, JsonPatchOperation } from "./json-formatter";
+
+// --- json-schema ---
+export { validate, getRequiredFields, getPropertyNames, getDefaults, generateExample, extractUiHints, coerceValue } from "./json-schema";
+export type { JsonSchemaType, JsonSchema as JsonSchemaDef, ValidationError as JsonSchemaValidationError, ValidationResult as JsonSchemaValidationResult, UiHint } from "./json-schema";
+
+// --- json-utils ---
+export { parsePath, stringifyPath, get, has, set, setImmutable, remove, removeImmutable, update, deepClone as deepCloneJsonUtils, deepMerge, walk, mapValues, filterNodes, findNode, flatten, unflatten, pickPaths, omitPaths, renameKeys, isJsonObject, isJsonArray, isJsonValue } from "./json-utils";
+export type { JsonValue, JsonObject, JsonArray, PathSegment, JsonPath, WalkOptions, WalkVisitor } from "./json-utils";
