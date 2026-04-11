@@ -51,7 +51,7 @@ export interface BreadcrumbOptions {
 export interface BreadcrumbInstance {
   element: HTMLElement;
   getItems: () => BreadcrumbItem[];
-  setItems: (items: Breadcrumb[]) => void;
+  setItems: (items: BreadcrumbItem[]) => void;
   setCurrent: (key: string) => void;
   destroy: () => void;
 }
@@ -133,7 +133,7 @@ export function createBreadcrumb(options: BreadcrumbOptions): BreadcrumbInstance
     }
   }
 
-  function createCrumbItem(item: BreadcrumbItem index: number, isRoot: boolean): HTMLElement {
+  function createCrumbItem(item: BreadcrumbItem, index: number, isRoot: boolean): HTMLElement {
     const wrapper = document.createElement("nav");
     wrapper.dataset.itemKey = item.key;
     wrapper.setAttribute("role", "listitem");
@@ -262,7 +262,7 @@ export function createBreadcrumb(options: BreadcrumbOptions): BreadcrumbInstance
 
     getItems() { return [...items]; },
 
-    setItems(newItems: Breadcrumb[]) {
+    setItems(newItems: BreadcrumbItem[]) {
       items = newItems;
       render();
     },

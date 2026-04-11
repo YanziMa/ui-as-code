@@ -41643,3 +41643,10 @@ export { ImageGalleryManager, createImageGallery } from "./image-gallery";
 export type { GalleryImage, ImageGalleryOptions, ImageGalleryInstance } from "./image-gallery";
 export { createViewer } from "./viewer";
 export type { ViewerOptions, ViewerInstance, ViewerMode } from "./viewer";
+// --- Batch 1306: Progress Stepper, Tabs Manager, Breadcrumb Nav ---
+export { createProgressStepper } from "./progress-stepper";
+export type { ProgressStepperOptions, ProgressStepperInstance, StepItem, StepStatus, StepperOrientation, StepperVariant } from "./progress-stepper";
+export { createTabs } from "./tabs-manager";
+export type { TabsOptions, TabsInstance, TabPanel, TabVariant, TabPosition, TabOverflowMode } from "./tabs-manager";
+export { createBreadcrumb } from "./breadcrumb-nav";
+export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb-nav";
