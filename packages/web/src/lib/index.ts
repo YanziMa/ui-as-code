@@ -51047,3 +51047,10 @@ export { type SplitDirection as SpltPaneUtl_SplitDirection, type SplitBehavior, 
 export { type SplitOrientation, type SplitCollapseDirection, type SplitPaneOptions as SpltPane_SplitPaneOptions, type SplitPaneInstance as SpltPane_SplitPaneInstance, createSplitPane } from "./split-pane";
 // --- split-view-utils ---
 export { type SplitDirection as SpltVwUtl_SplitDirection, type SplitCollapseMode, type SplitPaneConfig, type SplitViewOptions, type SplitViewInstance, createSplitView } from "./split-view-utils";
+
+// --- split-view ---
+export { type SplitDirection as SpltVw_SplitDirection, type PaneConfig as SpltVw_PaneConfig, type SplitViewOptions, type SplitViewState, type SplitViewInstance, createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+// --- splitter-utils ---
+export { type SplitterOrientation, type SplitterUnit, type SplitterPane as SpltUtl_SplitterPane, type SplitterOptions as SpltUtl_SplitterOptions, type SplitterInstance as SpltUtl_SplitterInstance, createSplitter } from "./splitter-utils";
+// --- splitter ---
+export { type SplitButtonSize as Splt_SplitButtonSize, type SplitButtonVariant, type SplitButtonItem, type SplitButtonOptions as Splt_SplitButtonOptions, type SplitButtonInstance as Splt_SplitButtonInstance, createSplitButton } from "./splitter";
