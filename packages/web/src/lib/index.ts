@@ -27836,3 +27836,15 @@ export type { Placement, TriggerMode, TooltipOptions, VirtualElement, TooltipIns
 // --- Modal Dialog ---
 export { createModal } from "./modal-dialog";
 export type { ModalSize, ModalVariant, ModalOptions, ModalInstance } from "./modal-dialog";
+
+// --- Form Validator ---
+export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom } from "./form-validator";
+export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldConfig, FormValidatorOptions } from "./form-validator";
+
+// --- Accordion Manager ---
+export { createAccordion } from "./accordion-manager";
+export type { AccordionMode, ExpandDirection, AccordionPanel, AccordionOptions, AccordionInstance } from "./accordion-manager";
+
+// --- Tabs Manager ---
+export { createTabs } from "./tabs-manager";
+export type { TabVariant, TabPosition, TabOverflowMode, TabPanel, TabsOptions, TabsInstance } from "./tabs-manager";
