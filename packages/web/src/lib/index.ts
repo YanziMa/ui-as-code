@@ -18388,3 +18388,34 @@ export type {
   CheckboxSize,
   CheckboxVariant,
 } from "./checkbox-group";
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+export type {
+  SliderOptions,
+  SliderInstance,
+  SliderMark,
+} from "./slider";
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+} from "./progress";
+export type {
+  ProgressState,
+  ProgressCallback,
+  ProgressController,
+  MultiProgressController,
+  StepProgressController,
+} from "./progress";
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  RatingOptions,
+  RatingInstance,
+  StarIconType,
+} from "./rating";
