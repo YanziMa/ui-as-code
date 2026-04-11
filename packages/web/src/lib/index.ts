@@ -24065,3 +24065,15 @@ export type { RangeSliderOptions, RangeSliderInstance } from "./range-slider";
 // --- rating ---
 export { RatingManager, createRating } from "./rating";
 export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+
+// --- toggle ---
+export { ToggleManager, createToggle } from "./toggle";
+export type { ToggleSize, ToggleVariant, ToggleOptions, ToggleInstance } from "./toggle";
+
+// --- switch ---
+export { createSwitch } from "./switch";
+export type { SwitchSize, SwitchVariant, SwitchOptions, SwitchInstance } from "./switch";
+
+// --- checkbox-group ---
+export { createCheckboxGroup } from "./checkbox-group";
+export type { CheckboxSize, CheckboxVariant, CheckboxOption, CheckboxGroupOptions, CheckboxGroupInstance } from "./checkbox-group";
