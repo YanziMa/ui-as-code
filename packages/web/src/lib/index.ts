@@ -24029,3 +24029,15 @@ export type { SwitcherItem, QuickSwitcherOptions, QuickSwitcherInstance } from "
 // --- search-dialog ---
 export { createSearchDialog } from "./search-dialog";
 export type { SearchResult, SearchCategory, SearchDialogOptions, SearchDialogInstance } from "./search-dialog";
+
+// --- autocomplete ---
+export { AutocompleteManager, createAutocomplete } from "./autocomplete";
+export type { AutocompleteOption, AutocompleteOptions, AutocompleteInstance } from "./autocomplete";
+
+// --- typeahead ---
+export { TypeaheadManager, createTypeahead } from "./typeahead";
+export type { TypeaheadItem, TypeaheadOptions, TypeaheadInstance } from "./typeahead";
+
+// --- tag-input ---
+export { TagInputManager, createTagInput } from "./tag-input";
+export type { TagItem, TagInputOptions, TagInputInstance } from "./tag-input";
