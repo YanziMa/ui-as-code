@@ -31902,3 +31902,31 @@ export {
   type CollapseGroupOptions,
   type CollapseGroupInstance,
 } from "./collapse";
+
+// --- Modal ---
+export {
+  createModal,
+  type ModalOptions,
+  type ModalInstance,
+  type ModalSize,
+  type ModalPosition,
+} from "./modal";
+
+// --- Drawer ---
+export {
+  createDrawer,
+  type DrawerOptions,
+  type DrawerInstance,
+  type DrawerSide,
+  type DrawerSize,
+} from "./drawer";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+  type PopoverOptions,
+  type PopoverInstance,
+  type PopoverTrigger,
+  type PopoverPlacement,
+} from "./popover";
