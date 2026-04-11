@@ -25643,3 +25643,15 @@ export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromCl
 // --- shortcuts ---
 export type { ShortcutBinding, ShortcutGroup, ShortcutManagerOptions, ShortcutInstance } from "./shortcuts";
 export { createShortcutManager } from "./shortcuts";
+
+// --- drag-and-drop ---
+export type { DragMode, DropPosition, DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig } from "./drag-and-drop";
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+
+// --- sortable ---
+export type { SortableItem, SortableOptions, SortableInstance } from "./sortable";
+export { SortableList, createSortable } from "./sortable";
+
+// --- resizable-panels ---
+export type { PanelDirection, PanelCollapseMode, PanelConfig, ResizablePanelsOptions, ResizablePanelsInstance } from "./resizable-panels";
+export { createResizablePanels } from "./resizable-panels";
