@@ -40110,3 +40110,34 @@ export {
   type DrawerSide,
   type DrawerSize,
 } from "./drawer-utils";
+// --- Toast ---
+export {
+  createToastManager,
+  getToastManager,
+  destroyToastManager,
+  showToast,
+  type ToastOptions,
+  type ToastManagerConfig,
+  type ToastManagerInstance,
+  type ToastPosition,
+  type ToastType,
+} from "./toast-utils";
+
+// --- Tooltip ---
+export {
+  createTooltip,
+  type TooltipOptions,
+  type TooltipInstance,
+  type TooltipPlacement,
+  type TooltipTrigger,
+} from "./tooltip-utils";
+
+// --- Popover ---
+export {
+  createPopover,
+  type PopoverOptions,
+  type PopoverInstance,
+  type PopoverPlacement,
+  type PopoverTrigger,
+  type VirtualElement,
+} from "./popover-utils";
