@@ -31399,3 +31399,14 @@ export type { ToastOptions, ToastInstance, ToastManagerConfig, ToastType, ToastP
 // --- Modal ---
 export { createModal } from "./modal";
 export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "/modal";
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// --- Dropdown ---
+export { createDropdown } from "./dropdown";
+export type { DropdownItem, DropdownSeparator, DropdownGroup, DropdownEntry, DropdownOptions, DropdownInstance, DropdownPlacement } from "/dropdown";
