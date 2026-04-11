@@ -20809,3 +20809,36 @@ export {
   ImageViewerManager,
   createImageViewer,
 } from "./image-viewer";
+
+// --- Tour ---
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour";
+export {
+  createTour,
+} from "./tour";
+
+// --- Segmented Control ---
+export type {
+  SegmentedOption,
+  SegmentedSize,
+  SegmentedControlOptions,
+  SegmentedControlInstance,
+} from "./segmented-control";
+export {
+  createSegmentedControl,
+} from "./segmented-control";
+
+// --- Skeleton Loader ---
+export type {
+  SkeletonShape,
+  SkeletonAnimation,
+  SkeletonItem,
+  SkeletonOptions,
+  SkeletonInstance,
+} from "./skeleton-loader";
+export {
+  createSkeleton,
+} from "./skeleton-loader";
