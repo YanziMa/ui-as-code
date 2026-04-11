@@ -21342,3 +21342,41 @@ export type {
 export {
   createCard,
 } from "./card";
+
+// --- Button ---
+export type {
+  ButtonVariant,
+  ButtonSize,
+  ButtonOptions,
+  ButtonGroupOptions,
+  ButtonGroupInstance,
+} from "./button";
+export {
+  createButton,
+  createButtonGroup,
+} from "./button";
+
+// --- Spinner ---
+export type {
+  SpinnerVariant,
+  SpinnerSize,
+  SpinnerOptions,
+} from "./spinner";
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+} from "./spinner";
+
+// --- Avatar ---
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar";
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
