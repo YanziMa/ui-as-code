@@ -45981,3 +45981,33 @@ export {
   type InfiniteListConfig,
   type InfiniteListState,
 } from "./infinite-list-utils";
+// infinite-scroll-utils
+export {
+  createInfiniteScroll,
+  type InfiniteScrollOptions as InfScrollUtilsOptions,
+  type InfiniteScrollInstance as InfScrollUtilsInstance,
+} from "./infinite-scroll-utils";
+
+// infinite-scroll
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions as InfScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
+
+// initials-utils
+export {
+  getInitials,
+  getFullInitials,
+  getAbbreviation,
+  createInitials,
+  createInitialsGroup,
+  hashString,
+  getColorForString,
+  getContrastColor,
+  type InitialsOptions,
+  type InitialsStyle,
+  type InitialsSize,
+  type InitialsGroupOptions,
+} from "./initials-utils";
