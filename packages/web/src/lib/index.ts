@@ -40407,3 +40407,14 @@ export type { ResizeObserverOptions, ResizeObserverInstance, SizeInfo, SizeDiff,
 // --- Mutation Observer ---
 export { createEnhancedMutationObserver } from "./mutation-observer-utils";
 export type { MutationObserverOptions, MutationObserverInstance, MutationRecordEx, ChangeSummary, MutationFilter, MutationAction } from "./mutation-observer-utils";
+// --- CSS-in-JS ---
+export { createStyleSheet, injectCSS, removeCSS, fontFace, createBreakpointClasses, injectBreakpointStyles, varsToCSS } from "./css-in-js-utils";
+export type { CssInJsOptions, StyleSheetInstance, StyleRule, KeyframeConfig, ThemeVars, MediaQueryConditions } from "./css-in-js-utils";
+
+// --- DOM Utilities ---
+export { createEl, div, span, p, btn, createSvg, $, $$, requireSelector, byId, byClass, byTag, walkUp, walkDown, nextSibling, prevSibling, siblings, siblingIndex, isLastChild, isFirstChild, empty, setChildren, insertAtIndex, moveToIndex, swapElements, wrap, unwrap, htmlToFragment, appendHtml, prependHtml, delegate, delegateClick, renderTemplate, renderInto } from "./dom-utils";
+export type { CreateElementOptions, QueryOptions, DomDiffResult } from "./dom-utils";
+
+// --- Event Bus ---
+export { EventBus, getEventBus, destroyGlobalBus } from "./event-bus-utils";
+export type { EventBusOptions, Subscription, EventHandler, EventMiddleware, EventKey } from "./event-bus-utils";
