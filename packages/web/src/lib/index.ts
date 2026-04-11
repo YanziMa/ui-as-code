@@ -24903,3 +24903,15 @@ export {
   createFileUpload, createRangeSlider, createRating as createRatingField,
   createColorPicker
 } from "./form-field";
+
+// --- Data Table ---
+export type { Column, SortDirection, SortState, FilterState, DataTableOptions, DataTableInstance } from "./data-table";
+export { DataTableManager, createDataTable } from "./data-table";
+
+// --- Virtual Table ---
+export type { VirtualColumn, VirtualTableOptions, VirtualTableInstance } from "./virtual-table";
+export { VirtualTableManager, createVirtualTable } from "./virtual-table";
+
+// --- Tree View ---
+export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
+export { TreeView } from "./tree-view";
