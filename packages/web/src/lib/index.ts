@@ -40363,3 +40363,14 @@ export type { PaletteItem, CommandPaletteOptions, CommandPaletteInstance } from 
 // --- Autocomplete ---
 export { createAutocomplete } from "./autocomplete-utils";
 export type { AutocompleteItem, AutocompleteOptions, AutocompleteInstance } from "./autocomplete-utils";
+// --- Resizable ---
+export { createResizable } from "./resizable-utils";
+export type { ResizableOptions, ResizableInstance, ResizeEdge } from "./resizable-utils";
+
+// --- Draggable ---
+export { createDraggable } from "./draggable-utils";
+export type { DraggableOptions, DraggableInstance, DragAxis, DragConstraints, SnapConfig, DropZone } from "./draggable-utils";
+
+// --- Sortable ---
+export { createSortableList } from "./sortable-utils";
+export type { SortableListOptions, SortableListInstance, SortableItemConfig, SortAnimation } from "./sortable-utils";
