@@ -24669,3 +24669,14 @@ export type { FileTreeOptions, FileTreeInstance, FileTreeNode, FileType } from "
 // --- Media Gallery ---
 export { createMediaGallery } from "./media-gallery";
 export type { MediaGalleryOptions, MediaGalleryInstance, MediaItem, MediaType, GalleryLayout } from "./media-gallery";
+// --- code-editor ---
+export { CodeEditorManager, createCodeEditor } from "./code-editor";
+export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
+
+// --- terminal-emulator ---
+export { AnsiParser, TerminalBuffer, TerminalEmulator, createTerminalEmulator } from "./terminal-emulator";
+export type { AnsiParserOptions, TerminalBufferOptions, TerminalEmulatorOptions, TerminalEmulatorInstance, Cell, SgrAttributes } from "./terminal-emulator";
+
+// --- markdown-renderer ---
+export { parseMarkdown, renderToHtml, mdToHtml, generateToc, renderToc, extractFrontMatter, extractText, countWords, readingTime } from "./markdown-renderer";
+export type { MdNode, MdNodeType, MdRenderOptions, TocEntry, FrontMatter } from "./markdown-renderer";
