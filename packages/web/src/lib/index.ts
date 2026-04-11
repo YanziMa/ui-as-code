@@ -24939,3 +24939,15 @@ export { Scheduler, parseCronExpression, cronMatches, getNextCronRun } from "./s
 // --- Color Palette ---
 export type { PaletteScheme, ColorShade, PaletteColor, ColorPalette, ColorPaletteOptions, ColorPaletteInstance } from "./color-palette";
 export { contrastRatio, ColorPaletteManager, createColorPalette } from "./color-palette";
+
+// --- Statistics Chart ---
+export type { ChartType, ChartDataPoint, ChartSeries, ChartOptions, ChartInstance } from "./statistics-chart";
+export { createChart } from "./statistics-chart";
+
+// --- Heatmap ---
+export type { HeatmapType, ColorScale, HeatmapCell, HeatmapOptions, HeatmapInstance } from "./heatmap";
+export { createHeatmap } from "./heatmap";
+
+// --- Sparkline ---
+export type { SparklineType, SparklineOptions, SparklineInstance } from "./sparkline";
+export { createSparkline } from "./sparkline";
