@@ -28885,3 +28885,15 @@ export type { InjectedStyle, StyleInjectionOptions, StyleInjectionInstance } fro
 // --- css-custom-properties ---
 export { createCssCustomProperties, getCssVar, setCssVar, getAllCssVars } from "./css-custom-properties";
 export type { CssVarDefinition, CssVarAnimationOptions, CssCustomPropertiesOptions, CssCustomPropertiesInstance } from "./css-custom-properties";
+
+// --- dom-fragment ---
+export { createFragment, createFragmentFromNodes, insertFragment, batchInsert, extractRange, extractFromSelection, moveChildren, replaceContent, createTemplate, buildElement, measureDomOperation } from "./dom-fragment";
+export type { FragmentOptions, BatchInsertOptions, RangeSelection } from "./dom-fragment";
+
+// --- template-engine ---
+export { TemplateEngine, createTemplateEngine, renderTemplate, registerBuiltinHelpers, unescapeHtml } from "./template-engine";
+export type { TemplateContext, TemplateOptions, TemplateError, PartialTemplate, HelperFunction } from "./template-engine";
+
+// --- html-sanitizer ---
+export { sanitizeHtml, sanitize, stripHtml, escapeHtmlEntities, scanForXss } from "./html-sanitizer";
+export type { SanitizeLevel, SanitizeOptions } from "./html-sanitizer";
