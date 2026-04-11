@@ -24573,3 +24573,15 @@ export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from ".
 // --- Error Boundary ---
 export { createErrorBoundary, ErrorBoundaryManager } from "./error-boundary";
 export type { ErrorBoundaryOptions, ErrorBoundaryInstance, ErrorBoundaryError } from "./error-boundary";
+
+// --- Progress Indicator ---
+export { createProgressBar, createCircularProgress, createStepProgress } from "./progress-indicator";
+export type { ProgressBarOptions, ProgressBarInstance, CircularProgressOptions, CircularProgressInstance, StepProgressOptions, StepProgressInstance, ProgressVariant, ProgressSize } from "./progress-indicator";
+
+// --- Badge ---
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeOptions, BadgeVariant, BadgePosition, BadgeSize, StatusDotOptions } from "./badge";
+
+// --- Avatar ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar";
