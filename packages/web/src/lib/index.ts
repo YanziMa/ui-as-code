@@ -24300,3 +24300,33 @@ export {
   type CardHeaderOptions,
   type CardImageOptions,
 } from "./card";
+
+// --- Statistic ---
+export {
+  StatManager,
+  createStat,
+  type StatOptions,
+  type StatInstance,
+  type TrendDirection,
+  type StatVariant,
+} from "./statistic";
+
+// --- Hero Section ---
+export {
+  createHeroSection,
+  type HeroOptions,
+  type HeroInstance,
+  type HeroLayout,
+  type HeroHeight,
+  type HeroButton,
+} from "./hero-section";
+
+// --- Footer ---
+export {
+  createFooter,
+  type FooterOptions,
+  type FooterInstance,
+  type FooterLink,
+  type FooterColumn,
+  type SocialLink,
+} from "./footer";
