@@ -31480,3 +31480,15 @@ export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
 // --- Avatar ---
 export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
 export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar";
+
+// --- Progress ---
+export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
+export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
+
+// --- Skeleton ---
+export { createSkeleton, createTextSkeleton, createHeadingSkeleton, createAvatarSkeleton, createCardSkeleton, createTableSkeleton, wrapWithSkeleton } from "./skeleton";
+export type { SkeletonOptions, SkeletonTextOptions, SkeletonAvatarOptions, SkeletonCardOptions, SkeletonTableOptions } from "./skeleton";
+
+// --- Badge ---
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeVariant, BadgePosition, BadgeSize, BadgeOptions, StatusDotOptions } from "./badge";
