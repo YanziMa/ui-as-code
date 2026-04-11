@@ -41414,3 +41414,15 @@ export { createContextMenu } from "./context-menu-utils";
 // --- popover-utils ---
 export type { PopoverPlacement, PopoverTrigger, VirtualElement, PopoverOptions, PopoverInstance } from "./popover-utils";
 export { createPopover } from "./popover-utils";
+
+// --- overlay-utils ---
+export type { OverlayPlacement, OverlayAnimation, OverlayOptions, OverlayInstance } from "./overlay-utils";
+export { createOverlay, getNextZIndex, resetZIndexCounter } from "./overlay-utils";
+
+// --- drawer-utils ---
+export type { DrawerSide, DrawerSize, DrawerOptions, DrawerInstance } from "./drawer-utils";
+export { createDrawer } from "./drawer-utils";
+
+// --- split-view-utils ---
+export type { SplitDirection, SplitCollapseMode, SplitPaneConfig, SplitViewOptions, SplitViewInstance } from "./split-view-utils";
+export { createSplitView } from "./split-view-utils";
