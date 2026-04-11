@@ -44851,3 +44851,12 @@ export { classifyError as euClassifyError, isRetryable as euIsRetryable, enrichE
 // --- event-bus ---
 export type { EventCallback, EventMiddleware, Subscription, EmittedEvent, EventBusOptions } from "./event-bus";
 export { EventBus, createEventBus } from "./event-bus";
+
+// --- event-utils ---
+export { createCustomEvent, dispatchCustomEvent, onCustomEvent, throttleEvent, debounceEvent, once as euOnce, waitForEvent, delegateEvent as euDelegateEvent, preventDefault, stopPropagation, stopEvent } from "./event-utils";
+// --- event-delegation ---
+export type { DelegatedHandler, DelegationEntry, DelegationPoolOptions, DelegationPoolInstance } from "./event-delegation";
+export { createDelegationPool, delegate, multiDelegate } from "./event-delegation";
+// --- executor ---
+export type { TaskStatus, TaskPriority, Task, ExecutorOptions, ExecutorInstance, RateLimitOptions } from "./executor";
+export { createExecutor, createRateLimitedExecutor } from "./executor";
