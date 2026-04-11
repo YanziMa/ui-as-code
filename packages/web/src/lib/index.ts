@@ -29499,3 +29499,15 @@ export type { PivotTableOptions, PivotTableInstance, PivotDimension, PivotMeasur
 // --- fireworks ---
 export { createFireworks } from "./fireworks";
 export type { FireworksOptions, FireworksInstance, FireworkType, Particle, BurstConfig } from "./fireworks";
+
+// --- sunburst-chart ---
+export { createSunburstChart } from "./sunburst-chart";
+export type { SunburstOptions, SunburstInstance, SunburstNode } from "./sunburst-chart";
+
+// --- scatter-plot ---
+export { createScatterPlot } from "./scatter-plot";
+export type { ScatterOptions, ScatterInstance, ScatterPoint, ScatterSeries } from "./scatter-plot";
+
+// --- gauge-meter ---
+export { createGaugeMeter } from "./gauge-meter";
+export type { GaugeOptions, GaugeInstance, ThresholdZone, GaugeVariant } from "./gauge-meter";
