@@ -30723,3 +30723,64 @@ export {
   serializeForHash,
   objectHash,
 } from "./hashing";
+
+// --- Functional ---
+export {
+  compose,
+  pipe,
+  curry2,
+  curry3,
+  partial,
+  partialRight,
+  just,
+  nothing,
+  fromNullable,
+  left,
+  right,
+  tryCatch,
+  tryCatchAsync,
+  Lazy,
+  lazy,
+  trampoline,
+  cont,
+  done,
+  identity,
+  constant,
+  noop,
+  tap,
+  also,
+  when,
+  defaultTo,
+  alwaysTrue,
+  alwaysFalse,
+  not,
+  flip,
+} from "./functional";
+export type { Maybe, Either, TrampolineResult } from "./functional";
+
+// --- Patterns ---
+export { createSingleton, Observable, EventBus, StrategyRunner, CommandInvoker, Mediator, FiniteStateMachine, createIterator, range, cycle, repeat, take, skip, zipIterators } from "./patterns";
+export type { Observer, Subscription, ObservableLike, EventHandler, StrategyContext, Strategy, Command, MediatorHandler, StateTransition, StateMachineConfig } from "./patterns";
+
+// --- Comparators ---
+export {
+  asc,
+  desc,
+  nullSafe,
+  naturalCompare,
+  naturalSort,
+  localeCompare as localeCompareFn,
+  caseInsensitive,
+  multiKeyComparator,
+  sortBy,
+  sortByMultiple,
+  byProperty,
+  rankValues,
+  percentileRank,
+  topN,
+  bottomN,
+  partitionBy,
+  insertionPoint,
+  binarySearch,
+} from "./comparators";
+export type { Comparator, SortDirection, SortSpec } from "./comparators";
