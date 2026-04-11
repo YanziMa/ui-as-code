@@ -26746,3 +26746,14 @@ export type { BadgeOptions, BadgeVariant, BadgeSize, BadgePosition, StatusDotOpt
 // avatar.ts
 export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
 export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar";
+// collapse.ts
+export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
+export type { CollapseOptions, CollapseInstance, CollapseGroupOptions, CollapseGroupInstance, CollapseSize, CollapseVariant } from "./collapse";
+
+// tabs.ts
+export { TabsManager, createTabs } from "./tabs";
+export type { TabsOptions, TabsInstance, TabItem, TabOrientation, TabVariant } from "./tabs";
+
+// accordion.ts
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionOptions, AccordionInstance, AccordionItem, AccordionMode } from "./accordion";
