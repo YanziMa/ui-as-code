@@ -49668,3 +49668,32 @@ export type {
   ReviewListInstance as RevListInst,
 } from "./review-utils";
 export { createReviewCard, createReviewList } from "./review-utils";
+
+// --- ribbon.ts ---
+export type {
+  RibbonPosition as RibPosition,
+  RibbonVariant as RibVariant,
+  RibbonSize as RibSize,
+  RibbonOptions as RibOpts,
+  RibbonInstance as RibInst,
+} from "./ribbon";
+export { createRibbon } from "./ribbon";
+
+// --- rich-text-editor.ts ---
+export type {
+  EditorCommand as RTECmd,
+  ToolbarButton as RTEBtn,
+  RichTextEditorOptions as RTEOpts,
+  RichTextEditorInstance as RTEInst,
+} from "./rich-text-editor";
+export { createRichTextEditor } from "./rich-text-editor";
+
+// --- rich-text-toolbar.ts ---
+export type {
+  ToolbarButtonId as RTTbBtnId,
+  ToolbarButton as RTTbBtn,
+  RichTextToolbarOptions as RTTbOpts,
+  RichTextToolbarInstance as RTTbInst,
+} from "./rich-text-toolbar";
+export { DEFAULT_BUTTONS } from "./rich-text-toolbar";
+export { createRichTextToolbar } from "./rich-text-toolbar";
