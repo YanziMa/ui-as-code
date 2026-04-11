@@ -24489,3 +24489,12 @@ export { createContext, ThemeContext, AuthContext, I18nContext, ResponsiveContex
 
 // --- Masonry Layout ---
 export { createMasonry, MasonryManager, type MasonryOptions, type MasonryItem, type MasonryInstance } from "./masonry";
+
+// --- Accordion ---
+export { createAccordion, AccordionManager, type AccordionOptions, type AccordionItem, type AccordionMode, type AccordionInstance } from "./accordion";
+
+// --- Collapse ---
+export { createCollapse, createCollapseGroup, CollapseManager, type CollapseOptions, type CollapseSize, type CollapseVariant, type CollapseInstance, type CollapseGroupOptions, type CollapseGroupInstance } from "./collapse";
+
+// --- Tabs ---
+export { createTabs, TabsManager, type TabsOptions, type TabItem, type TabsInstance, type TabOrientation, type TabVariant } from "./tabs";
