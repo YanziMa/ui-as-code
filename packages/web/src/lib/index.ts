@@ -29420,3 +29420,22 @@ export type {
   ActionBarVariant,
   ActionBarSize,
 } from "./action-bar.js";
+// --- Batch 986: Ribbon, Stepper Horizontal, Tooltip V2 ---
+export { createRibbon } from "./ribbon.js";
+export type { RibbonOptions, RibbonInstance, RibbonPosition, RibbonVariant, RibbonSize } from "./ribbon.js";
+export { createStepperHorizontal } from "./stepper-horizontal.js";
+export type {
+  StepperHorizontalOptions,
+  StepperHorizontalInstance,
+  StepConfig,
+  StepStatus,
+  StepperVariant,
+  StepperSize,
+} from "./stepper-horizontal.js";
+export { createTooltipV2 } from "./tooltip-v2.js";
+export type {
+  TooltipV2Options,
+  TooltipV2Instance,
+  TooltipPlacement,
+  TooltipTrigger,
+} from "./tooltip-v2.js";
