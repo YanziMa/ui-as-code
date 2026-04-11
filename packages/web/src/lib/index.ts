@@ -44880,3 +44880,13 @@ export { createFileUpload } from "./file-upload";
 // --- file-system ---
 export type { FileType, WatchEventType, VfsEntry, FileSystemOptions, WatchEvent, FileSystemStats, SearchResult, TreeViewNode } from "./file-system";
 export { VirtualFileSystem } from "./file-system";
+
+// --- filter-utils ---
+export { filter, reject, find, findLast, some, every, findIndex, and, or, not, alwaysTrue, alwaysFalse, eq, neq, gt, lt, gte, lte, contains, startsWith, endsWith, matches, inList, notInList, isEmpty as fuIsEmpty, isNotEmpty, between, isString, isNumber, isTruthy, distinct, pluckUnique, groupBy, groupByFn, countBy, partition, sortBy, sortByDesc, multiSort, naturalSort, paginate, pipeline, filterMap, flatten, deepFlatten, zip, chunk, take, takeLast, skip, takeWhile, dropWhile } from "./filter-utils";
+export type { Predicate, Comparator, Mapper, Reducer, PaginatedResult } from "./filter-utils";
+// --- filter ---
+export type { FilterCriteria, FilterOperator, FilterState, FilterResult, FilterManagerOptions } from "./filter";
+export { applyCriteria, getFieldValue, filterItems, createFilterManager, fuzzyScore, fuzzySearch, bindFilterInput } from "./filter";
+// --- floating-label ---
+export type { FloatingLabelVariant, FloatingLabelSize, AnimationStyle, FloatingLabelOptions, FloatingLabelInstance } from "./floating-label";
+export { createFloatingLabel, createFloatingLabels } from "./floating-label";
