@@ -42913,3 +42913,44 @@ export {
   type AnimatableOptions,
   type AnimatableInstance,
 } from "./animatable";
+// --- animate-on-scroll-utils ---
+export {
+  createAnimateOnScroll,
+  type AnimateTarget as AnimateOnScrollTarget,
+  type AnimateOnScrollOptions,
+  type AnimateOnScrollInstance,
+  type AnimationDirection,
+  type AnimationEasing,
+} from "./animate-on-scroll-utils";
+
+// --- animate ---
+export {
+  Animator,
+  staggerAnimate,
+  scrollTrigger,
+  easings as animateEasings,
+  resolveEasing,
+  type Keyframe as AnimateKeyframe,
+  type AnimationOptions,
+  type AnimationInstance,
+  type StaggerOptions,
+  type TimelineOptions,
+} from "./animate";
+
+// --- animation-engine ---
+export {
+  easings as engineEasings,
+  getEasing,
+  springAnimate,
+  AnimationTimeline as EngineAnimationTimeline,
+  createScrollAnimation,
+  staggerElements,
+  animateCounter,
+  createParallax,
+  type EasingFunction as EngineEasingFunction,
+  type SpringConfig,
+  type SpringState,
+  type Keyframe as EngineKeyframe,
+  type AnimationTrack,
+  type ScrollAnimationConfig,
+} from "./animation-engine";
