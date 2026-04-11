@@ -21299,3 +21299,46 @@ export {
   SelectManager,
   createSelect,
 } from "./select";
+
+// --- Badge ---
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+
+// --- Divider ---
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider";
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+} from "./divider";
+
+// --- Card ---
+export type {
+  CardVariant,
+  CardSize,
+  CardHeaderOptions,
+  CardImageOptions,
+  CardOptions,
+  CardInstance,
+} from "./card";
+export {
+  createCard,
+} from "./card";
