@@ -26735,3 +26735,14 @@ export type { SpinnerOptions, SpinnerVariant, SpinnerSize } from "./spinner";
 // progress.ts
 export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
 export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
+// empty-state.ts
+export { EmptyStateManager, createEmptyState } from "./empty-state";
+export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+
+// badge.ts
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeOptions, BadgeVariant, BadgeSize, BadgePosition, StatusDotOptions } from "./badge";
+
+// avatar.ts
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar";
