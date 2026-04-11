@@ -27762,3 +27762,10 @@ export {
   generatePaletteAdvanced,
 } from "./color-picker";
 export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Batch 876: Chart, Kanban, Markdown ---
+export { ChartManager, createChart } from "./chart";
+export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoint } from "./chart";
+export { KanbanManager, createKanban } from "./kanban";
+export type { KanbanOptions, KanbanInstance, KanbanCard, KanbanColumn, KanbanSwimlane, KanbanLabel, CardPriority as KanbanCardPriority } from "./kanban";
+export { mdToHtml, stripMd } from "./markdown";
