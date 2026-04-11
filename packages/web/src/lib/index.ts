@@ -29734,3 +29734,14 @@ export type { UploadOptions, UploadInstance, UploadFile, UploadStatus } from "./
 // --- pagination ---
 export { PaginationManager, createPagination } from "./pagination";
 export type { PaginationOptions, PaginationInstance } from "./pagination";
+// --- context-menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem, ContextMenuPosition } from "./context-menu";
+
+// --- split-view ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, SplitDirection } from "./split-view";
+
+// --- breadcrumb ---
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb";
