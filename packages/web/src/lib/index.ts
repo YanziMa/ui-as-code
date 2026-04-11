@@ -27800,3 +27800,11 @@ export { SignaturePadManager, createSignaturePad } from "./signature-pad";
 export type { SignaturePadOptions, SignaturePadInstance, Stroke, StrokePoint } from "./signature-pad";
 export { ColorSwatchesManager, createColorSwatches } from "./color-swatches";
 export type { ColorSwatchesOptions, ColorSwatchesInstance, ColorPalette, ColorSwatch } from "./color-swatches";
+
+// --- Batch 881: Context Provider, Event Bus, Virtual List ---
+export { createContext, ThemeContext, AuthContext, I18nContext, ResponsiveContext, createResponsiveProvider } from "./context-provider";
+export type { ContextOptions, ProviderInstance, ConsumerHandle, Context, ThemeContextValue, AuthContextValue, I18nContextValue, ResponsiveContextValue } from "./context-provider";
+export { EventBus, createEventBus } from "./event-bus";
+export type { EventBusOptions, Subscription, EmittedEvent, EventCallback, EventMiddleware } from "./event-bus";
+export { createVirtualList } from "./virtual-list";
+export type { VirtualListOptions, VirtualListInstance, VirtualListItem } from "./virtual-list";
