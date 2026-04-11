@@ -47434,3 +47434,21 @@ export { createOnboarding as createOBWizard } from "./onboarding-wizard";
 export type { OnboardingStepType as OBStepType, OnboardingField as OBField, OnboardingStep as OBStep } from "./onboarding";
 export type { OnboardingOptions as OBOpts, OnboardingInstance as OBInst } from "./onboarding";
 export { createOnboarding as createOnboardingFlow } from "./onboarding";
+
+// --- option ---
+export type { Option as OptOption } from "./option";
+export { Some as OptSome, None, fromNullable as OptFromNull, fromPredicate as OptFromPred } from "./option";
+export { tryOption as OptTry, tryOptionAsync as OptTryAsync, liftA2 as OptLiftA2 } from "./option";
+export { sequence as OptSequence, firstSome as OptFirstSome, lastSome as OptLastSome } from "./option";
+export { at as OptAt, prop as OptProp, coalesce as OptCoalesce } from "./option";
+
+// --- org-chart ---
+export type { OrgNode as OrgCNode, OrgChartOptions as OrgCOpts, OrgChartInstance as OrgCInst } from "./org-chart";
+export { createOrgChart } from "./org-chart";
+
+// --- orm-lite ---
+export type { FieldType as OLFieldType, FieldDefinition as OLFieldDef, SchemaDefinition as OLSchemaDef } from "./orm-lite";
+export type { ModelInstance as OLModelInst, QueryOptions as OLQueryOpts, FilterCondition as OLFilterCond } from "./orm-lite";
+export type { FilterOperator as OLFilterOp, OrderByClause as OLOrderBy, RelationInclude as OLRelInc } from "./orm-lite";
+export type { MigrationOperation as OLMigOp, MigrationResult as OLMigRes } from "./orm-lite";
+export { QueryBuilder as OLQueryBuilder, Model as OLModel, OrmLiteDB, createDatabase } from "./orm-lite";
