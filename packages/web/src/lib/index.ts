@@ -47728,3 +47728,94 @@ export {
   PerfMonitor as PMonitor,
   createPerfMonitor as PMCreate,
 } from "./perf-monitor";
+
+// --- perf-utils.ts ---
+export type {
+  PerformanceMark as PerfUMark,
+  FrameStats as PerfUFrameStats,
+  MemoryInfo as PerfUMemoryInfo,
+  ResourceTimingEntry as PerfURESEntry,
+  FPSMonitorOptions as PerfUFPSOpts,
+  FPSMonitorInstance as PerfUFPSInst,
+} from "./perf-utils";
+export {
+  mark as PerfUMarkFn,
+  measure as PerfUMeasure,
+  endMark as PerfUEndMark,
+  clearMarks as PerfUClearMarks,
+  perfTimer as PerfUTimer,
+  perfTimerAsync as PerfUTimerAsync,
+  createFPSMonitor as PerfUCreateFPS,
+  getMemoryInfo as PerfUGetMemory,
+  formatBytes as PerfUFormatBytes,
+  formatMemoryInfo as PerfUFormatMemInfo,
+  getResourceTimings as PerfUGetResTimings,
+  getResourcesByType as PerfUGetResByType,
+  getSlowestResources as PerfUSlowestRes,
+  getLargestResources as PerfULargestRes,
+  getNavigationTiming as PerfUNavTiming,
+  observeLongTasks as PerfUObserveLTasks,
+  observeLayoutShift as PerfUObserveLShift,
+  FrameBudgetTracker as PerfUBudgetTracker,
+} from "./perf-utils";
+
+// --- perf.ts ---
+export type {
+  PerfMark as PPerfMark,
+  PerfMeasure as PPerfMeasure,
+  FpsStats as PFpsStats,
+  MemoryInfo as PMemoryInfo,
+  ResourceTimingEntry as PResTimingEntry,
+} from "./perf";
+export {
+  perfMark as PPerfMarkFn,
+  perfMeasure as PPerfMeasureFn,
+  getPerfMeasures as PGetMeasures,
+  clearPerfMarks as PClearMarks,
+  timeSync as PTimeSync,
+  createFpsCounter as PCreateFpsCounter,
+  getMemoryUsage as PGetMemoryUsage,
+  formatMemoryBytes as PFormatMemoryBytes,
+  pollMemory as PPollMemory,
+  getResourceTimings as PGetResourceTimings,
+  getPageLoadTiming as PGetPageLoadTiming,
+  observeLongTasks as PObserveLongTasks,
+  observeLayoutShifts as PObserveLayoutShifts,
+  getFCP as PGetFCP,
+  observeLCP as PObserveLCP,
+  getCoreWebVitals as PGetCoreWebVitals,
+  reportCustomMetric as PReportCustomMetric,
+} from "./perf";
+
+// --- performance-monitor.ts ---
+export type {
+  WebVitalName as PerfMonVitalName,
+  CustomMetricType as PerfMonMetricType,
+  TrendDirection as PerfMonTrendDir,
+  AlertSeverity as PerfMonAlertSev,
+  ResourceCategory as PerfMonResCat,
+  MetricCallback as PerfMonMetricCb,
+  AlertCallback as PerfMonAlertCb,
+  WebVitalMetric as PerfMonVitalMetric,
+  CustomMetricEntry as PerfMonCustomEntry,
+  ResourceTimingEntry as PerfMonResEntry,
+  NavigationTimingData as PerfMonNavTiming,
+  MemorySnapshot as PerfMonMemSnap,
+  LongTaskEntry as PerfMonLongTask,
+  FPSFrameSample as PerfMonFPSSample,
+  PerformanceScore as PerfMonScore,
+  BudgetRule as PerfMonBudgetRule,
+  PerformanceAlert as PerfMonAlert,
+  HistoricalDataPoint as PerfMonHistoryPt,
+  TrendAnalysis as PerfMonTrendAnal,
+  ABTestComparison as PerfMonABTest,
+  PerformanceMonitorConfig as PerfMonConfig,
+  BudgetRuleInput as PerfMonBudgetInput,
+} from "./performance-monitor";
+export {
+  PerformanceMonitor as PerfMonMonitor,
+  createPerformanceMonitor as PerfMonCreate,
+  getDefaultMonitor as PerfMonGetDefault,
+  captureWebVitals as PerfMonCaptureVitals,
+  checkBrowserSupport as PerfMonCheckSupport,
+} from "./performance-monitor";
