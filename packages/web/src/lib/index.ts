@@ -29637,3 +29637,14 @@ export type { ProgressStepperOptions, ProgressStepperInstance, StepItem, StepSta
 // --- badge-list ---
 export { createBadgeList } from "./badge-list";
 export type { BadgeListOptions, BadgeListInstance, BadgeItem, BadgeColor, BadgeSize } from "./badge-list";
+// --- avatar-group ---
+export { createAvatarGroup, AvatarGroupManager } from "./avatar-group";
+export type { AvatarGroupOptions, AvatarGroupInstance, AvatarItem, AvatarSize, StackDirection } from "./avatar-group";
+
+// --- user-card ---
+export { createUserCard } from "./user-card";
+export type { UserCardOptions, UserCardInstance, UserStats, SocialLink, UserCardVariant, UserCardSize } from "./user-card";
+
+// --- empty-state ---
+export { createEmptyState, EmptyStateManager } from "./empty-state";
+export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
