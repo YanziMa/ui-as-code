@@ -30599,3 +30599,79 @@ export {
   simpleDiff,
 } from "./string-utils";
 export type { DiffSegment } from "./string-utils";
+
+// --- Date Utilities ---
+export {
+  formatDate,
+  toISODate,
+  toISODatetime,
+  formatTime,
+  relativeTime,
+  shortRelativeTime,
+  parseDate as dateParseDate,
+  formatDuration as dateFormatDuration,
+  parseDuration as dateParseDuration,
+  isLeapYear as dateIsLeapYear,
+  daysInMonth as dateDaysInMonth,
+  getDayOfWeek,
+  getWeekNumber as dateGetWeekNumber,
+  getQuarter as dateGetQuarter,
+  isSameDay as dateIsSameDay,
+  isToday as dateIsToday,
+  isYesterday as dateIsYesterday,
+  isBetween,
+  addTime as dateAddTime,
+  startOfDay as dateStartOfDay,
+  endOfDay as dateEndOfDay,
+  startOfWeek as dateStartOfWeek,
+  endOfWeek as dateEndOfWeek,
+  startOfMonth as dateStartOfMonth,
+  endOfMonth as dateEndOfMonth,
+  getTimezone,
+  getTimezoneOffset,
+  convertToTimezone,
+} from "./date-utils";
+export type { DateFormatOptions, RelativeTimeOptions } from "./date-utils";
+
+// --- Time Utilities ---
+export {
+  parseDuration as timeParseDuration,
+  formatDuration as timeFormatDuration,
+  formatDurationCompact,
+  CountdownTimer,
+  Stopwatch,
+  RateLimiter as TimeRateLimiter,
+  FixedWindowRateLimiter,
+  debounce as timeDebounce,
+  throttle as timeThrottle,
+  addTime as timeAddTime,
+  diffDates,
+  isSameDay as timeIsSameDay,
+  isToday as timeIsToday,
+  isYesterday as timeIsYesterday,
+  isTomorrow,
+  getDayOfYear,
+  getWeekNumber as timeGetWeekNumber,
+  getQuarter as timeGetQuarter,
+  startOfDay as timeStartOfDay,
+  endOfDay as timeEndOfDay,
+  startOfWeek as timeStartOfWeek,
+  endOfWeek as timeEndOfWeek,
+  startOfMonth as timeStartOfMonth,
+  endOfMonth as timeEndOfMonth,
+  daysInMonth as timeDaysInMonth,
+  isLeapYear as timeIsLeapYear,
+  getMonthDays,
+  formatDateRange,
+  getUserTimezone,
+  getTimezoneOffset as timeGetTimezoneOffset,
+  toTimezone,
+  TIMEZONE_ALIASES,
+  scheduleAt,
+  IntervalScheduler,
+} from "./time-utils";
+export type { ParsedDuration, CountdownOptions, StopwatchLap, RateLimitResult } from "./time-utils";
+
+// --- Duration ---
+export { Duration } from "./duration";
+export type { DurationInput, HumanizeOptions } from "./duration";
