@@ -43790,3 +43790,48 @@ export {
   createGenericProviderAdapter,
   autoConfigureProviderFromDiscovery,
 } from "./oauth-security";
+
+// --- odometer ---
+export {
+  type OdometerEasing,
+  type OdometerOptions,
+  type OdometerInstance,
+  createOdometer,
+} from "./odometer";
+
+// --- parallax ---
+export {
+  type ParallaxMode,
+  type ParallaxDirection,
+  type ParallaxLayer,
+  type ParallaxOptions,
+  type ParallaxInstance,
+  ParallaxManager,
+  createParallax,
+} from "./parallax";
+
+// --- permission-utils ---
+export {
+  type PermissionName,
+  type PermissionState,
+  type PermissionResult,
+  type CapabilityCheck,
+  isPermissionsAPIAvailable,
+  queryPermission,
+  queryPermissions,
+  requestPermission,
+  PermissionManager,
+  PermissionDeniedError,
+  checkCapabilities,
+  hasCapability,
+  getCapabilitiesByCategory,
+  isMobile,
+  isTouchDevice,
+  isInIframe,
+  isSecureContextPage,
+  getBrowserInfo,
+  prefersDarkMode,
+  prefersReducedMotion,
+  prefersHighContrast,
+  watchMediaPreference,
+} from "./permission-utils";
