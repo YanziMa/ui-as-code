@@ -20299,3 +20299,37 @@ export type {
   CodeEditorOptions,
   CodeEditorInstance,
 } from "./code-editor";
+export {
+  createEmojiPicker,
+} from "./emoji-picker";
+export type {
+  EmojiData,
+  EmojiCategory,
+  SkinTone,
+  EmojiPickerOptions,
+  EmojiPickerInstance,
+} from "./emoji-picker";
+export {
+  ColorSchemeManager,
+  createColorScheme,
+  prefersDarkMode,
+  hasForcedColors,
+} from "./color-scheme";
+export type {
+  ColorScheme,
+  ContrastMode,
+  ColorSchemeState,
+  ColorSchemeOptions,
+  ColorSchemeInstance,
+} from "./color-scheme";
+export {
+  ScrollSnapManager,
+  createScrollSnap,
+} from "./scroll-snap";
+export type {
+  SnapType,
+  SnapAxis,
+  SnapSection,
+  ScrollSnapOptions,
+  ScrollSnapInstance,
+} from "./scroll-snap";
