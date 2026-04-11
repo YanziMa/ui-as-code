@@ -50491,3 +50491,51 @@ export {
   selectBetween as slctSelectBetween,
   createSelectionDetector as slctCreateSelectionDetector,
 } from "./selection-utils";
+
+// --- selection ---
+export type {
+  SelectionRange as Slct_Range,
+  CaretPosition as Slct_CaretPosition,
+  SelectionManagerOptions as Slct_Options,
+  SelectionManagerInstance as Slct_Instance,
+} from "./selection";
+export { SelectionManager as SlctManager, createSelectionManager as createSlctMgr } from "./selection";
+
+// --- semver ---
+export type { SemVer } from "./semver";
+export {
+  parseSemVer,
+  formatSemVer,
+  compareSemVer,
+  satisfies,
+  incrementVersion,
+  versionDistance,
+  sortVersions,
+  getLatestVersion,
+  isValidSemVer,
+  extractVersions,
+  isPrerelease,
+  coerce,
+} from "./semver";
+
+// --- server-utils ---
+export type {
+  EnvInfo as SrvUtil_EnvInfo,
+  RequestContext as SrvUtil_RequestContext,
+} from "./server-utils";
+export {
+  getEnvInfo as srvGetEnvInfo,
+  isServerSide as srvIsServerSide,
+  isClientSide as srvIsClientSide,
+  parseURL as srvParseURL,
+  buildURL as srvBuildURL,
+  joinPath as srvJoinPath,
+  isAbsoluteURL as srvIsAbsoluteURL,
+  makeRelative as srvMakeRelative,
+  parseRequestContext as srvParseRequestContext,
+  corsHeaders as srvCorsHeaders,
+  isOriginAllowed as srvIsOriginAllowed,
+  browserOnly as srvBrowserOnly,
+  serverOnly as srvServerOnly,
+  detectContentType as srvDetectContentType,
+} from "./server-utils";
