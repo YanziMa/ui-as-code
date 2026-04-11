@@ -41766,3 +41766,31 @@ export type {
   HeatmapOptions,
   HeatmapInstance,
 } from "./heatmap-chart";
+
+// --- notification-system ---
+export { NotificationCenter, PushNotificationManager } from "./notification-system";
+export type {
+  Notification,
+  NotificationType,
+  NotificationPriority,
+  NotificationConfig,
+} from "./notification-system";
+
+// --- modal-dialog ---
+export { createModal } from "./modal-dialog";
+export type {
+  ModalSize,
+  ModalVariant,
+  ModalOptions,
+  ModalInstance,
+} from "./modal-dialog";
+
+// --- tooltip-popover ---
+export { createTooltip, createPopover } from "./tooltip-popover";
+export type {
+  Placement,
+  TriggerMode,
+  TooltipOptions,
+  PopoverOptions,
+  TooltipInstance,
+} from "./tooltip-popover";
