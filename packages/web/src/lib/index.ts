@@ -50229,3 +50229,33 @@ export {
   getScrollPosition as Scr_getPosition,
   isInViewport as Scr_isInViewport,
 } from "./scroll";
+
+// --- scrollbar ---
+export {
+  createScrollbar,
+  thinScrollbar,
+  hideScrollbar,
+  overlayScrollbar,
+  type ScrollbarVariant,
+  type ScrollbarAxis,
+  type ScrollbarOptions,
+  type ScrollbarInstance as ScrlBar_Instance,
+} from "./scrollbar";
+
+// --- search-autocomplete ---
+export {
+  AutocompleteManager,
+  createAutocomplete,
+  type SuggestionItem,
+  type AutocompleteOptions,
+  type AutocompleteInstance,
+} from "./search-autocomplete";
+
+// --- search-dialog ---
+export {
+  createSearchDialog,
+  type SearchResult as SrchDlg_Result,
+  type SearchCategory,
+  type SearchDialogOptions,
+  type SearchDialogInstance,
+} from "./search-dialog";
