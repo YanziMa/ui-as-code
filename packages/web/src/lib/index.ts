@@ -36218,3 +36218,46 @@ export type {
   ModalInstance,
   FocusTrapConfig,
 } from "./modal-utils.js";
+// --- overlay-utils ---
+export {
+  createOverlay,
+  getNextZIndex,
+  resetZIndexCounter,
+} from "./overlay-utils.js";
+export type {
+  OverlayPlacement,
+  OverlayAnimation,
+  OverlayOptions,
+  OverlayInstance,
+} from "./overlay-utils.js";
+
+// --- notification-toast-utils ---
+export {
+  createToastManager,
+  toast,
+  toastSuccess,
+  toastError,
+  toastWarning,
+  destroyGlobalToaster,
+} from "./notification-toast-utils.js";
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerOptions,
+} from "./notification-toast-utils.js";
+
+// --- skeleton-utils ---
+export {
+  createSkeleton,
+  createSkeletonBlock,
+  createCardSkeleton,
+  createTableSkeleton,
+} from "./skeleton-utils.js";
+export type {
+  SkeletonVariant,
+  SkeletonSize,
+  SkeletonOptions,
+  SkeletonBlockOptions,
+} from "./skeleton-utils.js";
