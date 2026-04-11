@@ -42122,3 +42122,7 @@ export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCo
 export { createSkeletonPlaceholder, skeletonLine, skeletonAvatar, skeletonImage, wrapWithSkeleton, type SkeletonPlaceholderOptions, type SkeletonPlaceholderInstance, type SkeletonShape, type SkeletonAnimation } from "./skeleton-placeholder";
 export { InfiniteScroll, type InfiniteScrollOptions, type InfiniteScrollState, type InfiniteScrollItem } from "./infinite-scroll";
 export { createVirtualList, type VirtualListOptions, type VirtualListInstance, type VirtualListItem } from "./virtual-list";
+// --- Batch 1347: Drag and Drop, Sortable List, Resizable ---
+export { DragDropManager, getDragDropManager, type DragOptions, type DropZoneOptions, type DropResult, type SortableConfig, type DragItem, type DragMode, type DropPosition } from "./drag-and-drop";
+export { createSortableList, type SortableListOptions, type SortableListInstance, type SortableItem } from "./sortable-list";
+export { makeResizable, createSplitPane, type ResizeOptions, type ResizeState, type SplitPaneOptions, type ResizableController, type SplitPaneController } from "./resizable";
