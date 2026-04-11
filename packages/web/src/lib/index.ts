@@ -38059,3 +38059,15 @@ export type {
   FlexDirection, FlexWrap, JustifyContent, AlignItems, AlignSelf, GapSize,
   FlexConfig, GridConfig, StackConfig,
 } from "./layout-utils";
+
+// --- virtual-list-utils ---
+export { createVirtualList } from "./virtual-list-utils";
+export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from "./virtual-list-utils";
+
+// --- infinite-scroll-utils ---
+export { createInfiniteScroll } from "./infinite-scroll-utils";
+export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-scroll-utils";
+
+// --- pagination-utils ---
+export { createPagination } from "./pagination-utils";
+export type { PaginationSize, PaginationLayout, PaginationOptions, PaginationInstance } from "./pagination-utils";
