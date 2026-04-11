@@ -26679,3 +26679,15 @@ export type {
   FunnelResult,
   FunnelOptions,
 } from "./funnel";
+
+// --- Heatmap (pre-written) ---
+export { createHeatmap } from "./heatmap";
+export type { HeatmapCell, HeatmapOptions, HeatmapInstance, HeatmapType, ColorScale } from "./heatmap";
+
+// --- User Journey ---
+export { JourneyTracker, createJourneyTracker } from "./user-journey";
+export type { UserJourney, JourneyConfig, JourneyEvent, JourneyPage, JourneyStats, PathAnalysis } from "./user-journey";
+
+// --- Cohort Analysis ---
+export { CohortAnalyzer, createCohortAnalyzer } from "./cohort-analysis";
+export type { CohortDefinition, CohortMember, RetentionCell, RetentionTable, CohortComparison, SurvivalData, LTVCalculation } from "./cohort-analysis";
