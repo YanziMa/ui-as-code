@@ -46708,3 +46708,15 @@ export { createMorphEngine as createMorphDomEngine, morph as morphDom, morphBetw
 // --- mosaic-plot.ts ---
 export type { MosaicCategory, MosaicCell, MosaicPlotOptions, MosaicInstance } from "./mosaic-plot";
 export { createMosaicPlot } from "./mosaic-plot";
+
+// --- motion-utils.ts ---
+export type { SpringConfig as MotSpringConfig, SpringState as MotSpringState, MotionValue as MotValue, MotionTransitionOptions as MotTransOptions, InertiaOptions as MotInertiaOptions } from "./motion-utils";
+export { MotionValueImpl as MotValueImpl, Spring as MotSpring, motionValue, createSpring, inertia, lerp as motLerp, interpolate as motInterpolate, clamp as motClamp, mapRange as motMapRange } from "./motion-utils";
+
+// --- motion.ts ---
+export type { MotionOptions as MotOptions, MotionInstance as MotInst, SpringMotionConfig as MotSpringMotConfig } from "./motion";
+export { createMotion, createSpringMotion, injectKeyframes, PRESET_KEYFRAMES, animateWithKeyframes, animateAlongPath } from "./motion";
+
+// --- mouse-gestures.ts ---
+export type { Direction as MGestureDir, GestureType, Point as MGesturePoint, GestureEvent, GestureOptions as MGestureOpts, SwipeOptions } from "./mouse-gestures";
+export { GestureRecognizer, createSwipeDetector, getDirection as gestureDirection, distance as gestureDistance, midpoint as gestureMidpoint, angleBetween as gestureAngle } from "./mouse-gestures";
