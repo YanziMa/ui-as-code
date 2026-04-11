@@ -35781,3 +35781,70 @@ export type {
   ClipboardHistoryEntry,
   ClipboardHistoryOptions,
 } from "./clipboard-utils";
+// --- Keyboard Utilities ---
+export {
+  HotkeyManager,
+  KeySequenceDetector,
+  RovingTabIndex,
+  resolveKey,
+  normalizeKeyEvent,
+  eventMatchesBinding,
+  formatHotkey,
+  parseHotkeyString,
+  isTypingInInput,
+} from "./keyboard-utils";
+export type {
+  KeyBinding,
+  KeySequence,
+  NormalizedKeyEvent,
+  KeyboardState,
+  NavigationConfig,
+  ModifierKey,
+} from "./keyboard-utils";
+export { KEY_ALIASES } from "./keyboard-utils";
+
+// --- Mouse Utilities ---
+export {
+  trackMouse,
+  trackMouseState,
+  setupClicks,
+  setupHoverDetection,
+  createMouseTrail,
+  extractPositionFromEvent,
+  isInsideElement,
+  getElementAtPosition,
+  isMouseDown,
+  mouseDistance,
+} from "./mouse-utils";
+export type { MousePosition, MouseState, ClickOptions, HoverOptions, TrailOptions } from "./mouse-utils";
+
+// --- Pointer Utilities ---
+export {
+  extractPointerData,
+  extractMouseData,
+  extractTouchData,
+  isPointerEventsSupported,
+  isTouchDevice,
+  isPrecisionInput,
+  getPrimaryInputType,
+  PointerTracker,
+  capturePointer,
+  releasePointerCapture,
+  hasPointerCapture,
+  clientToLocal,
+  localToClient,
+  transformCoordinates,
+  getPageScrollOffset,
+  pageToViewport,
+  viewportToPage,
+  createPointerRegion,
+  hitTestRegions,
+  hitTestTopmost,
+  setCursor,
+  hideCursor,
+  requestPointerLock,
+  exitPointerLock,
+  isPointerLocked,
+  getPointerLockMovement,
+} from "./pointer-utils";
+export type { PointerData, PointerEventInfo, PointerTrackerConfig, PointerRegion } from "./pointer-utils";
