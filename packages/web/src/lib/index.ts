@@ -26487,3 +26487,47 @@ export type {
   PollingState,
   PollingStatusHandler,
 } from "./polling";
+
+// --- Cookie Manager ---
+export {
+  CookieManager,
+  CookieConsentManager,
+  getCookieManager,
+  getCookie,
+  setCookie,
+  removeCookie,
+} from "./cookie-manager";
+export type {
+  CookieOptions,
+  CookieInfo,
+  CookieConsentConfig,
+} from "./cookie-manager";
+
+// --- Session Manager ---
+export {
+  SessionManager,
+  createSessionManager,
+} from "./session-manager";
+export type {
+  SessionConfig,
+  SessionData,
+  SessionState,
+  SessionEventHandler,
+  SessionExpireHandler,
+} from "./session-manager";
+
+// --- Auth Token ---
+export {
+  AuthTokenManager,
+  createAuthTokenManager,
+  parseJwt,
+  isJwt,
+  decodeToken,
+  validateJwt,
+} from "./auth-token";
+export type {
+  TokenPair,
+  TokenInfo,
+  AuthTokenConfig,
+  TokenInterceptorConfig,
+} from "./auth-token";
