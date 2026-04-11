@@ -29296,3 +29296,15 @@ export { createCountdownTimer } from "./countdown-timer.js";
 // --- File Dropzone (Batch 975) ---
 export type { DropZoneState, DropZoneVariant, FileValidationRule, DropZoneOptions, DropZoneInstance } from "./file-dropzone.js";
 export { createDropZone } from "./file-dropzone.js";
+
+// --- QR Code Generator (Batch 976) ---
+export type { QRErrorCorrectionLevel, QRRenderFormat, QROptions, QRResult } from "./qr-code-generator.js";
+export { generateQR, generateQRSVG } from "./qr-code-generator.js";
+
+// --- Color Picker (Batch 976) ---
+export type { RgbColor, HslColor, Palette } from "./color-picker.js";
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker.js";
+
+// --- Date Picker (Batch 976) ---
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker.js";
+export { DatePickerManager, createDatePicker } from "./date-picker.js";
