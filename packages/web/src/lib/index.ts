@@ -24204,3 +24204,29 @@ export {
   type SkeletonScreenOptions,
   type SkeletonScreenInstance,
 } from "./skeleton-screen";
+
+// --- Empty State ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+  type EmptyStateOptions,
+  type EmptyStateInstance,
+  type EmptyStateVariant,
+} from "./empty-state";
+
+// --- Error Boundary ---
+export {
+  ErrorBoundaryManager,
+  createErrorBoundary,
+  type ErrorBoundaryOptions,
+  type ErrorBoundaryInstance,
+  type ErrorBoundaryError,
+} from "./error-boundary";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollOptions,
+  type InfiniteScrollItem,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
