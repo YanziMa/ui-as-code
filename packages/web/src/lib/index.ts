@@ -28849,3 +28849,15 @@ export type { VisibilityDirection as IntersectionV2Direction, IntersectionV2Entr
 // --- resize-observer-v2 ---
 export { createResizeObserverV2, watchSize, useResponsiveSize } from "./resize-observer-v2";
 export type { ResizeV2Entry, Breakpoint as ResizeBreakpoint, ResizeObserverV2Options, ResizeObserverV2Instance } from "./resize-observer-v2";
+
+// --- css-containment ---
+export { createContainmentManager, contain, isContainmentSupported } from "./css-containment";
+export type { ContainmentType, ContainmentConfig, ContainmentResult, ContainmentManagerOptions, ContainmentManagerInstance } from "./css-containment";
+
+// --- content-visibility ---
+export { setContentVisibility, applyContentVisibilityToList, isContentVisibilitySupported, skipWhenOffscreen } from "./content-visibility";
+export type { ContentVisibilityValue, ContentVisibilityOptions, ContentVisibilityInstance } from "./content-visibility";
+
+// --- will-change-manager ---
+export { createWillChangeManager, gpuPromote, isWillChangeSupported } from "./will-change-manager";
+export type { WillChangeProperty, WillChangeRule, WillChangeManagerOptions, WillChangeManagerInstance } from "./will-change-manager";
