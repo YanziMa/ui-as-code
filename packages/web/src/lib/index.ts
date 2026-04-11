@@ -29559,3 +29559,15 @@ export type { VennDiagramOptions, VennInstance, VennSet, VennOverlap, VennSetTyp
 // --- mosaic-plot ---
 export { createMosaicPlot } from "./mosaic-plot";
 export type { MosaicPlotOptions, MosaicInstance, MosaicCell, MosaicCategory } from "./mosaic-plot";
+
+// --- led-matrix ---
+export { createLEDMatrix } from "./led-matrix";
+export type { LEDMatrixOptions, LEDMatrixInstance, LEDColor } from "./led-matrix";
+
+// --- spectrum-analyzer ---
+export { createSpectrumAnalyzer } from "./spectrum-analyzer";
+export type { SpectrumAnalyzerOptions, SpectrumInstance, BarStyle, GradientType } from "./spectrum-analyzer";
+
+// --- waveform-display ---
+export { createWaveformDisplay } from "./waveform-display";
+export type { WaveformDisplayOptions, WaveformDisplayInstance, WaveformChannel, WaveformPoint, WaveformSelection } from "./waveform-display";
