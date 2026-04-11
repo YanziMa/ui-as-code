@@ -17941,3 +17941,36 @@ export type {
   ProgressVariant,
   ProgressSize,
 } from "./progress-bar";
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+} from "./divider";
+export type {
+  DividerOptions,
+  DividerOrientation,
+  DividerStyle,
+} from "./divider";
+export {
+  createSwitch,
+} from "./switch";
+export type {
+  SwitchOptions,
+  SwitchInstance,
+  SwitchSize,
+  SwitchVariant,
+} from "./switch";
+export {
+  createTooltip,
+  attachTooltip,
+  attachClickTooltip,
+  attachHtmlTooltip,
+} from "./tooltip-lite";
+export type {
+  TooltipOptions,
+  TooltipInstance,
+  TooltipPlacement,
+  TooltipTrigger,
+} from "./tooltip-lite";
