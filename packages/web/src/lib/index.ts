@@ -28310,3 +28310,15 @@ export type { SortableOptions, SortableInstance, SortableItem } from "./sortable
 // --- Resize Handle ---
 export { createResizeHandle, makeResizable } from "./resize-handle";
 export type { ResizeHandleOptions, ResizeInstance, ResizeState, HandlePosition } from "./resize-handle";
+
+// --- Split View ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, SplitDirection } from "./split-view";
+
+// --- Stack Layout ---
+export { createStackLayout } from "./stack-layout";
+export type { StackLayoutOptions, StackLayoutInstance, StackItem, StackAnimation, SwipeDirection } from "./stack-layout";
+
+// --- Masonry ---
+export { MasonryManager, createMasonry } from "./masonry";
+export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry";
