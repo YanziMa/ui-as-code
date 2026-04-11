@@ -19552,3 +19552,62 @@ export {
   time,
   timeAsync,
 } from "./function-utils";
+export {
+  createCustomEvent,
+  dispatchCustomEvent,
+  onCustomEvent,
+  throttleEvent,
+  debounceEvent as eventDebounce,
+  once as eventOnce,
+  waitForEvent,
+  delegateEvent,
+  preventDefault,
+  stopPropagation,
+  stopEvent,
+} from "./event-utils";
+export {
+  detectBrowser,
+  isBrowser,
+  isMobile,
+  isTablet,
+  isTouchDevice,
+  isInIframe as browserIsInIframe,
+  isCrossOriginIframe,
+  getScreenInfo,
+  getViewportSize,
+  getCurrentBreakpoint,
+  isAtLeast,
+  onResize,
+  onOrientationChange,
+  detectFeatures,
+  supports,
+  detectUserPreferences,
+  onPreferenceChange,
+  getMemoryInfo,
+  getCpuCores,
+  getMaxConnections,
+} from "./browser-detection";
+export type {
+  BrowserInfo,
+  ScreenInfo,
+  FeatureSupport,
+  UserPreferences,
+  BreakpointName,
+} from "./browser-detection";
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+} from "./network-utils";
+export type {
+  NetworkStatus,
+  RetryOptions as NetworkRetryOptions,
+  RequestQueueItem,
+} from "./network-utils";
