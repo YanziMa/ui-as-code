@@ -26316,3 +26316,48 @@ export {
   perfMeasure,
 } from "./metrics";
 export type { MetricValue, HistogramBucket } from "./metrics";
+
+// --- Logger ---
+export {
+  Logger,
+  setGlobalLogLevel,
+  getGlobalLogLevel,
+  log,
+  apiLog,
+  dbLog,
+  extLog,
+} from "./logger";
+export type { LogLevel, LogTransport } from "./logger";
+
+// --- Debug ---
+export {
+  setDebug,
+  isDebug,
+  createDebugger,
+  assert,
+  assertExists,
+  assertType,
+  devOnly,
+  devValue,
+  isBrowser,
+  isNode,
+  isWorker,
+  timeStart,
+  timeEnd,
+  timeAsync,
+} from "./debug";
+
+// --- Console Enhancement ---
+export {
+  interceptConsole,
+  stopConsoleCapture,
+  getCapturedLogs,
+  prettyPrint,
+  group,
+  grouped,
+  showTable,
+  count,
+  resetCounter,
+  showCounters,
+} from "./console-enhance";
+export type { ConsoleGroupOptions, ConsoleFilterOptions } from "./console-enhance";
