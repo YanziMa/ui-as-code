@@ -42606,3 +42606,32 @@ export {
   type AccordionMode as AccordionManagerMode,
   type ExpandDirection,
 } from "./accordion-manager";
+// --- accordion-utils ---
+export {
+  createAccordion as createAccordionUtils,
+  type AccordionItem as AccordionUtilsItem,
+  type AccordionOptions as AccordionUtilsOptions,
+  type AccordionInstance as AccordionUtilsInstance,
+  type AccordionMode as AccordionUtilsMode,
+} from "./accordion-utils";
+
+// --- acl ---
+export {
+  ACLEngine,
+  createACL,
+  type AclResource,
+  type AclEntry,
+  type AclCondition,
+  type AclCheckContext,
+  type AclDecision,
+  type AclConfig,
+} from "./acl";
+
+// --- action-sheet ---
+export {
+  createActionSheet,
+  type ActionSheetAction,
+  type ActionSheetActionStyle,
+  type ActionSheetOptions,
+  type ActionSheetInstance,
+} from "./action-sheet";
