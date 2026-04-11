@@ -30675,3 +30675,51 @@ export type { ParsedDuration, CountdownOptions, StopwatchLap, RateLimitResult } 
 // --- Duration ---
 export { Duration } from "./duration";
 export type { DurationInput, HumanizeOptions } from "./duration";
+
+// --- Encoding ---
+export {
+  base64Encode as encBase64Encode,
+  base64Decode as encBase64Decode,
+  safeEncode,
+  safeDecode,
+  unicodeEscape,
+  unicodeUnescape,
+  encodeQuery,
+  xorCipher,
+  xorDecipher,
+  simpleHash,
+  truncateMiddle,
+} from "./encoding";
+
+// --- Base64 ---
+export {
+  base64Encode,
+  base64Decode,
+  base64UrlEncode,
+  base64UrlDecode,
+  dataUriEncode,
+  dataUriDecode,
+  isValidBase64,
+  base64EncodeObject,
+  base64DecodeObject,
+} from "./base64";
+
+// --- Hashing ---
+export {
+  djb2,
+  fnv1a,
+  murmur3,
+  sdbm,
+  sha256,
+  sha1,
+  sha384,
+  sha512,
+  crc32,
+  adler32,
+  fingerprint,
+  shortFingerprint,
+  consistentId,
+  stringToColor,
+  serializeForHash,
+  objectHash,
+} from "./hashing";
