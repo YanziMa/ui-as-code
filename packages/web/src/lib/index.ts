@@ -24645,3 +24645,15 @@ export type { SearchDialogOptions, SearchDialogInstance, SearchResult, SearchCat
 // --- Quick Switcher ---
 export { createQuickSwitcher } from "./quick-switcher";
 export type { QuickSwitcherOptions, QuickSwitcherInstance, SwitcherItem } from "./quick-switcher";
+
+// --- Color Picker (Advanced) ---
+export { createColorPicker } from "./color-picker-advanced";
+export type { ColorPickerOptions, ColorPickerInstance, ColorMode, PickerPlacement, RgbColor, HslColor, HsvColor, ColorSwatch } from "./color-picker-advanced";
+
+// --- Date Range Picker ---
+export { createDateRangePicker } from "./date-range-picker";
+export type { DateRangePickerOptions, DateRangePickerInstance, DateRangePreset } from "./date-range-picker";
+
+// --- Time Range Picker ---
+export { createTimeRangePicker } from "./time-range-picker";
+export type { TimeRangePickerOptions, TimeRangePickerInstance, TimeValue, TimeFormat, TimeStep, TimeRangePreset } from "./time-range-picker";
