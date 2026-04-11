@@ -31504,3 +31504,15 @@ export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
 // --- Input Mask ---
 export { InputMaskManager, createInputMask } from "./input-mask";
 export type { MaskType, MaskOptions, MaskInstance } from "./input-mask";
+
+// --- Resize Observer ---
+export { ResizeWatcher, createResizeObserver, matchParentSize, whenSizeExceeds } from "./resize-observer";
+export type { ResizeBox, ResizeObserverOptions, ResizeObserverEntry, ResizeObserverInstance } from "./resize-observer";
+
+// --- Mutation Observer ---
+export { MutationWatcher, createMutationObserver, waitForElement, waitForRemoval } from "./mutation-observer";
+export type { MutationFilter, MutationObserverOptions, SimplifiedMutationRecord, MutationObserverInstance } from "./mutation-observer";
+
+// --- Intersection Observer ---
+export { IntersectionWatcher, createIntersectionObserver, lazyLoadImages, watchVisibility, createInfiniteScrollSentinel } from "./intersection-observer";
+export type { VisibilityState, ObserveMode, IntersectionOptions, IntersectionEntryEx, IntersectionInstance } from "./intersection-observer";
