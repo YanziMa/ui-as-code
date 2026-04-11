@@ -23371,3 +23371,39 @@ export {
   type DeviceType,
   type DeviceInfo,
 } from "./device";
+
+// --- hotkeys ---
+export {
+  HotkeyManager,
+  createAppHotkeys,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  areModifiersDown,
+  getModifierString,
+  type HotkeyBinding,
+  type HotkeyEvent,
+  type HotkeyListener,
+  type ParsedKeyCombo,
+} from "./hotkeys";
+
+// --- context-menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem,
+  type ContextMenuPosition,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+} from "./context-menu";
+
+// --- toast ---
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+  type ToastType,
+  type ToastPosition,
+  type ToastOptions,
+  type ToastInstance,
+  type ToastManagerConfig,
+} from "./toast";
