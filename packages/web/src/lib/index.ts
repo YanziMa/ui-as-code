@@ -50921,3 +50921,39 @@ export {
   type SliderInstance as SldUtl_SliderInstance,
   createSlider as SldUtl_createSlider,
 } from "./slider-utils";
+
+// --- slider ---
+export {
+  type SliderMark as Sld_SliderMark,
+  type SliderOptions as Sld_SliderOptions,
+  type SliderInstance as Sld_SliderInstance,
+  SliderManager as Sld_SliderManager,
+  createSlider as Sld_createSlider,
+} from "./slider";
+
+// --- smooth-scroll-utils ---
+export {
+  type EasingFn as SmScrlUtl_EasingFn,
+  type EasingName as SmScrlUtl_EasingName,
+  type ScrollToOptions as SmScrlUtl_ScrollToOptions,
+  type ParallaxLayer as SmScrlUtl_ParallaxLayer,
+  type ParallaxOptions as SmScrlUtl_ParallaxOptions,
+  type ParallaxInstance as SmScrlUtl_ParallaxInstance,
+  type SmoothScrollOptions as SmScrlUtl_SmoothScrollOptions,
+  type SmoothScrollInstance as SmScrlUtl_SmoothScrollInstance,
+  createSmoothScroll as SmScrlUtl_createSmoothScroll,
+} from "./smooth-scroll-utils";
+
+// --- smooth-scroll ---
+export {
+  type EasingFn as SmScrl_EasingFn,
+  type SmoothScrollOptions as SmScrl_SmoothScrollOptions,
+  type SmoothScrollInstance as SmScrl_SmoothScrollInstance,
+  easings as SmScrl_easings,
+  SmoothScroller as SmScrl_SmoothScroller,
+  createSmoothScroller as SmScrl_createSmoothScroller,
+  scrollToTop as SmScrl_scrollToTop,
+  scrollToBottom as SmScrl_scrollToBottom,
+  scrollToY as SmScrl_scrollToY,
+  scrollToElementCenter as SmScrl_scrollToElementCenter,
+} from "./smooth-scroll";
