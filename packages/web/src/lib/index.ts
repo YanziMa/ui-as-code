@@ -31735,3 +31735,26 @@ export type {
   Stroke,
   StrokePoint,
 } from "./signature-pad";
+
+// --- Batch 1066: Code Editor, Markdown Preview, Rich Text ---
+
+export { CodeEditorManager, createCodeEditor } from "./code-editor";
+export type {
+  CodeEditorOptions,
+  CodeEditorInstance,
+} from "./code-editor";
+
+export { createMarkdownPreview } from "./markdown-preview";
+export type {
+  MarkdownOptions,
+  MarkdownInstance,
+  MarkdownHeading,
+} from "./markdown-preview";
+
+export { RichTextManager, createRichText } from "./rich-text";
+export type {
+  RichTextOptions,
+  RichTextInstance,
+  FormatCommand,
+  ToolbarButton,
+} from "./rich-text";
