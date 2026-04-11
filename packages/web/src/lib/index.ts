@@ -40194,3 +40194,30 @@ export {
   type SplitCollapseMode,
   type SplitPaneConfig,
 } from "./split-view-utils";
+// --- Carousel ---
+export {
+  createCarousel,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselSlide,
+  type CarouselTransition,
+  type CarouselNavStyle,
+} from "./carousel-utils";
+
+// --- Timeline ---
+export {
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineNode,
+  type TimelineVariant,
+  type TimelineSide,
+} from "./timeline-utils";
+
+// --- Tree View ---
+export {
+  createTreeView,
+  type TreeViewOptions,
+  type TreeViewInstance,
+  type TreeNode,
+} from "./tree-view-utils";
