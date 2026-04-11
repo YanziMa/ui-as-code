@@ -47819,3 +47819,57 @@ export {
   captureWebVitals as PerfMonCaptureVitals,
   checkBrowserSupport as PerfMonCheckSupport,
 } from "./performance-monitor";
+
+// --- performance-observer.ts ---
+export type {
+  PerformanceEntryType as PerfObsEntryType,
+  PerformanceObserverOptions as PerfObsOptions,
+  NormalizedPerformanceEntry as PerfObsNormEntry,
+  CoreWebVitals as PerfObsWebVitals,
+  PerformanceObserverInstance as PerfObsInst,
+  ResourceTimingSummary as PerfObsResTimingSum,
+} from "./performance-observer";
+export {
+  PerformanceWatcher as PerfObsWatcher,
+  createPerformanceObserver as PerfObsCreate,
+  measureAsync as PerfObsMeasureAsync,
+  measureSync as PerfObsMeasureSync,
+  reportWebVitals as PerfObsReportVitals,
+  getPageLoadMetrics as PerfObsGetPageMetrics,
+} from "./performance-observer";
+
+// --- performance-utils.ts ---
+export type {
+  TimingResult as PerfUTimingResult,
+  MemoryUsage as PerfUMemoryUsage,
+  FPSStats as PerfUFPSStats,
+  WebVitals as PerfUWebVitals,
+  NavigationTiming as PerfUNavTiming,
+} from "./performance-utils";
+export {
+  PerfObserver as PerfUObserver,
+  FPSCounter as PerfUFPSCounter,
+  MemoryMonitor as PerfUMemoryMonitor,
+  LongTaskDetector as PerfULongTaskDetector,
+  CustomMetric as PerfUCustomMetric,
+  measureSync as PerfUMeasureSync,
+  measureAsync as PerfUMeasureAsync,
+  perfMark as PerfUPerfMark,
+  perfMeasure as PerfUPerfMeasure,
+  measureBetween as PerfUMeasureBetween,
+  getMemoryUsage as PerfUGetMemUsage,
+  getMemoryPercent as PerfUGetMemPercent,
+  getNavigationTiming as PerfUNavTimingFn,
+  collectWebVitals as PerfUCollectVitals,
+  getResourceTiming as PerfUGetResTiming,
+  findSlowResources as PerfUSlowResources,
+} from "./performance-utils";
+
+// --- performance.ts ---
+export type { PerformanceMetric as PerfPMetric } from "./performance";
+export {
+  reportMetric as PrefReportMetric,
+  getSessionMetrics as PrefGetSessionMetrics,
+  observeWebVitals as PrefObserveWebVitals,
+  markRender as PrefMarkRender,
+} from "./performance";
