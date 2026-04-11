@@ -27379,3 +27379,15 @@ export type { ImageGalleryOptions, ImageGalleryInstance, GalleryImage } from "./
 // --- tour ---
 export { createTour } from "./tour.js";
 export type { TourOptions, TourInstance, TourStep } from "./tour.js";
+
+// --- confetti ---
+export { createConfetti, confetti, confettiFromElement } from "./confetti.js";
+export type { ConfettiOptions, ConfettiInstance, ParticleShape, ConfettiColors, ConfettiPhysics } from "./confetti.js";
+
+// --- audio-player ---
+export { createAudioPlayer } from "./audio-player.js";
+export type { AudioPlayerOptions, AudioPlayerInstance, AudioTrack } from "./audio-player.js";
+
+// --- video-player ---
+export { createVideoPlayer } from "./video-player.js";
+export type { VideoPlayerOptions, VideoPlayerInstance, VideoTrack, QualityOption, Chapter, PlaylistItem } from "./video-player.js";
