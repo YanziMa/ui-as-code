@@ -48797,3 +48797,31 @@ export {
   RatingSummary as RSumSummary,
   createRatingSummary as RSumCreate,
 } from "./rating-summary";
+// --- rating-utils.ts ---
+export {
+  type RatingIconType as RUIconType,
+  type RatingOptions as RUOptions,
+  type RatingInstance as RUInstance,
+  createRating as RUCreate,
+} from "./rating-utils";
+
+// --- rating.ts ---
+export {
+  type StarIconType as RtgStarIconType,
+  type RatingOptions as RtgOptions,
+  type RatingInstance as RtgInstance,
+  RatingManager as RtgManager,
+  createRating as RtgCreate,
+} from "./rating";
+
+// --- rbac.ts ---
+export {
+  type RoleDefinition as RBACRoleDef,
+  type RoleAssignment as RBACRoleAssign,
+  type PermissionCheckResult as RBACCheckResult,
+  type RbacConfig as RBACConfig,
+  type AuditEntry as RBACAuditEntry,
+  RBACEngine,
+  BUILT_IN_ROLES as RBACBuiltInRoles,
+  createRBAC as RBACCreate,
+} from "./rbac";
