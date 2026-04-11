@@ -25187,3 +25187,30 @@ export {
   type SortState,
   type FilterState,
 } from "./data-table";
+
+// --- Virtual Table ---
+export {
+  VirtualTableManager,
+  createVirtualTable,
+  type VirtualTableOptions,
+  type VirtualTableInstance,
+  type VirtualColumn,
+} from "./virtual-table";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNodeData,
+  type TreeNode,
+  type TreeViewConfig,
+  type CheckMode,
+} from "./tree-view";
+
+// --- Kanban Board ---
+export {
+  createKanbanBoard,
+  type KanbanBoardOptions,
+  type KanbanBoardInstance,
+  type KanbanCard,
+  type KanbanColumn,
+} from "./kanban-board";
