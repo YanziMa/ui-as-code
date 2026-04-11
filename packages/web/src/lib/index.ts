@@ -28346,3 +28346,15 @@ export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement 
 // --- Dropdown Menu ---
 export { DropdownMenuManager, createDropdownMenu } from "./dropdown-menu";
 export type { DropdownMenuOptions, DropdownMenuInstance, MenuItem, MenuItemType } from "./dropdown-menu";
+
+// --- Skeleton ---
+export { createSkeleton, createTextSkeleton, createHeadingSkeleton, createAvatarSkeleton, createCardSkeleton, createTableSkeleton, wrapWithSkeleton } from "./skeleton";
+export type { SkeletonOptions, SkeletonTextOptions, SkeletonAvatarOptions, SkeletonCardOptions, SkeletonTableOptions } from "./skeleton";
+
+// --- Avatar ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar";
+
+// --- Badge ---
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeOptions, BadgeVariant, BadgeSize, BadgePosition, StatusDotOptions } from "./badge";
