@@ -45525,3 +45525,14 @@ export type { HistogramOptions, HistogramInstance, Bin } from "./histogram-chart
 // --- history ---
 export { HistoryManager, createHistoryManager } from "./history";
 export type { HistoryManagerOptions, HistoryManagerInstance, HistoryState, NavigationGuard } from "./history";
+
+// --- hooks ---
+export { useDebouncedValue, useThrottledCallback, useMounted, usePrevious, useToggle, useLocalStorage, useMediaQuery, useClickOutside, useIntersectionObserver, useClipboard } from "./hooks";
+
+// --- hotkey-manager ---
+export { HotkeyManager, normalizeKeyEvent, parseCombo as HmParseCombo, buildCombo as HmBuildCombo, combosEqual } from "./hotkey-manager";
+export type { HotkeyBinding, HotkeyEvent, RecordedHotkey, HotkeyHint, HotkeyStats, KeyModifier, Scope, HotkeyPriority } from "./hotkey-manager";
+
+// --- hotkey-parser-utils ---
+export { parseHotkey, parseHotkeys, hotkeysMatch, eventMatchesHotkey, formatHotkey, findConflicts, eventToHotkey, hotkeyHash } from "./hotkey-parser-utils";
+export type { ParsedHotkey, HotkeyParseOptions, HotkeyCompareOptions, ModifierKey } from "./hotkey-parser-utils";
