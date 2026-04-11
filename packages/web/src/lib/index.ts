@@ -34462,3 +34462,14 @@ export type { PopoverTooltipOptions, PopoverTooltipInstance, PopoverTooltipConte
 // --- hover-card-utils ---
 export { createHoverCard } from "./hover-card-utils";
 export type { HoverCardOptions, HoverCardInstance, HoverCardContent, HoverCardAvatar, HoverCardMeta, HoverCardAction, HoverCardSide, HoverCardAnimation } from "./hover-card-utils";
+// --- skeleton-loader-utils ---
+export { createSkeletonBlock, createSkeletonText, createSkeletonAvatar, createSkeletonImage, createSkeletonCard, createSkeletonTable, createSkeletonList, injectSkeletonStyles } from "./skeleton-loader-utils";
+export type { SkeletonBlockOptions, SkeletonTextOptions, SkeletonAvatarOptions, SkeletonImageOptions, SkeletonCardOptions, SkeletonTableOptions, SkeletonListOptions, SkeletonVariant, SkeletonAnimation } from "./skeleton-loader-utils";
+
+// --- shimmer-utils ---
+export { createShimmer, shimmerOnce, createShimmerText } from "./shimmer-utils";
+export type { ShimmerOptions, ShimmerInstance, ShimmerDirection, ShimmerSpeed } from "./shimmer-utils";
+
+// --- loading-overlay-utils ---
+export { createLoadingOverlay } from "./loading-overlay-utils";
+export type { LoadingOverlayOptions, LoadingOverlayInstance, OverlayVariant, SpinnerType } from "./loading-overlay-utils";
