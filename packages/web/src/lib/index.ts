@@ -28738,3 +28738,15 @@ export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
 // --- Context Provider ---
 export { createContext, ThemeContext, AuthContext, I18nContext, ResponsiveContext, createResponsiveProvider } from "./context-provider";
 export type { ContextOptions, ProviderInstance, ConsumerHandle, Context, ThemeContextValue, AuthContextValue, I18nContextValue, ResponsiveContextValue } from "./context-provider";
+
+// --- Resizable ---
+export { makeResizable, createSplitPane } from "./resizable";
+export type { ResizeOptions, ResizeState, ResizableController, SplitPaneOptions, SplitPaneController } from "./resizable";
+
+// --- Drag and Drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type { DragOptions, DropZoneOptions, DropResult, DragItem, DragMode, DropPosition, SortableConfig } from "./drag-and-drop";
+
+// --- Sortable List ---
+export { SortableList, createSortable } from "./sortable";
+export type { SortableOptions, SortableInstance, SortableItem } from "./sortable";
