@@ -34616,3 +34616,28 @@ export type {
   SidebarOptions,
   SidebarInstance,
 } from "./sidebar-utils";
+// --- Batch 1139: Breadcrumb, Tabs, Stepper ---
+export { createBreadcrumb } from "./breadcrumb-utils";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb-utils";
+
+export { createTabs } from "./tabs-utils";
+export type {
+  TabOrientation,
+  TabActivation,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs-utils";
+
+export { createStepper } from "./stepper-utils";
+export type {
+  StepperOrientation,
+  StepStatus,
+  StepItem,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper-utils";
