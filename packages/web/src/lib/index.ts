@@ -21609,3 +21609,38 @@ export {
   PopoverManager,
   createPopover,
 } from "./popover";
+
+// --- Dropdown Menu ---
+export type {
+  MenuItemType,
+  MenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
+export {
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
+
+// --- Tour Guide ---
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./tour-guide";
+export {
+  TourManager,
+  createTour,
+} from "./tour-guide";
+
+// --- Search Input ---
+export type {
+  SuggestionItem,
+  SearchHistoryEntry,
+  SearchInputOptions,
+  SearchInputInstance,
+} from "./search-input";
+export {
+  SearchInputManager,
+  createSearchInput,
+} from "./search-input";
