@@ -24657,3 +24657,15 @@ export type { DateRangePickerOptions, DateRangePickerInstance, DateRangePreset }
 // --- Time Range Picker ---
 export { createTimeRangePicker } from "./time-range-picker";
 export type { TimeRangePickerOptions, TimeRangePickerInstance, TimeValue, TimeFormat, TimeStep, TimeRangePreset } from "./time-range-picker";
+
+// --- File Explorer ---
+export { createFileExplorer } from "./file-explorer";
+export type { FileExplorerOptions, FileExplorerInstance, FileEntry, ViewMode, SortField } from "./file-explorer";
+
+// --- File Tree ---
+export { createFileTree, FileManager } from "./file-tree";
+export type { FileTreeOptions, FileTreeInstance, FileTreeNode, FileType } from "./file-tree";
+
+// --- Media Gallery ---
+export { createMediaGallery } from "./media-gallery";
+export type { MediaGalleryOptions, MediaGalleryInstance, MediaItem, MediaType, GalleryLayout } from "./media-gallery";
