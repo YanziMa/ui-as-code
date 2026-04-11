@@ -26757,3 +26757,14 @@ export type { TabsOptions, TabsInstance, TabItem, TabOrientation, TabVariant } f
 // accordion.ts
 export { AccordionManager, createAccordion } from "./accordion";
 export type { AccordionOptions, AccordionInstance, AccordionItem, AccordionMode } from "./accordion";
+// carousel.ts
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselOptions, CarouselInstance, CarouselSlide } from "./carousel";
+
+// pagination.ts
+export { PaginationManager, createPagination } from "./pagination";
+export type { PaginationOptions, PaginationInstance } from "./pagination";
+
+// breadcrumb.ts
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb";
