@@ -39717,3 +39717,10 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu-utils";
+// --- Batch 1243: Tabs, Alert, Toast ---
+export { createTabs } from "./tabs-utils";
+export type { TabsOptions, TabsInstance, TabItem } from "./tabs-utils";
+export { createAlert } from "./alert-utils";
+export type { AlertOptions, AlertInstance } from "./alert-utils";
+export { createToastManager, showToast, getToastManager, destroyToastManager } from "./toast-utils";
+export type { ToastOptions, ToastManagerConfig, ToastManagerInstance } from "./toast-utils";
