@@ -28630,3 +28630,15 @@ export type { StepConfig, StepperOptions, StepperInstance, StepStatus } from "./
 // --- Timeline ---
 export { TimelineManager, createTimeline } from "./timeline";
 export type { TimelineItem, TimelineOptions, TimelineInstance, TimelineItemStatus } from "./timeline";
+
+// --- Notification / Toast ---
+export { NotificationManager, getNotificationManager, toast } from "./notification";
+export type { Notification, NotificationOptions, NotificationType, NotificationPosition } from "./notification";
+
+// --- Modal / Dialog ---
+export { createModal } from "./modal";
+export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "./modal";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
