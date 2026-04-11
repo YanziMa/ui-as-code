@@ -38876,3 +38876,42 @@ export {
   hexToRgb: canvasHexToRgb, rgbToHex: canvasRgbToHex, parseColor as canvasParseColor, generateCanvasId,
   type Point2D, type Size2D, type Rect2D, type ColorStop as CanvasColorStop, type CanvasLayer, type DrawOptions, type TextDrawOptions, type ImageFilterOptions, type PixelData,
 } from "./canvas-utils";
+
+// --- animation-utils ---
+export {
+  easings, type EasingName,
+  Tween, tween, tweenPromise,
+  SpringAnimation, springTo,
+  stagger, staggerFadeIn,
+  scrollAnimate,
+  parallax, mouseParallax,
+  animate, fadeIn, fadeOut, slideUp, slideDown, scaleIn, shake, pulse,
+  type TweenOptions, type SpringConfig, type AnimationFrame, type ScrollAnimationOptions,
+} from "./animation-utils";
+
+// --- geometry-utils ---
+export {
+  pt, addPoints, subPoints, scalePoint, distance, distanceSq, midpoint, angleTo, lerpPoint, rotatePoint, reflectPoint,
+  rect: geomRect, rectCenter, rectCorners, pointInRect, rectsIntersect, rectIntersection, rectUnion, inflateRect, rectArea, rectPerimeter, rectAspectRatio, rectContainsRect,
+  circle: geomCircle, pointInCircle, circlesIntersect, circleCircleIntersections, circleArea, circleCircumference, circleRectOverlap,
+  pointToLineDistance, closestPointOnLine, lineSegmentIntersection, lineLength, lineBoundingBox,
+  pointInPolygon, polygonArea, polygonCentroid, polygonBoundingBox, convexHull, simplifyPolyline,
+  aabbOverlap, checkCollision,
+  identityTransform, translateTransform, scaleTransform, rotateTransform, composeTransforms, transformPoint, invertTransform,
+  pointsToPath, arcPath: geomArcPath, roundedRectPath: geomRoundedRectPath,
+  SpatialHash,
+  type Point, type Rect, type Circle, type Line, type Size, type Transform2D,
+} from "./geometry-utils";
+
+// --- physics-utils ---
+export {
+  Vec2,
+  createBody, createStaticBody,
+  gravityForce, windForce, dragForce, springForce,
+  integrateSemiImplicitEuler, integrateVerlet,
+  detectCircleCircle, detectAABB, detectPointPlane,
+  resolveCollision,
+  PhysicsWorld,
+  ParticleEmitter,
+  type Vector2 as PhysVector2, type BodyState, type Force, type CollisionPair, type PhysicsWorldOptions, type ParticleEmitterConfig,
+} from "./physics-utils";
