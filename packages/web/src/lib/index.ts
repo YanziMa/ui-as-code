@@ -24735,3 +24735,14 @@ export type { HelpCenterOptions, HelpCenterInstance, HelpArticle, HelpCategory }
 // --- onboarding-wizard ---
 export { createOnboarding } from "./onboarding-wizard";
 export type { OnboardingOptions, OnboardingInstance, OnboardingStep } from "./onboarding-wizard";
+// --- keyboard-shortcuts ---
+export { ShortcutManager, ShortcutRecorder, ShortcutOverlay, eventToCombo, normalizeKey, comboToString, parseCombo, comboMatches, comboHash, commonShortcuts } from "./keyboard-shortcuts";
+export type { KeyCombo, ShortcutBinding, ShortcutScope, RecordedSequence } from "./keyboard-shortcuts";
+
+// --- context-menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem } from "./context-menu";
+
+// --- drag-and-drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type { DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig, DragMode, DropPosition } from "./drag-and-drop";
