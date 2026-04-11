@@ -29027,3 +29027,29 @@ export {
   type ToastType,
   type ToastPosition,
 } from "./toast-notification.js";
+// --- Batch 966: Modal Dialog, Tooltip/Popover, Context Menu ---
+
+export {
+  createModal,
+  type ModalOptions,
+  type ModalInstance,
+  type ModalSize,
+  type ModalVariant,
+} from "./modal-dialog.js";
+
+export {
+  createTooltip,
+  createPopover,
+  type TooltipOptions,
+  type PopoverOptions,
+  type TooltipInstance,
+  type Placement,
+  type TriggerMode,
+} from "./tooltip-popover.js";
+
+export {
+  ContextMenuManager,
+  type ContextMenuItem,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+} from "./context-menu.js";
