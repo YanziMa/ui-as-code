@@ -29778,3 +29778,14 @@ export type { CommandPaletteConfig, CommandPaletteState, Command, CommandCategor
 // --- search-highlight ---
 export { SearchHighlightManager, createSearchHighlight } from "./search-highlight";
 export type { SearchHighlightOptions, SearchHighlightInstance } from "./search-highlight";
+// --- data-table ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type { DataTableOptions, DataTableInstance, Column, SortState, FilterState } from "./data-table";
+
+// --- chart ---
+export { ChartManager, createChart } from "./chart";
+export type { ChartOptions, ChartInstance, ChartDataset, ChartDataPoint, ChartType } from "./chart";
+
+// --- drag-drop ---
+export { createDropZone, createSortableList, readFileAsText, readFileAsDataURL, readFileAsArrayBuffer, getFileInfo } from "./drag-drop";
+export type { DropZoneConfig, DropZoneController, DragItem, DndState, SortableConfig, SortableController, SortableItem, FileInfo } from "./drag-drop";
