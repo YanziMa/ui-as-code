@@ -49263,3 +49263,62 @@ export {
   resolveConflict as RTCResolveConflict,
   ActivityTracker,
 } from "./realtime-collab";
+// --- reflow ---
+export type {
+  ReadFn as RFlowReadFn,
+  WriteFn as RFlowWriteFn,
+  ReflowMetrics as RFlowMetrics,
+} from "./reflow";
+export {
+  batchDOM as RFlowBatchDOM,
+  ReadWriteScheduler as RFlowRWScheduler,
+  ReflowDetector as RFlowDetector,
+  measureMultiple as RFlowMeasureMultiple,
+  whenVisible as RFlowWhenVisible,
+  runDuringIdle as RFlowRunDuringIdle,
+} from "./reflow";
+
+// --- regex-utils (advanced) ---
+export type {
+  RegexTestResult as RgxUtilTestResult,
+  RegexPerformance as RgxUtilPerf,
+} from "./regex-utils";
+export {
+  RegexBuilder as RgxUtilBuilder,
+  PATTERNS as RgxUtilPatterns,
+  testRegex as RgxUtilTestRegex,
+  matchesPattern as RgxUtilMatches,
+  extractAll as RgxUtilExtractAll,
+  extractFirst as RgxUtilExtractFirst,
+  replaceWith as RgxUtilReplaceWith,
+  replaceTemplate as RgxUtilReplaceTemplate,
+  analyzePerformance as RgxUtilAnalyzePerf,
+  escapeRegexChars as RgxUtilEscapeChars,
+  unescapeRegexChars as RgxUtilUnescapeChars,
+} from "./regex-utils";
+
+// --- regex (simple) ---
+export {
+  escapeRegexString as RgxEscapeString,
+  testRegex as RgxTestRegex,
+  extractMatches as RgxExtractMatches,
+  replaceAll as RgxReplaceAll,
+  splitByRegex as RgxSplitByRegex,
+  isValidEmailRegex as RgxIsValidEmail,
+  isValidUrlRegex as RgxIsValidUrl,
+  isValidHexColor as RgxIsValidHex,
+  isValidRgbColor as RgxIsValidRgb,
+  globToRegex as RgxGlobToRegex,
+  isGlobMatch as RgxIsGlobMatch,
+  filterGlob as RgxFilterGlob,
+  createRegex as RgxCreateRegex,
+  wordBoundary as RgxWordBoundary,
+  digitPattern as RgxDigitPattern,
+  whitespacePattern as RgxWhitespacePattern,
+  newlinePattern as RgxNewlinePattern,
+  extractWords as RgxExtractWords,
+  extractNumbersRegex as RgxExtractNumbers,
+  countPattern as RgxCountPattern,
+  removeDiacritics as RgxRemoveDiacritics,
+  wildcardMatch as RgxWildcardMatch,
+} from "./regex";
