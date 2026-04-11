@@ -37275,3 +37275,26 @@ export type { ResizableOptions, ResizableInstance, ResizeEdge } from "./resizabl
 // --- context-view-utils ---
 export { createContextView } from "./context-view-utils";
 export type { ViewContext, ContextViewOptions, ContextViewInstance } from "./context-view-utils";
+// --- Batch 1193: Overlay, Drawer, Tour ---
+export {
+  createOverlay,
+  getNextZIndex,
+  resetZIndexCounter,
+  type OverlayOptions,
+  type OverlayInstance,
+  type OverlayPlacement,
+  type OverlayAnimation,
+} from "./overlay-utils.js";
+export {
+  createDrawer,
+  type DrawerOptions,
+  type DrawerInstance,
+  type DrawerSide,
+  type DrawerSize,
+} from "./drawer-utils.js";
+export {
+  createTour,
+  type TourOptions,
+  type TourInstance,
+  type TourStep,
+} from "./tour-utils.js";
