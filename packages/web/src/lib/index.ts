@@ -43389,3 +43389,35 @@ export {
   type KeySequenceManagerConfig,
   type KeySequenceInstance,
 } from "./keysequence";
+
+// --- label ---
+export {
+  createLabel,
+  type LabelOptions,
+  type LabelInstance,
+  type LabelVariant,
+  type LabelSize,
+  type LabelShape,
+} from "./label";
+
+// --- layout-grid ---
+export {
+  createGridLayout,
+  build12ColTemplate,
+  gridPatterns,
+  type GridConfig,
+  type GridItemOptions,
+  type BreakpointLayout,
+  type GridLayoutInstance,
+  type GridInfo,
+} from "./layout-grid";
+
+// --- layer-manager ---
+export {
+  createLayerManager,
+  layerAnimations,
+  type LayerOptions,
+  type LayerInstance as LayerManagerLayerInstance,
+  type LayerManagerConfig,
+  type LayerManager,
+} from "./layer-manager";
