@@ -28921,3 +28921,15 @@ export type { VNode, VNodeProps, VChild, Patch as VPatch, VDomOptions } from "./
 // --- morphdom-engine ---
 export { createMorphEngine, morph, morphBetween } from "./morphdom-engine";
 export type { MorphOptions, MorphStats, MorphInstance } from "./morphdom-engine";
+
+// --- event-bus-v2 ---
+export { EventBusV2, createEventBusV2 } from "./event-bus-v2";
+export type { ChannelName as EventBusChannelName, EventName as V2EventName, EventId as V2EventId, SubscriberId as V2SubscriberId, BaseEvent, TypedEvent as V2TypedEvent, EventHandler as V2EventHandler, SubscriptionOptions as V2SubscriptionOptions, SubscriptionHandle as V2SubscriptionHandle, MiddlewareContext as V2MiddlewareContext, EventMiddleware as V2EventMiddleware, BusMetrics as V2BusMetrics, EventBusConfig as V2EventBusConfig } from "./event-bus-v2";
+
+// --- signal-store ---
+export { createStore, createCounterStore } from "./signal-store";
+export type { StoreOptions, StoreInstance, SelectorFn, Listener } from "./signal-store";
+
+// --- reactive-signals ---
+export { signal, computed, effect, batch, isSignal, isComputed, untrack, peek, not as sigNot, mapSignal, filterSignal, asyncEffect, getDependencyGraph, getPendingCount, getBatchDepth, shallowEqual, deepEqual } from "./reactive-signals";
+export type { SignalOptions, ComputedOptions, EffectOptions, ReactionNode, EffectContext } from "./reactive-signals";
