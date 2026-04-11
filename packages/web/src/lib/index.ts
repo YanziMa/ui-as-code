@@ -44975,3 +44975,92 @@ export {
   createScoreGauge as ggScoreGauge,
   createHealthGauge as ggHealthGauge,
 } from "./gauge";
+
+// --- geo-spatial ---
+export type {
+  LatLng as GsLatLng,
+  Point2D as GsPoint2D,
+  Point3D as GsPoint3D,
+  BoundingBox as GsBoundingBox,
+  Circle as GsCircle,
+} from "./geo-spatial";
+export {
+  haversineDistance as gsHaversineDistance,
+  vincentyDistance as gsVincentyDistance,
+  euclideanDistance2D as gsEuclideanDist2D,
+  manhattanDistance2D as gsManhattanDist2D,
+  euclideanDistance3D as gsEuclideanDist3D,
+  initialBearing as gsInitialBearing,
+  destinationPoint as gsDestinationPoint,
+  midpoint as gsMidpoint,
+  boundingBoxFromPoints as gsBoundingBoxFromPoints,
+  isInBoundingBox as gsIsInBBox,
+  bboxCenter as gsBboxCenter,
+  expandBBox as gsExpandBBox,
+  mergeBBoxes as gsMergeBBoxes,
+  bboxArea as gsBboxArea,
+  bboxesIntersect as gsBboxesIntersect,
+  isWithinRadius as gsIsWithinRadius,
+  isInsidePolygon as gsIsInsidePolygon,
+  geofenceCheck as gsGeofenceCheck,
+  polygonArea as gsPolygonArea,
+  polygonCentroid as gsPolygonCentroid,
+  simplifyPolygon as gsSimplifyPolygon,
+  convexHull as gsConvexHull,
+  latLngToTile as gsLatLngToTile,
+  tileToLatLng as gsTileToLatLng,
+  getTilesForBBox as gsGetTilesForBBox,
+  buildTileUrl as gsBuildTileUrl,
+  decimalToDms as gsDecimalToDms,
+  dmsToDecimal as gsDmsToDecimal,
+  getUTMZone as gsGetUTMZone,
+  getMGRSZone as gsGetMGRSZone,
+  parseNmeaGga as gsParseNmeaGga,
+  encodePolyline as gsEncodePolyline,
+  decodePolyline as gsDecodePolyline,
+  mercatorProject as gsMercatorProject,
+  mercatorInverse as gsMercatorInverse,
+  clampLat as gsClampLat,
+  normalizeLng as gsNormalizeLng,
+  formatCoordinate as gsFormatCoordinate,
+} from "./geo-spatial";
+
+// --- geolocation-utils ---
+export type {
+  GeoPosition as GluPosition,
+  GeoOptions as GluOptions,
+  GeoWatchOptions as GluWatchOptions,
+  GeoError as GluError,
+  GeoState as GluState,
+} from "./geolocation-utils";
+export {
+  GeoLocationManager,
+  createGeoLocationManager,
+  getCurrentLocation as gluGetCurrentLocation,
+  geoDistance as gluGeoDistance,
+} from "./geolocation-utils";
+
+// --- geolocation ---
+export type {
+  Coordinates as GlCoordinates,
+  LocationInfo as GlLocationInfo,
+  Geofence as GlGeofence,
+  BoundingBox as GlBoundingBox,
+  DistanceResult as GlDistanceResult,
+} from "./geolocation";
+export {
+  getCurrentPosition as glGetCurrentPosition,
+  watchPosition as glWatchPosition,
+  haversineDistance as glHaversineDistance,
+  pathDistance as glPathDistance,
+  midpointCoords as glMidpointCoords,
+  isInBoundingBox as glIsInBBox,
+  createBoundingBox as glCreateBoundingBox,
+  GeofenceManager,
+  formatCoordinates as glFormatCoords,
+  formatDistance as glFormatDistance,
+  generateMapLink as glGenerateMapLink,
+  calculateSpeed as glCalculateSpeed,
+  isStationary as glIsStationary,
+  getTimezoneForLocation as glGetTimezone,
+} from "./geolocation";
