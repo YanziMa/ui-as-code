@@ -39969,3 +39969,24 @@ export {
 export {
   // (re-exported from disclosure-utils.ts — pre-written)
 } from "./disclosure-utils";
+// --- Tab Bar Utilities ---
+export {
+  createTabBar,
+  type TabBarOptions,
+  type TabBarInstance,
+  type TabBarItem,
+  type TabBarPosition,
+  type TabBarStyle,
+  type TabBarSize,
+} from "./tab-bar-utils";
+
+// --- Pills Utilities ---
+export {
+  createPills,
+  type PillsOptions,
+  type PillsInstance,
+  type PillItem,
+  type PillVariant,
+  type PillSize,
+  type PillMode,
+} from "./pills-utils";
