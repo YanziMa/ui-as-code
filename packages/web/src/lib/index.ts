@@ -42006,3 +42006,32 @@ export type {
   AlertOptions,
   AlertInstance,
 } from "./alert";
+
+// --- statistic ---
+export { StatManager, createStat } from "./statistic";
+export type {
+  TrendDirection,
+  StatVariant,
+  TrendColor,
+  StatOptions,
+  StatInstance,
+} from "./statistic";
+
+// --- timeline-component ---
+export { createTimeline } from "./timeline-component";
+export type {
+  TimelineEvent,
+  TimelineMode,
+  TimelineVariant,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline-component";
+
+// --- comment-thread ---
+export { CommentThreadManager, createCommentThread } from "./comment-thread";
+export type {
+  CommentAuthor,
+  Comment,
+  CommentThreadOptions,
+  CommentThreadInstance,
+} from "./comment-thread";
