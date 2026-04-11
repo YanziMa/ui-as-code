@@ -17339,3 +17339,42 @@ export type {
   QuerySelectorResult,
   SanitizeOptions,
 } from "./html-parser";
+export {
+  createDropZone,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  getFileInfo,
+  createSortableList,
+} from "./drag-drop";
+export type {
+  DragItem,
+  DropZoneConfig,
+  DndState,
+  DropZoneController,
+  FileInfo,
+  SortableItem,
+  SortableConfig,
+  SortableController,
+} from "./drag-drop";
+export {
+  makeResizable,
+  createSplitPane,
+} from "./resizable";
+export type {
+  ResizeOptions,
+  ResizeState,
+  ResizableController,
+  SplitPaneOptions,
+  SplitPaneController,
+} from "./resizable";
+export {
+  SelectionManager,
+  createSelectionManager,
+} from "./selection";
+export type {
+  SelectionRange,
+  CaretPosition,
+  SelectionManagerOptions,
+  SelectionManagerInstance,
+} from "./selection";
