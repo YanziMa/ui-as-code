@@ -21434,3 +21434,39 @@ export type {
 export {
   createForm,
 } from "./form";
+
+// --- Carousel ---
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  createCarousel,
+} from "./carousel";
+
+// --- Collapse ---
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+} from "./collapse";
+
+// --- Drawer ---
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
+export {
+  createDrawer,
+} from "./drawer";
