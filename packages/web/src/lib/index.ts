@@ -22569,3 +22569,33 @@ export {
   type CircuitBreakerConfig,
   type CircuitBreakerStats,
 } from "./circuit-breaker";
+
+// --- feature-flags ---
+export {
+  FeatureFlagStore,
+  featureFlags,
+  isFeatureEnabled,
+  DEFAULT_FLAGS,
+  type FeatureFlag,
+  type FlagContext,
+} from "./feature-flags";
+
+// --- metrics ---
+export {
+  MetricsCollector,
+  PerformanceObserver,
+  measureWebVitals,
+  perfMark,
+  perfMeasure,
+  type MetricValue,
+  type HistogramBucket,
+} from "./metrics";
+
+// --- lock ---
+export {
+  Mutex,
+  Semaphore,
+  ReadWriteLock,
+  SpinLock,
+  type LockOptions,
+} from "./lock";
