@@ -46134,3 +46134,15 @@ export { ShortcutManager, ShortcutRecorder, ShortcutOverlay, commonShortcuts } f
 // --- keyboard-utils ---
 export type { ModifierKey as KbUtilsModifierKey, KeyBinding, KeySequence, NormalizedKeyEvent, KeyboardState, NavigationConfig } from "./keyboard-utils";
 export { KEY_ALIASES, resolveKey, normalizeKeyEvent, eventMatchesBinding, HotkeyManager, KeySequenceDetector, RovingTabIndex, formatHotkey, parseHotkeyString, isTypingInInput } from "./keyboard-utils";
+
+// --- keyboard ---
+export type { KeyBinding as KbMgrKeyBinding, KeyChord as KbMgrKeyChord, KeyboardManagerOptions, KeyboardManagerInstance } from "./keyboard";
+export { KeyboardManager, createKeyboardManager, formatShortcut as formatShortcutKb, matchesShortcut } from "./keyboard";
+
+// --- keyframe ---
+export type { KeyframeDefinition, CssProperties, KeyframeAnimation, KeyframeSequence, PresetName } from "./keyframe";
+export { createKeyframe, injectKeyframes, generateKeyframesCSS, removeKeyframes, applyAnimation as applyKeyframeAnimation, animateWAAPI, playSequence as playKeyframeSequence, interpolateKeyframes, keyframePresets, playPreset } from "./keyframe";
+
+// --- keysequence ---
+export type { KeyBinding as KsSeqKeyBinding, KeySequence as KsSeqKeySequence, KeyChord as KsSeqKeyChord, MacroStep, Macro, KeySequenceManagerConfig, KeySequenceInstance } from "./keysequence";
+export { createKeySequenceManager } from "./keysequence";
