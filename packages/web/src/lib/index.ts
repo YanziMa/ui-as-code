@@ -25583,3 +25583,15 @@ export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
 // --- pagination ---
 export type { PaginationOptions, PaginationInstance } from "./pagination";
 export { PaginationManager, createPagination } from "./pagination";
+
+// --- timeline ---
+export type { TimelineItemStatus, TimelineItem, TimelineOptions, TimelineInstance } from "./timeline";
+export { TimelineManager, createTimeline } from "./timeline";
+
+// --- rating ---
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+export { RatingManager, createRating } from "./rating";
+
+// --- empty-state ---
+export type { EmptyStateVariant, EmptyStateOptions, EmptyStateInstance } from "./empty-state";
+export { EmptyStateManager, createEmptyState } from "./empty-state";
