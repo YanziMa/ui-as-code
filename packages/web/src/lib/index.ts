@@ -42156,3 +42156,10 @@ export { CommandPalette } from "./command-palette";
 export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
 export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
 export type { RgbColor, HslColor, Palette } from "./color-picker";
+// --- Batch 1354: Rating, Avatar, Chip Group ---
+export { RatingManager, createRating } from "./rating";
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar";
+export { createChipGroup } from "./chip-group";
+export type { ChipSize, ChipVariant, ChipSelectionMode, ChipItem, ChipGroupOptions, ChipGroupInstance } from "./chip-group";
