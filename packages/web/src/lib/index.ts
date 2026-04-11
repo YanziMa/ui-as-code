@@ -44416,3 +44416,34 @@ export type {
   SplitButtonInstance,
 } from "./split-button";
 export { SplitButtonManager, createSplitButton } from "./split-button";
+// --- split-buttons ---
+export type {
+  ButtonVariant as SegmentedButtonVariant,
+  ButtonSize as SegmentedButtonSize,
+  SplitButtonOption as SegmentedOption,
+  SplitButtonOptions as SegmentedControlOptions,
+  SplitButtonInstance as SegmentedControlInstance,
+  ToggleGroupOptions,
+  IconButtonBarOptions,
+} from "./split-buttons";
+export { createSplitButtons, createToggleGroup, createIconButtonBar } from "./split-buttons";
+
+// --- split-pane-resizable ---
+export type {
+  SplitDirection as ResizableSplitDirection,
+  ResizeHandle,
+  PaneConfig as ResizablePaneConfig,
+  SplitPaneOptions as ResizableSplitPaneOptions,
+  SplitPaneInstance as ResizableSplitPaneInstance,
+} from "./split-pane-resizable";
+export { createSplitPane as createResizableSplitPane } from "./split-pane-resizable";
+
+// --- split-pane-utils ---
+export type {
+  SplitDirection as UtilsSplitDirection,
+  SplitBehavior,
+  PaneOptions as UtilsPaneOptions,
+  SplitPaneOptions as UtilsSplitPaneOptions,
+  SplitPaneInstance as UtilsSplitPaneInstance,
+} from "./split-pane-utils";
+export { createSplitPane as createUtilsSplitPane } from "./split-pane-utils";
