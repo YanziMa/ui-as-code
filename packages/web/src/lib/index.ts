@@ -37768,3 +37768,48 @@ export {
   type FPSMonitorOptions,
   type FPSMonitorInstance,
 } from "./perf-utils.js";
+// --- Batch 1202: State, Reactive, Async ---
+export {
+  createState,
+  createDerived,
+  createMachine,
+  diffState,
+  statesEqual,
+  type StateContainerOptions,
+  type StateContainer,
+  type StateListener,
+  type MachineConfig,
+  type MachineInstance,
+  type MachineTransition,
+} from "./state-utils.js";
+export {
+  createSignal,
+  createComputed,
+  createEffect,
+  batch,
+  watch,
+  watchDebounced,
+  watchThrottled,
+  withHistory,
+  type Signal,
+  type Computed,
+  type EffectInstance,
+  type SignalHistory,
+} from "./reactive-utils.js";
+export {
+  retry,
+  withTimeoutPromise,
+  poll,
+  runWithConcurrency,
+  memoizeAsync,
+  memoize,
+  createDeferred,
+  asyncIterate,
+  batchProcess,
+  allSuccessful,
+  allOrThrow,
+  type RetryOptions,
+  type PollOptions,
+  type ConcurrencyOptions,
+  type MemoizeOptions,
+} from "./async-utils.js";
