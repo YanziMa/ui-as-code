@@ -28007,3 +28007,14 @@ export type { KanbanCard, KanbanColumn, KanbanBoardOptions, KanbanBoardInstance 
 // --- Split Buttons ---
 export { createSplitButtons, createToggleGroup, createIconButtonBar } from "./split-buttons";
 export type { SplitButtonOption, SplitButtonOptions, SplitButtonInstance, ButtonVariant, ButtonSize, ToggleGroupOptions, IconButtonBarOptions } from "./split-buttons";
+// --- Hotkeys ---
+export { HotkeyManager, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, createAppHotkeys, areModifiersDown, getModifierString } from "./hotkeys";
+export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
+
+// --- Logger ---
+export { Logger, setGlobalLogLevel, getGlobalLogLevel, log, apiLog, dbLog, extLog } from "./logger";
+export type { LogLevel, LogTransport, LogEntry } from "./logger";
+
+// --- Perf Monitor ---
+export { PerfMonitor, createPerfMonitor } from "./perf-monitor";
+export type { FpsMetrics, MemoryInfo, PerfEntry, PerfReport, WebVitals, PerfMonitorOptions } from "./perf-monitor";
