@@ -41939,3 +41939,37 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+
+// --- avatar-group ---
+export { AvatarGroupManager, createAvatarGroup } from "./avatar-group";
+export type {
+  AvatarItem,
+  AvatarSize,
+  StackDirection,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
+
+// --- badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+
+// --- empty-state ---
+export { EmptyStateManager, createEmptyState } from "./empty-state";
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
