@@ -24702,3 +24702,14 @@ export type { GanttChartOptions, GanttChartInstance, GanttTask } from "./gantt-c
 // --- mind-map ---
 export { createMindMap } from "./mind-map";
 export type { MindMapOptions, MindMapInstance, MindMapNode } from "./mind-map";
+// --- form-builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type { FormSchema, FormField, FormSection, FormState, FieldValidation, FieldError, SelectOption, FieldType } from "./form-builder";
+
+// --- data-table-advanced ---
+export { createDataTable } from "./data-table-advanced";
+export type { DataTableOptions, DataTableInstance, ColumnDef, TableRow, SortDirection, AlignType } from "./data-table-advanced";
+
+// --- notification-center ---
+export { NotificationCenterManager, createNotificationCenter } from "./notification-center";
+export type { NotificationCenterOptions, NotificationCenterInstance, NotificationItem, NotificationType } from "./notification-center";
