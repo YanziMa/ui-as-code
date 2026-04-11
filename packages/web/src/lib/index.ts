@@ -25655,3 +25655,15 @@ export { SortableList, createSortable } from "./sortable";
 // --- resizable-panels ---
 export type { PanelDirection, PanelCollapseMode, PanelConfig, ResizablePanelsOptions, ResizablePanelsInstance } from "./resizable-panels";
 export { createResizablePanels } from "./resizable-panels";
+
+// --- scroll-lock ---
+export type { ScrollLockOptions, ScrollLockInstance } from "./scroll-lock";
+export { ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock } from "./scroll-lock";
+
+// --- focus-trap ---
+export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
+export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap";
+
+// --- portals ---
+export type { PortalOptions, PortalInstance, PortalManagerOptions, PortalManagerInstance } from "./portals";
+export { createPortal, createPortalManager, getOrCreateTarget, createModalTarget, createTooltipTarget, createNotificationTarget, createDrawerTarget } from "./portals";
