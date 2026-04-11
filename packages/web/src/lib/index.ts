@@ -44084,3 +44084,14 @@ export {
   combineLatest,
 } from "./react-observables";
 export type { UnsubscribeFn, Observer, CompletionFn, ErrorFn, SubscriptionObserver } from "./react-observables";
+// --- react-perf-utils ---
+export { RenderTracker, createRenderTracker, memoize, deepEqual, createBatchUpdater, runWhenIdle, perfMark, perfMeasure, perfClearMarks } from "./react-perf-utils";
+export type { PerfMetric, PerfReport } from "./react-perf-utils";
+
+// --- react-promise ---
+export { PromiseTracker, createPromiseTracker, retryWithBackoff, createCancellable, withTimeout, createLatestResolver, sequence, parallelLimit, maybePromise } from "./react-promise";
+export type { PromiseStatus, PromiseState, PromiseOptions, RetryOptions } from "./react-promise";
+
+// --- react-resize-observer ---
+export { createSizeObserver, createBreakpointMatcher, DEFAULT_BREAKPOINTS, CONTAINER_BREAKPOINTS, createDimensionTracker, isResizeObserverAvailable, getViewportSize } from "./react-resize-observer";
+export type { SizeInfo, Breakpoint, ResizeObserverOptions } from "./react-resize-observer";
