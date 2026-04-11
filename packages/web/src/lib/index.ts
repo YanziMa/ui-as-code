@@ -41731,3 +41731,38 @@ export * from "./timeline-viewer";
 export * from "./data-table";
 export * from "./pivot-table";
 export * from "./tree-view";
+
+// --- form-builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type {
+  FieldType,
+  FieldValidation,
+  SelectOption,
+  FormField,
+  FormSection,
+  FormSchema,
+  FieldError,
+  FormState,
+} from "./form-builder";
+
+// --- wizard-stepper ---
+export { createWizard } from "./wizard-stepper";
+export type {
+  StepStatus,
+  StepLayout,
+  WizardStep,
+  WizardOptions,
+  WizardInstance,
+} from "./wizard-stepper";
+
+// --- heatmap-chart ---
+export { createHeatmap } from "./heatmap-chart";
+export type {
+  HeatmapLayout,
+  ColorScale,
+  AggregationMethod,
+  HeatmapCell,
+  HeatmapColorStop,
+  HeatmapOptions,
+  HeatmapInstance,
+} from "./heatmap-chart";
