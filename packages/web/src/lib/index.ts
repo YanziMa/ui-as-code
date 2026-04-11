@@ -29366,3 +29366,16 @@ export type {
   ScoreboardVariant,
   ScoreboardSize,
 } from "./scoreboard.js";
+// --- Batch 981: Progress Ring, Odometer, Donut Chart ---
+export { createProgressRing } from "./progress-ring.js";
+export type { ProgressRingOptions, ProgressRingInstance, ProgressRingVariant, ProgressRingSize } from "./progress-ring.js";
+export { createOdometer } from "./odometer.js";
+export type { OdometerOptions, OdometerInstance, OdometerEasing } from "./odometer.js";
+export { createDonutChart } from "./donut-chart.js";
+export type {
+  DonutChartOptions,
+  DonutChartInstance,
+  DonutChartDataPoint,
+  DonutChartInteractionMode,
+  DonutChartLegendPosition,
+} from "./donut-chart.js";
