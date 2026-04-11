@@ -44667,3 +44667,61 @@ export {
   findAllPaths as smvFindAllPaths,
   validateModel as smvValidateModel,
 } from "./state-machine-visual";
+
+// --- state-machine-viz ---
+export {
+  StateId as SmvzStateId,
+  EventLabel as SmvzEventLabel,
+  StateNode as SmvzStateNode,
+  TransitionEdge as SmvzTransitionEdge,
+  MachineDefinition as SmvzMachineDefinition,
+  VizOptions as SmvzVizOptions,
+  VizColorTheme as SmvzVizColorTheme,
+  VizInstance as SmvzVizInstance,
+  visualizeStateMachine as smvzVisualizeStateMachine,
+  renderMachine as smvzRenderMachine,
+} from "./state-machine-viz";
+
+// --- state-machine ---
+export {
+  StateId as SmStateId,
+  EventId as SmEventId,
+  MachineContext as SmMachineContext,
+  EventPayload as SmEventPayload,
+  GuardFn as SmGuardFn,
+  ActionFn as SmActionFn,
+  StateListener as SmStateListener,
+  InvalidEventStrategy as SmInvalidEventStrategy,
+  TransitionTarget as SmTransitionTarget,
+  TransitionDef as SmTransitionDef,
+  StateConfig as SmStateConfig,
+  HistoryMode as SmHistoryMode,
+  MachineConfig as SmMachineConfig,
+  ChoiceConfig as SmChoiceConfig,
+  JunctionConfig as SmJunctionConfig,
+  StateValue as SmStateValue,
+  TransitionHistoryEntry as SmTransitionHistoryEntry,
+  Service as SmService,
+  FSM as SmFSM,
+  HSM as SmHSM,
+  evaluateChoice as smEvaluateChoice,
+  evaluateJunction as smEvaluateJunction,
+  deepHistoryTarget as smDeepHistoryTarget,
+  shallowHistoryTarget as smShallowHistoryTarget,
+  createMachine as smCreateMachine,
+  interpret as smInterpret,
+  match as smMatch,
+  stateEquals as smStateEquals,
+} from "./state-machine";
+
+// --- state-manager ---
+export {
+  Listener as StmListener,
+  Middleware as StmMiddleware,
+  Selector as StmSelector,
+  StoreOptions as StmStoreOptions,
+  StoreInstance as StmStoreInstance,
+  ComputedValue as StmComputedValue,
+  createStore as stmCreateStore,
+  combineStores as stmCombineStores,
+} from "./state-manager";
