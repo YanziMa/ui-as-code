@@ -34429,3 +34429,14 @@ export type { CheckboxOptions, CheckboxInstance, CheckboxGroupOptions, CheckboxG
 // --- radio-utils ---
 export { createRadioGroup } from "./radio-utils";
 export type { RadioGroupOptions, RadioInstance, RadioOption, RadioSize, RadioVariant } from "./radio-utils";
+// --- switch-utils ---
+export { createSwitch } from "./switch-utils";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch-utils";
+
+// --- slider-utils ---
+export { createSlider } from "./slider-utils";
+export type { SliderOptions, SliderInstance, SliderSize, SliderVariant } from "./slider-utils";
+
+// --- color-picker-utils ---
+export { createColorPicker, parseColor, hslToRgb, rgbToHsl, rgbToHex, formatColor } from "./color-picker-utils";
+export type { ColorPickerOptions, ColorPickerInstance, ColorValue, ColorFormat, ColorPreset } from "./color-picker-utils";
