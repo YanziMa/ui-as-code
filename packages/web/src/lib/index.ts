@@ -27262,3 +27262,36 @@ export {
   type CardHeaderOptions,
   type CardImageOptions,
 } from "./card";
+// --- Spinner ---
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+  type SpinnerOptions,
+  type SpinnerVariant,
+  type SpinnerSize,
+} from "./spinner";
+
+// --- Chip ---
+export {
+  createChip,
+  createChipGroup,
+  type ChipOptions,
+  type ChipInstance,
+  type ChipGroupOptions,
+  type ChipGroupInstance,
+  type ChipSize,
+  type ChipVariant,
+} from "./chip";
+
+// --- Divider ---
+export {
+  createDivider,
+  hDivider,
+  vDivider,
+  labeledDivider,
+  sectionDivider,
+  type DividerOptions,
+  type DividerOrientation,
+  type DividerStyle,
+} from "./divider";
