@@ -24480,3 +24480,12 @@ export {
   type LightboxInstance,
   type LightboxImage,
 } from "./lightbox";
+
+// --- Tooltip Group ---
+export { createTooltipGroup, TooltipGroupManager, type TooltipGroupOptions, type TooltipItemOptions, type TooltipGroupInstance } from "./tooltip-group";
+
+// --- Context Provider ---
+export { createContext, ThemeContext, AuthContext, I18nContext, ResponsiveContext, createResponsiveProvider, type Context, type ContextOptions, type ProviderInstance, type ConsumerHandle, type ThemeContextValue, type AuthContextValue, type I18nContextValue, type ResponsiveContextValue } from "./context-provider";
+
+// --- Masonry Layout ---
+export { createMasonry, MasonryManager, type MasonryOptions, type MasonryItem, type MasonryInstance } from "./masonry";
