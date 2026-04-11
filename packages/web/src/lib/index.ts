@@ -26852,3 +26852,15 @@ export type { RgbColor, HslColor, Palette } from "./color-picker";
 // --- Slider ---
 export { SliderManager, createSlider } from "./slider";
 export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
+
+// --- Upload ---
+export { createUpload } from "./upload";
+export type { UploadOptions, UploadInstance, UploadFile, UploadStatus } from "./upload";
+
+// --- Image Viewer ---
+export { ImageViewerManager, createImageViewer } from "./image-viewer";
+export type { ImageViewerOptions, ImageViewerInstance, ImageViewerImage, ImageViewerTool } from "./image-viewer";
+
+// --- Code Editor ---
+export { CodeEditorManager, createCodeEditor } from "./code-editor";
+export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
