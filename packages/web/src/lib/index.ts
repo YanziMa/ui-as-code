@@ -39944,3 +39944,28 @@ export {
   type EmptyStateOptions,
   type EmptyStateType,
 } from "./empty-state-utils";
+// --- Accordion Utilities ---
+export {
+  createAccordion,
+  type AccordionOptions,
+  type AccordionInstance,
+  type AccordionItem,
+  type AccordionMode,
+} from "./accordion-utils";
+
+// --- Collapse Utilities ---
+export {
+  createCollapse,
+  createCollapseGroup,
+  type CollapseOptions,
+  type CollapseInstance,
+  type CollapseGroupOptions,
+  type CollapseGroupInstance,
+  type CollapseEasing,
+  type CollapseState,
+} from "./collapse-utils";
+
+// --- Disclosure Utilities ---
+export {
+  // (re-exported from disclosure-utils.ts — pre-written)
+} from "./disclosure-utils";
