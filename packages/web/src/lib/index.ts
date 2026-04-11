@@ -17782,3 +17782,32 @@ export type {
   AccordionInstance,
   AccordionMode,
 } from "./accordion";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+export {
+  createPaginationNav,
+  formatPaginationInfo,
+  getOptimalPageSize,
+} from "./pagination-nav";
+export type {
+  PaginationNavOptions,
+  PaginationNavInstance,
+  PaginationSize,
+  PaginationVariant,
+} from "./pagination-nav";
