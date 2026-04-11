@@ -20943,3 +20943,36 @@ export {
   SignaturePadManager,
   createSignaturePad,
 } from "./signature-pad";
+
+// --- Statistics Chart ---
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartSeries,
+  ChartOptions,
+  ChartInstance,
+} from "./statistics-chart";
+export {
+  createChart,
+} from "./statistics-chart";
+
+// --- Notification Bell ---
+export type {
+  NotificationItem,
+  NotificationBellOptions,
+  NotificationBellInstance,
+} from "./notification-bell";
+export {
+  createNotificationBell,
+} from "./notification-bell";
+
+// --- Scroll Progress ---
+export type {
+  ProgressBarPosition,
+  ProgressBarVariant,
+  ScrollProgressOptions,
+  ScrollProgressInstance,
+} from "./scroll-progress";
+export {
+  createScrollProgress,
+} from "./scroll-progress";
