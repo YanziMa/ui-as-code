@@ -29972,3 +29972,26 @@ export {
   createSkipLink,
 } from "./a11y-utils";
 export type { A11yFocusableElements, ContrastResult } from "./a11y-utils";
+
+// --- resize-observer ---
+export { ResizeWatcher, createResizeObserver, matchParentSize, whenSizeExceeds } from "./resize-observer";
+export type { ResizeBox, ResizeObserverOptions, ResizeObserverEntry, ResizeObserverInstance } from "./resize-observer";
+
+// --- mutation-observer ---
+export { MutationWatcher, createMutationObserver, waitForElement, waitForRemoval } from "./mutation-observer";
+export type {
+  MutationFilter,
+  MutationObserverOptions,
+  SimplifiedMutationRecord,
+  MutationObserverInstance,
+} from "./mutation-observer";
+
+// --- intersection-helper ---
+export {
+  IntersectionHelper,
+  createIntersectionHelper,
+  createLazyLoader,
+  createScrollReveal,
+  trackVisibility,
+} from "./intersection-helper";
+export type { IntersectionOptions, IntersectionEntry, IntersectionHelperInstance } from "./intersection-helper";
