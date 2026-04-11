@@ -28191,3 +28191,15 @@ export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoi
 // --- Kanban Board ---
 export { createKanbanBoard } from "./kanban-board";
 export type { KanbanBoardOptions, KanbanBoardInstance, KanbanCard, KanbanColumn } from "./kanban-board";
+
+// --- Sortable List ---
+export { createSortableList } from "./sortable-list";
+export type { SortableListOptions, SortableListInstance, SortableItem } from "./sortable-list";
+
+// --- Anchor Nav ---
+export { createAnchorNav } from "./anchor-nav";
+export type { AnchorNavOptions, AnchorNavInstance, AnchorLink } from "./anchor-nav";
+
+// --- Undo/Redo ---
+export { UndoHistory } from "./undo-redo";
+export type { UndoHistoryOptions, UndoState, UndoItem, UndoBranch, UndoChangeListener } from "./undo-redo";
