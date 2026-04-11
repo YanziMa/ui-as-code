@@ -41723,3 +41723,7 @@ export * from "./richtext-editor";
 export * from "./markdown-renderer";
 export * from "./code-editor";
 export * from "./diff-viewer";
+// --- Batch 1320: Kanban Board, Gantt Chart, Timeline Viewer ---
+export * from "./kanban-board";
+export * from "./gantt-chart";
+export * from "./timeline-viewer";
