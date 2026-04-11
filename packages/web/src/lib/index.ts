@@ -41229,3 +41229,59 @@ export {
   generateDarkTokens,
   createLightDarkTheme,
 } from "./theme-utils";
+
+// --- accessibility-utils ---
+export type { ContrastResult, FocusableElement, HeadingInfo, LandmarkInfo } from "./accessibility-utils";
+export {
+  setAria,
+  getAria,
+  setRole,
+  setAccessibleName,
+  hideFromScreenReader,
+  showToScreenReader,
+  getFocusableElements,
+  focusFirst,
+  focusLast,
+  isFocusable,
+  createFocusTrap,
+  setupRovingTabindex,
+  announce,
+  announceAssertive,
+  contrastRatio,
+  checkContrast,
+  suggestTextColor,
+  getHeadingHierarchy,
+  validateHeadingHierarchy,
+  findLandmarks,
+  hasProperLandmarks,
+  prefersReducedMotion as a11yPrefersReducedMotion,
+  prefersHighContrast as a11yPrefersHighContrast,
+  prefersDarkMode,
+  prefersLightMode,
+  onPreferenceChange,
+  createSkipLink,
+  openAccessibleModal,
+} from "./accessibility-utils";
+
+// --- form-utils ---
+export type { FormFieldConfig, FormValidationRule, FormFieldState, FormOptions, FormInstance, StepConfig, MultiStepFormOptions, MultiStepFormInstance, ConditionRule, ConditionalField } from "./form-utils";
+export {
+  createForm,
+  serializeForm,
+  populateForm,
+  clearForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  linkErrorToField,
+  unlinkErrorFromField,
+  createFormAnnouncer,
+} from "./form-utils";
+
+// --- storage-utils ---
+export type { StorageBackend, StorageEntry, StorageOptions, StorageStats, StorageMigration } from "./storage-utils";
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+} from "./storage-utils";
