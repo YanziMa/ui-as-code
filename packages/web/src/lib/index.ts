@@ -29272,3 +29272,15 @@ export { LightboxManager, createLightbox } from "./lightbox.js";
 // --- Rating Input (Batch 973) ---
 export type { RatingIcon, RatingSize, RatingInputOptions, RatingInputInstance } from "./rating-input.js";
 export { createRatingInput } from "./rating-input.js";
+
+// --- Avatar Group (Batch 974) ---
+export type { AvatarSize, StackDirection, AvatarItem, AvatarGroupOptions, AvatarGroupInstance } from "./avatar-group.js";
+export { AvatarGroupManager, createAvatarGroup } from "./avatar-group.js";
+
+// --- Badge Manager (Batch 974) ---
+export type { BadgeVariant, BadgePosition, BadgeSize, DotSize, BadgeOptions, DotBadgeOptions, StatusBadgeOptions, BadgeInstance, DotBadgeInstance, StatusBadgeInstance } from "./badge-manager.js";
+export { createBadge, createDotBadge, createStatusBadge } from "./badge-manager.js";
+
+// --- Chip Input (Batch 974) ---
+export type { ChipData, ChipSuggestion, ChipInputOptions, ChipInputInstance } from "./chip-input.js";
+export { ChipInputManager, createChipInput } from "./chip-input.js";
