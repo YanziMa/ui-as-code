@@ -32912,3 +32912,57 @@ export type {
   FileChunk,
   UploadProgress,
 } from "./file-utils";
+
+// --- url-utils ---
+export {
+  parseUrl,
+  buildUrlFromParts,
+  updateSearchParams,
+  removeSearchParams,
+  getQueryParams,
+  isSameOrigin,
+  normalizeUrl,
+  isAbsoluteUrl,
+  makeAbsoluteUrl,
+  getDomainFromUrl,
+  getPathnameFromUrl,
+  joinPathSegments,
+  encodeUriComponentSafe,
+  decodeUriComponentSafe,
+  urlsEqual,
+} from "./url-utils";
+export type { ParsedUrl } from "./url-utils";
+
+// --- storage-utils ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+} from "./storage-utils";
+export type {
+  StorageBackend,
+  StorageEntry,
+  StorageOptions,
+  StorageStats,
+  StorageMigration,
+} from "./storage-utils";
+
+// --- dom-observer ---
+export {
+  DomObserverManager,
+  takeSnapshot,
+  compareSnapshots,
+  createRouteChangeDetector,
+  createLazyLoader,
+} from "./dom-observer";
+export type {
+  ObserveTarget,
+  MutationOptions,
+  IntersectionOptions,
+  ResizeOptions,
+  MutationRecordEx,
+  DomSnapshot,
+  ObserverCallbacks,
+  ObserverStats,
+} from "./dom-observer";
