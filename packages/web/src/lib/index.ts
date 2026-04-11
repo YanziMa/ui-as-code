@@ -41557,3 +41557,32 @@ export {
   type IconCategory,
   type IconSize,
 } from "./icon-picker";
+// --- Calendar / Scheduler ---
+export {
+  createCalendar,
+  type CalendarOptions,
+  type CalendarInstance,
+  type CalendarEvent,
+  type CalendarView,
+  type WeekStartDay,
+} from "./calendar-scheduler";
+
+// --- Kanban Board ---
+export {
+  createBoard,
+  type BoardOptions,
+  type BoardInstance,
+  type BoardCard,
+  type BoardColumn,
+} from "./board";
+
+// --- List Board (Hybrid Table/Kanban) ---
+export {
+  createListBoard,
+  type ListBoardOptions,
+  type ListBoardInstance,
+  type ListBoardColumn,
+  type ListBoardRow,
+  type SortDirection,
+  type RowSelectionMode,
+} from "./list-board";
