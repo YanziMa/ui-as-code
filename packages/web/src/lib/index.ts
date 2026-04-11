@@ -24951,3 +24951,15 @@ export { createHeatmap } from "./heatmap";
 // --- Sparkline ---
 export type { SparklineType, SparklineOptions, SparklineInstance } from "./sparkline";
 export { createSparkline } from "./sparkline";
+
+// --- Mention ---
+export type { MentionOption, MentionOptions, MentionInstance } from "./mention";
+export { MentionManager, createMention } from "./mention";
+
+// --- Avatar Group ---
+export type { AvatarSize, StackDirection, AvatarItem, AvatarGroupOptions, AvatarGroupInstance } from "./avatar-group";
+export { AvatarGroupManager, createAvatarGroup } from "./avatar-group";
+
+// --- Breadcrumb ---
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
