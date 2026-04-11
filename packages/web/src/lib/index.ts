@@ -28837,3 +28837,15 @@ export type { PushSubscriptionInfo, PushApiOptions, PushInstance } from "./push-
 // --- broadcast-channel ---
 export { createBroadcast, isBroadcastSupported, quickBroadcast } from "./broadcast-channel";
 export type { ChannelMessage, BroadcastOptions, BroadcastInstance } from "./broadcast-channel";
+
+// --- web-animations ---
+export { animate, createOrchestrator, isWebAnimationsSupported, animateOrTransition } from "./web-animations";
+export type { KeyframeProps, AnimationKeyframe, AnimationOptions, AnimationInstance, OrchestratorInstance } from "./web-animations";
+
+// --- intersection-observer-v2 ---
+export { createIntersectionObserverV2, onceInViewport, lazyLoadImages } from "./intersection-observer-v2";
+export type { VisibilityDirection as IntersectionV2Direction, IntersectionV2Entry, IntersectionObserverV2Options, IntersectionObserverV2Instance } from "./intersection-observer-v2";
+
+// --- resize-observer-v2 ---
+export { createResizeObserverV2, watchSize, useResponsiveSize } from "./resize-observer-v2";
+export type { ResizeV2Entry, Breakpoint as ResizeBreakpoint, ResizeObserverV2Options, ResizeObserverV2Instance } from "./resize-observer-v2";
