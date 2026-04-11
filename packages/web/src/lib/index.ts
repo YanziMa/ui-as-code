@@ -29582,3 +29582,14 @@ export type { DigitalClockOptions, DigitalClockInstance, DigitStyle, SizeVariant
 // --- countdown-timer-v2 ---
 export { createCountdownTimerV2 } from "./countdown-timer-v2";
 export type { CountdownOptions, CountdownInstance, CountdownPreset, CountdownState, CountdownSegment } from "./countdown-timer-v2";
+// --- pomodoro-timer ---
+export { createPomodoroTimer } from "./pomodoro-timer";
+export type { PomodoroOptions, PomodoroInstance, PomodoroPhase, PomodoroState, PomodoroSession } from "./pomodoro-timer";
+
+// --- calendar-heatmap ---
+export { createCalendarHeatmap } from "./calendar-heatmap";
+export type { HeatmapOptions, HeatmapInstance, HeatmapDataPoint, HeatmapColorScheme } from "./calendar-heatmap";
+
+// --- timeline ---
+export { createTimeline, TimelineManager } from "./timeline";
+export type { TimelineOptions, TimelineInstance, TimelineItem, TimelineItemStatus } from "./timeline";
