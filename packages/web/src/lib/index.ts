@@ -28750,3 +28750,15 @@ export type { DragOptions, DropZoneOptions, DropResult, DragItem, DragMode, Drop
 // --- Sortable List ---
 export { SortableList, createSortable } from "./sortable";
 export type { SortableOptions, SortableInstance, SortableItem } from "./sortable";
+
+// --- i18n ---
+export { t, getLocale, setLocale, LOCALE_CHANGE_EVENT } from "./i18n";
+export type { Locale } from "./i18n";
+
+// --- Theme ---
+export { ThemeManager, getThemeManager, LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES } from "./theme";
+export type { ThemeConfig, ThemeColors } from "./theme";
+
+// --- Logger ---
+export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
+export type { LogLevel } from "./logger";
