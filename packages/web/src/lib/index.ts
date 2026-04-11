@@ -27449,3 +27449,34 @@ export {
   type TooltipPlacement,
   type TooltipTrigger,
 } from "./tooltip";
+
+// --- drawer ---
+export {
+  createDrawer,
+  type DrawerOptions,
+  type DrawerInstance,
+  type DrawerSide,
+  type DrawerSize,
+} from "./drawer";
+
+// --- popover ---
+export {
+  PopoverManager,
+  createPopover,
+  type PopoverOptions,
+  type PopoverInstance,
+  type PopoverTrigger,
+  type PopoverPlacement,
+} from "./popover";
+
+// --- dropdown ---
+export {
+  createDropdown,
+  type DropdownOptions,
+  type DropdownInstance,
+  type DropdownItem,
+  type DropdownSeparator,
+  type DropdownGroup,
+  type DropdownEntry,
+  type DropdownPlacement,
+} from "./dropdown";
