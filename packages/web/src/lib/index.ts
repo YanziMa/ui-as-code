@@ -41426,3 +41426,33 @@ export { createDrawer } from "./drawer-utils";
 // --- split-view-utils ---
 export type { SplitDirection, SplitCollapseMode, SplitPaneConfig, SplitViewOptions, SplitViewInstance } from "./split-view-utils";
 export { createSplitView } from "./split-view-utils";
+// --- Carousel ---
+export {
+  createCarousel,
+  type CarouselSlide,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselTransition,
+  type CarouselNavStyle,
+} from "./carousel-utils";
+
+// --- Accordion ---
+export {
+  createAccordion,
+  type AccordionItem,
+  type AccordionOptions,
+  type AccordionInstance,
+  type AccordionMode,
+} from "./accordion-utils";
+
+// --- Collapse ---
+export {
+  createCollapse,
+  createCollapseGroup,
+  type CollapseOptions,
+  type CollapseInstance,
+  type CollapseEasing,
+  type CollapseState,
+  type CollapseGroupOptions,
+  type CollapseGroupInstance,
+} from "./collapse-utils";
