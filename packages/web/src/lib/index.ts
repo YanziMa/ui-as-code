@@ -25112,3 +25112,32 @@ export {
   type InputSize,
   type InputState,
 } from "./text-input";
+
+// --- Textarea ---
+export {
+  createTextarea,
+  type TextareaOptions,
+  type TextareaInstance,
+  type TextareaSize,
+  type TextareaState,
+} from "./textarea";
+
+// --- Checkbox Group ---
+export {
+  createCheckboxGroup,
+  type CheckboxGroupOptions,
+  type CheckboxGroupInstance,
+  type CheckboxOption,
+  type CheckboxSize,
+  type CheckboxVariant,
+} from "./checkbox-group";
+
+// --- Radio Group ---
+export {
+  createRadioGroup,
+  type RadioGroupOptions,
+  type RadioGroupInstance,
+  type RadioOption,
+  type RadioSize,
+  type RadioVariant,
+} from "./radio-group";
