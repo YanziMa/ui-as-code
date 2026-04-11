@@ -34641,3 +34641,28 @@ export type {
   StepperOptions,
   StepperInstance,
 } from "./stepper-utils";
+// --- Batch 1140: Pagination, Progress, Skeleton ---
+export { createPagination } from "./pagination-utils";
+export type {
+  PaginationSize,
+  PaginationLayout,
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination-utils";
+
+export { createProgressBar, updateProgressBar, createCircularProgress, createStepProgress } from "./progress-utils";
+export type {
+  ProgressBarVariant,
+  ProgressBarSize,
+  ProgressBarOptions,
+  CircularProgressOptions,
+  StepProgressOptions,
+} from "./progress-utils";
+
+export { createSkeleton, createSkeletonBlock, createCardSkeleton, createTableSkeleton } from "./skeleton-utils";
+export type {
+  SkeletonVariant,
+  SkeletonSize,
+  SkeletonOptions,
+  SkeletonBlockOptions,
+} from "./skeleton-utils";
