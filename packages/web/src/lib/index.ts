@@ -27083,3 +27083,30 @@ export {
   type CollapseGroupOptions,
   type CollapseGroupInstance,
 } from "./collapse";
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+  type TabsOptions,
+  type TabsInstance,
+  type TabItem,
+  type TabOrientation,
+  type TabVariant,
+} from "./tabs";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+  type BreadcrumbItem,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination";
