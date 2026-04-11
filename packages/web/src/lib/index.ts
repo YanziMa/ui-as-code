@@ -48716,3 +48716,54 @@ export {
   createApiMiddleware as RLV2ApiMiddleware,
   RATE_LIMIT_PRESETS as RLV2_PRESETS,
 } from "./rate-limiter-v2";
+// --- rate-limiter.ts ---
+export {
+  type RateLimitResult as RLMResult,
+  type BaseRateLimitConfig as RLMBaseConfig,
+  TokenBucketRateLimiter as RLMTokenBucket,
+  SlidingWindowLogRateLimiter as RLMSlidingLog,
+  SlidingWindowCounterRateLimiter as RLMSlidingCounter,
+  FixedWindowRateLimiter as RLMFixedWindow,
+  LeakyBucketRateLimiter as RLMLeakyBucket,
+  type CircuitState as RLMCircuitState,
+  type RateLimiterStats as RLMStats,
+  type AdaptiveLimitResult as RLMAdaptiveResult,
+  type AdaptiveLimiterOptions as RLMAdaptiveOpts,
+  AdaptiveRateLimiter as RLMAdaptiveLimiter,
+  type CircuitBreakerConfig as RLMCBConfig,
+  type CircuitBreakerResult as RLMCBResult,
+  CircuitBreaker as RLMCircuitBreaker,
+  type BulkheadConfig as RLMBulkheadConfig,
+  type BulkheadResult as RLMBulkheadResult,
+  Bulkhead as RLMBulkhead,
+  type ThrottleOptions as RLMThrottleOpts,
+  debounce as RLMDebounce,
+  throttle as RLMThrottle,
+  RequestCoalescer as RLMRequestCoalescer,
+  Priority as RLMPriority,
+  type PriorityQueueOptions as RLMPQOptions,
+  PriorityQueue as RLMPriorityQueue,
+  type RateLimitStore as RLMStore,
+  type DistributedRateLimiterConfig as RLMDistConfig,
+  DistributedRateLimiter as RLMDistributedLimiter,
+  StatsCollector as RLMStatsCollector,
+  type StatsTrackable as RLMStatsTrackable,
+  createRateLimiter as RLMCreate,
+} from "./rate-limiter";
+
+// --- rating-group.ts ---
+export {
+  type RatingEntry as RGEntry,
+  type RatingGroupOptions as RGOptions,
+  type RatingGroupInstance as RGInstance,
+  createRatingGroup as RGCreate,
+} from "./rating-group";
+
+// --- rating-input.ts ---
+export {
+  type RatingIcon as RIIcon,
+  type RatingSize as RISize,
+  type RatingInputOptions as RIOptions,
+  type RatingInputInstance as RIInstance,
+  createRatingInput as RICreate,
+} from "./rating-input";
