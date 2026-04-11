@@ -34418,3 +34418,14 @@ export type { InputOptions, InputInstance, SearchInputOptions, SearchInputInstan
 // --- select-utils ---
 export { createSelect } from "./select-utils";
 export type { SelectOptions, SelectInstance, SelectOption, SelectGroup, SelectSize, SelectVariant } from "./select-utils";
+// --- textarea-utils ---
+export { createTextarea } from "./textarea-utils";
+export type { TextareaOptions, TextareaInstance, TextareaSize, TextareaVariant } from "./textarea-utils";
+
+// --- checkbox-utils ---
+export { createCheckbox, createCheckboxGroup } from "./checkbox-utils";
+export type { CheckboxOptions, CheckboxInstance, CheckboxGroupOptions, CheckboxGroupInstance, CheckboxOption, CheckboxSize, CheckboxVariant } from "./checkbox-utils";
+
+// --- radio-utils ---
+export { createRadioGroup } from "./radio-utils";
+export type { RadioGroupOptions, RadioInstance, RadioOption, RadioSize, RadioVariant } from "./radio-utils";
