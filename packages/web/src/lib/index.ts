@@ -35283,3 +35283,97 @@ export type {
   WorkerPoolOptions,
   PooledTask,
 } from "./worker-utils";
+// --- DOM Utilities ---
+export {
+  createEl,
+  div,
+  span,
+  p,
+  btn,
+  createSvg,
+  $,
+  $$,
+  requireSelector,
+  byId,
+  byClass,
+  byTag,
+  walkUp,
+  walkDown,
+  nextSibling,
+  prevSibling,
+  siblings,
+  siblingIndex,
+  isLastChild,
+  isFirstChild,
+  empty,
+  setChildren,
+  insertAtIndex,
+  moveToIndex,
+  swapElements,
+  wrap,
+  unwrap,
+  htmlToFragment,
+  appendHtml,
+  prependHtml,
+  delegate,
+  delegateClick,
+  renderTemplate,
+  renderInto,
+} from "./dom-utils";
+export type {
+  CreateElementOptions,
+  QueryOptions,
+  DomDiffResult,
+} from "./dom-utils";
+
+// --- Animation Utilities ---
+export {
+  Tween,
+  tween,
+  tweenPromise,
+  SpringAnimation,
+  springTo,
+  stagger,
+  staggerFadeIn,
+  scrollAnimate,
+  parallax,
+  mouseParallax,
+  animate,
+  fadeIn,
+  fadeOut,
+  slideUp,
+  slideDown,
+  scaleIn,
+  shake,
+  pulse,
+  easings,
+} from "./animation-utils";
+export type {
+  TweenOptions,
+  SpringConfig,
+  AnimationFrame,
+  ScrollAnimationOptions,
+  EasingName,
+} from "./animation-utils";
+
+// --- HTTP Utilities ---
+export {
+  HttpClient,
+  createHttpClient,
+  quickGet,
+  quickPost,
+  jsonp,
+  buildQueryString,
+  parseQueryString,
+  getCurrentQueryParams,
+} from "./http-utils";
+export type {
+  HttpRequestConfig,
+  HttpResponse,
+  HttpError,
+  InterceptorContext,
+  RequestInterceptor,
+  ResponseInterceptor,
+  ErrorInterceptor,
+  HttpClientOptions,
+} from "./http-utils";
