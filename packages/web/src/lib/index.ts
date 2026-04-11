@@ -24053,3 +24053,15 @@ export type { RgbColor, HslColor, Palette } from "./color-picker";
 // --- date-picker ---
 export { DatePickerManager, createDatePicker } from "./date-picker";
 export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
+
+// --- time-picker ---
+export { createTimePicker } from "./time-picker";
+export type { TimeFormat, TimePickerMode, TimePickerOptions, TimePickerInstance } from "./time-picker";
+
+// --- range-slider ---
+export { createRangeSlider } from "./range-slider";
+export type { RangeSliderOptions, RangeSliderInstance } from "./range-slider";
+
+// --- rating ---
+export { RatingManager, createRating } from "./rating";
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
