@@ -49090,3 +49090,48 @@ export {
   getPaginationInfo as RTGetPaginationInfo,
   TableStateManager as RTTableStateManager,
 } from "./react-table-utils";
+// --- react-testing-utils ---
+export type {
+  RenderOptions as RtstRenderOptions,
+  RenderResult as RtstRenderResult,
+} from "./react-testing-utils";
+export {
+  renderForTest as RtstRender,
+  simulateClick as RtstSimClick,
+  simulateKeyDown as RtstSimKey,
+  simulateType as RtstSimType,
+  simulateSubmit as RtstSimSubmit,
+  simulateHover as RtstSimHover,
+  isVisible as RtstIsVisible,
+  hasClass as RtstHasClass,
+  getStyle as RtstGetStyle,
+  expectToExist as RtstExpectExist,
+  expectTextContains as RtstExpectText,
+  waitForCondition as RtstWaitCond,
+  flushPromises as RtstFlushPromises,
+  act as RtstAct,
+  cleanup as RtstCleanup,
+} from "./react-testing-utils";
+
+// --- react-virtual ---
+export type {
+  VirtualItem as RVItem,
+  VirtualizerOptions as RVOptions,
+  VirtualizerInstance as RVInstance,
+} from "./react-virtual";
+export { createVirtualizer as RVCreate } from "./react-virtual";
+
+// --- react (base utils) ---
+export type { EqualityFn as REqualityFn } from "./react";
+export {
+  cn as RCn,
+  mergeStyles as RMergeStyles,
+  wrapChildren as RWrapChildren,
+  Nothing as RNothing,
+  stopPropagation as RStopProp,
+  preventDefault as RPreventDefault,
+  isEmptyChildren as RIsEmptyChildren,
+  getDisplayName as RGetDisplayName,
+  shallowCompareBy as RShallowCompareBy,
+  arrayCompare as RArrayCompare,
+} from "./react";
