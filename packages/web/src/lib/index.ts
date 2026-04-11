@@ -43940,3 +43940,29 @@ export type { RadioSize as RadioUtilsSize, RadioVariant as RadioUtilsVariant, Ra
 // --- radio ---
 export { createRadioGroup as createRadioComponent } from "./radio";
 export type { RadioSize as RadioComponentSize, RadioVariant as RadioComponentVariant, RadioOption as RadioComponentOption, RadioGroupOptions as RadioComponentGroupOptions, RadioGroupInstance as RadioComponentInstance } from "./radio";
+// --- random ---
+export {
+  secureRandomInt,
+  secureRandomFloat,
+  securePick,
+  secureShuffle,
+  weightedRandom,
+  createWeightedPicker,
+  createSeededRng,
+  seededInt,
+  seededPick,
+  seededShuffle,
+  normalRandom,
+  clampedNormal,
+  randomString,
+  randomHex,
+  generatePassword,
+} from "./random";
+
+// --- range-slider ---
+export { createRangeSlider } from "./range-slider";
+export type { RangeSliderOptions, RangeSliderInstance } from "./range-slider";
+
+// --- rate-limit ---
+export { TokenBucket, SlidingWindowLimiter, FixedWindowLimiter, AdaptiveLimiter, createRateLimiter } from "./rate-limit";
+export type { RateLimitResult, RateLimitOptions, AdaptiveOptions, CreateRateLimiterOptions, RateLimiterType } from "./rate-limit";
