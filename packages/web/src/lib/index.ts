@@ -37203,3 +37203,15 @@ export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from 
 // --- badge-utils ---
 export { createBadge, createDotBadge, createTag } from "./badge-utils";
 export type { BadgeOptions, DotBadgeOptions, TagOptions, BadgeVariant, BadgeSize, DotPosition } from "./badge-utils";
+
+// --- skeleton-utils ---
+export { createSkeleton, createSkeletonBlock, createCardSkeleton, createTableSkeleton } from "./skeleton-utils";
+export type { SkeletonOptions, SkeletonBlockOptions, SkeletonVariant, SkeletonSize } from "./skeleton-utils";
+
+// --- progress-utils ---
+export { createProgressBar, updateProgressBar, createCircularProgress, createStepProgress } from "./progress-utils";
+export type { ProgressBarOptions, CircularProgressOptions, StepProgressOptions, ProgressBarVariant, ProgressBarSize } from "./progress-utils";
+
+// --- rating-utils ---
+export { createRating } from "./rating-utils";
+export type { RatingOptions, RatingInstance, RatingIconType } from "./rating-utils";
