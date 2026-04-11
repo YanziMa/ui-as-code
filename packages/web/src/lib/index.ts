@@ -26834,3 +26834,21 @@ export {
   mapTree, filterTree,
 } from "./tree";
 export type { TreeNode } from "./tree";
+
+// --- Calendar ---
+export { CalendarManager, createCalendar } from "./calendar";
+export type { CalendarOptions, CalendarInstance, CalendarEvent, CalendarView, WeekStartDay } from "./calendar";
+
+// --- Color Picker ---
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic,
+  monochromatic, blendColors, lighten, darken, saturate, desaturate,
+  invertColor, withOpacity, generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Slider ---
+export { SliderManager, createSlider } from "./slider";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
