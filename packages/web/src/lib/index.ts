@@ -39780,3 +39780,10 @@ export { createReviewCard, createReviewList } from "./review-utils";
 export type { ReviewCardOptions, ReviewCardInstance, Review, ReviewAuthor, ReviewMedia, ReviewListOptions, ReviewListInstance } from "./review-utils";
 export { createTestimonials } from "./testimonial-utils";
 export type { TestimonialOptions, TestimonialInstance, Testimonial, TestimonialAuthor, TestimonialLayout } from "./testimonial-utils";
+// --- Batch 1252: Countdown, Count-Up, Timer ---
+export { createCountdown } from "./countdown-utils";
+export type { CountdownOptions, CountdownInstance, CountdownRemaining, CountdownUnit, CountdownStyle, CountdownSize } from "./countdown-utils";
+export { createCountUp } from "./countup-utils";
+export type { CountUpOptions, CountUpInstance, LapTime, CountUpUnit, CountUpPrecision } from "./countup-utils";
+export { createTimer } from "./timer-utils";
+export type { TimerOptions, TimerInstance, TimerMode, TimerState, TimerSession } from "./timer-utils";
