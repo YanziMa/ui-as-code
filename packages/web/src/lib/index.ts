@@ -42754,3 +42754,32 @@ export {
   type AlertVariant as AlertUtilsVariant,
   type AlertSize as AlertUtilsSize,
 } from "./alert-utils";
+// --- alert-dialog-utils ---
+export {
+  createAlertDialog as createAlertDialogUtils,
+  type AlertDialogOptions as AlertDialogUtilsOptions,
+  type AlertDialogInstance as AlertDialogUtilsInstance,
+  type AlertDialogType as AlertDialogUtilsType,
+  type AlertDialogSize as AlertDialogUtilsSize,
+  type AlertDialogButton as AlertDialogUtilsButton,
+} from "./alert-dialog-utils";
+
+// --- analog-clock ---
+export {
+  createAnalogClock,
+  type AnalogClockOptions,
+  type AnalogClockInstance,
+  type ClockStyle,
+  type HandShape,
+} from "./analog-clock";
+
+// --- analytics-core ---
+export {
+  AnalyticsCore,
+  createAnalytics,
+  type AnalyticsEvent,
+  type AnalyticsContext,
+  type EventSchema,
+  type AnalyticsConfig,
+  type AnalyticsStats,
+} from "./analytics-core";
