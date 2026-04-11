@@ -24534,3 +24534,12 @@ export { createVirtualTable, VirtualTableManager, type VirtualTableOptions, type
 
 // --- Tree Table ---
 export { createTreeTable, TreeTableManager, type TreeTableOptions, type TreeNode, type TreeColumn, type TreeTableInstance } from "./tree-table";
+
+// --- Chart ---
+export { createChart, ChartManager, type ChartOptions, type ChartType, type ChartDataPoint, type ChartDataset, type ChartInstance } from "./chart";
+
+// --- Graph ---
+export { Graph, type GraphNode, type GraphEdge } from "./graph";
+
+// --- Kanban ---
+export { createKanban, KanbanManager, type KanbanOptions, type KanbanCard, type KanbanColumn, type KanbanSwimlane, type KanbanLabel, type KanbanInstance, type CardPriority, type CardSize } from "./kanban";
