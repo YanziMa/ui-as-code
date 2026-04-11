@@ -24818,3 +24818,15 @@ export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, Ch
 // --- Tag Input ---
 export { TagInputManager, createTagInput } from "./tag-input";
 export type { TagItem, TagInputOptions, TagInputInstance } from "./tag-input";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// --- Modal Dialog ---
+export { createModal } from "./modal-dialog";
+export type { ModalOptions, ModalInstance, ModalSize, ModalVariant } from "./modal-dialog";
