@@ -46274,3 +46274,28 @@ export type {
   LoaderInstance,
 } from "./loader";
 export { createLoader, showPageLoader } from "./loader";
+// --- loading-bar ---
+export type {
+  LoadingBarColor,
+  LoadingBarOptions as LbLoadingBarOptions,
+  LoadingBarInstance as LbLoadingBarInstance,
+} from "./loading-bar";
+export { LoadingBarManager, createLoadingBar, getGlobalLoadingBar, startLoading, doneLoading } from "./loading-bar";
+
+// --- loading-dots ---
+export type {
+  LoaderType as LdLoaderType,
+  LoaderSize as LdLoaderSize,
+  LoadingDotsOptions,
+  LoadingInstance as LdLoadingInstance,
+} from "./loading-dots";
+export { LoadingDotsManager, createLoadingDots } from "./loading-dots";
+
+// --- loading-overlay-utils ---
+export type {
+  OverlayVariant as LouOverlayVariant,
+  SpinnerType as LouSpinnerType,
+  LoadingOverlayOptions,
+  LoadingOverlayInstance,
+} from "./loading-overlay-utils";
+export { createLoadingOverlay } from "./loading-overlay-utils";
