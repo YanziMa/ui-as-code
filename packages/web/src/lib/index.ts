@@ -20158,3 +20158,35 @@ export type {
   UploadFile,
   FileUploadInstance,
 } from "./file-upload";
+export {
+  ChartManager,
+  createChart,
+} from "./chart";
+export type {
+  ChartType,
+  ChartDataPoint,
+  ChartDataset,
+  ChartOptions,
+  ChartInstance,
+} from "./chart";
+export {
+  DataTableManager,
+  createDataTable,
+} from "./data-table";
+export type {
+  Column,
+  SortDirection,
+  SortState,
+  FilterState,
+  DataTableOptions,
+  DataTableInstance,
+} from "./data-table";
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
