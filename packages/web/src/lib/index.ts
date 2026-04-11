@@ -26813,3 +26813,24 @@ export type { TextareaOptions, TextareaInstance, TextareaSize, TextareaState } f
 // --- Form ---
 export { createForm } from "./form";
 export type { FormOptions, FormInstance, FormField, FormGroup, FieldType, ValidationRule } from "./form";
+
+// --- Table ---
+export {
+  createTableState, getSortedData, getFilteredData, getPaginatedData,
+  getCellValue, applyFilterOperator, toggleSort, setSearchTerm,
+  toggleFilter, goToPage, setPageSize, toggleRowSelection,
+  toggleSelectAll, toggleRowExpand, resetTable, exportTableAsCsv,
+} from "./table";
+export type { Column, TableState, SortState, FilterState, FilterOperator, PaginationState, SelectionState } from "./table";
+
+// --- List ---
+export { createList } from "./list";
+export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list";
+
+// --- Tree ---
+export {
+  createTreeNode, buildTree, flattenTree, flattenTreeWithDepth,
+  findNodeById, findNodes, getPathToNode, getTreeDepth, countNodes,
+  mapTree, filterTree,
+} from "./tree";
+export type { TreeNode } from "./tree";
