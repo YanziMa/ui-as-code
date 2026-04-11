@@ -42442,3 +42442,64 @@ export {
   type RovingIndexOptions,
   type DialogOptions,
 } from "./a11y-v2";
+// --- ab-test ---
+export {
+  zTest,
+  chiSquaredTest,
+  calculateSampleSize,
+  multiVariantTest,
+  SequentialABTest,
+  evaluateAB,
+  type ABTestVariant,
+  type ABTestResult,
+  type MultiVariantResult,
+  type SampleSizeResult,
+  type SequentialTestState,
+  type PowerAnalysisInput,
+} from "./ab-test";
+
+// --- accessibility ---
+export {
+  progressBarAttrs,
+  switchAttrs,
+  liveRegion,
+  announce as announceAccessibility,
+  SKIP_LINK_ID,
+  skipLinkAttrs,
+  prefersReducedMotion as prefersReducedMotionBasic,
+  animationDuration,
+  focusTrap as focusTrapBasic,
+  srOnly,
+  ROLES,
+} from "./accessibility";
+
+// --- accessibility-engine ---
+export {
+  prefersReducedMotion as prefersReducedMotionEngine,
+  prefersHighContrast,
+  prefersDarkMode,
+  hasTouchCapability,
+  detectScreenReader,
+  watchMediaQuery,
+  getFocusableElements as getFocusableElementsEngine,
+  focusElement as focusElementEngine,
+  saveFocus,
+  FocusTrap,
+  createSkipLink as createSkipLinkEngine,
+  AccessibilityAnnouncer,
+  setAria as setAriaEngine,
+  getAria,
+  ariaPatterns,
+  RovingTabIndex,
+  contrastRatio as contrastRatioEngine,
+  wcagLevel,
+  suggestAccessibleColor,
+  validateHeadingStructure,
+  type AriaRole,
+  type AriaProperty,
+  type LiveRegionPoliteness,
+  type A11yConfig,
+  type FocusTrapConfig,
+  type FocusableElement,
+  type HeadingIssue,
+} from "./accessibility-engine";
