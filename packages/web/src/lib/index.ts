@@ -27343,3 +27343,15 @@ export type { DataTableOptions, DataTableInstance, Column, SortState, FilterStat
 // --- virtual-list ---
 export { createVirtualList } from "./virtual-list.js";
 export type { VirtualListOptions, VirtualListInstance, VirtualListItem } from "./virtual-list.js";
+
+// --- image-cropper ---
+export { createImageCropper, ImageCropperManager } from "./image-cropper.js";
+export type { ImageCropperOptions, ImageCropperInstance, CropRegion, AspectRatio } from "./image-cropper.js";
+
+// --- form-builder ---
+export { createForm, FormBuilder, validations } from "./form-builder.js";
+export type { FormSchema, FormField, FormSection, FormState, FieldError, FieldValidation, SelectOption, FieldType } from "./form-builder.js";
+
+// --- time-picker ---
+export { createTimePicker } from "./time-picker.js";
+export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker.js";
