@@ -30265,3 +30265,30 @@ export type {
   PasswordGeneratorOptions,
   ApiKeyOptions,
 } from "./crypto-utils";
+
+// --- Rate Limiting ---
+export {
+  TokenBucketRateLimiter,
+  SlidingWindowLogRateLimiter,
+  SlidingWindowCounterRateLimiter,
+  FixedWindowRateLimiter,
+  LeakyBucketRateLimiter,
+  AdaptiveRateLimiter,
+  CircuitBreaker,
+  Bulkhead,
+  RequestCoalescer,
+  PriorityQueue,
+  DistributedRateLimiter,
+  StatsCollector,
+  createRateLimiter,
+  debounce as rateDebounce,
+  throttle as rateThrottle,
+} from "./rate-limiter";
+
+// --- Cache ---
+export { Cache, defaultCache, memoize } from "./cache";
+export type { CacheOptions } from "./cache";
+
+// --- Queue ---
+export { AsyncQueue, RateLimiter, BatchingQueue } from "./queue";
+export type { QueueTask } from "./queue";
