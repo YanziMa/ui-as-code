@@ -29332,3 +29332,15 @@ export { createBreadcrumb } from "./breadcrumb-nav.js";
 // --- Command Palette (Batch 978) ---
 export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette.js";
 export { CommandPalette } from "./command-palette.js";
+
+// --- Tree View (Batch 979) ---
+export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view.js";
+export { TreeView } from "./tree-view.js";
+
+// --- Context Menu V2 (Batch 979) ---
+export type { ContextMenuItemType, ContextMenuItem, ContextMenuV2Options, ContextMenuV2Instance } from "./context-menu-v2.js";
+export { createContextMenuV2 } from "./context-menu-v2.js";
+
+// --- Number Input (Batch 979) ---
+export type { NumberInputVariant, NumberInputOptions, NumberInputInstance } from "./number-input.js";
+export { createNumberInput } from "./number-input.js";
