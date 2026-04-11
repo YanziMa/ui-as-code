@@ -49365,3 +49365,45 @@ export {
   sequence as REmoSequence,
   parallel as REmoParallel,
 } from "./remotion";
+// --- renderer ---
+export type {
+  RenderNode as RendNode,
+  RenderContext as RendContext,
+} from "./renderer";
+export {
+  renderTemplate as RendRenderTemplate,
+  renderIf as RendRenderIf,
+  renderList as RendRenderList,
+  createFragment as RendCreateFragment,
+  createElementBatch as RendCreateElementBatch,
+  diffChildren as RendDiffChildren,
+  RenderPipeline as RendPipeline,
+  pipelineStages as RendPipelineStages,
+} from "./renderer";
+
+// --- request-batcher ---
+export type {
+  BatchConfig as RBatchConfig,
+  BatchableRequest as RBatchRequest,
+  BatchResponse as RBatchResponse,
+  BatchStats as RBatchStats,
+} from "./request-batcher";
+export {
+  RequestBatcher,
+  createRequestBatcher as RBatchCreate,
+} from "./request-batcher";
+
+// --- request (HTTP client) ---
+export type {
+  RequestOptions as RReqOptions,
+  Response as RReqResponse,
+  RequestError as RReqError,
+  InterceptorContext as RReqInterceptorCtx,
+  RequestInterceptor as RReqInterceptor,
+  ResponseInterceptor as RRespInterceptor,
+  ErrorInterceptor as RErrInterceptor,
+} from "./request";
+export {
+  HttpClient as RReqClient,
+  http as RReqHttp,
+} from "./request";
