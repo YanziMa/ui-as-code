@@ -34556,3 +34556,36 @@ export type {
   NotificationInstance,
   NotificationManagerConfig,
 } from "./notification-utils";
+// --- Batch 1137: Dialog, Modal, Alert ---
+export {
+  createDialog,
+  confirmDialog,
+  alertDialog,
+  promptDialog,
+  dangerDialog,
+  createDialogManager,
+} from "./dialog-utils";
+export type {
+  DialogType,
+  DialogOptions,
+  DialogResult,
+  DialogInstance,
+  DialogManagerConfig,
+  DialogManagerInstance,
+} from "./dialog-utils";
+
+export { createModal, createFocusTrap } from "./modal-utils";
+export type {
+  ModalSize,
+  ModalOptions,
+  ModalInstance,
+  FocusTrapConfig,
+} from "./modal-utils";
+
+export { createAlert } from "./alert-utils";
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertOptions,
+  AlertInstance,
+} from "./alert-utils";
