@@ -39773,3 +39773,10 @@ export { createScrollSpy } from "./scroll-spy-utils";
 export type { ScrollSpyOptions, ScrollSpyInstance, SpySection } from "./scroll-spy-utils";
 export { createSticky, createStickyStack } from "./sticky-utils";
 export type { StickyOptions, StickyInstance, StickyPosition, StickyBehavior, StickyStackOptions, StickyStackInstance } from "./sticky-utils";
+// --- Batch 1251: Rating, Review, Testimonial ---
+export { createRating } from "./rating-utils";
+export type { RatingOptions, RatingInstance, RatingIconType } from "./rating-utils";
+export { createReviewCard, createReviewList } from "./review-utils";
+export type { ReviewCardOptions, ReviewCardInstance, Review, ReviewAuthor, ReviewMedia, ReviewListOptions, ReviewListInstance } from "./review-utils";
+export { createTestimonials } from "./testimonial-utils";
+export type { TestimonialOptions, TestimonialInstance, Testimonial, TestimonialAuthor, TestimonialLayout } from "./testimonial-utils";
