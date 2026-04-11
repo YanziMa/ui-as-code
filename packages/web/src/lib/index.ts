@@ -41664,3 +41664,10 @@ export { createResizablePanel } from "./resizable-panel";
 export type { ResizablePanelOptions, ResizablePanelInstance, PanelDirection, PanelCollapseMode } from "./resizable-panel";
 export { createTooltip, createPopover } from "./tooltip-popover";
 export type { TooltipOptions, TooltipInstance, Placement, TriggerMode, PopoverOptions } from "./tooltip-popover";
+// --- Batch 1309: Context Menu, Skeleton Loader, Infinite Scroll ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem, ContextMenuPosition } from "./context-menu";
+export { createSkeleton } from "./skeleton-loader";
+export type { SkeletonOptions, SkeletonInstance, SkeletonItem, SkeletonShape, SkeletonAnimation } from "./skeleton-loader";
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
