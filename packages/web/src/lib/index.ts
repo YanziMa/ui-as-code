@@ -28018,3 +28018,27 @@ export type { LogLevel, LogTransport, LogEntry } from "./logger";
 // --- Perf Monitor ---
 export { PerfMonitor, createPerfMonitor } from "./perf-monitor";
 export type { FpsMetrics, MemoryInfo, PerfEntry, PerfReport, WebVitals, PerfMonitorOptions } from "./perf-monitor";
+// --- Accessibility ---
+export { focusTrap, announce, liveRegion, skipLinkAttrs, prefersReducedMotion, animationDuration } from "./accessibility";
+export const SKIP_LINK_ID = "skip-to-main-content";
+export const srOnly = "absolute w-[1px] h-[1px] p-0 -m-[1px] overflow-hidden whitespace-nowrap border-0 clip-[rect(0)]";
+export const ROLES = {
+  main: "main",
+  navigation: "navigation",
+  banner: "banner",
+  complementary: "complementary",
+  contentinfo: "contentinfo",
+  search: "search",
+  form: "form",
+  alert: "alert",
+  dialog: "dialog",
+  alertdialog: "alertdialog",
+} as const;
+
+// --- Theme Engine ---
+export { ThemeEngine, getThemeEngine, setTheme, toggleTheme, getCurrentTheme, isDarkMode } from "./theme-engine";
+export type { ThemeMode, DesignToken, TokenCategory, ThemeDefinition, ThemeEngineOptions } from "./theme-engine";
+
+// --- Notification Center ---
+export { NotificationCenterManager, createNotificationCenter } from "./notification-center";
+export type { NotificationItem, NotificationCenterOptions, NotificationCenterInstance, NotificationType } from "./notification-center";
