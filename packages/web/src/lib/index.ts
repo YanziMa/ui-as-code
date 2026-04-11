@@ -28861,3 +28861,15 @@ export type { ContentVisibilityValue, ContentVisibilityOptions, ContentVisibilit
 // --- will-change-manager ---
 export { createWillChangeManager, gpuPromote, isWillChangeSupported } from "./will-change-manager";
 export type { WillChangeProperty, WillChangeRule, WillChangeManagerOptions, WillChangeManagerInstance } from "./will-change-manager";
+
+// --- form-associations ---
+export { createFormAssociations, linkLabelToControl, getFormControls } from "./form-associations";
+export type { FormAssociation, FormGroupOptions, FormAssociationInstance } from "./form-associations";
+
+// --- label-helper ---
+export { createLabel, createFloatingLabel, createCharacterCounter, createSrOnlyLabel } from "./label-helper";
+export type { LabelConfig, FloatingLabelOptions, CharacterCounterOptions } from "./label-helper";
+
+// --- validation-feedback ---
+export { createValidationFeedback, showError, showSuccess } from "./validation-feedback";
+export type { ValidationSeverity, ValidationResult, ValidationFeedbackOptions, ValidationFeedbackInstance } from "./validation-feedback";
