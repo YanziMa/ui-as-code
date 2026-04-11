@@ -29789,3 +29789,28 @@ export type { ChartOptions, ChartInstance, ChartDataset, ChartDataPoint, ChartTy
 // --- drag-drop ---
 export { createDropZone, createSortableList, readFileAsText, readFileAsDataURL, readFileAsArrayBuffer, getFileInfo } from "./drag-drop";
 export type { DropZoneConfig, DropZoneController, DragItem, DndState, SortableConfig, SortableController, SortableItem, FileInfo } from "./drag-drop";
+
+// --- clipboard ---
+export {
+  copyToClipboard,
+  copyRichToClipboard,
+  readFromClipboard,
+  readRichFromClipboard,
+  isClipboardAvailable,
+  canReadClipboard,
+  watchClipboard,
+} from "./clipboard";
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+
+// --- shortcuts ---
+export { createShortcutManager } from "./shortcuts";
+export type {
+  ShortcutBinding,
+  ShortcutGroup,
+  ShortcutManagerOptions,
+  ShortcutInstance,
+} from "./shortcuts";
+
+// --- print ---
+export { createPrintManager, quickPrint, addPageBreakBefore, addPageBreakAfter, avoidBreakInside } from "./print";
+export type { PrintOptions, PrintManagerInstance } from "./print";
