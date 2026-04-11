@@ -34878,3 +34878,29 @@ export {
   type CountdownStyle,
   type CountdownSize,
 } from "./countdown-utils";
+
+// --- Batch 1149: Confetti, Typing Indicator, Ripple ---
+export {
+  createConfetti,
+  type ConfettiOptions,
+  type ConfettiInstance,
+  type Particle,
+  type ConfettiShape,
+  type ConfettiOrigin,
+} from "./confetti-utils";
+export {
+  createTypingIndicator,
+  createTextReveal,
+  type TypingIndicatorOptions,
+  type TextRevealOptions,
+  type TextRevealInstance,
+  type TypingStyle,
+  type TypingSize,
+} from "./typing-indicator-utils";
+export {
+  createRipple,
+  type RippleOptions,
+  type RippleInstance,
+  type RippleColor,
+  type RippleStrategy,
+} from "./ripple-utils";
