@@ -41699,3 +41699,7 @@ export { createScrollSpy, createNavSpy } from "./scroll-spy";
 export type { ScrollSpyOptions, ScrollSpyInstance, SpyTarget, NavSpyOptions } from "./scroll-spy";
 export { createCountdownTimer } from "./countdown-timer";
 export type { CountdownTimerOptions, CountdownTimerInstance, CountdownDisplayMode, CountdownUnit } from "./countdown-timer";
+// --- Batch 1314: Color Picker, Rating Input, Slider Input ---
+export * from "./color-picker";
+export * from "./rating-input";
+export * from "./slider-input";
