@@ -46471,3 +46471,66 @@ export { LEVEL_LABELS as Lvl2LevelLabels, LEVEL_COLORS as Lvl2LevelColors, parse
 // --- logger ---
 export type { LogLevel as LgrLogLevel } from "./logger";
 export { Logger as LgrLogger, log as lgrLog, setGlobalLogLevel, getGlobalLogLevel, apiLog, dbLog, extLog } from "./logger";
+// --- lottie-player ---
+export type {
+  LottieTransform,
+  LottieShapeFill,
+  LottieShapeStroke,
+  LottieShapeRect,
+  LottieShapeEllipse,
+  LottieShapePath,
+  LottieShapePolystar,
+  LottieShapeGroup,
+  LottieLayer,
+  LottieAsset,
+  LottieData,
+  AnimatableValue,
+  Keyframe,
+  BezierPathData,
+  LottiePlayerOptions,
+  LottiePlayerInstance,
+} from "./lottie-player";
+export { createLottiePlayer, loadLottieData } from "./lottie-player";
+
+// --- machine-learning ---
+export type {
+  Matrix as MlMatrix,
+  ActivationFn,
+  LossFn,
+  LayerConfig,
+  TrainingConfig,
+  ClusterResult,
+  PCAResult,
+  RegressionResult,
+} from "./machine-learning";
+export {
+  dot,
+  norm,
+  normalize,
+  euclideanDist,
+  manhattanDist,
+  cosineSimilarity,
+  activations,
+  softmax,
+  logSoftmax,
+  losses,
+  NeuralNetwork,
+  kMeans,
+  KNNClassifier,
+  pca,
+  linearRegression,
+  accuracy,
+  precisionScore,
+  recallScore,
+  f1Score,
+  confusionMatrix,
+  standardize,
+  normalizeData,
+  oneHotEncode,
+  binarize,
+  polynomialFeatures,
+} from "./machine-learning";
+
+// --- markdown-advanced ---
+export type { MdNode as MadMdNode } from "./markdown-advanced";
+export { parseMarkdown, renderMdToHtml, mdToHtml, stripMarkdown } from "./markdown-advanced";
