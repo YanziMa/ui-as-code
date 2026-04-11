@@ -28383,3 +28383,29 @@ export {
   type ChipData,
   type ChipSuggestion,
 } from "./chip-input";
+
+// --- Batch 930: Tabs, Accordion, Carousel ---
+export {
+  createTabs,
+  TabsManager,
+  type TabsOptions,
+  type TabsInstance,
+  type TabItem,
+  type TabOrientation,
+  type TabVariant,
+} from "./tabs";
+export {
+  createAccordion,
+  AccordionManager,
+  type AccordionOptions,
+  type AccordionInstance,
+  type AccordionItem,
+  type AccordionMode,
+} from "./accordion";
+export {
+  createCarousel,
+  CarouselManager,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselSlide,
+} from "./carousel";
