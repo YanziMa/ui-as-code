@@ -22634,3 +22634,41 @@ export {
   mdToHtml,
   stripMd,
 } from "./markdown";
+
+// --- notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+  type Notification,
+  type NotificationType,
+  type NotificationOptions,
+  type NotificationPosition,
+} from "./notification";
+
+// --- websocket ---
+export {
+  WebSocketManager,
+  WsRoomManager,
+  isWebSocketSupported,
+  getWebSocketUrl,
+  createWebSocketUrl,
+  parseWsUrl,
+  type WsEvent,
+  type WebSocketData,
+  type WebSocketState,
+  type WebSocketStats,
+  type ReconnectConfig,
+  type HeartbeatConfig,
+  type WebSocketOptions,
+} from "./websocket";
+
+// --- worker ---
+export {
+  createInlineWorker,
+  runInWorker,
+  TaskQueue,
+  BatchingProcessor,
+  requestIdleCallback,
+  cancelIdleCallback,
+} from "./worker";
