@@ -45214,3 +45214,56 @@ export {
   roundedRectPath as gyRoundedRectPath,
   SpatialHash,
 } from "./geometry";
+
+// --- gesture-recognizer ---
+export type {
+  GestureType as GrType,
+  Point as GrPoint,
+  GestureEvent as GrEvent,
+  GestureConfig as GrConfig,
+} from "./gesture-recognizer";
+export {
+  GestureRecognizer as GrRecognizer,
+} from "./gesture-recognizer";
+
+// --- gesture-utils ---
+export type {
+  Point as GuPoint,
+  SwipeGesture as GuSwipeGesture,
+  PinchGesture as GuPinchGesture,
+  RotateGesture as GuRotateGesture,
+  TapGesture as GuTapGesture,
+  LongPressGesture as GuLongPressGesture,
+  PanGesture as GuPanGesture,
+  Gesture as GuGesture,
+  GestureConfig as GuGestureConfig,
+  GestureHandlers as GuGestureHandlers,
+} from "./gesture-utils";
+export {
+  GestureRecognizer as GuGestureRecognizer,
+  distance as guDistance,
+  angleBetween as guAngleBetween,
+  midpoint as guMidpoint,
+  getDirection as guGetDirection,
+  isInsideRect as guIsInsideRect,
+  isInsideElement as guIsInsideElement,
+  createTapDebounce as guCreateTapDebounce,
+  detectSwipe as guDetectSwipe,
+} from "./gesture-utils";
+
+// --- gesture ---
+export type {
+  GestureType as GtType,
+  SwipeDirection as GtSwipeDir,
+  Point as GtPoint,
+  GestureConfig as GtConfig,
+  GestureHandlerConfig as GtHandlerConfig,
+  GestureEvent as GtEvent,
+  GestureInstance as GtInstance,
+} from "./gesture";
+export {
+  GestureManager,
+  createGesture,
+  swipeGestures,
+  tapGesture,
+} from "./gesture";
