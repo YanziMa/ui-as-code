@@ -39759,3 +39759,10 @@ export { createLazyLoad } from "./lazy-load-utils";
 export type { LazyLoadOptions, LazyLoadInstance, LazyLoadTarget, LazyLoadState } from "./lazy-load-utils";
 export { EnhancedIntersectionObserver, createVisibilityTracker, createLazyLoad as createSimpleLazyLoad, createScrollTrigger, isInViewport, getViewportVisibility, whenInViewport, batchScrollTriggers } from "./intersection-utils";
 export type { IntersectionEntry, ObserverConfig, VisibilityInstance, LazyLoadOptions as SimpleLazyLoadOptions, ScrollTriggerOptions } from "./intersection-utils";
+// --- Batch 1249: Drag-Drop, Sortable, Resize ---
+export { createDraggable, createSortable, createDropZone } from "./drag-drop-utils";
+export type { DraggableOptions, DraggableInstance, DropZoneOptions, DropZoneInstance, SortableOptions, SortableInstance, DragData, DragEvent, DragAxis, DragConstraint } from "./drag-drop-utils";
+export { createSortableList } from "./sortable-utils";
+export type { SortableListOptions, SortableListInstance, SortableItemConfig, SortAnimation } from "./sortable-utils";
+export { EnhancedResizeObserver, BreakpointTracker, ViewportTracker, createResizeHandle, clamp, isResizeObserverSupported, getElementSize, hasOverflow, matchMedia, onMediaChange } from "./resize-utils";
+export type { ResizeEntry, ResizeObserverConfig, Breakpoint, ViewportState, ResizeHandleOptions } from "./resize-utils";
