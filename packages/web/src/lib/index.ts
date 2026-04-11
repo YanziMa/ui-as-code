@@ -23407,3 +23407,32 @@ export {
   type ToastInstance,
   type ToastManagerConfig,
 } from "./toast";
+
+// --- tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+  type TooltipPlacement,
+  type TooltipTrigger,
+  type TooltipOptions,
+  type TooltipInstance,
+} from "./tooltip";
+
+// --- modal ---
+export {
+  createModal,
+  type ModalSize,
+  type ModalPosition,
+  type ModalOptions,
+  type ModalInstance,
+} from "./modal";
+
+// --- drawer ---
+export {
+  createDrawer,
+  type DrawerSide,
+  type DrawerSize,
+  type DrawerOptions,
+  type DrawerInstance,
+} from "./drawer";
