@@ -30292,3 +30292,41 @@ export type { CacheOptions } from "./cache";
 // --- Queue ---
 export { AsyncQueue, RateLimiter, BatchingQueue } from "./queue";
 export type { QueueTask } from "./queue";
+
+// --- Scheduler ---
+export { Scheduler, parseCronExpression, cronMatches, getNextCronRun } from "./scheduler";
+export type { ScheduledJob, JobStatus, CronExpression } from "./scheduler";
+
+// --- Promise Utilities ---
+export {
+  retry,
+  withTimeout,
+  sleep,
+  runConcurrent,
+  processInBatches,
+  raceSuccess,
+  firstN,
+  makeCancellable,
+  collectAsync,
+  mapAsyncIterable,
+  filterAsyncIterable,
+  reduceAsyncIterable,
+  memoizeAsync,
+  createDeferred,
+  createOnceEvent,
+  poll,
+  TaskQueue,
+} from "./promise-utils";
+export type {
+  RetryOptions as PromiseRetryOptions,
+  TimeoutOptions,
+  ConcurrencyOptions,
+  BatchOptions,
+  MemoizeOptions,
+  PollOptions,
+  TaskQueueOptions,
+} from "./promise-utils";
+
+// --- Retry ---
+export { retryWithBackoff, CircuitBreaker } from "./retry";
+export type { RetryOptions as BackoffRetryOptions, CircuitBreakerOptions } from "./retry";
