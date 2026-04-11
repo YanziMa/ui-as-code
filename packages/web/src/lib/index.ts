@@ -32333,3 +32333,44 @@ export {
   type TabsOptions,
   type TabsInstance,
 } from "./tabs";
+
+// --- avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+  type AvatarSize,
+  type AvatarShape,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+} from "./avatar";
+
+// --- badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+  type BadgeVariant,
+  type BadgePosition,
+  type BadgeSize,
+  type BadgeOptions,
+  type StatusDotOptions,
+} from "./badge";
+
+// --- skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions,
+  type SkeletonTextOptions,
+  type SkeletonAvatarOptions,
+  type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
