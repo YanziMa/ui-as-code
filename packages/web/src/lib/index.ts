@@ -26912,3 +26912,15 @@ export type { BackTopOptions, BackTopInstance, BackTopShape, BackTopPosition } f
 // --- Watermark ---
 export { createWatermark } from "./watermark";
 export type { WatermarkOptions, WatermarkInstance } from "./watermark";
+
+// --- Tour ---
+export { createTour } from "./tour";
+export type { TourOptions, TourInstance, TourStep } from "./tour";
+
+// --- Hotkey ---
+export { createHotkeyDisplay, createHotkeyManager, parseHotkey, formatHotkey, normalizeKeyName, matchesKeyEvent, combosEqual } from "./hotkey";
+export type { HotkeyDisplayOptions, HotkeyDisplayInstance, HotkeyBinding, HotkeyManagerOptions, HotkeyManagerInstance, KeyCombo, HotkeyVariant } from "./hotkey";
+
+// --- Segmented Control ---
+export { createSegmentedControl } from "./segmented-control";
+export type { SegmentedControlOptions, SegmentedControlInstance, SegmentedOption, SegmentedSize } from "./segmented-control";
