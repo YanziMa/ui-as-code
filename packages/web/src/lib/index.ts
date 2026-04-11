@@ -36109,3 +36109,51 @@ export type {
   HeadingInfo,
   LandmarkInfo,
 } from "./accessibility-utils.js";
+// --- storage-utils ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+} from "./storage-utils.js";
+export type {
+  StorageBackend,
+  StorageEntry as StorageEntryType,
+  StorageOptions,
+  StorageStats,
+  StorageMigration,
+} from "./storage-utils.js";
+
+// --- state-utils ---
+export {
+  createState,
+  createDerived,
+  createMachine,
+  diffState,
+  statesEqual,
+} from "./state-utils.js";
+export type {
+  StateListener,
+  StateContainerOptions,
+  StateContainer,
+  MachineState,
+  MachineEvent,
+  MachineTransition,
+  MachineConfig,
+  MachineInstance,
+} from "./state-utils.js";
+
+// --- event-utils ---
+export {
+  createCustomEvent,
+  dispatchCustomEvent,
+  onCustomEvent,
+  throttleEvent,
+  debounceEvent,
+  once,
+  waitForEvent,
+  delegateEvent,
+  preventDefault,
+  stopPropagation,
+  stopEvent,
+} from "./event-utils.js";
