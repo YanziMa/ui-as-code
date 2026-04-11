@@ -31388,3 +31388,14 @@ export type {
   FileChunk,
   UploadProgress,
 } from "./file-utils";
+// --- Notification ---
+export { NotificationManager, getNotificationManager, toast } from "./notification";
+export type { Notification, NotificationOptions, NotificationType, NotificationPosition } from "./notification";
+
+// --- Toast ---
+export { ToastManager, getToastManager, showToast } from "./toast";
+export type { ToastOptions, ToastInstance, ToastManagerConfig, ToastType, ToastPosition } from "./toast";
+
+// --- Modal ---
+export { createModal } from "./modal";
+export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "/modal";
