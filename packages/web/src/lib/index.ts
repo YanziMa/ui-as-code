@@ -44150,3 +44150,14 @@ export type { RippleOptions, RippleInstance } from "./ripple";
 // --- robot ---
 export { pressKey, typeText, click, hover, drag, fillForm, runSequence, getA11yTree, getInteractiveElements, takeSnapshot, compareSnapshots } from "./robot";
 export type { RobotOptions, StepResult, InteractiveElementInfo, ElementSnapshot, SnapshotDiff } from "./robot";
+// --- scrollbar ---
+export { createScrollbar, thinScrollbar, hideScrollbar, overlayScrollbar } from "./scrollbar";
+export type { ScrollbarVariant, ScrollbarAxis, ScrollbarOptions, ScrollbarInstance } from "./scrollbar";
+
+// --- search ---
+export { searchText, searchArray, highlightMatches, SearchIndex } from "./search";
+export type { SearchOptions, SearchResult, SearchMatch } from "./search";
+
+// --- selection ---
+export { SelectionManager, createSelectionManager } from "./selection";
+export type { SelectionRange as SelectionRangeType, CaretPosition, SelectionManagerOptions, SelectionManagerInstance } from "./selection";
