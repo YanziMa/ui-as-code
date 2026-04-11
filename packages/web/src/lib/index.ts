@@ -20777,3 +20777,35 @@ export type {
 export {
   ContextMenuManager,
 } from "./context-menu";
+
+// --- Affix ---
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  createAffix,
+} from "./affix";
+
+// --- Back to Top ---
+export type {
+  BackTopShape,
+  BackTopPosition,
+  BackTopOptions,
+  BackTopInstance,
+} from "./back-top";
+export {
+  createBackTop,
+} from "./back-top";
+
+// --- Image Viewer ---
+export type {
+  ImageViewerImage,
+  ImageViewerTool,
+  ImageViewerOptions,
+  ImageViewerInstance,
+} from "./image-viewer";
+export {
+  ImageViewerManager,
+  createImageViewer,
+} from "./image-viewer";
