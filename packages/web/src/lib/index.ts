@@ -46561,3 +46561,12 @@ export { mdToHtml as mthMdToHtml, quickMd, stripMarkdown as mthStripMarkdown, ex
 // --- markdown-utils ---
 export type { MarkdownOptions as MuOptions, HeadingInfo as MuHeadingInfo } from "./markdown-utils";
 export { parseMarkdown as muParseMarkdown, renderMarkdown, extractHeadings, generateToc as muGenerateToc, extractCodeBlocks, extractNamedBlock } from "./markdown-utils";
+// --- markdown ---
+export { mdToHtml as mkMdToHtml, stripMd } from "./markdown";
+// --- marquee-carousel ---
+export type { MarqueeDirection as McDirection, MarqueeFillMode as McFillMode } from "./marquee-carousel";
+export type { MarqueeItem, MarqueeLane, MarqueeCarouselOptions, MarqueeCarouselInstance } from "./marquee-carousel";
+export { createMarqueeCarousel } from "./marquee-carousel";
+// --- marquee-utils ---
+export type { MarqueeDirection as MqDirection, MarqueeFillMode as MqFillMode, MarqueeOptions, MarqueeInstance as MqInstance } from "./marquee-utils";
+export { createMarquee } from "./marquee-utils";
