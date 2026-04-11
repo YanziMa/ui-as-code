@@ -21779,3 +21779,42 @@ export {
   StepsManager,
   createSteps,
 } from "./steps";
+
+// --- copy-to-clipboard ---
+export {
+  ClipboardManager,
+  createClipboardManager,
+  copyToClipboard,
+  copyElementText,
+  copyElementHtml,
+  bindCopyShortcut,
+} from "./copy-to-clipboard";
+export type { ClipboardOptions, ClipboardInstance } from "./copy-to-clipboard";
+
+// --- hotkeys ---
+export {
+  HotkeyManager,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  createAppHotkeys,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  HotkeyListener,
+  ParsedKeyCombo,
+} from "./hotkeys";
+
+// --- print ---
+export {
+  PrintManager,
+  createPrintManager,
+  quickPrint,
+  addPageBreakBefore,
+  addPageBreakAfter,
+  avoidBreakInside,
+} from "./print";
+export type { PrintOptions, PrintManagerInstance } from "./print";
