@@ -39766,3 +39766,10 @@ export { createSortableList } from "./sortable-utils";
 export type { SortableListOptions, SortableListInstance, SortableItemConfig, SortAnimation } from "./sortable-utils";
 export { EnhancedResizeObserver, BreakpointTracker, ViewportTracker, createResizeHandle, clamp, isResizeObserverSupported, getElementSize, hasOverflow, matchMedia, onMediaChange } from "./resize-utils";
 export type { ResizeEntry, ResizeObserverConfig, Breakpoint, ViewportState, ResizeHandleOptions } from "./resize-utils";
+// --- Batch 1250: Anchor, Scroll Spy, Sticky ---
+export { createAnchor } from "./anchor-utils";
+export type { AnchorOptions, AnchorInstance, AnchorResult, AnchorPlacement, AnchorAlignment } from "./anchor-utils";
+export { createScrollSpy } from "./scroll-spy-utils";
+export type { ScrollSpyOptions, ScrollSpyInstance, SpySection } from "./scroll-spy-utils";
+export { createSticky, createStickyStack } from "./sticky-utils";
+export type { StickyOptions, StickyInstance, StickyPosition, StickyBehavior, StickyStackOptions, StickyStackInstance } from "./sticky-utils";
