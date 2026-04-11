@@ -31468,3 +31468,15 @@ export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } f
 // --- Accordion ---
 export { AccordionManager, createAccordion } from "./accordion";
 export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion";
+
+// --- Carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
+
+// --- Rating ---
+export { RatingManager, createRating } from "./rating";
+export type { StarIconType, RatingOptions, RatingInstance } from "./rating";
+
+// --- Avatar ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
+export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar";
