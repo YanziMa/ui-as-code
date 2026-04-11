@@ -19779,3 +19779,64 @@ export type {
   ObserverCallbacks,
   ObserverStats,
 } from "./dom-observer";
+export {
+  easings,
+  getEasing,
+  springAnimate,
+  AnimationTimeline,
+  createScrollAnimation,
+  staggerElements,
+  animateCounter,
+  createParallax,
+} from "./animation-engine";
+export type {
+  EasingFunction,
+  SpringConfig,
+  SpringState,
+  Keyframe,
+  AnimationTrack,
+  ScrollAnimationConfig,
+} from "./animation-engine";
+export {
+  FSM,
+  HSM,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+  createMachine,
+  interpret,
+  match,
+  stateEquals,
+} from "./state-machine";
+export type {
+  StateId,
+  EventId,
+  MachineContext,
+  EventPayload,
+  GuardFn,
+  ActionFn,
+  StateListener,
+  InvalidEventStrategy,
+  TransitionTarget,
+  TransitionDef,
+  StateConfig,
+  HistoryMode,
+  MachineConfig,
+  ChoiceConfig,
+  JunctionConfig,
+  StateValue,
+  TransitionHistoryEntry,
+  Service,
+  Machine,
+} from "./state-machine";
+export {
+  VirtualScroller,
+} from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
