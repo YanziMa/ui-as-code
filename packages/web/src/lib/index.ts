@@ -29399,3 +29399,10 @@ export type {
   GraphEdge,
   GraphLayoutMode,
 } from "./network-graph.js";
+// --- Batch 984: Word Cloud, Tag Cloud, Masonry Layout ---
+export { createWordCloud } from "./word-cloud.js";
+export type { WordCloudOptions, WordCloudInstance, WordCloudItem, WordCloudShape, WordCloudSpiral } from "./word-cloud.js";
+export { createTagCloud } from "./tag-cloud.js";
+export type { TagCloudOptions, TagCloudInstance, TagCloudTag, TagCloudLayout, TagCloudSort } from "./tag-cloud.js";
+export { createMasonry } from "./masonry-layout.js";
+export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry-layout.js";
