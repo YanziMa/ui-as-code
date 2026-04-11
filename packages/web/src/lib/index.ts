@@ -24089,3 +24089,15 @@ export type { SelectOption, SelectGroup, SelectMode, SelectMenuOptions, SelectMe
 // --- input-mask ---
 export { InputMaskManager, createInputMask } from "./input-mask";
 export type { MaskType, MaskOptions, MaskInstance } from "./input-mask";
+
+// --- textarea-autosize ---
+export { createTextareaAutosize } from "./textarea-autosize";
+export type { TextareaAutosizeOptions, TextareaAutosizeInstance } from "./textarea-autosize";
+
+// --- password-strength ---
+export { createPasswordStrength } from "./password-strength";
+export type { StrengthLevel, StrengthScore, PasswordStrengthOptions, PasswordStrengthInstance } from "./password-strength";
+
+// --- file-upload ---
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type { FileUploadOptions, UploadFile, FileUploadInstance } from "./file-upload";
