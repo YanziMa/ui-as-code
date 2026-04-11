@@ -35947,3 +35947,66 @@ export {
   fluidFontSize,
 } from "./css-utils";
 export type { BreakpointName } from "./css-utils";
+// --- dom-observer-utils ---
+export {
+  observeMutations,
+  observeOnce,
+  createDebouncedObserver,
+  watchAttributes,
+  watchChildren,
+  watchTextContent,
+  watchSize,
+  watchVisibility,
+  whenVisible,
+  isInViewport,
+} from "./dom-observer-utils.js";
+export type { MutationRecord as DomObserverMutationRecord, MutationSummary, SizeChange } from "./dom-observer-utils.js";
+
+// --- performance-utils ---
+export {
+  PerfObserver,
+  measureSync,
+  measureAsync,
+  perfMark,
+  perfMeasure,
+  measureBetween,
+  FPSCounter,
+  getMemoryUsage,
+  getMemoryPercent,
+  MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming,
+  collectWebVitals,
+  getResourceTiming,
+  findSlowResources,
+  CustomMetric,
+} from "./performance-utils.js";
+export type { TimingResult, MemoryUsage, FPSStats, WebVitals, NavigationTiming } from "./performance-utils.js";
+
+// --- permission-utils ---
+export {
+  isPermissionsAPIAvailable,
+  queryPermission,
+  queryPermissions,
+  requestPermission,
+  PermissionManager,
+  PermissionDeniedError,
+  checkCapabilities,
+  hasCapability,
+  getCapabilitiesByCategory,
+  isMobile,
+  isTouchDevice,
+  isInIframe,
+  isSecureContextPage,
+  getBrowserInfo,
+  prefersDarkMode,
+  prefersReducedMotion,
+  prefersHighContrast,
+  watchMediaPreference,
+} from "./permission-utils.js";
+export type {
+  PermissionName,
+  PermissionState,
+  PermissionResult,
+  CapabilityCheck,
+} from "./permission-utils.js";
