@@ -39577,3 +39577,31 @@ export type {
   PressHoldToggleOptions,
   LoadingToggleOptions,
 } from "./toggle-utils";
+// --- Batch 1237: Slider, Color Picker, Date Picker ---
+export { createSlider } from "./slider-utils";
+export type {
+  SliderOptions,
+  SliderInstance,
+} from "./slider-utils";
+
+export {
+  parseColor,
+  hslToRgb,
+  rgbToHsl,
+  rgbToHex,
+  formatColor,
+  createColorPicker,
+} from "./color-picker-utils";
+export type {
+  ColorValue,
+  ColorFormat,
+  ColorPreset,
+  ColorPickerOptions,
+  ColorPickerInstance,
+} from "./color-picker-utils";
+
+export { createDatePicker } from "./date-picker-utils";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+} from "./date-picker-utils";
