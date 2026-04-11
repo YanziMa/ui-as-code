@@ -28075,3 +28075,14 @@ export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from 
 // --- Badge ---
 export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
 export type { BadgeOptions, BadgeVariant, BadgePosition, BadgeSize, StatusDotOptions } from "./badge";
+// --- Progress ---
+export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
+export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
+
+// --- Tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } from "./tabs";
+
+// --- Accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion";
