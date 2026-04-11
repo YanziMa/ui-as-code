@@ -34035,3 +34035,67 @@ export {
   type LocaleInfo,
   type LocaleMatchResult,
 } from "./locale-detection-utils";
+
+// --- accessibility-utils ---
+export {
+  setAria,
+  getAria,
+  setRole,
+  setAccessibleName,
+  hideFromScreenReader,
+  showToScreenReader,
+  getFocusableElements,
+  focusFirst,
+  focusLast,
+  isFocusable,
+  createFocusTrap as createA11yFocusTrap,
+  setupRovingTabindex,
+  announce,
+  announceAssertive,
+  contrastRatio,
+  checkContrast,
+  suggestTextColor,
+  getHeadingHierarchy,
+  validateHeadingHierarchy,
+  findLandmarks,
+  hasProperLandmarks,
+  prefersReducedMotion as a11yPrefersReducedMotion,
+  prefersHighContrast as a11yPrefersHighContrast,
+  prefersDarkMode,
+  prefersLightMode,
+  onPreferenceChange,
+  createSkipLink,
+  openAccessibleModal,
+  type ContrastResult,
+  type FocusableElement,
+  type HeadingInfo,
+  type LandmarkInfo,
+} from "./accessibility-utils";
+
+// --- a11y-announcer-utils ---
+export {
+  A11yAnnouncer,
+  getGlobalAnnouncer,
+  destroyGlobalAnnouncer,
+  announce as srAnnounce,
+  announceAssertive as srAnnounceAssertive,
+  announcePolite as srAnnouncePolite,
+  isVisuallyHidden,
+  isValidLiveRegion,
+  type AnnouncementPriority,
+  type Announcement,
+  type AnnouncerConfig,
+  type AnnouncerState,
+} from "./a11y-announcer-utils";
+
+// --- focus-trap-utils ---
+export {
+  FocusTrap,
+  FocusTrapStack,
+  createFocusTrap as createAdvancedFocusTrap,
+  getTabbableElements,
+  type AutoFocusStrategy,
+  type FocusTrapConfig,
+  type FocusTrapState,
+  type FocusableInfo,
+} from "./focus-trap-utils";
