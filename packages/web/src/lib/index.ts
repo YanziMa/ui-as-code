@@ -31658,3 +31658,28 @@ export type {
   FieldType,
   SelectOption as FormSelectOption,
 } from "./form-builder";
+
+// --- Batch 1063: Split Button, Breadcrumbs, Pagination ---
+
+export { createSplitButton } from "./splitter";
+export type {
+  SplitButtonOptions,
+  SplitButtonInstance,
+  SplitButtonItem,
+  SplitButtonSize,
+  SplitButtonVariant,
+} from "./splitter";
+
+export { createBreadcrumbs } from "./breadcrumbs";
+export type {
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+  BreadcrumbItem,
+  BreadcrumbSeparator,
+} from "./breadcrumbs";
+
+export { PaginationManager, createPagination } from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
