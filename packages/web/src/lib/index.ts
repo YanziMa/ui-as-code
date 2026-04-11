@@ -47873,3 +47873,62 @@ export {
   observeWebVitals as PrefObserveWebVitals,
   markRender as PrefMarkRender,
 } from "./performance";
+
+// --- permission-enhanced.ts ---
+export type {
+  Action as PermEAction,
+  Resource as PermEResource,
+  RoleDefinition as PermERoleDef,
+  Permission as PermEPermission,
+  AttributeCondition as PermEAttrCond,
+  Policy as PermEPolicy,
+  TimeConstraint as PermETimeConst,
+  UserContext as PermEUserCtx,
+  EvaluationResult as PermEEvalRes,
+  RolePermissionMap as PermERolePermMap,
+} from "./permission-enhanced";
+export { EnhancedACL as PermEACL } from "./permission-enhanced";
+
+// --- permission-system.ts ---
+export type {
+  PermissionAction as PermSAction,
+  Permission as PermSPermission,
+  Role as PermSRole,
+  Condition as PermSCondition,
+  TimeConstraint as PermSTimeConst,
+  UserIdentity as PermSUserIdentity,
+  ResourceContext as PermSResourceCtx,
+  EvaluationContext as PermSEvalCtx,
+  EvaluationResult as PermSEvalRes,
+  Policy as PermSPolicy,
+  AuditLogEntry as PermSAuditEntry,
+} from "./permission-system";
+export { PermissionEngine as PermSEngine } from "./permission-system";
+
+// --- permission-utils.ts ---
+export type {
+  PermissionName as PermUName,
+  PermissionState as PermUState,
+  PermissionResult as PermUResult,
+  CapabilityCheck as PermUCapCheck,
+} from "./permission-utils";
+export {
+  PermissionManager as PermUMgr,
+  PermissionDeniedError as PermUDeniedErr,
+  isPermissionsAPIAvailable as PermUIsAPIAvail,
+  queryPermission as PermUQueryPerm,
+  queryPermissions as PermUQueryPerms,
+  requestPermission as PermURequestPerm,
+  checkCapabilities as PermUCheckCaps,
+  hasCapability as PermUHasCap,
+  getCapabilitiesByCategory as PermUCapsByCat,
+  isMobile as PermUIsMobile,
+  isTouchDevice as PermUIsTouch,
+  isInIframe as PermUInIframe,
+  isSecureContextPage as PermUSecureCtx,
+  getBrowserInfo as PermUBrowserInfo,
+  prefersDarkMode as PermUPrefersDark,
+  prefersReducedMotion as PermUPrefersReduced,
+  prefersHighContrast as PermUPrefersHighContrast,
+  watchMediaPreference as PermUWatchMedia,
+} from "./permission-utils";
