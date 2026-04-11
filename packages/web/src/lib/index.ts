@@ -29942,3 +29942,33 @@ export type { StoreOptions, StoreInstance, Middleware, Selector } from "./state-
 // --- animation ---
 export { EASING, KEYFRAMES, DURATION, animateValue, springAnimate, cssKeyframes, transition } from "./animation";
 export type { EasingName, SpringConfig } from "./animation";
+
+// --- i18n ---
+export { t, getLocale, setLocale, LOCALE_CHANGE_EVENT } from "./i18n";
+export type { Locale } from "./i18n";
+
+// --- theme-manager ---
+export { ThemeManager, createThemeManager, toggleTheme, isDarkMode } from "./theme-manager";
+export type { ThemeMode, DesignToken, ThemeDefinition, ThemeManagerInstance } from "./theme-manager";
+
+// --- a11y-utils ---
+export {
+  getFocusableElements,
+  createFocusTrap,
+  focusElement,
+  setTabOrder,
+  announce,
+  createLiveRegion,
+  prefersReducedMotion,
+  onReducedMotionChange,
+  getSafeDuration,
+  setAria,
+  removeAria,
+  srOnlyHide,
+  srOnlyShow,
+  setupDialog,
+  contrastRatio,
+  suggestForegroundColor,
+  createSkipLink,
+} from "./a11y-utils";
+export type { A11yFocusableElements, ContrastResult } from "./a11y-utils";
