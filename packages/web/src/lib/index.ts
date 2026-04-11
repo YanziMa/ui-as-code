@@ -47039,3 +47039,105 @@ export {
   standardDeviation,
   percentile,
 } from "./number-format-utils";
+
+// --- number-format ---
+export type {
+  NumberPatternOptions as NFPatOpts,
+} from "./number-format";
+export {
+  formatNumberCustom,
+  formatWithUnits,
+  formatFileSize as formatFileSizeNF,
+  formatOrdinal as formatOrdinalNF,
+  numberToWords,
+  numberToChinese,
+  toRomanNumerals,
+  fromRomanNumerals,
+  formatRange as formatRangeNF,
+  clamp as clampNF,
+  lerp as lerpNF,
+  mapRange as mapRangeNF,
+  parseFormattedNumber as parseFormattedNumNF,
+  parsePercent,
+} from "./number-format";
+
+// --- number-input ---
+export type {
+  NumberInputVariant as NIVariant,
+} from "./number-input";
+export type {
+  NumberInputOptions as NIOpts,
+  NumberInputInstance as NIInst,
+} from "./number-input";
+export {
+  createNumberInput,
+} from "./number-input";
+
+// --- number-utils-v2 ---
+export type {
+  NumericRange as NumV2Range,
+} from "./number-utils-v2";
+export {
+  clamp as clampV2,
+  lerp as lerpV2,
+  smoothStep,
+  mapRange as mapRangeV2,
+  roundTo as roundToV2,
+  roundToMultiple,
+  ceilToMultiple,
+  floorToMultiple,
+  approxEqual,
+  inRange as inRangeV2,
+  wrap,
+  normalizeAngle,
+  degToRad,
+  radToDeg,
+  mean as meanV2,
+  median as medianV2,
+  mode,
+  variance,
+  stdev,
+  percentile as percentileV2,
+  quartiles,
+  iqr,
+  findOutliers,
+  covariance,
+  correlation,
+  rangesOverlap,
+  rangeIntersection,
+  rangeUnion,
+  inAnyRange,
+  mergeRanges,
+  subtractRanges,
+  SeededRNG,
+  rng,
+  randInt,
+  randFloat,
+  randPick,
+  shuffle as shuffleV2,
+  uuid,
+  formatNumber as formatNumberV2,
+  formatCompact as formatCompactV2,
+  formatBytes as formatBytesV2,
+  formatPercent as formatPercentV2,
+  formatCurrency as formatCurrencyV2,
+  parseFormattedNumber as parseFormattedNumV2,
+  celsiusToFahrenheit,
+  fahrenheitToCelsius,
+  celsiusToKelvin,
+  kelvinToCelsius,
+  metersToFeet,
+  feetToMeters,
+  metersToMiles,
+  milesToMeters,
+  kmToMiles,
+  milesToKm,
+  kgToPounds,
+  poundsToKg,
+  msToSeconds,
+  secondsToMs,
+  minutesToMs,
+  hoursToMs,
+  daysToMs,
+  msToReadable,
+} from "./number-utils-v2";
