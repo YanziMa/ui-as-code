@@ -47932,3 +47932,37 @@ export {
   prefersHighContrast as PermUPrefersHighContrast,
   watchMediaPreference as PermUWatchMedia,
 } from "./permission-utils";
+
+// --- permission.ts ---
+export type { Permission as PermPermission, RoleName as PermRoleName } from "./permission";
+export type {
+  Role as PermRole,
+  User as PermUser,
+  Policy as PermPolicy,
+  CheckResult as PermCheckResult,
+  AuditEntry as PermAuditEntry,
+} from "./permission";
+export { RBAC as PermRBAC, COMMON_ROLES as PermCommonRoles, createRBAC as PermCreateRBAC } from "./permission";
+
+// --- permissions.ts ---
+export type { Role as PermsRole, Permission as PermsPermission } from "./permissions";
+export { ACL as PermsACL, appACL as PermsAppACL } from "./permissions";
+export {
+  hasPermission as PermsHasPerm,
+  hasRoleLevel as PermsHasRoleLevel,
+  getPermissions as PermsGetPerms,
+} from "./permissions";
+
+// --- photo-editor.ts ---
+export type {
+  FilterName as PEFilterName,
+  FilterPreset as PEFilterPreset,
+  AdjustmentValues as PEAdjustmentValues,
+  CropRegion as PECropRegion,
+  TextOverlay as PETextOverlay,
+  StickerItem as PEStickerItem,
+  DrawStroke as PEDrawStroke,
+  PhotoEditorOptions as PEOpts,
+  PhotoEditorInstance as PEInst,
+} from "./photo-editor";
+export { createPhotoEditor as PECreate, getFilterPresets as PEGetFilterPresets } from "./photo-editor";
