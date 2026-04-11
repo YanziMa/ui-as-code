@@ -32511,3 +32511,45 @@ export {
   type RouteInfo,
   type NavigationResult,
 } from "./router";
+
+// --- dom-diff ---
+export {
+  diff,
+  patch,
+  syncDOM,
+  renderDOM,
+  domToTree,
+  type DomNode,
+  type PatchOp,
+  type DiffOptions,
+  type DiffResult,
+  type PatchResult,
+} from "./dom-diff";
+
+// --- style-injector ---
+export {
+  injectStyle,
+  injectLink,
+  buildStyleSheet,
+  injectStyleSheet,
+  createScope,
+  setCSSVars,
+  getCSSVars,
+  createTokenMap,
+  DynamicStyleManager,
+  extractCriticalCSS,
+  type StyleRule,
+  type StyleSheet,
+  type InjectOptions,
+  type StyleElement,
+} from "./style-injector";
+
+// --- css-reset ---
+export {
+  injectReset,
+  getResetCSS,
+  generateReset,
+  type ResetVariant,
+  type ResetOptions,
+  type ResetInstance,
+} from "./css-reset";
