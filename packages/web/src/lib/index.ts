@@ -25667,3 +25667,15 @@ export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap"
 // --- portals ---
 export type { PortalOptions, PortalInstance, PortalManagerOptions, PortalManagerInstance } from "./portals";
 export { createPortal, createPortalManager, getOrCreateTarget, createModalTarget, createTooltipTarget, createNotificationTarget, createDrawerTarget } from "./portals";
+
+// --- intersection-observer ---
+export type { VisibilityState, ObserveMode, IntersectionOptions, IntersectionEntryEx, IntersectionInstance } from "./intersection-observer";
+export { IntersectionWatcher, createIntersectionObserver, lazyLoadImages, watchVisibility, createInfiniteScrollSentinel } from "./intersection-observer";
+
+// --- mutation-observer ---
+export type { MutationFilter, MutationObserverOptions, SimplifiedMutationRecord, MutationObserverInstance } from "./mutation-observer";
+export { MutationWatcher, createMutationObserver, waitForElement, waitForRemoval } from "./mutation-observer";
+
+// --- resize-observer ---
+export type { ResizeBox, ResizeObserverOptions as ResizeObsOptions, ResizeObserverEntry as ResizeObsEntry, ResizeObserverInstance as ResizeObsInstance } from "./resize-observer";
+export { ResizeWatcher, createResizeObserver, matchParentSize, whenSizeExceeds } from "./resize-observer";
