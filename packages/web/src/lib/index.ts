@@ -46387,3 +46387,31 @@ export {
   sortLocale,
   searchLocale,
 } from "./locale";
+// --- location ---
+export type {
+  Coordinates,
+  LocationInfo,
+  DistanceResult,
+  TimezoneInfo as LocTimezoneInfo,
+} from "./location";
+export {
+  getCurrentLocation,
+  watchLocation,
+  calculateDistance,
+  isWithinRadius,
+  midpoint,
+  toDMS,
+  formatCoordinates,
+  getTimezoneInfo,
+  getCommonTimezones,
+  convertTime,
+  formatDateInTimezone,
+} from "./location";
+
+// --- lock ---
+export type { LockOptions } from "./lock";
+export { Mutex, Semaphore, ReadWriteLock, SpinLock } from "./lock";
+
+// --- log-formatter ---
+export type { LogLevel, LogEntry as LfLogEntry, ConsoleLoggerOptions } from "./log-formatter";
+export { LEVEL_NAMES, LEVEL_COLORS, formatLogEntry, formatJsonLogEntry, parseLogLine, createConsoleLogger } from "./log-formatter";
