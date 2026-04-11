@@ -48007,3 +48007,27 @@ export {
   HookOptions, RegisteredHook, PluginInstance, PluginLogger, PluginStorage,
   PluginLoadResult, SystemStats, parseSemver, satisfiesConstraint, PluginManager,
 } from "./plugin-system";
+// --- pointer-lock ---
+export {
+  PointerLockOptions, PointerLockInstance, createPointerLock,
+  isPointerLockSupported, isPointerLocked as PLIsLocked,
+  requestPointerLock as PLRequestLock, exitPointerLock as PLExitLock,
+} from "./pointer-lock";
+// --- pointer-utils ---
+export {
+  PointerState, PointerConfig, PointerHandler,
+  hasPointerEvents, hasTouch, hasPenSupport, getPrimaryInput, hasMouse,
+  clientToPage, pageToClient, clientToLocal, localToClient, transformBetween, getScrollOffset,
+  extractPointerState as PUExtractPointerState, extractMouseState, extractTouchState,
+  createPointerListener, setPointerCapture, releasePointerCapture,
+  requestPointerLock as PURequestLock, exitPointerLock as PUExitLock,
+  isPointerLocked as PUIsLocked, getMovementDelta,
+  normalizePressure, classifyPressure,
+} from "./pointer-utils";
+// --- pointer ---
+export {
+  Point as PtrPoint, PointerEvent as PtrEvent, normalizePointerEvent,
+  pointDistance, midpoint, angleBetween, rotatePoint, lerpPoint,
+  GestureConfig, SwipeGesture, PinchGesture, RotationGesture,
+  GestureController, createGestureRecognizer, TouchTracker, TouchChange,
+} from "./pointer";
