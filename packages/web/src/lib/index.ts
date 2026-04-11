@@ -28042,3 +28042,14 @@ export type { ThemeMode, DesignToken, TokenCategory, ThemeDefinition, ThemeEngin
 // --- Notification Center ---
 export { NotificationCenterManager, createNotificationCenter } from "./notification-center";
 export type { NotificationItem, NotificationCenterOptions, NotificationCenterInstance, NotificationType } from "./notification-center";
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+
+// --- Tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Context Menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuItem, ContextMenuOptions, ContextMenuInstance, ContextMenuPosition } from "./context-menu";
