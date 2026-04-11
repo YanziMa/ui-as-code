@@ -39132,3 +39132,59 @@ export type {
   StorageStats,
   StorageMigration,
 } from "./storage-utils";
+// --- network-utils ---
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection as netIsSlow,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+} from "./network-utils";
+export type {
+  NetworkStatus,
+  RetryOptions as NetRetryOptions,
+  RequestQueueItem,
+} from "./network-utils";
+
+// --- async-utils ---
+export {
+  retry,
+  withTimeoutPromise,
+  poll,
+  runWithConcurrency,
+  memoizeAsync,
+  memoize,
+  createDeferred,
+  asyncIterate,
+  batchProcess,
+  allSuccessful,
+  allOrThrow,
+} from "./async-utils";
+export type {
+  RetryOptions as AsyncRetryOptions,
+  PollOptions,
+  ConcurrencyOptions,
+  MemoizeOptions,
+} from "./async-utils";
+
+// --- browser-utils ---
+export {
+  detectBrowser,
+  supportsFeature,
+  getViewportSize,
+  getDevicePixelRatio,
+  isDarkMode,
+  isLightMode,
+  onColorSchemeChange,
+  isPageVisible,
+  onVisibilityChange,
+  getConnectionInfo,
+  isSlowConnection as browserIsSlow,
+  getMemoryInfo,
+} from "./browser-utils";
+export type { BrowserInfo } from "./browser-utils";
