@@ -44503,3 +44503,41 @@ export {
   SpreadsheetInstance,
   createSpreadsheet,
 } from "./spreadsheet";
+
+// --- spring-physics ---
+export {
+  SpringConfig as PhysicsSpringConfig,
+  SpringOptions as PhysicsSpringOptions,
+  SpringInstance as PhysicsSpringInstance,
+  ChainableSpring as PhysicsChainableSpring,
+  createSpring as physicsCreateSpring,
+  SpringPresets as PhysicsSpringPresets,
+  createPresetSpring as physicsCreatePresetSpring,
+} from "./spring-physics";
+
+// --- sse ---
+export {
+  SseConfig,
+  SseMessage,
+  SseConnectionState,
+  SseEventHandler,
+  SseStateHandler,
+  SseErrorHandler,
+  SseClient,
+  createSseClient,
+  SseAggregator,
+} from "./sse";
+
+// --- sso ---
+export {
+  SsoProvider,
+  SsoAuthResult,
+  SsoUser,
+  SsoSession,
+  SsoConfig,
+  SsoError,
+  SsoState,
+  SsoStateHandler,
+  SSOManager,
+  createSSOManager,
+} from "./sso";
