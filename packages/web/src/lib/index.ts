@@ -18924,3 +18924,60 @@ export type {
   StoreApi,
   PersistOptions,
 } from "./store";
+export {
+  t,
+  getLocale,
+  setLocale,
+} from "./i18n";
+export type {
+  Locale,
+} from "./i18n";
+export {
+  ThemeManager,
+  getThemeManager,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+  useTheme,
+} from "./theme";
+export type {
+  ThemeColors,
+  ThemeConfig,
+} from "./theme";
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  isRetina,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations,
+  animate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type {
+  Breakpoints,
+} from "./css-in-js";
