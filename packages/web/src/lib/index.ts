@@ -32148,3 +32148,15 @@ export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from ".
 // --- stat-card ---
 export { createStatCard } from "./stat-card";
 export type { StatCardOptions, TrendDirection, StatCardVariant } from "./stat-card";
+
+// --- file-tree ---
+export { createFileTree, FileManager } from "./file-tree";
+export type { FileTreeOptions, FileTreeInstance, FileTreeNode, FileType } from "./file-tree";
+
+// --- code-editor ---
+export { createCodeEditor, CodeEditorManager } from "./code-editor";
+export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
+
+// --- terminal ---
+export { createTerminal } from "./terminal";
+export type { TerminalOptions, TerminalInstance, TerminalLine, TerminalTheme, TerminalCommand } from "./terminal";
