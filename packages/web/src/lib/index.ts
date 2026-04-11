@@ -26589,3 +26589,53 @@ export type {
   SsoState,
   SsoStateHandler,
 } from "./sso";
+
+// --- Feature Flag (pre-written) ---
+export {
+  createFeatureFlags,
+  createBooleanFlag,
+  createRolloutFlag,
+} from "./feature-flag";
+export type {
+  FeatureFlag,
+  FeatureFlagOptions,
+  FeatureFlagInstance,
+  FlagRule,
+  FlagCondition,
+  UserContext,
+} from "./feature-flag";
+
+// --- Experiment Framework ---
+export {
+  ExperimentEngine,
+  createExperimentEngine,
+} from "./experiment";
+export type {
+  ExperimentConfig,
+  Variant,
+  ExperimentMetric,
+  ExperimentTargeting,
+  ExposureEvent,
+  MetricEvent,
+  ExperimentResult,
+  ExperimentInstance,
+  ExperimentStatus,
+} from "./experiment";
+
+// --- A/B Testing ---
+export {
+  zTest,
+  chiSquaredTest,
+  calculateSampleSize,
+  multiVariantTest,
+  SequentialABTest,
+  evaluateAB,
+} from "./ab-test";
+export type {
+  ABTestVariant,
+  ABTestResult,
+  MultiVariantResult,
+  SampleSizeResult,
+  SequentialTestState,
+  PowerAnalysisInput,
+} from "./ab-test";
