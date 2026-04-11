@@ -32470,3 +32470,44 @@ export {
   type Selector,
   type Middleware,
 } from "./store";
+
+// --- http-client ---
+export {
+  HttpClient,
+  createHttpClient,
+  HttpError,
+  type HttpClientConfig,
+  type HttpRequestOptions,
+  type HttpResponse,
+  type HttpMiddleware,
+} from "./http-client";
+
+// --- websocket ---
+export {
+  WebSocketManager,
+  WsRoomManager,
+  isWebSocketSupported,
+  getWebSocketUrl,
+  createWebSocketUrl,
+  parseWsUrl,
+  type WebSocketOptions,
+  type WebSocketState,
+  type WebSocketStats,
+  type ReconnectConfig,
+  type HeartbeatConfig,
+  type WsEvent,
+} from "./websocket";
+
+// --- router ---
+export {
+  Router,
+  createRouter,
+  getRouter,
+  type RouteMode,
+  type RouteParams,
+  type QueryParams,
+  type RouteDefinition,
+  type RouterConfig,
+  type RouteInfo,
+  type NavigationResult,
+} from "./router";
