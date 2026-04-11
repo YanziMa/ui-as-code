@@ -29615,3 +29615,14 @@ export type { TreeNodeData, TreeNode, TreeViewConfig, CheckMode } from "./tree-v
 // --- file-explorer ---
 export { createFileExplorer } from "./file-explorer";
 export type { FileExplorerOptions, FileExplorerInstance, FileEntry, ViewMode, SortField } from "./file-explorer";
+// --- notification-center ---
+export { createNotificationCenter, NotificationCenterManager } from "./notification-center";
+export type { NotificationCenterOptions, NotificationCenterInstance, NotificationItem, NotificationType } from "./notification-center";
+
+// --- chat-widget ---
+export { createChatWidget } from "./chat-widget";
+export type { ChatWidgetOptions, ChatWidgetInstance, ChatMessage, ChatParticipant } from "./chat-widget";
+
+// --- comment-thread ---
+export { createCommentThread, CommentThreadManager } from "./comment-thread";
+export type { CommentThreadOptions, CommentThreadInstance, Comment, CommentAuthor } from "./comment-thread";
