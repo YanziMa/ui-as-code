@@ -39787,3 +39787,10 @@ export { createCountUp } from "./countup-utils";
 export type { CountUpOptions, CountUpInstance, LapTime, CountUpUnit, CountUpPrecision } from "./countup-utils";
 export { createTimer } from "./timer-utils";
 export type { TimerOptions, TimerInstance, TimerMode, TimerState, TimerSession } from "./timer-utils";
+// --- Batch 1253: Confetti, Marquee, Typing Indicator ---
+export { createConfetti } from "./confetti-utils";
+export type { ConfettiOptions, ConfettiInstance, Particle, ConfettiShape, ConfettiOrigin } from "./confetti-utils";
+export { createMarquee } from "./marquee-utils";
+export type { MarqueeOptions, MarqueeInstance, MarqueeDirection, MarqueeFillMode } from "./marquee-utils";
+export { createTypingIndicator, createTextReveal } from "./typing-indicator-utils";
+export type { TypingIndicatorOptions, TextRevealOptions, TextRevealInstance, TypingStyle, TypingSize } from "./typing-indicator-utils";
