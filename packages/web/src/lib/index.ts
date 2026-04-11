@@ -42114,3 +42114,7 @@ export { AccordionManager, createAccordion, type AccordionOptions, type Accordio
 export { CollapseManager, createCollapse, createCollapseGroup, type CollapseOptions, type CollapseInstance, type CollapseSize, type CollapseVariant, type CollapseGroupOptions, type CollapseGroupInstance } from "./collapse";
 export { CarouselManager, createCarousel, type CarouselOptions, type CarouselInstance, type CarouselSlide } from "./carousel";
 export { createModal, type ModalOptions, type ModalInstance, type ModalSize, type ModalVariant } from "./modal-dialog";
+// --- Batch 1345: Notification Bar, Progress Bar, Badge ---
+export { NotificationBarManager, createNotificationBar, type NotificationBarOptions, type NotificationBarInstance, type NotificationType } from "./notification-bar";
+export { createProgressBar, createCircleProgress, type ProgressBarOptions, type CircleProgressOptions, type ProgressVariant, type ProgressSize } from "./progress-bar";
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge, type BadgeOptions, type StatusDotOptions, type BadgeVariant, type BadgePosition, type BadgeSize } from "./badge";
