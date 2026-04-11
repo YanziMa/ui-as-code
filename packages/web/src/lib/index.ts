@@ -26900,3 +26900,15 @@ export type { CopyButtonOptions, CopyButtonInstance, CopyVariant, CopySize } fro
 // --- Resizable ---
 export { makeResizable, createSplitPane } from "./resizable";
 export type { ResizeOptions, ResizeState, ResizableController, SplitPaneOptions, SplitPaneController } from "./resizable";
+
+// --- Affix ---
+export { createAffix } from "./affix";
+export type { AffixOptions, AffixInstance } from "./affix";
+
+// --- Back Top ---
+export { createBackTop } from "./back-top";
+export type { BackTopOptions, BackTopInstance, BackTopShape, BackTopPosition } from "./back-top";
+
+// --- Watermark ---
+export { createWatermark } from "./watermark";
+export type { WatermarkOptions, WatermarkInstance } from "./watermark";
