@@ -28726,3 +28726,15 @@ export type { ScrollbarOptions, ScrollbarInstance, ScrollbarVariant, ScrollbarAx
 // --- Scroll Snap ---
 export { ScrollSnapManager, createScrollSnap } from "./scroll-snap";
 export type { ScrollSnapOptions, ScrollSnapInstance, SnapSection, SnapType, SnapAxis } from "./scroll-snap";
+
+// --- Tour / Guide ---
+export { createTour } from "./tour";
+export type { TourOptions, TourInstance, TourStep } from "./tour";
+
+// --- Hotkeys ---
+export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString } from "./hotkeys";
+export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
+
+// --- Context Provider ---
+export { createContext, ThemeContext, AuthContext, I18nContext, ResponsiveContext, createResponsiveProvider } from "./context-provider";
+export type { ContextOptions, ProviderInstance, ConsumerHandle, Context, ThemeContextValue, AuthContextValue, I18nContextValue, ResponsiveContextValue } from "./context-provider";
