@@ -41390,3 +41390,15 @@ export { createTable } from "./table-utils";
 // --- tab-utils ---
 export type { TabOrientation, TabActivation, TabItem, TabOptions, TabInstance } from "./tab-utils";
 export { createTabs } from "./tab-utils";
+
+// --- progress-utils ---
+export type { ProgressBarVariant, ProgressBarSize, ProgressBarOptions, CircularProgressOptions, StepProgressOptions } from "./progress-utils";
+export { createProgressBar, updateProgressBar, createCircularProgress, createStepProgress } from "./progress-utils";
+
+// --- skeleton-utils ---
+export type { SkeletonVariant, SkeletonSize, SkeletonOptions, SkeletonBlockOptions } from "./skeleton-utils";
+export { createSkeleton, createSkeletonBlock, createCardSkeleton, createTableSkeleton } from "./skeleton-utils";
+
+// --- avatar-utils ---
+export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar-utils";
+export { generateAvatarColor, getInitials, createAvatar, createAvatarGroup } from "./avatar-utils";
