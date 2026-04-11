@@ -27963,3 +27963,14 @@ export type { EasingFunction, SpringConfig, SpringState, Keyframe, AnimationTrac
 // --- I18n Manager ---
 export { I18nManager, createI18n } from "./i18n-manager";
 export type { Locale, MessageKey, Namespace, LocaleData, MessageCatalog, PluralRuleSet, LocaleFormats, I18nConfig, InterpolationOptions, I18nStats } from "./i18n-manager";
+// --- Storage Manager ---
+export { StorageManager } from "./storage-manager";
+export type { StorageBackend, StorageEntry, StorageOptions, StorageStats, MigrationPlan } from "./storage-manager";
+
+// --- Event Bus ---
+export { EventBus, createEventBus } from "./event-bus";
+export type { EventCallback, EventMiddleware, Subscription, EmittedEvent, EventBusOptions } from "./event-bus";
+
+// --- State Machine ---
+export { FSM, HSM, createMachine, interpret, match, stateEquals, evaluateChoice, evaluateJunction, deepHistoryTarget, shallowHistoryTarget } from "./state-machine";
+export type { StateId, EventId, MachineContext, EventPayload, GuardFn, ActionFn, StateListener, InvalidEventStrategy, TransitionTarget, TransitionDef, StateConfig, HistoryMode, MachineConfig, ChoiceConfig, JunctionConfig, StateValue, TransitionHistoryEntry, Service } from "./state-machine";
