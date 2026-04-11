@@ -45368,3 +45368,55 @@ export type {
 export {
   createGrid as gdCreateGrid,
 } from "./grid";
+
+// --- hash-history ---
+export type {
+  HashHistoryEntry as HhEntry,
+  HashHistoryOptions as HhOptions,
+  HashHistoryInstance as HhInstance,
+} from "./hash-history";
+export {
+  createHashHistory as hhCreate,
+} from "./hash-history";
+
+// --- hash-utils ---
+export {
+  sha256 as huSha256,
+  sha384 as huSha384,
+  sha512 as huSha512,
+  simpleHash as huSimpleHash,
+  hashToInt as huHashToInt,
+  hashObject as huHashObject,
+  combineHashes as huCombineHashes,
+  hashColor as huHashColor,
+  hashHexColor as huHashHexColor,
+  fingerprint as huFingerprint,
+  timingSafeEqual as huTimingSafeEqual,
+} from "./hash-utils";
+
+// --- hash ---
+export type {
+  HashFunction as HsFunction,
+  HashTableEntry as HsTableEntry,
+} from "./hash";
+export {
+  fnv1a32 as hsFnv1a32,
+  fnv1a64 as hsFnv1a64,
+  murmur3_32 as hsMurmur3,
+  djb2 as hsDjb2,
+  sdbm as hsSdbm,
+  jenkinsOaat as hsJenkinsOaat,
+  crc32 as hsCrc32,
+  sha256 as hsSha256,
+  sha1 as hsSha1,
+  sha512 as hsSha512,
+  ConsistentHashRing,
+  BloomFilter,
+  HashTable,
+  simpleChecksum as hsChecksum,
+  adler32 as hsAdler32,
+  fingerprint as hsFingerprint,
+  contentAddress as hsContentAddress,
+  combineHashes as hsCombineHashesNum,
+  hashToHex as hsHashToHex,
+} from "./hash";
