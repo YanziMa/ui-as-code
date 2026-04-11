@@ -34690,3 +34690,29 @@ export type {
   DotBadgeOptions,
   TagOptions,
 } from "./badge-utils";
+// --- Batch 1142: Chip, Tag Input, Rating ---
+export { createChip, createChipSet } from "./chip-utils";
+export type {
+  ChipType,
+  ChipSize,
+  ChipColor,
+  ChipConfig,
+  ChipSetOptions,
+  ChipSetInstance,
+} from "./chip-utils";
+
+export { createChipGroup, createInputChip } from "./tag-input-utils";
+export type {
+  ChipVariant,
+  ChipItem,
+  ChipGroupOptions,
+  ChipGroupInstance,
+  InputChipOptions,
+} from "./tag-input-utils";
+
+export { createRating } from "./rating-utils";
+export type {
+  RatingIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating-utils";
