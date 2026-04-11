@@ -50175,3 +50175,57 @@ export {
   type ScrollSpyInstance as ScrSpy_Instance,
   type NavSpyOptions,
 } from "./scroll-spy";
+
+// --- scroll-utilities ---
+export {
+  scrollTo as ScrUtil_scrollTo,
+  scrollToTop as ScrUtil_scrollToTop,
+  scrollToBottom as ScrUtil_scrollToBottom,
+  scrollIntoView as ScrUtil_scrollIntoView,
+  onScroll,
+  isInViewport as ScrUtil_isInViewport,
+  getVisibilityRatio,
+  getScrollProgress as ScrUtil_getScrollProgress,
+  createScrollSpy as ScrUtil_createSpy,
+  addParallax,
+  makeSticky,
+  showScrollProgressBar,
+  hideScrollProgressBar,
+  type ScrollPosition as ScrUtil_Position,
+  type ScrollToOptions,
+  type ScrollSpyOptions as ScrUtil_SpyOptions,
+  type ParallaxConfig,
+  type ScrollSpyInstance as ScrUtil_SpyInstance,
+} from "./scroll-utilities";
+
+// --- scroll-utils ---
+export {
+  getScrollPosition as ScrUtl_getPosition,
+  setScrollPosition,
+  scrollTo as ScrUtl_scrollTo,
+  scrollToElement as ScrUtl_scrollToElement,
+  scrollToTop as ScrUtl_scrollToTop,
+  scrollToBottom as ScrUtl_scrollToBottom,
+  trackScroll,
+  createScrollSpy as ScrUtl_createSpy,
+  createInfiniteScroll,
+  createParallax as ScrUtl_createParallax,
+  lockScroll as ScrUtl_lockScroll,
+  createProgressBar,
+  isAtTop,
+  isAtBottom,
+  getScrollPercent,
+  type ScrollPosition as ScrUtl_Position,
+  type ScrollSpyOptions as ScrUtl_SpyOptions,
+  type InfiniteScrollOptions,
+  type ParallaxOptions as ScrUtl_ParallaxOptions,
+  type ScrollLockOptions as ScrUtl_LockOptions,
+} from "./scroll-utils";
+
+// --- scroll ---
+export {
+  scrollToId as Scr_scrollToId,
+  scrollToTop as Scr_scrollToTop,
+  getScrollPosition as Scr_getPosition,
+  isInViewport as Scr_isInViewport,
+} from "./scroll";
