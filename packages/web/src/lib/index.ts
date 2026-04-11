@@ -27319,3 +27319,15 @@ export type { ParallaxOptions, ParallaxInstance, ParallaxLayer, ParallaxMode, Pa
 // --- lightbox ---
 export { createLightbox, LightboxManager } from "./lightbox.js";
 export type { LightboxOptions, LightboxInstance, LightboxImage } from "./lightbox.js";
+
+// --- color-picker ---
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker.js";
+export type { RgbColor, HslColor, Palette } from "./color-picker.js";
+
+// --- slider ---
+export { createSlider, SliderManager } from "./slider.js";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider.js";
+
+// --- file-upload ---
+export { createFileUpload, FileUploadManager } from "./file-upload.js";
+export type { FileUploadOptions, FileUploadInstance, UploadFile } from "./file-upload.js";
