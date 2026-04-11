@@ -30839,3 +30839,27 @@ export type { BreakpointName } from "./css-utils";
 // --- HTML Builder ---
 export { tag, html, htmlString, applyAttributes, appendChildren, fragment, repeat, when, switchOn, $, $$ } from "./html-builder";
 export type { Child, AttrValue, BuildOptions } from "./html-builder";
+
+// --- Event Emitter ---
+export { EventEmitter, createEmitter } from "./event-emitter";
+export type { Listener, AsyncListener, EmitterOptions, Subscription, EmitResult, EmitterStats } from "./event-emitter";
+
+// --- Signal / Reactive ---
+export {
+  signal,
+  readonlySignal,
+  computed,
+  effect,
+  batch,
+  isBatching,
+  signalArray,
+  toggleSignal,
+  counterSignal,
+  debouncedSignal,
+  throttledSignal,
+} from "./signal";
+export type { Signal, ComputedSignal, SignalArray, EffectOptions } from "./signal";
+
+// --- Pub/Sub ---
+export { MessageBroker } from "./pubsub";
+export type { Message, MessageContext, MessageHandler, SubscriptionOptions as PubSubSubscriptionOptions } from "./pubsub";
