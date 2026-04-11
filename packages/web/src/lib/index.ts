@@ -30402,3 +30402,53 @@ export {
   hashBlob,
 } from "./blob-utils";
 export type { BlobParts, BlobReadOptions, FileSliceOptions } from "./blob-utils";
+
+// --- URL Utilities ---
+export {
+  parseUrl,
+  buildUrlFromParts,
+  updateSearchParams,
+  removeSearchParams,
+  getQueryParams,
+  isSameOrigin,
+  normalizeUrl as normalizeUrlUtil,
+  isAbsoluteUrl,
+  makeAbsoluteUrl,
+  getDomainFromUrl,
+  getPathnameFromUrl,
+  joinPathSegments,
+  encodeUriComponentSafe,
+  decodeUriComponentSafe,
+  urlsEqual,
+} from "./url-utils";
+export type { ParsedUrl } from "./url-utils";
+
+// --- Query String ---
+export {
+  parse as parseQueryString,
+  parseUrlQuery,
+  stringify as stringifyQuery,
+  getParam,
+  setParam,
+  removeParam,
+  toggleParam,
+  mergeParams,
+  pickParams,
+  omitParams,
+} from "./query-string";
+export type { QueryStringOptions, StringifyOptions } from "./query-string";
+
+// --- Router Utilities ---
+export {
+  compileRoute,
+  matchRoute,
+  matchRoutes,
+  generatePath,
+  SimpleRouter,
+  pathMatchesGlob,
+  splitPath,
+  joinPath,
+  getParentPath,
+  normalizePath,
+} from "./router-utils";
+export type { RouteDefinition, RouteMatch, NavigationGuard, RouterOptions } from "./router-utils";
