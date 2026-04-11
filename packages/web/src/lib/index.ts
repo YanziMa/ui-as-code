@@ -47569,3 +47569,88 @@ export {
   hashPasswordSimple,
   maskPassword,
 } from "./password";
+
+// --- pattern-utils.ts ---
+export {
+  globToRegex as PUGlobToRegex,
+  isGlobMatch as PUIsGlobMatch,
+  wildcardMatch as PUWildcardMatch,
+  levenshtein as PULevenshtein,
+  fuzzyScore as PUFuzzyScore,
+  findBestMatch as PUFindBestMatch,
+  camelToWords as PUCamelToWords,
+  kebabToWords as PUkebabToWords,
+  snakeToWords as PUSnakeToWords,
+} from "./pattern-utils";
+
+// --- pattern.ts ---
+export type {
+  MatchResult as PatMatchResult,
+  Observer as PatObserver,
+  Subscription as PatSubscription,
+  ObservableLike as PatObservableLike,
+  StrategyContext as PatStrategyContext,
+  Strategy as PatStrategy,
+  Command as PatCommand,
+  StateTransition as PatStateTransition,
+  StateMachineConfig as PatStateMachineConfig,
+} from "./pattern";
+export {
+  Observable as PatObservable,
+  EventBus as PatEventBus,
+  StrategyRunner as PatStrategyRunner,
+  CommandInvoker as PatCommandInvoker,
+  Mediator as PatMediator,
+  FiniteStateMachine as PatFiniteStateMachine,
+  createSingleton as PatCreateSingleton,
+  escapeRegex as PatEscapeRegex,
+  matchAnyOf as PatMatchAnyOf,
+  repeatPattern as PatRepeatPattern,
+  buildPattern as PatBuildPattern,
+  globToRegex as PatGlobToRegex,
+  globMatch as PatGlobMatch,
+  multiGlobMatch as PatMultiGlobMatch,
+  matchLiteral as PatMatchLiteral,
+  matchRegex as PatMatchRegex,
+  sequence as PatSequence,
+  choice as PatChoice,
+  zeroOrMore as PatZeroOrMore,
+  oneOrMore as PatOneOrMore,
+  optional as PatOptional,
+  PATTERNS as PatPATTERNS,
+  testPattern as PatTestPattern,
+  extractPattern as PatExtractPattern,
+  findAllOverlapping as PatFindAllOverlapping,
+  replaceWithInfo as PatReplaceWithInfo,
+  countOccurrences as PatCountOccurrences,
+} from "./pattern";
+
+// --- patterns.ts ---
+export type {
+  Observer as DesObserver,
+  Subscription as DesSubscription,
+  ObservableLike as DesObservableLike,
+  EventHandler as DesEventHandler,
+  StrategyContext as DesStrategyContext,
+  Strategy as DesStrategy,
+  Command as DesCommand,
+  MediatorHandler as DesMediatorHandler,
+  StateTransition as DesStateTransition,
+  StateMachineConfig as DesStateMachineConfig,
+} from "./patterns";
+export {
+  Observable as DesObservable,
+  EventBus as DesEventBus,
+  StrategyRunner as DesStrategyRunner,
+  CommandInvoker as DesCommandInvoker,
+  Mediator as DesMediator,
+  FiniteStateMachine as DesFiniteStateMachine,
+  createSingleton as DesCreateSingleton,
+  createIterator as DesCreateIterator,
+  range as DesRange,
+  cycle as DesCycle,
+  repeat as DesRepeat,
+  take as DesTake,
+  skip as DesSkip,
+  zipIterators as DesZipIterators,
+} from "./patterns";
