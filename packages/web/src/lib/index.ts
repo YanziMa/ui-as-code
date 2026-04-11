@@ -48031,3 +48031,17 @@ export {
   GestureConfig, SwipeGesture, PinchGesture, RotationGesture,
   GestureController, createGestureRecognizer, TouchTracker, TouchChange,
 } from "./pointer";
+// --- polling ---
+export {
+  PollingConfig, PollingState, PollingStatusHandler, Poller, createPoller, poll,
+} from "./polling";
+// --- pomodoro-timer ---
+export {
+  PomodoroPhase, PomodoroState, PomodoroSession,
+  PomodoroOptions, PomodoroInstance, createPomodoroTimer,
+} from "./pomodoro-timer";
+// --- popconfirm-utils ---
+export {
+  PopconfirmPlacement, PopconfirmTrigger, PopconfirmIconType,
+  PopconfirmOptions, PopconfirmInstance, createPopconfirm,
+} from "./popconfirm-utils";
