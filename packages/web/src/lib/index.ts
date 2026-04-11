@@ -46170,3 +46170,15 @@ export { createGridLayout, build12ColTemplate, gridPatterns } from "./layout-gri
 // --- layout-utils ---
 export type { FlexDirection, FlexWrap, JustifyContent, AlignItems, AlignSelf, GapSize, FlexConfig, GridConfig as LuGridConfig, StackConfig } from "./layout-utils";
 export { flex, applyFlex, hStack, vStack, gridLayout, applyGrid, applyStack, parseAspectRatio, applyAspectRatio, createAspectContainer, spacing, insertDivider, createAppLayout, createSidebarLayout, createCenteredLayout } from "./layout-utils";
+
+// --- layout ---
+export type { LayoutMode, SidebarPosition, LayoutRegion, LayoutOptions, LayoutInstance } from "./layout";
+export { createLayout } from "./layout";
+
+// --- lazy-image ---
+export type { LazyImageFit, LazyImageLoading, LazyImageOptions, LazyImageInstance } from "./lazy-image";
+export { createLazyImage } from "./lazy-image";
+
+// --- lazy-load-utils ---
+export type { LazyLoadState, LazyLoadTarget, LazyLoadOptions, LazyLoadInstance } from "./lazy-load-utils";
+export { createLazyLoad } from "./lazy-load-utils";
