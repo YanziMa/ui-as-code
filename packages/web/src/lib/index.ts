@@ -48440,3 +48440,46 @@ export type {
   PushApiOptions,
   PushInstance,
 } from "./push-api";
+
+// --- qr-code-generator ---
+export {
+  QRErrorCorrectionLevel as QRCGEcLevel,
+  QRRenderOutput as QRCGRenderOutput,
+  QROptions as QRCGOptions,
+  QRInstance as QRCGInstance,
+  createQR as QRCGCreate,
+} from "./qr-code-generator";
+export type {
+  QRErrorCorrectionLevel as QRCGEcLevelType,
+  QRRenderOutput as QRCGRenderOutputType,
+  QROptions as QRCGOptionsType,
+  QRInstance as QRCGInstanceType,
+} from "./qr-code-generator";
+
+// --- qr-code ---
+export {
+  QRErrorCorrectionLevel as QRCEcLevel,
+  QRRenderFormat,
+  QROptions as QRCOptions,
+  QRResult as QRCResult,
+  generateQR as QRCGenerate,
+  generateQRSVG as QRCGenerateSVG,
+} from "./qr-code";
+export type {
+  QRErrorCorrectionLevel as QRCEcLevelType,
+  QRRenderFormat,
+  QROptions as QRCOptionsType,
+  QRResult as QRCResultType,
+} from "./qr-code";
+
+// --- qrcode ---
+export {
+  QrOptions as QrcOptions,
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qrcode";
+export type {
+  QrOptions as QrcOptionsType,
+} from "./qrcode";
