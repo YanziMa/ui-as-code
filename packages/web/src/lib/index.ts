@@ -27682,3 +27682,32 @@ export {
   type DnDManagerConfig,
   type DnDMode,
 } from "./dnd";
+
+// --- notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+  type Notification,
+  type NotificationOptions,
+  type NotificationType,
+  type NotificationPosition,
+} from "./notification";
+
+// --- empty-state ---
+export {
+  EmptyStateManager,
+  createEmptyState,
+  type EmptyStateOptions,
+  type EmptyStateInstance,
+  type EmptyStateVariant,
+} from "./empty-state";
+
+// --- breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+  type BreadcrumbItem,
+} from "./breadcrumb";
