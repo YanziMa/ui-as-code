@@ -41885,3 +41885,33 @@ export type {
   SkeletonCardOptions,
   SkeletonTableOptions,
 } from "./skeleton";
+
+// --- drag-and-drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type {
+  DragMode,
+  DropPosition,
+  DragItem,
+  DragOptions,
+  DropZoneOptions,
+  DropResult,
+  SortableConfig,
+} from "./drag-and-drop";
+
+// --- resizable ---
+export { makeResizable, createSplitPane } from "./resizable";
+export type {
+  ResizeOptions,
+  ResizeState,
+  ResizableController,
+  SplitPaneOptions,
+  SplitPaneController,
+} from "./resizable";
+
+// --- sortable-list ---
+export { createSortableList } from "./sortable-list";
+export type {
+  SortableItem,
+  SortableListOptions,
+  SortableListInstance,
+} from "./sortable-list";
