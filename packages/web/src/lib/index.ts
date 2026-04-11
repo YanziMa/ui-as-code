@@ -50858,3 +50858,40 @@ export {
   type SkeletonScreenInstance as SkScr_SkeletonScreenInstance,
   createSkeletonScreen as SkScr_createSkeletonScreen,
 } from "./skeleton-screen";
+
+// --- skeleton-utils ---
+export {
+  type SkeletonVariant as SkUtl_SkeletonVariant,
+  type SkeletonSize as SkUtl_SkeletonSize,
+  type SkeletonOptions as SkUtl_SkeletonOptions,
+  type SkeletonBlockOptions as SkUtl_SkeletonBlockOptions,
+  createSkeleton as SkUtl_createSkeleton,
+  createSkeletonBlock as SkUtl_createSkeletonBlock,
+  createCardSkeleton as SkUtl_createCardSkeleton,
+  createTableSkeleton as SkUtl_createTableSkeleton,
+} from "./skeleton-utils";
+
+// --- skeleton ---
+export {
+  type SkeletonOptions as Sk_SkeletonOptions,
+  type SkeletonTextOptions as Sk_SkeletonTextOptions,
+  type SkeletonAvatarOptions as Sk_SkeletonAvatarOptions,
+  type SkeletonCardOptions as Sk_SkeletonCardOptions,
+  type SkeletonTableOptions as Sk_SkeletonTableOptions,
+  createSkeleton as Sk_createSkeleton,
+  createTextSkeleton as Sk_createTextSkeleton,
+  createHeadingSkeleton as Sk_createHeadingSkeleton,
+  createAvatarSkeleton as Sk_createAvatarSkeleton,
+  createCardSkeleton as Sk_createCardSkeleton,
+  createTableSkeleton as Sk_createTableSkeleton,
+  wrapWithSkeleton as Sk_wrapWithSkeleton,
+} from "./skeleton";
+
+// --- slider-input-utils ---
+export {
+  type SliderOrientation as SldInpUtl_SliderOrientation,
+  type SliderTrackStyle as SldInpUtl_SliderTrackStyle,
+  type SliderOptions as SldInpUtl_SliderOptions,
+  type SliderInstance as SldInpUtl_SliderInstance,
+  createSlider as SldInpUtl_createSlider,
+} from "./slider-input-utils";
