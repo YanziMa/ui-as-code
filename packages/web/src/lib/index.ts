@@ -46631,3 +46631,12 @@ export { getBreakpoints as mdGetBreakpoints, getCurrentBreakpoint as mdGetCurren
 // --- mediator ---
 export type { RequestHandler, Middleware, MediatorContext, HandlerRegistration, MediatorOptions, MediatorStats } from "./mediator";
 export { Mediator, createMediator } from "./mediator";
+// --- mention-autocomplete ---
+export type { MentionItem as MaMentionItem, MentionAutocompleteOptions as MaMentionAutocompleteOptions, MentionAutocompleteInstance as MaMentionAutocompleteInstance } from "./mention-autocomplete";
+export { createMentionAutocomplete as maCreateMentionAutocomplete } from "./mention-autocomplete";
+// --- mention-input ---
+export type { MentionUser as MiMentionUser, MentionOptions as MiMentionOptions, MentionInputInstance as MiMentionInputInstance } from "./mention-input";
+export { createMentionInput as miCreateMentionInput } from "./mention-input";
+// --- mention ---
+export type { MentionOption, MentionOptions as MntOptions, MentionInstance as MntInstance } from "./mention";
+export { MentionManager, createMention } from "./mention";
