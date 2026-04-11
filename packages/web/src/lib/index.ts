@@ -25350,3 +25350,34 @@ export {
   addDotBadge,
   addCountBadge,
 } from "./badge";
+
+// --- tooltip ---
+export {
+  TooltipPlacement,
+  TooltipTrigger,
+  type TooltipOptions,
+  type TooltipInstance,
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+
+// --- popover ---
+export {
+  PopoverTrigger,
+  PopoverPlacement,
+  type PopoverOptions,
+  type PopoverInstance,
+  PopoverManager,
+  createPopover,
+} from "./popover";
+
+// --- dropdown-menu ---
+export {
+  MenuItemType,
+  type MenuItem,
+  type DropdownMenuOptions,
+  type DropdownMenuInstance,
+  DropdownMenuManager,
+  createDropdownMenu,
+} from "./dropdown-menu";
