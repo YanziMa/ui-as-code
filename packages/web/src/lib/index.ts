@@ -42577,3 +42577,32 @@ export {
   type AccordionOptions,
   type AccordionInstance,
 } from "./accordion";
+// --- accordion-list ---
+export {
+  createAccordionList,
+  type AccordionItem as AccordionListItem,
+  type AccordionListOptions,
+  type AccordionListInstance,
+  type AccordionMode as AccordionModeList,
+  type ExpandIcon,
+} from "./accordion-list";
+
+// --- accordion-lite ---
+export {
+  createAccordion as createAccordionLite,
+  type AccordionItem as AccordionLiteItem,
+  type AccordionOptions as AccordionLiteOptions,
+  type AccordionInstance as AccordionLiteInstance,
+  type AccordionVariant,
+  type AccordionSize as AccordionLiteSize,
+} from "./accordion-lite";
+
+// --- accordion-manager ---
+export {
+  createAccordion as createAccordionManager,
+  type AccordionPanel,
+  type AccordionOptions as AccordionManagerOptions,
+  type AccordionInstance as AccordionManagerInstance,
+  type AccordionMode as AccordionManagerMode,
+  type ExpandDirection,
+} from "./accordion-manager";
