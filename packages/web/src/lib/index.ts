@@ -37215,3 +37215,27 @@ export type { ProgressBarOptions, CircularProgressOptions, StepProgressOptions, 
 // --- rating-utils ---
 export { createRating } from "./rating-utils";
 export type { RatingOptions, RatingInstance, RatingIconType } from "./rating-utils";
+
+// --- chart-utils ---
+export {
+  calculateAxisScale,
+  formatAxisLabel,
+  valueToPixel,
+  pixelToValue,
+  aggregateByInterval,
+  movingAverage,
+  calculatePercentChanges,
+  findExtrema,
+  generateChartColors,
+  interpolateColor,
+  getDataStats,
+} from "./chart-utils";
+export type { DataPoint, DataSeries, ChartConfig, AxisScale, DataStats, ColorPaletteName } from "./chart-utils";
+
+// --- markdown-utils ---
+export { parseMarkdown, renderMarkdown, extractHeadings, generateToc, extractCodeBlocks, extractNamedBlock } from "./markdown-utils";
+export type { MarkdownOptions, HeadingInfo } from "./markdown-utils";
+
+// --- code-utils ---
+export { createCodeBlock, createDiffView, detectLanguage } from "./code-utils";
+export type { CodeBlockOptions, DiffOptions, Language } from "./code-utils";
