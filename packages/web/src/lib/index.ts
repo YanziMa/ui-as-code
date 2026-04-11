@@ -51019,3 +51019,10 @@ export { type SparklineType as Sprkln_SparklineType, type SparklineOptions as Sp
 export { type BarStyle, type GradientType, type SpectrumAnalyzerOptions, type SpectrumInstance, createSpectrumAnalyzer } from "./spectrum-analyzer";
 // --- speech-recognition ---
 export { type RecognitionResult, type RecognitionOptions, type SpeechRecognitionInstance, SpeechRecognitionManager, createSpeechRecognition, recognizeOnce } from "./speech-recognition";
+
+// --- speech-synthesis ---
+export { type VoiceInfo as SpchSyn_VoiceInfo, type SpeechOptions as SpchSyn_SpeechOptions, type SpeechManagerInstance, SpeechSynthesisManager, createSpeechSynthesisManager, speak } from "./speech-synthesis";
+// --- speech-utils ---
+export { type VoiceInfo as SpchUtl_VoiceInfo, type SpeechOptions as SpchUtl_SpeechOptions, type RecognitionOptions as SpchUtl_RecognitionOptions, type PronunciationScore, type VoiceActivityConfig, TextToSpeech, SpeechRecognizer, type SsmlNode, parseSsml, ssmlToSpeechCommands, speakSsml, scorePronunciation, VoiceActivityDetector, AudioRecorder } from "./speech-utils";
+// --- spin ---
+export { type SpinType, type SpinSize, type SpinOptions, type SpinInstance, SpinManager, createSpin } from "./spin";
