@@ -37167,3 +37167,15 @@ export type {
   NotificationInstance,
   NotificationManagerConfig,
 } from "./notification-utils";
+
+// --- modal-utils ---
+export { createModal, createFocusTrap } from "./modal-utils";
+export type { ModalOptions, ModalInstance, ModalSize, FocusTrapConfig } from "./modal-utils";
+
+// --- tooltip-utils ---
+export { createTooltip } from "./tooltip-utils";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip-utils";
+
+// --- dropdown-utils ---
+export { createDropdown } from "./dropdown-utils";
+export type { DropdownItem, DropdownOptions, DropdownInstance } from "./dropdown-utils";
