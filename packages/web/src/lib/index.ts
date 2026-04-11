@@ -30098,3 +30098,43 @@ export type { Breakpoints } from "./css-in-js";
 // --- html-sanitizer ---
 export { sanitizeHtml, sanitize, stripHtml, escapeHtmlEntities, scanForXss } from "./html-sanitizer";
 export type { SanitizeOptions, SanitizeLevel } from "./html-sanitizer";
+
+// --- password-strength ---
+export { createPasswordStrength } from "./password-strength";
+export type { StrengthScore, StrengthLevel, PasswordStrengthOptions, PasswordStrengthInstance } from "./password-strength";
+
+// --- mask-input ---
+export {
+  createInputMask,
+  applyMask,
+  dateMask,
+  phoneMask,
+  creditCardMask,
+  currencyMask,
+  timeMask,
+} from "./mask-input";
+export type { MaskConfig, MaskInstance } from "./mask-input";
+
+// --- formatting ---
+export {
+  formatNumber,
+  formatCurrency,
+  formatPercent,
+  compactNumber,
+  formatDate,
+  formatTime,
+  formatRelativeTime,
+  formatISO,
+  formatDateTime,
+  formatFileSize,
+  formatBitSize,
+  formatDuration,
+  pluralize,
+  ordinal,
+  bytesForHuman,
+  parseSizeString,
+  maskString,
+  maskEmail,
+  maskPhone,
+} from "./formatting";
+export type { RelativeTimeStyle } from "./formatting";
