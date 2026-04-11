@@ -24927,3 +24927,15 @@ export { TimelineManager, createTimeline } from "./timeline";
 // --- Gantt Chart ---
 export type { GanttTask, GanttChartOptions, GanttChartInstance } from "./gantt-chart";
 export { createGanttChart } from "./gantt-chart";
+
+// --- Calendar ---
+export type { CalendarView, WeekStartDay, CalendarEvent, CalendarOptions, CalendarInstance } from "./calendar";
+export { CalendarManager, createCalendar } from "./calendar";
+
+// --- Scheduler ---
+export type { ScheduledJob, JobStatus, CronExpression } from "./scheduler";
+export { Scheduler, parseCronExpression, cronMatches, getNextCronRun } from "./scheduler";
+
+// --- Color Palette ---
+export type { PaletteScheme, ColorShade, PaletteColor, ColorPalette, ColorPaletteOptions, ColorPaletteInstance } from "./color-palette";
+export { contrastRatio, ColorPaletteManager, createColorPalette } from "./color-palette";
