@@ -34451,3 +34451,14 @@ export type { TimePickerOptions, TimePickerInstance, TimeValue, TimeFormat, Time
 // --- datetime-utils ---
 export { formatDate, parseDate, getRelativeTime, addDate, subDate, diffDates, isSameDay, isToday, isBetween, startOfDay, endOfDay, startOfWeek, startOfMonth, endOfMonth, daysInMonth, isLeapYear, getWeekNumber, getQuarter, msToDuration, formatDuration, formatTimeElapsed, formatTime, formatTime12h, generateCalendarMonth, getDayName, getMonthName } from "./datetime-utils";
 export type { Duration, DateUnit, DateFormatOptions } from "./datetime-utils";
+// --- tooltip-utils ---
+export { createTooltip } from "./tooltip-utils";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip-utils";
+
+// --- popover-tooltip-utils ---
+export { createPopoverTooltip } from "./popover-tooltip-utils";
+export type { PopoverTooltipOptions, PopoverTooltipInstance, PopoverTooltipContent, PopoverTooltipPlacement, PopoverTooltipTrigger } from "./popover-tooltip-utils";
+
+// --- hover-card-utils ---
+export { createHoverCard } from "./hover-card-utils";
+export type { HoverCardOptions, HoverCardInstance, HoverCardContent, HoverCardAvatar, HoverCardMeta, HoverCardAction, HoverCardSide, HoverCardAnimation } from "./hover-card-utils";
