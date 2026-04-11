@@ -28873,3 +28873,15 @@ export type { LabelConfig, FloatingLabelOptions, CharacterCounterOptions } from 
 // --- validation-feedback ---
 export { createValidationFeedback, showError, showSuccess } from "./validation-feedback";
 export type { ValidationSeverity, ValidationResult, ValidationFeedbackOptions, ValidationFeedbackInstance } from "./validation-feedback";
+
+// --- css-modules-helper ---
+export { createCssModules, scopeClassName, unscopeClassName } from "./css-modules-helper";
+export type { CssModuleClassMap, CssModulesOptions, CssModulesInstance } from "./css-modules-helper";
+
+// --- style-injection ---
+export { createStyleInjection, injectStyles, injectStylesheet, ejectStyles } from "./style-injection";
+export type { InjectedStyle, StyleInjectionOptions, StyleInjectionInstance } from "./style-injection";
+
+// --- css-custom-properties ---
+export { createCssCustomProperties, getCssVar, setCssVar, getAllCssVars } from "./css-custom-properties";
+export type { CssVarDefinition, CssVarAnimationOptions, CssCustomPropertiesOptions, CssCustomPropertiesInstance } from "./css-custom-properties";
