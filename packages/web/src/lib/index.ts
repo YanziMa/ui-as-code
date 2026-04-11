@@ -32431,3 +32431,42 @@ export {
   type SearchHighlightOptions,
   type SearchHighlightInstance,
 } from "./search-highlight";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+  type Locale,
+} from "./i18n";
+
+// --- theme ---
+export {
+  ThemeManager,
+  getThemeManager,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+  useTheme,
+  type ThemeColors,
+  type ThemeConfig,
+} from "./theme";
+
+// --- store ---
+export {
+  Store,
+  createStore,
+  createComputed,
+  persistMiddleware,
+  connectDevTools,
+  registerStore,
+  getStore,
+  unregisterStore,
+  type StoreApi,
+  type StoreOptions,
+  type PersistOptions,
+  type Listener,
+  type Selector,
+  type Middleware,
+} from "./store";
