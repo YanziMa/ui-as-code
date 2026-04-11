@@ -46732,3 +46732,15 @@ export { trackMouse, trackMouseState, setupClicks, setupHoverDetection, createMo
 // --- mutation-observer-utils.ts ---
 export type { MutationFilter as MutObsFilter, MutationAction as MutObsAction, MutationRecordEx, ChangeSummary as MutObsSummary, MutationObserverOptions as MutObsOpts, MutationObserverInstance as MutObsInst } from "./mutation-observer-utils";
 export { createEnhancedMutationObserver } from "./mutation-observer-utils";
+
+// --- mutation-observer.ts ---
+export type { MutationFilter as MObsFilter, MutationChange as MObsChange, MutationObserverOptions as MObsOpts, MutationObserverInstance as MObsInst } from "./mutation-observer";
+export { DOMMutationObserver, observeMutations, waitForElement as waitForElementMO } from "./mutation-observer";
+
+// --- mutation.ts ---
+export type { MutationFilter as MutFilter, SimplifiedMutationRecord, MutationObserverOptions as MutOpts, MutationObserverInstance as MutInst } from "./mutation";
+export { MutationWatcher, createMutationObserver, waitForElement as waitForElementMut, waitForRemoval } from "./mutation";
+
+// --- navbar-utils.ts ---
+export type { NavbarStyle, NavbarSize, NavItem, UserMenuConfig, SearchConfig, NavbarOptions, NavbarInstance } from "./navbar-utils";
+export { createNavbar } from "./navbar-utils";
