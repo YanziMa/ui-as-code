@@ -23171,3 +23171,62 @@ export {
   urlsEqual,
   type ParsedUrl,
 } from "./url-utils";
+
+// --- storage-utils ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+  type StorageBackend,
+  type StorageEntry,
+  type StorageOptions,
+  type StorageStats,
+  type StorageMigration,
+} from "./storage-utils";
+
+// --- event-bus ---
+export {
+  EventBus,
+  createEventBus,
+  type EventCallback,
+  type EventMiddleware,
+  type Subscription,
+  type EmittedEvent,
+  type EventBusOptions,
+} from "./event-bus";
+
+// --- state-machine ---
+export {
+  FSM,
+  HSM,
+  createMachine,
+  interpret,
+  match,
+  stateEquals,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+  type StateId,
+  type EventId,
+  type MachineContext,
+  type EventPayload,
+  type GuardFn,
+  type ActionFn,
+  type StateListener,
+  type InvalidEventStrategy,
+  type TransitionTarget,
+  type TransitionDef,
+  type StateConfig,
+  type HistoryMode,
+  type MachineConfig,
+  type ChoiceConfig,
+  type JunctionConfig,
+  type StateValue,
+  type TransitionHistoryEntry,
+  type Service,
+  type Machine,
+  type StateConfigAlias,
+  type TransitionAlias,
+} from "./state-machine";
