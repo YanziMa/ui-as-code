@@ -50290,3 +50290,94 @@ export {
   type SearchHighlightOptions,
   type SearchHighlightInstance,
 } from "./search-highlight";
+
+// --- search-input ---
+export type {
+  SearchInputOptions as SrchInp_Options,
+  SearchInputInstance as SrchInp_Instance,
+  SuggestionItem as SrchInp_SuggestionItem,
+  SearchHistoryItem as SrchInp_HistoryItem,
+  SearchResult as SrchInp_SearchResult,
+} from "./search-input";
+export { createSearchInput as createSrchInp } from "./search-input";
+
+// --- search ---
+export type {
+  SearchIndex as Srch_Index,
+  SearchMatch as Srch_Match,
+  SearchOptions as Srch_Options,
+} from "./search";
+export {
+  searchText,
+  searchArray,
+  highlightMatches as highlightSrchMatches,
+  SearchIndex as SrchIndexClass,
+} from "./search";
+
+// --- security-utils ---
+export type {
+  SanitizeHtmlOptions as Sec_SanitizeHtmlOptions,
+  CsrfTokenConfig as Sec_CsrfTokenConfig,
+  CsrfTokenPair as Sec_CsrfTokenPair,
+  CspDirective as Sec_CspDirective,
+  CspHeaderConfig as Sec_CspHeaderConfig,
+  CspViolationReport as Sec_CspViolationReport,
+  InputValidationResult as Sec_InputValidationResult,
+  SessionData as Sec_SessionData,
+  SessionValidationResult as Sec_SessionValidationResult,
+  SecurityScoreBreakdown as Sec_SecurityScoreBreakdown,
+  PasswordAssessment as Sec_PasswordAssessment,
+  PasswordPolicyConfig as Sec_PasswordPolicyConfig,
+  AuditLogEntry as Sec_AuditLogEntry,
+  AuditLogFilter as Sec_AuditLogFilter,
+  AuditLogSummary as Sec_AuditLogSummary,
+} from "./security-utils";
+export {
+  sanitizeHtml as secSanitizeHtml,
+  escapeHtml as secEscapeHtml,
+  escapeJsString as secEscapeJsString,
+  isSafeUrl as secIsSafeUrl,
+  generateCsrfToken as secGenerateCsrfToken,
+  validateCsrfToken as secValidateCsrfToken,
+  generateDoubleSubmitCookie as secGenerateDoubleSubmitCookie,
+  validateOrigin as secValidateOrigin,
+  buildCspHeader as secBuildCspHeader,
+  parseCspHeader as secParseCspHeader,
+  generateCspNonce as secGenerateCspNonce,
+  formatCspViolationReport as secFormatCspViolationReport,
+  reportCspViolation as secReportCspViolation,
+  validateInput as secValidateInput,
+  detectSqlInjection as secDetectSqlInjection,
+  detectCommandInjection as secDetectCommandInjection,
+  detectPathTraversal as secDetectPathTraversal,
+  detectLdapInjection as secDetectLdapInjection,
+  buildHstsHeader as secBuildHstsHeader,
+  buildXFrameOptionsHeader as secBuildXFrameOptionsHeader,
+  buildXContentTypeOptionsHeader as secBuildXContentTypeOptionsHeader,
+  buildReferrerPolicyHeader as secBuildReferrerPolicyHeader,
+  buildPermissionsPolicyHeader as secBuildPermissionsPolicyHeader,
+  buildCoopHeader as secBuildCoopHeader,
+  buildCoepHeader as secBuildCoepHeader,
+  buildCorpHeader as secBuildCorpHeader,
+  createSession as secCreateSession,
+  validateSession as secValidateSession,
+  destroySession as secDestroySession,
+  detectConcurrentSessions as secDetectConcurrentSessions,
+  configureSecureCookie as secConfigureSecureCookie,
+  applyFrameBusting as secApplyFrameBusting,
+  isFramed as secIsFramed,
+  detectUiRedressing as secDetectUiRedressing,
+  generateFrameAncestorsDirective as secGenerateFrameAncestorsDirective,
+  calculateSecurityScore as secCalculateSecurityScore,
+  assessPassword as secAssessPassword,
+  generateSecurePassword as secGenerateSecurePassword,
+  checkPasswordBreach as secCheckPasswordBreach,
+  logSecurityEvent as secLogSecurityEvent,
+  getAuditLog as secGetAuditLog,
+  exportAuditLog as secExportAuditLog,
+  sendAuditLog as secSendAuditLog,
+  getAuditLogSummary as secGetAuditLogSummary,
+  clearAuditLog as secClearAuditLog,
+  generateSecureId as secGenerateSecureId,
+  simpleHash as secSimpleHash,
+} from "./security-utils";
