@@ -31628,3 +31628,33 @@ export type {
   FileUploadInstance,
   UploadFile,
 } from "./file-upload";
+
+// --- Batch 1062: Notification, Stepper, Form Builder ---
+
+export { NotificationManager, getNotificationManager, toast } from "./notification";
+export type {
+  NotificationOptions,
+  Notification,
+  NotificationType,
+  NotificationPosition,
+} from "./notification";
+
+export { StepperManager, createStepper } from "./stepper";
+export type {
+  StepperOptions,
+  StepperInstance,
+  StepConfig,
+  StepStatus,
+} from "./stepper";
+
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type {
+  FormSchema,
+  FormField,
+  FormSection,
+  FormState,
+  FieldError,
+  FieldValidation,
+  FieldType,
+  SelectOption as FormSelectOption,
+} from "./form-builder";
