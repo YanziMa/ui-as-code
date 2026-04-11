@@ -42091,3 +42091,10 @@ export { createChip, createChipGroup } from "./chip.js";
 export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, ChipSize, ChipVariant } from "./chip.js";
 export { createList } from "./list.js";
 export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list.js";
+// --- Batch 1340: Alert Dialog, Sheet, Popover Component ---
+export { createAlertDialog, alert, confirm, prompt } from "./alert-dialog.js";
+export type { AlertDialogOptions, AlertDialogInstance, DialogType, DialogSize } from "./alert-dialog.js";
+export { createSheet } from "./sheet.js";
+export type { SheetOptions, SheetInstance, SheetSnapPoint } from "./sheet.js";
+export { createPopover } from "./popover-component.js";
+export type { PopoverOptions, PopoverInstance, PopoverPlacement, PopoverTrigger } from "./popover-component.js";
