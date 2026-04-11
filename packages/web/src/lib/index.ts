@@ -24113,3 +24113,15 @@ export type { TooltipPlacement, TooltipTrigger, TooltipOptions, TooltipInstance 
 // --- popover ---
 export { PopoverManager, createPopover } from "./popover";
 export type { PopoverTrigger, PopoverPlacement, PopoverOptions, PopoverInstance } from "./popover";
+
+// --- modal ---
+export { createModal } from "./modal";
+export type { ModalSize, ModalPosition, ModalOptions, ModalInstance } from "./modal";
+
+// --- dialog ---
+export { createDialog, alertDialog, confirmDialog, dangerDialog } from "./dialog";
+export type { DialogVariant, DialogOptions, DialogInstance } from "./dialog";
+
+// --- alert ---
+export { AlertManager, createAlert } from "./alert";
+export type { AlertVariant, AlertSize, AlertAction, AlertOptions, AlertInstance } from "./alert";
