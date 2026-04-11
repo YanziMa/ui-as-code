@@ -26724,3 +26724,14 @@ export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem, ContextM
 // sheet-manager.ts
 export { SheetManager, createSheetManager } from "./sheet-manager";
 export type { SheetOptions, SheetInstance, SheetAction, SheetSize, SheetSnapPoint } from "./sheet-manager";
+// skeleton.ts
+export { createSkeleton, createTextSkeleton, createHeadingSkeleton, createAvatarSkeleton, createCardSkeleton, createTableSkeleton, wrapWithSkeleton } from "./skeleton";
+export type { SkeletonOptions, SkeletonTextOptions, SkeletonAvatarOptions, SkeletonCardOptions, SkeletonTableOptions } from "./skeleton";
+
+// spinner.ts
+export { createSpinner, miniSpinner, fullPageSpinner } from "./spinner";
+export type { SpinnerOptions, SpinnerVariant, SpinnerSize } from "./spinner";
+
+// progress.ts
+export { createProgressTracker, createMultiProgressTracker, createStepProgress, formatProgress } from "./progress";
+export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
