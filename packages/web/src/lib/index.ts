@@ -21158,3 +21158,38 @@ export type {
 export {
   createStatCard,
 } from "./stat-card";
+
+// --- Accordion ---
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+export {
+  createAccordion,
+} from "./accordion";
+
+// --- Tabs ---
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+export {
+  createTabs,
+} from "./tabs";
+
+// --- Tooltip ---
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
+export {
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
