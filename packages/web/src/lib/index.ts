@@ -20024,3 +20024,35 @@ export type {
   InfiniteScrollOptions,
   InfiniteScrollState,
 } from "./infinite-scroll";
+export {
+  SelectionManager,
+  createSelectionManager,
+} from "./selection";
+export type {
+  SelectionRange,
+  CaretPosition,
+  SelectionManagerOptions,
+  SelectionManagerInstance,
+} from "./selection";
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+} from "./collapse";
+export type {
+  CollapseSize,
+  CollapseVariant,
+  CollapseOptions,
+  CollapseInstance,
+  CollapseGroupOptions,
+  CollapseGroupInstance,
+} from "./collapse";
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+} from "./breadcrumb";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
