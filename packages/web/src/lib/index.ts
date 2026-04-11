@@ -49727,3 +49727,38 @@ export type {
 } from "./richtext";
 export { sanitizeHTML, stripHTML, extractStructuredText } from "./richtext";
 export { createRichTextEditor as createRichTextEditorV3 } from "./richtext";
+
+// --- ripple-utils.ts ---
+export type {
+  RippleColor as RplUColor,
+  RippleStrategy as RplUStrategy,
+  RippleOptions as RplUOpts,
+  RippleInstance as RplUInst,
+} from "./ripple-utils";
+export { createRipple as createRippleAdvanced } from "./ripple-utils";
+
+// --- ripple.ts ---
+export type {
+  RippleOptions as RplOpts,
+  RippleInstance as RplInst,
+} from "./ripple";
+export { createRipple, initRipples } from "./ripple";
+
+// --- robot.ts ---
+export type {
+  RobotOptions as RobotOpts,
+  StepResult,
+} from "./robot";
+export {
+  pressKey,
+  typeText,
+  click as robotClick,
+  hover as robotHover,
+  drag,
+  fillForm,
+  runSequence,
+  getA11yTree,
+  getInteractiveElements,
+  takeSnapshot,
+  compareSnapshots,
+} from "./robot";
