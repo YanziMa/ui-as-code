@@ -27331,3 +27331,15 @@ export type { SliderOptions, SliderInstance, SliderMark } from "./slider.js";
 // --- file-upload ---
 export { createFileUpload, FileUploadManager } from "./file-upload.js";
 export type { FileUploadOptions, FileUploadInstance, UploadFile } from "./file-upload.js";
+
+// --- calendar ---
+export { createCalendar, CalendarManager } from "./calendar.js";
+export type { CalendarOptions, CalendarInstance, CalendarEvent, CalendarView, WeekStartDay } from "./calendar.js";
+
+// --- data-table ---
+export { createDataTable, DataTableManager } from "./data-table.js";
+export type { DataTableOptions, DataTableInstance, Column, SortState, FilterState, SortDirection } from "./data-table.js";
+
+// --- virtual-list ---
+export { createVirtualList } from "./virtual-list.js";
+export type { VirtualListOptions, VirtualListInstance, VirtualListItem } from "./virtual-list.js";
