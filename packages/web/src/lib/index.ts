@@ -46182,3 +46182,15 @@ export { createLazyImage } from "./lazy-image";
 // --- lazy-load-utils ---
 export type { LazyLoadState, LazyLoadTarget, LazyLoadOptions, LazyLoadInstance } from "./lazy-load-utils";
 export { createLazyLoad } from "./lazy-load-utils";
+
+// --- lazy-load ---
+export type { LazyLoadOptions as LlLazyLoadOptions, LazyLoadInstance as LlLazyLoadInstance } from "./lazy-load";
+export { createLazyLoad as createLazyLoadLl, initBatchLazy, BatchLazyOptions } from "./lazy-load";
+
+// --- led-matrix ---
+export type { LEDColor, LEDMatrixOptions, LEDMatrixInstance } from "./led-matrix";
+export { createLEDMatrix } from "./led-matrix";
+
+// --- lifecycle-manager ---
+export type { ManagedInstance, LifecycleManagerConfig, LifecycleManager } from "./lifecycle-manager";
+export { createLifecycleManager } from "./lifecycle-manager";
