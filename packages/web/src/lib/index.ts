@@ -43461,3 +43461,38 @@ export {
   type CircuitBreakerInstance,
   type QuotaOptions,
 } from "./limits";
+
+// --- loader ---
+export {
+  createLoader,
+  showPageLoader,
+  type LoaderOptions,
+  type LoaderInstance,
+  type LoaderVariant,
+  type LoaderSize,
+} from "./loader";
+
+// --- merge ---
+export {
+  deepMerge as mergeDeep,
+  immutableMerge,
+  mergeMany,
+  trackedMerge,
+  selectiveMerge,
+  type MergeOptions,
+  type ArrayMergeStrategy,
+  type ConflictResolution,
+  type MergeResult,
+} from "./merge";
+
+// --- message ---
+export {
+  createMessageQueue,
+  type MessageOptions,
+  type MessageInstance,
+  type MessageAction,
+  type MessageType,
+  type MessagePosition,
+  type MessageQueueConfig,
+  type MessageQueue,
+} from "./message";
