@@ -31184,3 +31184,51 @@ export type {
   ErrorLogEntry,
   RecoveryAction,
 } from "./error-handler";
+// --- Theme ---
+export { ThemeManager, getThemeManager, useTheme, LIGHT_THEME, DARK_THEME, BUILT_IN_THEMES } from "./theme";
+export type { ThemeColors, ThemeConfig } from "./theme";
+
+// --- CSS-in-JS ---
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar as cssSetVar,
+  getCssVar as cssGetVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  mq,
+  mediaQueries,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations as cssAnimations,
+  animate as cssAnimate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type { Breakpoints, KeyframeRule } from "./css-in-js";
+
+// --- Animation ---
+export { EASING, DURATION, KEYFRAMES, animateValue, springAnimate, cssKeyframes, transition } from "./animation";
+export type { EasingName, SpringConfig } from "./animation";
