@@ -39724,3 +39724,10 @@ export { createAlert } from "./alert-utils";
 export type { AlertOptions, AlertInstance } from "./alert-utils";
 export { createToastManager, showToast, getToastManager, destroyToastManager } from "./toast-utils";
 export type { ToastOptions, ToastManagerConfig, ToastManagerInstance } from "./toast-utils";
+// --- Batch 1244: Notification, Command Palette, Split View ---
+export { NotificationManager } from "./notification-utils";
+export type { NotificationOptions, NotificationInstance, NotificationManagerConfig, NotificationType, NotificationPosition } from "./notification-utils";
+export { createCommandPalette } from "./command-palette-utils";
+export type { CommandPaletteOptions, CommandPaletteInstance, PaletteItem } from "./command-palette-utils";
+export { createSplitView } from "./split-view-utils";
+export type { SplitViewOptions, SplitViewInstance, SplitPaneConfig, SplitDirection, SplitCollapseMode } from "./split-view-utils";
