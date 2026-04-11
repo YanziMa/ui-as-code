@@ -27367,3 +27367,15 @@ export type { MentionAutocompleteOptions, MentionAutocompleteInstance, MentionIt
 // --- rich-text-editor ---
 export { createRichTextEditor } from "./rich-text-editor.js";
 export type { RichTextEditorOptions, RichTextEditorInstance, EditorCommand, ToolbarButton } from "./rich-text-editor.js";
+
+// --- code-highlight ---
+export { highlightCode } from "./code-highlight.js";
+export type { HighlightOptions, HighlightResult, SupportedLang } from "./code-highlight.js";
+
+// --- image-gallery ---
+export { createImageGallery, ImageGalleryManager } from "./image-gallery.js";
+export type { ImageGalleryOptions, ImageGalleryInstance, GalleryImage } from "./image-gallery.js";
+
+// --- tour ---
+export { createTour } from "./tour.js";
+export type { TourOptions, TourInstance, TourStep } from "./tour.js";
