@@ -24101,3 +24101,15 @@ export type { StrengthLevel, StrengthScore, PasswordStrengthOptions, PasswordStr
 // --- file-upload ---
 export { FileUploadManager, createFileUpload } from "./file-upload";
 export type { FileUploadOptions, UploadFile, FileUploadInstance } from "./file-upload";
+
+// --- context-menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuItem, ContextMenuPosition, ContextMenuOptions, ContextMenuInstance } from "./context-menu";
+
+// --- tooltip ---
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipPlacement, TooltipTrigger, TooltipOptions, TooltipInstance } from "./tooltip";
+
+// --- popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverTrigger, PopoverPlacement, PopoverOptions, PopoverInstance } from "./popover";
