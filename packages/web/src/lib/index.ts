@@ -49202,3 +49202,64 @@ export {
   watchThrottled as RUtWatchThrottled,
   withHistory as RUtWithHistory,
 } from "./reactive-utils";
+// --- reactive (class-based primitives) ---
+export type {
+  EqualityFn as RReaEqualityFn,
+  EffectCleanup as RReaEffectCleanup,
+  EffectFn as RReaEffectFn,
+  ReactiveNode as RReaNode,
+  SignalOptions as RReaSignalOptions,
+  EffectOptions as RReaEffectOptions,
+} from "./reactive";
+export {
+  Signal as RReaSignal,
+  Computed as RReaComputed,
+  Effect as RReaEffect,
+  signal as RReaCreateSignal,
+  computed as RReaCreateComputed,
+  effect as RReaCreateEffect,
+  batch as RReaBatch,
+  untrack as RReaUntrack,
+  readonly as RReaReadonly,
+  deepSignal as RReaDeepSignal,
+  derived as RReaDerived,
+  combine as RReaCombine,
+} from "./reactive";
+
+// --- reading-progress ---
+export type {
+  ProgressColor as RProgColor,
+  ProgressSize as RProgSize,
+  ProgressPosition as RProgPosition,
+  ReadingProgressOptions as RProgOptions,
+  ReadingProgressInstance as RProgInstance,
+} from "./reading-progress";
+export { createReadingProgress as RProgCreate } from "./reading-progress";
+
+// --- realtime-collab ---
+export type {
+  UserId as RTCUserId,
+  CursorPosition as RTCCursorPos,
+  PresenceInfo as RTCPresenceInfo,
+  OperationType as RTCOpType,
+  OtOperation as RTCOtOperation,
+  TransformResult as RTCTransformResult,
+  SyncMessageType as RTCSyncMsgType,
+  SyncMessage as RTCSyncMessage,
+  VectorClock as RTCVectorClock,
+  ConflictStrategy as RTCConflictStrategy,
+  ConflictInfo as RTCConflictInfo,
+  Resolution as RTCResolution,
+  UserActivity as RTCUserActivity,
+} from "./realtime-collab";
+export {
+  generateOpId as RTCGenerateOpId,
+  CrdtDocument,
+  transform as RTCTransform,
+  compose as RTCCompose,
+  PresenceManager,
+  CollaborativeUndoManager,
+  createSyncMessage as RTCCreateSyncMsg,
+  resolveConflict as RTCResolveConflict,
+  ActivityTracker,
+} from "./realtime-collab";
