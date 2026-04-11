@@ -32160,3 +32160,15 @@ export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
 // --- terminal ---
 export { createTerminal } from "./terminal";
 export type { TerminalOptions, TerminalInstance, TerminalLine, TerminalTheme, TerminalCommand } from "./terminal";
+
+// --- markdown-preview ---
+export { createMarkdownPreview } from "./markdown-preview";
+export type { MarkdownOptions, MarkdownInstance, MarkdownHeading } from "./markdown-preview";
+
+// --- diff-viewer ---
+export { computeDiff, toUnifiedDiff, applyPatch, renderInlineDiffHtml, renderSideBySideDiffHtml, wordDiff, renderWordDiffHtml, getDiffStyles, textSimilarity, formatDiffStats } from "./diff-viewer";
+export type { DiffResult, DiffChunk, FileDiff } from "./diff-viewer";
+
+// --- log-viewer ---
+export { createLogViewer } from "./log-viewer";
+export type { LogViewerOptions, LogViewerInstance, LogEntry, LogLevel } from "./log-viewer";
