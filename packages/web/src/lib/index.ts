@@ -50737,3 +50737,43 @@ export {
   createStore as SigStore_createStore,
   createCounterStore as SigStore_createCounterStore,
 } from "./signal-store";
+
+// --- signal ---
+export {
+  type Signal as Sig_Signal,
+  type ComputedSignal as Sig_ComputedSignal,
+  type EffectOptions as Sig_EffectOptions,
+  type SignalArray as Sig_SignalArray,
+  signal as sig_signal,
+  readonlySignal as sig_readonlySignal,
+  computed as sig_computed,
+  effect as sig_effect,
+  batch as sig_batch,
+  isBatching as sig_isBatching,
+  signalArray as sig_signalArray,
+  toggleSignal as sig_toggleSignal,
+  counterSignal as sig_counterSignal,
+  debouncedSignal as sig_debouncedSignal,
+  throttledSignal as sig_throttledSignal,
+} from "./signal";
+
+// --- signature-pad-utils ---
+export {
+  type PenColor as SigPadUtl_PenColor,
+  type PenWidth as SigPadUtl_PenWidth,
+  type StrokePoint as SigPadUtl_StrokePoint,
+  type SignatureStroke as SigPadUtl_SignatureStroke,
+  type SignaturePadOptions as SigPadUtl_SignaturePadOptions,
+  type SignaturePadInstance as SigPadUtl_SignaturePadInstance,
+  createSignaturePad as SigPadUtl_createSignaturePad,
+} from "./signature-pad-utils";
+
+// --- signature-pad ---
+export {
+  type StrokePoint as SigPad_StrokePoint,
+  type Stroke as SigPad_Stroke,
+  type SignaturePadOptions as SigPad_SignaturePadOptions,
+  type SignaturePadInstance as SigPad_SignaturePadInstance,
+  SignaturePadManager as SigPad_SignaturePadManager,
+  createSignaturePad as SigPad_createSignaturePad,
+} from "./signature-pad";
