@@ -46640,3 +46640,12 @@ export { createMentionInput as miCreateMentionInput } from "./mention-input";
 // --- mention ---
 export type { MentionOption, MentionOptions as MntOptions, MentionInstance as MntInstance } from "./mention";
 export { MentionManager, createMention } from "./mention";
+// --- mentionable ---
+export type { MentionItem as MnbMentionItem, MentionSearchFn as MnbMentionSearchFn, MentionableOptions as MnbMentionableOptions, MentionableInstance as MnbMentionableInstance } from "./mentionable";
+export { createMentionable as mnbCreateMentionable } from "./mentionable";
+// --- mentions ---
+export type { MentionItem as MnsMentionItem, MentionTrigger as MnsMentionTrigger, MentionMode as MnsMentionMode, MentionsOptions as MnsMentionsOptions, MentionsInstance as MnsMentionsInstance } from "./mentions";
+export { MentionsManager as MnsManager, createMentions as mnsCreateMentions } from "./mentions";
+// --- menu-bar ---
+export type { MenuBarItem as MbarItem, MenuBarOptions as MbarOptions, MenuBarInstance as MbarInstance } from "./menu-bar";
+export { MenuBarManager as MbarManager, createMenuBar as mbarCreateMenuBar } from "./menu-bar";
