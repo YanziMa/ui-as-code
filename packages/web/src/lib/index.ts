@@ -38100,3 +38100,57 @@ export {
   PhysicsWorld, ParticleEmitter,
 } from "./physics-utils";
 export type { Vector2, BodyState, Force, CollisionPair, PhysicsWorldOptions, ParticleEmitterConfig } from "./physics-utils";
+// --- Observer Utilities ---
+export {
+  Observable,
+  Computed,
+  watch,
+  batch,
+  reactive,
+  combineLatest,
+  mergeObservables,
+} from "./observer-utils";
+export type {
+  Subscriber,
+  Unsubscriber,
+  EqualityFn,
+  ObservableOptions,
+  ComputedOptions,
+  WatchOptions,
+} from "./observer-utils";
+
+// --- State Machine Utilities ---
+export {
+  createStateMachine,
+  createHierarchicalStateMachine,
+  validateConfig,
+  generateMermaidDiagram,
+} from "./state-machine-utils";
+export type {
+  StateId as SmStateId,
+  EventId as SmEventId,
+  GuardFn,
+  ActionFn,
+  TransitionDefinition,
+  StateDefinition,
+  StateMachineConfig,
+  StateMachineInstance,
+} from "./state-machine-utils";
+
+// --- FSM Utilities ---
+export {
+  createFsm,
+  createToggleFsm,
+  createRequestFsm,
+  createCountdownFsm,
+  createLatchFsm,
+  createDebounceFsm,
+} from "./fsm-utils";
+export type {
+  StateId as FsmStateId,
+  EventId as FsmEventId,
+  FsmTransition,
+  FsmState,
+  FsmConfig,
+  FsmInstance,
+} from "./fsm-utils";
