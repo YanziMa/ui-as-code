@@ -28618,3 +28618,15 @@ export {
   type PaginationOptions,
   type PaginationInstance,
 } from "./pagination";
+
+// --- Breadcrumb ---
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
+
+// --- Stepper ---
+export { StepperManager, createStepper } from "./stepper";
+export type { StepConfig, StepperOptions, StepperInstance, StepStatus } from "./stepper";
+
+// --- Timeline ---
+export { TimelineManager, createTimeline } from "./timeline";
+export type { TimelineItem, TimelineOptions, TimelineInstance, TimelineItemStatus } from "./timeline";
