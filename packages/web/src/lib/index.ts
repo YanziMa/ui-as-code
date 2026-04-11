@@ -46552,3 +46552,12 @@ export { createMarkdownPreview } from "./markdown-preview";
 // --- markdown-processor ---
 export type { MdNodeType, MdNode, TocEntry as MdrTocEntry, FrontMatter, ParseOptions as MdrParseOptions, RenderOptions as MdrRenderOptions, MdExtension } from "./markdown-processor";
 export { parse as parseMd, render as renderMd, extractText as mdrExtractText, extractFrontMatter, generateTableOfContents } from "./markdown-processor";
+// --- markdown-renderer ---
+export type { MdRenderOptions as MdnRenderOptions, MdRendererInstance as MdnRendererInstance, TocEntry as MdnTocEntry } from "./markdown-renderer";
+export { createMarkdownRenderer } from "./markdown-renderer";
+// --- markdown-to-html ---
+export type { MdToHtmlOptions as MthOptions, MdToken as MthToken, ConvertResult as MthConvertResult } from "./markdown-to-html";
+export { mdToHtml as mthMdToHtml, quickMd, stripMarkdown as mthStripMarkdown, extractToc as mthExtractToc } from "./markdown-to-html";
+// --- markdown-utils ---
+export type { MarkdownOptions as MuOptions, HeadingInfo as MuHeadingInfo } from "./markdown-utils";
+export { parseMarkdown as muParseMarkdown, renderMarkdown, extractHeadings, generateToc as muGenerateToc, extractCodeBlocks, extractNamedBlock } from "./markdown-utils";
