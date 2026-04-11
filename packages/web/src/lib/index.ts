@@ -31758,3 +31758,28 @@ export type {
   FormatCommand,
   ToolbarButton,
 } from "./rich-text";
+
+// --- Batch 1067: Tour, Empty State, Stats Card ---
+
+export { createTour } from "./tour";
+export type {
+  TourOptions,
+  TourInstance,
+  TourStep,
+} from "./tour";
+
+export { EmptyStateManager, createEmptyState } from "./empty-state";
+export type {
+  EmptyStateOptions,
+  EmptyStateInstance,
+  EmptyStateVariant,
+} from "./empty-state";
+
+export { StatsCardManager, createStatsCard } from "./stats-card";
+export type {
+  StatsCardOptions,
+  StatsCardInstance,
+  TrendDirection,
+  StatsVariant,
+  SparklinePoint,
+} from "./stats-card";
