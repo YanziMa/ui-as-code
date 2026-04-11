@@ -44206,3 +44206,37 @@ export type {
   SliderInstance as BaseSliderInstance,
 } from "./slider";
 export { SliderManager, createSlider } from "./slider";
+// --- smooth-scroll-utils ---
+export type {
+  EasingFn as SsUtilsEasingFn,
+  EasingName as SsUtilsEasingName,
+  ScrollToOptions,
+  ParallaxLayer,
+  ParallaxOptions,
+  ParallaxInstance,
+  SmoothScrollOptions as AdvancedSmoothScrollOptions,
+  SmoothScrollInstance as AdvancedSmoothScrollInstance,
+} from "./smooth-scroll-utils";
+export { createSmoothScroll } from "./smooth-scroll-utils";
+
+// --- smooth-scroll ---
+export type {
+  EasingFn as BaseEasingFn,
+  SmoothScrollOptions as BaseSmoothScrollOptions,
+  SmoothScrollInstance as BaseSmoothScrollInstance,
+} from "./smooth-scroll";
+export { easings, SmoothScroller, createSmoothScroller, scrollToTop, scrollToBottom, scrollToY, scrollToElementCenter } from "./smooth-scroll";
+
+// --- snackbar ---
+export type {
+  SnackbarSeverity,
+  SnackbarOptions,
+  SnackbarInstance,
+} from "./snackbar";
+export {
+  createSnackbar,
+  showSnackbar,
+  snackbarSuccess,
+  snackbarError,
+  snackbarWarning,
+} from "./snackbar";
