@@ -31456,3 +31456,15 @@ export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } f
 // --- Tree View ---
 export { TreeView } from "./tree-view";
 export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
+
+// --- Data Table ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type { Column, SortDirection, SortState, FilterState, DataTableOptions, DataTableInstance } from "./data-table";
+
+// --- Tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } from "./tabs";
+
+// --- Accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion";
