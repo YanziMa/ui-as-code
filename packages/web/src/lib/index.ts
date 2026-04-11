@@ -20743,3 +20743,37 @@ export {
   createChip,
   createChipGroup,
 } from "./chip";
+
+// --- Rating ---
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+
+// --- Split Button ---
+export type {
+  SplitButtonSize,
+  SplitButtonVariant,
+  SplitButtonItem,
+  SplitButtonOptions,
+  SplitButtonInstance,
+} from "./splitter";
+export {
+  createSplitButton,
+} from "./splitter";
+
+// --- Context Menu ---
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+export {
+  ContextMenuManager,
+} from "./context-menu";
