@@ -25704,3 +25704,56 @@ export {
   cubicBezier, cubicBezierFromOpts, steps,
   getEasing, toCSS, getCSSEasingMap
 } from "./easing";
+
+// --- CSS Variables ---
+export {
+  createCssVars,
+  parseCssValue,
+  pxToRem,
+  remToPx,
+  resolveCssVarChain,
+} from "./css-variables";
+export type { CssVarOptions, CssVarInstance } from "./css-variables";
+
+// --- Theme Engine ---
+export {
+  ThemeEngine,
+  getThemeEngine,
+  setTheme,
+  toggleTheme,
+  getCurrentTheme,
+  isDarkMode,
+} from "./theme-engine";
+export type {
+  ThemeMode,
+  DesignToken,
+  TokenCategory,
+  ThemeDefinition,
+  ThemeEngineOptions,
+} from "./theme-engine";
+
+// --- Color System ---
+export {
+  rgbToHex,
+  hexToRgb,
+  hslToRgb,
+  rgbToHsl,
+  hsvToRgb,
+  rgbToHsv,
+  hslToHsv,
+  hsvToHsl,
+  calcLuminance,
+  contrastRatio,
+  meetsWcagAA,
+  meetsWcagAAA,
+  suggestTextColor,
+  kelvinToRgb,
+  rgbToKelvin,
+  generatePalette,
+  generateHarmony,
+  blendColors,
+  parseColor,
+  randomColor,
+  NAMED_COLORS,
+} from "./color-system";
+export type { RgbColor, HslColor, HsvColor, BlendMode, HarmonyType } from "./color-system";
