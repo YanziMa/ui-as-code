@@ -33991,3 +33991,47 @@ export {
   filterEntries,
   invert,
 } from "./data-transform-utils";
+
+// --- theme-utils ---
+export {
+  ThemeManager,
+  generateDesignTokens,
+  generateDarkTokens,
+  createLightDarkTheme,
+  getSystemColorScheme,
+  onSystemColorSchemeChange,
+  prefersReducedMotion,
+  prefersHighContrast,
+  prefersLightColor,
+  type ThemeMode,
+  type DesignToken,
+  type ThemeDefinition,
+  type ThemeManagerConfig,
+} from "./theme-utils";
+
+// --- i18n-provider-utils ---
+export {
+  I18nProvider,
+  type TranslationEntry,
+  type LocaleData,
+  type I18nConfig,
+} from "./i18n-provider-utils";
+
+// --- locale-detection-utils ---
+export {
+  parseLocaleTag,
+  buildLocaleTag,
+  LOCALE_DB,
+  RTL_LANGUAGES,
+  detectBrowserLocale,
+  detectBrowserLocales,
+  negotiateLocale,
+  getBestLocale,
+  isRTLLocale,
+  getLocaleInfo,
+  getLanguageCode,
+  guessTerritory,
+  detectScript,
+  type LocaleInfo,
+  type LocaleMatchResult,
+} from "./locale-detection-utils";
