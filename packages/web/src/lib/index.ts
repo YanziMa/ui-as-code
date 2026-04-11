@@ -27920,3 +27920,13 @@ export type { NotificationType, NotificationPriority, NotificationItem, Notifica
 // --- Overlay Manager ---
 export { OverlayManager } from "./overlay-manager";
 export type { OverlayId, OverlayRole, OverlayOptions, OverlayInstance } from "./overlay-manager";
+// --- Selection Utils ---
+export { getSelection, setSelection, clearSelection, getSelectedText, getCaretPosition, setCaretPosition, moveCaret, getCaretCoordinates, makeContentEditable, insertAtCaret, insertHtmlAtCaret, wrapSelection, unwrapSelection, highlightRange, removeHighlights, highlightAll, selectAll, selectBetween, createSelectionDetector } from "./selection-utils";
+
+// --- Undo/Redo ---
+export { UndoHistory } from "./undo-redo";
+export type { UndoItem, UndoBranch, UndoHistoryOptions, UndoState, UndoChangeListener } from "./undo-redo";
+
+// --- Shortcuts Guide ---
+export { createShortcutsGuide, createShortcutHint } from "./shortcuts-guide";
+export type { ShortcutItem, ShortcutCategory, ShortcutsGuideOptions, ShortcutsGuideInstance } from "./shortcuts-guide";
