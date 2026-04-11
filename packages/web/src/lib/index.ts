@@ -39881,3 +39881,35 @@ export {
   type ChipSize,
   type ChipColor,
 } from "./chip-utils";
+// --- Tag Utilities ---
+export {
+  createTag,
+  createTagInput,
+  createTagCloud,
+  type TagOptions,
+  type TagInputOptions,
+  type TagInputInstance,
+  type TagCloudOptions,
+  type TagVariant,
+  type TagSize,
+  type TagShape,
+} from "./tag-utils";
+
+// --- Label Utilities ---
+export {
+  // (re-exported from label-utils.ts — pre-written)
+} from "./label-utils";
+
+// --- Badge Utilities ---
+export {
+  createBasicBadge,
+  createNotificationBadge,
+  createProgressBadge,
+  createVerificationBadge,
+  createMilestoneBadge,
+  type BaseBadgeOptions,
+  type NotificationBadgeOptions,
+  type ProgressBadgeOptions,
+  type VerificationBadgeOptions,
+  type MilestoneBadgeOptions,
+} from "./badge-utils";
