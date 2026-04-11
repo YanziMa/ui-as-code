@@ -46720,3 +46720,15 @@ export { createMotion, createSpringMotion, injectKeyframes, PRESET_KEYFRAMES, an
 // --- mouse-gestures.ts ---
 export type { Direction as MGestureDir, GestureType, Point as MGesturePoint, GestureEvent, GestureOptions as MGestureOpts, SwipeOptions } from "./mouse-gestures";
 export { GestureRecognizer, createSwipeDetector, getDirection as gestureDirection, distance as gestureDistance, midpoint as gestureMidpoint, angleBetween as gestureAngle } from "./mouse-gestures";
+
+// --- mouse-utils.ts ---
+export type { Point as MUtilPoint, MousePosition as MUtilMousePos, ClickOutsideOptions as MUtilClickOutsideOpts, DragOptions as MUtilDragOpts, DragInstance as MUtilDragInst, LongPressOptions as MUtilLongPressOpts, ScrollDirectionInfo } from "./mouse-utils";
+export { getPointerPosition, createPositionTracker, onClickOutside, makeDraggable, onLongPress, trackScrollDirection, requestPointerLock, exitPointerLock, isPointerLocked, pointDistance as mUtilDist, pointAngle as mUtilAngle, pointInRect as mUtilInRect } from "./mouse-utils";
+
+// --- mouse.ts ---
+export type { MousePosition as MousePos, MouseState, ClickOptions as MouseClickOpts, HoverOptions as MouseHoverOpts, TrailOptions as MouseTrailOpts } from "./mouse";
+export { trackMouse, trackMouseState, setupClicks, setupHoverDetection, createMouseTrail, extractPositionFromEvent, isInsideElement, getElementAtPosition, isMouseDown, mouseDistance } from "./mouse";
+
+// --- mutation-observer-utils.ts ---
+export type { MutationFilter as MutObsFilter, MutationAction as MutObsAction, MutationRecordEx, ChangeSummary as MutObsSummary, MutationObserverOptions as MutObsOpts, MutationObserverInstance as MutObsInst } from "./mutation-observer-utils";
+export { createEnhancedMutationObserver } from "./mutation-observer-utils";
