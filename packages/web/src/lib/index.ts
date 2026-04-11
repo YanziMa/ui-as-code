@@ -41378,3 +41378,15 @@ export { createTooltip } from "./tooltip-utils";
 // --- modal-utils ---
 export type { ModalSize, ModalOptions, ModalInstance, FocusTrapConfig } from "./modal-utils";
 export { createModal, createFocusTrap as modalFocusTrap } from "./modal-utils";
+
+// --- tree-utils ---
+export type { TreeNode, TreeSelectionMode, TreeCheckboxMode, TreeExpandMode, TreeOptions, TreeInstance } from "./tree-utils";
+export { createTree } from "./tree-utils";
+
+// --- table-utils ---
+export type { TableSize, TableVariant, TableColumn, TableRow, TableOptions, TableInstance } from "./table-utils";
+export { createTable } from "./table-utils";
+
+// --- tab-utils ---
+export type { TabOrientation, TabActivation, TabItem, TabOptions, TabInstance } from "./tab-utils";
+export { createTabs } from "./tab-utils";
