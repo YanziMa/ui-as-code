@@ -28155,3 +28155,15 @@ export type { TypeaheadOptions, TypeaheadInstance, TypeaheadItem } from "./typea
 // --- Color Picker Advanced ---
 export { createColorPicker } from "./color-picker-advanced";
 export type { ColorPickerOptions, ColorPickerInstance, ColorMode, PickerPlacement, RgbColor, HslColor, HsvColor, ColorSwatch } from "./color-picker-advanced";
+
+// --- Date Picker ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
+
+// --- Rich Text Editor ---
+export { createRichTextEditor } from "./rich-text-editor";
+export type { RichTextEditorOptions, RichTextEditorInstance, EditorCommand, ToolbarButton } from "./rich-text-editor";
+
+// --- File Upload ---
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type { FileUploadOptions, FileUploadInstance, UploadFile } from "./file-upload";
