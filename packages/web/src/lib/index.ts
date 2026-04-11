@@ -44128,3 +44128,14 @@ export type { Point as RegionPoint, Rect as RegionRect, RegionPickerOptions, Reg
 // --- relative-time ---
 export { getRelativeTime, formatRelativeTime, formatShort, formatNumeric, createAutoUpdatingTime, timeAgo, timeInFuture, formatDuration } from "./relative-time";
 export type { RelativeTimeOptions, RelativeTimeResult, TimeUnit } from "./relative-time";
+// --- remotion ---
+export { Timeline, createTimeline, simulateSpring, sequence, parallel, easings as remotionEasings, interpolate, interpolateKeyframes } from "./remotion";
+export type { EasingFn as RemotionEasingFn, Keyframe, TimelineOptions, SpringConfig } from "./remotion";
+
+// --- renderer ---
+export { renderTemplate, renderIf, renderList, createFragment, createElementBatch, diffChildren, RenderPipeline, pipelineStages } from "./renderer";
+export type { RenderNode, RenderContext } from "./renderer";
+
+// --- request ---
+export { HttpClient, http } from "./request";
+export type { RequestOptions, Response as RequestResponse, RequestError, InterceptorContext, RequestInterceptor, ResponseInterceptor, ErrorInterceptor } from "./request";
