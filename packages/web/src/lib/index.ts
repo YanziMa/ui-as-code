@@ -29284,3 +29284,15 @@ export { createBadge, createDotBadge, createStatusBadge } from "./badge-manager.
 // --- Chip Input (Batch 974) ---
 export type { ChipData, ChipSuggestion, ChipInputOptions, ChipInputInstance } from "./chip-input.js";
 export { ChipInputManager, createChipInput } from "./chip-input.js";
+
+// --- Notify Banner (Batch 975) ---
+export type { NotifyBannerType, NotifyBannerSize, NotifyBannerOptions, NotifyBannerInstance } from "./notify-banner.js";
+export { createNotifyBanner } from "./notify-banner.js";
+
+// --- Countdown Timer (Batch 975) ---
+export type { CountdownDisplayMode, CountdownUnit, CountdownTimerOptions, CountdownTimerInstance } from "./countdown-timer.js";
+export { createCountdownTimer } from "./countdown-timer.js";
+
+// --- File Dropzone (Batch 975) ---
+export type { DropZoneState, DropZoneVariant, FileValidationRule, DropZoneOptions, DropZoneInstance } from "./file-dropzone.js";
+export { createDropZone } from "./file-dropzone.js";
