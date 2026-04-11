@@ -46780,3 +46780,44 @@ export { createNotificationBell } from "./notification-bell";
 // --- notification-card.ts ---
 export type { NotificationPriority as NotifCardPriority, NotificationType as NotifCardType, NotificationAction as NotifCardAction, NotificationCardOptions as NotifCardOpts, NotificationCardInstance as NotifCardInst } from "./notification-card";
 export { createNotificationCard } from "./notification-card";
+
+// --- notification-center-utils ---
+export {
+  NotificationType as NCUType,
+  NotificationPriority as NCUPriority,
+  NotificationItem as NCUItem,
+  NotificationCenterOptions as NCUOpts,
+  NotificationCenterInstance as NCUInst,
+  createNotificationCenter as createNCUtilsCenter,
+} from "./notification-center-utils";
+
+// --- notification-center ---
+export {
+  NotificationType as NCTType,
+  NotificationItem as NCTItem,
+  NotificationCenterOptions as NCTOpts,
+  NotificationCenterInstance as NCTInst,
+  NotificationCenterManager,
+  createNotificationCenter as createNCTCenter,
+} from "./notification-center";
+
+// --- notification-channels ---
+export type {
+  ChannelType,
+  NotificationPriority as NChPriority,
+  NotificationPayload,
+  DeliveryResult,
+  SendResult,
+  ChannelConfig,
+  UserPreferences,
+  NotificationTemplate,
+  NotificationStats,
+} from "./notification-channels";
+export {
+  NotificationManager,
+  ChannelRateLimiter,
+  TemplateEngine,
+  ChannelProvider,
+  createNotificationManager,
+  createSaaSNotifier,
+} from "./notification-channels";
