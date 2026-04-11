@@ -39499,3 +39499,52 @@ export type {
   SkeletonOptions,
   SkeletonBlockOptions,
 } from "./skeleton-utils";
+// --- Batch 1235: Form, Input, Select ---
+export {
+  createForm,
+  serializeForm,
+  populateForm,
+  clearForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  linkErrorToField,
+  unlinkErrorFromField,
+  createFormAnnouncer,
+} from "./form-utils";
+export type {
+  FormFieldConfig,
+  FormValidationRule,
+  FormFieldState,
+  FormOptions,
+  FormInstance,
+  StepConfig,
+  MultiStepFormOptions,
+  MultiStepFormInstance,
+  ConditionRule,
+  ConditionalField,
+} from "./form-utils";
+
+export {
+  createInput,
+  createSearchInput,
+  createPasswordInput,
+  createNumberInput,
+} from "./input-utils";
+export type {
+  InputOptions,
+  InputInstance,
+  SearchInputOptions,
+  SearchInputInstance,
+  PasswordInputOptions,
+  PasswordInputInstance,
+  NumberInputOptions,
+  NumberInputInstance,
+} from "./input-utils";
+
+export { createSelect } from "./select-utils";
+export type {
+  SelectOption,
+  SelectGroup,
+  SelectOptions,
+  SelectInstance,
+} from "./select-utils";
