@@ -29593,3 +29593,14 @@ export type { HeatmapOptions, HeatmapInstance, HeatmapDataPoint, HeatmapColorSch
 // --- timeline ---
 export { createTimeline, TimelineManager } from "./timeline";
 export type { TimelineOptions, TimelineInstance, TimelineItem, TimelineItemStatus } from "./timeline";
+// --- kanban-board ---
+export { createKanbanBoard } from "./kanban-board";
+export type { KanbanBoardOptions, KanbanBoardInstance, KanbanCard, KanbanColumn } from "./kanban-board";
+
+// --- gantt-chart ---
+export { createGanttChart } from "./gantt-chart";
+export type { GanttChartOptions, GanttChartInstance, GanttTask } from "./gantt-chart";
+
+// --- mind-map ---
+export { createMindMap } from "./mind-map";
+export type { MindMapOptions, MindMapInstance, MindMapNode } from "./mind-map";
