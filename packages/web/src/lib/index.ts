@@ -40278,3 +40278,29 @@ export {
   type SliderOrientation,
   type SliderTrackStyle,
 } from "./slider-input-utils";
+// --- Signature Pad ---
+export {
+  createSignaturePad,
+  type SignaturePadOptions,
+  type SignaturePadInstance,
+  type SignatureStroke,
+  type StrokePoint,
+  type PenColor,
+  type PenWidth,
+} from "./signature-pad-utils";
+
+// --- Cropper ---
+export {
+  createCropper,
+  type CropperOptions,
+  type CropperInstance,
+  type CropRect,
+  type CropAspectRatio,
+} from "./cropper-utils";
+
+// --- Avatar Crop ---
+export {
+  createAvatarCrop,
+  type AvatarCropOptions,
+  type AvatarCropInstance,
+} from "./avatar-crop-utils";
