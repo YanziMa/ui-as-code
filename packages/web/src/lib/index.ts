@@ -27355,3 +27355,15 @@ export type { FormSchema, FormField, FormSection, FormState, FieldError, FieldVa
 // --- time-picker ---
 export { createTimePicker } from "./time-picker.js";
 export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker.js";
+
+// --- command-palette ---
+export { CommandPalette } from "./command-palette.js";
+export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette.js";
+
+// --- mention-autocomplete ---
+export { createMentionAutocomplete } from "./mention-autocomplete.js";
+export type { MentionAutocompleteOptions, MentionAutocompleteInstance, MentionItem } from "./mention-autocomplete.js";
+
+// --- rich-text-editor ---
+export { createRichTextEditor } from "./rich-text-editor.js";
+export type { RichTextEditorOptions, RichTextEditorInstance, EditorCommand, ToolbarButton } from "./rich-text-editor.js";
