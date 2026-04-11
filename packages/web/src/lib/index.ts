@@ -48999,3 +48999,50 @@ export {
   perfMeasure as RPPerfMeasure,
   perfClearMarks as RPPerfClearMarks,
 } from "./react-perf-utils";
+// --- react-promise.ts ---
+export {
+  type PromiseStatus as RPPromiseStatus,
+  type PromiseState as RPPromiseState,
+  type PromiseOptions as RPPromiseOptions,
+  type RetryOptions as RPRetryOptions,
+  PromiseTracker as RPPromiseTracker,
+  createPromiseTracker as RPCreateTracker,
+  retryWithBackoff as RPRetryWithBackoff,
+  createCancellable as RPCreateCancellable,
+  withTimeout as RPWithTimeout,
+  createLatestResolver as RPCreateLatestResolver,
+  sequence as RPSequence,
+  parallelLimit as RPParallelLimit,
+  maybePromise as RPMaybePromise,
+} from "./react-promise";
+
+// --- react-resize-observer.ts ---
+export {
+  type SizeInfo as RROSizeInfo,
+  type Breakpoint as RROBreakpoint,
+  type ResizeObserverOptions as RROptions,
+  createSizeObserver as ROCreateSizeObserver,
+  createBreakpointMatcher as ROCreateBreakpointMatcher,
+  DEFAULT_BREAKPOINTS as RODefaultBreakpoints,
+  CONTAINER_BREAKPOINTS as ROContainerBreakpoints,
+  createDimensionTracker as ROCreateDimensionTracker,
+  isResizeObserverAvailable as ROIsAvailable,
+  getViewportSize as ROGetViewportSize,
+} from "./react-resize-observer";
+
+// --- react-router-utils.ts ---
+export {
+  type RouteDef as RRRouteDef,
+  type ParsedRoute as RRParsedRoute,
+  type BreadcrumbItem as RRBreadcrumbItem,
+  matchPath as RRMatchPath,
+  matchRoutes as RRMatchRoutes,
+  parseQuery as RRParseQuery,
+  stringifyQuery as RRStringifyQuery,
+  setQueryParam as RRSetQueryParam,
+  createNavigationGuard as RRCreateNavGuard,
+  generateBreadcrumbs as RRGenerateBreadcrumbs,
+  isActiveRoute as RRIsActiveRoute,
+  joinPaths as RRJoinPaths,
+  resolvePath as RRResolvePath,
+} from "./react-router-utils";
