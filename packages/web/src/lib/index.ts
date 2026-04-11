@@ -34332,3 +34332,36 @@ export {
   type SpinnerOptions,
   type SpinnerInstance,
 } from "./spinner-utils";
+
+// --- progress-utils ---
+export {
+  createProgressBar,
+  updateProgressBar,
+  createCircularProgress,
+  createStepProgress,
+  type ProgressBarVariant,
+  type ProgressBarSize,
+  type ProgressBarOptions,
+  type CircularProgressOptions,
+  type StepProgressOptions,
+} from "./progress-utils";
+
+// --- rating-utils ---
+export {
+  createRating,
+  type RatingIconType,
+  type RatingOptions,
+  type RatingInstance,
+} from "./rating-utils";
+
+// --- toggle-utils ---
+export {
+  createToggleSwitch,
+  createSegmentedControl,
+  createToggleButtonGroup,
+  type ToggleSize,
+  type ToggleVariant,
+  type ToggleSwitchOptions,
+  type SegmentedControlOptions,
+  type ToggleButtonGroupOptions,
+} from "./toggle-utils";
