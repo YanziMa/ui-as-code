@@ -28298,3 +28298,15 @@ export type { SpringConfig, SpringOptions, SpringInstance, ChainableSpring } fro
 // --- Tween Engine ---
 export { createTween, tweenAll, tweenSequence, fadeIn, fadeOut, slideIn } from "./tween-engine";
 export type { TweenProps, TweenInstance, Tweenable, TweenValue, TweenProp } from "./tween-engine";
+
+// --- Drag and Drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type { DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig, DragMode, DropPosition } from "./drag-and-drop";
+
+// --- Sortable ---
+export { SortableList, createSortable } from "./sortable";
+export type { SortableOptions, SortableInstance, SortableItem } from "./sortable";
+
+// --- Resize Handle ---
+export { createResizeHandle, makeResizable } from "./resize-handle";
+export type { ResizeHandleOptions, ResizeInstance, ResizeState, HandlePosition } from "./resize-handle";
