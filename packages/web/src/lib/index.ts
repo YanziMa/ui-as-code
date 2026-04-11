@@ -42106,3 +42106,7 @@ export { createEmptyPlaceholder, type EmptyPlaceholderOptions, type EmptyInstanc
 export { TooltipManager, tooltip, getTooltipManager, type TooltipOptions, type TooltipInstance, type TooltipPlacement, type TooltipTrigger } from "./tooltip";
 export { DropdownMenuManager, createDropdownMenu, type DropdownMenuOptions, type DropdownMenuInstance, type MenuItem, type MenuItemType } from "./dropdown-menu";
 export { BreadcrumbManager, createBreadcrumb, type BreadcrumbOptions, type BreadcrumbInstance, type BreadcrumbItem } from "./breadcrumb";
+// --- Batch 1343: Pagination, Tabs, Accordion ---
+export { PaginationManager, createPagination, type PaginationOptions, type PaginationInstance } from "./pagination";
+export { TabsManager, createTabs, type TabsOptions, type TabsInstance, type TabItem, type TabOrientation, type TabVariant } from "./tabs";
+export { AccordionManager, createAccordion, type AccordionOptions, type AccordionInstance, type AccordionItem, type AccordionMode } from "./accordion";
