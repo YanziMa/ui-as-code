@@ -42056,3 +42056,10 @@ export { createRating } from "./rating.js";
 export type { RatingOptions, RatingInstance, StarIconType } from "./rating.js";
 export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker.js";
 export type { RgbColor, HslColor, Palette } from "./color-picker.js";
+// --- Batch 1335: Date Picker, File Upload, Tag Input ---
+export { createDatePicker } from "./date-picker.js";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker.js";
+export { createFileUpload } from "./file-upload.js";
+export type { FileUploadOptions, FileUploadInstance, FileUploadItem } from "./file-upload.js";
+export { createTagInput } from "./tag-input.js";
+export type { TagInputOptions, TagInputInstance, TagItem } from "./tag-input.js";
