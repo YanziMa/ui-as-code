@@ -19840,3 +19840,36 @@ export type {
   ScrollerState,
   ScrollToOptions,
 } from "./virtual-scroller";
+export {
+  DragDropManager,
+  getDragDropManager,
+} from "./drag-and-drop";
+export type {
+  DragMode,
+  DropPosition,
+  DragItem,
+  DragOptions,
+  DropZoneOptions,
+  DropResult,
+  SortableConfig,
+} from "./drag-and-drop";
+export {
+  UndoHistory,
+} from "./undo-redo";
+export type {
+  UndoItem,
+  UndoBranch,
+  UndoHistoryOptions,
+  UndoState,
+  UndoChangeListener,
+} from "./undo-redo";
+export {
+  NotificationCenter,
+  PushNotificationManager,
+} from "./notification-system";
+export type {
+  NotificationType,
+  NotificationPriority,
+  Notification,
+  NotificationConfig,
+} from "./notification-system";
