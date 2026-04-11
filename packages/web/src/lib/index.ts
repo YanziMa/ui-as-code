@@ -29344,3 +29344,25 @@ export { createContextMenuV2 } from "./context-menu-v2.js";
 // --- Number Input (Batch 979) ---
 export type { NumberInputVariant, NumberInputOptions, NumberInputInstance } from "./number-input.js";
 export { createNumberInput } from "./number-input.js";
+// --- Batch 980: Stat Card, Timeline V2, Scoreboard ---
+export { createStatCard } from "./stat-card.js";
+export type { StatCardOptions } from "./stat-card.js";
+export { createTimelineV2 } from "./timeline-v2.js";
+export type {
+  TimelineV2Options,
+  TimelineV2Instance,
+  TimelineEvent,
+  TimelineOrientation,
+  TimelineVariant,
+  TimelineAlign,
+} from "./timeline-v2.js";
+export { createScoreboard } from "./scoreboard.js";
+export type {
+  ScoreboardOptions,
+  ScoreboardInstance,
+  TeamScore,
+  ScoreboardSport,
+  ScoreboardStatus,
+  ScoreboardVariant,
+  ScoreboardSize,
+} from "./scoreboard.js";
