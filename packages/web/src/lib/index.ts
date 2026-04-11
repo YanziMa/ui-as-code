@@ -29571,3 +29571,14 @@ export type { SpectrumAnalyzerOptions, SpectrumInstance, BarStyle, GradientType 
 // --- waveform-display ---
 export { createWaveformDisplay } from "./waveform-display";
 export type { WaveformDisplayOptions, WaveformDisplayInstance, WaveformChannel, WaveformPoint, WaveformSelection } from "./waveform-display";
+// --- analog-clock ---
+export { createAnalogClock } from "./analog-clock";
+export type { AnalogClockOptions, AnalogClockInstance, ClockStyle, HandShape } from "./analog-clock";
+
+// --- digital-clock ---
+export { createDigitalClock } from "./digital-clock";
+export type { DigitalClockOptions, DigitalClockInstance, DigitStyle, SizeVariant } from "./digital-clock";
+
+// --- countdown-timer-v2 ---
+export { createCountdownTimerV2 } from "./countdown-timer-v2";
+export type { CountdownOptions, CountdownInstance, CountdownPreset, CountdownState, CountdownSegment } from "./countdown-timer-v2";
