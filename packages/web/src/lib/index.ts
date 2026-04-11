@@ -47452,3 +47452,17 @@ export type { ModelInstance as OLModelInst, QueryOptions as OLQueryOpts, FilterC
 export type { FilterOperator as OLFilterOp, OrderByClause as OLOrderBy, RelationInclude as OLRelInc } from "./orm-lite";
 export type { MigrationOperation as OLMigOp, MigrationResult as OLMigRes } from "./orm-lite";
 export { QueryBuilder as OLQueryBuilder, Model as OLModel, OrmLiteDB, createDatabase } from "./orm-lite";
+
+// --- otp-input ---
+export type { OtpType as OTPTp, OtpMode as OTPMd, OtpInputOptions as OTPOpts, OtpInputInstance as OTPInst } from "./otp-input";
+export { createOtpInput } from "./otp-input";
+
+// --- overlay-manager-utils ---
+export type { OverlayPriority as OMUPriority, OverlayState as OMUState, OverlayEntry as OMUEntry } from "./overlay-manager-utils";
+export type { OverlayManagerOptions as OMUOpts, OverlayManagerInstance as OMUInst } from "./overlay-manager-utils";
+export { createOverlayManager as createOMUtilsMgr } from "./overlay-manager-utils";
+
+// --- overlay-manager ---
+export type { OverlayId as OMId, OverlayRole as OMRole, OverlayOptions as OMOptions, OverlayInstance as OMInstance } from "./overlay-manager";
+export type { OverlayStackEntry as OMStackEntry } from "./overlay-manager";
+export { OverlayManager } from "./overlay-manager";
