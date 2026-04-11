@@ -26779,3 +26779,14 @@ export type { TimelineOptions, TimelineInstance, TimelineItem, TimelineItemStatu
 // rating.ts
 export { RatingManager, createRating } from "./rating";
 export type { RatingOptions, RatingInstance, StarIconType } from "./rating";
+// chip.ts
+export { createChip, createChipGroup } from "./chip";
+export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, ChipSize, ChipVariant } from "./chip";
+
+// tag-input.ts
+export { TagInputManager, createTagInput } from "./tag-input";
+export type { TagInputOptions, TagInputInstance, TagItem } from "./tag-input";
+
+// switch.ts
+export { createSwitch } from "./switch";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch";
