@@ -28097,3 +28097,14 @@ export type { RatingOptions, RatingInstance, StarIconType } from "./rating";
 // --- Pagination ---
 export { PaginationManager, createPagination } from "./pagination";
 export type { PaginationOptions, PaginationInstance } from "./pagination";
+// --- Breadcrumb ---
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
+
+// --- Stepper ---
+export { StepperManager, createStepper } from "./stepper";
+export type { StepConfig, StepStatus, StepperOptions, StepperInstance } from "./stepper";
+
+// --- Timeline ---
+export { TimelineManager, createTimeline } from "./timeline";
+export type { TimelineItem, TimelineItemStatus, TimelineOptions, TimelineInstance } from "./timeline";
