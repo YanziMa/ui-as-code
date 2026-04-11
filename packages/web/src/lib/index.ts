@@ -33846,3 +33846,44 @@ export {
   type ViewportState,
   type ResizeHandleOptions,
 } from "./resize-utils";
+
+// --- virtual-scroll-utils ---
+export {
+  VirtualScroller,
+  DynamicHeightEstimator,
+  VirtualGridScroller,
+  type VirtualItem,
+  type VirtualScrollConfig,
+  type VisibleRange,
+  type ScrollToOptions,
+  type VirtualGridConfig,
+  type GridVisibleRange,
+} from "./virtual-scroll-utils";
+
+// --- infinite-list-utils ---
+export {
+  InfiniteList,
+  createSentinelLoader,
+  type FetchPageOptions,
+  type FetchResult,
+  type InfiniteListConfig,
+  type InfiniteListState,
+} from "./infinite-list-utils";
+
+// --- scroll-into-view-utils ---
+export {
+  scrollToElement,
+  animateScroll,
+  getElementVisibility,
+  getElementVisibilityInContainer,
+  ScrollProgressTracker,
+  ScrollSpy,
+  getScrollContainer,
+  scrollToTop,
+  scrollToBottom,
+  preventBodyScroll,
+  type ScrollIntoViewOptions,
+  type VisibilityResult,
+  type ScrollProgress,
+  type ScrollSpyConfig,
+} from "./scroll-into-view-utils";
