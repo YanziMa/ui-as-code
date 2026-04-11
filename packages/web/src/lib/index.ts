@@ -26361,3 +26361,47 @@ export {
   showCounters,
 } from "./console-enhance";
 export type { ConsoleGroupOptions, ConsoleFilterOptions } from "./console-enhance";
+
+// --- Network Utilities ---
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+} from "./network-utils";
+export type {
+  NetworkStatus,
+  RetryOptions,
+  RequestQueueItem,
+} from "./network-utils";
+
+// --- Fetch Wrapper ---
+export {
+  getEnhancedFetch,
+  httpGet,
+  httpPost,
+} from "./fetch-wrapper";
+export type {
+  FetchOptions,
+  FetchInterceptor,
+  CacheEntry,
+} from "./fetch-wrapper";
+
+// --- HTTP Client ---
+export {
+  HttpClient,
+  createHttpClient,
+  HttpError,
+} from "./http-client";
+export type {
+  HttpClientConfig,
+  HttpRequestOptions,
+  HttpResponse,
+  HttpMiddleware,
+} from "./http-client";
