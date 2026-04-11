@@ -40166,3 +40166,31 @@ export {
   type TourInstance,
   type TourStep,
 } from "./tour-utils";
+// --- Notification Center ---
+export {
+  createNotificationCenter,
+  type NotificationCenterOptions,
+  type NotificationCenterInstance,
+  type NotificationItem,
+  type NotificationType,
+  type NotificationPriority,
+} from "./notification-center-utils";
+
+// --- Loading Overlay ---
+export {
+  createLoadingOverlay,
+  type LoadingOverlayOptions,
+  type LoadingOverlayInstance,
+  type OverlayVariant,
+  type SpinnerType,
+} from "./loading-overlay-utils";
+
+// --- Split View ---
+export {
+  createSplitView,
+  type SplitViewOptions,
+  type SplitViewInstance,
+  type SplitDirection,
+  type SplitCollapseMode,
+  type SplitPaneConfig,
+} from "./split-view-utils";
