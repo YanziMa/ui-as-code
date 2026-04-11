@@ -18783,3 +18783,33 @@ export type {
   SelectSize,
   SelectVariant,
 } from "./select-lite";
+export {
+  createAffix,
+} from "./affix";
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  createBackTop,
+} from "./back-top";
+export type {
+  BackTopOptions,
+  BackTopInstance,
+  BackTopShape,
+  BackTopPosition,
+} from "./back-top";
+export {
+  createConfigProvider,
+  getConfig,
+  getToken,
+} from "./config-provider";
+export type {
+  ConfigProviderOptions,
+  ConfigProviderInstance,
+  DesignTokens,
+  ComponentOverrides,
+  ConfigSnapshot,
+  Direction,
+  ThemeMode,
+} from "./config-provider";
