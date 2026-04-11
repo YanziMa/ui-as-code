@@ -47986,3 +47986,24 @@ export {
 export {
   PillVariant, PillSize, PillMode, PillItem, PillsOptions, PillsInstance, createPills,
 } from "./pills-utils";
+// --- pivot-table ---
+export {
+  AggregationFn, PivotDimension, PivotMeasure, PivotValue,
+  PivotTableOptions, PivotTableInstance, createPivotTable,
+} from "./pivot-table";
+// --- platform ---
+export {
+  PlatformInfo, OSType, getPlatform, getOSType,
+  isMobile as PlatIsMobile, isTablet, isDesktop,
+  getUserLanguage, getTimezoneOffset, getTimezoneName,
+  isRTL, isStandalone, isFullscreen, requestFullscreen, exitFullscreen,
+  getScreenOrientation, onOrientationChange, getDevicePixelRatio, onPixelRatioChange,
+  getConnectionInfo, onConnectionChange, getBatteryInfo,
+} from "./platform";
+// --- plugin-system ---
+export {
+  PluginStatus, HookType, PluginPermission,
+  PluginManifest, PluginContext, HookHandler, EventHandler,
+  HookOptions, RegisteredHook, PluginInstance, PluginLogger, PluginStorage,
+  PluginLoadResult, SystemStats, parseSemver, satisfiesConstraint, PluginManager,
+} from "./plugin-system";
