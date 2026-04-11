@@ -39913,3 +39913,34 @@ export {
   type VerificationBadgeOptions,
   type MilestoneBadgeOptions,
 } from "./badge-utils";
+// --- Progress Utilities ---
+export {
+  createProgressBar,
+  updateProgressBar,
+  createCircularProgress,
+  createStepProgress,
+  type ProgressBarOptions,
+  type CircularProgressOptions,
+  type StepProgressOptions,
+  type ProgressBarVariant,
+  type ProgressBarSize,
+} from "./progress-utils";
+
+// --- Skeleton Utilities ---
+export {
+  createSkeleton,
+  createSkeletonBlock,
+  createCardSkeleton,
+  createTableSkeleton,
+  type SkeletonOptions,
+  type SkeletonBlockOptions,
+  type SkeletonVariant,
+  type SkeletonSize,
+} from "./skeleton-utils";
+
+// --- Empty State Utilities ---
+export {
+  createEmptyState,
+  type EmptyStateOptions,
+  type EmptyStateType,
+} from "./empty-state-utils";
