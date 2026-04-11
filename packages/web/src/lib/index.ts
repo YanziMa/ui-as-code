@@ -34813,3 +34813,31 @@ export type {
   DropdownOptions,
   DropdownInstance,
 } from "./dropdown-utils";
+
+// --- Batch 1147: Carousel, Timeline, Stat ---
+export {
+  createCarousel,
+  type CarouselSlide,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselTransition,
+  type CarouselNavStyle,
+} from "./carousel-utils";
+export {
+  createTimeline,
+  type TimelineNode,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineVariant,
+  type TimelineSide,
+} from "./timeline-utils";
+export {
+  createStat,
+  createStatCard,
+  createSparkline,
+  type StatOptions,
+  type StatCardOptions,
+  type StatTrend,
+  type StatSize,
+  type StatFormat,
+} from "./stat-utils";
