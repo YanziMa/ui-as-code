@@ -49762,3 +49762,62 @@ export {
   takeSnapshot,
   compareSnapshots,
 } from "./robot";
+
+// --- router-utils.ts ---
+export type {
+  RouteDefinition as RUtilRouteDef,
+  RouteMatch as RUtilRouteMatch,
+  NavigationGuard as RUtilNavGuard,
+  RouterOptions as RUtilRouterOpts,
+} from "./router-utils";
+export { SimpleRouter } from "./router-utils";
+export {
+  compileRoute,
+  matchRoute as utilMatchRoute,
+  matchRoutes as utilMatchRoutes,
+  generatePath,
+  pathMatchesGlob,
+  splitPath,
+  joinPath,
+  getParentPath,
+  normalizePath as utilNormalizePath,
+} from "./router-utils";
+
+// --- router.ts ---
+export type {
+  RouteMode,
+  RouteParams as RtrParams,
+  QueryParams,
+  RouteDefinition as RtrRouteDef,
+  RouterConfig,
+  RouteInfo,
+  NavigationResult,
+} from "./router";
+export { Router } from "./router";
+export { createRouter, getRouter } from "./router";
+
+// --- sanitizer.ts ---
+export type {
+  SanitizeHtmlOptions as SanOptsHtml,
+  SanitizeUrlOptions as SanOptsUrl,
+} from "./sanitizer";
+export {
+  escapeHtml,
+  unescapeHtml,
+  sanitizeHtml as sanitizeHtmlStrict,
+  stripHtml as stripHtmlSan,
+  containsXss,
+  sanitizeUrl,
+  isSafeUrl,
+  sanitizeCssIdentifier,
+  sanitizeFilename,
+  sanitizeSelector,
+  sanitizeRegex,
+  normalizeWhitespace,
+  normalizeUnicode,
+  cleanInput,
+  generateSafeId,
+  generateUniqueId,
+  generateSecureId,
+  buildCsp,
+} from "./sanitizer";
