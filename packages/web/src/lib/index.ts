@@ -34365,3 +34365,34 @@ export {
   type SegmentedControlOptions,
   type ToggleButtonGroupOptions,
 } from "./toggle-utils";
+
+// --- alert-utils ---
+export {
+  createAlert,
+  type AlertVariant,
+  type AlertSize,
+  type AlertOptions,
+  type AlertInstance,
+} from "./alert-utils";
+
+// --- toast-utils ---
+export {
+  createToastManager,
+  getToastManager,
+  destroyToastManager,
+  showToast,
+  type ToastPosition,
+  type ToastType,
+  type ToastOptions,
+  type ToastManagerConfig,
+  type ToastManagerInstance,
+} from "./toast-utils";
+
+// --- confirm-dialog-utils ---
+export {
+  createConfirmDialog,
+  type ConfirmDialogVariant,
+  type ConfirmButtonConfig,
+  type ConfirmDialogOptions,
+  type ConfirmDialogInstance,
+} from "./confirm-dialog-utils";
