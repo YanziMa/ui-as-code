@@ -42149,3 +42149,10 @@ export { TooltipGroupManager, createTooltipGroup } from "./tooltip-group";
 export type { TooltipGroupOptions, TooltipItemOptions, TooltipGroupInstance } from "./tooltip-group";
 export { createSplitButton } from "./splitter";
 export type { SplitButtonSize, SplitButtonVariant, SplitButtonItem, SplitButtonOptions, SplitButtonInstance } from "./splitter";
+// --- Batch 1353: Context Menu, Command Palette, Color Picker ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuItem, ContextMenuPosition, ContextMenuOptions, ContextMenuInstance } from "./context-menu";
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
