@@ -42118,3 +42118,7 @@ export { createModal, type ModalOptions, type ModalInstance, type ModalSize, typ
 export { NotificationBarManager, createNotificationBar, type NotificationBarOptions, type NotificationBarInstance, type NotificationType } from "./notification-bar";
 export { createProgressBar, createCircleProgress, type ProgressBarOptions, type CircleProgressOptions, type ProgressVariant, type ProgressSize } from "./progress-bar";
 export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge, type BadgeOptions, type StatusDotOptions, type BadgeVariant, type BadgePosition, type BadgeSize } from "./badge";
+// --- Batch 1346: Skeleton Placeholder, Infinite Scroll, Virtual List ---
+export { createSkeletonPlaceholder, skeletonLine, skeletonAvatar, skeletonImage, wrapWithSkeleton, type SkeletonPlaceholderOptions, type SkeletonPlaceholderInstance, type SkeletonShape, type SkeletonAnimation } from "./skeleton-placeholder";
+export { InfiniteScroll, type InfiniteScrollOptions, type InfiniteScrollState, type InfiniteScrollItem } from "./infinite-scroll";
+export { createVirtualList, type VirtualListOptions, type VirtualListInstance, type VirtualListItem } from "./virtual-list";
