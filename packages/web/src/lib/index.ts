@@ -36294,3 +36294,40 @@ export type {
   FilterResult,
   FilterManagerOptions,
 } from "./filter-utils.js";
+// --- sort-utils ---
+export {
+  defaultCompare,
+  naturalCompare,
+  caseInsensitiveCompare,
+  dateAwareCompare,
+  createComparator,
+  stableSort,
+  sortByRules,
+  createSortManager,
+  quickSort,
+  getSortIndicator,
+} from "./sort-utils.js";
+export type {
+  SortDirection,
+  SortRule,
+  SortState,
+  ComparatorFn,
+} from "./sort-utils.js";
+
+// --- tree-view-utils ---
+export { createTreeView } from "./tree-view-utils.js";
+export type {
+  TreeNode,
+  TreeViewOptions,
+  TreeViewInstance,
+} from "./tree-view-utils.js";
+
+// --- tabs-utils ---
+export { createTabs } from "./tabs-utils.js";
+export type {
+  TabOrientation,
+  TabActivation,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs-utils.js";
