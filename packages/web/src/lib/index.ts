@@ -45513,3 +45513,15 @@ export type { HeroOptions, HeroInstance, HeroButton as HsHeroButton, HeroLayout 
 // --- highlight-utils ---
 export { createHighlight, createSyntaxHighlight, createDiffHighlight } from "./highlight-utils";
 export type { HighlightOptions, HighlightInstance, HighlightRange, SyntaxHighlightOptions, SyntaxRule, DiffHighlightOptions } from "./highlight-utils";
+
+// --- highlight ---
+export { highlightText, highlightMulti, createHighlightManager } from "./highlight";
+export type { HighlightOptions, HighlightResult, HighlightRange as HlRange, HighlightMatchStrategy, HighlightTag, MultiHighlightOptions, HighlightManagerOptions, HighlightManagerInstance } from "./highlight";
+
+// --- histogram-chart ---
+export { createHistogramChart } from "./histogram-chart";
+export type { HistogramOptions, HistogramInstance, Bin } from "./histogram-chart";
+
+// --- history ---
+export { HistoryManager, createHistoryManager } from "./history";
+export type { HistoryManagerOptions, HistoryManagerInstance, HistoryState, NavigationGuard } from "./history";
