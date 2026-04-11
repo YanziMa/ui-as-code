@@ -38697,3 +38697,63 @@ export type {
   ClipboardHistoryEntry,
   ClipboardHistoryOptions,
 } from "./clipboard-utils";
+
+// --- crypto-utils ---
+export {
+  sha1, sha256, sha384, sha512,
+  hmacSha256, hmacSha384, hmacSha512,
+  pbkdf2DeriveKey, pbkdf2DeriveBits,
+  aesGcmEncrypt, aesGcmDecrypt,
+  generateAesKey, importAesKey, exportAesKey,
+  generateRsaKeyPair, rsaOaepEncrypt, rsaOaepDecrypt,
+  importRsaPublicKey, importRsaPrivateKey, exportRsaPublicKey, exportRsaPrivateKey,
+  generateEcdsaKeyPair, ecdsaSign, ecdsaVerify,
+  importEcdsaPublicKey, importEcdsaPrivateKey, exportEcdsaPublicKey, exportEcdsaPrivateKey,
+  generateRsaPssKeyPair, rsaPssSign, rsaPssVerify,
+  importRsaPssPublicKey, importRsaPssPrivateKey, exportRsaPssPublicKey, exportRsaPssPrivateKey,
+  generateEcdhKeyPair, ecdhDeriveKey, ecdhDeriveBits,
+  importEcdhPublicKey, importEcdhPrivateKey, exportEcdhPublicKey, exportEcdhPrivateKey,
+  importCryptoKey, exportCryptoKey, cryptoKeyFingerprint,
+  getRandomBytes, getRandomInt, getRandomUuid, randomString as cryptoRandomString,
+  utf8Encode, utf8Decode,
+  base64EncodeUrlSafe, base64DecodeUrlSafe,
+  hexEncodeBytes, hexDecodeBytes,
+  estimatePasswordStrength, generateSecurePassword,
+  generateApiKey, generateSessionId, generateToken,
+} from "./crypto-utils";
+
+// --- encoding-utils ---
+export {
+  base64Encode, base64Decode, base64UrlEncode, base64UrlDecode, base64Wrap,
+  base32Encode, base32Decode,
+  base58Encode, base58Decode,
+  hexEncode, hexDecode, isHex,
+  urlEncode, urlDecode, queryStringify, queryParse,
+  parseUrl, type ParsedURL,
+  normalizeUnicode, codePoints, isBMP, reverseUnicode,
+  htmlEncode, htmlDecode,
+  parseCSV, generateCSV,
+  decodeBuffer, encodeBuffer, uint8ToBinaryString, binaryStringToUint8,
+  decodeJWT, isJWTExpired, createUnsignedJWT,
+  type JWTPayload, type DecodedJWT,
+  formatBytes, parseBytes,
+} from "./encoding-utils";
+
+// --- string-utils ---
+export {
+  isBlank, isPresent, collapseWhitespace, stripDiacritics,
+  escapeRegex, escapeHtmlEntities, unescapeHtmlEntities,
+  toCamelCaseString, toPascalCaseString, toKebabCaseString, toSnakeCaseString,
+  capitalizeWords, smartTruncate, repeatWithSeparator, centerPad,
+  isAscii, looksLikeEmail, looksLikeUrl,
+  extractNumbers, replaceMultiple, stringToId, countOccurrences,
+  reverseWords, trimLines,
+  detectCase, slugify,
+  levenshtein, isSimilar, soundex,
+  randomString, randomHex, generateId as stringGenerateId,
+  wordCount, charFrequency, mostCommonChars, uniqueWords,
+  pluralize, singularize, acronym, abbreviate,
+  maskString, maskEmail,
+  detectIndentation, indentText,
+  simpleDiff, type DiffSegment,
+} from "./string-utils";
