@@ -18981,3 +18981,45 @@ export {
 export type {
   Breakpoints,
 } from "./css-in-js";
+export {
+  EASING,
+  animateValue,
+  springAnimate,
+  cssKeyframes,
+  KEYFRAMES,
+  DURATION,
+  transition,
+} from "./animation";
+export type {
+  EasingName,
+  SpringConfig as AnimationSpringConfig,
+} from "./animation";
+export {
+  createTransition,
+  createTransitionGroup,
+} from "./transition";
+export type {
+  TransitionOptions,
+  TransitionInstance,
+  TransitionMode,
+  TransitionGroupOptions,
+  TransitionGroupInstance,
+} from "./transition";
+export {
+  MotionValueImpl,
+  motionValue,
+  Spring as MotionSpring,
+  createSpring,
+  inertia,
+  lerp,
+  interpolate,
+  clamp,
+  mapRange,
+} from "./motion";
+export type {
+  SpringConfig as MotionSpringConfig,
+  SpringState,
+  MotionValue,
+  MotionTransitionOptions,
+  InertiaOptions,
+} from "./motion";
