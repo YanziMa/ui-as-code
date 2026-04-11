@@ -19873,3 +19873,39 @@ export type {
   Notification,
   NotificationConfig,
 } from "./notification-system";
+export {
+  ClipboardManager,
+  requestClipboardPermission,
+  requestReadPermission,
+  isClipboardApiAvailable,
+  sanitizeHtml,
+} from "./clipboard-manager";
+export type {
+  ClipboardDataType,
+  ClipboardData,
+  ClipboardPermission,
+  CopyOptions,
+  PasteOptions,
+  ClipboardHistoryEntry,
+  ClipboardConfig,
+} from "./clipboard-manager";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip-system";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip-system";
