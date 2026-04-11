@@ -28322,3 +28322,15 @@ export type { StackLayoutOptions, StackLayoutInstance, StackItem, StackAnimation
 // --- Masonry ---
 export { MasonryManager, createMasonry } from "./masonry";
 export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry";
+
+// --- Notification System ---
+export { NotificationCenter, PushNotificationManager } from "./notification-system";
+export type { Notification, NotificationConfig, NotificationType, NotificationPriority } from "./notification-system";
+
+// --- Toast Manager ---
+export { ToastManagerClass, createToastManager, getToastManager } from "./toast-manager";
+export type { ToastManagerOptions, ToastManagerInstance, Toast, ToastOptions, ToastType, ToastPosition, ToastAction } from "./toast-manager";
+
+// --- Alert Dialog ---
+export { createAlertDialog, alert, confirm as confirmDialog, prompt as promptDialog } from "./alert-dialog";
+export type { AlertDialogOptions, AlertDialogInstance, DialogType, DialogSize } from "./alert-dialog";
