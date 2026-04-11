@@ -48155,3 +48155,47 @@ export {
   createProfiler, profileFn, profileAsyncFn, withProfile,
   getMemoryUsage, measureMemory, MemoryUsageInfo,
 } from "./profiling";
+
+// --- progress-bar ---
+export {
+  ProgressBarOptions,
+  CircularProgressOptions,
+  StepProgressOptions,
+  ProgressBarInstance,
+  CircularProgressInstance,
+  StepProgressInstance,
+  createProgressBar as PBarCreateBar,
+  createCircularProgress as PBarCreateCircle,
+  createStepProgress as PBarCreateSteps,
+} from "./progress-bar";
+export type {
+  ProgressBarOptions,
+  CircularProgressOptions,
+  StepProgressOptions,
+  ProgressBarInstance,
+  CircularProgressInstance,
+  StepProgressInstance,
+} from "./progress-bar";
+
+// --- progress-indicator ---
+export {
+  ProgressBarOptions as PIProgressBarOptions,
+  CircleProgressOptions as PICircleProgressOptions,
+  createProgressBar as PICreateProgressBar,
+  createCircleProgress as PICreateCircleProgress,
+} from "./progress-indicator";
+export type {
+  ProgressBarOptions as PIProgressBarOptionsType,
+  CircleProgressOptions as PICircleProgressOptionsType,
+} from "./progress-indicator";
+
+// --- progress-ring ---
+export {
+  ProgressRingOptions,
+  ProgressRingInstance,
+  createProgressRing,
+} from "./progress-ring";
+export type {
+  ProgressRingOptions,
+  ProgressRingInstance,
+} from "./progress-ring";
