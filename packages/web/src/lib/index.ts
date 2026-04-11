@@ -36157,3 +36157,37 @@ export {
   stopPropagation,
   stopEvent,
 } from "./event-utils.js";
+// --- virtual-scroller-utils ---
+export { createVirtualScroller } from "./virtual-scroller-utils.js";
+export type {
+  VirtualItem,
+  VirtualScrollerOptions,
+  VirtualScrollerInstance,
+} from "./virtual-scroller-utils.js";
+
+// --- drag-drop-utils ---
+export {
+  createDraggable,
+  createSortable,
+} from "./drag-drop-utils.js";
+export type {
+  DragAxis,
+  DragConstraint,
+  DragData,
+  DropZoneOptions,
+  DraggableOptions,
+  SortableOptions,
+  DragEvent,
+  DraggableInstance,
+  DropZoneInstance,
+  SortableInstance,
+} from "./drag-drop-utils.js";
+
+// --- context-menu-utils ---
+export { createContextMenu } from "./context-menu-utils.js";
+export type {
+  ContextMenuItem,
+  ContextMenuContext,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu-utils.js";
