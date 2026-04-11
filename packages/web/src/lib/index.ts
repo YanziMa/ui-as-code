@@ -34589,3 +34589,30 @@ export type {
   AlertOptions,
   AlertInstance,
 } from "./alert-utils";
+// --- Batch 1138: Drawer, Sheet, Sidebar ---
+export { createDrawer } from "./drawer-utils";
+export type {
+  DrawerSide,
+  DrawerSize,
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer-utils";
+
+export { createSheet } from "./sheet-utils";
+export type {
+  SheetSide,
+  SheetSize,
+  SheetOptions,
+  SheetInstance,
+} from "./sheet-utils";
+
+export { createSidebar } from "./sidebar-utils";
+export type {
+  SidebarPosition,
+  SidebarVariant,
+  SidebarCollapseMode,
+  SidebarItem,
+  SidebarSection,
+  SidebarOptions,
+  SidebarInstance,
+} from "./sidebar-utils";
