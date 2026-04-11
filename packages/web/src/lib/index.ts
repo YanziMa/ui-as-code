@@ -23733,3 +23733,88 @@ export {
   memoize as cacheMemoize,
 } from "./cache";
 export type { CacheOptions } from "./cache";
+
+// --- image-utils ---
+export {
+  getImageDimensions,
+  loadImage,
+  imageToCanvas,
+  resizeImage,
+  cropImage,
+  applyFilters,
+  convertFormat,
+  generateThumbnail,
+  compressImage,
+  getDominantColor,
+  getAverageColor,
+  createCollage,
+  addWatermark,
+  detectOrientation,
+  getAspectRatio,
+  fileToDataUrl,
+  fileToArrayBuffer,
+  downloadImage,
+  formatFileSize as imageFormatSize,
+  isValidImageType,
+  getExifOrientation,
+} from "./image-utils";
+export type {
+  ImageDimensions,
+  ImageProcessingOptions,
+  CropRegion,
+  FilterOptions,
+} from "./image-utils";
+
+// --- file-utils ---
+export {
+  MIME_MAP,
+  getMimeType,
+  getExtension,
+  getBaseName,
+  categorizeFile,
+  isFileType,
+  FILE_EXTENSIONS,
+  validateFile,
+  validateFiles,
+  sanitizeFilename,
+  uniqueFilename,
+  formatBytes,
+  formatFileSizeShort,
+  getFileIcon,
+  parseDropEvent,
+  setupDropZone,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  readFileAsBinaryString,
+  readFileHeader,
+  splitFileIntoChunks,
+  UploadTracker,
+} from "./file-utils";
+export type {
+  FileCategory,
+  FileValidationOptions,
+  FileValidationError,
+  DropEvent,
+  FileChunk,
+  UploadProgress,
+} from "./file-utils";
+
+// --- network-utils ---
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+} from "./network-utils";
+export type {
+  NetworkStatus,
+  RetryOptions as NetworkRetryOptions,
+  RequestQueueItem,
+} from "./network-utils";
