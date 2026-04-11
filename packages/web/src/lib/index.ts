@@ -29386,3 +29386,16 @@ export { createTreemap } from "./treemap.js";
 export type { TreemapOptions, TreemapInstance, TreemapNode, TreemapColorScale } from "./treemap.js";
 export { createWaterfallChart } from "./waterfall-chart.js";
 export type { WaterfallChartOptions, WaterfallChartInstance, WaterfallDataPoint, WaterfallBarStyle } from "./waterfall-chart.js";
+// --- Batch 983: Funnel Chart, Sankey, Network Graph ---
+export { createFunnelChart } from "./funnel-chart.js";
+export type { FunnelChartOptions, FunnelChartInstance, FunnelDataPoint, FunnelOrientation, FunnelStyle } from "./funnel-chart.js";
+export { createSankey } from "./sankey.js";
+export type { SankeyOptions, SankeyInstance, SankeyNode, SankeyLink } from "./sankey.js";
+export { createNetworkGraph } from "./network-graph.js";
+export type {
+  NetworkGraphOptions,
+  NetworkGraphInstance,
+  GraphNode,
+  GraphEdge,
+  GraphLayoutMode,
+} from "./network-graph.js";
