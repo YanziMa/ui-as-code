@@ -32112,3 +32112,15 @@ export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
 // --- color-picker ---
 export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
 export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- switch ---
+export { createSwitch } from "./switch";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch";
+
+// --- checkbox ---
+export { createCheckbox, createCheckboxGroup } from "./checkbox";
+export type { CheckboxOptions, CheckboxInstance, CheckboxGroupOptions, CheckboxGroupInstance, CheckboxSize, CheckboxVariant, RadioOptions, RadioInstance } from "./checkbox";
+
+// --- radio ---
+export { createRadioGroup, RadioGroupManager } from "./radio";
+export type { RadioGroupOptions, RadioGroupInstance, RadioOption, RadioSize, RadioVariant } from "./radio";
