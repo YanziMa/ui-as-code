@@ -47407,3 +47407,17 @@ export { createOdometer } from "./odometer";
 // --- offcanvas-utils ---
 export type { OffCanvasSide as OCSide, OffCanvasMode as OCMode, OffCanvasOptions as OCOpts, OffCanvasInstance as OCInst } from "./offcanvas-utils";
 export { createOffCanvas } from "./offcanvas-utils";
+
+// --- offcanvas ---
+export type { OffcanvasSide as OcSide, OffcanvasMode as OcMd, OffcanvasResponsive as OcResp } from "./offcanvas";
+export type { OffcanvasOptions as OcOpts, OffcanvasInstance as OcInst } from "./offcanvas";
+export { createOffcanvas, bindOffcanvas } from "./offcanvas";
+
+// --- offline ---
+export type { ConnectionStatus as OffStatus, OfflineConfig as OffCfg, QueuedRequest as OffQReq, OfflineManager as OffMgr } from "./offline";
+export { createOfflineManager } from "./offline";
+
+// --- oidc ---
+export type { OidcDiscovery as OIDCDisc, OidcConfig as OIDCCfg, IdTokenClaims as OIDCClaims } from "./oidc";
+export type { IdTokenValidationResult as OIDCValRes, OidcSessionState as OIDCSess, OidcEventHandler as OIDCEvent } from "./oidc";
+export { OidcClient, createOidcClient } from "./oidc";
