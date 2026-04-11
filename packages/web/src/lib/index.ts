@@ -20363,3 +20363,32 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu";
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepStatus,
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+} from "./stepper";
+export {
+  WizardManager,
+  createWizard,
+} from "./wizard";
+export type {
+  WizardStepStatus,
+  WizardStep,
+  WizardOptions,
+  WizardInstance,
+} from "./wizard";
+export {
+  createStatCard,
+} from "./statistics";
+export type {
+  TrendDirection,
+  SparklineType,
+  StatCardOptions,
+  StatisticsInstance,
+} from "./statistics";
