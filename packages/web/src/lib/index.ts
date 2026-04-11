@@ -27205,3 +27205,31 @@ export {
   type MenuMode,
   type MenuVariant,
 } from "./menu";
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselSlide,
+} from "./carousel";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineItem,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+  type StepperOptions,
+  type StepperInstance,
+  type StepConfig,
+  type StepStatus,
+} from "./stepper";
