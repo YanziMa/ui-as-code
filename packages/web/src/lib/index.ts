@@ -34763,3 +34763,29 @@ export type {
   ExpansionPanelOptions,
   ExpansionPanelInstance,
 } from "./expansion-panel-utils";
+// --- Batch 1145: Divider, Spacer, Stack ---
+export { createDivider, createHr, createVr, createDividerGroup } from "./divider-utils";
+export type {
+  DividerOrientation,
+  DividerVariant,
+  DividerLabelPosition,
+  DividerOptions,
+  DividerGroupOptions,
+} from "./divider-utils";
+
+export { createSpacer, vSpacer, hSpacer, lineBreak, createSpacerStack } from "./spacer-utils";
+export type {
+  SpacerSize,
+  SpacerOptions,
+  SpacerStackOptions,
+} from "./spacer-utils";
+
+export { createStack, VStack, HStack, CenterStack, BetweenStack, EvenStack } from "./stack-utils";
+export type {
+  StackDirection,
+  StackAlign,
+  StackJustify,
+  StackSize,
+  StackOptions,
+  StackInstance,
+} from "./stack-utils";
