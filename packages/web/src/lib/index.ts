@@ -23516,3 +23516,50 @@ export {
   csvToHtmlTable,
   type CsvOptions,
 } from "./csv";
+
+// --- overlay ---
+export {
+  OverlayProvider,
+  openModal,
+  openDrawer,
+  openConfirm,
+  openAlert,
+  closeAllOverlays,
+} from "./overlay";
+export type {
+  OverlayOptions,
+  OverlayInstance,
+  OverlayType,
+} from "./overlay";
+
+// --- split-view ---
+export {
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+} from "./split-view";
+export type {
+  SplitDirection,
+  PaneConfig,
+  SplitViewOptions,
+  SplitViewState,
+  SplitViewInstance,
+} from "./split-view";
+
+// --- skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
