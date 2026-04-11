@@ -37977,3 +37977,37 @@ export type {
   SchemaType, SchemaValidationError, SchemaValidationResult as SValidationResult,
   SchemaDiff,
 } from "./schema-utils";
+
+// --- keyboard-utils ---
+export {
+  KEY_ALIASES, resolveKey,
+  normalizeKeyEvent, eventMatchesBinding,
+  HotkeyManager, KeySequenceDetector, RovingTabIndex,
+  formatHotkey, parseHotkeyString, isTypingInInput,
+} from "./keyboard-utils";
+export type {
+  ModifierKey, KeyBinding, KeySequence, NormalizedKeyEvent,
+  KeyboardState, NavigationConfig,
+} from "./keyboard-utils";
+
+// --- gesture-utils ---
+export {
+  GestureRecognizer,
+  distance as gestureDistance, angleBetween as gestureAngleBetween,
+  midpoint as gestureMidpoint, getDirection,
+  isInsideRect, isInsideElement,
+  createTapDebounce, detectSwipe,
+} from "./gesture-utils";
+export type {
+  Point, SwipeGesture, PinchGesture, RotateGesture,
+  TapGesture, LongPressGesture, PanGesture, Gesture,
+  GestureConfig, GestureHandlers,
+} from "./gesture-utils";
+
+// --- drag-utils ---
+export {
+  makeDraggable, DropZoneManager, createSortable,
+} from "./drag-utils";
+export type {
+  DragData, DragOptions, DropZone, SortableConfig,
+} from "./drag-utils";
