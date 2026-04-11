@@ -50033,3 +50033,41 @@ export {
   type FullscreenOptions,
   type FullscreenInstance,
 } from "./screen-full";
+
+// --- screen-orientation ---
+export {
+  ScreenOrientationManager,
+  createScreenOrientation,
+  isPortraitMode,
+  isLandscapeMode,
+  lockOrientation as ScrOrient_lockOrientation,
+  unlockOrientation as ScrOrient_unlockOrientation,
+  type OrientationType,
+  type OrientationLockType as ScrOrient_LockType,
+  type OrientationState,
+  type ScreenOrientationOptions,
+  type ScreenOrientationInstance,
+} from "./screen-orientation";
+
+// --- screen-recorder ---
+export {
+  createScreenRecorder,
+  isScreenRecordingSupported,
+  isCameraAvailable,
+  type RecorderSource,
+  type OutputFormat,
+  type RecorderStatus as ScrRec_Status,
+  type RecorderConstraints,
+  type RecorderOptions,
+  type RecorderStats,
+  type ScreenRecorderInstance,
+} from "./screen-recorder";
+
+// --- screen-wake-lock ---
+export {
+  createWakeLock,
+  isWakeLockSupported,
+  keepScreenAwake,
+  type WakeLockOptions,
+  type WakeLockInstance,
+} from "./screen-wake-lock";
