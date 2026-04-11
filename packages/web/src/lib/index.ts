@@ -44106,3 +44106,14 @@ export type { ScrollToOptions, ScrollSpyOptions, ScrollProgress } from "./react-
 // --- react-state-persistence ---
 export { createPersistence, clearPersistedPrefix, migrateAll } from "./react-state-persistence";
 export type { StorageBackend, PersistenceOptions, PersistenceInstance } from "./react-state-persistence";
+// --- react-table-utils ---
+export { TableStateManager, applySorting, applyFilters, paginate, getPaginationInfo } from "./react-table-utils";
+export type { ColumnDef, SortDirection, SortState, FilterState, PaginationState, SelectionState, TableState } from "./react-table-utils";
+
+// --- react-testing-utils ---
+export { renderForTest, simulateClick, simulateKeyDown, simulateType, simulateSubmit, simulateHover, isVisible, hasClass, getStyle, expectToExist, expectTextContains, waitForCondition, flushPromises, act, cleanup } from "./react-testing-utils";
+export type { RenderOptions, RenderResult } from "./react-testing-utils";
+
+// --- react-virtual ---
+export { createVirtualizer } from "./react-virtual";
+export type { VirtualItem, VirtualizerOptions, VirtualizerInstance } from "./react-virtual";
