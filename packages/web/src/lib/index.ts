@@ -44860,3 +44860,13 @@ export { createDelegationPool, delegate, multiDelegate } from "./event-delegatio
 // --- executor ---
 export type { TaskStatus, TaskPriority, Task, ExecutorOptions, ExecutorInstance, RateLimitOptions } from "./executor";
 export { createExecutor, createRateLimitedExecutor } from "./executor";
+
+// --- feature-flag ---
+export type { FlagValue as FfFlagValue, RolloutStrategy, FeatureFlagDef, PercentageRollout, VariantRollout, UserListRollout, TargetingRule, RolloutRule, FlagContext, FeatureFlagSystemOptions, FeatureFlagSystem } from "./feature-flag";
+export { createFeatureFlagSystem, boolFlag, percentRollout, abTest, userList } from "./feature-flag";
+// --- feature-toggle ---
+export type { FlagValueType, FlagConditionOperator, FlagCondition, FlagRule, FeatureFlag as FtFeatureFlag, UserContext, FeatureFlagOptions, FeatureFlagInstance } from "./feature-toggle";
+export { createFeatureFlags, createBooleanFlag, createRolloutFlag } from "./feature-toggle";
+// --- field-utils ---
+export type { FieldVariant, FieldSize, FieldState, FieldOptions, FieldInstance, FieldGroupOptions } from "./field-utils";
+export { createField, createFieldGroup } from "./field-utils";
