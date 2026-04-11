@@ -42084,3 +42084,10 @@ export { createStepper } from "./stepper.js";
 export type { StepperOptions, StepperInstance, StepConfig, StepStatus } from "./stepper.js";
 export { createSegmentedControl } from "./segmented-control.js";
 export type { SegmentedControlOptions, SegmentedControlInstance, SegmentedOption, SegmentedSize } from "./segmented-control.js";
+// --- Batch 1339: Avatar, Chip, List ---
+export { createAvatar, createAvatarGroup, getInitials } from "./avatar.js";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar.js";
+export { createChip, createChipGroup } from "./chip.js";
+export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, ChipSize, ChipVariant } from "./chip.js";
+export { createList } from "./list.js";
+export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list.js";
