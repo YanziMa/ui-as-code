@@ -18189,3 +18189,40 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarOptions,
+  AvatarGroupOptions,
+  AvatarSize,
+  AvatarShape,
+} from "./avatar";
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeOptions,
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  StatusDotOptions,
+} from "./badge";
+export {
+  createChip,
+  createChipGroup,
+} from "./chip";
+export type {
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+  ChipSize,
+  ChipVariant,
+} from "./chip";
