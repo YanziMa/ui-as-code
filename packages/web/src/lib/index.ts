@@ -24770,3 +24770,15 @@ export type { DateRangePickerOptions, DateRangePickerInstance, DateRangePreset }
 // --- File Manager ---
 export { createFileManager } from "./file-manager";
 export type { FileManagerFile, FileManagerOptions, FileManagerInstance } from "./file-manager";
+
+// --- Image Cropper ---
+export { ImageCropperManager, createImageCropper } from "./image-cropper";
+export type { AspectRatio, CropRegion, ImageCropperOptions, ImageCropperInstance } from "./image-cropper";
+
+// --- Audio Player ---
+export { createAudioPlayer } from "./audio-player";
+export type { AudioTrack, AudioPlayerOptions, AudioPlayerInstance } from "./audio-player";
+
+// --- Video Player ---
+export { createVideoPlayer } from "./video-player";
+export type { VideoTrack, QualityOption, Chapter, PlaylistItem, VideoPlayerOptions, VideoPlayerInstance } from "./video-player";
