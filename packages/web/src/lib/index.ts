@@ -26559,3 +26559,33 @@ export type {
   AclDecision,
   AclConfig,
 } from "./acl";
+
+// --- OIDC ---
+export {
+  OidcClient,
+  createOidcClient,
+} from "./oidc";
+export type {
+  OidcDiscovery,
+  OidcConfig,
+  IdTokenClaims,
+  IdTokenValidationResult,
+  OidcSessionState,
+  OidcEventHandler,
+} from "./oidc";
+
+// --- SSO ---
+export {
+  SSOManager,
+  createSSOManager,
+} from "./sso";
+export type {
+  SsoProvider,
+  SsoAuthResult,
+  SsoUser,
+  SsoSession,
+  SsoConfig,
+  SsoError,
+  SsoState,
+  SsoStateHandler,
+} from "./sso";
