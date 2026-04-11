@@ -29130,3 +29130,43 @@ export {
   type TimelineState,
   type EasingFn,
 } from "./animation-timeline.js";
+// --- Batch 968: I18n Manager, Markdown Renderer, Code Editor ---
+
+export {
+  I18nManager,
+  createI18n,
+  type Locale,
+  type MessageKey,
+  type Namespace,
+  type MessageCatalog,
+  type LocaleData,
+  type PluralRuleSet,
+  type LocaleFormats,
+  type I18nConfig,
+  type InterpolationOptions,
+  type I18nStats,
+} from "./i18n-manager.js";
+
+export {
+  parseMarkdown,
+  renderToHtml,
+  generateToc,
+  renderToc,
+  extractFrontMatter,
+  extractText,
+  countWords,
+  readingTime,
+  mdToHtml,
+  type MdNode,
+  type MdNodeType,
+  type MdRenderOptions,
+  type TocEntry,
+  type FrontMatter,
+} from "./markdown-renderer.js";
+
+export {
+  CodeEditorManager,
+  createCodeEditor,
+  type CodeEditorOptions,
+  type CodeEditorInstance,
+} from "./code-editor.js";
