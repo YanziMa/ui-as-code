@@ -50677,3 +50677,30 @@ export type {
   ChordState as ScMgr_ChordState,
 } from "./shortcuts-manager";
 export { ShortcutsManager, createShortcutsManager } from "./shortcuts-manager";
+
+// --- shortcuts ---
+export type {
+  ShortcutBinding as Sc_Binding,
+  ShortcutGroup as Sc_Group,
+  ShortcutManagerOptions as Sc_Options,
+  ShortcutInstance as Sc_Instance,
+} from "./shortcuts";
+export { createShortcutManager as createScMgr } from "./shortcuts";
+
+// --- side-panel ---
+export type {
+  SidePanelPosition as SidePan_Position,
+  SidePanelSize as SidePan_Size,
+  SidePanelOptions as SidePan_Options,
+  SidePanelInstance as SidePan_Instance,
+} from "./side-panel";
+export { createSidePanel } from "./side-panel";
+
+// --- side-sheet ---
+export type {
+  SheetSide as SideSht_Side,
+  SheetSize as SideSht_Size,
+  SheetOptions as SideSht_Options,
+  SheetInstance as SideSht_Instance,
+} from "./side-sheet";
+export { SideSheetManager, createSideSheet } from "./side-sheet";
