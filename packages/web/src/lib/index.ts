@@ -34484,3 +34484,14 @@ export type { PullToRefreshOptions, PullToRefreshInstance, PullState } from "./p
 // --- virtual-scroller-utils ---
 export { createVirtualScroller } from "./virtual-scroller-utils";
 export type { VirtualScrollerOptions, VirtualScrollerInstance, VirtualItem } from "./virtual-scroller-utils";
+// --- drag-drop-utils ---
+export { createDraggable, createDropZone, createSortable } from "./drag-drop-utils";
+export type { DraggableOptions, DraggableInstance, DropZoneOptions, DropZoneInstance, SortableOptions, SortableInstance, DragData, DragEvent, DragAxis, DragConstraint } from "./drag-drop-utils";
+
+// --- sortable-utils ---
+export { createSortableList } from "./sortable-utils";
+export type { SortableListOptions, SortableListInstance, SortableItemConfig, SortAnimation } from "./sortable-utils";
+
+// --- resizable-utils (pre-existing) ---
+export { createResizable } from "./resizable-utils";
+export type { ResizableOptions, ResizableInstance, ResizeEdge } from "./resizable-utils";
