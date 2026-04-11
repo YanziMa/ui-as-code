@@ -22208,3 +22208,33 @@ export {
   urlsEqual,
 } from "./url-utils";
 export type { ParsedUrl } from "./url-utils";
+
+// --- async-utils ---
+export {
+  retry,
+  withTimeoutPromise,
+  poll,
+  runWithConcurrency,
+  memoizeAsync,
+  memoize,
+  createDeferred,
+  asyncIterate,
+  batchProcess,
+  allSuccessful,
+  allOrThrow,
+} from "./async-utils";
+export type { RetryOptions, PollOptions, ConcurrencyOptions, MemoizeOptions } from "./async-utils";
+
+// --- validation ---
+export {
+  GenerateDiffSchema,
+  CreateFrictionSchema,
+  CreatePRSchema,
+  VoteSchema,
+  validateBody,
+} from "./validation";
+export type { GenerateDiffInput, CreateFrictionInput, CreatePRInput, VoteInput } from "./validation";
+
+// --- logger ---
+export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
+export type { LogLevel } from "./logger";
