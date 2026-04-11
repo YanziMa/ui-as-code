@@ -38915,3 +38915,28 @@ export {
   ParticleEmitter,
   type Vector2 as PhysVector2, type BodyState, type Force, type CollisionPair, type PhysicsWorldOptions, type ParticleEmitterConfig,
 } from "./physics-utils";
+
+// --- form-utils ---
+export {
+  createForm, serializeForm, populateForm, clearForm,
+  createMultiStepForm, evaluateConditionals,
+  linkErrorToField, unlinkErrorFromField, createFormAnnouncer,
+  type FormFieldConfig, type FormValidationRule, type FormFieldState, type FormOptions, type FormInstance,
+  type StepConfig, type MultiStepFormOptions, type MultiStepFormInstance, type ConditionRule, type ConditionalField,
+} from "./form-utils";
+
+// --- validation-utils ---
+export {
+  isString as valIsString, isNumber as valIsNumber, isInteger as valIsInteger, isFiniteNumber, isObject as valIsObject, isArray as valIsArray, isValidDate, isBoolean, isFunction as valIsFunction, isNil, isNotNil, isEmpty, isMap, isSet, isPromise,
+  isEmail, isURL, isUUID, isUUIDv4, isHexColor, isIPv4, isIPv6, isIP, isMACAddress, isCreditCard, detectCardBrand, isPhoneNumber, isISODate, isISODateTime, isJSON, matchesPattern, isLength, isArraySize, inRange, isOneOf, every: valEvery, some: valSome,
+  validate, validateAsync,
+  rules, assert, assertType,
+  type ValidationResult, type ValidationError, type ValidationWarning, type ValidationRule, type FieldSchema, type ObjectSchema,
+} from "./validation-utils";
+
+// --- schema-utils ---
+export {
+  validateSchema, inferSchema, inferSchemaFromSamples, mergeSchemas, diffSchemas, schemaToTypeScript,
+  SchemaRegistry, isAcceptedBySchema, atLeastOneRequired, conditionalSchema, extractPaths, getDefault,
+  type SchemaType, type BaseSchema, type StringSchema, type NumberSchema, type BooleanSchema, type NullSchema, type ArraySchema, type ObjectSchema, type AnyOfSchema, type OneOfSchema, type AllOfSchema, type NotSchema, type RefSchema, type JsonSchema, type SchemaValidationError, type SchemaValidationResult, type SchemaDiff,
+} from "./schema-utils";
