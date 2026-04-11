@@ -24543,3 +24543,12 @@ export { Graph, type GraphNode, type GraphEdge } from "./graph";
 
 // --- Kanban ---
 export { createKanban, KanbanManager, type KanbanOptions, type KanbanCard, type KanbanColumn, type KanbanSwimlane, type KanbanLabel, type KanbanInstance, type CardPriority, type CardSize } from "./kanban";
+
+// --- Calendar ---
+export { createCalendar, CalendarManager, type CalendarOptions, type CalendarEvent, type CalendarView, type WeekStartDay, type CalendarInstance } from "./calendar";
+
+// --- Date Picker ---
+export { createDatePicker, DatePickerManager, type DatePickerOptions, type DatePickerInstance } from "./date-picker";
+
+// --- Time Picker ---
+export { createTimePicker, type TimePickerOptions, type TimePickerInstance, type TimeFormat, type TimePickerMode } from "./time-picker";
