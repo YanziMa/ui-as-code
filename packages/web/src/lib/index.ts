@@ -28492,3 +28492,49 @@ export {
   type FieldError,
   type FieldType,
 } from "./form-builder";
+
+// --- Batch 934: Data Table, Date Picker, Color Picker ---
+export {
+  createDataTable,
+  DataTableManager,
+  type DataTableOptions,
+  type DataTableInstance,
+  type Column,
+  type SortState,
+  type SortDirection,
+} from "./data-table";
+export {
+  createDatePicker,
+  DatePickerManager,
+  type DatePickerOptions,
+  type DatePickerInstance,
+} from "./date-picker";
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+  type RgbColor,
+  type HslColor,
+  type Palette,
+} from "./color-picker";
