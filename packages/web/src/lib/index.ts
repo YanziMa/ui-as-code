@@ -27748,3 +27748,17 @@ export { AlertManager, createAlert } from "./alert";
 export type { AlertOptions, AlertInstance, AlertVariant, AlertSize, AlertAction } from "./alert";
 export { createCard } from "./card";
 export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOptions, CardImageOptions } from "./card";
+
+// --- Batch 875: Comment, File Upload, Color Picker ---
+export { createCommentSystem } from "./comment";
+export type { CommentOptions, CommentInstance, CommentData, CommentAuthor } from "./comment";
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type { FileUploadOptions, FileUploadInstance, UploadFile } from "./file-upload";
+export {
+  hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor,
+  getLuminance, getContrastRatio, getWcagLevel, getContrastingText,
+  complementary, analogous, triadic, splitComplementary, tetradic, monochromatic,
+  blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
