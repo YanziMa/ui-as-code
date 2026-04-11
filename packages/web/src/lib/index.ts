@@ -46756,3 +46756,15 @@ export { createNetworkGraph } from "./network-graph";
 // --- network-protocol.ts ---
 export type { ParsedUrl, QueryParams, HttpHeaders, RpcRequest as NetRpcReq, RpcResponse as NetRpcResp, WsConfig, NetworkQualityReport as NetQualityReport } from "./network-protocol";
 export { HttpMethod, HttpStatusCategory, WsState, WebSocketManager, WireType, JsonRpcClient, RpcError, SseManager, parseUrl, buildUrl, normalizeUrl, parseQueryString, stringifyQuery, mergeQueryParams, joinPath, normalizePath, resolveUrl, encodeRfc3986, decodeRfc3986, matchUrlPattern, matchUrlRegex, parseContentType, parseAcceptHeader, parseCacheControl, getMaxAge, mustRevalidate, parseAcceptLanguage, parseAcceptEncoding, compareEtags, etagMatchesList, buildCookieHeader, basicAuthHeader, bearerAuthHeader, digestAuthHeader, buildCorsPreflight, formatHttpLog, encodeLengthPrefixedFrame, decodeLengthPrefixedFrame, encodeVarint, decodeVarint, encodeTag, decodeTag, encodeFieldValue, decodeFieldValue, serializeMessage, deserializeMessage, RpcErrorCode, createStreamingRpc, estimateBandwidth, measureLatency, detectConnectionType, watchOnlineStatus, computeNetworkQualityScore } from "./network-protocol";
+
+// --- network-status.ts ---
+export type { EffectiveConnectionType as EffConnType, NetworkInfo as NetStatusInfo, NetworkStatusOptions as NetStatusOpts, NetworkStatusInstance as NetStatusInst } from "./network-status";
+export { createNetworkStatus, isOnline as netIsOnline, getConnectionInfo, isSlowConnection as netIsSlow, runWhenOnline, retryWhenOnline } from "./network-status";
+
+// --- network-utils.ts ---
+export type { NetworkStatus as NetUtilStatus, RetryOptions as NetRetryOpts, RequestQueueItem, QueueMode } from "./network-utils";
+export { getNetworkStatus, onNetworkChange, isSlowConnection as netUtilIsSlow, isDataSaverEnabled, fetchWithRetry, RequestQueue, syncWhenOnline, processOfflineQueue, BandwidthEstimator, ConnectionHealthChecker } from "./network-utils";
+
+// --- network.ts ---
+export type { NetworkStatus as NetMgrStatus, FetchOptions as NetFetchOpts, FetchResult, QueuedRequest, NetworkManagerOptions as NetMgrOpts, NetworkManagerInstance as NetMgrInst } from "./network";
+export { NetworkManager, createNetworkManager, readConnectionInfo, parseQueryString as netParseQS, buildQueryString, buildUrl as netBuildUrl, parseContentRange, fetchWithTimeout } from "./network";
