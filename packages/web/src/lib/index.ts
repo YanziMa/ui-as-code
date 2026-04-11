@@ -26924,3 +26924,31 @@ export type { HotkeyDisplayOptions, HotkeyDisplayInstance, HotkeyBinding, Hotkey
 // --- Segmented Control ---
 export { createSegmentedControl } from "./segmented-control";
 export type { SegmentedControlOptions, SegmentedControlInstance, SegmentedOption, SegmentedSize } from "./segmented-control";
+// --- Statistics ---
+export {
+  createStatCard,
+  type StatCardOptions,
+  type StatisticsInstance,
+  type TrendDirection,
+  type SparklineType,
+} from "./statistics";
+
+// --- QR Code ---
+export {
+  createQR,
+  type QROptions,
+  type QRInstance,
+  type QRLogLevel,
+  encodeQR,
+  generateQRMatrix,
+} from "./qrcode";
+
+// --- Signature Pad ---
+export {
+  createSignaturePad,
+  SignaturePadManager,
+  type SignaturePadOptions,
+  type SignaturePadInstance,
+  type StrokePoint,
+  type Stroke,
+} from "./signature-pad";
