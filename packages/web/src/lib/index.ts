@@ -41456,3 +41456,37 @@ export {
   type CollapseGroupOptions,
   type CollapseGroupInstance,
 } from "./collapse-utils";
+// --- Star Rating ---
+export {
+  createStarRating,
+  type StarRatingOptions,
+  type StarRatingInstance,
+  type StarRatingSize,
+  type StarIcon,
+} from "./star-rating";
+
+// --- Select Dropdown ---
+export {
+  createSelectDropdown,
+  type SelectDropdownOptions,
+  type SelectDropdownInstance,
+  type SelectOption,
+  type SelectGroup,
+  type SelectDropdownSize,
+  type SelectTriggerMode,
+} from "./select-dropdown";
+
+// --- Highlight ---
+export {
+  highlightText,
+  highlightMulti,
+  createHighlightManager,
+  type HighlightOptions,
+  type HighlightResult,
+  type HighlightRange,
+  type MultiHighlightOptions,
+  type HighlightManagerOptions,
+  type HighlightManagerInstance,
+  type HighlightMatchStrategy,
+  type HighlightTag,
+} from "./highlight";
