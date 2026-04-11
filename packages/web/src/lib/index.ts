@@ -44447,3 +44447,30 @@ export type {
   SplitPaneInstance as UtilsSplitPaneInstance,
 } from "./split-pane-utils";
 export { createSplitPane as createUtilsSplitPane } from "./split-pane-utils";
+// --- split-pane ---
+export type {
+  SplitOrientation,
+  SplitCollapseDirection,
+  SplitPaneOptions as CoreSplitPaneOptions,
+  SplitPaneInstance as CoreSplitPaneInstance,
+} from "./split-pane";
+export { createSplitPane } from "./split-pane";
+
+// --- split-view-utils ---
+export type {
+  SplitDirection as SvuSplitDirection,
+  SplitCollapseMode,
+  SplitPaneConfig as SvuPaneConfig,
+  SplitViewOptions as SvuSplitOptions,
+  SplitViewInstance as SvuSplitViewInstance,
+} from "./split-view-utils";
+export { createSplitView as createSvuSplitView } from "./split-view-utils";
+
+// --- split-view ---
+export type {
+  PaneConfig as SvPaneConfig,
+  SplitViewState,
+  SplitViewOptions as SvSplitOptions,
+  SplitViewInstance as SvSplitViewInstance,
+} from "./split-view";
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
