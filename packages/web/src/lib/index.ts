@@ -42177,3 +42177,10 @@ export { createFileUpload } from "./file-upload";
 export type { FileUploadItem, FileUploadOptions, FileUploadInstance } from "./file-upload";
 export { SearchInputManager, createSearchInput } from "./search-input";
 export type { SuggestionItem, SearchHistoryEntry, SearchInputOptions, SearchInputInstance } from "./search-input";
+// --- Batch 1357: Date Picker, Time Picker, Color Picker UI ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
+export { createTimePicker } from "./time-picker";
+export type { TimeFormat, TimePickerMode, TimePickerOptions, TimePickerInstance } from "./time-picker";
+export { createColorPickerUI } from "./color-picker-ui";
+export type { ColorSwatch, ColorPickerUIOptions, ColorPickerUIInstance } from "./color-picker-ui";
