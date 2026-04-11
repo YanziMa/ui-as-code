@@ -27985,3 +27985,14 @@ export type { PatchOp, DomNode, DiffOptions, DiffResult, PatchResult } from "./d
 // --- Router ---
 export { Router, createRouter, getRouter } from "./router";
 export type { RouteMode, RouteParams, QueryParams, RouteDefinition, RouterConfig, RouteInfo, NavigationResult } from "./router";
+// --- Form Builder ---
+export { FormBuilder, createForm, validations } from "./form-builder";
+export type { FieldType, FieldValidation, SelectOption, FormField, FormSection, FormSchema, FieldError, FormState } from "./form-builder";
+
+// --- Table Manager ---
+export { createTable } from "./table-manager";
+export type { ColumnDef, SortDirection, SortState, FilterState, PaginationState, SelectionState, TableOptions, TableInstance } from "./table-manager";
+
+// --- Toast Notification ---
+export { createToastManager } from "./toast-notification";
+export type { ToastType, ToastPosition, ToastOptions, ToastManagerOptions, ToastInstance } from "./toast-notification";
