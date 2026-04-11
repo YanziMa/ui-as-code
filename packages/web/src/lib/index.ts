@@ -24230,3 +24230,40 @@ export {
   type InfiniteScrollItem,
   type InfiniteScrollState,
 } from "./infinite-scroll";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  type AvatarSize,
+  type AvatarShape,
+} from "./avatar";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+  type BadgeOptions,
+  type StatusDotOptions,
+  type BadgeVariant,
+  type BadgePosition,
+  type BadgeSize,
+} from "./badge";
+
+// --- Chip ---
+export {
+  createChip,
+  createChipGroup,
+  type ChipOptions,
+  type ChipInstance,
+  type ChipGroupOptions,
+  type ChipGroupInstance,
+  type ChipSize,
+  type ChipVariant,
+} from "./chip";
