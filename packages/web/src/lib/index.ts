@@ -37191,3 +37191,15 @@ export type { AccordionItem, AccordionOptions, AccordionInstance, AccordionMode 
 // --- carousel-utils ---
 export { createCarousel } from "./carousel-utils";
 export type { CarouselSlide, CarouselOptions, CarouselInstance, CarouselTransition, CarouselNavStyle } from "./carousel-utils";
+
+// --- tree-utils ---
+export { createTree } from "./tree-utils";
+export type { TreeNode, TreeOptions, TreeInstance, TreeSelectionMode, TreeCheckboxMode, TreeExpandMode } from "./tree-utils";
+
+// --- avatar-utils ---
+export { createAvatar, createAvatarGroup, generateAvatarColor, getInitials } from "./avatar-utils";
+export type { AvatarOptions, AvatarGroupOptions, AvatarSize, AvatarShape } from "./avatar-utils";
+
+// --- badge-utils ---
+export { createBadge, createDotBadge, createTag } from "./badge-utils";
+export type { BadgeOptions, DotBadgeOptions, TagOptions, BadgeVariant, BadgeSize, DotPosition } from "./badge-utils";
