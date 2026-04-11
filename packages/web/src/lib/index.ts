@@ -18635,3 +18635,31 @@ export type {
   TimelineLayout,
   TimelineItemStatus,
 } from "./timeline-lite";
+export {
+  createSteps,
+} from "./steps-lite";
+export type {
+  StepsOptions,
+  StepsInstance,
+  StepItem,
+  StepsVariant,
+  StepStatus,
+  StepsDirection,
+} from "./steps-lite";
+export {
+  createBreadcrumb,
+} from "./breadcrumb-lite";
+export type {
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+  BreadcrumbItemData,
+  BreadcrumbSize,
+} from "./breadcrumb-lite";
+export {
+  createPagination,
+} from "./pagination-lite";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+  PaginationSize,
+} from "./pagination-lite";
