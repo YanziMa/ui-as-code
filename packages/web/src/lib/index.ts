@@ -25679,3 +25679,28 @@ export { MutationWatcher, createMutationObserver, waitForElement, waitForRemoval
 // --- resize-observer ---
 export type { ResizeBox, ResizeObserverOptions as ResizeObsOptions, ResizeObserverEntry as ResizeObsEntry, ResizeObserverInstance as ResizeObsInstance } from "./resize-observer";
 export { ResizeWatcher, createResizeObserver, matchParentSize, whenSizeExceeds } from "./resize-observer";
+
+// --- animatable ---
+export type { AnimatableProperty, Keyframe, AnimationTimeline, AnimatableOptions, AnimatableInstance } from "./animatable";
+export { createAnimatable } from "./animatable";
+
+// --- spring-physics ---
+export type { SpringConfig, SpringOptions, SpringInstance, ChainableSpring } from "./spring-physics";
+export { createSpring, SpringPresets, createPresetSpring } from "./spring-physics";
+
+// --- easing ---
+export type { EasingName, EasingFunction, CubicBezierOptions, ElasticOptions, BackOptions, BounceOptions } from "./easing";
+export {
+  linear, easeInQuad, easeOutQuad, easeInOutQuad,
+  easeInCubic, easeOutCubic, easeInOutCubic,
+  easeInQuart, easeOutQuart, easeInOutQuart,
+  easeInQuint, easeOutQuint, easeInOutQuint,
+  easeInSine, easeOutSine, easeInOutSine,
+  easeInExpo, easeOutExpo, easeInOutExpo,
+  easeInCirc, easeOutCirc, easeInOutCirc,
+  easeInBack, easeOutBack, easeInOutBack,
+  easeInElastic, easeOutElastic, easeInOutElastic,
+  easeInBounce, easeOutBounce, easeInOutBounce,
+  cubicBezier, cubicBezierFromOpts, steps,
+  getEasing, toCSS, getCSSEasingMap
+} from "./easing";
