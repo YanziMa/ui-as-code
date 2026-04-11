@@ -40304,3 +40304,40 @@ export {
   type AvatarCropOptions,
   type AvatarCropInstance,
 } from "./avatar-crop-utils";
+// --- Form Validator ---
+export {
+  createFormValidator,
+  type FormValidatorOptions,
+  type FormValidatorInstance,
+  type FieldConfig,
+  type FieldRule,
+  type ValidationResult,
+} from "./form-validator-utils";
+
+// --- Markdown Editor ---
+export {
+  createMarkdownEditor,
+  type MarkdownEditorOptions,
+  type MarkdownEditorInstance,
+} from "./markdown-editor-utils";
+
+// --- Chart Utilities ---
+export {
+  calculateAxisScale,
+  formatAxisLabel,
+  valueToPixel,
+  pixelToValue,
+  aggregateByInterval,
+  movingAverage,
+  calculatePercentChanges,
+  findExtrema,
+  generateChartColors,
+  interpolateColor,
+  getDataStats,
+  type DataPoint,
+  type DataSeries,
+  type ChartConfig,
+  type AxisScale,
+  type ColorPaletteName,
+  type DataStats,
+} from "./chart-utils";
