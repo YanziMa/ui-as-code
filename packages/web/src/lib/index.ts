@@ -49855,3 +49855,32 @@ export { AdvancedScheduler, ScheduleVisualizer } from "./scheduler-advanced";
 export { parseEnhancedCron, convertSchedule } from "./scheduler-advanced";
 export { Scheduler, ScheduledJob, JobStatus, CronExpression } from "./scheduler-advanced";
 export { baseParseCron } from "./scheduler-advanced";
+
+// --- scheduler-utils.ts ---
+export type {
+  ScheduledJob as SchUScheduledJob,
+  SchedulerInstance as SchUInst,
+} from "./scheduler-utils";
+export { RateLimiter as SchURateLimiter } from "./scheduler-utils";
+export { debounce, throttle, rafLoop, scheduleIdle, createScheduler } from "./scheduler-utils";
+
+// --- scheduler-v3.ts ---
+export type {
+  TaskStatus as SchV3TaskStatus,
+  TaskResult as SchV3TaskResult,
+  TaskError as SchV3TaskError,
+  ScheduleOptions as SchV3ScheduleOpts,
+  Job as SchV3Job,
+  ResourcePoolConfig as SchV3ResPoolCfg,
+} from "./scheduler-v3";
+export { Scheduler as SchV3Scheduler } from "./scheduler-v3";
+export { CronJob as SchV3CronJob, CronScheduler, TokenBucketRateLimiter as SchV3TokenBucket, DeadlineManager } from "./scheduler-v3";
+
+// --- scheduler.ts ---
+export type {
+  ScheduledJob as SchScheduledJob,
+  JobStatus as SchJobStatus,
+  CronExpression,
+} from "./scheduler";
+export { Scheduler as SchBase } from "./scheduler";
+export { parseCronExpression, cronMatches, getNextCronRun } from "./scheduler";
