@@ -50573,3 +50573,44 @@ export {
   generateShareTarget,
   parseShareTargetFromUrl,
 } from "./share-api";
+
+// --- share ---
+export type {
+  ShareData as Shr_Data,
+  ShareOptions as Shr_Options,
+  ShareResult as Shr_Result,
+} from "./share";
+export {
+  twitterShareURL as shrTwitterURL,
+  facebookShareURL as shrFacebookURL,
+  linkedInShareURL as shrLinkedInURL,
+  redditShareURL as shrRedditURL,
+  emailShareURL as shrEmailURL,
+  telegramShareURL as shrTelegramURL,
+  whatsAppShareURL as shrWhatsAppURL,
+  getAllShareURLs as shrGetAllURLs,
+  isNativeShareAvailable as shrIsNativeAvailable,
+  share as shrShare,
+  generateOpenGraphMeta as shrGenerateOGMeta,
+  injectOpenGraphMeta as shrInjectOGMeta,
+  generateTwitterCardMeta as shrGenerateTwitterCardMeta,
+} from "./share";
+
+// --- sharing ---
+export type {
+  ShareData as Shrg_Data,
+  ShareOptions as Shrg_Options,
+  ShareTarget,
+  ShareManagerInstance,
+} from "./sharing";
+export { ShareManager, createShareManager as createShrgManager, quickShare, isShareAvailable as shrgIsAvailable } from "./sharing";
+
+// --- sheet-manager ---
+export type {
+  SheetSize as ShMgr_Size,
+  SheetSnapPoint as ShMgr_SnapPoint,
+  SheetOptions as ShMgr_Options,
+  SheetAction as ShMgr_Action,
+  SheetInstance as ShMgr_Instance,
+} from "./sheet-manager";
+export { SheetManager, createSheetManager } from "./sheet-manager";
