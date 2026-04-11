@@ -38795,3 +38795,37 @@ export {
   gcd as numGcd, lcm as numLcm,
   isInRange, wrapNumber,
 } from "./number-utils";
+
+// --- array-utils ---
+export {
+  chunkArray, splitAt, partitionArray, slidingWindow,
+  groupConsecutive, deepFlatten, uniqueBy,
+  intersectArrays, differenceArrays, symmetricDifference,
+  rotateArray, sampleArray, shuffleArray,
+  zipArrays, fillArray, argMin, argMax,
+} from "./array-utils";
+
+// --- object-utils ---
+export {
+  deepClone as objDeepClone, shallowClone,
+  pick, omit,
+  deepMerge as objDeepMerge,
+  get, set, has, unset,
+  mapValues, mapKeys, filterEntries, invert,
+  deepEqual as objDeepEqual,
+  allKeys, isEmpty as objIsEmpty, size: objSize,
+  deepFreeze as objDeepFreeze,
+  groupBy, countBy, indexBy,
+  values: objValues, keys: objKeys, toPairs, fromPairs,
+  defaults, ensurePath,
+} from "./object-utils";
+
+// --- type-utils ---
+export {
+  isNil, isNotNil, isPlainObject, isNonEmptyString, isNumber, isInteger, isFinite as typeIsFinite,
+  isBoolean, isFunction, isArray, isDate, isValidDate, isRegExp, isError, isPromise, isAsyncIterable, isIterable,
+  toString, toNumber, toInt, toFloat, toBoolean, toArray,
+  validateType, type SchemaValidationResult, type TypeSchema,
+  getConstructorName, typeOf,
+  deepClone as typeDeepClone, deepFreeze as typeDeepFreeze, deepMerge as typeDeepMerge,
+} from "./type-utils";
