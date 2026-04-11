@@ -46579,3 +46579,12 @@ export { createInputMask, applyMask as miApplyMask, dateMask, phoneMask, creditC
 // --- mask-utils ---
 export type { MaskType, MaskOptions as MsMaskOptions, MaskInstance as MsMaskInstance } from "./mask-utils";
 export { createMask } from "./mask-utils";
+// --- mask (overlay) ---
+export type { MaskMode, MaskOptions as MskOptions, CutoutOptions, MaskInstance as MskInstance } from "./mask";
+export { createMask, createSpotlight } from "./mask";
+// --- masked-input ---
+export type { MaskType as MdiMaskType, MaskOptions as MdiMaskOptions, MaskedInputInstance } from "./masked-input";
+export { createMaskedInput } from "./masked-input";
+// --- masonry-grid ---
+export type { MasonryItem, MasonryGridOptions, LayoutInfo, MasonryGridInstance } from "./masonry-grid";
+export { createMasonryGrid } from "./masonry-grid";
