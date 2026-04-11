@@ -39412,3 +39412,47 @@ export type {
   MarkdownOptions,
   HeadingInfo,
 } from "./markdown-utils";
+// --- chart-utils ---
+export {
+  calculateAxisScale,
+  formatAxisLabel,
+  valueToPixel,
+  pixelToValue,
+  aggregateByInterval,
+  movingAverage,
+  calculatePercentChanges,
+  findExtrema,
+  generateChartColors,
+  interpolateColor,
+  getDataStats,
+} from "./chart-utils";
+export type {
+  DataPoint,
+  DataSeries,
+  ChartConfig,
+  AxisScale,
+  ColorPaletteName,
+  DataStats as ChartDataStats,
+} from "./chart-utils";
+
+// --- calendar-utils ---
+export {
+  createCalendar,
+} from "./calendar-utils";
+export type {
+  CalendarView,
+  SelectionMode,
+  CalendarEvent,
+  CalendarOptions,
+  CalendarInstance,
+} from "./calendar-utils";
+
+// --- rating-utils ---
+export {
+  createRating,
+} from "./rating-utils";
+export type {
+  RatingIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating-utils";
