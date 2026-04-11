@@ -46923,3 +46923,46 @@ export {
   toastWarning,
   toastInfo,
 } from "./notification-toast";
+
+// --- notification-utils ---
+export type {
+  NotificationType as NUType,
+  NotificationPosition as NUPos,
+} from "./notification-utils";
+export type {
+  Notification as NUNotif,
+  NotificationOptions as NUOpts,
+  NotificationInstance as NUInst,
+  NotificationManagerConfig as NUMgrConfig,
+} from "./notification-utils";
+export {
+  NotificationManager as NUMgr,
+  getNotificationManager,
+  toast as notifToast,
+} from "./notification-utils";
+
+// --- notification-v2 ---
+export type {
+  NotificationV2Options as NV2Opts,
+  NotificationV2Instance as NV2Inst,
+  NotificationCenterConfig as NV2CenterConfig,
+  NotificationCenter as NV2CenterType,
+} from "./notification-v2";
+export {
+  createNotificationCenter as createNV2Center,
+} from "./notification-v2";
+
+// --- notification.ts (base) ---
+export type {
+  NotificationType as NBaseType,
+  NotificationPosition as NBasePos,
+} from "./notification";
+export type {
+  Notification as NBaseNotif,
+  NotificationOptions as NBaseOpts,
+  NotificationInstance as NBaseInst,
+  NotificationManagerConfig as NBaseMgrConfig,
+} from "./notification";
+export {
+  NotificationManager as NBaseMgr,
+} from "./notification";
