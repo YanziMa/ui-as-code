@@ -48591,3 +48591,50 @@ export type {
   RadarChartOptions,
   RadarChartInstance,
 } from "./radar-chart";
+
+// --- radial-bar-chart ---
+export {
+  RadialBarData,
+  RadialBarOptions as RBCOptions,
+  RadialBarInstance as RBCInstance,
+  createRadialBarChart,
+} from "./radial-bar-chart";
+export type {
+  RadialBarData,
+  RadialBarOptions as RBCOptionsType,
+  RadialBarInstance as RBCInstanceType,
+} from "./radial-bar-chart";
+
+// --- radio-group ---
+export {
+  RadioSize as RGRadioSize,
+  RadioVariant as RGRadioVariant,
+  RadioOption as RGRadioOption,
+  RadioGroupOptions as RGOptions,
+  RadioGroupInstance as RGInstance,
+  createRadioGroup as RGCreate,
+} from "./radio-group";
+export type {
+  RadioSize as RGRadioSizeType,
+  RadioVariant as RGRadioVariantType,
+  RadioOption as RGRadioOptionType,
+  RadioGroupOptions as RGOptionsType,
+  RadioGroupInstance as RGInstanceType,
+} from "./radio-group";
+
+// --- radio-utils ---
+export {
+  RadioSize as RURadioSize,
+  RadioVariant as RURadioVariant,
+  RadioOption as RURadioOption,
+  RadioGroupOptions as RUOptions,
+  RadioInstance as RUInstance,
+  createRadioGroup as RUCreate,
+} from "./radio-utils";
+export type {
+  RadioSize as RURadioSizeType,
+  RadioVariant as RURadioVariantType,
+  RadioOption as RURadioOptionType,
+  RadioGroupOptions as RUOptionsType,
+  RadioInstance as RUInstanceType,
+} from "./radio-utils";
