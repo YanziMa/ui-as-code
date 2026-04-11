@@ -16385,3 +16385,33 @@ export {
   randomHex,
   generatePassword,
 } from "./random";
+export {
+  mean,
+  median,
+  stddev,
+  percentile,
+  linearRegression,
+  sum,
+  minmax,
+  normalize,
+  movingAverage,
+  ema,
+} from "./math";
+export {
+  chunk,
+  unique,
+  groupBy,
+  sortBy,
+  flatten,
+  times,
+} from "./array";
+export {
+  deepClone,
+  pick,
+  omit,
+  isEmpty,
+  get as objGet,
+  set as objSet,
+  deepMerge,
+  deepFreeze,
+} from "./object";
