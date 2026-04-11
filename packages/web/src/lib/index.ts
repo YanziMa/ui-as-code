@@ -23818,3 +23818,55 @@ export type {
   RetryOptions as NetworkRetryOptions,
   RequestQueueItem,
 } from "./network-utils";
+
+// --- accessibility ---
+export {
+  progressBarAttrs,
+  switchAttrs,
+  liveRegion,
+  announce,
+  SKIP_LINK_ID,
+  skipLinkAttrs,
+  prefersReducedMotion,
+  animationDuration as a11yAnimationDuration,
+  focusTrap,
+  srOnly,
+  ROLES,
+} from "./accessibility";
+
+// --- motion ---
+export {
+  MotionValueImpl,
+  motionValue,
+  Spring,
+  createSpring,
+  inertia,
+  lerp,
+  interpolate,
+  clamp as motionClamp,
+  mapRange,
+} from "./motion";
+export type {
+  SpringConfig,
+  SpringState,
+  MotionValue,
+  MotionTransitionOptions,
+  InertiaOptions,
+} from "./motion";
+
+// --- theme-engine ---
+export {
+  ThemeEngine,
+  getThemeEngine,
+  setTheme,
+  toggleTheme,
+  getCurrentTheme,
+  isDarkMode,
+} from "./theme-engine";
+export type {
+  ThemeMode,
+  DesignToken,
+  TokenCategory,
+  ThemeDefinition,
+  ThemeEngineOptions,
+} from "./theme-engine";
