@@ -17679,3 +17679,45 @@ export type {
   DistributionType,
   DistributionOptions,
 } from "./math-advanced";
+export {
+  createAudioPlayer,
+  createAudioRecorder,
+  createAudioAnalyzer,
+  playBeep,
+  playMelody,
+} from "./audio";
+export type {
+  AudioPlayerOptions,
+  AudioRecorderOptions,
+  AudioVisualizerType,
+  AudioEffect,
+  AudioAnalyzerNode,
+  AudioPlayerInstance,
+  AudioRecorderInstance,
+} from "./audio";
+export {
+  createVideoPlayer,
+  supportsVideoCodec,
+  getOptimalResolution,
+  formatVideoDuration,
+  estimateBandwidth,
+} from "./video";
+export type {
+  VideoPlayerOptions,
+  VideoQuality,
+  VideoAspectRatio,
+  VideoPlayerInstance,
+} from "./video";
+export {
+  createDrawing,
+} from "./canvas-drawing";
+export type {
+  ToolType,
+  StrokeCap,
+  StrokeJoin,
+  Point as DrawingPoint,
+  Stroke,
+  DrawingLayer,
+  DrawingOptions,
+  DrawingInstance,
+} from "./canvas-drawing";
