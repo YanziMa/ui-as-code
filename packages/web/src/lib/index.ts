@@ -50644,3 +50644,36 @@ export {
   shimmerOnce,
   createShimmerText,
 } from "./shimmer-utils";
+
+// --- shimmer ---
+export type {
+  ShimmerDirection as Shim_Dir,
+  ShimmerEasing as Shim_Easing,
+  ShimmerOptions as Shim_Options,
+  ShimmerInstance as Shim_Instance,
+} from "./shimmer";
+export { createShimmer as createShim } from "./shimmer";
+
+// --- shortcuts-guide ---
+export type {
+  ShortcutItem as ScGuide_Item,
+  ShortcutCategory as ScGuide_Category,
+  ShortcutsGuideOptions as ScGuide_Options,
+  ShortcutsGuideInstance as ScGuide_Instance,
+} from "./shortcuts-guide";
+export {
+  createShortcutsGuide as createScGuide,
+  createShortcutHint,
+} from "./shortcuts-guide";
+
+// --- shortcuts-manager ---
+export type {
+  ModifierKey as ScMgr_ModifierKey,
+  KeyCombination as ScMgr_KeyCombination,
+  ShortcutBinding as ScMgr_Binding,
+  ShortcutConflict as ScMgr_Conflict,
+  ShortcutsManagerOptions as ScMgr_Options,
+  ShortcutsState as ScMgr_State,
+  ChordState as ScMgr_ChordState,
+} from "./shortcuts-manager";
+export { ShortcutsManager, createShortcutsManager } from "./shortcuts-manager";
