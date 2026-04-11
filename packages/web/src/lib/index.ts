@@ -26864,3 +26864,15 @@ export type { ImageViewerOptions, ImageViewerInstance, ImageViewerImage, ImageVi
 // --- Code Editor ---
 export { CodeEditorManager, createCodeEditor } from "./code-editor";
 export type { CodeEditorOptions, CodeEditorInstance } from "./code-editor";
+
+// --- Markdown Editor ---
+export { createMarkdownEditor } from "./markdown-editor";
+export type { MarkdownEditorOptions, MarkdownEditorInstance } from "./markdown-editor";
+
+// --- Chart ---
+export { ChartManager, createChart } from "./chart";
+export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoint } from "./chart";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette";
