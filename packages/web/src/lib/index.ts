@@ -28409,3 +28409,27 @@ export {
   type CarouselInstance,
   type CarouselSlide,
 } from "./carousel";
+
+// --- Batch 931: Slider, Switch, Radio Group ---
+export {
+  createSlider,
+  SliderManager,
+  type SliderOptions,
+  type SliderInstance,
+  type SliderMark,
+} from "./slider";
+export {
+  createSwitch,
+  type SwitchOptions,
+  type SwitchInstance,
+  type SwitchSize,
+  type SwitchVariant,
+} from "./switch";
+export {
+  createRadioGroup,
+  type RadioGroupOptions,
+  type RadioGroupInstance,
+  type RadioOption,
+  type RadioSize,
+  type RadioVariant,
+} from "./radio-group";
