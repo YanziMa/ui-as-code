@@ -24507,3 +24507,12 @@ export { createDialog, alertDialog, confirmDialog, dangerDialog, type DialogOpti
 
 // --- Popover ---
 export { createPopover, PopoverManager, type PopoverOptions, type PopoverTrigger, type PopoverPlacement, type PopoverInstance } from "./popover";
+
+// --- Dropdown ---
+export { createDropdown, type DropdownOptions, type DropdownItem, type DropdownEntry, type DropdownSeparator, type DropdownGroup, type DropdownInstance, type DropdownPlacement } from "./dropdown";
+
+// --- Select Menu ---
+export { createSelectMenu, type SelectMenuOptions, type SelectOption, type SelectGroup, type SelectMode, type SelectMenuInstance } from "./select-menu";
+
+// --- Autocomplete ---
+export { createAutocomplete, AutocompleteManager, type AutocompleteOptions, type AutocompleteOption, type AutocompleteInstance } from "./autocomplete";
