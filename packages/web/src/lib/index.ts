@@ -28203,3 +28203,15 @@ export type { AnchorNavOptions, AnchorNavInstance, AnchorLink } from "./anchor-n
 // --- Undo/Redo ---
 export { UndoHistory } from "./undo-redo";
 export type { UndoHistoryOptions, UndoState, UndoItem, UndoBranch, UndoChangeListener } from "./undo-redo";
+
+// --- Clipboard ---
+export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard } from "./clipboard";
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+
+// --- Search Highlight ---
+export { SearchHighlightManager, createSearchHighlight } from "./search-highlight";
+export type { SearchHighlightOptions, SearchHighlightInstance } from "./search-highlight";
+
+// --- Marquee ---
+export { MarqueeManager, createMarquee } from "./marquee";
+export type { MarqueeOptions, MarqueeInstance, MarqueeItem, MarqueeDirection, MarqueeStyle } from "./marquee";
