@@ -36191,3 +36191,30 @@ export type {
   ContextMenuOptions,
   ContextMenuInstance,
 } from "./context-menu-utils.js";
+// --- tooltip-utils ---
+export { createTooltip } from "./tooltip-utils.js";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip-utils.js";
+
+// --- popover-utils ---
+export { createPopover } from "./popover-utils.js";
+export type {
+  PopoverPlacement,
+  PopoverTrigger,
+  VirtualElement,
+  PopoverOptions,
+  PopoverInstance,
+} from "./popover-utils.js";
+
+// --- modal-utils ---
+export { createModal, createFocusTrap } from "./modal-utils.js";
+export type {
+  ModalSize,
+  ModalOptions,
+  ModalInstance,
+  FocusTrapConfig,
+} from "./modal-utils.js";
