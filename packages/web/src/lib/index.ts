@@ -16398,6 +16398,48 @@ export {
   ema,
 } from "./math";
 export {
+  isValidUrl,
+  getDomain,
+  getPathname,
+  getQueryParams,
+  isAbsoluteUrl,
+  isSameOrigin,
+  joinPath,
+  resolveUrl,
+  stripQueryAndHash,
+  getUrlExtension,
+} from "./url";
+export {
+  DomObserverManager,
+  takeSnapshot,
+  compareSnapshots,
+  createRouteChangeDetector,
+  createLazyLoader,
+} from "./dom-observer";
+export type {
+  ObserveTarget,
+  MutationOptions,
+  IntersectionOptions as DomIntersectionOptions,
+  ResizeOptions,
+  MutationRecordEx,
+  DomSnapshot,
+  ObserverCallbacks,
+  ObserverStats,
+} from "./dom-observer";
+export {
+  IntersectionManager,
+  createIntersectionObserver,
+  whenVisible,
+  whenHidden,
+  isInViewport,
+  getVisibilityPercent,
+} from "./intersection";
+export type {
+  IntersectionObserverOptions,
+  IntersectionObserverEntry as IntersectionObserverEntryType,
+  IntersectionObserverInstance,
+} from "./intersection";
+export {
   chunk,
   unique,
   groupBy,
