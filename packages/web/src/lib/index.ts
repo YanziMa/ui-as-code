@@ -29659,3 +29659,45 @@ export type { MdRenderOptions, MdRendererInstance, TocEntry } from "./markdown-r
 // --- syntax-highlighter ---
 export { createSyntaxHighlight } from "./syntax-highlighter";
 export type { SyntaxHighlightOptions, SyntaxHighlightInstance, HighlightTheme } from "./syntax-highlighter";
+// --- color-picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- date-picker ---
+export { DatePickerManager } from "./date-picker";
+export type {
+  DatePickerOptions,
+  DatePickerInstance,
+  DateRange,
+  DayCellState,
+  DatePickerMode,
+} from "./date-picker";
+
+// --- time-picker ---
+export { createTimePicker } from "./time-picker";
+export type { TimePickerOptions, TimePickerInstance, TimeFormat, TimePickerMode } from "./time-picker";
