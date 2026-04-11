@@ -40341,3 +40341,14 @@ export {
   type ColorPaletteName,
   type DataStats,
 } from "./chart-utils";
+// --- Data Grid ---
+export { createDataGrid } from "./data-grid-utils";
+export type { ColumnDef, DataGridOptions, DataGridInstance, SortDirection, ColumnAlign } from "./data-grid-utils";
+
+// --- Virtual List ---
+export { createVirtualList } from "./virtual-list-utils";
+export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from "./virtual-list-utils";
+
+// --- Keyboard Shortcuts ---
+export { createKeyboardShortcuts } from "./keyboard-shortcuts-utils";
+export type { ShortcutBinding, ShortcutGroup, KeyboardShortcutsOptions, KeyboardShortcutsInstance, ModifierKey, ShortcutScope } from "./keyboard-shortcuts-utils";
