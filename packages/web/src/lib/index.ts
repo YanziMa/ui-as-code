@@ -28789,3 +28789,15 @@ export type { PrintOptions, PrintManagerInstance } from "./print";
 // --- watermark ---
 export { createWatermark } from "./watermark";
 export type { WatermarkOptions, WatermarkInstance } from "./watermark";
+
+// --- page-visibility ---
+export { createVisibilityTracker, getPageVisibility, isPageVisible, runWhenVisible, waitForVisibility } from "./page-visibility";
+export type { VisibilityOptions, VisibilityInstance, VisibilityState } from "./page-visibility";
+
+// --- network-status ---
+export { createNetworkStatus, isOnline, getConnectionInfo, isSlowConnection, runWhenOnline, retryWhenOnline } from "./network-status";
+export type { NetworkInfo, NetworkOptions as NetworkStatusOptions, NetworkStatusInstance, EffectiveConnectionType } from "./network-status";
+
+// --- battery-api ---
+export { createBatteryMonitor, getBatteryInfo, isBatteryApiSupported, formatBatteryPercent, formatRemainingTime, runWithPowerAwareness } from "./battery-api";
+export type { BatteryInfo, BatteryOptions, BatteryInstance } from "./battery-api";
