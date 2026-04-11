@@ -17811,3 +17811,32 @@ export type {
   PaginationSize,
   PaginationVariant,
 } from "./pagination-nav";
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+  TimelineItemStatus,
+} from "./timeline";
+export {
+  StepperManager,
+  createStepper,
+} from "./stepper";
+export type {
+  StepConfig,
+  StepperOptions,
+  StepperInstance,
+  StepStatus,
+} from "./stepper";
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  RatingOptions,
+  RatingInstance,
+  StarIconType,
+} from "./rating";
