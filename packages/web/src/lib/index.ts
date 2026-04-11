@@ -47382,3 +47382,16 @@ export {
   Observer,
   createObserver,
 } from "./observer-pattern";
+
+// --- observer-utils ---
+export { Subscriber as OBUSubscriber, Unsubscriber as OBUnsub, EqualityFn as OBEqualityFn } from "./observer-utils";
+export type { ObservableOptions as OBOptions, ComputedOptions as OBComputedOptions, WatchOptions as OBWatchOptions } from "./observer-utils";
+export { Observable as OBObservable, Computed as OBComputed, ReactiveStore as OBReactiveStore, watch as OBWatch, batch as OBBatch, combineLatest as OBCombineLatest, mergeObservables as OBMergeObservables, reactive as OBReactive } from "./observer-utils";
+
+// --- observer ---
+export { Subscriber as ObsSubscriber } from "./observer";
+export type { Observable as ObsObservable, Computed as ObsComputed, WatchOptions as ObsWatchOptions } from "./observer";
+
+// --- ocr-engine ---
+export type { OcrRegion, OcrResult, OcrWord, OcrOptions, OcrInstance } from "./ocr-engine";
+export { createOcrEngine } from "./ocr-engine";
