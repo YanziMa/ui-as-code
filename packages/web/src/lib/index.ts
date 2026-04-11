@@ -24516,3 +24516,12 @@ export { createSelectMenu, type SelectMenuOptions, type SelectOption, type Selec
 
 // --- Autocomplete ---
 export { createAutocomplete, AutocompleteManager, type AutocompleteOptions, type AutocompleteOption, type AutocompleteInstance } from "./autocomplete";
+
+// --- Form Builder ---
+export { FormBuilder, createForm, validations, type FieldType, type FormField, type FormSection, type FormSchema, type FieldValidation, type SelectOption as FormSelectOption, type FormState, type FieldError } from "./form-builder";
+
+// --- Form Validator ---
+export { FormValidator, required, minLength, maxLength, pattern, email as emailValidator, urlValidator, range, matchesField, asyncValidator, custom as customValidator, type ValidatorFn, type FieldConfig, type FieldValidationResult, type FormValidationResult, type FormValidatorOptions } from "./form-validator";
+
+// --- Form Field ---
+export { createTextField, createTextArea, createSelectField, createCheckbox, createSwitch, createRadioGroup, createFileUpload, createRangeSlider, createRating, createColorPicker, type TextFieldOptions, type TextAreaOptions, type SelectFieldOptions, type CheckboxFieldOptions, type SwitchFieldOptions, type RadioGroupOptions, type FileUploadOptions, type RangeSliderOptions, type RatingFieldOptions, type ColorPickerOptions, type TextFieldInstance, type TextAreaInstance, type SelectFieldInstance, type CheckboxInstance, type SwitchInstance, type RadioGroupInstance, type FileUploadInstance, type RangeSliderInstance, type RatingInstance, type ColorPickerInstance } from "./form-field";
