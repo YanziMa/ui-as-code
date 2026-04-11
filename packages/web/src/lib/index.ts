@@ -21008,3 +21008,34 @@ export type {
 export {
   createCountdownTimer,
 } from "./countdown-timer";
+
+// --- Keyboard Navigation ---
+export type {
+  NavItem,
+  KeyboardNavOptions,
+  KeyboardNavInstance,
+} from "./keyboard-nav";
+export {
+  createKeyboardNav,
+} from "./keyboard-nav";
+
+// --- Side Panel ---
+export type {
+  SidePanelPosition,
+  SidePanelSize,
+  SidePanelOptions,
+  SidePanelInstance,
+} from "./side-panel";
+export {
+  createSidePanel,
+} from "./side-panel";
+
+// --- Rating Group ---
+export type {
+  RatingEntry,
+  RatingGroupOptions,
+  RatingGroupInstance,
+} from "./rating-group";
+export {
+  createRatingGroup,
+} from "./rating-group";
