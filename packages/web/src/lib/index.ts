@@ -27480,3 +27480,39 @@ export {
   type DropdownEntry,
   type DropdownPlacement,
 } from "./dropdown";
+
+// --- context-menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  type ContextMenuPosition,
+} from "./context-menu";
+
+// --- skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions,
+  type SkeletonTextOptions,
+  type SkeletonAvatarOptions,
+  type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
+
+// --- avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  type AvatarSize,
+  type AvatarShape,
+} from "./avatar";
