@@ -27952,3 +27952,14 @@ export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from ".
 // --- Markdown Renderer ---
 export { parseMarkdown, renderToHtml, generateToc, renderToc, extractFrontMatter, extractText, countWords, readingTime, mdToHtml } from "./markdown-renderer";
 export type { MdNode, MdNodeType, MdRenderOptions, TocEntry, FrontMatter } from "./markdown-renderer";
+// --- Chart Utils ---
+export { calculateAxisScale, formatAxisLabel, valueToPixel, pixelToValue, aggregateByInterval, movingAverage, calculatePercentChanges, findExtrema, generateChartColors, interpolateColor, getDataStats } from "./chart-utils";
+export type { DataPoint, DataSeries, ChartConfig, AxisScale, ColorPaletteName, DataStats } from "./chart-utils";
+
+// --- Animation Engine ---
+export { easings, getEasing, springAnimate, AnimationTimeline, createScrollAnimation, staggerElements, animateCounter, createParallax } from "./animation-engine";
+export type { EasingFunction, SpringConfig, SpringState, Keyframe, AnimationTrack, ScrollAnimationConfig } from "./animation-engine";
+
+// --- I18n Manager ---
+export { I18nManager, createI18n } from "./i18n-manager";
+export type { Locale, MessageKey, Namespace, LocaleData, MessageCatalog, PluralRuleSet, LocaleFormats, I18nConfig, InterpolationOptions, I18nStats } from "./i18n-manager";
