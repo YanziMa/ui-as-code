@@ -29308,3 +29308,15 @@ export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLumina
 // --- Date Picker (Batch 976) ---
 export type { DatePickerOptions, DatePickerInstance } from "./date-picker.js";
 export { DatePickerManager, createDatePicker } from "./date-picker.js";
+
+// --- Select Menu (Batch 977) ---
+export type { SelectOption, SelectGroup, SelectMode, SelectMenuOptions, SelectMenuInstance } from "./select-menu.js";
+export { createSelectMenu } from "./select-menu.js";
+
+// --- Slider Input (Batch 977) ---
+export type { SliderOrientation, SliderVariant, SliderOptions, SliderInstance } from "./slider-input.js";
+export { createSlider } from "./slider-input.js";
+
+// --- Toggle Switch (Batch 977) ---
+export type { ToggleVariant, ToggleSize, ToggleOptions, ToggleInstance } from "./toggle-switch.js";
+export { ToggleManager, createToggle } from "./toggle-switch.js";
