@@ -23230,3 +23230,46 @@ export {
   type StateConfigAlias,
   type TransitionAlias,
 } from "./state-machine";
+
+// --- validation ---
+export {
+  GenerateDiffSchema,
+  CreateFrictionSchema,
+  CreatePRSchema,
+  VoteSchema,
+  validateBody,
+  type GenerateDiffInput,
+  type CreateFrictionInput,
+  type CreatePRInput,
+  type VoteInput,
+} from "./validation";
+
+// --- keyboard ---
+export {
+  KeyboardManager,
+  createKeyboardManager,
+  formatShortcut,
+  matchesShortcut,
+  type KeyBinding,
+  type KeyChord,
+  type KeyboardManagerOptions,
+  type KeyboardManagerInstance,
+} from "./keyboard";
+
+// --- cursor ---
+export {
+  trackCursor,
+  getCursorPosition,
+  setCustomCursor,
+  setCursorStyle,
+  hideCursor,
+  createCursorTrail,
+  hideCursorOnIdle,
+  isNearCursor,
+  getCursorRelativeTo,
+  constrainToElement,
+  type CursorPosition,
+  type CursorTrailOptions,
+  type CustomCursorOptions,
+  type CursorTrackerOptions,
+} from "./cursor";
