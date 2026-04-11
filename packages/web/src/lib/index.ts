@@ -34134,3 +34134,30 @@ export {
   type OverlayOptions,
   type OverlayInstance,
 } from "./overlay-utils";
+
+// --- popover-utils ---
+export {
+  createPopover,
+  type PopoverPlacement,
+  type PopoverTrigger,
+  type VirtualElement,
+  type PopoverOptions,
+  type PopoverInstance,
+} from "./popover-utils";
+
+// --- dropdown-utils ---
+export {
+  createDropdown,
+  type DropdownItem,
+  type DropdownOptions,
+  type DropdownInstance,
+} from "./dropdown-utils";
+
+// --- context-menu-utils ---
+export {
+  createContextMenu,
+  type ContextMenuItem,
+  type ContextMenuContext,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+} from "./context-menu-utils";
