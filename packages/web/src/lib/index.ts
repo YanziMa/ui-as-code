@@ -29260,3 +29260,15 @@ export { createTabs } from "./tabs-manager.js";
 // --- Carousel (Batch 972) ---
 export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel.js";
 export { CarouselManager, createCarousel } from "./carousel.js";
+
+// --- Image Gallery (Batch 973) ---
+export type { GalleryImage, ImageGalleryOptions, ImageGalleryInstance } from "./image-gallery.js";
+export { ImageGalleryManager, createImageGallery } from "./image-gallery.js";
+
+// --- Lightbox (Batch 973) ---
+export type { LightboxImage, LightboxOptions, LightboxInstance } from "./lightbox.js";
+export { LightboxManager, createLightbox } from "./lightbox.js";
+
+// --- Rating Input (Batch 973) ---
+export type { RatingIcon, RatingSize, RatingInputOptions, RatingInputInstance } from "./rating-input.js";
+export { createRatingInput } from "./rating-input.js";
