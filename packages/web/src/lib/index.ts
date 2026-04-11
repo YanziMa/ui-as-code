@@ -48098,3 +48098,21 @@ export {
   PortalTarget, PortalOptions as PortOptions, PortalInstance as PortInstance,
   createPortal as createPort, PortalManager as PortMgr, getPortalManager,
 } from "./portal";
+// --- portals ---
+export {
+  PortalLayer, PortalTransition,
+  PortalEntry, PortalStackOptions, PortalStackInstance, PushOptions,
+  createPortalStack, quickPortal,
+} from "./portals";
+// --- positioning ---
+export {
+  // positioning.ts exports its own portal system types
+} from "./positioning";
+// --- price-tag-utils ---
+export {
+  CurrencyCode, PriceStyle, DiscountType, PeriodUnit,
+  CurrencyConfig, PriceTagOptions, PriceTagInstance,
+  TieredPrice, TieredPricingOptions, TieredPricingInstance,
+  formatCurrency, calculateSavings,
+  createPriceTag, createTieredPricing,
+} from "./price-tag-utils";

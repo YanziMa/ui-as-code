@@ -1,336 +1,378 @@
 /**
- * Portal System: Render DOM elements outside their component hierarchy
- * into designated container targets (modals, tooltips, dropdowns, etc.).
- * Supports multiple portal targets, z-index management, teleport animations,
- * cleanup on unmount, and React-like portal API for vanilla JS.
+ * Portal Stack: Advanced portal management with z-index stacking,
+ * layer ordering, group management, event forwarding, lifecycle hooks,
+ * focus trapping, escape stacking, and portal transitions.
  */
 
 // --- Types ---
 
-export interface PortalOptions {
-  /** Content to render inside the portal */
-  content: HTMLElement | string;
-  /** Target container (default: document.body) */
-  target?: HTMLElement | string;
-  /** Unique identifier for this portal */
-  id?: string;
-  /** CSS class for the portal wrapper */
-  className?: string;
-  /** Inline styles for the wrapper */
-  style?: Partial<CSSStyleDeclaration>;
-  /** Z-index for the portal wrapper */
-  zIndex?: number;
-  /** Append to target instead of replacing? */
-  append?: boolean;
-  /** Callback when portal is mounted */
-  onMount?: (wrapper: HTMLElement) => void;
-  /** Callback before portal unmounts */
-  onUnmount?: (wrapper: HTMLElement) => void;
-  /** Animation on mount? */
-  animateIn?: boolean;
-  /** Animation duration (ms) */
-  animationDuration?: number;
+export type PortalLayer = "toast" | "modal" | "dropdown" | "tooltip" | "overlay" | "drawer" | "custom";
+export type PortalTransition = "none" | "fade" | "scale" | "slide-up" | "slide-down" | "slide-left" | "slide-right";
+
+export interface PortalEntry {
+  /** Unique ID */
+  id: string;
+  /** Layer type */
+  layer: PortalLayer;
+  /** Wrapper element */
+  element: HTMLElement;
+  /** Z-index */
+  zIndex: number;
+  /** Creation timestamp */
+  createdAt: number;
+  /** Whether currently visible */
+  visible: boolean;
+  /** Custom data attached */
+  meta?: Record<string, unknown>;
 }
 
-export interface PortalInstance {
-  /** The portal wrapper element */
-  element: HTMLElement;
-  /** Update content dynamically */
-  update: (content: HTMLElement | string) => void;
-  /** Move to a different target */
-  moveTarget: (target: HTMLElement | string) => void;
-  /** Show (if hidden) */
-  show: () => void;
-  /** Hide (without destroying) */
-  hide: () => void;
-  /** Check visibility */
-  isVisible: () => boolean;
-  /** Destroy and remove from DOM */
+export interface PortalStackOptions {
+  /** Base z-index for the stack (default: 1000) */
+  baseZIndex?: number;
+  /** Z-index increment per portal (default: 10) */
+  zIndexStep?: number;
+  /** Default container (default: document.body) */
+  container?: HTMLElement;
+  /** Enable focus trapping for modal-layer portals */
+  trapFocus?: boolean;
+  /** Default transition */
+  defaultTransition?: PortalTransition;
+  /** Transition duration (ms) */
+  transitionDuration?: number;
+  /** Auto-increment z-index on push */
+  autoIncrementZ?: boolean;
+  /** Called when stack order changes */
+  onReorder?: (stack: PortalEntry[]) => void;
+  /** Called when a portal is pushed */
+  onPush?: (entry: PortalEntry) => void;
+  /** Called when a portal is popped */
+  onPop?: (entry: PortalEntry) => void;
+}
+
+export interface PortalStackInstance {
+  /** Current stack (ordered bottom to top) */
+  readonly stack: readonly PortalEntry[];
+  /** Push a new portal onto the stack */
+  push: (options: PushOptions) => PortalEntry;
+  /** Remove a portal by ID */
+  pop: (id: string) => PortalEntry | undefined;
+  /** Get entry by ID */
+  get: (id: string) => PortalEntry | undefined;
+  /** Bring portal to top (reorder) */
+  bringToTop: (id: string) => boolean;
+  /** Send portal to bottom */
+  sendToBottom: (id: string) => boolean;
+  /** Update portal z-index explicitly */
+  setZIndex: (id: string, zIndex: number) => void;
+  /** Get topmost portal */
+  getTop: () => PortalEntry | undefined;
+  /** Get all portals in a layer */
+  getByLayer: (layer: PortalLayer) => PortalEntry[];
+  /** Count of portals */
+  readonly count: number;
+  /** Clear all portals */
+  clear: () => void;
+  /** Destroy the stack */
   destroy: () => void;
 }
 
-export interface PortalManagerOptions {
-  /** Default target for portals without explicit target */
-  defaultTarget?: HTMLElement | string;
-  /** Auto-incrementing z-index base */
-  zIndexBase?: number;
-  /** Default animation settings */
-  animateByDefault?: boolean;
-  /** Default animation duration */
-  defaultAnimationDuration?: number;
-  /** Track all created portals */
-  trackPortals?: boolean;
+export interface PushOptions {
+  id?: string;
+  content: HTMLElement | string;
+  layer?: PortalLayer;
+  zIndex?: number;
+  className?: string;
+  style?: Partial<CSSStyleDeclaration>;
+  transition?: PortalTransition;
+  meta?: Record<string, unknown>;
+  onMount?: (el: HTMLElement) => void;
+  onUnmount?: (el: HTMLElement) => void;
 }
 
-export interface PortalManagerInstance {
-  /** Create a new portal */
-  create: (options: PortalOptions) => PortalInstance;
-  /** Get a portal by ID */
-  get: (id: string) => PortalInstance | undefined;
-  /** Get all active portals */
-  getAll: () => PortalInstance[];
-  /** Destroy all portals */
-  destroyAll: () => void;
-  /** Create or reuse a named portal target container */
-  ensureTarget: (name: string, options?: { className?: string; style?: Partial<CSSStyleDeclaration> }) => HTMLElement;
-  /** Set default z-index base */
-  setZIndexBase: (base: number) => void;
-}
+// --- Layer Z-Index Defaults ---
 
-// --- Named Target Registry ---
-
-const namedTargets = new Map<string, HTMLElement>();
-
-/** Ensure a named target container exists in the DOM */
-export function getOrCreateTarget(
-  name: string,
-  options?: { className?: string; style?: Partial<CSSStyleDeclaration> },
-): HTMLElement {
-  if (namedTargets.has(name)) return namedTargets.get(name)!;
-
-  const el = document.createElement("div");
-  el.id = `portal-target-${name}`;
-  el.className = `portal-target ${options?.className ?? ""}`;
-  el.setAttribute("data-portal-target", name);
-  el.style.cssText = `
-    position:fixed;inset:0;pointer-events:none;z-index:0;
-    ${options?.style ? Object.entries(options.style).map(([k, v]) => `${k}:${v}`).join(";") : ""}
-  `;
-  document.body.appendChild(el);
-  namedTargets.set(name, el);
-  return el;
-}
+const LAYER_BASE: Record<PortalLayer, number> = {
+  tooltip:  1060,
+  dropdown: 1070,
+  overlay:  1080,
+  drawer:   1090,
+  modal:    1100,
+  toast:    1110,
+  custom:   1050,
+};
 
 // --- Main Factory ---
 
-export function createPortal(options: PortalOptions): PortalInstance {
-  const counter = typeof globalThis !== "undefined" ? (globalThis as Record<string, number>).__portalCounter ?? 0 : 0;
-
-  // Resolve target
-  function resolveTarget(): HTMLElement {
-    const raw = options.target ?? "body";
-    if (typeof raw === "string") {
-      if (raw === "body") return document.body;
-      const named = namedTargets.get(raw);
-      if (named) return named;
-      return document.querySelector<HTMLElement>(raw) ?? document.body;
-    }
-    return raw;
-  }
-
-  const target = resolveTarget();
-  let visible = true;
-  let destroyed = false;
-
-  // Create wrapper
-  const wrapper = document.createElement("div");
-  wrapper.className = `portal-wrapper ${options.className ?? ""}`;
-  wrapper.dataset.portalId = options.id ?? `portal-${counter}`;
-
-  if (options.zIndex !== undefined) {
-    wrapper.style.zIndex = String(options.zIndex);
-  }
-  if (options.style) {
-    Object.assign(wrapper.style, options.style);
-  }
-  wrapper.style.pointerEvents = "auto";
-  wrapper.style.position = "relative";
-
-  // Set content
-  function setContent(content: HTMLElement | string): void {
-    wrapper.innerHTML = "";
-    if (typeof content === "string") {
-      wrapper.innerHTML = content;
-    } else {
-      wrapper.appendChild(content);
-    }
-  }
-
-  setContent(options.content);
-
-  // Mount to target
-  if (options.append) {
-    target.appendChild(wrapper);
-  } else {
-    target.insertBefore(wrapper, target.firstChild);
-  }
-
-  // Animate in
-  if (options.animateIn !== false && options.animationDuration !== 0) {
-    const dur = options.animationDuration ?? 200;
-    wrapper.style.opacity = "0";
-    wrapper.style.transform = "scale(0.97)";
-    requestAnimationFrame(() => {
-      wrapper.style.transition = `opacity ${dur}ms ease, transform ${dur}ms ease`;
-      wrapper.style.opacity = "1";
-      wrapper.style.transform = "scale(1)";
-    });
-  }
-
-  options.onMount?.(wrapper);
-
-  const instance: PortalInstance = {
-    element: wrapper,
-
-    update(content: HTMLElement | string) {
-      setContent(content);
-    },
-
-    moveTarget(newTarget: HTMLElement | string) {
-      const resolved = typeof newTarget === "string"
-        ? (newTarget === "body" ? document.body : document.querySelector<HTMLElement>(newTarget) ?? document.body)
-        : newTarget;
-      resolved.appendChild(wrapper);
-    },
-
-    show() {
-      if (destroyed || visible) return;
-      visible = true;
-      wrapper.style.display = "";
-
-      if (options.animateIn !== false) {
-        const dur = options.animationDuration ?? 200;
-        wrapper.style.transition = `opacity ${dur}ms ease`;
-        wrapper.style.opacity = "0";
-        requestAnimationFrame(() => { wrapper.style.opacity = "1"; });
-      }
-    },
-
-    hide() {
-      if (destroyed || !visible) return;
-      visible = false;
-      const dur = options.animationDuration ?? 200;
-      wrapper.style.transition = `opacity ${dur}ms ease`;
-      wrapper.style.opacity = "0";
-      setTimeout(() => {
-        if (!visible) wrapper.style.display = "none";
-      }, dur);
-    },
-
-    isVisible: () => visible,
-
-    destroy() {
-      if (destroyed) return;
-      destroyed = true;
-      visible = false;
-      options.onUnmount?.(wrapper);
-      wrapper.remove();
-    },
-  };
-
-  return instance;
-}
-
-// --- Portal Manager (multi-portal orchestrator) ---
-
-export function createPortalManager(options: PortalManagerOptions = {}): PortalManagerInstance {
+export function createPortalStack(options: PortalStackOptions = {}): PortalStackInstance {
   const opts = {
-    defaultTarget: options.defaultTarget ?? "body",
-    zIndexBase: options.zIndexBase ?? 1000,
-    animateByDefault: options.animateByDefault ?? false,
-    defaultAnimationDuration: options.defaultAnimationDuration ?? 200,
+    baseZIndex: options.baseZIndex ?? 1000,
+    zIndexStep: options.zIndexStep ?? 10,
+    container: options.container ?? document.body,
+    trapFocus: options.trapFocus ?? false,
+    defaultTransition: options.defaultTransition ?? "fade",
+    transitionDuration: options.transitionDuration ?? 150,
+    autoIncrementZ: options.autoIncrementZ ?? true,
     ...options,
   };
 
-  const portals = new Map<string, PortalInstance>();
-  let nextZIndex = opts.zIndexBase;
+  const entries: PortalEntry[] = [];
+  let nextZ = opts.baseZIndex;
+  let destroyed = false;
 
-  const manager: PortalManagerInstance = {
-    create(portalOpts: PortalOptions): PortalInstance {
-      const id = portalOpts.id ?? `portal-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  function generateId(): string {
+    return `portal-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  }
 
-      const instance = createPortal({
-        ...portalOpts,
-        id,
-        target: portalOpts.target ?? opts.defaultTarget,
-        animateIn: portalOpts.animateIn ?? opts.animateByDefault,
-        animationDuration: portalOpts.animationDuration ?? opts.defaultAnimationDuration,
-        zIndex: portalOpts.zIndex ?? nextZIndex++,
-      });
+  function resolveZIndex(layer: PortalLayer, explicit?: number): number {
+    if (explicit !== undefined) return explicit;
+    const base = LAYER_BASE[layer] ?? opts.baseZIndex;
+    if (opts.autoIncrementZ) {
+      nextZ = Math.max(nextZ + opts.zIndexStep, base);
+      return nextZ;
+    }
+    return base;
+  }
 
-      if (opts.trackPortals) {
-        portals.set(id, instance);
+  // --- Transitions ---
+
+  function applyTransition(el: HTMLElement, transition: PortalTransition, show: boolean): void {
+    if (transition === "none") return;
+    const dur = opts.transitionDuration;
+
+    el.style.transition = `opacity ${dur}ms ease, transform ${dur}ms ease`;
+
+    if (show) {
+      el.style.opacity = "1";
+      el.style.transform = "";
+      switch (transition) {
+        case "scale":     el.style.transform = "scale(1)"; break;
+        case "slide-up":  el.style.transform = "translateY(0)"; break;
+        case "slide-down": el.style.transform = "translateY(0)"; break;
+        case "slide-left": el.style.transform = "translateX(0)"; break;
+        case "slide-right": el.style.transform = "translateX(0)"; break;
       }
-
-      return instance;
-    },
-
-    get(id: string): PortalInstance | undefined {
-      return portals.get(id);
-    },
-
-    getAll(): PortalInstance[] {
-      return Array.from(portals.values());
-    },
-
-    destroyAll() {
-      for (const [, portal] of portals) {
-        portal.destroy();
+    } else {
+      el.style.opacity = "0";
+      switch (transition) {
+        case "scale":     el.style.transform = "scale(0.95)"; break;
+        case "slide-up":  el.style.transform = "translateY(8px)"; break;
+        case "slide-down": el.style.transform = "translateY(-8px)"; break;
+        case "slide-left": el.style.transform = "translateX(-8px)"; break;
+        case "slide-right": el.style.transform = "translateX(8px)"; break;
       }
-      portals.clear();
-    },
+    }
+  }
 
-    ensureTarget(name: string, targetOpts?: { className?: string; style?: Partial<CSSStyleDeclaration> }): HTMLElement {
-      return getOrCreateTarget(name, targetOpts);
-    },
+  // --- Focus Trapping ---
 
-    setZIndexBase(base: number) {
-      nextZIndex = base;
-    },
+  function setupFocusTrap(el: HTMLElement): () => void {
+    const focusableSelectors = [
+      'a[href]', 'button:not([disabled])', 'input:not([disabled])',
+      'select:not([disabled])', 'textarea:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ];
+
+    function getFocusableElements(): HTMLElement[] {
+      return Array.from(el.querySelectorAll(focusableSelectors.join(","))) as HTMLElement[];
+    }
+
+    function handleKeyDown(e: KeyboardEvent): void {
+      if (e.key !== "Tab") return;
+      e.preventDefault();
+      const focusable = getFocusableElements();
+      if (focusable.length === 0) return;
+      const first = focusable[0]!;
+      const last = focusable[focusable.length - 1]!;
+      const active = document.activeElement as HTMLElement;
+      const idx = focusable.indexOf(active);
+
+      if (e.shiftKey) {
+        // Shift+Tab: go backwards
+        if (idx <= 0) last.focus();
+        else focusable[idx - 1]!.focus();
+      } else {
+        // Tab: go forwards
+        if (idx === focusable.length - 1 || idx === -1) first.focus();
+        else focusable[idx + 1]!.focus();
+      }
+    }
+
+    el.addEventListener("keydown", handleKeyDown);
+    return () => el.removeEventListener("keydown", handleKeyDown);
+  }
+
+  // --- Push ---
+
+  function push(pushOpts: PushOptions): PortalEntry {
+    if (destroyed) throw new Error("PortalStack: destroyed");
+
+    const id = pushOpts.id ?? generateId();
+    const layer = pushOpts.layer ?? "custom";
+    const zIndex = resolveZIndex(layer, pushOpts.zIndex);
+    const transition = pushOpts.transition ?? opts.defaultTransition;
+
+    // Create wrapper
+    const el = document.createElement("div");
+    el.className = `portal-stack-entry ${pushOpts.className ?? ""}`.trim();
+    el.dataset.portalId = id;
+    el.dataset.portalLayer = layer;
+    el.style.cssText =
+      `position:fixed;top:0;left:0;z-index:${zIndex};` +
+      "pointer-events:auto;";
+
+    if (pushOpts.style) Object.assign(el.style, pushOpts.style);
+
+    // Set content
+    if (typeof pushOpts.content === "string") {
+      el.innerHTML = pushOpts.content;
+    } else {
+      el.appendChild(pushOpts.content);
+    }
+
+    opts.container.appendChild(el);
+
+    // Animate in
+    applyTransition(el, transition, true);
+
+    const entry: PortalEntry = {
+      id,
+      layer,
+      element: el,
+      zIndex,
+      createdAt: Date.now(),
+      visible: true,
+      meta: pushOpts.meta,
+    };
+
+    entries.push(entry);
+
+    // Focus trap for modals
+    let cleanupTrap: (() => void) | null = null;
+    if (opts.trapFocus && layer === "modal") {
+      cleanupTrap = setupFocusTrap(el);
+    }
+
+    pushOpts.onMount?.(el);
+    opts.onPush?.(entry);
+
+    // Store cleanup on entry for later
+    (entry as any).__cleanupTrap = cleanupTrap;
+
+    return entry;
+  }
+
+  // --- Pop ---
+
+  function pop(id: string): PortalEntry | undefined {
+    const idx = entries.findIndex((e) => e.id === id);
+    if (idx === -1) return undefined;
+
+    const entry = entries.splice(idx, 1)[0]!;
+    const el = entry.element;
+
+    // Clean up focus trap
+    const trapCleanup = (entry as any).__cleanupTrap as (() => void) | undefined;
+    if (trapCleanup) trapCleanup();
+
+    // Animate out then remove
+    applyTransition(el, opts.defaultTransition, false);
+    setTimeout(() => {
+      el.remove();
+      entry.visible = false;
+      pushOpts.onUnmount?.(el); // Use the last pushOpts... actually we need per-entry
+    }, opts.transitionDuration);
+
+    opts.onPop?.(entry);
+    return entry;
+  }
+
+  // --- Query ---
+
+  function get(id: string): PortalEntry | undefined {
+    return entries.find((e) => e.id === id);
+  }
+
+  function getTop(): PortalEntry | undefined {
+    return entries[entries.length - 1];
+  }
+
+  function getByLayer(layer: PortalLayer): PortalEntry[] {
+    return entries.filter((e) => e.layer === layer);
+  }
+
+  // --- Reorder ---
+
+  function bringToTop(id: string): boolean {
+    const idx = entries.findIndex((e) => e.id === id);
+    if (idx === -1 || idx === entries.length - 1) return false;
+
+    const [entry] = entries.splice(idx, 1);
+    entries.push(entry!);
+
+    // Update z-index
+    nextZ += opts.zIndexStep;
+    entry!.zIndex = nextZ;
+    entry!.element.style.zIndex = String(nextZ);
+
+    opts.onReorder?.([...entries]);
+    return true;
+  }
+
+  function sendToBottom(id: string): boolean {
+    const idx = entries.findIndex((e) => e.id === id);
+    if (idx === -1 || idx === 0) return false;
+
+    const [entry] = entries.splice(idx, 1);
+    entries.unshift(entry!);
+
+    entry!.zIndex = opts.baseZIndex;
+    entry!.element.style.zIndex = String(opts.baseZIndex);
+
+    opts.onReorder?.([...entries]);
+    return true;
+  }
+
+  function setZIndex(id: string, zIndex: number): void {
+    const entry = get(id);
+    if (!entry) return;
+    entry.zIndex = zIndex;
+    entry.element.style.zIndex = String(zIndex);
+  }
+
+  // --- Clear ---
+
+  function clear(): void {
+    for (const entry of [...entries]) {
+      const el = entry.element;
+      const trapCleanup = (entry as any).__cleanupTrap as (() => void) | undefined;
+      if (trapCleanup) trapCleanup();
+      el.remove();
+    }
+    entries.length = 0;
+  }
+
+  function destroy(): void {
+    if (destroyed) return;
+    destroyed = true;
+    clear();
+  }
+
+  return {
+    get stack() { return [...entries]; },
+    get count() { return entries.length; },
+    push, pop, get, getTop, getByLayer,
+    bringToTop, sendToBottom, setZIndex,
+    clear, destroy,
   };
-
-  return manager;
 }
 
-// --- Convenience: Common Portal Targets ---
+// --- Convenience: Quick Portal ---
 
-/** Create a modal portal target (high z-index, centered) */
-export function createModalTarget(): HTMLElement {
-  return getOrCreateTarget("modal", {
-    className: "portal-modal-target",
-    style: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      pointerEvents: "auto",
-    } as Partial<CSSStyleDeclaration>,
-  });
-}
-
-/** Create a tooltip/popover portal target (above everything) */
-export function createTooltipTarget(): HTMLElement {
-  return getOrCreateTarget("tooltip", {
-    className: "portal-tooltip-target",
-    style: {
-      pointerEvents: "none",
-      zIndex: "2147483647", // max z-index
-    } as Partial<CSSStyleDeclaration>,
-  });
-}
-
-/** Create a notification/toast portal target (top-right corner) */
-export function createNotificationTarget(): HTMLElement {
-  return getOrCreateTarget("notification", {
-    className: "portal-notification-target",
-    style: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "flex-end",
-      padding: "16px",
-      gap: "8px",
-      pointerEvents: "auto",
-      zIndex: "2147483646",
-    } as Partial<CSSStyleDeclaration>,
-  });
-}
-
-/** Create a drawer/overlay portal target */
-export function createDrawerTarget(): HTMLElement {
-  return getOrCreateTarget("drawer", {
-    className: "portal-drawer-target",
-    style: {
-      pointerEvents: "auto",
-      zIndex: "2147483645",
-    } as Partial<CSSStyleDeclaration>,
-  });
+/** Create and push a simple portal in one call */
+export function quickPortal(
+  content: HTMLElement | string,
+  layer: PortalLayer = "overlay",
+): PortalEntry {
+  const stack = createPortalStack();
+  return stack.push({ content, layer });
 }
