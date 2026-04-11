@@ -31444,3 +31444,15 @@ export type {
 // --- Observable ---
 export { Observable, Computed, ReactiveStore } from "./observable";
 export type { Unsubscribe, SubscriberFn } from "./observable";
+
+// --- Virtual Scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type { ScrollItem, VisibleRange, ScrollerConfig, ScrollerState, ScrollToOptions } from "./virtual-scroller";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
+
+// --- Tree View ---
+export { TreeView } from "./tree-view";
+export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
