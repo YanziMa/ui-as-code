@@ -31422,3 +31422,25 @@ export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteStat
 // --- Hotkeys ---
 export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString } from "./hotkeys";
 export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
+
+// --- Scheduler ---
+export { Scheduler, parseCronExpression, cronMatches, getNextCronRun } from "./scheduler";
+export type { ScheduledJob, JobStatus, CronExpression } from "./scheduler";
+
+// --- Event Bus v2 ---
+export { EventBusV2, createEventBusV2 } from "./event-bus-v2";
+export type {
+  BaseEvent,
+  TypedEvent,
+  EventHandler,
+  SubscriptionOptions,
+  SubscriptionHandle,
+  MiddlewareContext,
+  EventMiddleware,
+  BusMetrics,
+  EventBusConfig,
+} from "./event-bus-v2";
+
+// --- Observable ---
+export { Observable, Computed, ReactiveStore } from "./observable";
+export type { Unsubscribe, SubscriberFn } from "./observable";
