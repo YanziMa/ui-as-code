@@ -26801,3 +26801,15 @@ export type { RadioOptions, RadioOption, RadioGroupOptions, RadioGroupInstance, 
 // input.ts
 export { createInput } from "./input";
 export type { InputOptions, InputInstance, InputSize, InputVariant, InputState } from "./input";
+
+// --- Select ---
+export { SelectManager, createSelect } from "./select";
+export type { SelectOption, SelectOptions, SelectInstance } from "./select";
+
+// --- Textarea ---
+export { createTextarea } from "./textarea";
+export type { TextareaOptions, TextareaInstance, TextareaSize, TextareaState } from "./textarea";
+
+// --- Form ---
+export { createForm } from "./form";
+export type { FormOptions, FormInstance, FormField, FormGroup, FieldType, ValidationRule } from "./form";
