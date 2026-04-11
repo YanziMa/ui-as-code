@@ -39648,3 +39648,29 @@ export type {
   EmptyStateOptions,
   EmptyStateType,
 } from "./empty-state-utils";
+// --- Batch 1240: Avatar Group, Statistics, Heatmap ---
+export { createAvatarGroup } from "./avatar-group-utils";
+export type {
+  AvatarGroupItem,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group-utils";
+
+export {
+  createStatCard,
+  createComparisonBar,
+  createMiniChart,
+} from "./statistics-utils";
+export type {
+  StatCardOptions,
+  ComparisonBarOptions,
+  MiniChartOptions,
+} from "./statistics-utils";
+
+export { createHeatmap } from "./heatmap-utils";
+export type {
+  HeatmapDataPoint,
+  HeatmapOptions,
+  HeatmapInstance,
+  HeatmapColorScale,
+} from "./heatmap-utils";
