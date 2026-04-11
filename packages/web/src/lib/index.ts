@@ -31346,3 +31346,45 @@ export type {
   GestureEvent,
   GestureInstance,
 } from "./gesture";
+// --- Clipboard ---
+export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard } from "./clipboard";
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+
+// --- Drag & Drop ---
+export { createDropZone, readFileAsText as dndReadFileAsText, readFileAsDataURL as dndReadFileAsDataURL, readFileAsArrayBuffer as dndReadFileAsArrayBuffer, getFileInfo, createSortableList } from "./drag-drop";
+export type { DragItem, DropZoneConfig, DndState, FileInfo, SortableItem, SortableConfig, DropZoneController, SortableController } from "./drag-drop";
+
+// --- File Utils ---
+export {
+  MIME_MAP,
+  getMimeType,
+  getExtension,
+  getBaseName,
+  categorizeFile,
+  isFileType,
+  FILE_EXTENSIONS,
+  validateFile as fileValidateFile,
+  validateFiles,
+  sanitizeFilename,
+  uniqueFilename,
+  formatBytes as fileFormatBytes,
+  formatFileSizeShort,
+  getFileIcon,
+  parseDropEvent,
+  setupDropZone,
+  readFileAsText as fileReadText,
+  readFileAsDataURL as fileReadDataURL,
+  readFileAsArrayBuffer as fileReadArrayBuffer,
+  readFileAsBinaryString,
+  readFileHeader,
+  splitFileIntoChunks,
+  UploadTracker,
+} from "./file-utils";
+export type {
+  FileCategory,
+  FileValidationOptions,
+  FileValidationError,
+  DropEvent,
+  FileChunk,
+  UploadProgress,
+} from "./file-utils";
