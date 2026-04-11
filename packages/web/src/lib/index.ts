@@ -27295,3 +27295,15 @@ export {
   type DividerOrientation,
   type DividerStyle,
 } from "./divider";
+
+// --- scroll-progress ---
+export { createScrollProgress } from "./scroll-progress.js";
+export type { ScrollProgressOptions, ScrollProgressInstance, ProgressBarPosition, ProgressBarVariant } from "./scroll-progress.js";
+
+// --- countdown ---
+export { createCountdown, CountdownManager } from "./countdown.js";
+export type { CountdownOptions, CountdownInstance, CountdownSize, CountdownVariant } from "./countdown.js";
+
+// --- typewriter ---
+export { createTypewriter, TypewriterManager } from "./typewriter.js";
+export type { TypewriterOptions, TypewriterInstance } from "./typewriter.js";
