@@ -45536,3 +45536,15 @@ export type { HotkeyBinding, HotkeyEvent, RecordedHotkey, HotkeyHint, HotkeyStat
 // --- hotkey-parser-utils ---
 export { parseHotkey, parseHotkeys, hotkeysMatch, eventMatchesHotkey, formatHotkey, findConflicts, eventToHotkey, hotkeyHash } from "./hotkey-parser-utils";
 export type { ParsedHotkey, HotkeyParseOptions, HotkeyCompareOptions, ModifierKey } from "./hotkey-parser-utils";
+
+// --- hotkey-utils ---
+export { createHotkeyManager as HkuCreateHotkeyManager, normalizeKeyEvent as HkuNormalizeKeyEvent, parseBinding, formatHotkey as HkuFormatHotkey } from "./hotkey-utils";
+export type { KeyBinding as HkuKeyBinding, HotkeyManagerOptions as HkuOptions, HotkeyManagerInstance as HkuInstance } from "./hotkey-utils";
+
+// --- hotkey ---
+export { createHotkeyDisplay, createHotkeyManager as HkCreateHotkeyManager, parseHotkey as HkParseHotkey, formatHotkey as HkFormatHotkey, normalizeKeyName, matchesKeyEvent, combosEqual as HkCombosEqual } from "./hotkey";
+export type { KeyCombo as HkKeyCombo, HotkeyVariant, HotkeyDisplayOptions, HotkeyDisplayInstance, HotkeyBinding as HkBinding, HotkeyManagerOptions as HkOptions, HotkeyManagerInstance as HkInstance } from "./hotkey";
+
+// --- hotkeys-display ---
+export { HotkeyDisplayRenderer, renderHotkey, hotkeyHtml } from "./hotkeys-display";
+export type { KeyCombo as HdKeyCombo, KeyDisplayStyle, HotkeyDisplayOptions as HdOptions, HotkeyDisplayInstance as HdInstance } from "./hotkeys-display";
