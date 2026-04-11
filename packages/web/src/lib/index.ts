@@ -51212,3 +51212,65 @@ export {
   type SwipeDirection as StkLyt_SwipeDirection,
   type StackAnimation as StkLyt_Animation,
 } from "./stack-layout";
+
+// --- stack-utils ---
+export {
+  Stack,
+  UndoRedoManager,
+  CallTracker,
+  type StackOptions,
+  type UndoRedoState,
+} from "./stack-utils";
+export {
+  Stack as StkUtl_Stack,
+  UndoRedoManager as StkUtl_UndoRedoManager,
+  CallTracker as StkUtl_CallTracker,
+  type StackOptions as StkUtl_Options,
+  type UndoRedoState as StkUtl_UndoRedoState,
+} from "./stack-utils";
+
+// --- stack ---
+export {
+  createStack,
+  VStack,
+  HStack,
+  CenterStack,
+  BetweenStack,
+  EvenStack,
+  type StackOptions,
+  type StackInstance,
+  type StackDirection,
+  type StackAlign,
+  type StackJustify,
+  type StackSize,
+} from "./stack";
+export {
+  createStack as Stk_createStack,
+  VStack as Stk_VStack,
+  HStack as Stk_HStack,
+  CenterStack as Stk_CenterStack,
+  BetweenStack as Stk_BetweenStack,
+  EvenStack as Stk_EvenStack,
+  type StackOptions as Stk_Options,
+  type StackInstance as Stk_Instance,
+  type StackDirection as Stk_Direction,
+  type StackAlign as Stk_Align,
+  type StackJustify as Stk_Justify,
+  type StackSize as Stk_Size,
+} from "./stack";
+
+// --- star-rating ---
+export {
+  createStarRating,
+  type StarRatingOptions,
+  type StarRatingInstance,
+  type StarRatingSize,
+  type StarIcon,
+} from "./star-rating";
+export {
+  createStarRating as StrRtg_createRating,
+  type StarRatingOptions as StrRtg_Options,
+  type StarRatingInstance as StrRtg_Instance,
+  type StarRatingSize as StrRtg_Size,
+  type StarIcon as StrRtg_Icon,
+} from "./star-rating";
