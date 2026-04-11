@@ -23482,3 +23482,37 @@ export {
   type PasteEvent,
   type ClipboardHistoryEntry,
 } from "./copy-paste";
+
+// --- print ---
+export {
+  PrintManager,
+  createPrintManager,
+  quickPrint,
+  addPageBreakBefore,
+  addPageBreakAfter,
+  avoidBreakInside,
+  type PrintOptions,
+  type PrintManagerInstance,
+} from "./print";
+
+// --- pdf-utils ---
+export {
+  generatePdfFromHtml,
+  elementToPdf,
+  estimatePrintPages,
+  downloadBlob,
+  blobToDataUrl,
+  dataUrlToBlob,
+  printElement,
+  type PdfGenerationOptions,
+  type PdfPageInfo,
+  type TextMetrics,
+} from "./pdf-utils";
+
+// --- csv ---
+export {
+  parseCsv,
+  generateCsv,
+  csvToHtmlTable,
+  type CsvOptions,
+} from "./csv";
