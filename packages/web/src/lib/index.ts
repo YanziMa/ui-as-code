@@ -26876,3 +26876,15 @@ export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoi
 // --- Command Palette ---
 export { CommandPalette } from "./command-palette";
 export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette";
+
+// --- Split View ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, SplitDirection } from "./split-view";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
+
+// --- Virtual Scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type { ScrollerConfig, ScrollerState, ScrollItem, VisibleRange, ScrollToOptions } from "./virtual-scroller";
