@@ -28642,3 +28642,15 @@ export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "./mo
 // --- Tooltip ---
 export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
 export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// --- Dropdown Menu ---
+export { createDropdown } from "./dropdown";
+export type { DropdownOptions, DropdownInstance, DropdownItem, DropdownEntry, DropdownSeparator, DropdownGroup, DropdownPlacement } from "./dropdown";
+
+// --- Drawer ---
+export { createDrawer } from "./drawer";
+export type { DrawerOptions, DrawerInstance, DrawerSide, DrawerSize } from "./drawer";
