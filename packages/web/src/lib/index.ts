@@ -21644,3 +21644,34 @@ export {
   SearchInputManager,
   createSearchInput,
 } from "./search-input";
+
+// --- Anchor ---
+export type {
+  AnchorLink,
+  AnchorOptions,
+  AnchorInstance,
+} from "./anchor";
+export {
+  createAnchor,
+} from "./anchor";
+
+// --- Affix ---
+export type {
+  AffixOptions,
+  AffixInstance,
+} from "./affix";
+export {
+  createAffix,
+} from "./affix";
+
+// --- Back to Top ---
+export type {
+  BttPosition,
+  BttSize,
+  BttShape,
+  BackToTopOptions,
+  BackToTopInstance,
+} from "./back-to-top";
+export {
+  createBackToTop,
+} from "./back-to-top";
