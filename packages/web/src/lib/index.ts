@@ -46570,3 +46570,12 @@ export { createMarqueeCarousel } from "./marquee-carousel";
 // --- marquee-utils ---
 export type { MarqueeDirection as MqDirection, MarqueeFillMode as MqFillMode, MarqueeOptions, MarqueeInstance as MqInstance } from "./marquee-utils";
 export { createMarquee } from "./marquee-utils";
+// --- marquee ---
+export type { MarqueeDirection as MrDirection, MarqueeStyle, MarqueeItem as MrItem, MarqueeOptions, MarqueeInstance as MrInstance } from "./marquee";
+export { MarqueeManager, createMarquee as createMarqueeMgr } from "./marquee";
+// --- mask-input ---
+export type { MaskConfig, MaskInstance as MiMaskInstance } from "./mask-input";
+export { createInputMask, applyMask as miApplyMask, dateMask, phoneMask, creditCardMask, currencyMask, timeMask } from "./mask-input";
+// --- mask-utils ---
+export type { MaskType, MaskOptions as MsMaskOptions, MaskInstance as MsMaskInstance } from "./mask-utils";
+export { createMask } from "./mask-utils";
