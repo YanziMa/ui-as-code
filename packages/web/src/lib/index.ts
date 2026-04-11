@@ -50895,3 +50895,29 @@ export {
   type SliderInstance as SldInpUtl_SliderInstance,
   createSlider as SldInpUtl_createSlider,
 } from "./slider-input-utils";
+
+// --- slider-input ---
+export {
+  type SliderOrientation as SldInp_SliderOrientation,
+  type SliderVariant as SldInp_SliderVariant,
+  type SliderOptions as SldInp_SliderOptions,
+  type SliderInstance as SldInp_SliderInstance,
+  createSlider as SldInp_createSlider,
+} from "./slider-input";
+
+// --- slider-range ---
+export {
+  type SliderOrientation as SldRng_SliderOrientation,
+  type SliderRangeOptions as SldRng_SliderRangeOptions,
+  type SliderRangeInstance as SldRng_SliderRangeInstance,
+  createSliderRange as SldRng_createSliderRange,
+} from "./slider-range";
+
+// --- slider-utils ---
+export {
+  type SliderSize as SldUtl_SliderSize,
+  type SliderVariant as SldUtl_SliderVariant,
+  type SliderOptions as SldUtl_SliderOptions,
+  type SliderInstance as SldUtl_SliderInstance,
+  createSlider as SldUtl_createSlider,
+} from "./slider-utils";
