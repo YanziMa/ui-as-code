@@ -27785,3 +27785,11 @@ export { ChipInputManager, createChipInput } from "./chip-input";
 export type { ChipInputOptions, ChipInputInstance, ChipData, ChipSuggestion } from "./chip-input";
 export { createStatCard } from "./stat-card";
 export type { StatCardOptions, TrendDirection, StatCardVariant } from "./stat-card";
+
+// --- Batch 879: Data Grid, Form Wizard, Search Input ---
+export { DataGridManager, createDataGrid } from "./data-grid";
+export type { GridOptions, DataGridInstance, GridColumn, GridRow, GridGrouping } from "./data-grid";
+export { FormWizardManager, createFormWizard } from "./form-wizard";
+export type { WizardOptions, WizardInstance, WizardStep } from "./form-wizard";
+export { SearchInputManager, createSearchInput } from "./search-input";
+export type { SearchInputOptions, SearchInputInstance, SuggestionItem, SearchHistoryEntry } from "./search-input";
