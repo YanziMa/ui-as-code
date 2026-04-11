@@ -31710,3 +31710,28 @@ export type {
   CalendarView,
   WeekStart,
 } from "./calendar-view";
+
+// --- Batch 1065: Mention, Color Swatch, Signature Pad ---
+
+export { MentionManager, createMention } from "./mention";
+export type {
+  MentionOptions,
+  MentionInstance,
+  MentionOption,
+} from "./mention";
+
+export { ColorSwatchManager, createColorSwatch } from "./color-swatch";
+export type {
+  ColorSwatchOptions,
+  ColorSwatchInstance,
+  SwatchColor,
+  ColorPalette,
+} from "./color-swatch";
+
+export { SignaturePadManager, createSignaturePad } from "./signature-pad";
+export type {
+  SignaturePadOptions,
+  SignaturePadInstance,
+  Stroke,
+  StrokePoint,
+} from "./signature-pad";
