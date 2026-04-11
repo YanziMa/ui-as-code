@@ -40418,3 +40418,14 @@ export type { CreateElementOptions, QueryOptions, DomDiffResult } from "./dom-ut
 // --- Event Bus ---
 export { EventBus, getEventBus, destroyGlobalBus } from "./event-bus-utils";
 export type { EventBusOptions, Subscription, EventHandler, EventMiddleware, EventKey } from "./event-bus-utils";
+// --- Storage ---
+export { StorageManager, createLocalStorage, createSessionStorage, createMemoryStore } from "./storage-utils";
+export type { StorageOptions, StorageEntry, StorageStats, StorageMigration, StorageBackend } from "./storage-utils";
+
+// --- Clipboard ---
+export { copyToClipboard, copyRich, copyImage, copyFiles, readClipboard, readClipboardText, cutToClipboard, requestClipboardPermission, checkClipboardReadPermission, isClipboardSupported, selectAll, selectRange, clearSelection, getSelectedText, getSelectionTarget, ClipboardHistory, detectClipboardFormats, hasImageInClipboard, hasFilesInClipboard, copyWithFeedback, copySelection, onClipboardChange } from "./clipboard-utils";
+export type { ClipboardData, CopyOptions, PasteOptions, PasteResult, ClipboardHistoryEntry, ClipboardHistoryOptions } from "./clipboard-utils";
+
+// --- Notification (Toast) ---
+export { NotificationManager } from "./notification-utils";
+export type { NotificationOptions, NotificationInstance, NotificationManagerConfig, NotificationType, NotificationPosition } from "./notification-utils";
