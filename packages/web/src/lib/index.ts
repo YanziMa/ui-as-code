@@ -32966,3 +32966,93 @@ export type {
   ObserverCallbacks,
   ObserverStats,
 } from "./dom-observer";
+
+// --- form-utils ---
+export {
+  createForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  serializeForm,
+  populateForm,
+  clearForm,
+  linkErrorToField,
+  unlinkErrorFromField,
+  createFormAnnouncer,
+} from "./form-utils";
+export type {
+  FormFieldConfig,
+  FormValidationRule,
+  FormFieldState,
+  FormOptions,
+  FormInstance,
+  StepConfig,
+  MultiStepFormOptions,
+  MultiStepFormInstance,
+  ConditionRule,
+  ConditionalField,
+} from "./form-utils";
+
+// --- accessibility-utils ---
+export {
+  setAria,
+  getAria,
+  setRole,
+  setAccessibleName,
+  hideFromScreenReader,
+  showToScreenReader,
+  getFocusableElements,
+  focusFirst,
+  focusLast,
+  isFocusable,
+  createFocusTrap,
+  setupRovingTabindex,
+  announce,
+  announceAssertive,
+  contrastRatio,
+  checkContrast,
+  suggestTextColor,
+  getHeadingHierarchy,
+  validateHeadingHierarchy,
+  findLandmarks,
+  hasProperLandmarks,
+  prefersReducedMotion,
+  prefersHighContrast,
+  prefersDarkMode,
+  prefersLightMode,
+  onPreferenceChange,
+  createSkipLink,
+  openAccessibleModal,
+} from "./accessibility-utils";
+export type {
+  ContrastResult,
+  FocusableElement,
+  HeadingInfo,
+  LandmarkInfo,
+} from "./accessibility-utils";
+
+// --- performance-utils ---
+export {
+  PerfObserver,
+  measureSync,
+  measureAsync,
+  perfMark,
+  perfMeasure,
+  measureBetween,
+  FPSCounter,
+  getMemoryUsage,
+  getMemoryPercent,
+  MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming,
+  collectWebVitals,
+  getResourceTiming,
+  findSlowResources,
+  CustomMetric,
+} from "./performance-utils";
+export type {
+  TimingResult,
+  MemoryUsage,
+  FPSStats,
+  WebVitals,
+  NavigationTiming,
+} from "./performance-utils";
