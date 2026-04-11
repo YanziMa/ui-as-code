@@ -24794,3 +24794,15 @@ export type { QrOptions } from "./qr-code";
 // --- Avatar Generator ---
 export { AvatarGenerator, generateAvatar, avatarDataUri, userAvatar } from "./avatar-generator";
 export type { AvatarShape, AvatarStyle, AvatarOptions, GradientStop, PatternConfig, AvatarResult } from "./avatar-generator";
+
+// --- Toast Notification ---
+export { createToastManager } from "./toast-notification";
+export type { ToastOptions, ToastManagerOptions, ToastInstance, ToastType, ToastPosition } from "./toast-notification";
+
+// --- Skeleton Loader ---
+export { createSkeleton } from "./skeleton-loader";
+export type { SkeletonItem, SkeletonOptions, SkeletonInstance, SkeletonShape, SkeletonAnimation } from "./skeleton-loader";
+
+// --- Progress Indicator ---
+export { createProgressBar, createCircularProgress, createStepProgress } from "./progress-indicator";
+export type { ProgressBarOptions, ProgressBarInstance, CircularProgressOptions, CircularProgressInstance, StepProgressOptions, StepProgressInstance, ProgressVariant, ProgressSize } from "./progress-indicator";
