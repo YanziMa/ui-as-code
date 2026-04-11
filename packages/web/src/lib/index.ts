@@ -29511,3 +29511,15 @@ export type { ScatterOptions, ScatterInstance, ScatterPoint, ScatterSeries } fro
 // --- gauge-meter ---
 export { createGaugeMeter } from "./gauge-meter";
 export type { GaugeOptions, GaugeInstance, ThresholdZone, GaugeVariant } from "./gauge-meter";
+
+// --- box-plot ---
+export { createBoxPlot } from "./box-plot";
+export type { BoxPlotOptions, BoxPlotInstance, BoxData } from "./box-plot";
+
+// --- violin-plot ---
+export { createViolinPlot } from "./violin-plot";
+export type { ViolinOptions, ViolinInstance, ViolinData } from "./violin-plot";
+
+// --- area-chart ---
+export { createAreaChart } from "./area-chart";
+export type { AreaChartOptions, AreaChartInstance, AreaSeries, DataPoint } from "./area-chart";
