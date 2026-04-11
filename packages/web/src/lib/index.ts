@@ -45501,3 +45501,15 @@ export type {
 export {
   createHelpCenter as hcCreate,
 } from "./help-center";
+
+// --- hero-banner ---
+export { createHeroBanner } from "./hero-banner";
+export type { HeroBannerOptions, HeroBannerInstance, HeroButton, HeroLayout, HeroSize } from "./hero-banner";
+
+// --- hero-section ---
+export { createHeroSection } from "./hero-section";
+export type { HeroOptions, HeroInstance, HeroButton as HsHeroButton, HeroLayout as HsLayout, HeroHeight } from "./hero-section";
+
+// --- highlight-utils ---
+export { createHighlight, createSyntaxHighlight, createDiffHighlight } from "./highlight-utils";
+export type { HighlightOptions, HighlightInstance, HighlightRange, SyntaxHighlightOptions, SyntaxRule, DiffHighlightOptions } from "./highlight-utils";
