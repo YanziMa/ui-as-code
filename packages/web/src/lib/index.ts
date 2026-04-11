@@ -31142,3 +31142,45 @@ export { storageGet, storageSet, storageRemove, storageKeys, storageClear } from
 // --- State ---
 export { UndoableStore, EventBus, globalEvents } from "./state";
 export type { HistoryState } from "./state";
+// --- HTTP Client ---
+export { HttpClient, createHttpClient, HttpError } from "./http-client";
+export type {
+  HttpClientConfig,
+  HttpRequestOptions,
+  HttpResponse,
+  HttpMiddleware,
+} from "./http-client";
+
+// --- API Utils ---
+export {
+  buildApiUrl,
+  appendPagination,
+  isOkResponse,
+  extractApiError,
+  wrapPaginated,
+  createApiHeaders,
+  apiGet,
+  apiPost,
+  withRetry as apiWithRetry,
+  createDebouncedFetcher,
+  RequestQueue,
+} from "./api-utils";
+export type { ApiPagination, PaginatedResponse, ApiError, ApiRequestConfig } from "./api-utils";
+
+// --- Error Handler ---
+export {
+  ErrorHandler,
+  classifyError,
+  getUserMessage,
+  isRetryable,
+  isRecoverable,
+  getErrorCategory,
+  createNoopHandler,
+} from "./error-handler";
+export type {
+  ErrorCategory,
+  ClassifiedError,
+  ErrorHandlerOptions,
+  ErrorLogEntry,
+  RecoveryAction,
+} from "./error-handler";
