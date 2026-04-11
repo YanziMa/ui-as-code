@@ -21126,3 +21126,35 @@ export type {
 export {
   createTimeline,
 } from "./timeline";
+
+// --- Comment Thread ---
+export type {
+  CommentAuthor,
+  Comment,
+  CommentThreadOptions,
+  CommentThreadInstance,
+} from "./comment-thread";
+export {
+  createCommentThread,
+} from "./comment-thread";
+
+// --- Action Sheet ---
+export type {
+  ActionSheetActionStyle,
+  ActionSheetAction,
+  ActionSheetOptions,
+  ActionSheetInstance,
+} from "./action-sheet";
+export {
+  createActionSheet,
+} from "./action-sheet";
+
+// --- Stat Card ---
+export type {
+  TrendDirection,
+  StatCardVariant,
+  StatCardOptions,
+} from "./stat-card";
+export {
+  createStatCard,
+} from "./stat-card";
