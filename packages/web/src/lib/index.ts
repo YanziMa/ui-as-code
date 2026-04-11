@@ -19611,3 +19611,64 @@ export type {
   RetryOptions as NetworkRetryOptions,
   RequestQueueItem,
 } from "./network-utils";
+export {
+  KeyboardManager,
+  createKeyboardManager,
+  formatShortcut,
+  matchesShortcut,
+} from "./keyboard";
+export type {
+  KeyBinding,
+  KeyChord,
+  KeyboardManagerOptions,
+  KeyboardManagerInstance,
+} from "./keyboard";
+export {
+  GestureRecognizer,
+  createSwipeDetector,
+  getDirection,
+  distance as gestureDistance,
+  midpoint,
+  angleBetween,
+} from "./mouse-gestures";
+export type {
+  Direction,
+  GestureType,
+  GestureEvent,
+  Point,
+  GestureOptions,
+  SwipeOptions,
+} from "./mouse-gestures";
+export {
+  getMimeType,
+  getExtension,
+  getBaseName,
+  categorizeFile,
+  isFileType,
+  FILE_EXTENSIONS,
+  MIME_MAP,
+  validateFile,
+  validateFiles,
+  sanitizeFilename,
+  uniqueFilename,
+  formatBytes as fileFormatBytes,
+  formatFileSizeShort,
+  getFileIcon,
+  parseDropEvent,
+  setupDropZone,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  readFileAsBinaryString,
+  readFileHeader,
+  splitFileIntoChunks,
+  UploadTracker,
+} from "./file-utils";
+export type {
+  FileCategory,
+  FileValidationOptions,
+  FileValidationError,
+  DropEvent,
+  FileChunk,
+  UploadProgress,
+} from "./file-utils";
