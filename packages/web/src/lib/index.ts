@@ -43229,3 +43229,30 @@ export {
   type BatchLazyOptions,
   type BatchLazyInstance,
 } from "./image-lazy-load";
+
+// --- image-uploader ---
+export {
+  createImageUploader,
+  type UploadOptions,
+  type UploadResult,
+  type ValidationError,
+  type ImageUploaderInstance,
+} from "./image-uploader";
+
+// --- imgix ---
+export {
+  ImgixUrlBuilder,
+  buildImgixUrl,
+  generateSrcset as imgixGenerateSrcset,
+  generateSizes,
+  imgixPresets,
+  type ImgixOptions,
+  type SrcsetOptions,
+} from "./imgix";
+
+// --- inline-edit ---
+export {
+  createInlineEdit,
+  type InlineEditOptions,
+  type InlineEditInstance,
+} from "./inline-edit";
