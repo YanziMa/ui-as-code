@@ -18102,3 +18102,31 @@ export type {
   SnackbarInstance,
   SnackbarSeverity,
 } from "./snackbar";
+export {
+  createDrawer,
+} from "./drawer";
+export type {
+  DrawerOptions,
+  DrawerInstance,
+  DrawerSide,
+  DrawerSize,
+} from "./drawer";
+export {
+  createSplitter,
+} from "./sheet";
+export type {
+  SplitterOptions,
+  SplitterInstance,
+  SplitterPaneOptions,
+  SplitterOrientation,
+} from "./sheet";
+export {
+  createOffcanvas,
+  bindOffcanvas,
+} from "./offcanvas";
+export type {
+  OffcanvasOptions,
+  OffcanvasInstance,
+  OffcanvasSide,
+  OffcanvasMode,
+} from "./offcanvas";
