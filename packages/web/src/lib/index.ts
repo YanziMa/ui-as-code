@@ -49639,3 +49639,32 @@ export type {
 } from "./result-page";
 export { ResultPageManager } from "./result-page";
 export { createResultPage } from "./result-page";
+
+// --- result.ts ---
+export type {
+  ResultStatus as RsltStatus,
+  ResultVariant as RsltVariant,
+  ResultOptions as RsltOpts,
+  ResultInstance as RsltInst,
+} from "./result";
+export { createResult } from "./result";
+
+// --- retry.ts ---
+export type {
+  RetryOptions as RtryOpts,
+  CircuitBreakerOptions as RtryCBOpts,
+} from "./retry";
+export { CircuitBreaker as RtryCB } from "./retry";
+export { retryWithBackoff } from "./retry";
+
+// --- review-utils.ts ---
+export type {
+  ReviewAuthor as RevAuthor,
+  ReviewMedia as RevMedia,
+  Review as RevReview,
+  ReviewCardOptions as RevCardOpts,
+  ReviewCardInstance as RevCardInst,
+  ReviewListOptions as RevListOpts,
+  ReviewListInstance as RevListInst,
+} from "./review-utils";
+export { createReviewCard, createReviewList } from "./review-utils";
