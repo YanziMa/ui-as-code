@@ -45584,3 +45584,15 @@ export type { HttpClientConfig, HttpRequestOptions, HttpResponse as HcResponse, 
 // --- http-utils ---
 export { HttpClient as HuHttpClient, createHttpClient as HuCreateClient, quickGet, quickPost, jsonp, buildQueryString, parseQueryString, getCurrentQueryParams } from "./http-utils";
 export type { HttpRequestConfig, HttpResponse as HuResponse, HttpError as HuHttpError, InterceptorContext, RequestInterceptor, ResponseInterceptor, ErrorInterceptor, HttpClientOptions } from "./http-utils";
+
+// --- http ---
+export { httpRequest, http, retryHttp, setBaseUrl, getBaseUrl } from "./http";
+export type { HttpRequestConfig as HtRequestConfig, HttpResponse as HtResponse, HttpError as HtHttpError } from "./http";
+
+// --- i18n-advanced ---
+export { I18nManager, createI18n, i18n, t as I18nT } from "./i18n-advanced";
+export type { I18nOptions, LocaleConfig, PluralRule, MessageCatalog } from "./i18n-advanced";
+
+// --- i18n-engine-v2 ---
+export { I18nEngine, i18n as I18nV2, parseLocale, detectBrowserLocale, buildFallbackChain, getDirection, getCalendarSystem, getFirstDayOfWeek, getMonthNames, getWeekdayNames, getPluralForm, parseICUMessage, interpolateTokens, escapeHtml as I18nV2EscapeHtml, formatNumber as I18nV2FormatNumber, formatBytes, formatCompactNumber, formatDate as I18nV2FormatDate, formatRelativeTime, formatTimeAgo, formatDuration, createUseI18n, withI18n, extractKeys, generateCoverageReport, compareLocales, findBestMatch, extractTranslationCalls } from "./i18n-engine-v2";
+export type { LocaleInfo, TranslationMap, I18nOptions as I18nV2Options, PluralRules, TranslateOptions, NumberFormatOptions as I18nV2NumberOptions, DateFormatOptions as I18nV2DateOptions, RelativeTimeOptions, DurationFormatOptions, TranslationSource, CoverageEntry, UseI18nReturn, I18nProviderProps, TransProps, WithI18nOptions } from "./i18n-engine-v2";
