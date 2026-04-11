@@ -48116,3 +48116,26 @@ export {
   formatCurrency, calculateSavings,
   createPriceTag, createTieredPricing,
 } from "./price-tag-utils";
+// --- portals ---
+export {
+  PortalLayer, PortalTransition,
+  PortalEntry, PortalStackOptions, PortalStackInstance, PushOptions,
+  createPortalStack, quickPortal,
+} from "./portals";
+// --- pricing-table ---
+export {
+  PricingFeature, PricingPlan, PricingTableOptions, PricingTableInstance,
+  createPricingTable,
+} from "./pricing-table";
+// --- print-button ---
+export {
+  PrintVariant, PrintSize, PrintButtonOptions, PrintButtonInstance,
+  createPrintButton,
+} from "./print-button";
+// --- print-utils ---
+export {
+  PrintOptions, PageSettings, ReceiptOptions,
+  printContent, printElement, printPreview,
+  generateReceiptText, generateLabel, injectPrintStyles, PRINT_STYLES,
+  getPrintableArea, estimatePageCount, paginateContent, generatePDF,
+} from "./print-utils";
