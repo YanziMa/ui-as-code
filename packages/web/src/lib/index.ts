@@ -46146,3 +46146,15 @@ export { createKeyframe, injectKeyframes, generateKeyframesCSS, removeKeyframes,
 // --- keysequence ---
 export type { KeyBinding as KsSeqKeyBinding, KeySequence as KsSeqKeySequence, KeyChord as KsSeqKeyChord, MacroStep, Macro, KeySequenceManagerConfig, KeySequenceInstance } from "./keysequence";
 export { createKeySequenceManager } from "./keysequence";
+
+// --- label-helper ---
+export type { LabelConfig, FloatingLabelOptions, CharacterCounterOptions } from "./label-helper";
+export { createLabel as createLabelHelper, createFloatingLabel, createCharacterCounter, createSrOnlyLabel } from "./label-helper";
+
+// --- label-utils ---
+export type { LabelPreset, BadgeConfig, TagConfig, TruncateOptions } from "./label-utils";
+export { getPresetStyle, truncateLabel, formatCount, titleCase, toLabelCase, getContrastColor, adjustColor, transparentColor, createBadge, createTag, buildAriaLabel, meetsWcagAA, meetsWcagAAA } from "./label-utils";
+
+// --- label ---
+export type { LabelVariant, LabelSize, LabelShape, LabelOptions, LabelInstance } from "./label";
+export { createLabel } from "./label";
