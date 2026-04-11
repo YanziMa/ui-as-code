@@ -20190,3 +20190,43 @@ export type {
   CheckMode,
   TreeViewConfig,
 } from "./tree-view";
+export {
+  KanbanManager,
+  createKanban,
+} from "./kanban";
+export type {
+  CardPriority,
+  CardSize,
+  KanbanLabel,
+  KanbanCard,
+  KanbanColumn,
+  KanbanSwimlane,
+  KanbanOptions,
+  KanbanInstance,
+} from "./kanban";
+export {
+  GanttManager,
+  createGantt,
+} from "./gantt";
+export type {
+  GanttTask,
+  GanttMilestone,
+  GanttZoom,
+  GanttViewMode,
+  GanttOptions,
+  GanttInstance,
+} from "./gantt";
+export {
+  CircuitBoardManager,
+  createCircuitBoard,
+} from "./circuit-board";
+export type {
+  ConnectionStyle,
+  PortType,
+  NodeShape,
+  CircuitPort,
+  CircuitNode,
+  CircuitConnection,
+  CircuitOptions,
+  CircuitInstance,
+} from "./circuit-board";
