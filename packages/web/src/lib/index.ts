@@ -30138,3 +30138,35 @@ export {
   maskPhone,
 } from "./formatting";
 export type { RelativeTimeStyle } from "./formatting";
+
+// --- debounce-throttle ---
+export {
+  Debounced,
+  Throttled,
+  debounce,
+  throttle,
+  debouncePromise,
+  rafThrottle,
+  idleThrottle,
+} from "./debounce-throttle";
+export type { DebounceOptions, ThrottleOptions, RateLimitStats } from "./debounce-throttle";
+
+// --- id-generator ---
+export {
+  uuid as uuidGen,
+  uuidShort,
+  uuidPrefixed,
+  nanoid,
+  nanoIdShort,
+  createSequentialGenerator,
+  snowflake,
+  cuid,
+  ulid,
+  objectId,
+  hashId,
+  slugId,
+} from "./id-generator";
+export type { NanoidOptions, SnowflakeOptions } from "./id-generator";
+
+// --- uuid ---
+export { uuidv4, uuidv7, nanoId as nanoIdUtil, shortId, prefixedId, isUuid, getUuidVersion } from "./uuid";
