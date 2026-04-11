@@ -28179,3 +28179,15 @@ export type { VirtualScrollOptions, VirtualScrollInstance, VirtualItem } from ".
 // --- Infinite Scroll ---
 export { InfiniteScroll } from "./infinite-scroll";
 export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
+
+// --- Data Table ---
+export { DataTableManager, createDataTable } from "./data-table";
+export type { DataTableOptions, DataTableInstance, Column, SortState, FilterState } from "./data-table";
+
+// --- Chart Base ---
+export { ChartManager, createChart } from "./chart-base";
+export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoint, ChartAxisOptions, ChartLegendOptions, ChartTooltipOptions, TooltipData, ChartAnimationOptions } from "./chart-base";
+
+// --- Kanban Board ---
+export { createKanbanBoard } from "./kanban-board";
+export type { KanbanBoardOptions, KanbanBoardInstance, KanbanCard, KanbanColumn } from "./kanban-board";
