@@ -24782,3 +24782,15 @@ export type { AudioTrack, AudioPlayerOptions, AudioPlayerInstance } from "./audi
 // --- Video Player ---
 export { createVideoPlayer } from "./video-player";
 export type { VideoTrack, QualityOption, Chapter, PlaylistItem, VideoPlayerOptions, VideoPlayerInstance } from "./video-player";
+
+// --- Signature Pad ---
+export { SignaturePadManager, createSignaturePad } from "./signature-pad";
+export type { StrokePoint, Stroke, SignaturePadOptions, SignaturePadInstance } from "./signature-pad";
+
+// --- QR Code ---
+export { generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput } from "./qr-code";
+export type { QrOptions } from "./qr-code";
+
+// --- Avatar Generator ---
+export { AvatarGenerator, generateAvatar, avatarDataUri, userAvatar } from "./avatar-generator";
+export type { AvatarShape, AvatarStyle, AvatarOptions, GradientStop, PatternConfig, AvatarResult } from "./avatar-generator";
