@@ -26888,3 +26888,15 @@ export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } f
 // --- Virtual Scroller ---
 export { VirtualScroller } from "./virtual-scroller";
 export type { ScrollerConfig, ScrollerState, ScrollItem, VisibleRange, ScrollToOptions } from "./virtual-scroller";
+
+// --- Anchor ---
+export { createAnchor } from "./anchor";
+export type { AnchorOptions, AnchorInstance, AnchorLink } from "./anchor";
+
+// --- Copy Button ---
+export { createCopyButton } from "./copy-button";
+export type { CopyButtonOptions, CopyButtonInstance, CopyVariant, CopySize } from "./copy-button";
+
+// --- Resizable ---
+export { makeResizable, createSplitPane } from "./resizable";
+export type { ResizeOptions, ResizeState, ResizableController, SplitPaneOptions, SplitPaneController } from "./resizable";
