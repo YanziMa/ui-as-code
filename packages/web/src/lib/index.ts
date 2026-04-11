@@ -47466,3 +47466,16 @@ export { createOverlayManager as createOMUtilsMgr } from "./overlay-manager-util
 export type { OverlayId as OMId, OverlayRole as OMRole, OverlayOptions as OMOptions, OverlayInstance as OMInstance } from "./overlay-manager";
 export type { OverlayStackEntry as OMStackEntry } from "./overlay-manager";
 export { OverlayManager } from "./overlay-manager";
+
+// --- overlay-utils ---
+export type { OverlayPlacement as OvlPlacement, OverlayAnimation as OvlAnim, OverlayOptions as OvlOpts, OverlayInstance as OvlInst } from "./overlay-utils";
+export { createOverlay, getNextZIndex as OvlNextZIndex, resetZIndexCounter } from "./overlay-utils";
+
+// --- overlay (React) ---
+export type { OverlayType as ROverlayType, OverlayOptions as ROverlayOpts, OverlayInstance as ROverlayInst } from "./overlay";
+export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays } from "./overlay";
+
+// --- page-nav-utils ---
+export type { PageNavStyle as PNVStyle, PageNavSize as PNVSize, PageNavItem as PNVItem, PageNavOptions as PNVOpts, PageNavInstance as PNVInst } from "./page-nav-utils";
+export type { TocItem as PNVTocItem, TableOfContentsOptions as PNVTocOpts, TableOfContentsInstance as PNVTocInst } from "./page-nav-utils";
+export { createPageNav, createTableOfContents } from "./page-nav-utils";
