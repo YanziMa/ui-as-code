@@ -39260,3 +39260,48 @@ export type {
   DropZone,
   SortableConfig,
 } from "./drag-utils";
+// --- modal-utils ---
+export {
+  createModal,
+  createFocusTrap,
+} from "./modal-utils";
+export type {
+  ModalSize,
+  ModalOptions,
+  ModalInstance,
+  FocusTrapConfig,
+} from "./modal-utils";
+
+// --- tooltip-utils ---
+export {
+  createTooltip,
+} from "./tooltip-utils";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip-utils";
+
+// --- transition-utils ---
+export {
+  easings,
+  cssTransition as transCssTransition,
+  fadeTo,
+  fadeIn,
+  fadeOut,
+  slideBy,
+  runClassTransition,
+  runLeaveTransition,
+  flip,
+  staggerEnter,
+  staggerLeave,
+  createTransitionGroup,
+  layoutTransition,
+} from "./transition-utils";
+export type {
+  EasingFunction,
+  TransitionOptions as TransOptions,
+  ClassTransitionConfig,
+  TransitionGroupOptions,
+} from "./transition-utils";
