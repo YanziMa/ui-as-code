@@ -17378,3 +17378,32 @@ export type {
   SelectionManagerOptions,
   SelectionManagerInstance,
 } from "./selection";
+export {
+  VirtualScroller,
+} from "./virtual-scroller";
+export type {
+  ScrollItem,
+  VisibleRange,
+  ScrollerConfig,
+  ScrollerState,
+  ScrollToOptions,
+} from "./virtual-scroller";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement,
+  TooltipTrigger,
+  TooltipOptions,
+  TooltipInstance,
+} from "./tooltip";
