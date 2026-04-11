@@ -37328,3 +37328,25 @@ export {
   type AlertVariant,
   type AlertSize,
 } from "./alert-utils.js";
+// --- Batch 1195: Anchor, Affix, BackToTop ---
+export {
+  createAnchor,
+  type AnchorOptions,
+  type AnchorResult,
+  type AnchorInstance,
+  type AnchorPlacement,
+  type AnchorAlignment,
+} from "./anchor-utils.js";
+export {
+  createAffix,
+  type AffixOptions,
+  type AffixInstance,
+  type AffixPosition,
+} from "./affix-utils.js";
+export {
+  createBackToTop,
+  type BackToTopOptions,
+  type BackToTopInstance,
+  type BackToTopPosition,
+  type BackToTopShape,
+} from "./back-to-top-utils.js";
