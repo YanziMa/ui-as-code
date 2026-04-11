@@ -42134,3 +42134,7 @@ export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromCl
 export { createKeyboardNav, type KeyboardNavOptions, type KeyboardNavInstance, type NavItem, type NavOrientation, type NavWrap } from "./keyboard-navigation";
 export { FocusTrapManager, createFocusTrap, FocusTrapStack, type FocusTrapOptions, type FocusTrapInstance } from "./focus-trap";
 export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString, type HotkeyBinding, type HotkeyEvent, type ParsedKeyCombo } from "./hotkeys";
+// --- Batch 1350: Scroll Lock, Click Outside, DOM Observer ---
+export { ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock, type ScrollLockOptions, type ScrollLockInstance } from "./scroll-lock";
+export { createClickOutside, onClickOutsideAuto, createPopupClose, type ClickOutsideOptions, type ClickOutsideInstance, type ContextClickOptions } from "./click-outside";
+export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDetector, createLazyLoader, type MutationOptions, type IntersectionOptions, type ResizeOptions, type ObserverCallbacks, type DomSnapshot, type ObserveTarget } from "./dom-observer";
