@@ -21542,3 +21542,37 @@ export {
   ImageGalleryManager,
   createImageGallery,
 } from "./image-gallery";
+
+// --- Command Palette ---
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+export {
+  CommandPalette,
+} from "./command-palette";
+
+// --- Notification Center ---
+export type {
+  NotificationType,
+  NotificationItem,
+  NotificationCenterOptions,
+  NotificationCenterInstance,
+} from "./notification-center";
+export {
+  NotificationCenterManager,
+  createNotificationCenter,
+} from "./notification-center";
+
+// --- Resizable ---
+export type {
+  ResizeOptions,
+  ResizeState,
+  SplitPaneOptions,
+} from "./resizable";
+export {
+  makeResizable,
+  createSplitPane,
+} from "./resizable";
