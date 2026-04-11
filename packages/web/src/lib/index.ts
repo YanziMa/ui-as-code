@@ -49407,3 +49407,27 @@ export {
   HttpClient as RReqClient,
   http as RReqHttp,
 } from "./request";
+// --- resizable-panel ---
+export type {
+  PanelDirection as RzPanelDirection,
+  PanelCollapseMode as RzPanelCollapseMode,
+  ResizablePanelOptions as RzPanelOptions,
+  ResizablePanelInstance as RzPanelInstance,
+} from "./resizable-panel";
+export { createResizablePanel as RzPanelCreate } from "./resizable-panel";
+
+// --- resizable-panels ---
+export type {
+  PanelConfig as RzPanelsConfig,
+  ResizablePanelsOptions as RzPanelsOptions,
+  ResizablePanelsInstance as RzPanelsInstance,
+} from "./resizable-panels";
+export { createResizablePanels as RzPanelsCreate } from "./resizable-panels";
+
+// --- resizable-utils ---
+export type {
+  ResizeEdge as RzUtilEdge,
+  ResizableOptions as RzUtilOptions,
+  ResizableInstance as RzUtilInstance,
+} from "./resizable-utils";
+export { createResizable as RzUtilCreate } from "./resizable-utils";
