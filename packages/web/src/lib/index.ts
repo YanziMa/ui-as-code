@@ -23953,3 +23953,45 @@ export {
   sendToBack,
 } from "./css-in-js";
 export type { Breakpoints } from "./css-in-js";
+
+// --- notification ---
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  Notification,
+  NotificationOptions,
+  NotificationType,
+  NotificationPosition,
+} from "./notification";
+
+// --- badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeOptions,
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  StatusDotOptions,
+} from "./badge";
+
+// --- avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+} from "./avatar";
+export type {
+  AvatarOptions,
+  AvatarSize,
+  AvatarShape,
+  AvatarGroupOptions,
+} from "./avatar";
