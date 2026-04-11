@@ -23605,3 +23605,46 @@ export type {
   CheckMode,
   TreeViewConfig,
 } from "./tree-view";
+
+// --- chart-utils ---
+export {
+  calculateAxisScale,
+  formatAxisLabel,
+  valueToPixel,
+  pixelToValue,
+  aggregateByInterval,
+  movingAverage,
+  calculatePercentChanges,
+  findExtrema,
+  generateChartColors,
+  interpolateColor,
+  getDataStats,
+} from "./chart-utils";
+export type {
+  DataPoint,
+  DataSeries,
+  ChartConfig,
+  AxisScale,
+  DataStats,
+  ColorPaletteName,
+} from "./chart-utils";
+
+// --- markdown ---
+export { mdToHtml, stripMd } from "./markdown";
+export type { MdOptions } from "./markdown";
+
+// --- syntax-highlight ---
+export {
+  highlightCode,
+  highlightToHtml,
+  registerLanguage,
+  registerTheme,
+  getAvailableLanguages,
+  getAvailableThemes,
+} from "./syntax-highlight";
+export type {
+  HighlightOptions,
+  HighlightTheme,
+  Token,
+  TokenType,
+} from "./syntax-highlight";
