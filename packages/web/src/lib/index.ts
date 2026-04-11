@@ -24453,3 +24453,30 @@ export {
   type PaneConfig,
   type SplitDirection,
 } from "./split-view";
+
+// --- Carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselSlide,
+} from "./carousel";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager,
+  createImageGallery,
+  type ImageGalleryOptions,
+  type ImageGalleryInstance,
+  type GalleryImage,
+} from "./image-gallery";
+
+// --- Lightbox ---
+export {
+  LightboxManager,
+  createLightbox,
+  type LightboxOptions,
+  type LightboxInstance,
+  type LightboxImage,
+} from "./lightbox";
