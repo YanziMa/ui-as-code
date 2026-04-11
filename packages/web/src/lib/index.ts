@@ -39456,3 +39456,46 @@ export type {
   RatingOptions,
   RatingInstance,
 } from "./rating-utils";
+// --- progress-utils ---
+export {
+  createProgressBar,
+  updateProgressBar,
+  createCircularProgress,
+  createStepProgress,
+} from "./progress-utils";
+export type {
+  ProgressBarVariant,
+  ProgressBarSize,
+  ProgressBarOptions,
+  CircularProgressOptions,
+  StepProgressOptions,
+} from "./progress-utils";
+
+// --- badge-utils ---
+export {
+  createBadge,
+  createDotBadge,
+  createTag,
+} from "./badge-utils";
+export type {
+  BadgeVariant,
+  BadgeSize,
+  DotPosition,
+  BadgeOptions,
+  DotBadgeOptions,
+  TagOptions,
+} from "./badge-utils";
+
+// --- skeleton-utils ---
+export {
+  createSkeleton,
+  createSkeletonBlock,
+  createCardSkeleton,
+  createTableSkeleton,
+} from "./skeleton-utils";
+export type {
+  SkeletonVariant,
+  SkeletonSize,
+  SkeletonOptions,
+  SkeletonBlockOptions,
+} from "./skeleton-utils";
