@@ -25214,3 +25214,31 @@ export {
   type KanbanCard,
   type KanbanColumn,
 } from "./kanban-board";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineItem,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- Gantt Chart ---
+export {
+  createGanttChart,
+  type GanttChartOptions,
+  type GanttChartInstance,
+  type GanttTask,
+} from "./gantt-chart";
+
+// --- Calendar ---
+export {
+  CalendarManager,
+  createCalendar,
+  type CalendarOptions,
+  type CalendarInstance,
+  type CalendarEvent,
+  type CalendarView,
+} from "./calendar";
