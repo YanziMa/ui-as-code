@@ -42661,3 +42661,66 @@ export {
   type AffixOptions as AffixUtilsOptions,
   type AffixInstance as AffixUtilsInstance,
 } from "./affix-utils";
+// --- ai-pipeline ---
+export {
+  AiPipeline,
+  AiError,
+  AiErrorType,
+  CostTracker,
+  createPromptTemplate,
+  render as renderPromptTemplate,
+  diffGenerationPrompt,
+  codeReviewPrompt,
+  summarizePrompt,
+  type AiProvider,
+  type AiPipelineConfig,
+  type AiMessage,
+  type ContentBlock as AiContentBlock,
+  type ToolDefinition as AiToolDefinition,
+  type AiResponse,
+  type AiResponseWithToolCalls,
+  type StreamChunk as AiStreamChunk,
+  type SendOptions,
+  type PromptTemplate,
+} from "./ai-pipeline";
+
+// --- ai-sdk-wrapper ---
+export {
+  AIClient,
+  Conversation,
+  registerProvider,
+  getProviderConfig,
+  listProviders,
+  unregisterProvider,
+  getConversation,
+  deleteConversation,
+  listConversations,
+  createClient,
+  RateLimiter,
+  estimateTokens,
+  countTokensAccurate,
+  truncateToTokens,
+  PromptTemplate as SDKPromptTemplate,
+  requestJSON,
+  withRetry,
+  type LLMProvider,
+  type Message,
+  type ContentBlock as SDKContentBlock,
+  type ToolDefinition as SDKToolDefinition,
+  type ToolResult,
+  type LLMRequest,
+  type LLMResponse,
+  type StreamChunk as SDKStreamChunk,
+  type ProviderConfig,
+} from "./ai-sdk-wrapper";
+
+// --- alert ---
+export {
+  AlertManager,
+  createAlert,
+  type AlertVariant,
+  type AlertSize,
+  type AlertAction,
+  type AlertOptions,
+  type AlertInstance,
+} from "./alert";
