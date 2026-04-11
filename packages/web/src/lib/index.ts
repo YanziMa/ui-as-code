@@ -46649,3 +46649,12 @@ export { MentionsManager as MnsManager, createMentions as mnsCreateMentions } fr
 // --- menu-bar ---
 export type { MenuBarItem as MbarItem, MenuBarOptions as MbarOptions, MenuBarInstance as MbarInstance } from "./menu-bar";
 export { MenuBarManager as MbarManager, createMenuBar as mbarCreateMenuBar } from "./menu-bar";
+// --- menu ---
+export type { MenuMode as MnMenuMode, MenuVariant as MnMenuVariant, MenuItem as MnMenuItem, MenuOptions as MnMenuOptions, MenuInstance as MnMenuInstance } from "./menu";
+export { createMenu as mnCreateMenu } from "./menu";
+// --- merge ---
+export type { ArrayMergeStrategy, ConflictResolution, MergeOptions, MergeResult } from "./merge";
+export { deepMerge, immutableMerge, mergeMany, trackedMerge, selectiveMerge } from "./merge";
+// --- message ---
+export type { MessageType as MsgMessageType, MessagePosition as MsgMessagePosition, MessageAction as MsgMessageAction, MessageOptions as MsgMessageOptions, MessageInstance as MsgMessageInstance, MessageQueueConfig as MsgMessageQueueConfig, MessageQueue as MsgMessageQueue } from "./message";
+export { createMessageQueue as msgCreateMessageQueue } from "./message";
