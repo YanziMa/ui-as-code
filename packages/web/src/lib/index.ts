@@ -30170,3 +30170,98 @@ export type { NanoidOptions, SnowflakeOptions } from "./id-generator";
 
 // --- uuid ---
 export { uuidv4, uuidv7, nanoId as nanoIdUtil, shortId, prefixedId, isUuid, getUuidVersion } from "./uuid";
+
+// --- logger ---
+export { Logger, log, apiLog, dbLog, extLog, setGlobalLogLevel, getGlobalLogLevel } from "./logger";
+export type { LogLevel, LogEntry } from "./logger";
+
+// --- validator ---
+export {
+  isString,
+  isNumber,
+  isInteger,
+  isFiniteNumber,
+  isBoolean,
+  isArray,
+  isObject,
+  isDate,
+  isEmail,
+  isUrl,
+  isNil,
+  isPresent,
+  validate,
+  validateSync,
+  assert,
+  ValidationError,
+  throwIfInvalid,
+} from "./validator";
+export type { ValidationRule, ValidationResult, ValidationSchema } from "./validator";
+
+// --- crypto-utils ---
+export {
+  sha1,
+  sha256,
+  sha384,
+  sha512,
+  hash,
+  hashHex,
+  hmac,
+  hmacHex,
+  pbkdf2,
+  deriveAesKey,
+  generateAesKey,
+  aesGcmEncrypt,
+  aesGcmDecrypt,
+  aesGcmEncryptString,
+  aesGcmDecryptString,
+  generateRsaOaepKeyPair,
+  rsaOaepEncrypt,
+  rsaOaepDecrypt,
+  generateEcdsaKeyPair,
+  ecdsaSign,
+  ecdsaVerify,
+  generateRsaPssKeyPair,
+  rsaPssSign,
+  rsaPssVerify,
+  exportKey as exportCryptoKey,
+  importKey as importCryptoKey,
+  keyFingerprint,
+  generateEcdhKeyPair,
+  ecdhDeriveSecret,
+  ecdhDeriveAesKey,
+  randomBytes,
+  secureRandomInt,
+  secureRandomUuid,
+  secureRandomString,
+  toBase64,
+  fromBase64,
+  toBase64Url,
+  fromBase64Url,
+  toHex,
+  fromHex,
+  encodeUtf8,
+  decodeUtf8,
+  estimatePasswordStrength,
+  generatePassword,
+  generateTokenHex,
+  generateTokenBase64Url,
+  generateApiKey,
+  generateSessionId,
+} from "./crypto-utils";
+export type {
+  HashAlgorithm,
+  HmacAlgorithm,
+  AesKeyLength,
+  EcNamedCurve,
+  RsaKeySize,
+  KeyFormat,
+  Pbkdf2Options,
+  AesGcmOptions,
+  AesGcmEncryptedData,
+  RsaKeyGenOptions,
+  EcdsaKeyGenOptions,
+  RsaPssSignOptions,
+  PasswordStrengthResult,
+  PasswordGeneratorOptions,
+  ApiKeyOptions,
+} from "./crypto-utils";
