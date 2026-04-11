@@ -46768,3 +46768,15 @@ export { getNetworkStatus, onNetworkChange, isSlowConnection as netUtilIsSlow, i
 // --- network.ts ---
 export type { NetworkStatus as NetMgrStatus, FetchOptions as NetFetchOpts, FetchResult, QueuedRequest, NetworkManagerOptions as NetMgrOpts, NetworkManagerInstance as NetMgrInst } from "./network";
 export { NetworkManager, createNetworkManager, readConnectionInfo, parseQueryString as netParseQS, buildQueryString, buildUrl as netBuildUrl, parseContentRange, fetchWithTimeout } from "./network";
+
+// --- notification-bar.ts ---
+export type { NotificationType as NotifBarType, NotificationBarOptions as NotifBarOpts, NotificationBarInstance as NotifBarInst } from "./notification-bar";
+export { NotificationBarManager, createNotificationBar } from "./notification-bar";
+
+// --- notification-bell.ts ---
+export type { NotificationItem as NotifBellItem, NotificationBellOptions as NotifBellOpts, NotificationBellInstance as NotifBellInst } from "./notification-bell";
+export { createNotificationBell } from "./notification-bell";
+
+// --- notification-card.ts ---
+export type { NotificationPriority as NotifCardPriority, NotificationType as NotifCardType, NotificationAction as NotifCardAction, NotificationCardOptions as NotifCardOpts, NotificationCardInstance as NotifCardInst } from "./notification-card";
+export { createNotificationCard } from "./notification-card";
