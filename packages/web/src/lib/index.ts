@@ -22711,3 +22711,45 @@ export {
   type SearchResult,
   type TreeViewNode,
 } from "./file-system";
+
+// --- theme ---
+export {
+  ThemeManager,
+  getThemeManager,
+  useTheme,
+  LIGHT_THEME,
+  DARK_THEME,
+  BUILT_IN_THEMES,
+  type ThemeConfig,
+  type ThemeColors,
+} from "./theme";
+
+// --- accessibility ---
+export {
+  progressBarAttrs,
+  switchAttrs,
+  liveRegion,
+  announce,
+  skipLinkAttrs,
+  SKIP_LINK_ID,
+  prefersReducedMotion,
+  animationDuration,
+  focusTrap,
+  srOnly,
+  ROLES,
+} from "./accessibility";
+
+// --- gesture ---
+export {
+  GestureManager,
+  createGesture,
+  swipeGestures,
+  tapGesture,
+  type GestureType,
+  type SwipeDirection,
+  type GestureConfig,
+  type GestureHandlerConfig,
+  type GestureEvent,
+  type GestureInstance,
+  type Point,
+} from "./gesture";
