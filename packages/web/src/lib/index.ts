@@ -44390,3 +44390,29 @@ export type {
   FullPageSpinnerOptions,
 } from "./spinner-lite";
 export { createSpinner as createLiteSpinner, fullPageSpinner, miniSpinner } from "./spinner-lite";
+// --- spinner-utils ---
+export type {
+  SpinnerType as UtilsSpinnerType,
+  SpinnerSize as UtilsSpinnerSize,
+  SpinnerOptions as UtilsSpinnerOptions,
+  SpinnerInstance as UtilsSpinnerInstance,
+} from "./spinner-utils";
+export { createSpinner as createUtilsSpinner } from "./spinner-utils";
+
+// --- spinner ---
+export type {
+  SpinnerVariant as MainSpinnerVariant,
+  SpinnerSize as MainSpinnerSize,
+  SpinnerOptions as MainSpinnerOptions,
+} from "./spinner";
+export { createSpinner as createMainSpinner, miniSpinner as mainMiniSpinner, fullPageSpinner as mainFullPageSpinner } from "./spinner";
+
+// --- split-button ---
+export type {
+  SplitButtonSize,
+  SplitButtonVariant,
+  SplitAction,
+  SplitButtonOptions,
+  SplitButtonInstance,
+} from "./split-button";
+export { SplitButtonManager, createSplitButton } from "./split-button";
