@@ -39605,3 +39605,27 @@ export type {
   DatePickerOptions,
   DatePickerInstance,
 } from "./date-picker-utils";
+// --- Batch 1238: Time Picker, Upload, File Tree ---
+export { createTimePicker } from "./time-picker-utils";
+export type {
+  TimeValue,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker-utils";
+
+export { createUpload } from "./upload-utils";
+export type {
+  UploadFileItem,
+  UploadOptions,
+  UploadInstance,
+  FileItemWrapper,
+} from "./upload-utils";
+
+export { createFileTree } from "./file-tree-utils";
+export type {
+  FileTreeNode,
+  TreeSelection,
+  ContextMenuItem,
+  FileTreeOptions,
+  FileTreeInstance,
+} from "./file-tree-utils";
