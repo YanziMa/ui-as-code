@@ -38829,3 +38829,50 @@ export {
   getConstructorName, typeOf,
   deepClone as typeDeepClone, deepFreeze as typeDeepFreeze, deepMerge as typeDeepMerge,
 } from "./type-utils";
+
+// --- color-utils ---
+export {
+  parseColor as colorParseColor, requireColor,
+  rgbToHex, hexToRgb, rgbToHsl, hslToRgb, rgbToHsv, hsvToHsl,
+  toHexString, toRgbString, toHslString,
+  lighten, darken, saturate, desaturate, rotateHue, setOpacity, mix, invert,
+  luminance, contrastRatio, meetsAA, meetsAAA, contrastingText, minAlphaForContrast,
+  generatePalette, complementary, analogous, triadic, splitComplementary, tetradic, generateScheme,
+  linearGradient as cssLinearGradient, radialGradient as cssRadialGradient, gradientBetween, shimmerGradient,
+  colorTemperature, isWarmColor, hueCategory,
+  cssVariablesFromPalette, generateDesignTokens,
+  type RGB, type HSL, type HSV, type ColorStop, type ColorPalette,
+} from "./color-utils";
+
+// --- svg-utils ---
+export {
+  getSvgNs, createSvgElement, createSvg, createSvgWithViewBox,
+  setSvgAttrs, getSvgAttr, removeSvgAttr, toggleSvgAttr,
+  rect: svgRect, circle: svgCircle, ellipse: svgEllipse, line: svgLine, polyline, polygon, path,
+  PathBuilder, roundedRectPath, regularPolygonPath, starPath, smoothCurvePath, arcPath, pieSlicePath,
+  text: svgText, tspan, multilineText,
+  getOrCreateDefs, addLinearGradient, addRadialGradient, addPattern, addClipPath, addMask, addFilter,
+  createDropShadowFilter, createBlurFilter,
+  parseViewBox, getViewBox, setViewBox, zoomViewBox, panViewBox, screenToSvg, svgToScreen,
+  appendChildren, insertBefore, removeElement, replaceElement, clearChildren, wrapSvgElement, cloneSvg, findByTag, findById,
+  serializeSvg, svgToDataUrl, svgToBlob, downloadSvg, svgToPng, embedImages,
+  getBBox, getBoundingClientRect: svgGetBoundingClientRect, getPathLength, getPointAtLength, isPointInFill, isPointInStroke,
+  type SvgPoint, type SvgSize, type SvgRect, type GradientStop, type LinearGradientDef, type RadialGradientDef, type ViewBox,
+} from "./svg-utils";
+
+// --- canvas-utils ---
+export {
+  createCanvas, createOffscreenCanvas, getContext2D, resizeCanvas, clearCanvas, clearRect,
+  applyDrawOptions, resetDrawOptions,
+  drawRect, drawRoundedRect, drawCircle, drawEllipse, drawPolygon, drawStar, drawLine, drawPolyline, drawArrow,
+  createLinearGradient, createRadialGradient, createConicGradient, GRADIENT_PRESETS,
+  applyTextOptions, drawText, drawWrappedText, measureText, getTextBounds,
+  drawImage, drawImageCover, drawImageContain, loadImage, canvasToBlob, canvasToDataURL, downloadCanvas,
+  getPixelData, setPixelData, getPixel, setPixel, applyPixelFilter, applyImageFilters,
+  withSavedContext, atPosition, atScale, rotateAround, flipHorizontal, flipVertical,
+  LayerManager,
+  drawCheckerboard, drawGrid, drawDots, drawStripes,
+  pointInRect: canvasPointInRect, pointInCircle: canvasPointInCircle,
+  hexToRgb: canvasHexToRgb, rgbToHex: canvasRgbToHex, parseColor as canvasParseColor, generateCanvasId,
+  type Point2D, type Size2D, type Rect2D, type ColorStop as CanvasColorStop, type CanvasLayer, type DrawOptions, type TextDrawOptions, type ImageFilterOptions, type PixelData,
+} from "./canvas-utils";
