@@ -24830,3 +24830,15 @@ export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement 
 // --- Modal Dialog ---
 export { createModal } from "./modal-dialog";
 export type { ModalOptions, ModalInstance, ModalSize, ModalVariant } from "./modal-dialog";
+
+// --- Accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionItem, AccordionOptions, AccordionInstance, AccordionMode } from "./accordion";
+
+// --- Tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabItem, TabsOptions, TabsInstance, TabOrientation, TabVariant } from "./tabs";
+
+// --- Carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
