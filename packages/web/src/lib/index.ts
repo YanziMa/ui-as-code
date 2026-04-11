@@ -39842,3 +39842,42 @@ export {
   type StatusListOptions,
   type StatusListInstance,
 } from "./status-dot-utils";
+// --- Avatar Utilities ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  generateAvatarColor,
+  getInitials as getAvatarInitials,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  type AvatarSize,
+  type AvatarShape,
+} from "./avatar-utils";
+
+// --- Initials Utilities ---
+export {
+  createInitials,
+  createInitialsGroup,
+  getInitials,
+  getFullInitials,
+  getAbbreviation,
+  hashString,
+  getColorForString,
+  getContrastColor,
+  type InitialsOptions,
+  type InitialsGroupOptions,
+  type InitialsStyle,
+  type InitialsSize,
+} from "./initials-utils";
+
+// --- Chip Utilities ---
+export {
+  createChip,
+  createChipSet,
+  type ChipConfig,
+  type ChipSetOptions,
+  type ChipSetInstance,
+  type ChipType,
+  type ChipSize,
+  type ChipColor,
+} from "./chip-utils";
