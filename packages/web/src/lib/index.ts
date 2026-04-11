@@ -49465,3 +49465,51 @@ export type {
   ResizeObserverInstance as RObsInstance,
 } from "./resize-observer-utils";
 export { createEnhancedResizeObserver as RObsCreate } from "./resize-observer-utils";
+// --- resize-observer-v2 ---
+export type {
+  ResizeV2Entry as RROv2Entry,
+  Breakpoint as RROv2Breakpoint,
+  ResizeObserverV2Options as RROv2Options,
+  ResizeObserverV2Instance as RROv2Instance,
+} from "./resize-observer-v2";
+export {
+  createResizeObserverV2 as RROv2Create,
+  watchSize as RROv2WatchSize,
+  useResponsiveSize as RROv2UseResponsive,
+} from "./resize-observer-v2";
+
+// --- resize-observer ---
+export type {
+  ResizeBox as RROBox,
+  ResizeObserverOptions as RROOptions,
+  ResizeObserverEntry as RROEntry,
+  ResizeObserverInstance as RROInstance,
+} from "./resize-observer";
+export {
+  ResizeWatcher,
+  createResizeObserver as RROCreate,
+  matchParentSize as RROMatchParent,
+  whenSizeExceeds as RROWhenExceeds,
+} from "./resize-observer";
+
+// --- resize-utils ---
+export type {
+  ResizeEntry as RUTResizeEntry,
+  ResizeObserverConfig as RUTConfig,
+  Breakpoint as RUTBreakpoint,
+  ViewportState as RUTViewportState,
+  ResizeHandleOptions as RUTHandleOpts,
+} from "./resize-utils";
+export {
+  EnhancedResizeObserver as RUTEnhancedObs,
+  BreakpointTracker as RUTBreakpointTracker,
+  ViewportTracker as RUTViewportTracker,
+  DEFAULT_BREAKPOINTS as RUTDefaultBreakpoints,
+  createResizeHandle as RUTCreateHandle,
+  clamp as RUTClamp,
+  isResizeObserverSupported as RUTIsSupported,
+  getElementSize as RUTGetElementSize,
+  hasOverflow as RUTHasOverflow,
+  matchMedia as RUTMatchMedia,
+  onMediaChange as RUTOnMediaChange,
+} from "./resize-utils";
