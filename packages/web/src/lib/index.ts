@@ -34267,3 +34267,40 @@ export {
   type StepperOptions,
   type StepperInstance,
 } from "./stepper-utils";
+
+// --- avatar-utils ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  generateAvatarColor,
+  getInitials,
+  type AvatarSize,
+  type AvatarShape,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+} from "./avatar-utils";
+
+// --- badge-utils ---
+export {
+  createBadge,
+  createDotBadge,
+  createTag,
+  type BadgeVariant,
+  type BadgeSize,
+  type DotPosition,
+  type BadgeOptions,
+  type DotBadgeOptions,
+  type TagOptions,
+} from "./badge-utils";
+
+// --- chip-utils ---
+export {
+  createChipGroup,
+  createInputChip,
+  type ChipVariant,
+  type ChipSize,
+  type ChipItem,
+  type ChipGroupOptions,
+  type ChipGroupInstance,
+  type InputChipOptions,
+} from "./chip-utils";
