@@ -22599,3 +22599,38 @@ export {
   SpinLock,
   type LockOptions,
 } from "./lock";
+
+// --- diff-engine ---
+export {
+  computeDiff,
+  parseUnifiedDiff,
+  applyDiff,
+  applyJsonPatch,
+  threeWayMerge,
+  type DiffHunk,
+  type DiffLine,
+  type UnifiedDiff,
+  type TextDiffResult,
+  type JsonPatchOp,
+  type MergeResult,
+} from "./diff-engine";
+
+// --- template-engine ---
+export {
+  TemplateEngine,
+  registerBuiltinHelpers,
+  createTemplateEngine,
+  renderTemplate,
+  unescapeHtml,
+  type TemplateContext,
+  type TemplateOptions,
+  type TemplateError,
+  type PartialTemplate,
+  type HelperFunction,
+} from "./template-engine";
+
+// --- markdown ---
+export {
+  mdToHtml,
+  stripMd,
+} from "./markdown";
