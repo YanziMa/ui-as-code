@@ -37263,3 +37263,15 @@ export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-s
 // --- drag-drop-utils ---
 export { createDraggable, createDropZone, createSortable } from "./drag-drop-utils";
 export type { DragData, DropZoneOptions, DraggableOptions, SortableOptions, DragEvent, DraggableInstance, DropZoneInstance, SortableInstance, DragAxis, DragConstraint } from "./drag-drop-utils";
+
+// --- split-pane-utils ---
+export { createSplitPane } from "./split-pane-utils";
+export type { PaneOptions, SplitPaneOptions, SplitPaneInstance, SplitDirection, SplitBehavior } from "./split-pane-utils";
+
+// --- resizable-utils ---
+export { createResizable } from "./resizable-utils";
+export type { ResizableOptions, ResizableInstance, ResizeEdge } from "./resizable-utils";
+
+// --- context-view-utils ---
+export { createContextView } from "./context-view-utils";
+export type { ViewContext, ContextViewOptions, ContextViewInstance } from "./context-view-utils";
