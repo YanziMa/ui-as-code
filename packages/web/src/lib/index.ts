@@ -46074,3 +46074,15 @@ export type { IntersectionEntry as IuIntersectionEntry, ObserverConfig, Visibili
 // --- intersection (base) ---
 export { IntersectionManager as IntIntersectionManager, createIntersectionObserver as createIntIntersectionObserver, whenVisible as whenVisibleInt, whenHidden as whenHiddenInt, isInViewport as isInViewportInt, getVisibilityPercent as getVisibilityPercentInt } from "./intersection";
 export type { IntersectionObserverOptions as IntObserverOptions, IntersectionObserverEntry as IntObserverEntry, IntersectionObserverInstance as IntObserverInstance } from "./intersection";
+
+// --- intl ---
+export { getDefaultLocale, setDefaultLocale, detectLocale, negotiateLocale, formatNumber as formatNumberIntl, formatCurrency as formatCurrencyIntl, formatPercent as formatPercentIntl, formatCompact, formatByteSize, formatDate as formatDateIntl, formatRelativeTime as formatRelativeTimeIntl, formatTimeAgo, formatDuration, formatList, getPluralCategory, pluralize, compareStrings, sortLocaleAware, formatMessage as formatMessageIntl } from "./intl";
+export type { Locale, NumberFormatConfig as IntlNumberFormatConfig, DateFormatConfig as IntlDateFormatConfig, RelativeTimeConfig, ListFormatConfig, PluralConfig, CollatorConfig } from "./intl";
+
+// --- inverted-index ---
+export { InvertedIndex, createInvertedIndex } from "./inverted-index";
+export type { DocumentId, Term, SearchDocument as IiSearchDocument, SearchResult as IiSearchResult, SearchOptions as IiSearchOptions, FacetResult, IndexStats, AutocompleteOptions, Suggestion } from "./inverted-index";
+
+// --- json-editor ---
+export { createJsonEditor } from "./json-editor";
+export type { JsonNodeType, JsonNode, JsonSchemaProperty, JsonEditorOptions, JsonEditorInstance } from "./json-editor";
