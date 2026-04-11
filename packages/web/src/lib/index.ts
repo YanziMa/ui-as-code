@@ -45596,3 +45596,31 @@ export type { I18nOptions, LocaleConfig, PluralRule, MessageCatalog } from "./i1
 // --- i18n-engine-v2 ---
 export { I18nEngine, i18n as I18nV2, parseLocale, detectBrowserLocale, buildFallbackChain, getDirection, getCalendarSystem, getFirstDayOfWeek, getMonthNames, getWeekdayNames, getPluralForm, parseICUMessage, interpolateTokens, escapeHtml as I18nV2EscapeHtml, formatNumber as I18nV2FormatNumber, formatBytes, formatCompactNumber, formatDate as I18nV2FormatDate, formatRelativeTime, formatTimeAgo, formatDuration, createUseI18n, withI18n, extractKeys, generateCoverageReport, compareLocales, findBestMatch, extractTranslationCalls } from "./i18n-engine-v2";
 export type { LocaleInfo, TranslationMap, I18nOptions as I18nV2Options, PluralRules, TranslateOptions, NumberFormatOptions as I18nV2NumberOptions, DateFormatOptions as I18nV2DateOptions, RelativeTimeOptions, DurationFormatOptions, TranslationSource, CoverageEntry, UseI18nReturn, I18nProviderProps, TransProps, WithI18nOptions } from "./i18n-engine-v2";
+// i18n-engine
+export {
+  I18nManager,
+  type PluralForm,
+  type MessageCatalog as I18nEngMessageCatalog,
+  createI18n,
+  getI18n as getI18nEngine,
+} from "./i18n-engine";
+
+// i18n-enhanced
+export {
+  I18nEngine as I18nEnhancedEngine,
+  I18nMessage as I18nEnhMessage,
+  LocaleConfig as I18nEnhLocaleConfig,
+  MessageCatalog as I18nEnhMessageCatalog,
+  defineMessages as defineI18nEnhMessages,
+} from "./i18n-enhanced";
+
+// i18n-framework
+export {
+  I18n as I18nFramework,
+  PluralRule as I18nFwPluralRule,
+  MessageCatalog as I18nFwMessageCatalog,
+  LocaleInfo as I18nFwLocaleInfo,
+  I18n.create as createI18nFramework,
+  I18n.getI18n as getI18nFramework,
+  _ as __,
+} from "./i18n-framework";
