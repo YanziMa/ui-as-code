@@ -20082,3 +20082,31 @@ export type {
   AvatarOptions,
   AvatarGroupOptions,
 } from "./avatar";
+export {
+  RatingManager,
+  createRating,
+} from "./rating";
+export type {
+  StarIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating";
+export {
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+export type {
+  TagItem,
+  TagInputOptions,
+  TagInputInstance,
+} from "./tag-input";
+export {
+  TimelineManager,
+  createTimeline,
+} from "./timeline";
+export type {
+  TimelineItemStatus,
+  TimelineItem,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline";
