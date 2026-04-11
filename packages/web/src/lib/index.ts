@@ -47479,3 +47479,15 @@ export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAl
 export type { PageNavStyle as PNVStyle, PageNavSize as PNVSize, PageNavItem as PNVItem, PageNavOptions as PNVOpts, PageNavInstance as PNVInst } from "./page-nav-utils";
 export type { TocItem as PNVTocItem, TableOfContentsOptions as PNVTocOpts, TableOfContentsInstance as PNVTocInst } from "./page-nav-utils";
 export { createPageNav, createTableOfContents } from "./page-nav-utils";
+
+// --- page-visibility ---
+export type { VisibilityState as PVState, VisibilityOptions as PVOpts, VisibilityInstance as PVInst } from "./page-visibility";
+export { createVisibilityTracker, getPageVisibility, isPageVisible, runWhenVisible, waitForVisibility } from "./page-visibility";
+
+// --- pagination-lite ---
+export type { PaginationSize as PLiteSize, PaginationOptions as PLiteOpts, PaginationInstance as PLiteInst } from "./pagination-lite";
+export { createPagination } from "./pagination-lite";
+
+// --- pagination-nav ---
+export type { PaginationSize as PNavSize, PaginationVariant as PNavVariant, PaginationNavOptions as PNavOpts, PaginationNavInstance as PNavInst } from "./pagination-nav";
+export { createPaginationNav, formatPaginationInfo, getOptimalPageSize } from "./pagination-nav";
