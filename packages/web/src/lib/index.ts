@@ -51040,3 +51040,10 @@ export { type SplitButtonSize, type SplitButtonVariant, type SplitAction, type S
 export { type ButtonVariant as SpltBtns_ButtonVariant, type ButtonSize as SpltBtns_ButtonSize, type SplitButtonOption, type SplitButtonOptions as SpltBtns_SplitButtonOptions, type SplitButtonInstance as SpltBtns_SplitButtonInstance, createSplitButtons, type ToggleGroupOptions, createToggleGroup, type IconButtonBarOptions, createIconButtonBar } from "./split-buttons";
 // --- split-pane-resizable ---
 export { type SplitDirection, type ResizeHandle, type PaneConfig, type SplitPaneOptions, type SplitPaneInstance, createSplitPane } from "./split-pane-resizable";
+
+// --- split-pane-utils ---
+export { type SplitDirection as SpltPaneUtl_SplitDirection, type SplitBehavior, type PaneOptions as SpltPaneUtl_PaneOptions, type SplitPaneOptions as SpltPaneUtl_SplitPaneOptions, type SplitPaneInstance as SpltPaneUtl_SplitPaneInstance, createSplitPane as createSpltPaneUtlSplitPane } from "./split-pane-utils";
+// --- split-pane ---
+export { type SplitOrientation, type SplitCollapseDirection, type SplitPaneOptions as SpltPane_SplitPaneOptions, type SplitPaneInstance as SpltPane_SplitPaneInstance, createSplitPane } from "./split-pane";
+// --- split-view-utils ---
+export { type SplitDirection as SpltVwUtl_SplitDirection, type SplitCollapseMode, type SplitPaneConfig, type SplitViewOptions, type SplitViewInstance, createSplitView } from "./split-view-utils";
