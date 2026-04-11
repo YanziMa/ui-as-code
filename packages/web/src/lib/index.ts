@@ -20333,3 +20333,33 @@ export type {
   ScrollSnapOptions,
   ScrollSnapInstance,
 } from "./scroll-snap";
+export {
+  makeResizable,
+  createSplitPane,
+} from "./resizable";
+export type {
+  ResizeOptions,
+  ResizeState,
+  ResizableController,
+  SplitPaneOptions,
+  SplitPaneController,
+} from "./resizable";
+export {
+  createSplitButton,
+} from "./splitter";
+export type {
+  SplitButtonSize,
+  SplitButtonVariant,
+  SplitButtonItem,
+  SplitButtonOptions,
+  SplitButtonInstance,
+} from "./splitter";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
