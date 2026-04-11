@@ -36968,3 +36968,47 @@ export {
   type AlignSelf,
   type GapSize,
 } from "./layout-utils";
+// --- Batch 1182: i18n, Theme, Logger Utilities ---
+export {
+  LOCALES,
+  getPluralForm,
+  formatLocaleNumber,
+  formatCurrency as i18nFormatCurrency,
+  formatRelativeTimeLocale,
+  formatList,
+  detectLocale,
+  TranslationDict,
+  type LocaleConfig,
+  type LocaleCode,
+  type PluralRule,
+} from "./i18n-utils";
+export {
+  getSystemColorScheme,
+  onSystemColorSchemeChange,
+  prefersReducedMotion,
+  prefersHighContrast,
+  prefersLightColor,
+  ThemeManager,
+  generateDesignTokens as generateThemeTokens,
+  generateDarkTokens,
+  createLightDarkTheme,
+  type ThemeMode,
+  type DesignToken,
+  type ThemeDefinition,
+  type ThemeManagerConfig,
+} from "./theme-utils";
+export {
+  Logger,
+  getLogger,
+  destroyLogger,
+  createModuleLogger,
+  PerfTracker,
+  textFormatter,
+  jsonFormatter,
+  compactFormatter,
+  type LogLevel,
+  type LogEntry,
+  type LogTransport,
+  type LogFormatter,
+  type LoggerOptions,
+} from "./logger-utils";
