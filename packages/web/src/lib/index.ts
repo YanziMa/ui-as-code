@@ -30040,3 +30040,61 @@ export type {
   WebVitals,
   NavigationTiming,
 } from "./performance-utils";
+
+// --- color-thief ---
+export {
+  getDominantColor,
+  getPalette,
+  getPaletteWithCounts,
+  getColorAnalysis,
+  generateScheme,
+  colorToCss,
+  colorToHex,
+  parseColor as parseColorStr,
+} from "./color-thief";
+export type { Color, ColorWithCount, ColorThiefOptions } from "./color-thief";
+
+// --- css-in-js ---
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  mq,
+  mediaQueries,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode: isDarkModeCSS,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations,
+  animate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type { Breakpoints } from "./css-in-js";
+
+// --- html-sanitizer ---
+export { sanitizeHtml, sanitize, stripHtml, escapeHtmlEntities, scanForXss } from "./html-sanitizer";
+export type { SanitizeOptions, SanitizeLevel } from "./html-sanitizer";
