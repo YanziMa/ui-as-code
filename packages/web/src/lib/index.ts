@@ -29487,3 +29487,15 @@ export type {
   CalendarSelectionMode,
   CalendarWeekStart,
 } from "./calendar-grid.js";
+
+// --- data-table-v2 ---
+export { createDataTableV2 } from "./data-table-v2";
+export type { DataTableColumn, DataTableOptions, DataTableInstance, SortDirection, FilterOperator, RowSelectionType } from "./data-table-v2";
+
+// --- pivot-table ---
+export { createPivotTable } from "./pivot-table";
+export type { PivotTableOptions, PivotTableInstance, PivotDimension, PivotMeasure, PivotValue, AggregationFn } from "./pivot-table";
+
+// --- fireworks ---
+export { createFireworks } from "./fireworks";
+export type { FireworksOptions, FireworksInstance, FireworkType, Particle, BurstConfig } from "./fireworks";
