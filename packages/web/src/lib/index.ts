@@ -44240,3 +44240,37 @@ export {
   snackbarError,
   snackbarWarning,
 } from "./snackbar";
+// --- sort-utils ---
+export type {
+  SortDirection as SortUtilsDirection,
+  SortRule as SortUtilsRule,
+} from "./sort-utils";
+export { sortByKey, multiSort, stableSort as stableSortUtils, naturalSort, createSorter } from "./sort-utils";
+
+// --- sort ---
+export type {
+  SortDirection,
+  SortRule as SortEngineRule,
+  SortState,
+  ComparatorFn,
+} from "./sort";
+export {
+  defaultCompare,
+  naturalCompare,
+  caseInsensitiveCompare,
+  dateAwareCompare,
+  createComparator,
+  stableSort as stableSortEngine,
+  sortByRules,
+  createSortManager,
+  quickSort,
+  getSortIndicator,
+} from "./sort";
+
+// --- sortable-list ---
+export type {
+  SortableItem,
+  SortableListOptions,
+  SortableListInstance,
+} from "./sortable-list";
+export { createSortableList } from "./sortable-list";
