@@ -24713,3 +24713,14 @@ export type { DataTableOptions, DataTableInstance, ColumnDef, TableRow, SortDire
 // --- notification-center ---
 export { NotificationCenterManager, createNotificationCenter } from "./notification-center";
 export type { NotificationCenterOptions, NotificationCenterInstance, NotificationItem, NotificationType } from "./notification-center";
+// --- comment-system ---
+export { createCommentSystem } from "./comment-system";
+export type { CommentSystemOptions, CommentSystemInstance, Comment, CommentAuthor } from "./comment-system";
+
+// --- rating-review ---
+export { createRatingReview } from "./rating-review";
+export type { RatingReviewOptions, RatingReviewInstance, Review, ReviewAuthor, RatingSummary, RatingType, SortReviews } from "./rating-review";
+
+// --- activity-feed ---
+export { ActivityFeedManager, createActivityFeed } from "./activity-feed";
+export type { ActivityFeedOptions, ActivityFeedInstance, ActivityItem, ActivityType, ActivityGroupBy, FeedDensity } from "./activity-feed";
