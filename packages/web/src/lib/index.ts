@@ -41042,3 +41042,63 @@ export {
   hashToHex,
 } from "./hash-utils";
 export type { HashFunction, HashTableEntry } from "./hash-utils";
+// --- event-utils ---
+export {
+  createCustomEvent,
+  dispatchCustomEvent,
+  onCustomEvent,
+  throttleEvent,
+  debounceEvent,
+  once as eventOnce,
+  waitForEvent,
+  delegateEvent,
+  preventDefault,
+  stopPropagation,
+  stopEvent,
+} from "./event-utils";
+
+// --- promise-utils ---
+export {
+  retry as promiseRetry,
+  withTimeout,
+  sleep,
+  runConcurrent,
+  processInBatches,
+  raceSuccess,
+  firstN,
+  makeCancellable,
+  collectAsync,
+  mapAsyncIterable,
+  filterAsyncIterable,
+  reduceAsyncIterable,
+  memoizeAsync as promiseMemoizeAsync,
+  createDeferred,
+  createOnceEvent,
+  poll as promisePoll,
+  TaskQueue,
+} from "./promise-utils";
+export type {
+  RetryOptions as PromiseRetryOptions,
+  TimeoutOptions,
+  ConcurrencyOptions as PromiseConcurrencyOptions,
+  BatchOptions,
+  MemoizeOptions as PromiseMemoizeOptions,
+  PollOptions as PromisePollOptions,
+  TaskQueueOptions,
+} from "./promise-utils";
+
+// --- async-utils ---
+export {
+  retry as asyncRetry,
+  withTimeoutPromise,
+  poll as asyncPoll,
+  runWithConcurrency,
+  memoizeAsync,
+  memoize,
+  createDeferred as asyncCreateDeferred,
+  asyncIterate,
+  batchProcess,
+  allSuccessful,
+  allOrThrow,
+} from "./async-utils";
+export type { RetryOptions as AsyncRetryOptions, PollOptions as AsyncPollOptions, ConcurrencyOptions as AsyncConcurrencyOptions, MemoizeOptions as AsyncMemoizeOptions } from "./async-utils";
