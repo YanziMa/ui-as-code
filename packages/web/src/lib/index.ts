@@ -34407,3 +34407,14 @@ export type { CardOptions, CardImageOptions, CardActionConfig, CardVariant, Card
 // --- table-utils ---
 export { createTable } from "./table-utils";
 export type { TableOptions, TableInstance, TableColumn, TableRow, TableSize, TableVariant } from "./table-utils";
+// --- form-utils ---
+export { createForm, serializeForm, populateForm, clearForm, createMultiStepForm, evaluateConditionals, linkErrorToField, unlinkErrorFromField, createFormAnnouncer } from "./form-utils";
+export type { FormOptions, FormInstance, FormFieldConfig, FormFieldState, FormValidationRule, StepConfig, MultiStepFormOptions, MultiStepFormInstance, ConditionalField, ConditionRule } from "./form-utils";
+
+// --- input-utils ---
+export { createInput, createSearchInput, createPasswordInput, createNumberInput } from "./input-utils";
+export type { InputOptions, InputInstance, SearchInputOptions, SearchInputInstance, PasswordInputOptions, PasswordInputInstance, NumberInputOptions, NumberInputInstance, InputSize, InputVariant, InputState } from "./input-utils";
+
+// --- select-utils ---
+export { createSelect } from "./select-utils";
+export type { SelectOptions, SelectInstance, SelectOption, SelectGroup, SelectSize, SelectVariant } from "./select-utils";
