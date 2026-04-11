@@ -28167,3 +28167,15 @@ export type { RichTextEditorOptions, RichTextEditorInstance, EditorCommand, Tool
 // --- File Upload ---
 export { FileUploadManager, createFileUpload } from "./file-upload";
 export type { FileUploadOptions, FileUploadInstance, UploadFile } from "./file-upload";
+
+// --- Form Validator ---
+export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom } from "./form-validator";
+export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldConfig, FormValidatorOptions } from "./form-validator";
+
+// --- Virtual Scroll ---
+export { createVirtualScroll } from "./virtual-scroll";
+export type { VirtualScrollOptions, VirtualScrollInstance, VirtualItem } from "./virtual-scroll";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
