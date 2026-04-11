@@ -47503,3 +47503,17 @@ export { PaginationManager, createPagination as createPgMgr } from "./pagination
 // --- panel-utils ---
 export type { PanelState as PanUState, PanelDockPosition as PanUDockPos, PanelOptions as PanUOpts, PanelInstance as PanUInst } from "./panel-utils";
 export { createPanel } from "./panel-utils";
+
+// --- parallax-scroller ---
+export type { ParallaxDirection as PSDirection, EasingType as PSEasing, ParallaxLayer as PSLayer } from "./parallax-scroller";
+export type { ScrollAnimation as PSAnim, TiltConfig as PSTiltCfg, ParallaxScrollerOptions as PSOptions, ParallaxScrollerInstance as PSInst } from "./parallax-scroller";
+export { createParallaxScroller } from "./parallax-scroller";
+
+// --- parallax ---
+export type { ParallaxMode as PxMode, ParallaxDirection as PxDirection, ParallaxLayer as PxLayer } from "./parallax";
+export type { ParallaxOptions as PxOptions, ParallaxInstance as PxInst } from "./parallax";
+export { ParallaxManager, createParallax } from "./parallax";
+
+// --- parallel-coordinates ---
+export type { PCDimension as PCDim, PCRow as PCRowT, ParallelCoordinatesOptions as PCOpts, PCInstance as PCInst } from "./parallel-coordinates";
+export { createParallelCoordinates } from "./parallel-coordinates";
