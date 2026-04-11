@@ -38552,3 +38552,65 @@ export type {
   SecurityEventSeverity,
   SecurityAuditEvent,
 } from "./security-utils";
+// --- Logger Utilities ---
+export {
+  Logger,
+  PerfTracker,
+  getLogger,
+  destroyLogger,
+  createModuleLogger,
+  textFormatter,
+  jsonFormatter,
+  compactFormatter,
+} from "./logger-utils";
+export type {
+  LogLevel,
+  LogEntry,
+  LogTransport,
+  LogFormatter,
+  LoggerOptions,
+} from "./logger-utils";
+
+// --- Error Utilities ---
+export {
+  classifyError,
+  isRetryable,
+  enrichError,
+  parseStackTrace,
+  getAppFrame,
+  createErrorBoundary,
+  createErrorReporter,
+  setupGlobalErrorHandler,
+  createError,
+  retryOnError,
+} from "./error-utils";
+export type {
+  ErrorCategory,
+  ErrorSeverity,
+  ClassifiedError,
+  ErrorBoundaryOptions,
+  ErrorReport,
+  ErrorReporterConfig,
+  ParsedStackFrame,
+} from "./error-utils";
+
+// --- Metrics Utilities ---
+export {
+  Counter,
+  Gauge,
+  Histogram,
+  Timer,
+  MetricsRegistry,
+  getMetricsRegistry,
+  destroyMetricsRegistry,
+  calculatePercentile,
+} from "./metrics-utils";
+export type {
+  MetricBase,
+  CounterMetric,
+  GaugeMetric,
+  HistogramMetric,
+  TimerMetric,
+  Metric,
+  MetricsRegistryConfig,
+} from "./metrics-utils";
