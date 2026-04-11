@@ -22672,3 +22672,42 @@ export {
   requestIdleCallback,
   cancelIdleCallback,
 } from "./worker";
+
+// --- undo-redo ---
+export {
+  UndoHistory,
+  type UndoItem,
+  type UndoBranch,
+  type UndoState,
+  type UndoHistoryOptions,
+  type UndoChangeListener,
+} from "./undo-redo";
+
+// --- clipboard-api ---
+export {
+  ClipboardAPI,
+  requestClipboardPermission,
+  copyToClipboard,
+  readFromClipboard,
+  copyElement,
+  copyElementRich,
+  type ClipboardFormat,
+  type ClipboardItemData,
+  type ClipboardResult,
+  type ClipboardOptions,
+  type ClipboardPermissionState,
+  type ClipboardHistoryEntry,
+} from "./clipboard-api";
+
+// --- file-system ---
+export {
+  VirtualFileSystem,
+  type VfsEntry,
+  type FileType,
+  type WatchEventType,
+  type WatchEvent,
+  type FileSystemOptions,
+  type FileSystemStats,
+  type SearchResult,
+  type TreeViewNode,
+} from "./file-system";
