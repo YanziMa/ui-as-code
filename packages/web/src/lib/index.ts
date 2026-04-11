@@ -48063,3 +48063,20 @@ export {
   PopoverArrow, PopoverOptions as PLiteOptions, PopoverInstance as PLiteInstance,
   createPopover as createPLite,
 } from "./popover-lite";
+// --- popover-tooltip-utils ---
+export {
+  PopoverTooltipPlacement as PTTPlacement, PopoverTooltipTrigger as PTTTrigger,
+  PopoverTooltipContent, PopoverTooltipOptions as PTTOptions,
+  PopoverTooltipInstance as PTTInstance, createPopoverTooltip,
+} from "./popover-tooltip-utils";
+// --- popover-utils ---
+export {
+  PopoverPlacement as PUPlacement, PopoverTrigger as PUTrigger,
+  VirtualElement, PopoverOptions as PUOptions, PopoverInstance as PUInstance,
+  createPopover as createPU,
+} from "./popover-utils";
+// --- popover-v2 ---
+export {
+  PopoverPlacement as PV2Placement, PopoverTrigger as PV2Trigger,
+  PopoverV2Options, PopoverV2Instance, createPopoverV2,
+} from "./popover-v2";
