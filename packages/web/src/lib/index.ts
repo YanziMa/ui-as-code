@@ -41657,3 +41657,10 @@ export { createModal } from "./modal-dialog";
 export type { ModalOptions, ModalInstance, ModalSize, ModalVariant } from "./modal-dialog";
 export { createDrawer } from "./drawer-panel";
 export type { DrawerOptions, DrawerInstance, DrawerPlacement, DrawerSize } from "./drawer-panel";
+// --- Batch 1308: Split View, Resizable Panel, Tooltip Popover ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, SplitDirection } from "./split-view";
+export { createResizablePanel } from "./resizable-panel";
+export type { ResizablePanelOptions, ResizablePanelInstance, PanelDirection, PanelCollapseMode } from "./resizable-panel";
+export { createTooltip, createPopover } from "./tooltip-popover";
+export type { TooltipOptions, TooltipInstance, Placement, TriggerMode, PopoverOptions } from "./tooltip-popover";
