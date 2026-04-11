@@ -45947,3 +45947,37 @@ export {
   type ImageZoomOptions,
   type ImageZoomInstance,
 } from "./image-zoom";
+// image
+export {
+  getImageDimensions as getImgDimensions,
+  generateSrcSet as generateImgSrcSet,
+  generateSizes as generateImgSizes,
+  getAspectRatio as getImgAspectRatio,
+  fitToContainer,
+  generateBlurPlaceholder as genBlurPlaceholder,
+  isValidImageUrl,
+  getDominantColor as getImgDominantColor,
+  fileToDataUrl as imgFileToDataUrl,
+  resizeImage as resizeImg,
+} from "./image";
+
+// imgix
+export {
+  ImgixUrlBuilder,
+  buildImgixUrl,
+  generateSrcset as imgixGenerateSrcset,
+  generateSizes as imgixGenerateSizes,
+  imgixPresets,
+  type ImgixOptions,
+  type SrcsetOptions as ImgixSrcsetOptions,
+} from "./imgix";
+
+// infinite-list-utils
+export {
+  InfiniteList,
+  createSentinelLoader,
+  type FetchPageOptions,
+  type FetchResult,
+  type InfiniteListConfig,
+  type InfiniteListState,
+} from "./infinite-list-utils";
