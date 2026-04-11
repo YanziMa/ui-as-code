@@ -46597,3 +46597,11 @@ export { createMasonry as createMasonryUtils } from "./masonry-utils";
 // --- masonry ---
 export type { MasonryItem, MasonryOptions, MasonryInstance } from "./masonry";
 export { MasonryManager, createMasonry } from "./masonry";
+// --- math-3d ---
+export { Vec2, Vec3, Vec4, Mat3, Mat4, Quat, Ray, AABB, Frustum } from "./math-3d";
+// --- math-advanced ---
+export type { StatisticsResult as MaStatsResult, RegressionResult as MaRegressionResult, Matrix as MaMatrix, InterpolationMethod as MaInterpolationMethod, EasingFunction as MaEasingFunction, DistributionType as MaDistributionType, DistributionOptions as MaDistributionOptions } from "./math-advanced";
+export { computeStats as maComputeStats, percentile as maPercentile, linearRegression as maLinearRegression, pearsonCorrelation as maPearsonCorrelation, normalize as maNormalize, interpolate as maInterpolate, easings, getEasing, createMatrix, identityMatrix, matAdd, matMul, matScale, matTranspose, matDeterminant, matInverse, randomFromDistribution, SeededRNG } from "./math-advanced";
+// --- math-helpers ---
+export type { Point2D as MhPoint2D, Point3D as MhPoint3D } from "./math-helpers";
+export { clamp as mhClamp, lerp as mhLerp, inverseLerp, mapRange, roundTo, roundToStep, approxEqual, isInRange, sign, randomFloat, randomInt, randomPick, shuffle, weightedRandom, uniqueRandomInts, createSeededRandom, mean as mhMean, median, mode, stdDev, variance, percentile, sum, product, minMax, normalize as mhNormalize, smoothstep, smootherstep, catmullRomSpline, cubicBezier, quadraticBezier, linearBezier, formatNumber, abbreviateNumber, parseFormattedNumber, formatBytes, formatDuration, degToRad, radToDeg, distance2D as mhDistance2D, distance3D as mhDistance3D, angleBetween, midpoint2D, rotatePoint, pointInRect, pointInCircle, polygonArea, polygonCentroid, boundingBox, mat2Multiply, mat3Multiply, mat3Identity, mat3Translate, mat3Scale, mat3Rotate, transformPoint, det2, det3, invert2, TAU, PHI, EPSILON, DEG_TO_RAD, RAD_TO_DEG } from "./math-helpers";
