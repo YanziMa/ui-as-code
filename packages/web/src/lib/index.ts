@@ -42257,3 +42257,46 @@ export { createInlineWorker, createInlineModuleWorker, WorkerChannel, WorkerPool
 export type { WorkerMessage, WorkerResponse, WorkerPoolOptions, PooledTask } from "./worker-utils";
 export { WorkflowDefinition, WorkflowExecutor, runWorkflow, sequentialWorkflow, parallelWorkflow } from "./workflow";
 export type { TaskId, WorkflowId, TaskDefinition, WorkflowContext, WorkflowStatus, TaskResult, WorkflowResult, WorkflowHook, WorkflowOptions } from "./workflow";
+// --- ws-protocol ---
+export {
+  WsClient,
+  type WsClientOptions,
+  type WsMessage,
+  type WsEventHandler,
+  type WsRoomInfo,
+  type WsPresenceData,
+  type WsConnectionState,
+} from "./ws-protocol";
+
+// --- zoom-pan ---
+export {
+  createZoomPan,
+  type ZoomPanOptions,
+  type ZoomPanState,
+  type ZoomPanInstance,
+  type PanConstraint,
+  type ZoomOrigin,
+} from "./zoom-pan";
+
+// --- websocket-utils ---
+export {
+  WebSocketManager,
+  WSEventEmitter,
+  RateLimiter,
+  RoomManager,
+  PresenceSystem,
+  ConnectionPool,
+  AckTracker,
+  StatsCollector,
+  QualityAssessor,
+  createWebSocketManager,
+  type WSManagerOptions,
+  type WSEventMap,
+  type RateLimitOptions,
+  type RoomOptions,
+  type PresenceOptions,
+  type PoolOptions,
+  type AckOptions,
+  type StatsSnapshot,
+  type QualityReport,
+} from "./websocket-utils";
