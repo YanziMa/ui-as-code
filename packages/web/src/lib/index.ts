@@ -42300,3 +42300,68 @@ export {
   type StatsSnapshot,
   type QualityReport,
 } from "./websocket-utils";
+// --- 3d-graphics ---
+export {
+  Vec3,
+  Mat4,
+  Quaternion,
+  createCube,
+  createSphere,
+  createCylinder,
+  createPlane,
+  createTorus,
+  SceneNode,
+  Scene,
+  Camera,
+  createDirectionalLight,
+  createPointLight,
+  createSpotLight,
+  createAmbientLight,
+  createHemisphereLight,
+  createMaterial,
+  Ray3D,
+  AABB3D,
+  SphereBounds,
+  Frustum,
+  KeyframeAnimation3D,
+  isWebGLSupported,
+  isWebGL2Supported,
+  getWebGLInfo,
+  createDefaultShaderSource,
+  type MeshData,
+  type Transform,
+  type Material,
+  type Light,
+  type LightType,
+  type Keyframe,
+} from "./3d-graphics";
+
+// --- a11y ---
+export {
+  announce,
+  setFocus,
+  focusFirst,
+  focusLast,
+  createA11yFocusTrap,
+  prefersReducedMotion,
+  prefersHighContrast,
+  generateAriaId,
+  aria,
+  SKIP_LINK_DEFAULTS,
+} from "./a11y";
+
+// --- a11y-announcer-utils ---
+export {
+  A11yAnnouncer,
+  getGlobalAnnouncer,
+  destroyGlobalAnnouncer,
+  announce as announceViaAnnouncer,
+  announceAssertive,
+  announcePolite,
+  isVisuallyHidden,
+  isValidLiveRegion,
+  type AnnouncementPriority,
+  type Announcement,
+  type AnnouncerConfig,
+  type AnnouncerState,
+} from "./a11y-announcer-utils";
