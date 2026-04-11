@@ -20842,3 +20842,37 @@ export type {
 export {
   createSkeleton,
 } from "./skeleton-loader";
+
+// --- Mentions ---
+export type {
+  MentionItem,
+  MentionTrigger,
+  MentionsOptions,
+  MentionsInstance,
+} from "./mentions";
+export {
+  MentionsManager,
+  createMentions,
+} from "./mentions";
+
+// --- Tag Input ---
+export type {
+  TagItem,
+  TagInputOptions,
+  TagInputInstance,
+} from "./tag-input";
+export {
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+
+// --- Time Picker ---
+export type {
+  TimeFormat,
+  TimePickerMode,
+  TimePickerOptions,
+  TimePickerInstance,
+} from "./time-picker";
+export {
+  createTimePicker,
+} from "./time-picker";
