@@ -47517,3 +47517,55 @@ export { ParallaxManager, createParallax } from "./parallax";
 // --- parallel-coordinates ---
 export type { PCDimension as PCDim, PCRow as PCRowT, ParallelCoordinatesOptions as PCOpts, PCInstance as PCInst } from "./parallel-coordinates";
 export { createParallelCoordinates } from "./parallel-coordinates";
+
+// --- parser.ts ---
+export type { ParseResult, Parser } from "./parser";
+export {
+  char,
+  digit,
+  letter,
+  hexDigit,
+  whitespace,
+  str,
+  regex,
+  int,
+  float,
+  seq,
+  choice,
+  many,
+  optional,
+  separatedBy,
+  mapParsers,
+  email,
+  url,
+  uuid,
+  hexColor,
+  json,
+  queryParam,
+  queryString,
+  csvRow,
+  csv,
+} from "./parser";
+
+// --- password-strength.ts ---
+export type {
+  StrengthLevel,
+  StrengthScore,
+  PasswordStrengthOptions,
+  PasswordStrengthInstance,
+} from "./password-strength";
+export { createPasswordStrength } from "./password-strength";
+
+// --- password.ts ---
+export type {
+  PasswordStrengthResult,
+  PasswordGeneratorOptions,
+} from "./password";
+export {
+  generatePassword,
+  generatePassphrase,
+  checkPasswordStrength,
+  isCommonPassword,
+  hashPasswordSimple,
+  maskPassword,
+} from "./password";
