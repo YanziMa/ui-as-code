@@ -28813,3 +28813,15 @@ export type { GamepadState, GamepadButtonState, GamepadAxisState, GamepadOptions
 // --- pointer-lock ---
 export { createPointerLock, isPointerLockSupported, isPointerLocked, requestPointerLock, exitPointerLock } from "./pointer-lock";
 export type { PointerLockOptions, PointerLockInstance } from "./pointer-lock";
+
+// --- media-session ---
+export { createMediaSession, isMediaSessionSupported } from "./media-session";
+export type { MediaMetadata, MediaSessionAction, MediaSessionOptions, MediaSessionInstance } from "./media-session";
+
+// --- screen-wake-lock ---
+export { createWakeLock, isWakeLockSupported, keepScreenAwake } from "./screen-wake-lock";
+export type { WakeLockOptions, WakeLockInstance } from "./screen-wake-lock";
+
+// --- share-api ---
+export { createShareApi, shareContent, isShareSupported, generateShareTarget, parseShareTargetFromUrl } from "./share-api";
+export type { ShareData, ShareOptions, ShareTargetRegistration, ShareInstance } from "./share-api";
