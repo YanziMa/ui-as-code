@@ -27872,3 +27872,15 @@ export type { BadgeVariant, BadgePosition, BadgeSize, DotSize, BadgeOptions, Dot
 // --- Anchor Navigation ---
 export { createAnchorNav } from "./anchor-nav";
 export type { AnchorLink, AnchorNavOptions, AnchorNavInstance } from "./anchor-nav";
+
+// --- Scroll Spy ---
+export { createScrollSpy, createNavSpy } from "./scroll-spy";
+export type { SpyTarget, ScrollSpyOptions, ScrollSpyInstance, NavSpyOptions } from "./scroll-spy";
+
+// --- Image Zoom ---
+export { createImageZoom } from "./image-zoom";
+export type { ZoomMode, ZoomLensShape, ImageZoomOptions, ImageZoomInstance } from "./image-zoom";
+
+// --- Lightbox ---
+export { LightboxManager, createLightbox } from "./lightbox";
+export type { LightboxImage, LightboxOptions, LightboxInstance } from "./lightbox";
