@@ -29535,3 +29535,15 @@ export type { BulletChartOptions, BulletChartInstance, BulletMeasure, RangeType 
 // --- radial-bar-chart ---
 export { createRadialBarChart } from "./radial-bar-chart";
 export type { RadialBarOptions, RadialBarInstance, RadialBarData } from "./radial-bar-chart";
+
+// --- candlestick-chart ---
+export { createCandlestickChart } from "./candlestick-chart";
+export type { CandlestickOptions, CandlestickInstance, OHLCData, MovingAverageConfig } from "./candlestick-chart";
+
+// --- histogram-chart ---
+export { createHistogramChart } from "./histogram-chart";
+export type { HistogramOptions, HistogramInstance, Bin } from "./histogram-chart";
+
+// --- parallel-coordinates ---
+export { createParallelCoordinates } from "./parallel-coordinates";
+export type { ParallelCoordinatesOptions, PCInstance, PCDimension, PCRow } from "./parallel-coordinates";
