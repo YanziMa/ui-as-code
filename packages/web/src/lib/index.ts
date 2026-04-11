@@ -46588,3 +46588,12 @@ export { createMaskedInput } from "./masked-input";
 // --- masonry-grid ---
 export type { MasonryItem, MasonryGridOptions, LayoutInfo, MasonryGridInstance } from "./masonry-grid";
 export { createMasonryGrid } from "./masonry-grid";
+// --- masonry-layout ---
+export type { MasonryItem as MlItem, MasonryOptions as MlOptions, MasonryInstance as MlInstance } from "./masonry-layout";
+export { createMasonry as createMasonryLayout } from "./masonry-layout";
+// --- masonry-utils ---
+export type { MasonryItem as MsuItem, MasonryOptions as MsuOptions, MasonryInstance as MsuInstance } from "./masonry-utils";
+export { createMasonry as createMasonryUtils } from "./masonry-utils";
+// --- masonry ---
+export type { MasonryItem, MasonryOptions, MasonryInstance } from "./masonry";
+export { MasonryManager, createMasonry } from "./masonry";
