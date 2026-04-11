@@ -19672,3 +19672,55 @@ export type {
   FileChunk,
   UploadProgress,
 } from "./file-utils";
+
+export {
+  I18nManager,
+  createI18n,
+  i18n as i18nInstance,
+  t as i18nT,
+} from "./i18n-advanced";
+export type {
+  LocaleCode,
+  LocaleConfig,
+  PluralRule,
+  MessageCatalog,
+  I18nOptions,
+} from "./i18n-advanced";
+export {
+  progressBarAttrs,
+  switchAttrs,
+  liveRegion,
+  announce,
+  skipLinkAttrs,
+  SKIP_LINK_ID,
+  prefersReducedMotion,
+  animationDuration,
+  focusTrap,
+  srOnly,
+  ROLES,
+} from "./accessibility";
+export {
+  PerfObserver,
+  measureSync,
+  measureAsync,
+  perfMark,
+  perfMeasure,
+  measureBetween,
+  FPSCounter,
+  getMemoryUsage,
+  getMemoryPercent,
+  MemoryMonitor,
+  LongTaskDetector,
+  getNavigationTiming,
+  collectWebVitals,
+  getResourceTiming,
+  findSlowResources,
+  CustomMetric,
+} from "./performance-utils";
+export type {
+  TimingResult,
+  MemoryUsage,
+  FPSStats,
+  WebVitals,
+  NavigationTiming,
+} from "./performance-utils";
