@@ -39990,3 +39990,33 @@ export {
   type PillSize,
   type PillMode,
 } from "./pills-utils";
+// --- Breadcrumb Utilities ---
+export {
+  createBreadcrumb,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+  type BreadcrumbItem,
+} from "./breadcrumb-utils";
+
+// --- Pagination Utilities ---
+export {
+  createPagination,
+  type PaginationOptions,
+  type PaginationInstance,
+  type PaginationSize,
+  type PaginationLayout,
+} from "./pagination-utils";
+
+// --- Page Navigation Utilities ---
+export {
+  createPageNav,
+  createTableOfContents,
+  type PageNavOptions,
+  type PageNavInstance,
+  type PageNavItem,
+  type TableOfContentsOptions,
+  type TableOfContentsInstance,
+  type TocItem,
+  type PageNavStyle,
+  type PageNavSize,
+} from "./page-nav-utils";
