@@ -27552,3 +27552,38 @@ export {
   type RatingInstance,
   type StarIconType,
 } from "./rating";
+
+// --- switch ---
+export {
+  createSwitch,
+  type SwitchOptions,
+  type SwitchInstance,
+  type SwitchSize,
+  type SwitchVariant,
+} from "./switch";
+
+// --- checkbox ---
+export {
+  createCheckbox,
+  createRadio,
+  createCheckboxGroup,
+  type CheckboxOptions,
+  type CheckboxInstance,
+  type RadioOptions,
+  type RadioInstance,
+  type CheckboxGroupOptions,
+  type CheckboxGroupInstance,
+  type CheckboxSize,
+  type CheckboxVariant,
+} from "./checkbox";
+
+// --- radio ---
+export {
+  RadioGroupManager,
+  createRadioGroup,
+  type RadioGroupOptions,
+  type RadioGroupInstance,
+  type RadioOption,
+  type RadioSize,
+  type RadioVariant,
+} from "./radio";
