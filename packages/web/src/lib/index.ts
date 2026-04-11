@@ -38193,3 +38193,78 @@ export type {
   Subscription,
   EventBusOptions,
 } from "./event-bus-utils";
+// --- Promise Utilities ---
+export {
+  retry,
+  withTimeout,
+  sleep,
+  runConcurrent,
+  processInBatches,
+  raceSuccess,
+  firstN,
+  makeCancellable,
+  collectAsync,
+  mapAsyncIterable,
+  filterAsyncIterable,
+  reduceAsyncIterable,
+  memoizeAsync,
+  createDeferred,
+  createOnceEvent,
+  poll,
+  TaskQueue,
+} from "./promise-utils";
+export type {
+  RetryOptions,
+  TimeoutOptions,
+  ConcurrencyOptions,
+  BatchOptions,
+  MemoizeOptions,
+  PollOptions,
+  TaskQueueOptions,
+} from "./promise-utils";
+
+// --- Stream Utilities ---
+export {
+  readableFromAsync,
+  readableFromArray,
+  writableToArray,
+  mapStream,
+  filterStream,
+  batchStream,
+  flattenStream,
+  throttleStream,
+  dedupStream,
+  pipeThrough,
+  consumeStream,
+  streamToIterable,
+  iterableToStream,
+  pipeToPromise,
+  teeStream,
+  textToStream,
+  collectText,
+  streamToArrayBuffer,
+  streamToBlob,
+  mergeStreams,
+  concatStreams,
+} from "./stream-utils";
+export type {
+  StreamOptions,
+  TransformOptions,
+} from "./stream-utils";
+
+// --- Worker Utilities ---
+export {
+  createInlineWorker,
+  createInlineModuleWorker,
+  WorkerChannel,
+  WorkerPool,
+  isWorkerAvailable,
+  isWorkerContext,
+  getWorkerConcurrency,
+} from "./worker-utils";
+export type {
+  WorkerMessage,
+  WorkerResponse,
+  WorkerPoolOptions,
+  PooledTask,
+} from "./worker-utils";
