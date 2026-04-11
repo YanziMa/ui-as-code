@@ -46048,3 +46048,15 @@ export type { InputSize as IuInputSize, InputVariant as IuInputVariant, InputSta
 // --- input (enhanced) ---
 export { createInput as createEnhancedInput } from "./input";
 export type { InputSize as InpSize, InputVariant as InpVariant, InputState as InpState, InputOptions as InpOptions, InputInstance as InpInstance } from "./input";
+
+// --- intersection-helper ---
+export { IntersectionHelper, createIntersectionHelper, createLazyLoader, createScrollReveal, trackVisibility as trackVisibilityHelper } from "./intersection-helper";
+export type { IntersectionOptions as IhIntersectionOptions, IntersectionEntry, IntersectionHelperInstance } from "./intersection-helper";
+
+// --- intersection-manager ---
+export { IntersectionManager, createIntersectionManager, whenInView, trackVisibility, lazyLoadElements } from "./intersection-manager";
+export type { IntersectionTarget, IntersectionManagerOptions, IntersectionManagerInstance } from "./intersection-manager";
+
+// --- intersection-observer-v2 ---
+export { createIntersectionObserverV2, onceInViewport, lazyLoadImages } from "./intersection-observer-v2";
+export type { VisibilityDirection, IntersectionV2Entry, IntersectionObserverV2Options, IntersectionObserverV2Instance } from "./intersection-observer-v2";
