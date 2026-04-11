@@ -19724,3 +19724,58 @@ export type {
   WebVitals,
   NavigationTiming,
 } from "./performance-utils";
+export {
+  repeat,
+  fixedGrid,
+  autoFitGrid,
+  autoFillGrid,
+  masonryGrid,
+  minmax,
+  flexible,
+  MINMAX,
+  normalizeGap,
+  uniformGap,
+  asymmetricGap,
+  defineAreas,
+  layout12Area,
+  holyGrail,
+  generateGridStyles,
+  applyGrid,
+  responsiveGrid,
+  BREAKPOINTS,
+  mediaQuery,
+  adaptiveGrid,
+} from "./css-grid";
+export type {
+  GridTemplate,
+  GridOptions,
+  GridStyles,
+} from "./css-grid";
+export {
+  validate,
+  validateField,
+  createValidator,
+} from "./schema";
+export type {
+  SchemaType,
+  SchemaRule,
+  FieldSchema,
+  ValidationResult,
+} from "./schema";
+export {
+  DomObserverManager,
+  takeSnapshot,
+  compareSnapshots,
+  createRouteChangeDetector,
+  createLazyLoader,
+} from "./dom-observer";
+export type {
+  ObserveTarget,
+  MutationOptions,
+  IntersectionOptions,
+  ResizeOptions,
+  MutationRecordEx,
+  DomSnapshot,
+  ObserverCallbacks,
+  ObserverStats,
+} from "./dom-observer";
