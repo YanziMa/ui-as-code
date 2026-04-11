@@ -21707,3 +21707,36 @@ export type {
 export {
   createVirtualList,
 } from "./virtual-list";
+
+// --- Infinite Scroll ---
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+
+// --- Lazy Load ---
+export type {
+  LazyLoadOptions,
+  LazyLoadInstance,
+  BatchLazyOptions,
+} from "./lazy-load";
+export {
+  createLazyLoad,
+  initBatchLazy,
+} from "./lazy-load";
+
+// --- Scroll Spy ---
+export type {
+  SpyTarget,
+  ScrollSpyOptions,
+  ScrollSpyInstance,
+  NavSpyOptions,
+} from "./scroll-spy";
+export {
+  createScrollSpy,
+  createNavSpy,
+} from "./scroll-spy";
