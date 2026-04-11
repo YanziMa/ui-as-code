@@ -21913,3 +21913,45 @@ export type { NavItem, KeyboardNavOptions, KeyboardNavInstance } from "./keyboar
 // --- animate ---
 export { Animator, easings, resolveEasing, staggerAnimate, scrollTrigger } from "./animate";
 export type { Keyframe, AnimationOptions, AnimationInstance, StaggerOptions, TimelineOptions } from "./animate";
+
+// --- i18n ---
+export { t, getLocale, setLocale, LOCALE_CHANGE_EVENT } from "./i18n";
+export type { Locale } from "./i18n";
+
+// --- event-bus ---
+export { EventBus, createEventBus } from "./event-bus";
+export type { EventCallback, EventMiddleware, Subscription, EmittedEvent, EventBusOptions } from "./event-bus";
+
+// --- state-machine ---
+export {
+  FSM,
+  HSM,
+  createMachine,
+  interpret,
+  match,
+  stateEquals,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+} from "./state-machine";
+export type {
+  StateId,
+  EventId,
+  MachineContext,
+  EventPayload,
+  GuardFn,
+  ActionFn,
+  StateListener,
+  InvalidEventStrategy,
+  TransitionTarget,
+  TransitionDef,
+  HistoryMode,
+  StateConfig,
+  MachineConfig,
+  ChoiceConfig,
+  JunctionConfig,
+  StateValue,
+  TransitionHistoryEntry,
+  Service,
+} from "./state-machine";
