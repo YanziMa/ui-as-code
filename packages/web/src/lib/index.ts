@@ -25058,3 +25058,29 @@ export {
   type ToastPosition,
   type ToastVariant,
 } from "./toast-container";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+  type CommandCategory,
+} from "./command-palette";
+
+// --- Notification Bell ---
+export {
+  createNotificationBell,
+  type NotificationBellOptions,
+  type NotificationBellInstance,
+  type NotificationItem,
+} from "./notification-bell";
+
+// --- Rating ---
+export {
+  RatingManager,
+  createRating,
+  type RatingOptions,
+  type RatingInstance,
+  type StarIconType,
+} from "./rating";
