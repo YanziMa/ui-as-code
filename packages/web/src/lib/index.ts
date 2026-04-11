@@ -44095,3 +44095,14 @@ export type { PromiseStatus, PromiseState, PromiseOptions, RetryOptions } from "
 // --- react-resize-observer ---
 export { createSizeObserver, createBreakpointMatcher, DEFAULT_BREAKPOINTS, CONTAINER_BREAKPOINTS, createDimensionTracker, isResizeObserverAvailable, getViewportSize } from "./react-resize-observer";
 export type { SizeInfo, Breakpoint, ResizeObserverOptions } from "./react-resize-observer";
+// --- react-router-utils ---
+export { matchPath, matchRoutes, parseQuery, stringifyQuery, setQueryParam, createNavigationGuard, generateBreadcrumbs, isActiveRoute, joinPaths, resolvePath } from "./react-router-utils";
+export type { RouteDef, ParsedRoute, BreadcrumbItem } from "./react-router-utils";
+
+// --- react-scroll-utils ---
+export { scrollTo, scrollToTop, scrollToBottom, createScrollSpy, createScrollProgressTracker, ScrollPositionManager, scrollPositionManager, isElementVisible, getElementScrollProgress } from "./react-scroll-utils";
+export type { ScrollToOptions, ScrollSpyOptions, ScrollProgress } from "./react-scroll-utils";
+
+// --- react-state-persistence ---
+export { createPersistence, clearPersistedPrefix, migrateAll } from "./react-state-persistence";
+export type { StorageBackend, PersistenceOptions, PersistenceInstance } from "./react-state-persistence";
