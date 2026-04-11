@@ -44117,3 +44117,14 @@ export type { RenderOptions, RenderResult } from "./react-testing-utils";
 // --- react-virtual ---
 export { createVirtualizer } from "./react-virtual";
 export type { VirtualItem, VirtualizerOptions, VirtualizerInstance } from "./react-virtual";
+// --- reflow ---
+export { batchDOM, ReadWriteScheduler, ReflowDetector, measureMultiple, whenVisible, runDuringIdle } from "./reflow";
+export type { ReadFn, WriteFn, ReflowMetrics } from "./reflow";
+
+// --- region-picker ---
+export { createRegionPicker } from "./region-picker";
+export type { Point as RegionPoint, Rect as RegionRect, RegionPickerOptions, RegionPickerInstance } from "./region-picker";
+
+// --- relative-time ---
+export { getRelativeTime, formatRelativeTime, formatShort, formatNumeric, createAutoUpdatingTime, timeAgo, timeInFuture, formatDuration } from "./relative-time";
+export type { RelativeTimeOptions, RelativeTimeResult, TimeUnit } from "./relative-time";
