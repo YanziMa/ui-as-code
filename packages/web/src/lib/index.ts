@@ -24758,3 +24758,15 @@ export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } f
 // --- Split Pane ---
 export { createSplitPane } from "./split-pane";
 export type { SplitPaneOptions, SplitPaneInstance, SplitOrientation, SplitCollapseDirection } from "./split-pane";
+
+// --- Color Picker ---
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Date Range Picker ---
+export { createDateRangePicker } from "./date-range-picker";
+export type { DateRangePickerOptions, DateRangePickerInstance, DateRangePreset } from "./date-range-picker";
+
+// --- File Manager ---
+export { createFileManager } from "./file-manager";
+export type { FileManagerFile, FileManagerOptions, FileManagerInstance } from "./file-manager";
