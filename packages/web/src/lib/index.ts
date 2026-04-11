@@ -21901,3 +21901,15 @@ export {
   createSessionStorage,
 } from "./local-storage";
 export type { StorageItem, StorageOptions, StorageInstance } from "./local-storage";
+
+// --- drag-and-drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type { DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig, DragMode, DropPosition } from "./drag-and-drop";
+
+// --- keyboard-nav ---
+export { createKeyboardNav } from "./keyboard-nav";
+export type { NavItem, KeyboardNavOptions, KeyboardNavInstance } from "./keyboard-nav";
+
+// --- animate ---
+export { Animator, easings, resolveEasing, staggerAnimate, scrollTrigger } from "./animate";
+export type { Keyframe, AnimationOptions, AnimationInstance, StaggerOptions, TimelineOptions } from "./animate";
