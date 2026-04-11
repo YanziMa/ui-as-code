@@ -42110,3 +42110,7 @@ export { BreadcrumbManager, createBreadcrumb, type BreadcrumbOptions, type Bread
 export { PaginationManager, createPagination, type PaginationOptions, type PaginationInstance } from "./pagination";
 export { TabsManager, createTabs, type TabsOptions, type TabsInstance, type TabItem, type TabOrientation, type TabVariant } from "./tabs";
 export { AccordionManager, createAccordion, type AccordionOptions, type AccordionInstance, type AccordionItem, type AccordionMode } from "./accordion";
+// --- Batch 1344: Collapse, Carousel, Modal Dialog ---
+export { CollapseManager, createCollapse, createCollapseGroup, type CollapseOptions, type CollapseInstance, type CollapseSize, type CollapseVariant, type CollapseGroupOptions, type CollapseGroupInstance } from "./collapse";
+export { CarouselManager, createCarousel, type CarouselOptions, type CarouselInstance, type CarouselSlide } from "./carousel";
+export { createModal, type ModalOptions, type ModalInstance, type ModalSize, type ModalVariant } from "./modal-dialog";
