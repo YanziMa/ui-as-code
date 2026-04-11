@@ -51005,3 +51005,10 @@ export { type SortableItem, type SortableListOptions, type SortableListInstance,
 export { type SortDirection, type SelectionMode, type Column, type TablePagination, type SortState, type FilterState, type TableRow, type SortableTableOptions, type SortableTableInstance, createSortableTable } from "./sortable-table";
 // --- sortable-utils ---
 export { type SortAnimation, type SortableItemConfig as SrtUtl_SortableItemConfig, type SortableListOptions as SrtUtl_SortableListOptions, type SortableListInstance as SrtUtl_SortableListInstance, createSortableList as createSrtUtlSortableList } from "./sortable-utils";
+
+// --- sortable ---
+export { type SortableItem as Srt_SortableItem, type SortableOptions as Srt_SortableOptions, type SortableInstance as Srt_SortableInstance, SortableList as Srt_SortableList, createSortable } from "./sortable";
+// --- spacer-utils ---
+export { type SpacerSize as SpcUtl_SpacerSize, type SpacerOptions as SpcUtl_SpacerOptions, type SpacerStackOptions as SpcUtl_SpacerStackOptions, createSpacer as createSpcUtlSpacer, vSpacer, hSpacer, lineBreak, createSpacerStack } from "./spacer-utils";
+// --- sparkline-chart ---
+export { type SparklineType, type TrendIndicator, type SparklinePoint, type SparklineOptions, type SparklineInstance, createSparklineChart } from "./sparkline-chart";
