@@ -38071,3 +38071,32 @@ export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-s
 // --- pagination-utils ---
 export { createPagination } from "./pagination-utils";
 export type { PaginationSize, PaginationLayout, PaginationOptions, PaginationInstance } from "./pagination-utils";
+
+// --- transition-utils ---
+export {
+  easings as transitionEasings,
+  cssTransition, fadeTo, fadeIn, fadeOut, slideBy,
+  runClassTransition, runLeaveTransition,
+  flip, staggerEnter, staggerLeave,
+  createTransitionGroup, layoutTransition,
+} from "./transition-utils";
+export type { EasingFunction, TransitionOptions, ClassTransitionConfig, TransitionGroupOptions } from "./transition-utils";
+
+// --- motion-utils ---
+export {
+  createMotion, createSpringMotion,
+  injectKeyframes, PRESET_KEYFRAMES, animateWithKeyframes,
+  animateAlongPath,
+} from "./motion-utils";
+export type { MotionOptions, MotionInstance, SpringMotionConfig } from "./motion-utils";
+
+// --- physics-utils ---
+export {
+  Vec2, createBody, createStaticBody,
+  gravityForce, windForce, dragForce, springForce,
+  integrateSemiImplicitEuler, integrateVerlet,
+  detectCircleCircle, detectAABB, detectPointPlane,
+  resolveCollision,
+  PhysicsWorld, ParticleEmitter,
+} from "./physics-utils";
+export type { Vector2, BodyState, Force, CollisionPair, PhysicsWorldOptions, ParticleEmitterConfig } from "./physics-utils";
