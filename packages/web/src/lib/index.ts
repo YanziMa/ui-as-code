@@ -24330,3 +24330,32 @@ export {
   type FooterColumn,
   type SocialLink,
 } from "./footer";
+
+// --- Navbar ---
+export {
+  NavbarManager,
+  createNavbar,
+  type NavbarOptions,
+  type NavbarInstance,
+  type NavItem,
+  type UserMenuConfig,
+} from "./navbar";
+
+// --- Sidebar ---
+export {
+  SidebarManager,
+  createSidebar,
+  type SidebarOptions,
+  type SidebarInstance,
+  type SidebarItem,
+  type SidebarGroup,
+} from "./sidebar";
+
+// --- Aside ---
+export {
+  createAside,
+  type AsideOptions,
+  type AsideInstance,
+  type AsidePosition,
+  type AsideSize,
+} from "./aside";
