@@ -24498,3 +24498,12 @@ export { createCollapse, createCollapseGroup, CollapseManager, type CollapseOpti
 
 // --- Tabs ---
 export { createTabs, TabsManager, type TabsOptions, type TabItem, type TabsInstance, type TabOrientation, type TabVariant } from "./tabs";
+
+// --- Modal ---
+export { createModal, type ModalOptions, type ModalSize, type ModalPosition, type ModalInstance } from "./modal";
+
+// --- Dialog ---
+export { createDialog, alertDialog, confirmDialog, dangerDialog, type DialogOptions, type DialogVariant, type DialogInstance } from "./dialog";
+
+// --- Popover ---
+export { createPopover, PopoverManager, type PopoverOptions, type PopoverTrigger, type PopoverPlacement, type PopoverInstance } from "./popover";
