@@ -24597,3 +24597,15 @@ export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOption
 // --- List ---
 export { createList } from "./list";
 export type { ListOptions, ListInstance, ListItem, ListSelectionMode, ListVariant } from "./list";
+
+// --- Breadcrumb ---
+export { createBreadcrumb, BreadcrumbManager } from "./breadcrumb";
+export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb";
+
+// --- Pagination ---
+export { createPagination, PaginationManager } from "./pagination";
+export type { PaginationOptions, PaginationInstance } from "./pagination";
+
+// --- Tag ---
+export { createTag, createTagGroup, TagManager } from "./tag";
+export type { TagOptions, TagInstance, TagVariant, TagSize, TagShape, TagGroupOptions, TagGroupInstance } from "./tag";
