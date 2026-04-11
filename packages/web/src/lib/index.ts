@@ -41636,3 +41636,10 @@ export {
   type LineNumberMode,
   type CodeLanguage,
 } from "./copy-block";
+// --- Batch 1305: Code Snippet, Image Gallery, Viewer ---
+export { createSnippetManager } from "./code-snippet";
+export type { CodeSnippet, SnippetManagerOptions, SnippetManagerInstance } from "./code-snippet";
+export { ImageGalleryManager, createImageGallery } from "./image-gallery";
+export type { GalleryImage, ImageGalleryOptions, ImageGalleryInstance } from "./image-gallery";
+export { createViewer } from "./viewer";
+export type { ViewerOptions, ViewerInstance, ViewerMode } from "./viewer";
