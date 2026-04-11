@@ -24149,3 +24149,30 @@ export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } f
 // --- collapse ---
 export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
 export type { CollapseSize, CollapseVariant, CollapseOptions, CollapseInstance, CollapseGroupOptions, CollapseGroupInstance } from "./collapse";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+  type BreadcrumbItem,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination";
+
+// --- Skeleton Loader ---
+export {
+  createSkeleton,
+  type SkeletonShape,
+  type SkeletonAnimation,
+  type SkeletonItem,
+  type SkeletonOptions,
+  type SkeletonInstance,
+} from "./skeleton-loader";
