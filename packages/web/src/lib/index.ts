@@ -36357,3 +36357,39 @@ export type {
   BreadcrumbOptions,
   BreadcrumbInstance,
 } from "./breadcrumb-utils.js";
+// --- progress-utils ---
+export {
+  createProgressBar,
+  updateProgressBar,
+  createCircularProgress,
+  createStepProgress,
+} from "./progress-utils.js";
+export type {
+  ProgressBarVariant,
+  ProgressBarSize,
+  ProgressBarOptions,
+  CircularProgressOptions,
+  StepProgressOptions,
+} from "./progress-utils.js";
+
+// --- rating-utils ---
+export { createRating } from "./rating-utils.js";
+export type {
+  RatingIconType,
+  RatingOptions,
+  RatingInstance,
+} from "./rating-utils.js";
+
+// --- avatar-utils ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  generateAvatarColor,
+  getInitials,
+} from "./avatar-utils.js";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar-utils.js";
