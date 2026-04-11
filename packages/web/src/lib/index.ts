@@ -25607,3 +25607,15 @@ export { createShimmer } from "./shimmer";
 // --- spinner ---
 export type { SpinnerVariant, SpinnerSize, SpinnerOptions } from "./spinner";
 export { createSpinner, miniSpinner, fullPageSpinner } from "./spinner";
+
+// --- overlay ---
+export type { OverlayType, OverlayOptions, OverlayInstance } from "./overlay";
+export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays } from "./overlay";
+
+// --- backdrop ---
+export type { BackdropVariant, BackdropAnimation, BackdropOptions, BackdropInstance } from "./backdrop";
+export { createBackdrop, closeAllBackdrops, getActiveBackdropCount, showLoadingOverlay, showConfirmDialog } from "./backdrop";
+
+// --- mask ---
+export type { MaskMode, MaskOptions, CutoutOptions, MaskInstance } from "./mask";
+export { createMask, createSpotlight } from "./mask";
