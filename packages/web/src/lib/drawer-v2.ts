@@ -261,7 +261,7 @@ export function createDrawerV2(options: DrawerV2Options): DrawerV2Instance {
     resizeHandle = document.createElement("div");
     resizeHandle.className = "dr-resize-handle";
     resizeHandle.style.cssText = isHorizontal
-      ? `position:absolute;top:0;bottom:0;${opts.side === "left" ? "right" : "left"}:0;width:5px;cursor:${opts.side === "left" ? "e-resize" : "w-resize"};background:transparent;&:hover{background:${va.color}}`
+      ? `position:absolute;top:0;bottom:0;${opts.side === "left" ? "right" : "left"}:0;width:5px;cursor:${opts.side === "left" ? "e-resize" : "w-resize"};background:transparent;&:hover{background:#6366f1}`
       : `position:absolute;left:0;right:0;${opts.side === "top" ? "bottom" : "top"}:0;height:5px;cursor:${opts.side === "top" ? "s-resize" : "n-resize"};background:transparent;`;
     drawer.appendChild(resizeHandle);
 
