@@ -24915,3 +24915,15 @@ export { VirtualTableManager, createVirtualTable } from "./virtual-table";
 // --- Tree View ---
 export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
 export { TreeView } from "./tree-view";
+
+// --- Kanban Board ---
+export type { KanbanCard, KanbanColumn, KanbanBoardOptions, KanbanBoardInstance } from "./kanban-board";
+export { createKanbanBoard } from "./kanban-board";
+
+// --- Timeline ---
+export type { TimelineItemStatus, TimelineItem, TimelineOptions, TimelineInstance } from "./timeline";
+export { TimelineManager, createTimeline } from "./timeline";
+
+// --- Gantt Chart ---
+export type { GanttTask, GanttChartOptions, GanttChartInstance } from "./gantt-chart";
+export { createGanttChart } from "./gantt-chart";
