@@ -39697,3 +39697,23 @@ export type {
   AccordionOptions,
   AccordionInstance,
 } from "./accordion-utils";
+// --- Batch 1242: Drawer, Sheet, Context Menu ---
+export { createDrawer } from "./drawer-utils";
+export type {
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer-utils";
+
+export { createSheet } from "./sheet-utils";
+export type {
+  SheetOptions,
+  SheetInstance,
+} from "./sheet-utils";
+
+export { createContextMenu } from "./context-menu-utils";
+export type {
+  ContextMenuItem,
+  ContextMenuContext,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu-utils";
