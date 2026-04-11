@@ -27175,3 +27175,33 @@ export {
   type AlertSize,
   type AlertAction,
 } from "./alert";
+// --- Dropdown ---
+export {
+  createDropdown,
+  type DropdownOptions,
+  type DropdownInstance,
+  type DropdownItem,
+  type DropdownEntry,
+  type DropdownSeparator,
+  type DropdownGroup,
+  type DropdownPlacement,
+} from "./dropdown";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  type ContextMenuItem,
+  type ContextMenuPosition,
+} from "./context-menu";
+
+// --- Navigation Menu ---
+export {
+  createMenu,
+  type MenuOptions,
+  type MenuInstance,
+  type MenuItem,
+  type MenuMode,
+  type MenuVariant,
+} from "./menu";
