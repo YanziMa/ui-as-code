@@ -39674,3 +39674,26 @@ export type {
   HeatmapInstance,
   HeatmapColorScale,
 } from "./heatmap-utils";
+// --- Batch 1241: Timeline, Comment, Accordion ---
+export { createTimeline } from "./timeline-utils";
+export type {
+  TimelineNode,
+  TimelineOptions,
+  TimelineInstance,
+} from "./timeline-utils";
+
+export { createCommentThread } from "./comment-utils";
+export type {
+  Comment,
+  CommentAuthor,
+  CommentAction,
+  CommentThreadOptions,
+  CommentThreadInstance,
+} from "./comment-utils";
+
+export { createAccordion } from "./accordion-utils";
+export type {
+  AccordionItem,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion-utils";
