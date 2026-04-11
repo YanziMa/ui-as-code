@@ -41822,3 +41822,30 @@ export type {
   SplitViewState,
   SplitViewInstance,
 } from "./split-view";
+
+// --- tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type {
+  TabOrientation,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs";
+
+// --- accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type {
+  AccordionItem,
+  AccordionMode,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion";
+
+// --- carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
