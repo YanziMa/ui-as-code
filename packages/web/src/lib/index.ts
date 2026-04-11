@@ -41719,3 +41719,7 @@ export * from "./password-strength";
 export * from "./otp-input";
 export * from "./masked-input";
 export * from "./richtext-editor";
+// --- Batch 1319: Markdown Renderer, Code Editor, Diff Viewer ---
+export * from "./markdown-renderer";
+export * from "./code-editor";
+export * from "./diff-viewer";
