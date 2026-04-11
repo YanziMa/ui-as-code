@@ -45548,3 +45548,15 @@ export type { KeyCombo as HkKeyCombo, HotkeyVariant, HotkeyDisplayOptions, Hotke
 // --- hotkeys-display ---
 export { HotkeyDisplayRenderer, renderHotkey, hotkeyHtml } from "./hotkeys-display";
 export type { KeyCombo as HdKeyCombo, KeyDisplayStyle, HotkeyDisplayOptions as HdOptions, HotkeyDisplayInstance as HdInstance } from "./hotkeys-display";
+
+// --- hotkeys-manager ---
+export { HotkeyManager as HkmHotkeyManager, createAppHotkeys, parseKeyCombo as HkmParseKeyCombo, eventMatchesCombo as HkmEventMatchesCombo, formatKeyDisplay as HkmFormatKeyDisplay, areModifiersDown, getModifierString } from "./hotkeys-manager";
+export type { HotkeyBinding as HkmBinding, HotkeyEvent, ParsedKeyCombo as HkmParsedCombo } from "./hotkeys-manager";
+
+// --- hotkeys-v2 ---
+export { HotkeysManager, createHotkeysManager } from "./hotkeys-v2";
+export type { HotkeyBinding as Hkv2Binding, HotkeyCombo, HotkeyHintOptions, HotkeysManagerOptions, HotkeysInstance, ParsedCombo } from "./hotkeys-v2";
+
+// --- hotkeys ---
+export { HotkeyManager as HksHotkeyManager, parseKeyCombo as HksParseKeyCombo, eventMatchesCombo as HksEventMatchesCombo, formatKeyDisplay as HksFormatKeyDisplay, areModifiersDown as HksAreModifiersDown, getModifierString as HksGetModifierString, createAppHotkeys as HksCreateAppHotkeys } from "./hotkeys";
+export type { HotkeyBinding as HksBinding, ParsedKeyCombo as HksParsedCombo } from "./hotkeys";
