@@ -17974,3 +17974,38 @@ export type {
   TooltipPlacement,
   TooltipTrigger,
 } from "./tooltip-lite";
+export {
+  PopoverManager,
+  createPopover,
+} from "./popover";
+export type {
+  PopoverOptions,
+  PopoverInstance,
+  PopoverTrigger,
+  PopoverPlacement,
+} from "./popover";
+export {
+  createDropdown,
+} from "./dropdown";
+export type {
+  DropdownOptions,
+  DropdownInstance,
+  DropdownItem,
+  DropdownSeparator,
+  DropdownGroup,
+  DropdownEntry,
+  DropdownPlacement,
+} from "./dropdown";
+export {
+  createContextMenu,
+  attachContextMenu,
+} from "./context-menu-lite";
+export type {
+  ContextMenuOptions,
+  ContextMenuInstance,
+  ContextMenuItem,
+  ContextMenuSeparator,
+  ContextMenuGroup,
+  ContextMenuEntry,
+  ContextMenuPlacement,
+} from "./context-menu-lite";
