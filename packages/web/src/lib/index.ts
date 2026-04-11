@@ -22504,3 +22504,34 @@ export {
   type OperatorFunction,
   type TeardownLogic,
 } from "./stream";
+
+// --- virtual-list ---
+export {
+  createVirtualList,
+  type VirtualListItem,
+  type VirtualListOptions,
+  type VirtualListInstance,
+} from "./virtual-list";
+
+// --- tree ---
+export {
+  createTreeNode,
+  buildTree,
+  flattenTree,
+  flattenTreeWithDepth,
+  findNodeById,
+  findNodes,
+  getPathToNode,
+  getTreeDepth,
+  countNodes,
+  mapTree,
+  filterTree,
+  type TreeNode,
+} from "./tree";
+
+// --- graph ---
+export {
+  Graph,
+  type GraphNode,
+  type GraphEdge,
+} from "./graph";
