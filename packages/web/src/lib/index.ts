@@ -46324,3 +46324,66 @@ export type {
   StorageInstance as LsStorageInstance,
 } from "./local-storage";
 export { LocalStorageManager, SessionStorageManager, createLocalStorage, createSessionStorage, lsSet, lsGet, lsRemove, lsHas } from "./local-storage";
+// --- locale-detection-utils ---
+export type {
+  LocaleInfo as LduLocaleInfo,
+  LocaleMatchResult,
+} from "./locale-detection-utils";
+export {
+  LOCALE_DB,
+  RTL_LANGUAGES,
+  parseLocaleTag,
+  buildLocaleTag,
+  detectBrowserLocale as LduDetectBrowserLocale,
+  detectBrowserLocales,
+  negotiateLocale,
+  getBestLocale,
+  isRTLLocale,
+  getLocaleInfo as LduGetLocaleInfo,
+  getLanguageCode,
+  guessTerritory,
+  detectScript,
+} from "./locale-detection-utils";
+
+// --- locale-utils ---
+export type {
+  LocaleInfo as LuLocaleInfo,
+  TimeZoneInfo,
+} from "./locale-utils";
+export {
+  LOCALES as LuLOCALES,
+  getLocale as LuGetLocale,
+  detectBrowserLocale as LuDetectBrowserLocale,
+  isRtlLocale,
+  getDirection,
+  formatNumberLocale,
+  formatCurrencyLocale,
+  formatPercentLocale,
+  formatDateLocale,
+  formatTimeLocale,
+  formatRelativeLocale,
+  formatListLocale,
+  pluralizeLocale,
+  TIMEZONES as LuTIMEZONES,
+  getTimezone as LuGetTimezone,
+  getTimezoneOffset as LuGetTimezoneOffset,
+} from "./locale-utils";
+
+// --- locale ---
+export type { LocaleInfo as LtLocaleInfo } from "./locale";
+export {
+  LOCALES as LtLOCALES,
+  getLocale as LtGetLocale,
+  getLocaleCodes,
+  getRTLLocales,
+  isLocaleRTL,
+  getLocaleDisplayName,
+  getTimezoneId,
+  getTimezoneOffsetMinutes,
+  getTimezoneAbbreviation,
+  observesDST,
+  COMMON_TIMEZONES,
+  compareStrings,
+  sortLocale,
+  searchLocale,
+} from "./locale";
