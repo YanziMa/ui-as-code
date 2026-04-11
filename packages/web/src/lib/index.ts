@@ -31602,3 +31602,29 @@ export type {
   RadioSize,
   RadioVariant,
 } from "./radio-group";
+
+// --- Batch 1061: Checkbox Group, Textarea, File Upload ---
+
+export { createCheckboxGroup } from "./checkbox-group";
+export type {
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+  CheckboxOption,
+  CheckboxSize,
+  CheckboxVariant,
+} from "./checkbox-group";
+
+export { createTextarea } from "./textarea";
+export type {
+  TextareaOptions,
+  TextareaInstance,
+  TextareaSize,
+  TextareaState,
+} from "./textarea";
+
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type {
+  FileUploadOptions,
+  FileUploadInstance,
+  UploadFile,
+} from "./file-upload";
