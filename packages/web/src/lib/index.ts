@@ -24125,3 +24125,15 @@ export type { DialogVariant, DialogOptions, DialogInstance } from "./dialog";
 // --- alert ---
 export { AlertManager, createAlert } from "./alert";
 export type { AlertVariant, AlertSize, AlertAction, AlertOptions, AlertInstance } from "./alert";
+
+// --- drawer ---
+export { createDrawer } from "./drawer";
+export type { DrawerSide, DrawerSize, DrawerOptions, DrawerInstance } from "./drawer";
+
+// --- sheet ---
+export { createSheet } from "./sheet";
+export type { SheetSnapPoint, SheetOptions, SheetInstance } from "./sheet";
+
+// --- offcanvas ---
+export { createOffcanvas, bindOffcanvas } from "./offcanvas";
+export type { OffcanvasSide, OffcanvasMode, OffcanvasOptions, OffcanvasInstance } from "./offcanvas";
