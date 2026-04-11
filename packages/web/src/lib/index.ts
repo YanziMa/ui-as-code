@@ -43966,3 +43966,23 @@ export type { RangeSliderOptions, RangeSliderInstance } from "./range-slider";
 // --- rate-limit ---
 export { TokenBucket, SlidingWindowLimiter, FixedWindowLimiter, AdaptiveLimiter, createRateLimiter } from "./rate-limit";
 export type { RateLimitResult, RateLimitOptions, AdaptiveOptions, CreateRateLimiterOptions, RateLimiterType } from "./rate-limit";
+// --- rate-limiter-advanced ---
+export { AdvancedRateLimiter, createAdvancedRateLimiter, createRateLimitMiddleware } from "./rate-limiter-advanced";
+export type { LimitAlgorithm as AdvLimitAlgorithm, RateLimitResult as AdvRateLimitResult, RateLimitConfig as AdvRateLimitConfig, MultiDimensionalLimit, RateLimiterMetrics, DistributedCoordinator } from "./rate-limiter-advanced";
+
+// --- rate-limiter-v2 ---
+export { AdvancedRateLimiter as AdvancedRateLimiterV2, createRateLimiter as createRateLimiterV2, createApiMiddleware, RATE_LIMIT_PRESETS } from "./rate-limiter-v2";
+export type { RateLimitAlgorithm as V2RateAlgorithm, LimitScope, RateLimitResult as V2RateLimitResult, RateLimitConfig as V2RateLimitConfig, RateLimitContext, RateLimitMetrics as V2RateLimitMetrics, StorageAdapter } from "./rate-limiter-v2";
+
+// --- react-compiler-utils ---
+export {
+  createMemoCache,
+  createDependencyTracker,
+  stableCompare,
+  expensive,
+  useCallbackReference,
+  createReactiveBridge,
+  createSelector,
+  combineSelectors,
+} from "./react-compiler-utils";
+export type { MemoKey, MemoCache, DependencyTracker, ReactiveBridge } from "./react-compiler-utils";
