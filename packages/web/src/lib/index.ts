@@ -35723,3 +35723,61 @@ export {
   urlsEqual,
 } from "./url-utils";
 export type { ParsedUrl as ParsedUrlType } from "./url-utils";
+// --- Logger Utilities ---
+export {
+  Logger,
+  getLogger,
+  destroyLogger,
+  createModuleLogger,
+  PerfTracker,
+  textFormatter,
+  jsonFormatter,
+  compactFormatter,
+} from "./logger-utils";
+export type { LogEntry, LogLevel, LogTransport, LogFormatter, LoggerOptions } from "./logger-utils";
+
+// --- Notification Utilities ---
+export {
+  NotificationManager,
+} from "./notification-utils";
+export type {
+  NotificationType,
+  NotificationPosition,
+  NotificationOptions,
+  NotificationInstance,
+  NotificationManagerConfig,
+} from "./notification-utils";
+
+// --- Clipboard Utilities ---
+export {
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+} from "./clipboard-utils";
+export type {
+  ClipboardData,
+  CopyOptions,
+  PasteOptions,
+  PasteResult,
+  ClipboardHistoryEntry,
+  ClipboardHistoryOptions,
+} from "./clipboard-utils";
