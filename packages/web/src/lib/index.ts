@@ -27808,3 +27808,11 @@ export { EventBus, createEventBus } from "./event-bus";
 export type { EventBusOptions, Subscription, EmittedEvent, EventCallback, EventMiddleware } from "./event-bus";
 export { createVirtualList } from "./virtual-list";
 export type { VirtualListOptions, VirtualListInstance, VirtualListItem } from "./virtual-list";
+
+// --- Batch 882: Toast Stack, Hotkeys Manager, I18n Manager ---
+export { ToastStackManager, createToastStack } from "./toast-stack";
+export type { ToastStackOptions, ToastStackInstance, ToastOptions as ToastStackToastOptions, ToastType, ToastPosition } from "./toast-stack";
+export { HotkeysManager, createHotkeysManager } from "./hotkeys-manager";
+export type { HotkeysManagerOptions, HotkeysInstance, HotkeyBinding, HotkeyCombo, HotkeyHintOptions, ParsedCombo } from "./hotkeys-manager";
+export { I18nManager, createI18n } from "./i18n-manager";
+export type { I18nConfig, I18nStats, LocaleData, LocaleFormats, PluralRuleSet, InterpolationOptions } from "./i18n-manager";
