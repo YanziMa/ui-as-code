@@ -41671,3 +41671,10 @@ export { createSkeleton } from "./skeleton-loader";
 export type { SkeletonOptions, SkeletonInstance, SkeletonItem, SkeletonShape, SkeletonAnimation } from "./skeleton-loader";
 export { InfiniteScroll } from "./infinite-scroll";
 export type { InfiniteScrollOptions, InfiniteScrollState, InfiniteScrollItem } from "./infinite-scroll";
+// --- Batch 1310: Form Validator, Async Queue, Event Bus ---
+export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom } from "./form-validator";
+export type { FormValidatorOptions, FieldConfig, FieldValidationResult, FormValidationResult, ValidatorFn } from "./form-validator";
+export { createAsyncQueue } from "./async-queue";
+export type { AsyncQueueOptions, AsyncQueueInstance, Task, TaskResult, TaskStatus, TaskPriority, QueueStats } from "./async-queue";
+export { EventBus, createEventBus } from "./event-bus";
+export type { EventBusOptions, Subscription, EmittedEvent, EventCallback, EventMiddleware } from "./event-bus";
