@@ -20707,3 +20707,39 @@ export type {
   HotkeyListener,
   ParsedKeyCombo,
 } from "./hotkeys";
+
+// --- Tree Select ---
+export type {
+  TreeNodeData,
+  TreeSelectOptions,
+  TreeSelectInstance,
+} from "./tree-select";
+export {
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+
+// --- Slider ---
+export type {
+  SliderMark,
+  SliderOptions,
+  SliderInstance,
+} from "./slider";
+export {
+  SliderManager,
+  createSlider,
+} from "./slider";
+
+// --- Chip ---
+export type {
+  ChipSize,
+  ChipVariant,
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chip";
+export {
+  createChip,
+  createChipGroup,
+} from "./chip";
