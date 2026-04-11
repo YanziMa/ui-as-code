@@ -50259,3 +50259,34 @@ export {
   type SearchDialogOptions,
   type SearchDialogInstance,
 } from "./search-dialog";
+
+// --- search-engine ---
+export {
+  SearchEngine,
+  createSearchEngine,
+  jaroWinkler,
+  similarity,
+  type SearchDocument as SrchEng_Document,
+  type SearchResult as SrchEng_Result,
+  type SearchOptions as SrchEng_Options,
+  type FacetResult,
+} from "./search-engine";
+
+// --- search-fuzzy ---
+export {
+  createFuzzySearch,
+  fuzzySearch,
+  fuzzyTest,
+  fuzzyHighlight,
+  type FuzzyResult,
+  type FuzzyOptions,
+  type FuzzySearchInstance,
+} from "./search-fuzzy";
+
+// --- search-highlight ---
+export {
+  SearchHighlightManager,
+  createSearchHighlight,
+  type SearchHighlightOptions,
+  type SearchHighlightInstance,
+} from "./search-highlight";
