@@ -27908,3 +27908,15 @@ export type { SplitDirection, PaneConfig, SplitViewOptions, SplitViewState, Spli
 // --- Tree View ---
 export { TreeView } from "./tree-view";
 export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
+
+// --- Command Palette ---
+export { CommandPalette } from "./command-palette";
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette";
+
+// --- Notification Manager ---
+export { createNotificationCenter } from "./notification-manager";
+export type { NotificationType, NotificationPriority, NotificationItem, NotificationAction, NotificationCenterOptions, NotificationCenterInstance } from "./notification-manager";
+
+// --- Overlay Manager ---
+export { OverlayManager } from "./overlay-manager";
+export type { OverlayId, OverlayRole, OverlayOptions, OverlayInstance } from "./overlay-manager";
