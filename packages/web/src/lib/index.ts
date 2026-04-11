@@ -27824,3 +27824,15 @@ export { printContent, printPreview, printElement, generateReceiptText, generate
 export type { PrintOptions, ReceiptOptions, PageSettings } from "./print-utils";
 export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDetector, createLazyLoader } from "./dom-observer";
 export type { ObserveTarget, MutationOptions, IntersectionOptions, ResizeOptions, MutationRecordEx, DomSnapshot, ObserverCallbacks, ObserverStats } from "./dom-observer";
+
+// --- Drag and Drop ---
+export { DragDropManager, getDragDropManager } from "./drag-and-drop";
+export type { DragMode, DropPosition, DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig } from "./drag-and-drop";
+
+// --- Tooltip Manager ---
+export { TooltipManager } from "./tooltip-manager";
+export type { Placement, TriggerMode, TooltipOptions, VirtualElement, TooltipInstance } from "./tooltip-manager";
+
+// --- Modal Dialog ---
+export { createModal } from "./modal-dialog";
+export type { ModalSize, ModalVariant, ModalOptions, ModalInstance } from "./modal-dialog";
