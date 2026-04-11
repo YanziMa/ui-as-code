@@ -20671,3 +20671,39 @@ export type {
   MarqueeOptions,
   MarqueeInstance,
 } from "./marquee";
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+export {
+  ColorPaletteManager,
+  createColorPalette,
+  contrastRatio,
+} from "./color-palette";
+export type {
+  PaletteScheme,
+  ColorShade,
+  PaletteColor,
+  ColorPalette,
+  ColorPaletteOptions,
+  ColorPaletteInstance,
+} from "./color-palette";
+export {
+  HotkeyManager,
+  createAppHotkeys,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  HotkeyListener,
+  ParsedKeyCombo,
+} from "./hotkeys";
