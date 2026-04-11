@@ -26286,3 +26286,33 @@ export {
   generateSessionId,
 } from "./crypto-utils";
 export type { HashAlgorithm, HmacAlgorithm, AesKeyLength, EcNamedCurve, RsaKeySize, KeyFormat, Pbkdf2Options, AesGcmOptions, RsaKeyGenOptions, EcdsaKeyGenOptions, RsaPssSignOptions, PasswordStrengthResult, PasswordGeneratorOptions, ApiKeyOptions, AesGcmEncryptedData } from "./crypto-utils";
+
+// --- Performance ---
+export {
+  reportMetric,
+  getSessionMetrics,
+  observeWebVitals,
+  markRender,
+} from "./performance";
+export type { PerformanceMetric } from "./performance";
+
+// --- Profiling ---
+export {
+  createProfiler,
+  profileFn,
+  profileAsyncFn,
+  withProfile,
+  getMemoryUsage,
+  measureMemory,
+} from "./profiling";
+export type { ProfileEntry, ProfilerOptions, TimerHandle } from "./profiling";
+
+// --- Metrics ---
+export {
+  MetricsCollector,
+  PerformanceObserver,
+  measureWebVitals,
+  perfMark,
+  perfMeasure,
+} from "./metrics";
+export type { MetricValue, HistogramBucket } from "./metrics";
