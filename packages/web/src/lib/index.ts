@@ -31552,3 +31552,27 @@ export type { ScrollAlignment, ScrollBehavior, ScrollIntoViewOptions, ScrollInto
 // --- Smooth Scroll ---
 export { SmoothScroller, createSmoothScroller, scrollToTop, scrollToBottom, scrollToY, scrollToElementCenter } from "./smooth-scroll";
 export type { EasingFn, SmoothScrollOptions, SmoothScrollInstance } from "./smooth-scroll";
+
+// --- Batch 1059: Tooltip V2, Select, Combo Box ---
+
+export { createTooltipV2 } from "./tooltip-v2";
+export type {
+  TooltipV2Options,
+  TooltipV2Instance,
+  TooltipPlacement,
+  TooltipTrigger,
+} from "./tooltip-v2";
+
+export { SelectManager, createSelect } from "./select";
+export type {
+  SelectOptions,
+  SelectInstance,
+  SelectOption,
+} from "./select";
+
+export { ComboBoxManager, createComboBox } from "./combo-box";
+export type {
+  ComboBoxOptions,
+  ComboBoxInstance,
+  ComboBoxOption,
+} from "./combo-box";
