@@ -17721,3 +17721,34 @@ export type {
   DrawingOptions,
   DrawingInstance,
 } from "./canvas-drawing";
+export {
+  mdToHtml,
+  stripMd,
+} from "./markdown";
+export type {
+  MdOptions,
+} from "./markdown";
+export {
+  createRichTextEditor,
+  sanitizeHTML,
+  stripHTML,
+  extractStructuredText,
+} from "./richtext";
+export type {
+  RichTextOptions,
+  RichTextInstance,
+  BlockType,
+  TextAlign,
+} from "./richtext";
+export {
+  createPDFViewer,
+  generateSimplePDF,
+  createPrintableView,
+} from "./pdf-viewer";
+export type {
+  PDFViewerOptions,
+  PDFViewerInstance,
+  FitMode,
+  ZoomMode,
+  ScrollMode,
+} from "./pdf-viewer";
