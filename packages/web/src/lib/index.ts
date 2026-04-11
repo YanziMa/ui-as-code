@@ -28538,3 +28538,25 @@ export {
   type HslColor,
   type Palette,
 } from "./color-picker";
+
+// --- Batch 935: Tree View, File Upload, Context Menu ---
+export {
+  TreeView,
+  type TreeNodeData,
+  type TreeNode,
+  type CheckMode,
+  type TreeViewConfig,
+} from "./tree-view";
+export {
+  createFileUpload,
+  FileUploadManager,
+  type FileUploadOptions,
+  type FileUploadInstance,
+  type UploadFile,
+} from "./file-upload";
+export {
+  ContextMenuManager,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  type ContextMenuItem,
+} from "./context-menu";
