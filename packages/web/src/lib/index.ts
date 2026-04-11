@@ -42102,3 +42102,7 @@ export type { PopoverOptions, PopoverInstance, PopoverPlacement, PopoverTrigger 
 export { createSkeletonScreen, type SkeletonScreenOptions, type SkeletonInstance, type ScreenTemplate, type SkeletonSection, type SkeletonBlock } from "./skeleton-screen";
 export { createLoading, spinner, fullscreenLoading, wrapWithLoading, type LoadingOptions, type LoadingInstance, type LoadingVariant, type LoadingSize } from "./loading-states";
 export { createEmptyPlaceholder, type EmptyPlaceholderOptions, type EmptyInstance, type EmptyVariant } from "./empty-placeholder";
+// --- Batch 1342: Tooltip, Dropdown Menu, Breadcrumb ---
+export { TooltipManager, tooltip, getTooltipManager, type TooltipOptions, type TooltipInstance, type TooltipPlacement, type TooltipTrigger } from "./tooltip";
+export { DropdownMenuManager, createDropdownMenu, type DropdownMenuOptions, type DropdownMenuInstance, type MenuItem, type MenuItemType } from "./dropdown-menu";
+export { BreadcrumbManager, createBreadcrumb, type BreadcrumbOptions, type BreadcrumbInstance, type BreadcrumbItem } from "./breadcrumb";
