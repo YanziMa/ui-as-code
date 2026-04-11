@@ -33785,3 +33785,64 @@ export {
   type PointerTrackerConfig,
   type PointerRegion,
 } from "./pointer-utils";
+
+// --- animation-frame-utils ---
+export {
+  linear,
+  easeInQuad, easeOutQuad, easeInOutQuad,
+  easeInCubic, easeOutCubic, easeInOutCubic,
+  easeInQuart, easeOutQuart, easeInOutQuart,
+  easeInExpo, easeOutExpo, easeInOutExpo,
+  easeInSine, easeOutSine, easeInOutSine,
+  easeInCirc, easeOutCirc, easeInOutCirc,
+  easeInElastic, easeOutElastic, easeInOutElastic,
+  easeInBack, easeOutBack, easeInOutBack,
+  easeInBounce, easeOutBounce, easeInOutBounce,
+  EASING_FUNCTIONS,
+  getEasing,
+  TweenEngine,
+  animateSpring,
+  AnimationLoop,
+  lerp,
+  lerpColor,
+  lerpPoint,
+  clamp as animClamp,
+  mapRange,
+  tweenValue,
+  type EasingFunction,
+  type TweenOptions,
+  type SpringOptions,
+  type AnimationFrame,
+  type LoopCallbacks,
+} from "./animation-frame-utils";
+
+// --- drag-utils ---
+export {
+  makeDraggable,
+  DropZoneManager,
+  createSortable,
+  type DragData,
+  type DragOptions,
+  type DropZone,
+  type SortableConfig,
+} from "./drag-utils";
+
+// --- resize-utils ---
+export {
+  EnhancedResizeObserver,
+  BreakpointTracker,
+  DEFAULT_BREAKPOINTS,
+  ViewportTracker,
+  createResizeHandle,
+  isResizeObserverSupported,
+  getElementSize,
+  hasOverflow,
+  matchMedia,
+  onMediaChange,
+  clamp as resizeClamp,
+  type ResizeEntry,
+  type ResizeObserverConfig,
+  type Breakpoint,
+  type ViewportState,
+  type ResizeHandleOptions,
+} from "./resize-utils";
