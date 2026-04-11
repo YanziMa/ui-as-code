@@ -46966,3 +46966,76 @@ export type {
 export {
   NotificationManager as NBaseMgr,
 } from "./notification";
+
+// --- notifications (React hook) ---
+export type {
+  NotificationType as NotifsType,
+} from "./notifications";
+export type {
+  Notification as NotifsNotif,
+} from "./notifications";
+export {
+  useNotifications,
+  formatNotificationAgo,
+} from "./notifications";
+
+// --- notify-banner ---
+export type {
+  NotifyBannerType as NBannerType,
+  NotifyBannerSize as NBannerSize,
+} from "./notify-banner";
+export type {
+  NotifyBannerOptions as NBannerOpts,
+  NotifyBannerInstance as NBannerInst,
+} from "./notify-banner";
+export {
+  createNotifyBanner,
+} from "./notify-banner";
+
+// --- number-format-utils ---
+export type {
+  NumberFormatStyle as NFStyle,
+  CompactDisplay as NFCompactDisplay,
+  ByteUnit as NFByteUnit,
+} from "./number-format-utils";
+export type {
+  FormatNumberOptions as NFOpts,
+  FormatCurrencyOptions as NFCOpts,
+  FormatBytesOptions as NFBytesOpts,
+  FormatCompactOptions as NFCmpOpts,
+  ParseNumberOptions as NFParseOpts,
+} from "./number-format-utils";
+export {
+  formatNumber,
+  formatCurrency,
+  formatPercent,
+  formatPercentSigned,
+  formatBytes,
+  parseBytes,
+  formatCompact,
+  getOrdinalSuffix,
+  formatOrdinal,
+  parseNumber,
+  roundTo,
+  roundUpTo,
+  roundDownTo,
+  roundNearest,
+  formatRange,
+  formatDelta,
+  getDeltaDirection,
+  addThousandSeparators,
+  stripNumberFormat,
+  isNumeric,
+  isEven,
+  isOdd,
+  isInRange,
+  clamp as numClamp,
+  sign as numSign,
+  randomInt,
+  randomFloat,
+  randomId,
+  mean,
+  median,
+  standardDeviation,
+  percentile,
+} from "./number-format-utils";
