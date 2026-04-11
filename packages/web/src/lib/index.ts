@@ -19953,3 +19953,41 @@ export type {
   SplitPaneOptions,
   SplitPaneInstance,
 } from "./split-pane";
+export {
+  HotkeyManager,
+  parseKeyCombo,
+  eventMatchesCombo,
+  formatKeyDisplay,
+  createAppHotkeys,
+  areModifiersDown,
+  getModifierString,
+} from "./hotkeys";
+export type {
+  HotkeyBinding,
+  HotkeyEvent,
+  HotkeyListener,
+  ParsedKeyCombo,
+} from "./hotkeys";
+export {
+  ModalManager,
+  getModalManager,
+} from "./modal-manager";
+export type {
+  ModalSize,
+  ModalAnimation,
+  ModalOptions,
+  ModalAction,
+  ModalInstance,
+  ConfirmOptions,
+} from "./modal-manager";
+export {
+  createTabs,
+} from "./tabs-system";
+export type {
+  TabOrientation,
+  TabSize,
+  TabVariant,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs-system";
