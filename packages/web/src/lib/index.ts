@@ -18564,3 +18564,44 @@ export type {
   AvatarSize,
   StackDirection,
 } from "./avatar-group";
+export {
+  createChip,
+  createChipGroup,
+  shadeColor,
+} from "./chip-lite";
+export type {
+  ChipOptions,
+  ChipInstance,
+  ChipGroupOptions,
+  ChipGroupInstance,
+  ChipVariant,
+  ChipSize,
+} from "./chip-lite";
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton-lite";
+export type {
+  SkeletonOptions,
+  TextSkeletonOptions,
+  CardSkeletonOptions,
+  TableSkeletonOptions,
+  SkeletonVariant,
+  SkeletonSize,
+} from "./skeleton-lite";
+export {
+  createSpinner,
+  fullPageSpinner,
+  miniSpinner,
+} from "./spinner-lite";
+export type {
+  SpinnerOptions,
+  FullPageSpinnerOptions,
+  SpinnerVariant,
+  SpinnerSize,
+} from "./spinner-lite";
