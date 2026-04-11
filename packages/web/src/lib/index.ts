@@ -46684,3 +46684,15 @@ export { createFocusTrap as muCreateFocusTrap, createModal as muCreateModal } fr
 // --- modal-v2 ---
 export type { ModalV2Options, ModalV2Instance } from "./modal-v2";
 export { createModalV2 } from "./modal-v2";
+
+// --- modal.ts ---
+export type { ModalSize as MdlSize, ModalPosition, ModalOptions as MdlOptions, ModalInstance as MdlInstance } from "./modal";
+export { createModal as createMdl } from "./modal";
+
+// --- model.ts ---
+export type { Listener as MdlListener, Middleware as MdlMiddleware, Selector as MdlSelector, ModelConfig, ModelInstance } from "./model";
+export { createModel } from "./model";
+
+// --- monitor.ts ---
+export type { FpsSample, FpsStats, MemoryInfo, LongTaskEntry, MetricValue as MonMetricValue, MonitorConfig, MonitorInstance } from "./monitor";
+export { createMonitor, FpsMonitor } from "./monitor";
