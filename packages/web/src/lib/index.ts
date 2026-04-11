@@ -28239,3 +28239,15 @@ export type { MentionOptions, MentionInstance, MentionOption } from "./mention";
 // --- Signature Pad ---
 export { SignaturePadManager, createSignaturePad } from "./signature-pad";
 export type { SignaturePadOptions, SignaturePadInstance, Stroke, StrokePoint } from "./signature-pad";
+
+// --- Color Contrast ---
+export { contrastRatio, analyzeContrast, generatePalette, simulateColorBlindness, findContrastingColor, passesAA, passesAAA, getGrade } from "./color-contrast";
+export type { RgbColor as RgbColorType, HslColor as HslColorType, ContrastResult, ColorPaletteOptions, ColorPaletteResult, ColorBlindnessType } from "./color-contrast";
+
+// --- CSS-in-JS ---
+export { injectStyle, removeStyle, updateStyle, setCssVar, getCssVar, setCssVars, getRootVar, setRootVar, getCurrentBreakpoint, isMinWidth, isMaxWidth, onBreakpointChange, isMobile, isTablet, isDesktop, getDevicePixelRatio, isRetina, mq, mediaQueries, matchesMedia, subscribeMedia, isDarkMode, isLightMode, toggleDarkMode, setDarkMode, onDarkModeChange, buildKeyframes, registerKeyframes, animations, animate, toggleClass, classIf, setClasses, hasAnyClass, bringToFront, sendToBack } from "./css-in-js";
+export type { Breakpoints } from "./css-in-js";
+
+// --- Shortcuts ---
+export { createShortcutManager } from "./shortcuts";
+export type { ShortcutManagerOptions, ShortcutInstance, ShortcutBinding, ShortcutGroup } from "./shortcuts";
