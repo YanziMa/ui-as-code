@@ -30863,3 +30863,47 @@ export type { Signal, ComputedSignal, SignalArray, EffectOptions } from "./signa
 // --- Pub/Sub ---
 export { MessageBroker } from "./pubsub";
 export type { Message, MessageContext, MessageHandler, SubscriptionOptions as PubSubSubscriptionOptions } from "./pubsub";
+
+// --- Structs ---
+export { Struct, defineStruct, lens, composeLens } from "./structs";
+export type { FieldDef, StructSchema, StructOptions, PickStruct, OmitStruct } from "./structs";
+
+// --- Tuple ---
+export {
+  tuple2,
+  tuple3,
+  tuple4,
+  fromArray as tupleFromArray,
+  singleton,
+  empty as tupleEmpty,
+  first,
+  last,
+  head,
+  tail,
+  at as tupleAt,
+  match as matchTuple,
+  mapTuple,
+  zipMap,
+  reverse as tupleReverse,
+  flatten as tupleFlatten,
+  sortTuple,
+  concat as tupleConcat,
+  prepend,
+  append as tupleAppend,
+  zip as tupleZip,
+  unzip,
+  splitAt,
+  take as tupleTake,
+  drop,
+  includes as tupleIncludes,
+  indexOf as tupleIndexOf,
+  every as tupleEvery,
+  some as tupleSome,
+  find as tupleFind,
+  countIf,
+  reduce as tupleReduce,
+  reduce1,
+} from "./tuple";
+
+// --- Either ---
+export { Left, Right, fromNullable, tryEither, tryEitherAsync, validate, sequence, race, chain, cond, isEither } from "./either";
