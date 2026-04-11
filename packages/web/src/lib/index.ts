@@ -34188,3 +34188,29 @@ export {
   type OffCanvasOptions,
   type OffCanvasInstance,
 } from "./offcanvas-utils";
+
+// --- split-view-utils ---
+export {
+  createSplitView,
+  type SplitDirection,
+  type SplitPaneConfig,
+  type SplitViewOptions,
+  type SplitViewInstance,
+} from "./split-view-utils";
+
+// --- resizable-utils ---
+export {
+  createResizable,
+  type ResizeEdge,
+  type ResizableOptions,
+  type ResizableInstance,
+} from "./resizable-utils";
+
+// --- panel-utils ---
+export {
+  createPanel,
+  type PanelState,
+  type PanelDockPosition,
+  type PanelOptions,
+  type PanelInstance,
+} from "./panel-utils";
