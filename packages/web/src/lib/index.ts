@@ -47491,3 +47491,15 @@ export { createPagination } from "./pagination-lite";
 // --- pagination-nav ---
 export type { PaginationSize as PNavSize, PaginationVariant as PNavVariant, PaginationNavOptions as PNavOpts, PaginationNavInstance as PNavInst } from "./pagination-nav";
 export { createPaginationNav, formatPaginationInfo, getOptimalPageSize } from "./pagination-nav";
+
+// --- pagination-utils ---
+export type { PaginationSize as PUSize, PaginationLayout as PULayout, PaginationOptions as PUOpts, PaginationInstance as PUInst } from "./pagination-utils";
+export { createPagination as createPU } from "./pagination-utils";
+
+// --- pagination ---
+export type { PaginationOptions as PgOpts, PaginationInstance as PgInst } from "./pagination";
+export { PaginationManager, createPagination as createPgMgr } from "./pagination";
+
+// --- panel-utils ---
+export type { PanelState as PanUState, PanelDockPosition as PanUDockPos, PanelOptions as PanUOpts, PanelInstance as PanUInst } from "./panel-utils";
+export { createPanel } from "./panel-utils";
