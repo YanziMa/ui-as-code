@@ -24525,3 +24525,12 @@ export { FormValidator, required, minLength, maxLength, pattern, email as emailV
 
 // --- Form Field ---
 export { createTextField, createTextArea, createSelectField, createCheckbox, createSwitch, createRadioGroup, createFileUpload, createRangeSlider, createRating, createColorPicker, type TextFieldOptions, type TextAreaOptions, type SelectFieldOptions, type CheckboxFieldOptions, type SwitchFieldOptions, type RadioGroupOptions, type FileUploadOptions, type RangeSliderOptions, type RatingFieldOptions, type ColorPickerOptions, type TextFieldInstance, type TextAreaInstance, type SelectFieldInstance, type CheckboxInstance, type SwitchInstance, type RadioGroupInstance, type FileUploadInstance, type RangeSliderInstance, type RatingInstance, type ColorPickerInstance } from "./form-field";
+
+// --- Data Table ---
+export { createDataTable, DataTableManager, type DataTableOptions, type Column, type SortState, type FilterState, type DataTableInstance } from "./data-table";
+
+// --- Virtual Table ---
+export { createVirtualTable, VirtualTableManager, type VirtualTableOptions, type VirtualColumn, type VirtualTableInstance } from "./virtual-table";
+
+// --- Tree Table ---
+export { createTreeTable, TreeTableManager, type TreeTableOptions, type TreeNode, type TreeColumn, type TreeTableInstance } from "./tree-table";
