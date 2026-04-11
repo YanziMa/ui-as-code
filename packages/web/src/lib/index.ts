@@ -19991,3 +19991,36 @@ export type {
   TabsOptions,
   TabsInstance,
 } from "./tabs-system";
+export {
+  AutocompleteManager,
+  createAutocomplete,
+} from "./autocomplete";
+export type {
+  AutocompleteOption,
+  AutocompleteOptions,
+  AutocompleteInstance,
+} from "./autocomplete";
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
+export {
+  InfiniteScroll,
+} from "./infinite-scroll";
+export type {
+  InfiniteScrollItem,
+  InfiniteScrollOptions,
+  InfiniteScrollState,
+} from "./infinite-scroll";
