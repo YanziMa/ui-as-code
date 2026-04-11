@@ -34506,3 +34506,53 @@ export type { PortalOptions, PortalInstance, PortalManagerConfig, PortalManagerI
 // --- overlay-manager-utils ---
 export { createOverlayManager } from "./overlay-manager-utils";
 export type { OverlayManagerOptions, OverlayManagerInstance, OverlayEntry, OverlayPriority, OverlayState } from "./overlay-manager-utils";
+// --- Batch 1136: Clipboard, Context Menu, Notification ---
+export {
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+} from "./clipboard-utils";
+export type {
+  ClipboardData,
+  CopyOptions,
+  PasteOptions,
+  PasteResult,
+  ClipboardHistoryEntry,
+  ClipboardHistoryOptions,
+} from "./clipboard-utils";
+
+export { createContextMenu } from "./context-menu-utils";
+export type {
+  ContextMenuItem,
+  ContextMenuContext,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu-utils";
+
+export { NotificationManager } from "./notification-utils";
+export type {
+  NotificationType,
+  NotificationPosition,
+  NotificationOptions,
+  NotificationInstance,
+  NotificationManagerConfig,
+} from "./notification-utils";
