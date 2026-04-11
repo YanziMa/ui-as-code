@@ -43101,3 +43101,58 @@ export {
   type BatchRequestItem,
   type ClientMetrics,
 } from "./api-gateway-client";
+
+// --- validator-utils ---
+export {
+  SchemaValidator,
+  required,
+  minLength as vMinLength,
+  maxLength as vMaxLength,
+  minValue,
+  maxValue,
+  matches as vMatches,
+  isEmail as vIsEmail,
+  isUrl as vIsUrl,
+  oneOf,
+  custom as vCustom,
+  when,
+  validateField,
+  isValid as vIsValid,
+  firstError,
+  usernameRules,
+  passwordRules,
+  phoneRules,
+  creditCardRules,
+  ipRules,
+  formatValidationErrors,
+  groupErrorsByField,
+  errorMessages,
+  createDebouncedValidator,
+  combineAsyncValidators,
+  type ValidationError,
+  type ValidationResult,
+  type ValidationRule,
+  type ValidationContext,
+  type FieldSchema,
+  type SchemaDefinition,
+} from "./validator-utils";
+
+// --- waterfall-chart ---
+export {
+  createWaterfallChart,
+  type WaterfallDataPoint,
+  type WaterfallBarStyle,
+  type WaterfallChartOptions,
+  type WaterfallChartInstance,
+} from "./waterfall-chart";
+
+// --- web-worker-pool ---
+export {
+  WebWorkerPool,
+  createWorkerPool,
+  type WorkerPoolConfig,
+  type PoolTask,
+  type PoolTaskResult,
+  type WorkerStats,
+  type PoolEvent,
+} from "./web-worker-pool";
