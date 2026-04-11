@@ -23273,3 +23273,52 @@ export {
   type CustomCursorOptions,
   type CursorTrackerOptions,
 } from "./cursor";
+
+// --- scroll-utils ---
+export {
+  getScrollPosition,
+  setScrollPosition,
+  scrollTo,
+  scrollToElement,
+  scrollToTop,
+  scrollToBottom,
+  trackScroll,
+  createScrollSpy,
+  createInfiniteScroll,
+  createParallax,
+  lockScroll,
+  createProgressBar,
+  isAtTop,
+  isAtBottom,
+  getScrollPercent,
+  type ScrollPosition,
+  type ScrollSpyOptions,
+  type InfiniteScrollOptions,
+  type ParallaxOptions,
+  type ScrollLockOptions,
+} from "./scroll-utils";
+
+// --- resize-observer ---
+export {
+  ResizeWatcher,
+  createResizeObserver,
+  matchParentSize,
+  whenSizeExceeds,
+  type ResizeBox,
+  type ResizeObserverOptions as ResizeObsOptions,
+  type ResizeObserverEntry as ResizeObsEntry,
+  type ResizeObserverInstance as ResizeObsInstance,
+} from "./resize-observer";
+
+// --- intersection ---
+export {
+  IntersectionManager,
+  createIntersectionObserver,
+  whenVisible,
+  whenHidden,
+  isInViewport as isElementInViewport,
+  getVisibilityPercent as getElementVisibilityPercent,
+  type IntersectionObserverOptions as IntersectionObsOptions,
+  type IntersectionObserverEntry as IntersectionObsEntry,
+  type IntersectionObserverInstance as IntersectionObsInstance,
+} from "./intersection";
