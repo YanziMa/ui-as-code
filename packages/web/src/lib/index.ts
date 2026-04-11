@@ -51033,3 +51033,10 @@ export { type SpinnerVariant as SpnLt_SpinnerVariant, type SpinnerSize as SpnLt_
 export { type SpinnerType as SpnUtl_SpinnerType, type SpinnerSize as SpnUtl_SpinnerSize, type SpinnerOptions as SpnUtl_SpinnerOptions, type SpinnerInstance as SpnUtl_SpinnerInstance, createSpinner as createSpnUtlSpinner } from "./spinner-utils";
 // --- spinner ---
 export { type SpinnerVariant, type SpinnerSize as Spn_SpinnerSize, type SpinnerOptions as Spn_SpinnerOptions, createSpinner as createSpnSpinner, miniSpinner as spnMiniSpinner, fullPageSpinner } from "./spinner";
+
+// --- split-button ---
+export { type SplitButtonSize, type SplitButtonVariant, type SplitAction, type SplitButtonOptions as SpltBtn_SplitButtonOptions, type SplitButtonInstance as SpltBtn_SplitButtonInstance, SplitButtonManager, createSplitButton } from "./split-button";
+// --- split-buttons ---
+export { type ButtonVariant as SpltBtns_ButtonVariant, type ButtonSize as SpltBtns_ButtonSize, type SplitButtonOption, type SplitButtonOptions as SpltBtns_SplitButtonOptions, type SplitButtonInstance as SpltBtns_SplitButtonInstance, createSplitButtons, type ToggleGroupOptions, createToggleGroup, type IconButtonBarOptions, createIconButtonBar } from "./split-buttons";
+// --- split-pane-resizable ---
+export { type SplitDirection, type ResizeHandle, type PaneConfig, type SplitPaneOptions, type SplitPaneInstance, createSplitPane } from "./split-pane-resizable";
