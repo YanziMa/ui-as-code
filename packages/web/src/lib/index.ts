@@ -44833,3 +44833,11 @@ export { base64Encode as encBase64Encode, base64Decode as encBase64Decode, base6
 // --- encryption ---
 export type { HashAlgorithm, HmacAlgorithm, AesGcmConfig, AesEncryptedResult, RsaKeyPairOptions, RsaKeyPair, EcdsaKeyPairOptions, EcdsaKeyPair, Pbkdf2Options, Pbkdf2Result, KeyEntry, KeyStoreConfig, KeyDerivationOptions, DerivedKeyResult, JwtPayload as EncJwtPayload2, JwtHeader, TokenVerifyResult, RandomStringOptions, RandomCharset } from "./encryption";
 export { generateAesKey, exportAesKey, importAesKey, aesGcmEncrypt, aesGcmDecrypt, generateRsaKeyPair, importRsaPublicKey, importRsaPrivateKey, rsaEncrypt, rsaDecrypt, hybridEncrypt, hybridDecrypt, hash as encHash, hashBytes, hmac, verifyHmac, pbkdf2, verifyPbkdf2, getRandomBytes, randomUuid, secureRandomString, secureRandomInt, base64Encode as encBase64Encode2, base64Decode as encBase64Decode2, uint8ArrayToBase64Url, base64UrlToUint8Array, arrayBufferToHex, hexToUint8Array, utf8Encode, utf8Decode, KeyStore, deriveKeyFromPassphrase, rederiveKey, generateEcdsaKeyPair, importEcdsaPublicKey, importEcdsaPrivateKey, ecdsaSign, ecdsaSignBytes, ecdsaVerify, ecdsaVerifyBytes, createToken, createTokenAsync, verifyToken, decodeTokenUnverified, timingSafeEqual, timingSafeEqualBytes, isHexString } from "./encryption";
+
+// --- env-detection ---
+export { isDev, isProd, isTest, getEnv as edGetEnv, isFeatureEnabled, requireEnv as edRequireEnv, getEnv as edGetEnvVar, getEnvNumber, getEnvBool, isVercel, isServerless, getDeploymentInfo } from "./env-detection";
+// --- env ---
+export { env, envNumber, envBool, requireEnv as eRequireEnv } from "./env";
+// --- error-boundary ---
+export type { ErrorBoundaryOptions, ErrorBoundaryError, ErrorBoundaryInstance } from "./error-boundary";
+export { ErrorBoundaryManager, createErrorBoundary } from "./error-boundary";
