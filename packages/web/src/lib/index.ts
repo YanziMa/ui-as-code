@@ -30452,3 +30452,48 @@ export {
   normalizePath,
 } from "./router-utils";
 export type { RouteDefinition, RouteMatch, NavigationGuard, RouterOptions } from "./router-utils";
+
+// --- Number Utilities ---
+export {
+  clampNumber,
+  lerpNumber,
+  mapRangeNumber,
+  roundTo,
+  roundToMultiple,
+  floorToMultiple,
+  ceilToMultiple,
+  formatBytesAuto,
+  formatCompactNumber,
+  formatWithSeparators,
+  percentChange,
+  approximatelyEqual,
+  randomIntInRange,
+  randomFloatInRange,
+  normalizeAngleDeg,
+  normalizeAngleRad,
+  degToRad as numberDegToRad,
+  radToDeg as numberRadToDeg,
+  gcd as numberGcd,
+  lcm as numberLcm,
+  isInRange,
+  wrapNumber,
+} from "./number-utils";
+
+// --- Math Utilities ---
+export {
+  mean, median, mode, variance, stddev, covariance, correlation,
+  linearRegression, percentile,
+  Vec2, Vec3, Matrix,
+  dist2D, dist3D, angleBetweenPoints, pointInPolygon, polygonArea,
+  polygonCentroid, boundingBox, lineIntersection,
+  lerp, clamp, mapRange, smoothStep, bezierQuad, bezierCubic, catmullRom,
+  gcd, lcm, isPrime, sieveOfEratosthenes, factorial, fibonacci,
+  fibonacciSequence, combinations, permutations, modPow,
+  angle, temperature, length as lengthUnits, weight,
+  randomNormal, randomUniform, randomInt, randomPick, shuffle, weightedRandom,
+} from "./math-utils";
+export type { Vector2D, Vector3D } from "./math-utils";
+
+// --- Statistics Cards ---
+export { createStatCard } from "./statistics";
+export type { StatCardOptions, StatisticsInstance, TrendDirection, SparklineType } from "./statistics";
