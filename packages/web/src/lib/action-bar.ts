@@ -174,7 +174,7 @@ export function createActionBar(options: ActionBarOptions): ActionBarInstance {
 
   function getTooltip(): HTMLElement {
     if (!tooltipEl) {
-      tooltipEl =.createElement("div");
+      tooltipEl = document.createElement("div");
       tooltipEl.style.cssText = `
         position:absolute;z-index:9999;padding:4px 10px;border-radius:5px;
         background:#1f2937;color:#fff;font-size:11px;pointer-events:none;
