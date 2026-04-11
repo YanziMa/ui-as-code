@@ -33307,3 +33307,58 @@ export {
   renderInto,
 } from "./dom-utils";
 export type { CreateElementOptions, QueryOptions, DomDiffResult } from "./dom-utils";
+
+// --- logger ---
+export {
+  Logger,
+  log,
+  apiLog,
+  dbLog,
+  extLog,
+  setGlobalLogLevel,
+  getGlobalLogLevel,
+} from "./logger";
+export type { LogLevel } from "./logger";
+
+// --- scheduler ---
+export {
+  Scheduler,
+  parseCronExpression,
+  cronMatches,
+  getNextCronRun,
+} from "./scheduler";
+export type { ScheduledJob, JobStatus, CronExpression } from "./scheduler";
+
+// --- state-machine ---
+export {
+  FSM,
+  HSM,
+  createMachine,
+  interpret,
+  evaluateChoice,
+  evaluateJunction,
+  deepHistoryTarget,
+  shallowHistoryTarget,
+  match as matchState,
+  stateEquals,
+} from "./state-machine";
+export type {
+  StateId,
+  EventId,
+  MachineContext,
+  EventPayload,
+  GuardFn,
+  ActionFn,
+  StateListener,
+  InvalidEventStrategy,
+  TransitionTarget,
+  TransitionDef,
+  StateConfig,
+  HistoryMode,
+  MachineConfig,
+  ChoiceConfig,
+  JunctionConfig,
+  StateValue,
+  TransitionHistoryEntry,
+  Service,
+} from "./state-machine";
