@@ -29406,3 +29406,17 @@ export { createTagCloud } from "./tag-cloud.js";
 export type { TagCloudOptions, TagCloudInstance, TagCloudTag, TagCloudLayout, TagCloudSort } from "./tag-cloud.js";
 export { createMasonry } from "./masonry-layout.js";
 export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry-layout.js";
+// --- Batch 985: Resizable Panel, Dock Layout, Action Bar ---
+export { createResizablePanel } from "./resizable-panel.js";
+export type { ResizablePanelOptions, ResizablePanelInstance, PanelDirection, PanelCollapseMode } from "./resizable-panel.js";
+export { createDockLayout } from "./dock-layout.js";
+export type { DockLayoutOptions, DockLayoutInstance, DockPanel, DockLocation, DockTabPosition } from "./dock-layout.js";
+export { createActionBar } from "./action-bar.js";
+export type {
+  ActionBarOptions,
+  ActionBarInstance,
+  ActionBarAction,
+  ActionType,
+  ActionBarVariant,
+  ActionBarSize,
+} from "./action-bar.js";
