@@ -27740,3 +27740,11 @@ export {
   type TreeNode,
   type CheckMode,
 } from "./tree-view";
+
+// --- Batch 874: Pagination, Alert, Card ---
+export { PaginationManager, createPagination } from "./pagination";
+export type { PaginationOptions, PaginationInstance } from "./pagination";
+export { AlertManager, createAlert } from "./alert";
+export type { AlertOptions, AlertInstance, AlertVariant, AlertSize, AlertAction } from "./alert";
+export { createCard } from "./card";
+export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOptions, CardImageOptions } from "./card";
