@@ -21509,3 +21509,36 @@ export {
   createTableSkeleton,
   wrapWithSkeleton,
 } from "./skeleton";
+
+// --- Context Menu ---
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+
+// --- File Upload ---
+export type {
+  FileUploadOptions,
+  UploadFile,
+  FileUploadInstance,
+} from "./file-upload";
+export {
+  FileUploadManager,
+  createFileUpload,
+} from "./file-upload";
+
+// --- Image Gallery ---
+export type {
+  GalleryImage,
+  ImageGalleryOptions,
+  ImageGalleryInstance,
+} from "./image-gallery";
+export {
+  ImageGalleryManager,
+  createImageGallery,
+} from "./image-gallery";
