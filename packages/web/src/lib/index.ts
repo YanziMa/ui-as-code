@@ -43496,3 +43496,28 @@ export {
   type MessageQueueConfig,
   type MessageQueue,
 } from "./message";
+
+// --- modal-v2 ---
+export {
+  createModalV2,
+  type ModalV2Options,
+  type ModalV2Instance,
+} from "./modal-v2";
+
+// --- model ---
+export {
+  createModel,
+  type ModelConfig,
+  type ModelInstance,
+} from "./model";
+
+// --- monitor ---
+export {
+  createMonitor,
+  type MonitorConfig,
+  type MonitorInstance,
+  type FpsStats,
+  type MemoryInfo,
+  type LongTaskEntry,
+  type MetricValue,
+} from "./monitor";
