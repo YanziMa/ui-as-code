@@ -32172,3 +32172,15 @@ export type { DiffResult, DiffChunk, FileDiff } from "./diff-viewer";
 // --- log-viewer ---
 export { createLogViewer } from "./log-viewer";
 export type { LogViewerOptions, LogViewerInstance, LogEntry, LogLevel } from "./log-viewer";
+
+// --- resizable ---
+export { makeResizable, createSplitPane } from "./resizable";
+export type { ResizeOptions, ResizeState, ResizableController, SplitPaneOptions, SplitPaneController } from "./resizable";
+
+// --- drag-list ---
+export { createDragList } from "./drag-list";
+export type { DragListOptions, DragListInstance, DragListItem } from "./drag-list";
+
+// --- tour ---
+export { createTour } from "./tour";
+export type { TourOptions, TourInstance, TourStep } from "./tour";
