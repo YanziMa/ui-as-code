@@ -20642,3 +20642,32 @@ export type {
   CommentOptions,
   CommentInstance,
 } from "./comment";
+export {
+  createAnchorNav,
+} from "./anchor-nav";
+export type {
+  AnchorLink,
+  AnchorNavOptions,
+  AnchorNavInstance,
+} from "./anchor-nav";
+export {
+  CountdownManager,
+  createCountdown,
+} from "./countdown";
+export type {
+  CountdownSize,
+  CountdownVariant,
+  CountdownOptions,
+  CountdownInstance,
+} from "./countdown";
+export {
+  MarqueeManager,
+  createMarquee,
+} from "./marquee";
+export type {
+  MarqueeDirection,
+  MarqueeStyle,
+  MarqueeItem,
+  MarqueeOptions,
+  MarqueeInstance,
+} from "./marquee";
