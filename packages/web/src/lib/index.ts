@@ -48080,3 +48080,21 @@ export {
   PopoverPlacement as PV2Placement, PopoverTrigger as PV2Trigger,
   PopoverV2Options, PopoverV2Instance, createPopoverV2,
 } from "./popover-v2";
+// --- popover ---
+export {
+  PopoverTrigger as PopTrigger, PopoverPlacement as PopPlacement,
+  PopoverOptions as PopOptions, PopoverInstance as PopInstance,
+  PopoverManager, createPopover as createPop,
+} from "./popover";
+// --- portal-utils ---
+export {
+  PortalContainerType,
+  PortalOptions as PortUtilOptions, PortalInstance as PortUtilInstance,
+  PortalManagerConfig, PortalManagerInstance as PortUtilManagerInstance,
+  createPortal as createPortUtil, createPortalManager,
+} from "./portal-utils";
+// --- portal ---
+export {
+  PortalTarget, PortalOptions as PortOptions, PortalInstance as PortInstance,
+  createPortal as createPort, PortalManager as PortMgr, getPortalManager,
+} from "./portal";
