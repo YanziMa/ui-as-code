@@ -31576,3 +31576,29 @@ export type {
   ComboBoxInstance,
   ComboBoxOption,
 } from "./combo-box";
+
+// --- Batch 1060: Switch, Slider, Radio Group ---
+
+export { createSwitch } from "./switch";
+export type {
+  SwitchOptions,
+  SwitchInstance,
+  SwitchSize,
+  SwitchVariant,
+} from "./switch";
+
+export { SliderManager, createSlider } from "./slider";
+export type {
+  SliderOptions,
+  SliderInstance,
+  SliderMark,
+} from "./slider";
+
+export { createRadioGroup } from "./radio-group";
+export type {
+  RadioGroupOptions,
+  RadioGroupInstance,
+  RadioOption,
+  RadioSize,
+  RadioVariant,
+} from "./radio-group";
