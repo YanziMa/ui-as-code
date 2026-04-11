@@ -17752,3 +17752,33 @@ export type {
   ZoomMode,
   ScrollMode,
 } from "./pdf-viewer";
+export {
+  TreeView,
+} from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+  TabOrientation,
+  TabVariant,
+} from "./tabs";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionItem,
+  AccordionOptions,
+  AccordionInstance,
+  AccordionMode,
+} from "./accordion";
