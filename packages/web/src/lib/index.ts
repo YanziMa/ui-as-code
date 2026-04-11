@@ -32406,3 +32406,28 @@ export {
   type BreadcrumbOptions,
   type BreadcrumbInstance,
 } from "./breadcrumb";
+
+// --- infinite-scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- command-palette ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandCategory,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+} from "./command-palette";
+
+// --- search-highlight ---
+export {
+  SearchHighlightManager,
+  createSearchHighlight,
+  type SearchHighlightOptions,
+  type SearchHighlightInstance,
+} from "./search-highlight";
