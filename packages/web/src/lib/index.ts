@@ -43256,3 +43256,72 @@ export {
   type InlineEditOptions,
   type InlineEditInstance,
 } from "./inline-edit";
+
+// --- intl ---
+export {
+  getDefaultLocale,
+  setDefaultLocale,
+  detectLocale,
+  negotiateLocale,
+  formatNumber as intlFormatNumber,
+  formatCurrency,
+  formatPercent,
+  formatCompact,
+  formatByteSize,
+  formatDate as intlFormatDate,
+  formatRelativeTime,
+  formatTimeAgo,
+  formatDuration,
+  formatList,
+  getPluralCategory,
+  pluralize,
+  compareStrings,
+  sortLocaleAware,
+  formatMessage,
+  type Locale as IntlLocale,
+  type NumberFormatConfig,
+  type DateFormatConfig,
+  type RelativeTimeConfig,
+  type ListFormatConfig,
+  type PluralConfig,
+  type CollatorConfig,
+} from "./intl";
+
+// --- json-formatter ---
+export {
+  formatJson,
+  minifyJson,
+  parseJson,
+  safeParseJson,
+  isValidJson,
+  formatJsonHtml,
+  jsonDiff,
+  applyPatch,
+  resolvePointer,
+  setPointer,
+  removePointer,
+  deepClone,
+  getJsonSize,
+  truncateJson,
+  type JsonFormatOptions,
+  type JsonColorTheme,
+  type JsonDiffResult,
+  type JsonChange,
+  type JsonPatchOperation,
+} from "./json-formatter";
+
+// --- json-schema ---
+export {
+  validate,
+  getRequiredFields,
+  getPropertyNames,
+  getDefaults,
+  generateExample,
+  extractUiHints,
+  coerceValue,
+  type JsonSchema,
+  type JsonSchemaType,
+  type ValidationError as JsonValidationError,
+  type ValidationResult as JsonValidationResult,
+  type UiHint,
+} from "./json-schema";
