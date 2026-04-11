@@ -18130,3 +18130,33 @@ export type {
   OffcanvasSide,
   OffcanvasMode,
 } from "./offcanvas";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselOptions,
+  CarouselInstance,
+  CarouselSlide,
+} from "./carousel";
+export {
+  TabsManager,
+  createTabs,
+} from "./tabs";
+export type {
+  TabsOptions,
+  TabsInstance,
+  TabItem,
+  TabOrientation,
+  TabVariant,
+} from "./tabs";
+export {
+  AccordionManager,
+  createAccordion,
+} from "./accordion";
+export type {
+  AccordionOptions,
+  AccordionInstance,
+  AccordionItem,
+  AccordionMode,
+} from "./accordion";
