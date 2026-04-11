@@ -27860,3 +27860,15 @@ export type { SkeletonShape, SkeletonAnimation, SkeletonItem, SkeletonOptions, S
 // --- Context Menu ---
 export { ContextMenuManager } from "./context-menu";
 export type { ContextMenuItem, ContextMenuPosition, ContextMenuOptions, ContextMenuInstance } from "./context-menu";
+
+// --- Rating Input ---
+export { createRatingInput } from "./rating-input";
+export type { RatingIcon, RatingSize, RatingInputOptions, RatingInputInstance } from "./rating-input";
+
+// --- Badge Manager ---
+export { createBadge, createDotBadge, createStatusBadge } from "./badge-manager";
+export type { BadgeVariant, BadgePosition, BadgeSize, DotSize, BadgeOptions, DotBadgeOptions, StatusBadgeOptions, BadgeInstance, DotBadgeInstance, StatusBadgeInstance } from "./badge-manager";
+
+// --- Anchor Navigation ---
+export { createAnchorNav } from "./anchor-nav";
+export type { AnchorLink, AnchorNavOptions, AnchorNavInstance } from "./anchor-nav";
