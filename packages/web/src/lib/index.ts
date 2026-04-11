@@ -25242,3 +25242,29 @@ export {
   type CalendarEvent,
   type CalendarView,
 } from "./calendar";
+
+// --- statistics-chart ---
+export {
+  ChartType,
+  type StatisticsChartOptions,
+  type StatisticsChartInstance,
+  createStatisticsChart,
+} from "./statistics-chart";
+
+// --- heatmap ---
+export {
+  HeatmapType,
+  ColorScale,
+  type HeatmapCell,
+  type HeatmapOptions,
+  type HeatmapInstance,
+  createHeatmap,
+} from "./heatmap";
+
+// --- sparkline ---
+export {
+  SparklineType,
+  type SparklineOptions,
+  type SparklineInstance,
+  createSparkline,
+} from "./sparkline";
