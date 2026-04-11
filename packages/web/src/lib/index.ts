@@ -37239,3 +37239,15 @@ export type { MarkdownOptions, HeadingInfo } from "./markdown-utils";
 // --- code-utils ---
 export { createCodeBlock, createDiffView, detectLanguage } from "./code-utils";
 export type { CodeBlockOptions, DiffOptions, Language } from "./code-utils";
+
+// --- context-menu-utils ---
+export { createContextMenu } from "./context-menu-utils";
+export type { ContextMenuItem, ContextMenuOptions, ContextMenuInstance, ContextMenuContext } from "./context-menu-utils";
+
+// --- hotkey-utils ---
+export { createHotkeyManager, normalizeKeyEvent, parseBinding, formatHotkey } from "./hotkey-utils";
+export type { KeyBinding, HotkeyManagerOptions, HotkeyManagerInstance } from "./hotkey-utils";
+
+// --- command-palette-utils ---
+export { createCommandPalette } from "./command-palette-utils";
+export type { PaletteItem, CommandPaletteOptions, CommandPaletteInstance } from "./command-palette-utils";
