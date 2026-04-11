@@ -25381,3 +25381,32 @@ export {
   DropdownMenuManager,
   createDropdownMenu,
 } from "./dropdown-menu";
+
+// --- modal ---
+export {
+  ModalSize,
+  ModalPosition,
+  type ModalOptions,
+  type ModalInstance,
+  createModal,
+} from "./modal";
+
+// --- drawer ---
+export {
+  DrawerSide,
+  DrawerSize,
+  type DrawerOptions,
+  type DrawerInstance,
+  createDrawer,
+} from "./drawer";
+
+// --- alert ---
+export {
+  AlertVariant,
+  AlertSize,
+  type AlertAction,
+  type AlertOptions,
+  type AlertInstance,
+  AlertManager,
+  createAlert,
+} from "./alert";
