@@ -32124,3 +32124,15 @@ export type { CheckboxOptions, CheckboxInstance, CheckboxGroupOptions, CheckboxG
 // --- radio ---
 export { createRadioGroup, RadioGroupManager } from "./radio";
 export type { RadioGroupOptions, RadioGroupInstance, RadioOption, RadioSize, RadioVariant } from "./radio";
+
+// --- select ---
+export { createSelect, SelectManager } from "./select";
+export type { SelectOptions, SelectInstance, SelectOption } from "./select";
+
+// --- input-mask ---
+export { createInputMask, InputMaskManager } from "./input-mask";
+export type { MaskOptions, MaskInstance, MaskType } from "./input-mask";
+
+// --- form ---
+export { createForm } from "./form";
+export type { FormOptions, FormInstance, FormField, FormGroup, FieldType, ValidationRule } from "./form";
