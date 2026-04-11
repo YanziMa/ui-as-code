@@ -32006,3 +32006,28 @@ export {
   type ToastType,
   type ToastPosition,
 } from "./toast";
+
+// --- Context Menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  type ContextMenuItem,
+  type ContextMenuPosition,
+} from "./context-menu";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+  type Command,
+} from "./command-palette";
+
+// --- Quick Switcher ---
+export {
+  createQuickSwitcher,
+  type QuickSwitcherOptions,
+  type QuickSwitcherInstance,
+  type SwitcherItem,
+} from "./quick-switcher";
