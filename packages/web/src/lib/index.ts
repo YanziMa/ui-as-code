@@ -41678,3 +41678,10 @@ export { createAsyncQueue } from "./async-queue";
 export type { AsyncQueueOptions, AsyncQueueInstance, Task, TaskResult, TaskStatus, TaskPriority, QueueStats } from "./async-queue";
 export { EventBus, createEventBus } from "./event-bus";
 export type { EventBusOptions, Subscription, EmittedEvent, EventCallback, EventMiddleware } from "./event-bus";
+// --- Batch 1311: Virtual Scroller, Drag-Drop List, Sortable Table ---
+export { VirtualScroller } from "./virtual-scroller";
+export type { ScrollerConfig, ScrollerState, ScrollItem, VisibleRange, ScrollToOptions } from "./virtual-scroller";
+export { createDndList } from "./drag-drop-list";
+export type { DndListOptions, DndListInstance, DndListItem } from "./drag-drop-list";
+export { createSortableTable } from "./sortable-table";
+export type { SortableTableOptions, SortableTableInstance, Column, TableRow, SortState, FilterState, TablePagination, SelectionMode, SortDirection } from "./sortable-table";
