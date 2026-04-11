@@ -18693,3 +18693,31 @@ export type {
   AccordionVariant,
   AccordionSize,
 } from "./accordion-lite";
+export {
+  createCarousel,
+} from "./carousel-lite";
+export type {
+  CarouselOptions,
+  CarouselInstance,
+  CarouselSlide,
+  CarouselTransition,
+  CarouselAlign,
+} from "./carousel-lite";
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandPaletteConfig,
+  CommandPaletteState,
+  CommandCategory,
+} from "./command-palette";
+export {
+  ContextMenuManager,
+} from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuOptions,
+  ContextMenuInstance,
+  ContextMenuPosition,
+} from "./context-menu";
