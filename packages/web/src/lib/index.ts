@@ -25316,3 +25316,37 @@ export {
   type TimePickerInstance,
   createTimePicker,
 } from "./time-picker";
+
+// --- file-upload ---
+export {
+  type FileUploadOptions,
+  type UploadFile,
+  type FileUploadInstance,
+  FileUploadManager,
+  createFileUpload,
+} from "./file-upload";
+
+// --- avatar ---
+export {
+  AvatarSize,
+  AvatarShape,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  getInitials,
+  createAvatar,
+  createAvatarGroup,
+} from "./avatar";
+
+// --- badge ---
+export {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  type BadgeOptions,
+  type StatusDotOptions,
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
