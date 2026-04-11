@@ -42850,3 +42850,33 @@ export {
   type BackToTopOptions,
   type BackToTopInstance,
 } from "./anchor-link";
+// --- anchor-nav ---
+export {
+  createAnchorNav,
+  type AnchorLink as AnchorNavLink,
+  type AnchorNavOptions,
+  type AnchorNavInstance,
+} from "./anchor-nav";
+
+// --- anchor-position ---
+export {
+  computePosition,
+  computeArrowPosition,
+  createPositionObserver,
+  type Placement as AnchorPlacementType,
+  type Alignment,
+  type PositionResult,
+  type AnchorOptions as AnchorPositionOptions,
+  type ArrowPosition,
+} from "./anchor-position";
+
+// --- anchor-positioning-utils ---
+export {
+  createAnchorPosition,
+  type AnchorPlacement,
+  type AutoFlipStrategy,
+  type OverflowBoundary,
+  type AnchorOptions as AnchorPositioningUtilsOptions,
+  type AnchorComputeData,
+  type AnchorInstance as AnchorPositioningInstance,
+} from "./anchor-positioning-utils";
