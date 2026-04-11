@@ -46158,3 +46158,15 @@ export { getPresetStyle, truncateLabel, formatCount, titleCase, toLabelCase, get
 // --- label ---
 export type { LabelVariant, LabelSize, LabelShape, LabelOptions, LabelInstance } from "./label";
 export { createLabel } from "./label";
+
+// --- layer-manager ---
+export type { LayerId, LayerOptions, LayerInstance, LayerManagerConfig, LayerManager } from "./layer-manager";
+export { createLayerManager, layerAnimations } from "./layer-manager";
+
+// --- layout-grid ---
+export type { GridConfig as LgGridConfig, GridItemOptions, BreakpointLayout, GridLayoutInstance, GridInfo } from "./layout-grid";
+export { createGridLayout, build12ColTemplate, gridPatterns } from "./layout-grid";
+
+// --- layout-utils ---
+export type { FlexDirection, FlexWrap, JustifyContent, AlignItems, AlignSelf, GapSize, FlexConfig, GridConfig as LuGridConfig, StackConfig } from "./layout-utils";
+export { flex, applyFlex, hStack, vStack, gridLayout, applyGrid, applyStack, parseAspectRatio, applyAspectRatio, createAspectContainer, spacing, insertDivider, createAppLayout, createSidebarLayout, createCenteredLayout } from "./layout-utils";
