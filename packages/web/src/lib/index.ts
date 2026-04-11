@@ -50704,3 +50704,36 @@ export type {
   SheetInstance as SideSht_Instance,
 } from "./side-sheet";
 export { SideSheetManager, createSideSheet } from "./side-sheet";
+
+// --- sidebar-utils ---
+export {
+  type SidebarPosition as SdbrUtl_SidebarPosition,
+  type SidebarVariant as SdbrUtl_SidebarVariant,
+  type SidebarCollapseMode as SdbrUtl_SidebarCollapseMode,
+  type SidebarItem as SdbrUtl_SidebarItem,
+  type SidebarSection as SdbrUtl_SidebarSection,
+  type SidebarOptions as SdbrUtl_SidebarOptions,
+  type SidebarInstance as SdbrUtl_SidebarInstance,
+  createSidebar as SdbrUtl_createSidebar,
+} from "./sidebar-utils";
+
+// --- sidebar ---
+export {
+  type SidebarItem as Sdbr_SidebarItem,
+  type SidebarGroup as Sdbr_SidebarGroup,
+  type SidebarOptions as Sdbr_SidebarOptions,
+  type SidebarInstance as Sdbr_SidebarInstance,
+  SidebarManager as Sdbr_SidebarManager,
+  createSidebar as Sdbr_createSidebar,
+} from "./sidebar";
+
+// --- signal-store ---
+export {
+  type StateKey as SigStore_StateKey,
+  type SelectorFn as SigStore_SelectorFn,
+  type Listener as SigStore_Listener,
+  type StoreOptions as SigStore_StoreOptions,
+  type StoreInstance as SigStore_StoreInstance,
+  createStore as SigStore_createStore,
+  createCounterStore as SigStore_createCounterStore,
+} from "./signal-store";
