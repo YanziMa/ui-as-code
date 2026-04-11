@@ -24018,3 +24018,14 @@ export type { SkeletonScreenOptions, SkeletonScreenInstance, SkeletonLayout } fr
 // --- empty-state ---
 export { EmptyStateManager, createEmptyState } from "./empty-state";
 export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+
+// --- command-palette ---
+export { CommandPalette } from "./command-palette";
+
+// --- quick-switcher ---
+export { createQuickSwitcher } from "./quick-switcher";
+export type { SwitcherItem, QuickSwitcherOptions, QuickSwitcherInstance } from "./quick-switcher";
+
+// --- search-dialog ---
+export { createSearchDialog } from "./search-dialog";
+export type { SearchResult, SearchCategory, SearchDialogOptions, SearchDialogInstance } from "./search-dialog";
