@@ -49513,3 +49513,94 @@ export {
   matchMedia as RUTMatchMedia,
   onMediaChange as RUTOnMediaChange,
 } from "./resize-utils";
+// --- resource-pool ---
+export type {
+  ResourceId as RPoolId,
+  PoolStatus as RPoolStatus,
+  ResourceWrapper as RPoolWrapper,
+  PoolOptions as RPoolOptions,
+  PoolMetrics as RPoolMetrics,
+  AcquireOptions as RPoolAcquireOpts,
+} from "./resource-pool";
+export {
+  ResourcePool,
+  ConnectionPool as RPoolConnPool,
+  createResourcePool as RPoolCreate,
+  createConnectionPool as RPoolCreateConn,
+} from "./resource-pool";
+
+// --- responsive-helpers ---
+export type {
+  MediaListenerOptions as RespHMediaOpts,
+  MediaQueryResult as RespHMQR,
+  ResponsiveImageSource as RespHImgSrc,
+  ResponsiveImageOptions as RespHImgOpts,
+  SafeAreaInsets as RespHSafeArea,
+  PrintOptions as RespHPrintOpts,
+} from "./responsive-helpers";
+export {
+  listenToMedia as RespHListenMedia,
+  watchMedia as RespHWatchMedia,
+  watchHover as RespHWatchHover,
+  watchTouch as RespHWatchTouch,
+  watchReducedMotion as RespHWatchReducedMotion,
+  watchDarkMode as RespHWatchDarkMode,
+  watchPortrait as RespHWatchPortrait,
+  watchLandscape as RespHWatchLandscape,
+  watchHighContrast as RespHWatchHighContrast,
+  watchPrint as RespHWatchPrint,
+  buildSrcset as RespHBuildSrcset,
+  buildPictureHtml as RespHBuildPicture,
+  pickBestImageSource as RespHPickBestSrc,
+  getSafeAreaInsets as RespHGetInsets,
+  applySafeAreaVars as RespHApplySafeVars,
+  listenForPrint as RespHListenPrint,
+  generatePrintStyles as RespHGenPrintStyles,
+  getVisualViewport as RespHGetVisualVP,
+  hasDisplayNotch as RespHHasNotch,
+} from "./responsive-helpers";
+
+// --- responsive-utils ---
+export type {
+  BreakpointName as RespBPName,
+  BreakpointDefinition as RespBPDef,
+  ResponsiveValue as RespValue,
+  MediaQueryOptions as RespMQOpts,
+  DeviceInfo as RespDeviceInfo,
+} from "./responsive-utils";
+export {
+  BREAKPOINTS as RespBreakpoints,
+  BREAKPOINT_ORDER as RespBPOrder,
+  subscribeMediaQuery as RespSubMQ,
+  matchesMediaQuery as RespMatchMQ,
+  getBreakpointQuery as RespGetBPQ,
+  isAtLeast as RespIsAtLeast,
+  isAtMost as RespIsAtMost,
+  getCurrentBreakpoint as RespGetCurrentBP,
+  resolveResponsive as RespResolve,
+  createResponsiveValue as RespCreateValue,
+  fluidFontSize as RespFluidFS,
+  responsiveFontSize as RespFontSizes,
+  applyResponsiveTypography as RespApplyTypo,
+  generateSrcSet as RespGenSrcSet,
+  generateSizes as RespGenSizes,
+  pickBestImageSource as RespPickBestSrc,
+  createContainerQuery as RespContainerQ,
+  applyContainerClasses as RespApplyClasses,
+  getDeviceInfo as RespGetDevice,
+  isMobile as RespIsMobile,
+  isTouch as RespIsTouch,
+  canHover as RespCanHover,
+  prefersReducedMotion as RespPrefersReduced,
+  prefersDarkMode as RespPrefersDark,
+  prefersLightMode as RespPrefersLight,
+  prefersHighContrast as RespPrefersHighContrast,
+  watchColorScheme as RespWatchColorScheme,
+  getOrientation as RespGetOrient,
+  watchOrientation as RespWatchOrient,
+  lockOrientation as RespLockOrient,
+  unlockOrientation as RespUnlockOrient,
+  responsiveVisibility as RespVisibility,
+  responsiveSwap as RespSwap,
+  responsiveColumns as RespCols,
+} from "./responsive-utils";
