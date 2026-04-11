@@ -29320,3 +29320,15 @@ export { createSlider } from "./slider-input.js";
 // --- Toggle Switch (Batch 977) ---
 export type { ToggleVariant, ToggleSize, ToggleOptions, ToggleInstance } from "./toggle-switch.js";
 export { ToggleManager, createToggle } from "./toggle-switch.js";
+
+// --- Pagination (Batch 978) ---
+export type { PaginationOptions, PaginationInstance } from "./pagination.js";
+export { PaginationManager, createPagination } from "./pagination.js";
+
+// --- Breadcrumb Nav (Batch 978) ---
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb-nav.js";
+export { createBreadcrumb } from "./breadcrumb-nav.js";
+
+// --- Command Palette (Batch 978) ---
+export type { Command, CommandCategory, CommandPaletteConfig, CommandPaletteState } from "./command-palette.js";
+export { CommandPalette } from "./command-palette.js";
