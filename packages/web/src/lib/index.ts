@@ -34214,3 +34214,29 @@ export {
   type PanelOptions,
   type PanelInstance,
 } from "./panel-utils";
+
+// --- tabs-utils ---
+export {
+  createTabs,
+  type TabOrientation,
+  type TabActivation,
+  type TabItem,
+  type TabsOptions,
+  type TabsInstance,
+} from "./tabs-utils";
+
+// --- accordion-utils ---
+export {
+  createAccordion,
+  type AccordionMode,
+  type AccordionItem,
+  type AccordionOptions,
+  type AccordionInstance,
+} from "./accordion-utils";
+
+// --- collapse-utils ---
+export {
+  createCollapse,
+  type CollapseOptions,
+  type CollapseInstance,
+} from "./collapse-utils";
