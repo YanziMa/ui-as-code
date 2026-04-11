@@ -34473,3 +34473,14 @@ export type { ShimmerOptions, ShimmerInstance, ShimmerDirection, ShimmerSpeed } 
 // --- loading-overlay-utils ---
 export { createLoadingOverlay } from "./loading-overlay-utils";
 export type { LoadingOverlayOptions, LoadingOverlayInstance, OverlayVariant, SpinnerType } from "./loading-overlay-utils";
+// --- infinite-scroll-utils ---
+export { createInfiniteScroll } from "./infinite-scroll-utils";
+export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-scroll-utils";
+
+// --- pull-to-refresh-utils ---
+export { createPullToRefresh } from "./pull-to-refresh-utils";
+export type { PullToRefreshOptions, PullToRefreshInstance, PullState } from "./pull-to-refresh-utils";
+
+// --- virtual-scroller-utils ---
+export { createVirtualScroller } from "./virtual-scroller-utils";
+export type { VirtualScrollerOptions, VirtualScrollerInstance, VirtualItem } from "./virtual-scroller-utils";
