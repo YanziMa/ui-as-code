@@ -42163,3 +42163,10 @@ export { createAvatar, createAvatarGroup, getInitials } from "./avatar";
 export type { AvatarSize, AvatarShape, AvatarOptions, AvatarGroupOptions } from "./avatar";
 export { createChipGroup } from "./chip-group";
 export type { ChipSize, ChipVariant, ChipSelectionMode, ChipItem, ChipGroupOptions, ChipGroupInstance } from "./chip-group";
+// --- Batch 1355: Stepper, Timeline, Tree View ---
+export { StepperManager, createStepper } from "./stepper";
+export type { StepStatus, StepConfig, StepperOptions, StepperInstance } from "./stepper";
+export { TimelineManager, createTimeline } from "./timeline";
+export type { TimelineItemStatus, TimelineItem, TimelineOptions, TimelineInstance } from "./timeline";
+export { TreeView } from "./tree-view";
+export type { TreeNodeData, TreeNode, CheckMode, TreeViewConfig } from "./tree-view";
