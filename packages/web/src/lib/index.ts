@@ -42098,3 +42098,7 @@ export { createSheet } from "./sheet.js";
 export type { SheetOptions, SheetInstance, SheetSnapPoint } from "./sheet.js";
 export { createPopover } from "./popover-component.js";
 export type { PopoverOptions, PopoverInstance, PopoverPlacement, PopoverTrigger } from "./popover-component.js";
+// --- Batch 1341: Skeleton Screen, Loading States, Empty Placeholder ---
+export { createSkeletonScreen, type SkeletonScreenOptions, type SkeletonInstance, type ScreenTemplate, type SkeletonSection, type SkeletonBlock } from "./skeleton-screen";
+export { createLoading, spinner, fullscreenLoading, wrapWithLoading, type LoadingOptions, type LoadingInstance, type LoadingVariant, type LoadingSize } from "./loading-states";
+export { createEmptyPlaceholder, type EmptyPlaceholderOptions, type EmptyInstance, type EmptyVariant } from "./empty-placeholder";
