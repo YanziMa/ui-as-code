@@ -29248,3 +29248,15 @@ export { createSkeleton } from "./skeleton-loader.js";
 // --- Empty State (Batch 971) ---
 export type { EmptyStateVariant, EmptyStateOptions, EmptyStateInstance } from "./empty-state.js";
 export { EmptyStateManager, createEmptyState } from "./empty-state.js";
+
+// --- Accordion (Batch 972) ---
+export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion.js";
+export { AccordionManager, createAccordion } from "./accordion.js";
+
+// --- Tabs Manager (Batch 972) ---
+export type { TabVariant, TabPosition, TabOverflowMode, TabPanel, TabsOptions, TabsInstance } from "./tabs-manager.js";
+export { createTabs } from "./tabs-manager.js";
+
+// --- Carousel (Batch 972) ---
+export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel.js";
+export { CarouselManager, createCarousel } from "./carousel.js";
