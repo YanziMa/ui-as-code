@@ -44619,3 +44619,51 @@ export {
   StatCardOptions as ScStatCardOptions,
   createStatCard as scCreateStatCard,
 } from "./stat-card";
+
+// --- stat-utils ---
+export {
+  StatTrend as StuStatTrend,
+  StatSize as StuStatSize,
+  StatFormat as StuStatFormat,
+  StatOptions as StuStatOptions,
+  StatCardOptions as StuStatCardOptions,
+  createSparkline as stuCreateSparkline,
+  createStat as stuCreateStat,
+  createStatCard as stuCreateStatCard,
+} from "./stat-utils";
+
+// --- state-machine-utils ---
+export {
+  StateId as SmuStateId,
+  EventId as SmuEventId,
+  GuardFn as SmuGuardFn,
+  ActionFn as SmuActionFn,
+  TransitionDefinition as SmuTransitionDefinition,
+  StateDefinition as SmuStateDefinition,
+  StateMachineConfig as SmuStateMachineConfig,
+  StateMachineInstance as SmuStateMachineInstance,
+  createStateMachine as smuCreateStateMachine,
+  createHierarchicalStateMachine as smuCreateHierarchicalStateMachine,
+  validateConfig as smuValidateConfig,
+  generateMermaidDiagram as smuGenerateMermaidDiagram,
+} from "./state-machine-utils";
+
+// --- state-machine-visual ---
+export {
+  VisualState as SmvVisualState,
+  VisualTransition as SmvVisualTransition,
+  LayoutOptions as SmvLayoutOptions,
+  RenderOptions as SmvRenderOptions,
+  SvgDiagram as SmvSvgDiagram,
+  StateMachineModel as SmvStateMachineModel,
+  AnimationFrame as SmvAnimationFrame,
+  renderStateMachine as smvRenderStateMachine,
+  toMermaidDiagram as smvToMermaidDiagram,
+  toPlantUmlDiagram as smvToPlantUmlDiagram,
+  createInteractiveViewer as smvCreateInteractiveViewer,
+  StateMachineViewer,
+  buildModel as smvBuildModel,
+  getReachableStates as smvGetReachableStates,
+  findAllPaths as smvFindAllPaths,
+  validateModel as smvValidateModel,
+} from "./state-machine-visual";
