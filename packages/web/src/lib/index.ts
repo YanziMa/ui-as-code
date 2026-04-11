@@ -20230,3 +20230,29 @@ export type {
   CircuitOptions,
   CircuitInstance,
 } from "./circuit-board";
+export {
+  MentionManager,
+  createMention,
+} from "./mention";
+export type {
+  MentionOption,
+  MentionOptions,
+  MentionInstance,
+} from "./mention";
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+export {
+  SearchHighlightManager,
+  createSearchHighlight,
+} from "./search-highlight";
+export type {
+  SearchHighlightOptions,
+  SearchHighlightInstance,
+} from "./search-highlight";
