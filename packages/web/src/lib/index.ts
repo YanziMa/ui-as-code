@@ -37925,3 +37925,55 @@ export {
   scaleIn, shake, pulse,
 } from "./animation-utils";
 export type { TweenOptions, SpringConfig, AnimationFrame, ScrollAnimationOptions, EasingName } from "./animation-utils";
+
+// --- form-utils ---
+export {
+  createForm,
+  serializeForm, populateForm, clearForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  linkErrorToField, unlinkErrorFromField, createFormAnnouncer,
+} from "./form-utils";
+export type {
+  FormFieldConfig, FormValidationRule, FormFieldState,
+  FormOptions, FormInstance,
+  StepConfig, MultiStepFormOptions, MultiStepFormInstance,
+  ConditionRule, ConditionalField,
+} from "./form-utils";
+
+// --- validation-utils ---
+export {
+  isString as vIsString, isNumber as vIsNumber, isInteger as vIsInteger,
+  isFiniteNumber, isObject as vIsObject, isArray as vIsArray,
+  isValidDate as vIsValidDate, isBoolean as vIsBoolean,
+  isFunction as vIsFunction, isNil as vIsNil, isNotNil as vIsNotNil,
+  isEmpty, isMap, isSet, isPromise as vIsPromise,
+  isEmail, isURL, isUUID, isUUIDv4, isHexColor,
+  isIPv4, isIPv6, isIP, isMACAddress,
+  isCreditCard, detectCardBrand, isPhoneNumber,
+  isISODate, isISODateTime, isJSON,
+  matchesPattern, isLength, isArraySize, inRange, isOneOf, every, some,
+  validate as validateSchemaObj, validateAsync,
+  rules, assert, assertType,
+} from "./validation-utils";
+export type {
+  ValidationResult, ValidationError, ValidationWarning,
+  ValidationRule, FieldSchema, ObjectSchema as VObjectSchema,
+} from "./validation-utils";
+
+// --- schema-utils ---
+export {
+  validateSchema, inferSchema, inferSchemaFromSamples,
+  mergeSchemas, diffSchemas,
+  schemaToTypeScript,
+  SchemaRegistry,
+  isAcceptedBySchema, atLeastOneRequired, conditionalSchema,
+  extractPaths, getDefault,
+} from "./schema-utils";
+export type {
+  JsonSchema, StringSchema, NumberSchema, BooleanSchema,
+  NullSchema, ArraySchema, ObjectSchema as SObjectSchema,
+  AnyOfSchema, OneOfSchema, AllOfSchema, NotSchema, RefSchema,
+  SchemaType, SchemaValidationError, SchemaValidationResult as SValidationResult,
+  SchemaDiff,
+} from "./schema-utils";
