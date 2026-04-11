@@ -39752,3 +39752,10 @@ export { createMasonry } from "./masonry-utils";
 export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry-utils";
 export { createVirtualScroller } from "./virtual-scroller-utils";
 export type { VirtualScrollerOptions, VirtualScrollerInstance, VirtualItem } from "./virtual-scroller-utils";
+// --- Batch 1248: Infinite Scroll, Lazy Load, Intersection ---
+export { createInfiniteScroll } from "./infinite-scroll-utils";
+export type { InfiniteScrollOptions, InfiniteScrollInstance } from "./infinite-scroll-utils";
+export { createLazyLoad } from "./lazy-load-utils";
+export type { LazyLoadOptions, LazyLoadInstance, LazyLoadTarget, LazyLoadState } from "./lazy-load-utils";
+export { EnhancedIntersectionObserver, createVisibilityTracker, createLazyLoad as createSimpleLazyLoad, createScrollTrigger, isInViewport, getViewportVisibility, whenInViewport, batchScrollTriggers } from "./intersection-utils";
+export type { IntersectionEntry, ObserverConfig, VisibilityInstance, LazyLoadOptions as SimpleLazyLoadOptions, ScrollTriggerOptions } from "./intersection-utils";
