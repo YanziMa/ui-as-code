@@ -29840,3 +29840,87 @@ export {
   lsHas,
 } from "./local-storage";
 export type { StorageItem, StorageOptions, StorageInstance } from "./local-storage";
+
+// --- text-selection ---
+export {
+  getSelection,
+  setSelection,
+  clearSelection,
+  collapseSelection,
+  selectAll,
+  selectText,
+  getSelectedText,
+  getSelectedHtml,
+  saveSelection,
+  restoreSelection,
+  clearSavedSelection,
+  getCursorPosition,
+  setCursorPosition as setCursorPos,
+  moveCursor,
+  selectWord,
+  selectLine,
+  selectSentence,
+  selectAllOccurrences,
+  highlightSelection,
+  removeHighlights,
+  highlightText,
+  observeSelection,
+} from "./text-selection";
+export type { SelectionRange, CursorPosition, TextBoundaryOptions } from "./text-selection";
+
+// --- scroll-utilities ---
+export {
+  scrollTo,
+  scrollToTop,
+  scrollToBottom,
+  scrollIntoView,
+  onScroll,
+  isInViewport,
+  getVisibilityRatio,
+  getScrollProgress,
+  createScrollSpy,
+  addParallax,
+  makeSticky,
+  showScrollProgressBar,
+  hideScrollProgressBar,
+} from "./scroll-utilities";
+export type { ScrollPosition, ScrollToOptions, ScrollSpyOptions, ParallaxConfig, ScrollSpyInstance } from "./scroll-utilities";
+
+// --- dom-utils ---
+export {
+  createEl,
+  div,
+  span,
+  p,
+  btn,
+  createSvg,
+  $,
+  $$,
+  requireSelector,
+  byId,
+  byClass,
+  byTag,
+  walkUp,
+  walkDown,
+  nextSibling,
+  prevSibling,
+  siblings,
+  siblingIndex,
+  isLastChild,
+  isFirstChild,
+  empty,
+  setChildren,
+  insertAtIndex,
+  moveToIndex,
+  swapElements,
+  wrap,
+  unwrap,
+  htmlToFragment,
+  appendHtml,
+  prependHtml,
+  delegate,
+  delegateClick,
+  renderTemplate,
+  renderInto,
+} from "./dom-utils";
+export type { CreateElementOptions, QueryOptions, DomDiffResult } from "./dom-utils";
