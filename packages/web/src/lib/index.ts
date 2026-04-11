@@ -41285,3 +41285,49 @@ export {
   createSessionStorage,
   createMemoryStore,
 } from "./storage-utils";
+
+// --- i18n-utils ---
+export type { I18nConfig, TranslationEntry, PluralForms } from "./i18n-utils";
+export {
+  getUserLanguage,
+  getUserLanguages,
+  matchLocale,
+  resolveLocale,
+  I18nManager,
+  getPluralForm,
+  isRTL,
+  getDirection,
+  applyDirection,
+  formatNumber,
+  formatCurrency,
+  formatPercent,
+  formatCompactNumber,
+  formatDateI18n,
+  formatRelativeTime,
+  formatList,
+} from "./i18n-utils";
+
+// --- router-utils ---
+export type { RouteDefinition, RouteMatch, NavigationGuard, RouterOptions } from "./router-utils";
+export {
+  compileRoute,
+  matchRoute,
+  matchRoutes,
+  generatePath,
+  SimpleRouter,
+  pathMatchesGlob,
+  splitPath,
+  joinPath,
+  getParentPath,
+  normalizePath,
+} from "./router-utils";
+
+// --- state-utils ---
+export type { StateListener, StateContainerOptions, StateContainer, MachineState, MachineEvent, MachineTransition, MachineConfig, MachineInstance } from "./state-utils";
+export {
+  createState,
+  createDerived,
+  createMachine,
+  diffState,
+  statesEqual,
+} from "./state-utils";
