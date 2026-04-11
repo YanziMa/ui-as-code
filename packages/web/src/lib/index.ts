@@ -26982,3 +26982,36 @@ export {
   type TooltipPlacement,
   type TooltipTrigger,
 } from "./tooltip";
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  type AvatarSize,
+  type AvatarShape,
+} from "./avatar";
+
+// --- Rating ---
+export {
+  createRating,
+  RatingManager,
+  type RatingOptions,
+  type RatingInstance,
+  type StarIconType,
+} from "./rating";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+  type BadgeOptions,
+  type BadgeVariant,
+  type BadgePosition,
+  type BadgeSize,
+  type StatusDotOptions,
+} from "./badge";
