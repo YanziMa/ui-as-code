@@ -39738,3 +39738,10 @@ export { createPopover } from "./popover-utils";
 export type { PopoverOptions, PopoverInstance, PopoverPlacement, PopoverTrigger, VirtualElement } from "./popover-utils";
 export { createModal, createFocusTrap } from "./modal-utils";
 export type { ModalOptions, ModalInstance, ModalSize, FocusTrapConfig } from "./modal-utils";
+// --- Batch 1246: Stepper, Tour, Skeleton Screen ---
+export { createStepper } from "./stepper-utils";
+export type { StepperOptions, StepperInstance, StepItem, StepperOrientation, StepStatus } from "./stepper-utils";
+export { createTour } from "./tour-utils";
+export type { TourOptions, TourInstance, TourStep } from "./tour-utils";
+export { createSkeletonScreen } from "./skeleton-screen-utils";
+export type { SkeletonScreenOptions, SkeletonScreenInstance, SkeletonLayout, SkeletonBlock } from "./skeleton-screen-utils";
