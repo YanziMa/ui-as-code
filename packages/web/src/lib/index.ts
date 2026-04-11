@@ -27793,3 +27793,10 @@ export { FormWizardManager, createFormWizard } from "./form-wizard";
 export type { WizardOptions, WizardInstance, WizardStep } from "./form-wizard";
 export { SearchInputManager, createSearchInput } from "./search-input";
 export type { SearchInputOptions, SearchInputInstance, SuggestionItem, SearchHistoryEntry } from "./search-input";
+
+// --- Batch 880: QR Code, Signature Pad, Color Swatches ---
+export { generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput } from "./qr-code";
+export { SignaturePadManager, createSignaturePad } from "./signature-pad";
+export type { SignaturePadOptions, SignaturePadInstance, Stroke, StrokePoint } from "./signature-pad";
+export { ColorSwatchesManager, createColorSwatches } from "./color-swatches";
+export type { ColorSwatchesOptions, ColorSwatchesInstance, ColorPalette, ColorSwatch } from "./color-swatches";
