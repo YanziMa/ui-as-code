@@ -50145,3 +50145,33 @@ export {
   type ScrollProgressOptions as ScrProg_Options,
   type ScrollProgressInstance as ScrProg_Instance,
 } from "./scroll-progress";
+
+// --- scroll-snap ---
+export {
+  ScrollSnapManager,
+  createScrollSnap,
+  type SnapType,
+  type SnapAxis,
+  type ScrollBehavior as ScrSnap_Behavior,
+  type SnapSection,
+  type ScrollSnapOptions,
+  type ScrollSnapInstance,
+} from "./scroll-snap";
+
+// --- scroll-spy-utils ---
+export {
+  createScrollSpy as ScrSpyUtil_create,
+  type SpySection,
+  type ScrollSpyOptions as ScrSpyUtil_Options,
+  type ScrollSpyInstance as ScrSpyUtil_Instance,
+} from "./scroll-spy-utils";
+
+// --- scroll-spy ---
+export {
+  createScrollSpy as ScrSpy_create,
+  createNavSpy,
+  type SpyTarget,
+  type ScrollSpyOptions as ScrSpy_Options,
+  type ScrollSpyInstance as ScrSpy_Instance,
+  type NavSpyOptions,
+} from "./scroll-spy";
