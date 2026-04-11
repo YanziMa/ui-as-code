@@ -36261,3 +36261,36 @@ export type {
   SkeletonOptions,
   SkeletonBlockOptions,
 } from "./skeleton-utils.js";
+// --- infinite-scroll-utils ---
+export { createInfiniteScroll } from "./infinite-scroll-utils.js";
+export type {
+  InfiniteScrollOptions,
+  InfiniteScrollInstance,
+} from "./infinite-scroll-utils.js";
+
+// --- pagination-utils ---
+export { createPagination } from "./pagination-utils.js";
+export type {
+  PaginationSize,
+  PaginationLayout,
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination-utils.js";
+
+// --- filter-utils ---
+export {
+  applyCriteria,
+  getFieldValue,
+  filterItems,
+  createFilterManager,
+  fuzzyScore,
+  fuzzySearch,
+  bindFilterInput,
+} from "./filter-utils.js";
+export type {
+  FilterCriteria,
+  FilterOperator,
+  FilterState,
+  FilterResult,
+  FilterManagerOptions,
+} from "./filter-utils.js";
