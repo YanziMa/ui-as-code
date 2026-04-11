@@ -47395,3 +47395,15 @@ export type { Observable as ObsObservable, Computed as ObsComputed, WatchOptions
 // --- ocr-engine ---
 export type { OcrRegion, OcrResult, OcrWord, OcrOptions, OcrInstance } from "./ocr-engine";
 export { createOcrEngine } from "./ocr-engine";
+
+// --- ocr-utils ---
+export type { OCRResult as OCRRslt, OCRWord as OCRWd, OCRLine as OCRLn, BoundingBox as OCBBx, OCREngineConfig as OCRCfg } from "./ocr-utils";
+export { detectTextRegion, preprocessForOCR, analyzeTextLayout, extractTextFromPDF, calculateAccuracy } from "./ocr-utils";
+
+// --- odometer ---
+export type { OdometerEasing as OdoEasing, OdometerOptions as OdoOpts, OdometerInstance as OdoInst } from "./odometer";
+export { createOdometer } from "./odometer";
+
+// --- offcanvas-utils ---
+export type { OffCanvasSide as OCSide, OffCanvasMode as OCMode, OffCanvasOptions as OCOpts, OffCanvasInstance as OCInst } from "./offcanvas-utils";
+export { createOffCanvas } from "./offcanvas-utils";
