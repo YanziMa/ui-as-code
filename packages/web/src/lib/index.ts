@@ -51645,3 +51645,55 @@ export {
   type StatVariant as Stt_Variant,
   type TrendColor as Stt_TrendColor,
 } from "./statistic";
+
+// --- statistics-chart ---
+export {
+  createChart,
+  type ChartType,
+  type ChartDataPoint,
+  type ChartSeries,
+  type ChartOptions,
+  type ChartInstance,
+} from "./statistics-chart";
+export {
+  createChart as StsChart_createChart,
+  type ChartType as StsChart_Type,
+  type ChartDataPoint as StsChart_DataPoint,
+  type ChartSeries as StsChart_Series,
+  type ChartOptions as StsChart_Options,
+  type ChartInstance as StsChart_Instance,
+} from "./statistics-chart";
+
+// --- statistics-utils ---
+export {
+  createStatCard as createStatsUtilsStatCard,
+  createComparisonBar,
+  createMiniChart,
+  type StatCardOptions as StatsUtl_StatCardOptions,
+  type ComparisonBarOptions,
+  type MiniChartOptions,
+} from "./statistics-utils";
+export {
+  createStatsUtilsStatCard as StsUtl_createStatCard,
+  createComparisonBar as StsUtl_createComparisonBar,
+  createMiniChart as StsUtl_createMiniChart,
+  type StatsUtl_StatCardOptions as StsUtl_StatCardOptions,
+  type ComparisonBarOptions as StsUtl_ComparisonBarOptions,
+  type MiniChartOptions as StsUtl_MiniChartOptions,
+} from "./statistics-utils";
+
+// --- statistics ---
+export {
+  createStatCard as createStatisticsStatCard,
+  type StatCardOptions as Stats_StatCardOptions,
+  type StatisticsInstance,
+  type TrendDirection as Stats_TrendDirection,
+  type SparklineType as Stats_SparklineType,
+} from "./statistics";
+export {
+  createStatisticsStatCard as Stats_createStatCard,
+  type Stats_StatCardOptions as Stats_CardOptions,
+  type StatisticsInstance as Stats_Instance,
+  type Stats_TrendDirection as Stats_TrendDirection,
+  type Stats_SparklineType as Stats_SparklineType,
+} from "./statistics";
