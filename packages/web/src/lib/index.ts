@@ -18813,3 +18813,30 @@ export type {
   Direction,
   ThemeMode,
 } from "./config-provider";
+export {
+  createList,
+} from "./list-lite";
+export type {
+  ListOptions,
+  ListInstance,
+  ListItemData,
+  ListSelectionMode,
+  ListItemStatus,
+} from "./list-lite";
+export {
+  createVirtualList,
+} from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+export {
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+export type {
+  TreeNodeData,
+  TreeSelectOptions,
+  TreeSelectInstance,
+} from "./tree-select";
