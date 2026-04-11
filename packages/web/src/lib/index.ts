@@ -21193,3 +21193,40 @@ export {
   getTooltipManager,
   tooltip,
 } from "./tooltip";
+
+// --- Modal ---
+export type {
+  ModalSize,
+  ModalPosition,
+  ModalOptions,
+  ModalInstance,
+} from "./modal";
+export {
+  createModal,
+} from "./modal";
+
+// --- Toast ---
+export type {
+  ToastType,
+  ToastPosition,
+  ToastOptions,
+  ToastInstance,
+  ToastManagerConfig,
+} from "./toast";
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+} from "./toast";
+
+// --- Alert ---
+export type {
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+  AlertOptions,
+  AlertInstance,
+} from "./alert";
+export {
+  createAlert,
+} from "./alert";
