@@ -39629,3 +39629,22 @@ export type {
   FileTreeOptions,
   FileTreeInstance,
 } from "./file-tree-utils";
+// --- Batch 1239: Breadcrumb, Pagination, Empty State ---
+export { createBreadcrumb } from "./breadcrumb-utils";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb-utils";
+
+export { createPagination } from "./pagination-utils";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination-utils";
+
+export { createEmptyState } from "./empty-state-utils";
+export type {
+  EmptyStateOptions,
+  EmptyStateType,
+} from "./empty-state-utils";
