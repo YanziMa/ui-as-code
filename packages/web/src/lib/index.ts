@@ -34741,3 +34741,25 @@ export type {
   SegmentedControlOptions,
   ToggleButtonGroupOptions,
 } from "./button-group-utils";
+// --- Batch 1144: Accordion, Collapse, Expansion Panel ---
+export { createAccordion } from "./accordion-utils";
+export type {
+  AccordionMode,
+  AccordionItem,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion-utils";
+
+export { createCollapse } from "./collapse-utils";
+export type {
+  CollapseOptions,
+  CollapseInstance,
+} from "./collapse-utils";
+
+export { createExpansionPanel } from "./expansion-panel-utils";
+export type {
+  PanelVariant,
+  PanelSize,
+  ExpansionPanelOptions,
+  ExpansionPanelInstance,
+} from "./expansion-panel-utils";

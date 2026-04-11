@@ -131,30 +131,23 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
   }
 
   function expandAll(): void {
-    if (mode === "single") return; // Can't expand all in single mode
+    if (mode === "single") return;
     for (const item of _items) {
-      if (!item.disabled && !_expanded.has(item.id)) {
-        _doExpand(item.id);
-      }
+      if (!item.disabled && !_expanded.has(item.id)) _doExpand(item.id);
     }
   }
 
   function collapseAll(): void {
-    for (const id of [..._expanded]) {
-      _doCollapse(id);
-    }
+    for (const id of [..._expanded]) _doCollapse(id);
   }
 
   function isExpanded(id: string): boolean { return _expanded.has(id); }
-
   function getExpandedIds(): string[] { return [..._expanded]; }
 
   function setItems(newItems: AccordionItem[]): void {
     _items = newItems;
     _expanded.clear();
-    for (const item of newItems) {
-      if (item.defaultExpanded) _expanded.add(item.id);
-    }
+    for (const item of newItems) if (item.defaultExpanded) _expanded.add(item.id);
     _render();
   }
 
@@ -169,25 +162,16 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
     const item = _items.find((i) => i.id === id);
     if (!item || item.disabled) return;
 
-    // In single mode, collapse others when expanding
     if (mode === "single" && willExpand) {
-      for (const otherId of [..._expanded]) {
-        if (otherId !== id) _doCollapse(otherId);
-      }
+      for (const otherId of [..._expanded]) if (otherId !== id) _doCollapse(otherId);
     }
 
-    // Before hook
     if (beforeToggle) {
       const canProceed = await beforeToggle(id, willExpand);
       if (!canProceed) return;
     }
 
-    if (willExpand) {
-      _doExpand(id);
-    } else {
-      _doCollapse(id);
-    }
-
+    if (willExpand) _doExpand(id); else _doCollapse(id);
     onChange?.(id, willExpand, item);
   }
 
@@ -208,25 +192,17 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
     const header = itemEl.querySelector(".accordion-header") as HTMLElement;
     const content = itemEl.querySelector(".accordion-content") as HTMLElement;
     const icon = header?.querySelector(".accordion-icon");
-
     if (!header || !content) return;
 
-    // Update ARIA
     header.setAttribute("aria-expanded", String(expanding));
+    if (icon) icon.style.transform = expanding ? "rotate(90deg)" : "rotate(0deg)";
 
-    // Update icon rotation
-    if (icon) {
-      icon.style.transform = expanding ? "rotate(90deg)" : "rotate(0deg)";
-    }
-
-    // Animate content
     if (expanding) {
       content.style.display = "";
       content.style.height = "auto";
       const fullHeight = content.offsetHeight + "px";
       content.style.height = "0px";
       content.style.overflow = "hidden";
-      // Force reflow
       void content.offsetHeight;
       content.style.transition = `height ${animationDuration}ms ${easing}`;
       content.style.height = fullHeight;
@@ -237,19 +213,15 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
         content.style.transition = "";
       }, animationDuration);
 
-      // Lazy load
       const item = _items.find((i) => i.id === id);
       if (item?.lazy && content.children.length === 0) {
-        if (typeof item.content === "string") {
-          content.innerHTML = item.content;
-        } else {
-          content.appendChild(item.content.cloneNode(true));
-        }
+        if (typeof item.content === "string") content.innerHTML = item.content;
+        else content.appendChild(item.content.cloneNode(true));
       }
     } else {
       content.style.height = content.offsetHeight + "px";
       content.style.overflow = "hidden";
-      void content.offsetHeight; // reflow
+      void content.offsetHeight;
       content.style.transition = `height ${animationDuration}ms ${easing}`;
       content.style.height = "0px";
 
@@ -286,7 +258,7 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
         "color:#374151;text-align:left;user-select:none;" +
         (item.disabled ? "opacity:0.5;cursor:not-allowed;" : "");
 
-      // Expand/collapse icon
+      // Chevron
       const chevron = document.createElement("span");
       chevron.className = "accordion-icon";
       chevron.innerHTML = "&#9654;";
@@ -311,20 +283,14 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
       titleSpan.style.flex = "1";
       header.appendChild(titleSpan);
 
-      // Click handler
-      header.addEventListener("click", () => {
-        if (!item.disabled) toggle(item.id);
-      });
+      header.addEventListener("click", () => { if (!item.disabled) toggle(item.id); });
 
-      // Hover effect
       if (!item.disabled) {
         header.addEventListener("mouseenter", () => { wrapper.style.borderColor = "#d1d5db"; });
         header.addEventListener("mouseleave", () => { wrapper.style.borderColor = "#e5e7eb"; });
       }
 
-      // Custom header render
       item.renderHeader?.(item, _expanded.has(item.id), header);
-
       wrapper.appendChild(header);
 
       // Content panel
@@ -337,18 +303,11 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
         (!_expanded.has(item.id) ? "display:none;" : "");
 
       if (_expanded.has(item.id)) {
-        if (typeof item.content === "string") {
-          content.innerHTML = item.content;
-        } else {
-          content.appendChild(item.content.cloneNode(true));
-        }
+        if (typeof item.content === "string") content.innerHTML = item.content;
+        else content.appendChild(item.content.cloneNode(true));
       } else if (!item.lazy) {
-        // Pre-render hidden content for non-lazy items
-        if (typeof item.content === "string") {
-          content.innerHTML = item.content;
-        } else {
-          content.appendChild(item.content.cloneNode(true));
-        }
+        if (typeof item.content === "string") content.innerHTML = item.content;
+        else content.appendChild(item.content.cloneNode(true));
         content.style.display = "none";
       }
 
@@ -370,22 +329,10 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
       if (currentIndex < 0) return;
 
       switch (e.key) {
-        case "ArrowDown":
-          e.preventDefault();
-          headers[Math.min(currentIndex + 1, headers.length - 1)]?.focus();
-          break;
-        case "ArrowUp":
-          e.preventDefault();
-          headers[Math.max(currentIndex - 1, 0)]?.focus();
-          break;
-        case "Home":
-          e.preventDefault();
-          headers[0]?.focus();
-          break;
-        case "End":
-          e.preventDefault();
-          headers[headers.length - 1]?.focus();
-          break;
+        case "ArrowDown": e.preventDefault(); headers[Math.min(currentIndex + 1, headers.length - 1)]?.focus(); break;
+        case "ArrowUp": e.preventDefault(); headers[Math.max(currentIndex - 1, 0)]?.focus(); break;
+        case "Home": e.preventDefault(); headers[0]?.focus(); break;
+        case "End": e.preventDefault(); headers[headers.length - 1]?.focus(); break;
         case "Enter":
         case " ": {
           e.preventDefault();
@@ -395,7 +342,6 @@ export function createAccordion(options: AccordionOptions): AccordionInstance {
         }
       }
     };
-
     root.addEventListener("keydown", handler);
     cleanupFns.push(() => root.removeEventListener("keydown", handler));
   }
