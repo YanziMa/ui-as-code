@@ -22472,3 +22472,35 @@ export {
   BatchingQueue,
   type QueueTask,
 } from "./queue";
+
+// --- cache ---
+export {
+  Cache,
+  defaultCache,
+  memoize as cacheMemoize,
+  type CacheOptions,
+} from "./cache";
+
+// --- scheduler ---
+export {
+  Scheduler,
+  parseCronExpression,
+  cronMatches,
+  getNextCronRun,
+  type ScheduledJob,
+  type JobStatus,
+  type CronExpression,
+} from "./scheduler";
+
+// --- stream ---
+export {
+  Stream,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+  type Observer as StreamObserver,
+  type Subscription as StreamSubscription,
+  type StreamSubscriber,
+  type OperatorFunction,
+  type TeardownLogic,
+} from "./stream";
