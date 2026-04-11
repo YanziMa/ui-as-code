@@ -42198,3 +42198,10 @@ export { SelectManager, createSelect } from "./select";
 export type { SelectOption, SelectOptions, SelectInstance } from "./select";
 export { createOtpInput } from "./input-otp";
 export type { OtpInputVariant, OtpSize, OtpInputOptions, OtpInputInstance } from "./input-otp";
+// --- Batch 1360: Textarea, Number Input, Form Label ---
+export { createTextarea } from "./textarea";
+export type { TextareaSize, TextareaState, TextareaOptions, TextareaInstance } from "./textarea";
+export { createNumberInput } from "./input-number";
+export type { NumberInputSize, NumberInputState, NumberInputOptions, NumberInputInstance } from "./input-number";
+export { createFormLabel } from "./form-label";
+export type { LabelSize, LabelPosition, FormLabelOptions, FormLabelInstance } from "./form-label";
