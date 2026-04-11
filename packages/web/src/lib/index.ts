@@ -21039,3 +21039,58 @@ export type {
 export {
   createRatingGroup,
 } from "./rating-group";
+
+// --- Color Picker ---
+export type {
+  RgbColor,
+  HslColor,
+  Palette,
+} from "./color-picker";
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+} from "./color-picker";
+
+// --- Avatar Group ---
+export type {
+  AvatarSize,
+  StackDirection,
+  AvatarItem,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
+export {
+  createAvatarGroup,
+} from "./avatar-group";
+
+// --- Empty State ---
+export type {
+  EmptyStateVariant,
+  EmptyStateOptions,
+  EmptyStateInstance,
+} from "./empty-state";
+export {
+  createEmptyState,
+} from "./empty-state";
