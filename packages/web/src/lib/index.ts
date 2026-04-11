@@ -42063,3 +42063,10 @@ export { createFileUpload } from "./file-upload.js";
 export type { FileUploadOptions, FileUploadInstance, FileUploadItem } from "./file-upload.js";
 export { createTagInput } from "./tag-input.js";
 export type { TagInputOptions, TagInputInstance, TagItem } from "./tag-input.js";
+// --- Batch 1336: Menu, Command Palette, Tree View ---
+export { createMenu } from "./menu.js";
+export type { MenuOptions, MenuInstance, MenuItem, MenuMode, MenuVariant } from "./menu.js";
+export { CommandPalette } from "./command-palette.js";
+export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette.js";
+export { TreeView } from "./tree-view.js";
+export type { TreeViewConfig, TreeNodeData, TreeNode, CheckMode } from "./tree-view.js";
