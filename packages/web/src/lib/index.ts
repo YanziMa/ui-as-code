@@ -50001,3 +50001,35 @@ export {
   type ValidationResult as Sch_ValidationResult,
   type SchemaType as Sch_SchemaType,
 } from "./schema";
+
+// --- scoreboard ---
+export {
+  createScoreboard,
+  type ScoreboardSport,
+  type ScoreboardStatus,
+  type ScoreboardVariant,
+  type ScoreboardSize,
+  type TeamScore,
+  type ScoreboardOptions,
+  type ScoreboardInstance,
+} from "./scoreboard";
+
+// --- screen-capture ---
+export {
+  ScreenCapture,
+  type CaptureSource as ScrCap_Source,
+  type CaptureFormat,
+  type CaptureState,
+  type CaptureOptions,
+  type RegionSelection,
+  type Annotation as ScrCap_Annotation,
+  type RecordingOptions,
+  type CaptureResult,
+} from "./screen-capture";
+
+// --- screen-full ---
+export {
+  createFullscreen,
+  type FullscreenOptions,
+  type FullscreenInstance,
+} from "./screen-full";
