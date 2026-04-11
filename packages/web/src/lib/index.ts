@@ -24806,3 +24806,15 @@ export type { SkeletonItem, SkeletonOptions, SkeletonInstance, SkeletonShape, Sk
 // --- Progress Indicator ---
 export { createProgressBar, createCircularProgress, createStepProgress } from "./progress-indicator";
 export type { ProgressBarOptions, ProgressBarInstance, CircularProgressOptions, CircularProgressInstance, StepProgressOptions, StepProgressInstance, ProgressVariant, ProgressSize } from "./progress-indicator";
+
+// --- Badge ---
+export { createBadge, createPositionedBadge, createStatusDot, addDotBadge, addCountBadge } from "./badge";
+export type { BadgeOptions, StatusDotOptions, BadgeVariant, BadgePosition, BadgeSize } from "./badge";
+
+// --- Chip ---
+export { createChip, createChipGroup } from "./chip";
+export type { ChipOptions, ChipInstance, ChipGroupOptions, ChipGroupInstance, ChipSize, ChipVariant } from "./chip";
+
+// --- Tag Input ---
+export { TagInputManager, createTagInput } from "./tag-input";
+export type { TagItem, TagInputOptions, TagInputInstance } from "./tag-input";
