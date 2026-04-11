@@ -45560,3 +45560,15 @@ export type { HotkeyBinding as Hkv2Binding, HotkeyCombo, HotkeyHintOptions, Hotk
 // --- hotkeys ---
 export { HotkeyManager as HksHotkeyManager, parseKeyCombo as HksParseKeyCombo, eventMatchesCombo as HksEventMatchesCombo, formatKeyDisplay as HksFormatKeyDisplay, areModifiersDown as HksAreModifiersDown, getModifierString as HksGetModifierString, createAppHotkeys as HksCreateAppHotkeys } from "./hotkeys";
 export type { HotkeyBinding as HksBinding, ParsedKeyCombo as HksParsedCombo } from "./hotkeys";
+
+// --- hover-card-utils ---
+export { createHoverCard } from "./hover-card-utils";
+export type { HoverCardOptions, HoverCardInstance, HoverCardContent, HoverCardAvatar, HoverCardMeta, HoverCardAction, HoverCardSide, HoverCardAnimation } from "./hover-card-utils";
+
+// --- html-builder ---
+export { tag, html as HtmlBuilder, applyAttributes, appendChildren, htmlString, fragment, repeat, when, switchOn, $, $$ } from "./html-builder";
+export type { Child, AttrValue } from "./html-builder";
+
+// --- html-parser ---
+export { parseHtml, serializeHtml, querySelector as HpQuerySelector, querySelectorAll as HpQuerySelectorAll, walkNodes, extractText, stripHtmlTags, sanitizeHtml, htmlToDom, decodeHtmlEntities, encodeHtmlEntities } from "./html-parser";
+export type { HtmlNode, ParseOptions, QuerySelectorResult, SanitizeOptions } from "./html-parser";
