@@ -20556,3 +20556,30 @@ export type {
   SwitchOptions,
   SwitchInstance,
 } from "./switch";
+export {
+  PaginationManager,
+  createPagination,
+} from "./pagination";
+export type {
+  PaginationOptions,
+  PaginationInstance,
+} from "./pagination";
+export {
+  SelectManager,
+  createSelect,
+} from "./select";
+export type {
+  SelectOption,
+  SelectOptions,
+  SelectInstance,
+} from "./select";
+export {
+  createInputGroup,
+} from "./input-group";
+export type {
+  InputSize,
+  InputVariant,
+  ValidationState,
+  InputGroupOptions,
+  InputGroupInstance,
+} from "./input-group";
