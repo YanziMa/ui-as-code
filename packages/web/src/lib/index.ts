@@ -50825,3 +50825,36 @@ export {
   type SkeletonInstance as SkLd_SkeletonInstance,
   createSkeleton as SkLd_createSkeleton,
 } from "./skeleton-loader";
+
+// --- skeleton-placeholder ---
+export {
+  type SkeletonShape as SkPh_SkeletonShape,
+  type SkeletonAnimation as SkPh_SkeletonAnimation,
+  type SkeletonPlaceholderOptions as SkPh_SkeletonPlaceholderOptions,
+  type SkeletonPlaceholderInstance as SkPh_SkeletonPlaceholderInstance,
+  createSkeletonPlaceholder as SkPh_createSkeletonPlaceholder,
+  skeletonLine as SkPh_skeletonLine,
+  skeletonAvatar as SkPh_skeletonAvatar,
+  skeletonImage as SkPh_skeletonImage,
+  wrapWithSkeleton as SkPh_wrapWithSkeleton,
+} from "./skeleton-placeholder";
+
+// --- skeleton-screen-utils ---
+export {
+  type SkeletonLayout as SkScrUtl_SkeletonLayout,
+  type SkeletonBlock as SkScrUtl_SkeletonBlock,
+  type SkeletonScreenOptions as SkScrUtl_SkeletonScreenOptions,
+  type SkeletonScreenInstance as SkScrUtl_SkeletonScreenInstance,
+  createSkeletonScreen as SkScrUtl_createSkeletonScreen,
+} from "./skeleton-screen-utils";
+
+// --- skeleton-screen ---
+export {
+  type ScreenTemplate as SkScr_ScreenTemplate,
+  type RevealMode as SkScr_RevealMode,
+  type SkeletonSection as SkScr_SkeletonSection,
+  type SkeletonBlock as SkScr_SkeletonBlock,
+  type SkeletonScreenOptions as SkScr_SkeletonScreenOptions,
+  type SkeletonScreenInstance as SkScr_SkeletonScreenInstance,
+  createSkeletonScreen as SkScr_createSkeletonScreen,
+} from "./skeleton-screen";
