@@ -47693,3 +47693,38 @@ export {
   dataUrlToBlob as PdfUtilDataUrlToBlob,
   printElement as PdfUtilPrintElement,
 } from "./pdf-utils";
+
+// --- pdf-viewer.ts ---
+export type {
+  FitMode as PVFitMode,
+  ZoomMode as PVZoomMode,
+  ScrollMode as PVScrollMode,
+  PDFViewerOptions as PVOptions,
+  PDFViewerInstance as PVInst,
+} from "./pdf-viewer";
+export {
+  createPDFViewer as PVCreate,
+  generateSimplePDF as PVGenSimple,
+  createPrintableView as PVCreatePrintable,
+} from "./pdf-viewer";
+
+// --- pdf.ts ---
+export type {
+  PdfOptions as PdfBldOptions,
+  PdfTextOptions as PdfBldTextOpts,
+} from "./pdf";
+export { PdfBuilder as PdfBldBuilder } from "./pdf";
+
+// --- perf-monitor.ts ---
+export type {
+  FpsMetrics as PMFpsMetrics,
+  MemoryInfo as PMMemoryInfo,
+  PerfEntry as PMPerfEntry,
+  PerfReport as PMPerfReport,
+  WebVitals as PMWebVitals,
+  PerfMonitorOptions as PMOptions,
+} from "./perf-monitor";
+export {
+  PerfMonitor as PMonitor,
+  createPerfMonitor as PMCreate,
+} from "./perf-monitor";
