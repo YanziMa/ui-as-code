@@ -48139,3 +48139,19 @@ export {
   generateReceiptText, generateLabel, injectPrintStyles, PRINT_STYLES,
   getPrintableArea, estimatePageCount, paginateContent, generatePDF,
 } from "./print-utils";
+// --- print ---
+export {
+  PrintOptions, PrintManagerInstance, PrintManager, createPrintManager,
+  quickPrint, addPageBreakBefore, addPageBreakAfter, avoidBreakInside,
+} from "./print";
+// --- priority-queue ---
+export {
+  PriorityQueueItem, PriorityQueueOptions, BinaryHeap, PriorityQueue,
+  RateLimitedQueueOptions, RateLimitedQueue, RingBuffer,
+} from "./priority-queue";
+// --- profiling ---
+export {
+  ProfileEntry, ProfilerOptions, TimerHandle, ProfilerStats,
+  createProfiler, profileFn, profileAsyncFn, withProfile,
+  getMemoryUsage, measureMemory, MemoryUsageInfo,
+} from "./profiling";
