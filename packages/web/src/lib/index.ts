@@ -16572,3 +16572,60 @@ export {
   removeDiacritics,
   wildcardMatch,
 } from "./regex";
+export {
+  retry,
+  withTimeout,
+  sleep,
+  nextTick,
+  nextFrame,
+  debounceAsync,
+  throttleAsync,
+  concurrencyLimit,
+  batchProcess,
+  raceWithFallback,
+  mapConcurrent,
+  sequence,
+  createDeferred,
+  poll,
+  memoizeAsync,
+} from "./async";
+export type {
+  RetryOptions,
+  TimeoutOptions,
+  DebounceAsyncOptions,
+  ThrottleAsyncOptions,
+  ConcurrencyOptions,
+} from "./async";
+export {
+  detectBrowser,
+  supports,
+  getViewport,
+  isTouchDevice,
+  prefersReducedMotion,
+  prefersDarkMode,
+  getColorGamut,
+} from "./browser";
+export type { BrowserInfo } from "./browser";
+export {
+  getPlatform,
+  getOSType,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getUserLanguage,
+  getTimezoneOffset,
+  getTimezoneName,
+  isRTL,
+  isStandalone,
+  isFullscreen,
+  requestFullscreen,
+  exitFullscreen,
+  getScreenOrientation,
+  onOrientationChange,
+  getDevicePixelRatio,
+  onPixelRatioChange,
+  getConnectionInfo,
+  onConnectionChange,
+  getBatteryInfo,
+} from "./platform";
+export type { PlatformInfo, OSType } from "./platform";
