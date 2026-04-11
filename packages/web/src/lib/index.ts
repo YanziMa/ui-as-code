@@ -26768,3 +26768,14 @@ export type { PaginationOptions, PaginationInstance } from "./pagination";
 // breadcrumb.ts
 export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
 export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb";
+// stepper.ts
+export { StepperManager, createStepper } from "./stepper";
+export type { StepperOptions, StepperInstance, StepConfig, StepStatus } from "./stepper";
+
+// timeline.ts
+export { TimelineManager, createTimeline } from "./timeline";
+export type { TimelineOptions, TimelineInstance, TimelineItem, TimelineItemStatus } from "./timeline";
+
+// rating.ts
+export { RatingManager, createRating } from "./rating";
+export type { RatingOptions, RatingInstance, StarIconType } from "./rating";
