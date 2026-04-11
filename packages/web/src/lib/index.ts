@@ -31124,3 +31124,21 @@ export {
   VOTE_LABELS,
   WEBHOOK_EVENTS,
 } from "./constants";
+// --- Permissions (RBAC) ---
+export { RBAC, createRBAC, COMMON_ROLES } from "./permissions";
+export type {
+  Permission,
+  RoleName,
+  Role,
+  User,
+  Policy,
+  CheckResult,
+  AuditEntry,
+} from "./permissions";
+
+// --- Storage ---
+export { storageGet, storageSet, storageRemove, storageKeys, storageClear } from "./storage";
+
+// --- State ---
+export { UndoableStore, EventBus, globalEvents } from "./state";
+export type { HistoryState } from "./state";
