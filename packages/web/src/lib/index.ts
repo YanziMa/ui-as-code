@@ -24746,3 +24746,15 @@ export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem } from ".
 // --- drag-and-drop ---
 export { DragDropManager, getDragDropManager } from "./drag-and-drop";
 export type { DragItem, DragOptions, DropZoneOptions, DropResult, SortableConfig, DragMode, DropPosition } from "./drag-and-drop";
+
+// --- Virtual Scroller ---
+export { VirtualScroller } from "./virtual-scroller";
+export type { ScrollItem, VisibleRange, ScrollerConfig, ScrollerState, ScrollToOptions } from "./virtual-scroller";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
+
+// --- Split Pane ---
+export { createSplitPane } from "./split-pane";
+export type { SplitPaneOptions, SplitPaneInstance, SplitOrientation, SplitCollapseDirection } from "./split-pane";
