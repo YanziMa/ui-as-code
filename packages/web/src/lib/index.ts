@@ -38757,3 +38757,41 @@ export {
   detectIndentation, indentText,
   simpleDiff, type DiffSegment,
 } from "./string-utils";
+
+// --- math-utils ---
+export {
+  mean, median, mode, variance, stddev, covariance, correlation,
+  linearRegression, percentile,
+  Vec2, Vec3, type Vector2D, type Vector3D,
+  Matrix,
+  dist2D, dist3D, angleBetweenPoints, pointInPolygon, polygonArea, polygonCentroid, boundingBox, lineIntersection,
+  lerp, clamp, mapRange, smoothStep, bezierQuad, bezierCubic, catmullRom,
+  gcd as mathGcd, lcm as mathLcm, isPrime, sieveOfEratosthenes, factorial, fibonacci, fibonacciSequence, combinations, permutations, modPow,
+  angle, temperature, length: lengthConv, weight,
+  randomNormal, randomUniform, randomInt, randomPick, shuffle, weightedRandom,
+} from "./math-utils";
+
+// --- date-utils ---
+export {
+  formatDate, toISODate, toISODatetime, formatTime,
+  relativeTime, shortRelativeTime,
+  parseDate,
+  formatDuration, parseDuration,
+  isLeapYear, daysInMonth, getDayOfWeek, getWeekNumber, getQuarter,
+  isSameDay, isToday, isYesterday, isBetween,
+  addTime, startOfDay, endOfDay, startOfWeek, endOfWeek, startOfMonth, endOfMonth,
+  getTimezone, getTimezoneOffset, convertToTimezone,
+  type DateFormatOptions, type RelativeTimeOptions,
+} from "./date-utils";
+
+// --- number-utils ---
+export {
+  clampNumber, lerpNumber, mapRangeNumber,
+  roundTo, roundToMultiple, floorToMultiple, ceilToMultiple,
+  formatBytesAuto, formatCompactNumber, formatWithSeparators,
+  percentChange, approximatelyEqual,
+  randomIntInRange, randomFloatInRange,
+  normalizeAngleDeg, normalizeAngleRad, degToRad, radToDeg,
+  gcd as numGcd, lcm as numLcm,
+  isInRange, wrapNumber,
+} from "./number-utils";
