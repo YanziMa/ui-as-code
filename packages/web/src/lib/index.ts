@@ -50071,3 +50071,47 @@ export {
   type WakeLockOptions,
   type WakeLockInstance,
 } from "./screen-wake-lock";
+
+// --- scroll-into-view-utils ---
+export {
+  scrollToElement as ScrIVUtil_scrollToElement,
+  animateScroll,
+  getElementVisibility,
+  getElementVisibilityInContainer,
+  ScrollProgressTracker,
+  ScrollSpy,
+  getScrollContainer,
+  scrollToTop as ScrIVUtil_scrollToTop,
+  scrollToBottom as ScrIVUtil_scrollToBottom,
+  preventBodyScroll,
+  type ScrollIntoViewOptions as ScrIVUtil_Options,
+  type VisibilityResult,
+  type ScrollProgress,
+  type ScrollSpyConfig,
+} from "./scroll-into-view-utils";
+
+// --- scroll-into-view ---
+export {
+  Scroller,
+  scrollIntoView,
+  scrollToElement as ScrIV_scrollToElement,
+  type ScrollAlignment,
+  type ScrollBehavior,
+  type ScrollIntoViewOptions as ScrIV_Options,
+  type ScrollIntoViewInstance,
+} from "./scroll-into-view";
+
+// --- scroll-lock-utils ---
+export {
+  lockScroll,
+  unlockAllScroll,
+  getActiveLockCount,
+  isScrollLocked,
+  getScrollbarWidth,
+  clearScrollbarCache,
+  saveScrollPosition,
+  restoreScrollPosition,
+  lockScrollIOS,
+  type ScrollLockOptions,
+  type ScrollLockInstance,
+} from "./scroll-lock-utils";
