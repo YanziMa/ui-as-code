@@ -40374,3 +40374,14 @@ export type { DraggableOptions, DraggableInstance, DragAxis, DragConstraints, Sn
 // --- Sortable ---
 export { createSortableList } from "./sortable-utils";
 export type { SortableListOptions, SortableListInstance, SortableItemConfig, SortAnimation } from "./sortable-utils";
+// --- Anchor Positioning ---
+export { createAnchorPosition } from "./anchor-positioning-utils";
+export type { AnchorOptions, AnchorInstance, AnchorPlacement, AnchorComputeData, AutoFlipStrategy, OverflowBoundary } from "./anchor-positioning-utils";
+
+// --- Flipper ---
+export { createFlipper } from "./flipper-utils";
+export type { FlipperOptions, FlipperInstance, FlipSide, FlipDirection, FlipEasing } from "./flipper-utils";
+
+// --- Marquee ---
+export { createMarquee } from "./marquee-utils";
+export type { MarqueeOptions, MarqueeInstance, MarqueeDirection, MarqueeFillMode } from "./marquee-utils";
