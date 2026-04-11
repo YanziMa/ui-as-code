@@ -46110,3 +46110,15 @@ export type { KanbanCard as KbCard, KanbanColumn as KbCol, KanbanBoardOptions, K
 // --- kbd ---
 export { createKbd } from "./kbd";
 export type { KbdSize, KbdStyle, KbdOptions } from "./kbd";
+
+// --- key-value-store ---
+export type { StoreBackend, KvStoreOptions, KvEntry, StoreStats, Transaction } from "./key-value-store";
+export { KvStore } from "./key-value-store";
+
+// --- keyboard-nav ---
+export type { NavOrientation as KnNavOrientation, NavWrap as KnNavWrap, NavItem as KnNavItem, KeyboardNavOptions as KnNavOptions, KeyboardNavInstance as KnNavInstance } from "./keyboard-nav";
+export { createKeyboardNav as createKeyboardNavKn } from "./keyboard-nav";
+
+// --- keyboard-navigation ---
+export type { NavItem as KbnNavItem, KeyboardNavOptions as KbnNavOptions, KeyboardNavInstance as KbnNavInstance } from "./keyboard-navigation";
+export { createKeyboardNav as createKeyboardNavKbn } from "./keyboard-navigation";
