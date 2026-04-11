@@ -49604,3 +49604,38 @@ export {
   responsiveSwap as RespSwap,
   responsiveColumns as RespCols,
 } from "./responsive-utils";
+
+// --- responsive.ts ---
+export type {
+  Breakpoint,
+  ResponsiveOptions,
+  ResponsiveInfo,
+} from "./responsive";
+export { DEFAULT_BREAKPOINTS, ResponsiveManager } from "./responsive";
+export {
+  getResponsiveManager,
+  matchesMedia,
+  watchMedia,
+  getSafeAreaInsets,
+  getViewportSize,
+} from "./responsive";
+
+// --- rest-api.ts ---
+export type {
+  RestResourceConfig,
+  RestEndpointDefinition,
+  PaginatedResponse,
+  PaginationOptions,
+  RestClientConfig,
+} from "./rest-api";
+export { RestError, RestClient, RestResourceHandler } from "./rest-api";
+export { createRestClient } from "./rest-api";
+
+// --- result-page.ts ---
+export type {
+  ResultStatus,
+  ResultPageOptions,
+  ResultPageInstance,
+} from "./result-page";
+export { ResultPageManager } from "./result-page";
+export { createResultPage } from "./result-page";
