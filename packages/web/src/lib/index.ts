@@ -37813,3 +37813,46 @@ export {
   type ConcurrencyOptions,
   type MemoizeOptions,
 } from "./async-utils.js";
+
+// --- type-utils ---
+export {
+  isNil, isNotNil, isPlainObject, isNonEmptyString, isNumber, isInteger,
+  isFinite as isFiniteType, isBoolean, isFunction, isArray, isDate,
+  isValidDate, isRegExp, isError, isPromise, isAsyncIterable, isIterable,
+  toString, toNumber, toInt, toFloat, toBoolean, toArray,
+  validateType, getConstructorName, typeOf, deepClone, deepFreeze, deepMerge,
+} from "./type-utils";
+export type { SchemaValidationResult, TypeSchema } from "./type-utils";
+
+// --- math-utils ---
+export {
+  mean, median, mode, variance, stddev, covariance, correlation, linearRegression, percentile,
+  Vec2, Vec3, Matrix,
+  lerp, clamp, mapRange, smoothStep, bezierQuad, bezierCubic, catmullRom,
+  gcd, lcm, isPrime, sieveOfEratosthenes, factorial, fibonacci, fibonacciSequence,
+  combinations, permutations, modPow,
+  degToRad as mathDegToRad, radToDeg as mathRadToDeg, normalizeDeg, normalizeRad,
+  celsiusToFahrenheit, fahrenheitToCelsius, celsiusToKelvin, kelvinToCelsius,
+  metersToFeet, feetToMeters, milesToKilometers, kilometersToMiles, cmToInches, inchesToCm,
+  kgToLbs, lbsToKg, ouncesToKg, kgToOunces,
+  randomNormal, randomUniform, randomInt as mathRandomInt, randomPick, shuffle, weightedRandom,
+} from "./math-utils";
+
+// --- geom-utils ---
+export {
+  pt2, pt3,
+  dist2D, dist3D, distSq2D, midpoint, angleOf, angleBetween,
+  rotatePoint, translatePoint, scalePoint, lerpPoint,
+  rectFromCenter, rectCenter, rectArea, rectContains, rectsIntersect,
+  rectUnion, rectIntersection, inflateRect, deflateRect, rectContainsRect,
+  circleContains, circlesIntersect, circleArea, circumference,
+  circleContainsRect, rectContainsCircle,
+  collideCircleCircle, collideRectRect, collideCircleRect,
+  collidePointCircle, collidePointRect, collideLineCircle,
+  pathLength, sampleAlongPath, simplifyPolyline,
+  boundingBox, boundingCircle,
+  identityTransform, transformPoint, composeTransform,
+  translationTransform, scaleTransform, rotationTransform,
+  SpatialGrid,
+} from "./geom-utils";
+export type { Point2D, Point3D, Rect, Circle, LineSegment, Polygon, Transform2D, SpatialGridOptions } from "./geom-utils";
