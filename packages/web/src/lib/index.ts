@@ -27711,3 +27711,32 @@ export {
   type BreadcrumbInstance,
   type BreadcrumbItem,
 } from "./breadcrumb";
+
+// --- stepper ---
+export {
+  StepperManager,
+  createStepper,
+  type StepperOptions,
+  type StepperInstance,
+  type StepConfig,
+  type StepStatus,
+} from "./stepper";
+
+// --- timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineItem,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- tree-view ---
+export {
+  TreeView,
+  type TreeViewConfig,
+  type TreeNodeData,
+  type TreeNode,
+  type CheckMode,
+} from "./tree-view";
