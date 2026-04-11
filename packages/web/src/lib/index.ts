@@ -50442,3 +50442,52 @@ export type {
   SelectMenuInstance as SelMenu_Instance,
 } from "./select-menu";
 export { createSelectMenu as createSelMenu } from "./select-menu";
+
+// --- select-utils ---
+export type {
+  SelectSize as SelUtl_Size,
+  SelectVariant as SelUtl_Variant,
+  SelectOption as SelUtl_Option,
+  SelectGroup as SelUtl_Group,
+  SelectOptions as SelUtl_Options,
+  SelectInstance as SelUtl_Instance,
+} from "./select-utils";
+export { createSelect as createSelUtl } from "./select-utils";
+
+// --- select ---
+export type {
+  SelectOption as Sel_Option2,
+  SelectOptions as Sel_Options2,
+  SelectInstance as Sel_Instance2,
+} from "./select";
+export { SelectManager as SelManager2, createSelect as createSel2 } from "./select";
+
+// --- selection-utils ---
+export type {
+  SelectionRange as SlctUtil_Range,
+  CaretPosition as SlctUtil_CaretPosition,
+  Rect as SlctUtil_Rect,
+} from "./selection-utils";
+export {
+  getSelection as slctGetSelection,
+  setSelection as slctSetSelection,
+  clearSelection as slctClearSelection,
+  getSelectedText as slctGetSelectedText,
+  getCaretPosition as slctGetCaretPosition,
+  setCaretPosition as slctSetCaretPosition,
+  moveCaret as slctMoveCaret,
+  getCaretCoordinates as slctGetCaretCoordinates,
+  makeContentEditable as slctMakeContentEditable,
+  insertAtCaret as slctInsertAtCaret,
+  insertHtmlAtCaret as slctInsertHtmlAtCaret,
+  wrapSelection as slctWrapSelection,
+  unwrapSelection as slctUnwrapSelection,
+  highlightRange as slctHighlightRange,
+  removeHighlights as slctRemoveHighlights,
+  highlightAll as slctHighlightAll,
+  getRangeRect as slctGetRangeRect,
+  isPointInSelection as slctIsPointInSelection,
+  selectAll as slctSelectAll,
+  selectBetween as slctSelectBetween,
+  createSelectionDetector as slctCreateSelectionDetector,
+} from "./selection-utils";
