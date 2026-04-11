@@ -43521,3 +43521,33 @@ export {
   type LongTaskEntry,
   type MetricValue,
 } from "./monitor";
+
+// --- notification-v2 ---
+export {
+  type NotificationV2Options,
+  type NotificationV2Instance,
+  type NotificationCenterConfig,
+  type NotificationCenter,
+  createNotificationCenter,
+} from "./notification-v2";
+
+// --- offline ---
+export {
+  type ConnectionStatus,
+  type OfflineConfig,
+  type QueuedRequest,
+  type OfflineManager,
+  createOfflineManager,
+} from "./offline";
+
+// --- parser ---
+export {
+  type ParseResult,
+  type Parser,
+  type ParserCombinators,
+  char, digit, letter, hexDigit, whitespace,
+  str, regex,
+  int, float, intRange,
+  seq, choice, many, optional, separatedBy, mapParsers,
+  email, url, uuid, hexColor, json, queryParam, queryString, csvRow, csv,
+} from "./parser";
