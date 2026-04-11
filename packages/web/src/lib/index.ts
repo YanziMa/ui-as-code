@@ -24421,3 +24421,35 @@ export {
   type AlertInstance,
   type AlertSeverity,
 } from "./alert-banner";
+
+// --- Drawer Layout ---
+export {
+  createDrawerLayout,
+  type DrawerLayoutOptions,
+  type DrawerLayoutInstance,
+  type DrawerPosition,
+  type DrawerSize,
+} from "./drawer-layout";
+
+// --- Resizable ---
+export {
+  makeResizable,
+  createSplitPane,
+  type ResizeOptions,
+  type ResizeState,
+  type ResizableController,
+  type SplitPaneOptions,
+  type SplitPaneController,
+} from "./resizable";
+
+// --- Split View ---
+export {
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+  type SplitViewOptions,
+  type SplitViewState,
+  type SplitViewInstance,
+  type PaneConfig,
+  type SplitDirection,
+} from "./split-view";
