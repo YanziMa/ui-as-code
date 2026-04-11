@@ -36331,3 +36331,29 @@ export type {
   TabsOptions,
   TabsInstance,
 } from "./tabs-utils.js";
+// --- accordion-utils ---
+export { createAccordion } from "./accordion-utils.js";
+export type {
+  AccordionMode,
+  AccordionItem,
+  AccordionOptions,
+  AccordionInstance,
+} from "./accordion-utils.js";
+
+// --- carousel-utils ---
+export { createCarousel } from "./carousel-utils.js";
+export type {
+  CarouselTransition,
+  CarouselNavStyle,
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel-utils.js";
+
+// --- breadcrumb-utils ---
+export { createBreadcrumb } from "./breadcrumb-utils.js";
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb-utils.js";
