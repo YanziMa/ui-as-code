@@ -44172,3 +44172,37 @@ export type { SessionData, SessionConfig, SessionState, SessionEventType, Sessio
 // --- sharing ---
 export { share, isNativeShareAvailable, twitterShareURL, facebookShareURL, linkedInShareURL, redditShareURL, emailShareURL, telegramShareURL, whatsAppShareURL, getAllShareURLs, generateOpenGraphMeta, injectOpenGraphMeta, generateTwitterCardMeta } from "./sharing";
 export type { ShareData, ShareOptions, ShareResult } from "./sharing";
+// --- sidebar ---
+export type {
+  SidebarItem,
+  SidebarGroup,
+  SidebarOptions,
+  SidebarInstance,
+} from "./sidebar";
+export { SidebarManager, createSidebar } from "./sidebar";
+
+// --- skeleton ---
+export type {
+  SkeletonOptions,
+  SkeletonTextOptions,
+  SkeletonAvatarOptions,
+  SkeletonCardOptions,
+  SkeletonTableOptions,
+} from "./skeleton";
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+} from "./skeleton";
+
+// --- slider ---
+export type {
+  SliderMark,
+  SliderOptions as BaseSliderOptions,
+  SliderInstance as BaseSliderInstance,
+} from "./slider";
+export { SliderManager, createSlider } from "./slider";
