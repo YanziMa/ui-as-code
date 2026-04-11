@@ -26702,3 +26702,14 @@ export type { ToastMessage, ToastContainerOptions, ToastInstance, ToastType, Toa
 // modal-manager.ts
 export { ModalManager, getModalManager } from "./modal-manager";
 export type { ModalOptions, ModalInstance, ModalAction, ConfirmOptions, ModalSize, ModalAnimation } from "./modal-manager";
+// drawer-manager.ts
+export { DrawerManager, createDrawerManager } from "./drawer-manager";
+export type { DrawerOptions, DrawerInstance, DrawerAction, DrawerPosition, DrawerSize, DrawerAnimation } from "./drawer-manager";
+
+// popover.ts
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
+
+// tooltip.ts
+export { TooltipManager, getTooltipManager, tooltip } from "./tooltip";
+export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger } from "./tooltip";
