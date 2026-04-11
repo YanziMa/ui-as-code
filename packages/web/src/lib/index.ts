@@ -48199,3 +48199,57 @@ export type {
   ProgressRingOptions,
   ProgressRingInstance,
 } from "./progress-ring";
+
+// --- progress-stepper ---
+export {
+  StepStatus as PStepperStepStatus,
+  StepperOrientation,
+  StepperVariant,
+  StepItem as PStepperStepItem,
+  ProgressStepperOptions,
+  ProgressStepperInstance,
+  createProgressStepper,
+} from "./progress-stepper";
+export type {
+  StepStatus as PStepperStepStatusType,
+  StepperOrientation,
+  StepperVariant,
+  StepItem as PStepperStepItemType,
+  ProgressStepperOptions,
+  ProgressStepperInstance,
+} from "./progress-stepper";
+
+// --- progress-steps ---
+export {
+  StepStatus as PStepsStepStatus,
+  StepItem as PStepsStepItem,
+  ProgressStepsOptions,
+  ProgressStepsInstance,
+  createProgressSteps,
+} from "./progress-steps";
+export type {
+  StepStatus as PStepsStepStatusType,
+  StepItem as PStepsStepItemType,
+  ProgressStepsOptions,
+  ProgressStepsInstance,
+} from "./progress-steps";
+
+// --- progress-utils ---
+export {
+  ProgressBarVariant as PUtilBarVariant,
+  ProgressBarSize as PUtilBarSize,
+  ProgressBarOptions as PUtilBarOptions,
+  CircularProgressOptions as PUtilCircleOptions,
+  StepProgressOptions as PUtilStepOptions,
+  createProgressBar as PUtilCreateBar,
+  updateProgressBar as PUtilUpdateBar,
+  createCircularProgress as PUtilCreateCircle,
+  createStepProgress as PUtilCreateSteps,
+} from "./progress-utils";
+export type {
+  ProgressBarVariant as PUtilBarVariantType,
+  ProgressBarSize as PUtilBarSizeType,
+  ProgressBarOptions as PUtilBarOptionsType,
+  CircularProgressOptions as PUtilCircleOptionsType,
+  StepProgressOptions as PUtilStepOptionsType,
+} from "./progress-utils";
