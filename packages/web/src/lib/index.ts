@@ -44329,3 +44329,27 @@ export type {
   SparklineInstance as SvgSparklineInstance,
 } from "./sparkline";
 export { createSparkline } from "./sparkline";
+// --- spectrum-analyzer ---
+export type {
+  BarStyle as SpectrumBarStyle,
+  GradientType as SpectrumGradientType,
+  SpectrumAnalyzerOptions,
+  SpectrumInstance,
+} from "./spectrum-analyzer";
+export { createSpectrumAnalyzer } from "./spectrum-analyzer";
+
+// --- speech-recognition ---
+export type {
+  RecognitionResult,
+  RecognitionOptions,
+  SpeechRecognitionInstance,
+} from "./speech-recognition";
+export { SpeechRecognitionManager, createSpeechRecognition, recognizeOnce } from "./speech-recognition";
+
+// --- speech-synthesis ---
+export type {
+  VoiceInfo,
+  SpeechOptions as TtsSpeechOptions,
+  SpeechManagerInstance,
+} from "./speech-synthesis";
+export { SpeechSynthesisManager, createSpeechSynthesisManager, speak } from "./speech-synthesis";
