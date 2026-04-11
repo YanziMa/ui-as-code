@@ -25440,3 +25440,35 @@ export {
   TabsManager,
   createTabs,
 } from "./tabs";
+
+// --- split-view ---
+export {
+  SplitDirection,
+  type PaneConfig,
+  type SplitViewOptions,
+  type SplitViewState,
+  type SplitViewInstance,
+  createSplitView,
+  createHorizontalSplit,
+  createVerticalSplit,
+} from "./split-view";
+
+// --- resizable ---
+export {
+  type ResizeOptions,
+  type ResizeState,
+  makeResizable,
+  type ResizableController,
+  type SplitPaneOptions,
+  createSplitPane,
+  type SplitPaneController,
+} from "./resizable";
+
+// --- context-menu ---
+export {
+  type ContextMenuItem,
+  ContextMenuPosition,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+  ContextMenuManager,
+} from "./context-menu";
