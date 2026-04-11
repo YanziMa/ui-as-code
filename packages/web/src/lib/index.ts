@@ -28251,3 +28251,14 @@ export type { Breakpoints } from "./css-in-js";
 // --- Shortcuts ---
 export { createShortcutManager } from "./shortcuts";
 export type { ShortcutManagerOptions, ShortcutInstance, ShortcutBinding, ShortcutGroup } from "./shortcuts";
+
+// --- QR Code ---
+export { generateQrSvg, generateQrDataUri, generateQrCanvas, validateQrInput } from "./qr-code";
+
+// --- Barcode ---
+export { createBarcode } from "./barcode";
+export type { BarcodeOptions, BarcodeInstance, BarcodeType } from "./barcode";
+
+// --- PDF Preview ---
+export { createPdfPreview } from "./pdf-preview";
+export type { PdfPreviewOptions, PdfPreviewInstance } from "./pdf-preview";
