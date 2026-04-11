@@ -31232,3 +31232,73 @@ export type { Breakpoints, KeyframeRule } from "./css-in-js";
 // --- Animation ---
 export { EASING, DURATION, KEYFRAMES, animateValue, springAnimate, cssKeyframes, transition } from "./animation";
 export type { EasingName, SpringConfig } from "./animation";
+// --- Virtual DOM ---
+export {
+  h,
+  createTextVNode,
+  Fragment,
+  createComponentVNode,
+  createElement,
+  applyProps,
+  diff,
+  patch,
+  computePropsDiff,
+  mount,
+  updateTree,
+  unmount,
+  enqueueUpdate,
+  startBatch,
+  endBatch,
+  renderWithErrorBoundary,
+  scheduler,
+  beginFiberWork,
+  memo,
+  shallowEqual,
+  createContext,
+  readContext,
+  subscribeToContext,
+  createDevToolsHook,
+  registerRendererWithDevTools,
+  createRenderer,
+} from "./virtual-dom";
+export type {
+  VNodeType,
+  VNode,
+  VNodeProps,
+  ComponentFunction,
+  ComponentLifecycle,
+  ComponentInstance,
+  ErrorInfo,
+  Patch,
+  PropsDiff,
+  SyntheticEvent,
+  Context,
+  MemoCompareFunction,
+  MemoizedComponent,
+  DevToolsHook,
+  VNodeWork,
+  ScheduledWork,
+  RendererConfig,
+  VDOMRendererOptions,
+} from "./virtual-dom";
+export { Priority, PatchType, PROPERTY_ATTRIBUTES, EVENT_HANDLER_RE } from "./virtual-dom";
+
+// --- Component Utils ---
+export { BaseComponent, Portal, SuspenseBoundary, ComponentRegistry, SlotManager } from "./component-utils";
+export { createPortal, createFragment, createRef, createCallbackRef, mergeRefs, diffProps, propsChanged } from "./component-utils";
+export type { ComponentProps, ComponentInstance as CompInstance, PropDiffResult } from "./component-utils";
+
+// --- Form Utils ---
+export { createForm, serializeForm, populateForm, clearForm, createMultiStepForm, evaluateConditionals, linkErrorToField, unlinkErrorFromField, createFormAnnouncer } from "./form-utils";
+export type {
+  FormFieldConfig,
+  FormValidationRule,
+  FormFieldState,
+  FormOptions,
+  FormInstance,
+  StepConfig,
+  MultiStepFormOptions,
+  MultiStepFormInstance,
+  ConditionRule,
+  ConditionalField,
+} from "./form-utils";
