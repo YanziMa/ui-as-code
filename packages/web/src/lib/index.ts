@@ -44910,3 +44910,68 @@ export { FormValidator, required as fvRequired, minLength, maxLength, pattern, e
 // --- form ---
 export type { FieldType as FtFieldType, ValidationRule, FormField as FtFormField, FormGroup, FormOptions as FtFormOptions, FormInstance as FtFormInstance } from "./form";
 export { createForm as ftCreateForm } from "./form";
+
+// --- formatter ---
+export type {
+  NumberFormatOptions,
+  CurrencyFormatOptions,
+  DateFormatOptions,
+  ByteFormatOptions,
+  PercentFormatOptions,
+} from "./formatter";
+export {
+  formatNumber,
+  formatCompact,
+  formatCurrency,
+  formatDate,
+  formatRelative,
+  formatDuration,
+  capitalize,
+  titleCase,
+  kebabCase,
+  snakeCase,
+  camelCase,
+  truncate,
+  pad,
+  pluralize,
+  maskString,
+  formatBytes,
+  formatPercent,
+  formatPhone,
+  formatId,
+  formatTemplate,
+  formatList,
+} from "./formatter";
+
+// --- framer-motion ---
+export type {
+  EasingFunction as FmEasingFunction,
+  AnimationType as FmAnimationType,
+  SpringConfig as FmSpringConfig,
+  TweenConfig as FmTweenConfig,
+  Keyframe as FmKeyframe,
+  StaggerOptions as FmStaggerOptions,
+  AnimateOptions as FmAnimateOptions,
+} from "./framer-motion";
+export {
+  animate as fmAnimate,
+  staggerAnimate as fmStaggerAnimate,
+  sequence as fmSequence,
+  parallel as fmParallel,
+  whilePressed as fmWhilePressed,
+} from "./framer-motion";
+
+// --- gauge ---
+export type {
+  GaugeType as GgGaugeType,
+  GaugeThreshold as GgThreshold,
+  GaugeOptions as GgOptions,
+  GaugeInstance as GgInstance,
+} from "./gauge";
+export {
+  createGauge as ggCreateGauge,
+  createSpeedGauge as ggSpeedGauge,
+  createProgressGauge as ggProgressGauge,
+  createScoreGauge as ggScoreGauge,
+  createHealthGauge as ggHealthGauge,
+} from "./gauge";
