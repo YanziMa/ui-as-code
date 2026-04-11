@@ -39305,3 +39305,40 @@ export type {
   ClassTransitionConfig,
   TransitionGroupOptions,
 } from "./transition-utils";
+// --- notification-utils ---
+export {
+  NotificationManager,
+} from "./notification-utils";
+export type {
+  NotificationType,
+  NotificationPosition,
+  NotificationOptions,
+  NotificationInstance,
+  NotificationManagerConfig,
+} from "./notification-utils";
+
+// --- table-utils ---
+export {
+  createTable,
+} from "./table-utils";
+export type {
+  TableSize,
+  TableVariant,
+  TableColumn,
+  TableRow,
+  TableOptions,
+  TableInstance,
+} from "./table-utils";
+
+// --- tree-utils ---
+export {
+  createTree,
+} from "./tree-utils";
+export type {
+  TreeNode,
+  TreeSelectionMode,
+  TreeCheckboxMode,
+  TreeExpandMode,
+  TreeOptions,
+  TreeInstance,
+} from "./tree-utils";
