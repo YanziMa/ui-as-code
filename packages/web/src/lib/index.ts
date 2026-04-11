@@ -31868,3 +31868,37 @@ export {
   type VirtualScrollInstance,
   type VirtualItem,
 } from "./virtual-scroll";
+
+// --- Accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+  type AccordionOptions,
+  type AccordionInstance,
+  type AccordionItem,
+  type AccordionMode,
+} from "./accordion";
+
+// --- Tabs ---
+export {
+  TabsManager,
+  createTabs,
+  type TabsOptions,
+  type TabsInstance,
+  type TabItem,
+  type TabOrientation,
+  type TabVariant,
+} from "./tabs";
+
+// --- Collapse ---
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+  type CollapseOptions,
+  type CollapseInstance,
+  type CollapseSize,
+  type CollapseVariant,
+  type CollapseGroupOptions,
+  type CollapseGroupInstance,
+} from "./collapse";
