@@ -29170,3 +29170,45 @@ export {
   type CodeEditorOptions,
   type CodeEditorInstance,
 } from "./code-editor.js";
+// --- Batch 969: File System Access, Clipboard Advanced, Shortcuts Manager ---
+
+export {
+  FileSystemAccess,
+  type FilePickerOptions,
+  type SavePickerOptions,
+  type DirPickerOptions,
+  type FileSystemEntry,
+  type ReadOptions,
+  type WriteOptions,
+  type CopyMoveOptions,
+  type OpfsOptions,
+  type FileSystemStats,
+} from "./file-system-access.js";
+
+export {
+  ClipboardAdvanced,
+  createClipboardManager,
+  copyToClipboard,
+  readFromClipboard,
+  copyHtmlToClipboard,
+  stripHtml,
+  readImageFromClipboard,
+  clipboardHasImage,
+  blobToDataURL,
+  type ClipboardCopyOptions,
+  type ClipboardPasteOptions,
+  type ClipboardData,
+  type ClipboardPermissionState,
+  type ClipboardHistoryEntry,
+  type ClipboardMonitorOptions,
+  type ClipboardMonitorInstance,
+} from "./clipboard-advanced.js";
+
+export {
+  ShortcutsManager,
+  createShortcutsManager,
+  type ShortcutBinding,
+  type ShortcutConflict,
+  type ShortcutsManagerOptions,
+  type ShortcutsState,
+} from "./shortcuts-manager.js";
