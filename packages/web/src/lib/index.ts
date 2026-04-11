@@ -44841,3 +44841,13 @@ export { env, envNumber, envBool, requireEnv as eRequireEnv } from "./env";
 // --- error-boundary ---
 export type { ErrorBoundaryOptions, ErrorBoundaryError, ErrorBoundaryInstance } from "./error-boundary";
 export { ErrorBoundaryManager, createErrorBoundary } from "./error-boundary";
+
+// --- error-handler ---
+export type { ErrorCategory as EhErrorCategory, ClassifiedError as EhClassifiedError, ErrorHandlerOptions, ErrorLogEntry, RecoveryAction } from "./error-handler";
+export { ErrorHandler, classifyError as ehClassifyError, getUserMessage, isRetryable as ehIsRetryable, isRecoverable, getErrorCategory, createNoopHandler } from "./error-handler";
+// --- error-utils ---
+export type { ErrorCategory as EuErrorCategory, ErrorSeverity, ClassifiedError as EuClassifiedError, ErrorBoundaryOptions as EuErrorBoundaryOptions, ErrorReport, ErrorReporterConfig, ParsedStackFrame } from "./error-utils";
+export { classifyError as euClassifyError, isRetryable as euIsRetryable, enrichError, parseStackTrace, getAppFrame, createErrorBoundary as euCreateErrorBoundary, createErrorReporter, setupGlobalErrorHandler, createError, retryOnError } from "./error-utils";
+// --- event-bus ---
+export type { EventCallback, EventMiddleware, Subscription, EmittedEvent, EventBusOptions } from "./event-bus";
+export { EventBus, createEventBus } from "./event-bus";
