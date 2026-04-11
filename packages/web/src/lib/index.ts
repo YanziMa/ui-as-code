@@ -18009,3 +18009,30 @@ export type {
   ContextMenuEntry,
   ContextMenuPlacement,
 } from "./context-menu-lite";
+export {
+  createCombobox,
+} from "./combobox";
+export type {
+  ComboboxOptions,
+  ComboboxInstance,
+  ComboboxOption,
+} from "./combobox";
+export {
+  createSelect,
+} from "./select-lite";
+export type {
+  SelectOptions,
+  SelectInstance,
+  SelectOption,
+  SelectSize,
+  SelectVariant,
+} from "./select-lite";
+export {
+  AutocompleteManager,
+  createAutocomplete,
+} from "./autocomplete";
+export type {
+  AutocompleteOptions,
+  AutocompleteInstance,
+  AutocompleteOption,
+} from "./autocomplete";
