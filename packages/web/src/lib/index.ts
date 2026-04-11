@@ -44038,3 +44038,49 @@ export {
   custom,
 } from "./react-form-utils";
 export type { FormFieldValue, FieldValidationRule, FieldState, FormState, FormSubmitHandler, FormHelpers, FormOptions } from "./react-form-utils";
+// --- react-hooks-enhanced ---
+export {
+  useDebounce,
+  useThrottle,
+  useLocalStorage,
+  useMediaQuery,
+  useIntersectionObserver,
+  useAsync,
+  useToggle,
+  useClickOutside,
+  useKeyPress,
+  useWindowSize,
+  useScroll,
+  usePrevious,
+  useMounted,
+  useInterval,
+  useTimeout,
+  useRafLoop,
+} from "./react-hooks-enhanced";
+export type { AsyncStatus, AsyncState, UseIntersectionObserverOptions } from "./react-hooks-enhanced";
+
+// --- react-motion ---
+export {
+  easings,
+  createSpring,
+  createTween,
+  createStagger,
+  buildKeyframes,
+  generateKeyframeName,
+} from "./react-motion";
+export type { SpringConfig, AnimationOptions, EasingFn } from "./react-motion";
+
+// --- react-observables ---
+export {
+  Observable,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+  fromEvent,
+  fromPromise,
+  interval,
+  timer,
+  merge,
+  combineLatest,
+} from "./react-observables";
+export type { UnsubscribeFn, Observer, CompletionFn, ErrorFn, SubscriptionObserver } from "./react-observables";
