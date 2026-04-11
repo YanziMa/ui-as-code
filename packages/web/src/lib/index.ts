@@ -29547,3 +29547,15 @@ export type { HistogramOptions, HistogramInstance, Bin } from "./histogram-chart
 // --- parallel-coordinates ---
 export { createParallelCoordinates } from "./parallel-coordinates";
 export type { ParallelCoordinatesOptions, PCInstance, PCDimension, PCRow } from "./parallel-coordinates";
+
+// --- chord-diagram ---
+export { createChordDiagram } from "./chord-diagram";
+export type { ChordDiagramOptions, ChordInstance, ChordNode, ChordLink } from "./chord-diagram";
+
+// --- venn-diagram ---
+export { createVennDiagram } from "./venn-diagram";
+export type { VennDiagramOptions, VennInstance, VennSet, VennOverlap, VennSetType } from "./venn-diagram";
+
+// --- mosaic-plot ---
+export { createMosaicPlot } from "./mosaic-plot";
+export type { MosaicPlotOptions, MosaicInstance, MosaicCell, MosaicCategory } from "./mosaic-plot";
