@@ -30330,3 +30330,75 @@ export type {
 // --- Retry ---
 export { retryWithBackoff, CircuitBreaker } from "./retry";
 export type { RetryOptions as BackoffRetryOptions, CircuitBreakerOptions } from "./retry";
+
+// --- Worker Utilities ---
+export {
+  createInlineWorker,
+  createInlineModuleWorker,
+  WorkerChannel,
+  WorkerPool,
+  isWorkerAvailable,
+  isWorkerContext,
+  getWorkerConcurrency,
+} from "./worker-utils";
+export type { WorkerMessage, WorkerResponse, WorkerPoolOptions, PooledTask } from "./worker-utils";
+
+// --- Stream Utilities ---
+export {
+  readableFromAsync,
+  readableFromArray,
+  writableToArray,
+  mapStream,
+  filterStream,
+  batchStream,
+  flattenStream,
+  throttleStream,
+  dedupStream,
+  pipeThrough,
+  consumeStream,
+  streamToIterable,
+  iterableToStream,
+  pipeToPromise,
+  teeStream,
+  textToStream,
+  collectText,
+  streamToArrayBuffer,
+  streamToBlob,
+  mergeStreams,
+  concatStreams,
+} from "./stream-utils";
+export type { StreamOptions, TransformOptions } from "./stream-utils";
+
+// --- Blob Utilities ---
+export {
+  createBlob,
+  stringToBlob,
+  jsonToBlob,
+  createFile,
+  readAsText,
+  readAsArrayBuffer,
+  readAsDataURL,
+  readAsBinaryString,
+  blobToUint8Array,
+  uint8ArrayToBlob,
+  base64ToBlob,
+  blobToBase64,
+  arrayBufferToBase64,
+  base64ToArrayBuffer,
+  sliceBlob,
+  splitBlob,
+  createObjectURL,
+  revokeObjectURL,
+  createTempObjectURL,
+  formatFileSize,
+  getMimeType,
+  isImageMime,
+  isAudioMime,
+  isVideoMime,
+  isTextMime,
+  downloadBlob,
+  downloadDataUrl,
+  compareBlobs,
+  hashBlob,
+} from "./blob-utils";
+export type { BlobParts, BlobReadOptions, FileSliceOptions } from "./blob-utils";
