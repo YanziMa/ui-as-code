@@ -46122,3 +46122,15 @@ export { createKeyboardNav as createKeyboardNavKn } from "./keyboard-nav";
 // --- keyboard-navigation ---
 export type { NavItem as KbnNavItem, KeyboardNavOptions as KbnNavOptions, KeyboardNavInstance as KbnNavInstance } from "./keyboard-navigation";
 export { createKeyboardNav as createKeyboardNavKbn } from "./keyboard-navigation";
+
+// --- keyboard-shortcuts-utils ---
+export type { ModifierKey as KsUtilsModifierKey, ShortcutScope as KsUtilsShortcutScope, ShortcutBinding as KsUtilsShortcutBinding, ShortcutGroup, KeyboardShortcutsOptions, KeyboardShortcutsInstance } from "./keyboard-shortcuts-utils";
+export { createKeyboardShortcuts } from "./keyboard-shortcuts-utils";
+
+// --- keyboard-shortcuts ---
+export type { KeyCombo, ShortcutBinding as KsShortcutBinding, ShortcutScope as KsShortcutScope, RecordedSequence } from "./keyboard-shortcuts";
+export { ShortcutManager, ShortcutRecorder, ShortcutOverlay, commonShortcuts } from "./keyboard-shortcuts";
+
+// --- keyboard-utils ---
+export type { ModifierKey as KbUtilsModifierKey, KeyBinding, KeySequence, NormalizedKeyEvent, KeyboardState, NavigationConfig } from "./keyboard-utils";
+export { KEY_ALIASES, resolveKey, normalizeKeyEvent, eventMatchesBinding, HotkeyManager, KeySequenceDetector, RovingTabIndex, formatHotkey, parseHotkeyString, isTypingInInput } from "./keyboard-utils";
