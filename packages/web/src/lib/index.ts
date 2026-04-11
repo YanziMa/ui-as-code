@@ -43421,3 +43421,43 @@ export {
   type LayerManagerConfig,
   type LayerManager,
 } from "./layer-manager";
+
+// --- lifecycle ---
+export {
+  createLifecycle,
+  createDomLifecycle,
+  createVisibilityLifecycle,
+  type LifecyclePhase,
+  type LifecycleHook,
+  type LifecycleGuard,
+  type LifecycleConfig,
+  type LifecycleInstance,
+} from "./lifecycle";
+
+// --- lifecycle-manager ---
+export {
+  createLifecycleManager,
+  type ManagedInstance,
+  type LifecycleManagerConfig,
+  type LifecycleManager,
+} from "./lifecycle-manager";
+
+// --- limits ---
+export {
+  TokenBucket,
+  SlidingWindowLimiter,
+  throttle,
+  throttleLast,
+  debounce,
+  ConcurrencyLimiter,
+  createCircuitBreaker,
+  QuotaManager,
+  type RateLimitResult,
+  type TokenBucketOptions,
+  type SlidingWindowOptions,
+  type ConcurrencyOptions,
+  type CircuitBreakerOptions,
+  type CircuitState,
+  type CircuitBreakerInstance,
+  type QuotaOptions,
+} from "./limits";
