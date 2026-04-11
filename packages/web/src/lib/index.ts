@@ -23322,3 +23322,52 @@ export {
   type IntersectionObserverEntry as IntersectionObsEntry,
   type IntersectionObserverInstance as IntersectionObsInstance,
 } from "./intersection";
+
+// --- mutation-observer ---
+export {
+  MutationWatcher,
+  createMutationObserver,
+  waitForElement,
+  waitForRemoval,
+  type MutationFilter,
+  type MutationObserverOptions as MutationObsOptions,
+  type SimplifiedMutationRecord,
+  type MutationObserverInstance as MutationObsInstance,
+} from "./mutation-observer";
+
+// --- performance ---
+export {
+  reportMetric,
+  getSessionMetrics,
+  observeWebVitals,
+  markRender,
+  type PerformanceMetric,
+} from "./performance";
+
+// --- device ---
+export {
+  detectOS,
+  detectBrowser,
+  isTouchDevice,
+  getDeviceType,
+  getDeviceInfo,
+  isIOS,
+  isAndroid,
+  isMobileDevice,
+  isTabletDevice,
+  isDesktopDevice,
+  isSafari,
+  isFirefox,
+  isChrome,
+  isEdge,
+  getDeviceMemory,
+  getCPUCores,
+  isDataSaver,
+  getConnectionQuality,
+  isHiDPI,
+  getSafeAreaInsets,
+  type OSType,
+  type BrowserType,
+  type DeviceType,
+  type DeviceInfo,
+} from "./device";
