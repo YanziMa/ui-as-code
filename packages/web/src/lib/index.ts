@@ -23436,3 +23436,49 @@ export {
   type DrawerOptions,
   type DrawerInstance,
 } from "./drawer";
+
+// --- drag-drop ---
+export {
+  createDropZone,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  getFileInfo,
+  createSortableList as createDndSortableList,
+  type DragItem,
+  type DropZoneConfig,
+  type DndState,
+  type DropZoneController,
+  type SortableItem as DndSortableItem,
+  type SortableConfig as DndSortableConfig,
+  type SortableController as DndSortableController,
+  type FileInfo,
+} from "./drag-drop";
+
+// --- sortable ---
+export {
+  SortableList,
+  createSortable,
+  type SortableOptions,
+  type SortableInstance,
+} from "./sortable";
+
+// --- copy-paste ---
+export {
+  copyText,
+  copyHtml,
+  copyImage,
+  copyElementContent,
+  copy,
+  readClipboardText,
+  extractPasteData,
+  pushToHistory,
+  getClipboardHistory,
+  searchHistory,
+  clearHistory,
+  checkClipboardPermission,
+  requestClipboardPermission,
+  type CopyOptions,
+  type PasteEvent,
+  type ClipboardHistoryEntry,
+} from "./copy-paste";
