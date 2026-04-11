@@ -27777,3 +27777,11 @@ export { SliderManager, createSlider } from "./slider";
 export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
 export { createNotificationBell } from "./notification-bell";
 export type { NotificationBellOptions, NotificationBellInstance, NotificationItem } from "./notification-bell";
+
+// --- Batch 878: Avatar Group, Chip Input, Stat Card ---
+export { AvatarGroupManager, createAvatarGroup } from "./avatar-group";
+export type { AvatarGroupOptions, AvatarGroupInstance, AvatarItem, AvatarSize, StackDirection } from "./avatar-group";
+export { ChipInputManager, createChipInput } from "./chip-input";
+export type { ChipInputOptions, ChipInputInstance, ChipData, ChipSuggestion } from "./chip-input";
+export { createStatCard } from "./stat-card";
+export type { StatCardOptions, TrendDirection, StatCardVariant } from "./stat-card";
