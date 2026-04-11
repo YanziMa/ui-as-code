@@ -32061,3 +32061,30 @@ export {
   type SplitButtonSize,
   type SplitButtonVariant,
 } from "./split-button";
+
+// --- Breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+  type BreadcrumbItem,
+} from "./breadcrumb";
+
+// --- Pagination ---
+export {
+  PaginationManager,
+  createPagination,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination";
+
+// --- Chip Input ---
+export {
+  ChipInputManager,
+  createChipInput,
+  type ChipInputOptions,
+  type ChipInputInstance,
+  type ChipData,
+  type ChipSuggestion,
+} from "./chip-input";
