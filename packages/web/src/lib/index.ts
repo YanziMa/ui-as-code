@@ -42954,3 +42954,64 @@ export {
   type AnimationTrack,
   type ScrollAnimationConfig,
 } from "./animation-engine";
+// --- animation-frame-utils ---
+export {
+  TweenEngine,
+  AnimationLoop,
+  animateSpring as frameUtilsAnimateSpring,
+  tweenValue,
+  lerp,
+  lerpColor,
+  lerpPoint,
+  clamp,
+  mapRange,
+  EASING_FUNCTIONS,
+  getEasing as frameUtilsGetEasing,
+  linear, easeInQuad, easeOutQuad, easeInOutQuad,
+  easeInCubic, easeOutCubic, easeInOutCubic,
+  easeInQuart, easeOutQuart, easeInOutQuart,
+  easeInExpo, easeOutExpo, easeInOutExpo,
+  easeInSine, easeOutSine, easeInOutSine,
+  easeInCirc, easeOutCirc, easeInOutCirc,
+  easeInElastic, easeOutElastic, easeInOutElastic,
+  easeInBack, easeOutBack, easeInOutBack,
+  easeInBounce, easeOutBounce, easeInOutBounce,
+  type EasingFunction as FrameUtilsEasingFunction,
+  type TweenOptions,
+  type SpringOptions as FrameUtilsSpringOptions,
+  type AnimationFrame,
+  type LoopCallbacks,
+} from "./animation-frame-utils";
+
+// --- animation-library ---
+export {
+  animate as libAnimate,
+  animateSpring as libAnimateSpring,
+  staggerAnimate as libStaggerAnimate,
+  Timeline as LibTimeline,
+  animatePath,
+  playAnimation,
+  easings as libEasings,
+  resolveEasing as libResolveEasing,
+  keyframes as libKeyframes,
+  type Keyframe as LibKeyframe,
+  type AnimationOptions as LibAnimationOptions,
+  type SpringConfig as LibSpringConfig,
+  type StaggerOptions as LibStaggerOptions,
+  type TimelineTrack as LibTimelineTrack,
+} from "./animation-library";
+
+// --- animation-timeline ---
+export {
+  AnimationTimeline,
+  createTimeline,
+  easings as timelineEasings,
+  type EasingFn,
+  type TimelinePlaybackState,
+  type Keyframe as TimelineKeyframe,
+  type AnimationTrack,
+  type TimelineLabel,
+  type TimelineEvent,
+  type TimelineOptions,
+  type TimelineState,
+} from "./animation-timeline";
