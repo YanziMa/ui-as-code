@@ -40252,3 +40252,29 @@ export {
   type DatePickerSize,
   type DatePickerVariant,
 } from "./date-picker-utils";
+// --- Dropzone ---
+export {
+  createDropzone,
+  type DropzoneOptions,
+  type DropzoneInstance,
+  type DropzoneFile,
+  type DropzoneVariant,
+  type FileValidationError,
+} from "./dropzone-utils";
+
+// --- Rating ---
+export {
+  createRating,
+  type RatingOptions,
+  type RatingInstance,
+  type RatingIconType,
+} from "./rating-utils";
+
+// --- Slider Input ---
+export {
+  createSlider,
+  type SliderOptions,
+  type SliderInstance,
+  type SliderOrientation,
+  type SliderTrackStyle,
+} from "./slider-input-utils";
