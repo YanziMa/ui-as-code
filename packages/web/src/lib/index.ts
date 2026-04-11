@@ -44474,3 +44474,32 @@ export type {
   SplitViewInstance as SvSplitViewInstance,
 } from "./split-view";
 export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+
+// --- splitter-utils ---
+export {
+  SplitterOrientation as SutilsSplitterOrientation,
+  SplitterUnit as SutilsSplitterUnit,
+  SplitterPane as SutilsSplitterPane,
+  SplitterOptions as SutilsSplitterOptions,
+  SplitterInstance as SutilsSplitterInstance,
+  createSplitter as sutilsCreateSplitter,
+} from "./splitter-utils";
+
+// --- splitter ---
+export {
+  SplitButtonSize as SbtnSplitButtonSize,
+  SplitButtonVariant as SbtnSplitButtonVariant,
+  SplitButtonItem as SbtnSplitButtonItem,
+  SplitButtonOptions as SbtnSplitButtonOptions,
+  SplitButtonInstance as SbtnSplitButtonInstance,
+  createSplitButton as sbtnCreateSplitButton,
+} from "./splitter";
+
+// --- spreadsheet ---
+export {
+  SpreadsheetCell,
+  SpreadsheetColumn,
+  SpreadsheetOptions,
+  SpreadsheetInstance,
+  createSpreadsheet,
+} from "./spreadsheet";
