@@ -1,360 +1,547 @@
 /**
- * Toggle Utilities: Toggle switch, checkbox toggle, segmented control,
- * and toggle button group with multiple variants, sizes, and states.
+ * Toggle Utilities: Individual toggle components including toggle button,
+ * icon toggle, press-and-hold toggle, and toggle with loading state.
  */
 
 // --- Types ---
 
 export type ToggleSize = "sm" | "md" | "lg";
-export type ToggleVariant = "default" | "primary" | "success" | "danger";
+export type ToggleVariant = "default" | "primary" | "success" | "warning" | "danger" | "outline";
 
-export interface ToggleSwitchOptions {
-  /** Initially checked? */
-  checked?: boolean;
+export interface ToggleButtonOptions {
+  /** Initially pressed/on */
+  pressed?: boolean;
   /** Disabled state */
   disabled?: boolean;
   /** Size variant */
   size?: ToggleSize;
   /** Color variant */
   variant?: ToggleVariant;
-  /** Label text (shown alongside) */
+  /** Button label text */
   label?: string;
-  /** Label position */
-  labelPosition?: "start" | "end";
-  /** Description text */
-  description?: string;
+  /** Icon HTML string (shown when off) */
+  icon?: string;
+  /** Icon shown when on/toggled */
+  activeIcon?: string;
+  /** Show pressed indicator dot */
+  showIndicator?: boolean;
+  /** Called on toggle */
+  onChange?: (pressed: boolean) => void;
+  /** Custom class name */
+  className?: string;
+}
+
+export interface IconToggleOptions {
+  /** Icon when off */
+  offIcon: string;
+  /** Icon when on */
+  onIcon: string;
+  /** Initially toggled? */
+  value?: boolean;
+  /** Size in px */
+  size?: number;
+  /** Color when active */
+  activeColor?: string;
+  /** Tooltip text */
+  tooltip?: string;
+  /** Disabled */
+  disabled?: boolean;
   /** Called on change */
+  onChange?: (value: boolean) => void;
+  /** Custom class name */
+  className?: string;
+}
+
+export interface PressHoldToggleOptions {
+  /** Label text */
+  label: string;
+  /** Hold duration in ms (default 500) */
+  holdDuration?: number;
+  /** Size variant */
+  size?: ToggleSize;
+  /** Color variant */
+  variant?: ToggleVariant;
+  /** Called when hold completes */
+  onActivate: () => void;
+  /** Called when released early */
+  onCancel?: () => void;
+  /** Progress callback during hold (0-1) */
+  onProgress?: (progress: number) => void;
+  /** Custom class name */
+  className?: string;
+}
+
+export interface LoadingToggleOptions {
+  /** Label text */
+  label: string;
+  /** Loading state */
+  loading?: boolean;
+  /** Checked/toggle state */
+  checked?: boolean;
+  /** Size variant */
+  size?: ToggleSize;
+  /** Called on change (ignored during loading) */
   onChange?: (checked: boolean) => void;
   /** Custom class name */
   className?: string;
 }
 
-export interface SegmentedControlOptions {
-  /** Segment options */
-  options: Array<{ value: string; label: string; icon?: string; disabled?: boolean }>;
-  /** Currently selected value */
-  value?: string;
-  /** Size variant */
-  size?: ToggleSize;
-  /** Full width? */
-  fullWidth?: boolean;
-  /** Called on selection change */
-  onChange?: (value: string) => void;
-  /** Custom class name */
-  className?: string;
-}
+// --- Variant Styles ---
 
-export interface ToggleButtonGroupOptions {
-  /** Button options */
-  buttons: Array<{ value: string; label: string; icon?: string; disabled?: boolean }>;
-  /** Allow multiple selections? */
-  multiple?: boolean;
-  /** Selected values */
-  values?: string[];
-  /** Size variant */
-  size?: ToggleSize;
-  /** Called on change */
-  onChange: (values: string[]) => void;
-  /** Custom class name */
-  className?: string;
-}
-
-// --- Size Config ---
-
-const TOGGLE_SIZES: Record<ToggleSize, { trackW: string; trackH: string; thumb: string; font: string }> = {
-  "sm": { trackW: "34px", trackH: "18px", thumb: "14px", font: "11px" },
-  "md": { trackW: "44px", trackH: "24px", thumb: "20px", font: "13px" },
-  "lg": { trackW: "54px", trackH: "30px", thumb: "26px", font: "15px" },
+const VARIANT_MAP: Record<ToggleVariant, { bg: string; border: string; color: string; activeBg: string; activeBorder: string; activeColor: string }> = {
+  "default": { bg: "#fff", border: "#d1d5db", color: "#374151", activeBg: "#eff6ff", activeBorder: "#93c5fd", activeColor: "#2563eb" },
+  "primary": { bg: "#fff", border: "#3b82f6", color: "#3b82f6", activeBg: "#3b82f6", activeBorder: "#3b82f6", activeColor: "#fff" },
+  "success": { bg: "#fff", border: "#22c55e", color: "#16a34a", activeBg: "#22c55e", activeBorder: "#22c55e", activeColor: "#fff" },
+  "warning": { bg: "#fff", border: "#f59e0b", color: "#d97706", activeBg: "#f59e0b", activeBorder: "#f59e0b", activeColor: "#fff" },
+  "danger": { bg: "#fff", border: "#ef4444", color: "#dc2626", activeBg: "#ef4444", activeBorder: "#ef4444", activeColor: "#fff" },
+  "outline": { bg: "transparent", border: "#d1d5db", color: "#6b7280", activeBg: "transparent", activeBorder: "#3b82f6", activeColor: "#3b82f6" },
 };
 
-const TOGGLE_COLORS: Record<ToggleVariant, { on: string; off: string; thumbOn: string; thumbOff: string }> = {
-  "default": { on: "#3b82f6", off: "#d1d5db", thumbOn: "#fff", thumbOff: "#fff" },
-  "primary": { on: "#6366f1", off: "#e0e7ff", thumbOn: "#fff", thumbOff: "#6366f1" },
-  "success": { on: "#22c55e", off: "#bbf7d0", thumbOn: "#fff", thumbOff: "#22c55e" },
-  "danger": { on: "#ef4444", off: "#fecaca", thumbOn: "#fff", thumbOff: "#ef4444" },
+const SIZE_PADDING: Record<ToggleSize, { padding: string; fontSize: string; height: string }> = {
+  "sm": { padding: "4px 10px", fontSize: "12px", height: "28px" },
+  "md": { padding: "6px 14px", fontSize: "13px", height: "34px" },
+  "lg": { padding: "8px 18px", fontSize: "14px", height: "40px" },
 };
 
-// --- Toggle Switch ---
+// --- Toggle Button ---
 
 /**
- * Create a toggle switch.
+ * Create a toggle button (pressable button that stays pressed).
  *
  * @example
  * ```ts
- * const toggle = createToggleSwitch({
- *   checked: false,
- *   label: "Dark mode",
- *   onChange: (checked) => setTheme(checked ? 'dark' : 'light'),
+ * const btn = createToggleButton({
+ *   label: "Bold",
+ *   pressed: false,
+ *   onChange: (p) => toggleBold(p),
  * });
  * ```
  */
-export function createToggleSwitch(options: ToggleSwitchOptions = {}): HTMLElement {
+export function createToggleButton(options: ToggleButtonOptions = {}): HTMLElement {
   const {
-    checked = false,
+    pressed = false,
     disabled = false,
     size = "md",
     variant = "default",
     label,
-    labelPosition = "end",
-    description,
+    icon,
+    activeIcon,
+    showIndicator = false,
     onChange,
     className,
   } = options;
 
-  const ts = TOGGLE_SIZES[size];
-  const tc = TOGGLE_COLORS[variant];
-  let _checked = checked;
+  let _pressed = pressed;
+  const vm = VARIANT_MAP[variant];
+  const sp = SIZE_PADDING[size];
 
-  // Wrapper
-  const wrapper = document.createElement("label");
-  wrapper.className = `toggle-switch ${size} ${variant} ${className ?? ""}`.trim();
-  wrapper.style.cssText =
-    "display:inline-flex;align-items:center;gap:8px;cursor:pointer;" +
-    (disabled ? "opacity:0.5;cursor:not-allowed;" : "");
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = `toggle-btn ${size} ${variant} ${className ?? ""}`.trim();
+  btn.setAttribute("aria-pressed", String(_pressed));
 
-  // Label before
-  if (label && labelPosition === "start") {
-    const labelEl = _createLabel(label, ts.font, !!description);
-    wrapper.insertBefore(labelEl, null);
+  Object.assign(btn.style, {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "6px",
+    padding: sp.padding,
+    fontSize: sp.fontSize,
+    fontWeight: "500",
+    lineHeight: "1",
+    height: sp.height,
+    borderRadius: "8px",
+    border: "1px solid",
+    cursor: disabled ? "not-allowed" : "pointer",
+    whiteSpace: "nowrap",
+    userSelect: "none",
+    transition: "all 0.15s ease",
+    outline: "none",
+    fontFamily: "inherit",
+    ...(disabled ? { opacity: "0.5", pointerEvents: "none" } : {}),
+    ...(_pressed ? {
+      background: vm.activeBg,
+      borderColor: vm.activeBorder,
+      color: vm.activeColor,
+    } : {
+      background: vm.bg,
+      borderColor: vm.border,
+      color: vm.color,
+    }),
+  });
+
+  // Icon
+  if (icon || activeIcon) {
+    const iconSpan = document.createElement("span");
+    iconSpan.innerHTML = _pressed ? (activeIcon ?? icon ?? "") : (icon ?? "");
+    iconSpan.style.cssText = "display:inline-flex;align-items:center;line-height:1;";
+    btn.appendChild(iconSpan);
   }
 
-  // Track + Thumb
-  const track = document.createElement("div");
-  track.className = "toggle-track";
-  track.style.cssText =
-    `position:relative;width:${ts.trackW};height:${ts.trackH};border-radius:${parseInt(ts.trackH) / 2}px;` +
-    `background:${_checked ? tc.on : tc.off};transition:background 0.2s ease;` +
-    "flex-shrink:0;";
+  // Label
+  if (label) {
+    const labelEl = document.createElement("span");
+    labelEl.textContent = label;
+    btn.appendChild(labelEl);
+  }
 
-  const thumb = document.createElement("div");
-  thumb.className = "toggle-thumb";
-  thumb.style.cssText =
-    `position:absolute;top:${(parseInt(ts.trackH) - parseInt(ts.thumb)) / 2}px;` +
-    (_checked ? `left:calc(100% - ${ts.thumb} - 2px)` : "left:2px") + ";" +
-    `width:${ts.thumb};height:${ts.thumb};border-radius:50%;background:${_checked ? tc.thumbOn : tc.thumbOff};` +
-    "box-shadow:0 1px 3px rgba(0,0,0,0.15);transition:left 0.2s ease,background 0.2s ease;";
-
-  // Hidden input for accessibility
-  const input = document.createElement("input");
-  input.type = "checkbox";
-  input.checked = _checked;
-  input.disabled = disabled;
-  input.style.cssText = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;";
-
-  track.appendChild(thumb);
-  track.appendChild(input);
-  wrapper.appendChild(track);
-
-  // Label after
-  if (label && labelPosition === "end") {
-    const labelEl = _createLabel(label, ts.font, !!description);
-    wrapper.appendChild(labelEl);
+  // Indicator dot
+  if (showIndicator && _pressed) {
+    const dot = document.createElement("span");
+    dot.style.cssText =
+      "width:6px;height:6px;border-radius:50%;background:currentColor;" +
+      "flex-shrink:0;";
+    btn.appendChild(dot);
   }
 
   // Click handler
-  const handler = (): void => {
+  btn.addEventListener("click", () => {
     if (disabled) return;
-    _checked = !_checked;
-    input.checked = _checked;
-    thumb.style.left = _checked ? `calc(100% - ${ts.thumb} - 2px)` : "2px";
-    thumb.style.background = _checked ? tc.thumbOn : tc.thumbOff;
-    track.style.background = _checked ? tc.on : tc.off;
-    onChange?.(_checked);
-  };
-
-  track.addEventListener("click", handler);
-  if (!disabled) {
-    wrapper.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); handler(); }
+    _pressed = !_pressed;
+    btn.setAttribute("aria-pressed", String(_pressed));
+    Object.assign(btn.style, _pressed ? {
+      background: vm.activeBg,
+      borderColor: vm.activeBorder,
+      color: vm.activeColor,
+    } : {
+      background: vm.bg,
+      borderColor: vm.border,
+      color: vm.color,
     });
+
+    // Update icon
+    if (icon || activeIcon) {
+      const iconEl = btn.querySelector("span:first-child") as HTMLElement;
+      if (iconEl) iconEl.innerHTML = _pressed ? (activeIcon ?? icon ?? "") : (icon ?? "");
+    }
+    onChange?.(_pressed);
+  });
+
+  return btn;
+}
+
+// --- Icon Toggle ---
+
+/**
+ * Create an icon-only toggle (like a favorite/heart button).
+ *
+ * @example
+ * ```ts
+ * const fav = createIconToggle({
+ *   offIcon: "&#9825;",
+ *   onIcon: "&#10084;",
+ *   size: 28,
+ *   onChange: (v) => setFavorite(v),
+ * });
+ * ```
+ */
+export function createIconToggle(options: IconToggleOptions): HTMLElement {
+  const {
+    offIcon,
+    onIcon,
+    value = false,
+    size = 24,
+    activeColor = "#ef4444",
+    tooltip,
+    disabled = false,
+    onChange,
+    className,
+  } = options;
+
+  let _value = value;
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = `icon-toggle ${className ?? ""}`.trim();
+  btn.setAttribute("aria-pressed", String(_value));
+  if (tooltip) btn.title = tooltip;
+
+  Object.assign(btn.style, {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: `${size}px`,
+    height: `${size}px`,
+    borderRadius: "50%",
+    border: "none",
+    background: "none",
+    cursor: disabled ? "not-allowed" : "pointer",
+    fontSize: `${Math.round(size * 0.65)}px`,
+    color: _value ? activeColor : "#9ca3af",
+    transition: "color 0.2s ease, transform 0.15s ease",
+    outline: "none",
+    padding: "0",
+    lineHeight: "1",
+    ...(disabled ? { opacity: "0.5", pointerEvents: "none" } : {}),
+  });
+
+  btn.innerHTML = _value ? onIcon : offIcon;
+
+  btn.addEventListener("click", () => {
+    if (disabled) return;
+    _value = !_value;
+    btn.setAttribute("aria-pressed", String(_value));
+    btn.innerHTML = _value ? onIcon : offIcon;
+    btn.style.color = _value ? activeColor : "#9ca3af";
+    btn.style.transform = _value ? "scale(1.15)" : "scale(1)";
+    setTimeout(() => { btn.style.transform = ""; }, 150);
+    onChange?.(_value);
+  });
+
+  // Hover effect
+  if (!disabled) {
+    btn.addEventListener("mouseenter", () => { btn.style.color = _value ? activeColor : "#6b7280"; });
+    btn.addEventListener("mouseleave", () => { btn.style.color = _value ? activeColor : "#9ca3af"; });
   }
+
+  return btn;
+}
+
+// --- Press & Hold Toggle ---
+
+/**
+ * Create a press-and-hold toggle button.
+ *
+ * @example
+ * ```ts
+ * const holdBtn = createPressHoldToggle({
+ *   label: "Hold to delete",
+ *   holdDuration: 2000,
+ *   onActivate: () => deleteItem(),
+ * });
+ * ```
+ */
+export function createPressHoldToggle(options: PressHoldToggleOptions): HTMLElement {
+  const {
+    label,
+    holdDuration = 500,
+    size = "md",
+    variant = "danger",
+    onActivate,
+    onCancel,
+    onProgress,
+    className,
+  } = options;
+
+  let holding = false;
+  let startTime = 0;
+  let animFrame: number | null = null;
+
+  const vm = VARIANT_MAP[variant];
+  const sp = SIZE_PADDING[size];
+
+  const wrapper = document.createElement("div");
+  wrapper.className = `press-hold-toggle ${className ?? ""}`.trim();
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.textContent = label;
+
+  Object.assign(btn.style, {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    padding: sp.padding,
+    fontSize: sp.fontSize,
+    fontWeight: "600",
+    height: sp.height,
+    borderRadius: "8px",
+    border: "1px solid transparent",
+    background: vm.bg,
+    color: vm.color,
+    cursor: "pointer",
+    position: "relative",
+    overflow: "hidden",
+    transition: "background 0.15s",
+    outline: "none",
+    fontFamily: "inherit",
+    userSelect: "none",
+  });
+
+  // Progress bar overlay
+  const progressEl = document.createElement("div");
+  progressEl.className = "hold-progress";
+  Object.assign(progressEl.style, {
+    position: "absolute",
+    left: "0",
+    bottom: "0",
+    height: "3px",
+    width: "0%",
+    background: vm.activeColor,
+    transition: "width 0.05s linear",
+    borderRadius: "0 0 8px 8px",
+  });
+
+  btn.appendChild(progressEl);
+  wrapper.appendChild(btn);
+
+  function startHold(e: Event): void {
+    e.preventDefault();
+    holding = true;
+    startTime = Date.now();
+
+    const tick = (): void => {
+      if (!holding) return;
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / holdDuration, 1);
+      progressEl.style.width = `${progress * 100}%`;
+      onProgress?.(progress);
+
+      if (progress >= 1) {
+        holding = false;
+        progressEl.style.width = "0%";
+        btn.style.background = vm.activeBg;
+        btn.style.color = vm.activeColor;
+        setTimeout(() => {
+          btn.style.background = vm.bg;
+          btn.style.color = vm.color;
+        }, 300);
+        onActivate?.();
+        return;
+      }
+      animFrame = requestAnimationFrame(tick);
+    };
+    animFrame = requestAnimationFrame(tick);
+  }
+
+  function endHold(): void {
+    if (!holding) return;
+    holding = false;
+    if (animFrame !== null) cancelAnimationFrame(animFrame);
+    animFrame = null;
+    progressEl.style.width = "0%";
+    onCancel?.();
+  }
+
+  btn.addEventListener("mousedown", startHold);
+  btn.addEventListener("mouseup", endHold);
+  btn.addEventListener("mouseleave", endHold);
+  btn.addEventListener("touchstart", startHold, { passive: true });
+  btn.addEventListener("touchend", endHold);
+  btn.addEventListener("touchcancel", endHold);
 
   return wrapper;
 }
 
-function _createLabel(text: string, fontSize: string, hasDesc: boolean): HTMLElement {
-  const el = document.createElement("span");
-  el.className = "toggle-label";
-  el.textContent = text;
-  el.style.cssText =
-    `font-size:${fontSize};font-weight:500;color:#374151;line-height:1.2;` +
-    (hasDesc ? "display:flex;flex-direction:column;gap:1px;" : "");
-  return el;
-}
-
-// --- Segmented Control ---
+// --- Loading Toggle ---
 
 /**
- * Create a segmented control (pill-style tab group).
+ * Create a toggle that shows a spinner while processing.
  *
  * @example
  * ```ts
- * const seg = createSegmentedControl({
- *   options: [
- *     { value: "day", label: "Day" },
- *     { value: "week", label: "Week" },
- *     { value: "month", label: "Month" },
- *   ],
- *   value: "week",
- *   onChange: (v) => setView(v),
+ * const lt = createLoadingToggle({
+ *   label: "Auto-save",
+ *   checked: true,
+ *   loading: false,
+ *   onChange: async (v) => {
+ *     lt.setLoading(true);
+ *     await save(v);
+ *     lt.setLoading(false);
+ *   },
  * });
  * ```
  */
-export function createSegmentedControl(options: SegmentedControlOptions): HTMLElement {
+export function createLoadingToggle(options: LoadingToggleOptions): HTMLElement & { setLoading: (loading: boolean) => void; setChecked: (checked: boolean) => void } {
   const {
-    opts: optionsList,
-    value: selectedValue = "",
-    size = "md",
-    fullWidth = false,
-    onChange,
-    className,
-  } = options as any;
-  const { options, value: initValue } = options;
-
-  let _selected = initValue ?? (options[0]?.value ?? "");
-
-  const root = document.createElement("div");
-  root.className = `segmented-control ${size} ${className ?? ""}`.trim();
-  root.style.cssText =
-    "display:inline-flex;background:#f3f4f6;border-radius:10px;padding:3px;" +
-    `gap:2px;${fullWidth ? "width:100%;" : ""}`;
-  root.setAttribute("role", "tablist");
-
-  const fontSize = size === "sm" ? "12px" : size === "lg" ? "14px" : "13px";
-  const padding = size === "sm" ? "4px 12px" : size === "lg" ? "8px 20px" : "6px 16px";
-
-  options.forEach((opt) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "segment-option";
-    btn.dataset.value = opt.value;
-    btn.disabled = opt.disabled ?? false;
-    btn.style.cssText =
-      `padding:${padding};border:none;border-radius:8px;` +
-      "font-size:" + fontSize + ";font-weight:500;cursor:pointer;" +
-      "line-height:1;white-space:nowrap;transition:all 0.15s ease;" +
-      "display:inline-flex;align-items:center;gap:4px;" +
-      (_selected === opt.value
-        ? "background:#fff;color:#111827;box-shadow:0 1px 2px rgba(0,0,0,0.08);"
-        : "background:transparent;color:#6b7280;");
-
-    if (opt.icon) {
-      const iconSpan = document.createElement("span");
-      iconSpan.innerHTML = opt.icon;
-      btn.insertBefore(iconSpan, btn.firstChild);
-    }
-
-    const labelSpan = document.createElement("span");
-    labelSpan.textContent = opt.label;
-    btn.appendChild(labelSpan);
-
-    if (!opt.disabled) {
-      btn.addEventListener("click", () => {
-        _selected = opt.value;
-        // Update all buttons
-        root.querySelectorAll(".segment-option").forEach((el) => {
-          const isSelected = (el as HTMLElement).dataset.value === _selected;
-          (el as HTMLElement).style.background = isSelected ? "#fff" : "transparent";
-          (el as HTMLElement).style.color = isSelected ? "#111827" : "#6b7280";
-          (el as HTMLElement).style.boxShadow = isSelected ? "0 1px 2px rgba(0,0,0,0.08)" : "";
-        });
-        onChange?.(_selected);
-      });
-    }
-
-    root.appendChild(btn);
-  });
-
-  return root;
-}
-
-// --- Toggle Button Group ---
-
-/**
- * Create a toggle button group (multi-select or single-select).
- *
- * @example
- * ```ts
- * const group = createToggleButtonGroup({
- *   buttons: [
- *     { value: "bold", label: "B" },
- *     { value: "italic", label: "I" },
- *     { value: "underline", label: "U" },
- *   ],
- *   multiple: true,
- *   onChange: (vals) => applyFormatting(vals),
- * });
- * ```
- */
-export function createToggleButtonGroup(options: ToggleButtonGroupOptions): HTMLElement {
-  const {
-    buttons,
-    multiple = false,
-    values: initialValues = [],
+    label,
+    loading = false,
+    checked = false,
     size = "md",
     onChange,
     className,
   } = options;
 
-  let _selected = new Set(initialValues);
+  let _loading = loading;
+  let _checked = checked;
 
-  const root = document.createElement("div");
-  root.className = `toggle-btn-group ${size} ${className ?? ""}`.trim();
-  root.style.cssText = "display:inline-flex;gap:2px;";
+  const root = document.createElement("label");
+  root.className = `loading-toggle ${size} ${className ?? ""}`.trim();
+  root.style.cssText = "display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none;";
 
-  const padding = size === "sm" ? "5px 10px" : size === "lg" ? "8px 16px" : "6px 14px";
-  const fontSize = size === "sm" ? "12px" : size === "lg" ? "14px" : "13px";
+  // Track + thumb
+  const trackSize = size === "sm" ? 18 : size === "lg" ? 30 : 24;
+  const thumbSize = size === "sm" ? 14 : size === "lg" ? 26 : 20;
 
-  buttons.forEach((btn) => {
-    const el = document.createElement("button");
-    el.type = "button";
-    el.className = "toggle-btn";
-    el.dataset.value = btn.value;
-    el.disabled = btn.disabled ?? false;
-    const isSelected = _selected.has(btn.value);
+  const track = document.createElement("div");
+  track.style.cssText =
+    `position:relative;width:${trackSize * 1.8}px;height:${trackSize}px;border-radius:${trackSize / 2}px;` +
+    `background:${_checked ? "#3b82f6" : "#d1d5db"};transition:background 0.2s;flex-shrink:0;`;
 
-    el.style.cssText =
-      `padding:${padding};border:1px solid #d1d5db;border-radius:6px;` +
-      "font-size:" + fontSize + ";font-weight:500;cursor:pointer;" +
-      "line-height:1;display:inline-flex;align-items:center;gap:4px;" +
-      "transition:all 0.12s;" +
-      (isSelected
-        ? "background:#eff6ff;color:#2563eb;border-color:#93c5fd;"
-        : "background:#fff;color:#374151;") +
-      (btn.disabled ? "opacity:0.5;cursor:not-allowed;" : "");
+  if (_loading) {
+    const spinner = document.createElement("div");
+    spinner.style.cssText =
+      `position:absolute;top:${(trackSize - thumbSize) / 2}px;left:${(trackSize * 1.8 - thumbSize) / 2 - 2}px;` +
+      `width:${thumbSize}px;height:${thumbSize}px;border:2px solid #fff;border-top-color:transparent;` +
+      "border-radius:50%;animation:spin 0.6s linear infinite;";
+    track.appendChild(spinner);
+  } else {
+    const thumb = document.createElement("div");
+    thumb.style.cssText =
+      `position:absolute;top:${(trackSize - thumbSize) / 2}px;` +
+      `${_checked ? `left:${trackSize * 1.8 - thumbSize - 2}px` : "left:2px"};` +
+      `width:${thumbSize}px;height:${thumbSize}px;border-radius:50%;background:#fff;` +
+      "box-shadow:0 1px 3px rgba(0,0,0,0.15);transition:left 0.2s;";
+    track.appendChild(thumb);
+  }
 
-    if (btn.icon) {
-      const iconSpan = document.createElement("span");
-      iconSpan.innerHTML = btn.icon;
-      el.insertBefore(iconSpan, el.firstChild);
+  root.appendChild(track);
+
+  // Label
+  const labelEl = document.createElement("span");
+  labelEl.textContent = label;
+  labelEl.style.fontSize = size === "sm" ? "11px" : size === "lg" ? "14px" : "12px";
+  labelEl.style.fontWeight = "500";
+  labelEl.style.color = "#374151";
+  labelEl.style.opacity = _loading ? "0.6" : "1";
+  root.appendChild(labelEl);
+
+  function setLoading(l: boolean): void {
+    _loading = l;
+    labelEl.style.opacity = l ? "0.6" : "1";
+    track.innerHTML = "";
+    if (l) {
+      const spinner = document.createElement("div");
+      spinner.style.cssText =
+        `position:absolute;top:${(trackSize - thumbSize) / 2}px;left:${(trackSize * 1.8 - thumbSize) / 2 - 2}px;` +
+        `width:${thumbSize}px;height:${thumbSize}px;border:2px solid #fff;border-top-color:transparent;` +
+        "border-radius:50%;animation:spin 0.6s linear infinite;";
+      track.appendChild(spinner);
+    } else {
+      const thumb = document.createElement("div");
+      thumb.style.cssText =
+        `position:absolute;top:${(trackSize - thumbSize) / 2}px;` +
+        `${_checked ? `left:${trackSize * 1.8 - thumbSize - 2}px` : "left:2px"};` +
+        `width:${thumbSize}px;height:${thumbSize}px;border-radius:50%;background:#fff;` +
+        "box-shadow:0 1px 3px rgba(0,0,0,0.15);transition:left 0.2s;";
+      track.appendChild(thumb);
     }
+  }
 
-    const labelSpan = document.createElement("span");
-    labelSpan.textContent = btn.label;
-    el.appendChild(labelSpan);
-
-    if (!btn.disabled) {
-      el.addEventListener("click", () => {
-        if (multiple) {
-          if (_selected.has(btn.value)) _selected.delete(btn.value);
-          else _selected.add(btn.value);
-        } else {
-          _selected.clear();
-          _selected.add(btn.value);
-        }
-        // Update visuals
-        root.querySelectorAll(".toggle-btn").forEach((b) => {
-          const sel = _selected.has((b as HTMLElement).dataset.value!);
-          (b as HTMLElement).style.background = sel ? "#eff6ff" : "#fff";
-          (b as HTMLElement).style.color = sel ? "#2563eb" : "#374151";
-          (b as HTMLElement).style.borderColor = sel ? "#93c5fd" : "#d1d5db";
-        });
-        onChange?.([..._selected]);
-      });
+  function setChecked(c: boolean): void {
+    _checked = c;
+    track.style.background = c ? "#3b82f6" : "#d1d5db";
+    if (!_loading) {
+      const thumb = track.querySelector("div") as HTMLElement;
+      if (thumb) thumb.style.left = c ? `${trackSize * 1.8 - thumbSize - 2}px` : "2px";
     }
+  }
 
-    root.appendChild(el);
+  root.addEventListener("click", () => {
+    if (_loading) return;
+    _checked = !_checked;
+    setChecked(_checked);
+    onChange?.(_checked);
   });
 
-  return root;
+  // Inject spin keyframe
+  if (!document.getElementById("spin-keyframe")) {
+    const style = document.createElement("style");
+    style.id = "spin-keyframe";
+    style.textContent = "@keyframes spin{to{transform:rotate(360deg);}}";
+    document.head.appendChild(style);
+  }
+
+  return Object.assign(root, { setLoading, setChecked });
 }

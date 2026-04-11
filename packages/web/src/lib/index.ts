@@ -34716,3 +34716,28 @@ export type {
   RatingOptions,
   RatingInstance,
 } from "./rating-utils";
+// --- Batch 1143: Toggle, Switch Group, Button Group ---
+export { createToggleButton, createIconToggle, createPressHoldToggle, createLoadingToggle } from "./toggle-utils";
+export type {
+  ToggleSize,
+  ToggleVariant,
+  ToggleButtonOptions,
+  IconToggleOptions,
+  PressHoldToggleOptions,
+  LoadingToggleOptions,
+} from "./toggle-utils";
+
+export { createSwitchGroup } from "./switch-group-utils";
+export type {
+  SwitchGroupLayout,
+  SwitchItemConfig,
+  SwitchGroupOptions,
+  SwitchGroupInstance,
+} from "./switch-group-utils";
+
+export { createToggleSwitch, createSegmentedControl, createToggleButtonGroup } from "./button-group-utils";
+export type {
+  ToggleSwitchOptions,
+  SegmentedControlOptions,
+  ToggleButtonGroupOptions,
+} from "./button-group-utils";
