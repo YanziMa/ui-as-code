@@ -23563,3 +23563,45 @@ export type {
   SkeletonCardOptions,
   SkeletonTableOptions,
 } from "./skeleton";
+
+// --- form-utils ---
+export {
+  createForm,
+  serializeForm,
+  populateForm,
+  clearForm,
+  createMultiStepForm,
+  evaluateConditionals,
+  linkErrorToField,
+  unlinkErrorFromField,
+  createFormAnnouncer,
+} from "./form-utils";
+export type {
+  FormFieldConfig,
+  FormValidationRule,
+  FormFieldState,
+  FormOptions,
+  FormInstance,
+  StepConfig,
+  MultiStepFormOptions,
+  MultiStepFormInstance,
+  ConditionRule,
+  ConditionalField,
+} from "./form-utils";
+
+// --- virtual-list ---
+export { createVirtualList } from "./virtual-list";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+
+// --- tree-view ---
+export { TreeView } from "./tree-view";
+export type {
+  TreeNodeData,
+  TreeNode,
+  CheckMode,
+  TreeViewConfig,
+} from "./tree-view";
