@@ -28132,3 +28132,14 @@ export { createSplitPane as createSplitPaneAdvanced } from "./resizable";
 export { createSplitPane as createSplitPaneLayout } from "./split-pane";
 export type { SplitPaneOptions as AdvancedSplitPaneOptions, SplitPaneController } from "./resizable";
 export type { SplitPaneOptions, SplitPaneInstance, SplitOrientation, SplitCollapseDirection } from "./split-pane";
+// --- Alert ---
+export { AlertManager, createAlert } from "./alert";
+export type { AlertOptions, AlertInstance, AlertVariant, AlertSize, AlertAction } from "./alert";
+
+// --- Chip ---
+export { createChip, createChipGroup } from "./chip";
+export type { ChipOptions, ChipInstance, ChipSize, ChipVariant, ChipGroupOptions, ChipGroupInstance } from "./chip";
+
+// --- Switch ---
+export { createSwitch } from "./switch";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch";
