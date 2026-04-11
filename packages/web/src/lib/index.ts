@@ -45831,3 +45831,35 @@ export {
   type ImageCompareOptions,
   type ImageCompareInstance,
 } from "./image-compare";
+// image-compressor
+export {
+  compressImage,
+  batchCompressImages,
+  resizeImage,
+  imageToDataUri,
+  getImageInfo,
+  type ImageFormat,
+  type CompressOptions,
+  type CompressResult,
+  type BatchCompressOptions,
+  type BatchCompressResult,
+} from "./image-compressor";
+
+// image-cropper
+export {
+  ImageCropperManager,
+  createImageCropper,
+  type AspectRatio,
+  type CropRegion,
+  type ImageCropperOptions,
+  type ImageCropperInstance,
+} from "./image-cropper";
+
+// image-gallery
+export {
+  ImageGalleryManager,
+  createImageGallery,
+  type GalleryImage,
+  type ImageGalleryOptions,
+  type ImageGalleryInstance,
+} from "./image-gallery";
