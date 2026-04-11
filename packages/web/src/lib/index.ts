@@ -26639,3 +26639,43 @@ export type {
   SequentialTestState,
   PowerAnalysisInput,
 } from "./ab-test";
+
+// --- Analytics Core ---
+export {
+  AnalyticsCore,
+  createAnalytics,
+} from "./analytics-core";
+export type {
+  AnalyticsEvent,
+  AnalyticsContext,
+  AnalyticsConfig,
+  EventSchema,
+  AnalyticsStats,
+} from "./analytics-core";
+
+// --- Event Tracker ---
+export {
+  EventTracker,
+  createEventTracker,
+} from "./event-tracker";
+export type {
+  TrackerConfig,
+  PageViewInfo,
+  ScrollDepthEvent,
+  ClickEvent,
+  FormInteractionEvent,
+  PerformanceSnapshot,
+} from "./event-tracker";
+
+// --- Funnel ---
+export {
+  FunnelEngine,
+  createFunnelEngine,
+} from "./funnel";
+export type {
+  FunnelDefinition,
+  FunnelStep,
+  FunnelUserJourney,
+  FunnelResult,
+  FunnelOptions,
+} from "./funnel";
