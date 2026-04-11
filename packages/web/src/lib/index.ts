@@ -24680,3 +24680,14 @@ export type { AnsiParserOptions, TerminalBufferOptions, TerminalEmulatorOptions,
 // --- markdown-renderer ---
 export { parseMarkdown, renderToHtml, mdToHtml, generateToc, renderToc, extractFrontMatter, extractText, countWords, readingTime } from "./markdown-renderer";
 export type { MdNode, MdNodeType, MdRenderOptions, TocEntry, FrontMatter } from "./markdown-renderer";
+// --- chart-renderer ---
+export { createChart } from "./chart-renderer";
+export type { ChartOptions, ChartInstance, ChartType, ChartSeries, ChartDataPoint } from "./chart-renderer";
+
+// --- kanban-board ---
+export { createKanbanBoard } from "./kanban-board";
+export type { KanbanBoardOptions, KanbanBoardInstance, KanbanCard, KanbanColumn } from "./kanban-board";
+
+// --- calendar-view ---
+export { createCalendar } from "./calendar-view";
+export type { CalendarOptions, CalendarInstance, CalendarEvent, CalendarView } from "./calendar-view";
