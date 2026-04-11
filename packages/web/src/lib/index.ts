@@ -32184,3 +32184,15 @@ export type { DragListOptions, DragListInstance, DragListItem } from "./drag-lis
 // --- tour ---
 export { createTour } from "./tour";
 export type { TourOptions, TourInstance, TourStep } from "./tour";
+
+// --- hotkeys ---
+export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString } from "./hotkeys";
+export type { HotkeyBinding, HotkeyEvent, ParsedKeyCombo } from "./hotkeys";
+
+// --- clipboard ---
+export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard } from "./clipboard";
+export type { ClipboardData, ClipboardOptions } from "./clipboard";
+
+// --- undo-redo ---
+export { UndoHistory } from "./undo-redo";
+export type { UndoItem, UndoBranch, UndoHistoryOptions, UndoState, UndoChangeListener } from "./undo-redo";
