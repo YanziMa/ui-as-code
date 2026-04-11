@@ -50411,3 +50411,34 @@ export type {
   SegmentedInstance as Seg_Instance,
 } from "./segmented";
 export { SegmentedControlManager as SegControlManager, createSegmentedControl as createSeg } from "./segmented";
+
+// --- select-dropdown ---
+export type {
+  SelectDropdownSize as SelDrp_Size,
+  SelectTriggerMode as SelDrp_TriggerMode,
+  SelectOption as SelDrp_Option,
+  SelectGroup as SelDrp_Group,
+  SelectDropdownOptions as SelDrp_Options,
+  SelectDropdownInstance as SelDrp_Instance,
+} from "./select-dropdown";
+export { createSelectDropdown as createSelDrp } from "./select-dropdown";
+
+// --- select-lite ---
+export type {
+  SelectOption as SelLt_Option,
+  SelectSize as SelLt_Size,
+  SelectVariant as SelLt_Variant,
+  SelectOptions as SelLt_Options,
+  SelectInstance as SelLt_Instance,
+} from "./select-lite";
+export { createSelect as createSelLt } from "./select-lite";
+
+// --- select-menu ---
+export type {
+  SelectOption as SelMenu_Option,
+  SelectGroup as SelMenu_Group,
+  SelectMode as SelMenu_Mode,
+  SelectMenuOptions as SelMenu_Options,
+  SelectMenuInstance as SelMenu_Instance,
+} from "./select-menu";
+export { createSelectMenu as createSelMenu } from "./select-menu";
