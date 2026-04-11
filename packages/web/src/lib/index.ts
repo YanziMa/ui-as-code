@@ -41794,3 +41794,31 @@ export type {
   PopoverOptions,
   TooltipInstance,
 } from "./tooltip-popover";
+
+// --- context-menu ---
+export { ContextMenuManager } from "./context-menu";
+export type {
+  ContextMenuItem,
+  ContextMenuPosition,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+
+// --- command-palette ---
+export { CommandPalette } from "./command-palette";
+export type {
+  Command,
+  CommandCategory,
+  CommandPaletteConfig,
+  CommandPaletteState,
+} from "./command-palette";
+
+// --- split-view ---
+export { createSplitView, createHorizontalSplit, createVerticalSplit } from "./split-view";
+export type {
+  SplitDirection,
+  PaneConfig,
+  SplitViewOptions,
+  SplitViewState,
+  SplitViewInstance,
+} from "./split-view";
