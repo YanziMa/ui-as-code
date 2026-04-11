@@ -41703,3 +41703,7 @@ export type { CountdownTimerOptions, CountdownTimerInstance, CountdownDisplayMod
 export * from "./color-picker";
 export * from "./rating-input";
 export * from "./slider-input";
+// --- Batch 1315: File Upload, Avatar Picker, Signature Pad ---
+export * from "./file-upload";
+export * from "./avatar-picker";
+export * from "./signature-pad";
