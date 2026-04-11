@@ -21955,3 +21955,75 @@ export type {
   TransitionHistoryEntry,
   Service,
 } from "./state-machine";
+
+// --- css-in-js ---
+export {
+  injectStyle,
+  removeStyle,
+  updateStyle,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  getRootVar,
+  setRootVar,
+  getCurrentBreakpoint,
+  isMinWidth,
+  isMaxWidth,
+  onBreakpointChange,
+  isMobile,
+  isTablet,
+  isDesktop,
+  getDevicePixelRatio,
+  isRetina,
+  mq,
+  mediaQueries,
+  matchesMedia,
+  subscribeMedia,
+  isDarkMode,
+  isLightMode,
+  toggleDarkMode,
+  setDarkMode,
+  onDarkModeChange,
+  buildKeyframes,
+  registerKeyframes,
+  animations,
+  animate as cssAnimate,
+  toggleClass,
+  classIf,
+  setClasses,
+  hasAnyClass,
+  bringToFront,
+  sendToBack,
+} from "./css-in-js";
+export type { Breakpoints } from "./css-in-js";
+
+// --- dom-utils ---
+export {
+  getComputedStyleValue,
+  getElementRect,
+  isInViewport,
+  getVisibilityPercent,
+  scrollIntoViewCentered,
+  measureText,
+  closestAncestor,
+  getAncestors,
+  insertAfter,
+  replaceElement,
+  containsOrIs,
+  getFocusableElements,
+  createFocusTrap,
+} from "./dom-utils";
+
+// --- math ---
+export {
+  mean,
+  median,
+  stddev,
+  percentile,
+  linearRegression,
+  sum,
+  minmax,
+  normalize,
+  movingAverage,
+  ema,
+} from "./math";
