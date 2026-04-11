@@ -50381,3 +50381,33 @@ export {
   generateSecureId as secGenerateSecureId,
   simpleHash as secSimpleHash,
 } from "./security-utils";
+
+// --- security ---
+export type { RateLimitResult as SecRt_RateLimitResult } from "./security";
+export {
+  generateNonce as secGenerateNonce,
+  isBot as secIsBot,
+  rateLimit as secRateLimit,
+  cleanupRateLimits as secCleanupRateLimits,
+  isAllowedOrigin as secIsAllowedOrigin,
+  sanitizeFilename as secSanitizeFilename,
+} from "./security";
+
+// --- segmented-control ---
+export type {
+  SegmentedOption as SegCtrl_Option,
+  SegmentedSize as SegCtrl_Size,
+  SegmentedControlOptions as SegCtrl_Options,
+  SegmentedControlInstance as SegCtrl_Instance,
+} from "./segmented-control";
+export { createSegmentedControl as createSegCtrl } from "./segmented-control";
+
+// --- segmented ---
+export type {
+  SegmentedSize as Seg_Size,
+  SegmentedBlockMode as Seg_BlockMode,
+  SegmentedOption as Seg_Option,
+  SegmentedOptions as Seg_Options,
+  SegmentedInstance as Seg_Instance,
+} from "./segmented";
+export { SegmentedControlManager as SegControlManager, createSegmentedControl as createSeg } from "./segmented";
