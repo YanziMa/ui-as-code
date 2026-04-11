@@ -42184,3 +42184,10 @@ export { createTimePicker } from "./time-picker";
 export type { TimeFormat, TimePickerMode, TimePickerOptions, TimePickerInstance } from "./time-picker";
 export { createColorPickerUI } from "./color-picker-ui";
 export type { ColorSwatch, ColorPickerUIOptions, ColorPickerUIInstance } from "./color-picker-ui";
+// --- Batch 1358: Slider, Switch, Checkbox Group ---
+export { SliderManager, createSlider } from "./slider";
+export type { SliderMark, SliderOptions, SliderInstance } from "./slider";
+export { createSwitch } from "./switch";
+export type { SwitchSize, SwitchVariant, SwitchOptions, SwitchInstance } from "./switch";
+export { createCheckboxGroup } from "./checkbox-group";
+export type { CheckboxSize, CheckboxVariant, CheckboxOption, CheckboxGroupOptions, CheckboxGroupInstance } from "./checkbox-group";
