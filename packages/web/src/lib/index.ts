@@ -29745,3 +29745,14 @@ export type { SplitViewOptions, SplitViewInstance, SplitViewState, PaneConfig, S
 // --- breadcrumb ---
 export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
 export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb";
+// --- toast ---
+export { ToastManager, getToastManager, showToast } from "./toast";
+export type { ToastOptions, ToastInstance, ToastManagerConfig, ToastType, ToastPosition } from "./toast";
+
+// --- form-validator ---
+export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom } from "./form-validator";
+export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldConfig, FormValidatorOptions } from "./form-validator";
+
+// --- virtual-scroll ---
+export { createVirtualScroll } from "./virtual-scroll";
+export type { VirtualScrollOptions, VirtualScrollInstance, VirtualItem } from "./virtual-scroll";
