@@ -24041,3 +24041,15 @@ export type { TypeaheadItem, TypeaheadOptions, TypeaheadInstance } from "./typea
 // --- tag-input ---
 export { TagInputManager, createTagInput } from "./tag-input";
 export type { TagItem, TagInputOptions, TagInputInstance } from "./tag-input";
+
+// --- mention ---
+export { MentionManager, createMention } from "./mention";
+export type { MentionOption, MentionOptions, MentionInstance } from "./mention";
+
+// --- color-picker ---
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- date-picker ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
