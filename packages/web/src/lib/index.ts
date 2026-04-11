@@ -20909,3 +20909,37 @@ export {
   TransferManager,
   createTransfer,
 } from "./transfer";
+
+// --- Upload ---
+export type {
+  UploadStatus,
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+} from "./upload";
+export {
+  createUpload,
+} from "./upload";
+
+// --- QR Code ---
+export type {
+  QrOptions,
+} from "./qr-code";
+export {
+  generateQrSvg,
+  generateQrDataUri,
+  generateQrCanvas,
+  validateQrInput,
+} from "./qr-code";
+
+// --- Signature Pad ---
+export type {
+  StrokePoint,
+  Stroke,
+  SignaturePadOptions,
+  SignaturePadInstance,
+} from "./signature-pad";
+export {
+  SignaturePadManager,
+  createSignaturePad,
+} from "./signature-pad";
