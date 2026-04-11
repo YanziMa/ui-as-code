@@ -39794,3 +39794,51 @@ export { createMarquee } from "./marquee-utils";
 export type { MarqueeOptions, MarqueeInstance, MarqueeDirection, MarqueeFillMode } from "./marquee-utils";
 export { createTypingIndicator, createTextReveal } from "./typing-indicator-utils";
 export type { TypingIndicatorOptions, TextRevealOptions, TextRevealInstance, TypingStyle, TypingSize } from "./typing-indicator-utils";
+// --- Badge/Card Utilities ---
+export {
+  createCard,
+  createBadge,
+  type BadgeOptions,
+  type BadgePosition,
+  type BadgeVariant,
+  type CardLayout,
+  type CardSize,
+  type CardAction,
+  type CardMedia,
+  type CardStatsItem,
+  type CardOptions,
+  type CardInstance,
+} from "./badge-card-utils";
+
+// --- Price Tag Utilities ---
+export {
+  createPriceTag,
+  createTieredPricing,
+  formatCurrency,
+  calculateSavings,
+  type CurrencyCode,
+  type CurrencyConfig,
+  type PriceStyle,
+  type DiscountType,
+  type PeriodUnit,
+  type PriceTagOptions,
+  type PriceTagInstance,
+  type TieredPrice,
+  type TieredPricingOptions,
+  type TieredPricingInstance,
+} from "./price-tag-utils";
+
+// --- Status Dot Utilities ---
+export {
+  createStatusDot,
+  createStatusList,
+  type StatusDotVariant,
+  type StatusDotSize,
+  type StatusDotShape,
+  type StatusDotPosition,
+  type StatusDotOptions,
+  type StatusDotInstance,
+  type StatusListItem,
+  type StatusListOptions,
+  type StatusListInstance,
+} from "./status-dot-utils";
