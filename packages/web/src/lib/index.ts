@@ -34666,3 +34666,27 @@ export type {
   SkeletonOptions,
   SkeletonBlockOptions,
 } from "./skeleton-utils";
+// --- Batch 1141: Empty State, Avatar, Badge ---
+export { createEmptyState } from "./empty-state-utils";
+export type {
+  EmptyStateType,
+  EmptyStateOptions,
+} from "./empty-state-utils";
+
+export { createAvatar, createAvatarGroup, generateAvatarColor, getInitials } from "./avatar-utils";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar-utils";
+
+export { createBadge, createDotBadge, createTag } from "./badge-utils";
+export type {
+  BadgeVariant,
+  BadgeSize,
+  DotPosition,
+  BadgeOptions,
+  DotBadgeOptions,
+  TagOptions,
+} from "./badge-utils";
