@@ -20976,3 +20976,35 @@ export type {
 export {
   createScrollProgress,
 } from "./scroll-progress";
+
+// --- Float Label ---
+export type {
+  FloatLabelVariant,
+  FloatLabelSize,
+  FloatLabelOptions,
+  FloatLabelInstance,
+} from "./float-label";
+export {
+  createFloatLabel,
+} from "./float-label";
+
+// --- Ellipsis Text ---
+export type {
+  EllipsisPosition,
+  EllipsisTextOptions,
+  EllipsisTextInstance,
+} from "./ellipsis-text";
+export {
+  createEllipsisText,
+} from "./ellipsis-text";
+
+// --- Countdown Timer ---
+export type {
+  CountdownDisplayMode,
+  CountdownUnit,
+  CountdownTimerOptions,
+  CountdownTimerInstance,
+} from "./countdown-timer";
+export {
+  createCountdownTimer,
+} from "./countdown-timer";
