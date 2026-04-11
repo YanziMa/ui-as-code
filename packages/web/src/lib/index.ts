@@ -47421,3 +47421,16 @@ export { createOfflineManager } from "./offline";
 export type { OidcDiscovery as OIDCDisc, OidcConfig as OIDCCfg, IdTokenClaims as OIDCClaims } from "./oidc";
 export type { IdTokenValidationResult as OIDCValRes, OidcSessionState as OIDCSess, OidcEventHandler as OIDCEvent } from "./oidc";
 export { OidcClient, createOidcClient } from "./oidc";
+
+// --- onboarding-tour ---
+export type { TourStep as TourStp, TourOptions as TourOpts, TourInstance as TourInst } from "./onboarding-tour";
+export { TourManager, createTour } from "./onboarding-tour";
+
+// --- onboarding-wizard ---
+export type { OnboardingStep as OBWizStep, OnboardingOptions as OBWizOpts, OnboardingInstance as OBWizInst } from "./onboarding-wizard";
+export { createOnboarding as createOBWizard } from "./onboarding-wizard";
+
+// --- onboarding ---
+export type { OnboardingStepType as OBStepType, OnboardingField as OBField, OnboardingStep as OBStep } from "./onboarding";
+export type { OnboardingOptions as OBOpts, OnboardingInstance as OBInst } from "./onboarding";
+export { createOnboarding as createOnboardingFlow } from "./onboarding";
