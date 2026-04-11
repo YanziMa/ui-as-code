@@ -24691,3 +24691,14 @@ export type { KanbanBoardOptions, KanbanBoardInstance, KanbanCard, KanbanColumn 
 // --- calendar-view ---
 export { createCalendar } from "./calendar-view";
 export type { CalendarOptions, CalendarInstance, CalendarEvent, CalendarView } from "./calendar-view";
+// --- timeline-viewer ---
+export { createTimeline } from "./timeline-viewer";
+export type { TimelineOptions, TimelineInstance, TimelineEvent, TimelineGroup } from "./timeline-viewer";
+
+// --- gantt-chart ---
+export { createGanttChart } from "./gantt-chart";
+export type { GanttChartOptions, GanttChartInstance, GanttTask } from "./gantt-chart";
+
+// --- mind-map ---
+export { createMindMap } from "./mind-map";
+export type { MindMapOptions, MindMapInstance, MindMapNode } from "./mind-map";
