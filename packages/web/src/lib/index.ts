@@ -17840,3 +17840,41 @@ export type {
   RatingInstance,
   StarIconType,
 } from "./rating";
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeOptions,
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  StatusDotOptions,
+} from "./badge";
+export {
+  TagManager,
+  createTag,
+  createTagGroup,
+} from "./tag";
+export type {
+  TagOptions,
+  TagInstance,
+  TagVariant,
+  TagSize,
+  TagShape,
+  TagGroupOptions,
+  TagGroupInstance,
+} from "./tag";
+export {
+  AvatarGroupManager,
+  createAvatarGroup,
+} from "./avatar-group";
+export type {
+  AvatarItem,
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+  StackDirection,
+} from "./avatar-group";
