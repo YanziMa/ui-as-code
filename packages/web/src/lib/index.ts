@@ -31516,3 +31516,15 @@ export type { MutationFilter, MutationObserverOptions, SimplifiedMutationRecord,
 // --- Intersection Observer ---
 export { IntersectionWatcher, createIntersectionObserver, lazyLoadImages, watchVisibility, createInfiniteScrollSentinel } from "./intersection-observer";
 export type { VisibilityState, ObserveMode, IntersectionOptions, IntersectionEntryEx, IntersectionInstance } from "./intersection-observer";
+
+// --- Anchored Position ---
+export { AnchoredPositioner, createAnchoredPosition } from "./anchored-position";
+export type { AnchorPlacement, AnchorAlignment, AnchorOptions, ComputedPosition } from "./anchored-position";
+
+// --- Floating UI ---
+export { FloatingEngine, createFloating, flip, shift, size as floatingSize, arrow } from "./floating-ui";
+export type { FloatingPlacement, MiddlewareFn, FloatingData, FloatingOptions, FloatingInstance } from "./floating-ui";
+
+// --- Sortable ---
+export { SortableList, createSortable } from "./sortable";
+export type { SortableItem, SortableOptions, SortableInstance } from "./sortable";
