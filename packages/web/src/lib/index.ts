@@ -41650,3 +41650,10 @@ export { createTabs } from "./tabs-manager";
 export type { TabsOptions, TabsInstance, TabPanel, TabVariant, TabPosition, TabOverflowMode } from "./tabs-manager";
 export { createBreadcrumb } from "./breadcrumb-nav";
 export type { BreadcrumbOptions, BreadcrumbInstance, BreadcrumbItem } from "./breadcrumb-nav";
+// --- Batch 1307: Notification Toast, Modal Dialog, Drawer Panel ---
+export { ToastManager, getToastManager, showToast, toastSuccess, toastError, toastWarning, toastInfo } from "./notification-toast";
+export type { ToastOptions, ToastInstance, ToastManagerOptions, ToastType, ToastPosition, ToastAction } from "./notification-toast";
+export { createModal } from "./modal-dialog";
+export type { ModalOptions, ModalInstance, ModalSize, ModalVariant } from "./modal-dialog";
+export { createDrawer } from "./drawer-panel";
+export type { DrawerOptions, DrawerInstance, DrawerPlacement, DrawerSize } from "./drawer-panel";
