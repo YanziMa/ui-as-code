@@ -31683,3 +31683,30 @@ export type {
   PaginationOptions,
   PaginationInstance,
 } from "./pagination";
+
+// --- Batch 1064: Chip Input, Time Picker, Calendar View ---
+
+export { ChipInputManager, createChipInput } from "./chip-input";
+export type {
+  ChipInputOptions,
+  ChipInputInstance,
+  ChipData,
+  ChipSuggestion,
+} from "./chip-input";
+
+export { createTimePicker } from "./time-picker";
+export type {
+  TimePickerOptions,
+  TimePickerInstance,
+  TimeFormat,
+  TimePickerMode,
+} from "./time-picker";
+
+export { createCalendar } from "./calendar-view";
+export type {
+  CalendarOptions,
+  CalendarInstance,
+  CalendarEvent,
+  CalendarView,
+  WeekStart,
+} from "./calendar-view";
