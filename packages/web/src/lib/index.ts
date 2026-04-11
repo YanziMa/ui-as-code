@@ -18663,3 +18663,33 @@ export type {
   PaginationInstance,
   PaginationSize,
 } from "./pagination-lite";
+export {
+  createSplitButton,
+} from "./splitter";
+export type {
+  SplitButtonOptions,
+  SplitButtonInstance,
+  SplitButtonItem,
+  SplitButtonSize,
+  SplitButtonVariant,
+} from "./splitter";
+export {
+  createTabs,
+} from "./tabs-lite";
+export type {
+  TabsOptions,
+  TabsInstance,
+  TabItem,
+  TabsVariant,
+  TabsDirection,
+} from "./tabs-lite";
+export {
+  createAccordion,
+} from "./accordion-lite";
+export type {
+  AccordionOptions,
+  AccordionInstance,
+  AccordionItem,
+  AccordionVariant,
+  AccordionSize,
+} from "./accordion-lite";
