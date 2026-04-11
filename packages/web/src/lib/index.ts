@@ -32208,3 +32208,42 @@ export type { Rect, Size, Position, Offset, ViewportInfo, ElementInfo, Breakpoin
 // --- focus-trap ---
 export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap";
 export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
+
+// --- animate ---
+export {
+  Animator,
+  staggerAnimate,
+  scrollTrigger,
+  easings,
+  resolveEasing,
+  type Keyframe,
+  type AnimationOptions,
+  type AnimationInstance,
+  type StaggerOptions,
+  type TimelineOptions,
+} from "./animate";
+
+// --- debounce-throttle ---
+export {
+  Debounced,
+  Throttled,
+  debounce,
+  throttle,
+  debouncePromise,
+  rafThrottle,
+  idleThrottle,
+  type DebounceOptions,
+  type ThrottleOptions,
+  type RateLimitStats,
+} from "./debounce-throttle";
+
+// --- event-bus ---
+export {
+  EventBus,
+  createEventBus,
+  type EventCallback,
+  type EventMiddleware,
+  type Subscription,
+  type EmittedEvent,
+  type EventBusOptions,
+} from "./event-bus";
