@@ -31783,3 +31783,33 @@ export type {
   StatsVariant,
   SparklinePoint,
 } from "./stats-card";
+
+// --- Dropzone ---
+export {
+  DropzoneManager,
+  createDropzone,
+  type DropzoneOptions,
+  type DropzoneInstance,
+  type DropzoneFile,
+  type FileValidationRule,
+  type FileValidationError,
+} from "./dropzone";
+
+// --- Image Gallery ---
+export {
+  ImageGalleryManager,
+  createImageGallery,
+  type ImageGalleryOptions,
+  type ImageGalleryInstance,
+  type GalleryImage,
+} from "./image-gallery";
+
+// --- Countdown ---
+export {
+  CountdownManager,
+  createCountdown,
+  type CountdownOptions,
+  type CountdownInstance,
+  type CountdownSize,
+  type CountdownVariant,
+} from "./countdown";
