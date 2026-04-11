@@ -32374,3 +32374,35 @@ export {
   type SkeletonCardOptions,
   type SkeletonTableOptions,
 } from "./skeleton";
+
+// --- progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+  type ProgressState,
+  type ProgressCallback,
+  type ProgressController,
+  type MultiProgressController,
+  type StepProgressController,
+} from "./progress";
+
+// --- spinner ---
+export {
+  createSpinner,
+  miniSpinner,
+  fullPageSpinner,
+  type SpinnerVariant,
+  type SpinnerSize,
+  type SpinnerOptions,
+} from "./spinner";
+
+// --- breadcrumb ---
+export {
+  BreadcrumbManager,
+  createBreadcrumb,
+  type BreadcrumbItem,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+} from "./breadcrumb";
