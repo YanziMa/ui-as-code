@@ -45900,3 +45900,50 @@ export {
   type ValidationError as ImageValidationError,
   type ImageUploaderInstance,
 } from "./image-uploader";
+// image-utils
+export {
+  getImageDimensions,
+  loadImage as loadImg,
+  imageToCanvas,
+  resizeImage as resizeImgUtil,
+  cropImage,
+  applyFilters,
+  convertFormat,
+  generateThumbnail,
+  compressImage as compressImgUtil,
+  getDominantColor,
+  getAverageColor,
+  createCollage,
+  addWatermark,
+  detectOrientation,
+  getAspectRatio,
+  fileToDataUrl,
+  fileToArrayBuffer,
+  downloadImage,
+  formatFileSize as imgFormatFileSize,
+  isValidImageType,
+  getExifOrientation,
+  type ImageDimensions,
+  type ImageProcessingOptions,
+  type CropRegion,
+  type FilterOptions,
+} from "./image-utils";
+
+// image-viewer
+export {
+  ImageViewerManager,
+  createImageViewer,
+  type ImageViewerImage,
+  type ImageViewerTool,
+  type ImageViewerOptions,
+  type ImageViewerInstance,
+} from "./image-viewer";
+
+// image-zoom
+export {
+  createImageZoom,
+  type ZoomMode,
+  type ZoomLensShape,
+  type ImageZoomOptions,
+  type ImageZoomInstance,
+} from "./image-zoom";
