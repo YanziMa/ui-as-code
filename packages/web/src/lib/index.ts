@@ -27516,3 +27516,39 @@ export {
   type AvatarSize,
   type AvatarShape,
 } from "./avatar";
+
+// --- badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+  type BadgeOptions,
+  type BadgeVariant,
+  type BadgePosition,
+  type BadgeSize,
+  type StatusDotOptions,
+} from "./badge";
+
+// --- progress ---
+export {
+  createProgressTracker,
+  createMultiProgressTracker,
+  createStepProgress,
+  formatProgress,
+  type ProgressState,
+  type ProgressCallback,
+  type ProgressController,
+  type MultiProgressController,
+  type StepProgressController,
+} from "./progress";
+
+// --- rating ---
+export {
+  RatingManager,
+  createRating,
+  type RatingOptions,
+  type RatingInstance,
+  type StarIconType,
+} from "./rating";
