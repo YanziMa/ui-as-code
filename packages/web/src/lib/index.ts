@@ -29212,3 +29212,27 @@ export {
   type ShortcutsManagerOptions,
   type ShortcutsState,
 } from "./shortcuts-manager.js";
+// --- Batch 970: Undo/Redo Manager, Search Highlight, Split Pane ---
+
+export {
+  UndoRedoManager,
+  createUndoRedoManager,
+  type UndoState,
+  type UndoRedoOptions,
+  type UndoGroupHandle,
+  type UndoRedoStats,
+} from "./undo-redo-manager.js";
+
+export {
+  SearchHighlightManager,
+  createSearchHighlight,
+  type SearchHighlightOptions,
+  type SearchHighlightInstance,
+} from "./search-highlight.js";
+
+export {
+  createSplitPane,
+  type SplitPaneOptions,
+  type SplitPaneInstance,
+  type SplitOrientation,
+} from "./split-pane.js";
