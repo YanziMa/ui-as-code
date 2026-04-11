@@ -21675,3 +21675,35 @@ export type {
 export {
   createBackToTop,
 } from "./back-to-top";
+
+// --- Countdown ---
+export type {
+  CountdownSize,
+  CountdownVariant,
+  CountdownOptions,
+  CountdownInstance,
+} from "./countdown";
+export {
+  CountdownManager,
+  createCountdown,
+} from "./countdown";
+
+// --- Ripple ---
+export type {
+  RippleOptions,
+  RippleInstance,
+} from "./ripple";
+export {
+  createRipple,
+  initRipples,
+} from "./ripple";
+
+// --- Virtual List ---
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list";
+export {
+  createVirtualList,
+} from "./virtual-list";
