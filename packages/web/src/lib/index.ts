@@ -42223,3 +42223,8 @@ export { createCalendarGrid } from "./calendar-grid";
 export type { CalendarSelectionMode, CalendarWeekStart, CalendarEvent, CalendarGridOptions, CalendarGridInstance } from "./calendar-grid";
 export { createContextMenuV2 } from "./context-menu-v2";
 export type { ContextMenuItemType, ContextMenuItem, ContextMenuV2Options, ContextMenuV2Instance } from "./context-menu-v2";
+export { cors, corsHeaders } from "./cors";
+export { IndexedDBManager, EnhancedLocalStorage, EnhancedSessionStorage, InMemoryDatabase, CacheManager, SyncQueue, DataMigrationHelper } from "./database-utils";
+export type { IDBSchema, IDBConfig, IndexQueryOptions, QueryResult, CacheStrategy, SyncItem, SyncStatus, ConflictResolver, StorageOptions, ColumnDef, TableDef, MigrationStep, BackupMetadata } from "./database-utils";
+export { createDialogV2 } from "./dialog-v2";
+export type { DialogSize, DialogVariant, DialogV2Options, DialogV2Instance } from "./dialog-v2";
