@@ -36393,3 +36393,38 @@ export type {
   AvatarOptions,
   AvatarGroupOptions,
 } from "./avatar-utils.js";
+// --- badge-utils ---
+export {
+  createBadge,
+  createDotBadge,
+  createTag,
+} from "./badge-utils.js";
+export type {
+  BadgeVariant,
+  BadgeSize,
+  DotPosition,
+  BadgeOptions,
+  DotBadgeOptions,
+  TagOptions,
+} from "./badge-utils.js";
+
+// --- chip-utils ---
+export { createChip, createChipSet } from "./chip-utils.js";
+export type {
+  ChipType,
+  ChipSize,
+  ChipColor,
+  ChipConfig,
+  ChipSetOptions,
+  ChipSetInstance,
+} from "./chip-utils.js";
+
+// --- divider-utils ---
+export { createDivider, createHr, createVr, createDividerGroup } from "./divider-utils.js";
+export type {
+  DividerOrientation,
+  DividerVariant,
+  DividerLabelPosition,
+  DividerOptions,
+  DividerGroupOptions,
+} from "./divider-utils.js";
