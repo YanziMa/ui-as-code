@@ -27615,3 +27615,33 @@ export {
   type SelectInstance,
   type SelectOption,
 } from "./select";
+
+// --- tabs ---
+export {
+  TabsManager,
+  createTabs,
+  type TabsOptions,
+  type TabsInstance,
+  type TabItem,
+  type TabOrientation,
+  type TabVariant,
+} from "./tabs";
+
+// --- accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+  type AccordionOptions,
+  type AccordionInstance,
+  type AccordionItem,
+  type AccordionMode,
+} from "./accordion";
+
+// --- carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+  type CarouselOptions,
+  type CarouselInstance,
+  type CarouselSlide,
+} from "./carousel";
