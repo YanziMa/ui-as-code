@@ -41490,3 +41490,32 @@ export {
   type HighlightMatchStrategy,
   type HighlightTag,
 } from "./highlight";
+// --- Image Cropper ---
+export {
+  createCropper,
+  type CropperOptions,
+  type CropperInstance,
+  type CropRegion,
+  type CropAspectRatio,
+  type CropOutputFormat,
+  type CropGridStyle,
+} from "./cropper";
+
+// --- Zoom & Pan ---
+export {
+  createZoomPan,
+  type ZoomPanOptions,
+  type ZoomPanInstance,
+  type ZoomPanState,
+  type PanConstraint,
+  type ZoomOrigin,
+} from "./zoom-pan";
+
+// --- Lightbox / Image Viewer ---
+export {
+  LightboxManager,
+  createLightbox,
+  type LightboxOptions,
+  type LightboxInstance,
+  type LightboxImage,
+} from "./lightbox";
