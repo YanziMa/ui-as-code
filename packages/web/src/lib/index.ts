@@ -40385,3 +40385,14 @@ export type { FlipperOptions, FlipperInstance, FlipSide, FlipDirection, FlipEasi
 // --- Marquee ---
 export { createMarquee } from "./marquee-utils";
 export type { MarqueeOptions, MarqueeInstance, MarqueeDirection, MarqueeFillMode } from "./marquee-utils";
+// --- Scroll Spy ---
+export { createScrollSpy } from "./scroll-spy-utils";
+export type { ScrollSpyOptions, ScrollSpyInstance, SpySection } from "./scroll-spy-utils";
+
+// --- Scroll Progress ---
+export { createScrollProgress } from "./scroll-progress-utils";
+export type { ScrollProgressOptions, ScrollProgressInstance, ProgressShape, ProgressPosition } from "./scroll-progress-utils";
+
+// --- Smooth Scroll ---
+export { createSmoothScroll } from "./smooth-scroll-utils";
+export type { SmoothScrollOptions, SmoothScrollInstance, ScrollToOptions, ParallaxOptions, ParallaxInstance, ParallaxLayer, EasingFn, EasingName } from "./smooth-scroll-utils";
