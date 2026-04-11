@@ -34240,3 +34240,30 @@ export {
   type CollapseOptions,
   type CollapseInstance,
 } from "./collapse-utils";
+
+// --- breadcrumb-utils ---
+export {
+  createBreadcrumb,
+  type BreadcrumbItem,
+  type BreadcrumbOptions,
+  type BreadcrumbInstance,
+} from "./breadcrumb-utils";
+
+// --- pagination-utils ---
+export {
+  createPagination,
+  type PaginationSize,
+  type PaginationLayout,
+  type PaginationOptions,
+  type PaginationInstance,
+} from "./pagination-utils";
+
+// --- stepper-utils ---
+export {
+  createStepper,
+  type StepperOrientation,
+  type StepStatus,
+  type StepItem,
+  type StepperOptions,
+  type StepperInstance,
+} from "./stepper-utils";
