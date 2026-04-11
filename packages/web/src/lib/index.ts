@@ -20491,3 +20491,37 @@ export type {
   AccordionOptions,
   AccordionInstance,
 } from "./accordion";
+export {
+  CarouselManager,
+  createCarousel,
+} from "./carousel";
+export type {
+  CarouselSlide,
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+} from "./badge";
+export type {
+  BadgeVariant,
+  BadgePosition,
+  BadgeSize,
+  BadgeOptions,
+  StatusDotOptions,
+} from "./badge";
+export {
+  NotificationManager,
+  getNotificationManager,
+  toast,
+} from "./notification";
+export type {
+  NotificationType,
+  Notification,
+  NotificationOptions,
+  NotificationPosition,
+} from "./notification";
