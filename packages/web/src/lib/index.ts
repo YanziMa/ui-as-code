@@ -27848,3 +27848,15 @@ export type { AccordionMode, ExpandDirection, AccordionPanel, AccordionOptions, 
 // --- Tabs Manager ---
 export { createTabs } from "./tabs-manager";
 export type { TabVariant, TabPosition, TabOverflowMode, TabPanel, TabsOptions, TabsInstance } from "./tabs-manager";
+
+// --- Progress Stepper ---
+export { createProgressStepper } from "./progress-stepper";
+export type { StepStatus, StepperOrientation, StepperVariant, StepItem, ProgressStepperOptions, ProgressStepperInstance } from "./progress-stepper";
+
+// --- Skeleton Loader ---
+export { createSkeleton } from "./skeleton-loader";
+export type { SkeletonShape, SkeletonAnimation, SkeletonItem, SkeletonOptions, SkeletonInstance } from "./skeleton-loader";
+
+// --- Context Menu ---
+export { ContextMenuManager } from "./context-menu";
+export type { ContextMenuItem, ContextMenuPosition, ContextMenuOptions, ContextMenuInstance } from "./context-menu";
