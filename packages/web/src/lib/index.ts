@@ -27391,3 +27391,29 @@ export type { AudioPlayerOptions, AudioPlayerInstance, AudioTrack } from "./audi
 // --- video-player ---
 export { createVideoPlayer } from "./video-player.js";
 export type { VideoPlayerOptions, VideoPlayerInstance, VideoTrack, QualityOption, Chapter, PlaylistItem } from "./video-player.js";
+
+// --- sticky-notes ---
+export {
+  StickyNotesManager,
+  type StickyNote,
+  type StickyNotesOptions,
+  type StickyNotesState,
+} from "./sticky-notes";
+
+// --- scroll-spy ---
+export {
+  createScrollSpy,
+  createNavSpy,
+  type SpyTarget,
+  type ScrollSpyOptions,
+  type ScrollSpyInstance,
+  type NavSpyOptions,
+} from "./scroll-spy";
+
+// --- infinite-scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
