@@ -28119,3 +28119,16 @@ export type { SpinnerOptions, SpinnerVariant, SpinnerSize } from "./spinner";
 // --- Collapse ---
 export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
 export type { CollapseOptions, CollapseInstance, CollapseSize, CollapseVariant, CollapseGroupOptions, CollapseGroupInstance } from "./collapse";
+// --- Tree View ---
+export { TreeView } from "./tree-view";
+export type { TreeNodeData, TreeNode, TreeViewConfig, CheckMode } from "./tree-view";
+
+// --- Resizable ---
+export { makeResizable } from "./resizable";
+export type { ResizeOptions, ResizeState, ResizableController } from "./resizable";
+
+// --- Split Pane ---
+export { createSplitPane as createSplitPaneAdvanced } from "./resizable";
+export { createSplitPane as createSplitPaneLayout } from "./split-pane";
+export type { SplitPaneOptions as AdvancedSplitPaneOptions, SplitPaneController } from "./resizable";
+export type { SplitPaneOptions, SplitPaneInstance, SplitOrientation, SplitCollapseDirection } from "./split-pane";
