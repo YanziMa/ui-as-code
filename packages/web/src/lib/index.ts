@@ -37668,3 +37668,48 @@ export {
   stopPropagation,
   stopEvent,
 } from "./event-utils.js";
+// --- Batch 1200: Storage, Network, URL ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+  type StorageBackend,
+  type StorageOptions,
+  type StorageEntry,
+  type StorageStats,
+  type StorageMigration,
+} from "./storage-utils.js";
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+  type NetworkStatus,
+  type RetryOptions,
+  type RequestQueueItem,
+} from "./network-utils.js";
+export {
+  parseUrl,
+  buildUrlFromParts,
+  updateSearchParams,
+  removeSearchParams,
+  getQueryParams,
+  isSameOrigin,
+  normalizeUrl,
+  isAbsoluteUrl,
+  makeAbsoluteUrl,
+  getDomainFromUrl,
+  getPathnameFromUrl,
+  joinPathSegments,
+  encodeUriComponentSafe,
+  decodeUriComponentSafe,
+  urlsEqual,
+  type ParsedUrl,
+} from "./url-utils.js";
