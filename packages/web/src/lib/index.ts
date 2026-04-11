@@ -34440,3 +34440,14 @@ export type { SliderOptions, SliderInstance, SliderSize, SliderVariant } from ".
 // --- color-picker-utils ---
 export { createColorPicker, parseColor, hslToRgb, rgbToHsl, rgbToHex, formatColor } from "./color-picker-utils";
 export type { ColorPickerOptions, ColorPickerInstance, ColorValue, ColorFormat, ColorPreset } from "./color-picker-utils";
+// --- date-picker-utils ---
+export { createDatePicker } from "./date-picker-utils";
+export type { DatePickerOptions, DatePickerInstance, DatePickerSize, DatePickerVariant } from "./date-picker-utils";
+
+// --- time-picker-utils ---
+export { createTimePicker } from "./time-picker-utils";
+export type { TimePickerOptions, TimePickerInstance, TimeValue, TimeFormat, TimePickerSize } from "./time-picker-utils";
+
+// --- datetime-utils ---
+export { formatDate, parseDate, getRelativeTime, addDate, subDate, diffDates, isSameDay, isToday, isBetween, startOfDay, endOfDay, startOfWeek, startOfMonth, endOfMonth, daysInMonth, isLeapYear, getWeekNumber, getQuarter, msToDuration, formatDuration, formatTimeElapsed, formatTime, formatTime12h, generateCalendarMonth, getDayName, getMonthName } from "./datetime-utils";
+export type { Duration, DateUnit, DateFormatOptions } from "./datetime-utils";
