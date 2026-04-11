@@ -24359,3 +24359,33 @@ export {
   type AsidePosition,
   type AsideSize,
 } from "./aside";
+
+// --- Stepper ---
+export {
+  StepperManager,
+  createStepper,
+  type StepperOptions,
+  type StepperInstance,
+  type StepConfig,
+  type StepStatus,
+} from "./stepper";
+
+// --- Timeline ---
+export {
+  TimelineManager,
+  createTimeline,
+  type TimelineOptions,
+  type TimelineInstance,
+  type TimelineItem,
+  type TimelineItemStatus,
+} from "./timeline";
+
+// --- Wizard ---
+export {
+  WizardManager,
+  createWizard,
+  type WizardOptions,
+  type WizardInstance,
+  type WizardStep,
+  type WizardStepStatus,
+} from "./wizard";
