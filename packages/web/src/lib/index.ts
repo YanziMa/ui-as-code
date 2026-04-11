@@ -46098,3 +46098,15 @@ export type { JsonSchemaType, JsonSchema as JsonSchemaDef, ValidationError as Js
 // --- json-utils ---
 export { parsePath, stringifyPath, get, has, set, setImmutable, remove, removeImmutable, update, deepClone as deepCloneJsonUtils, deepMerge, walk, mapValues, filterNodes, findNode, flatten, unflatten, pickPaths, omitPaths, renameKeys, isJsonObject, isJsonArray, isJsonValue } from "./json-utils";
 export type { JsonValue, JsonObject, JsonArray, PathSegment, JsonPath, WalkOptions, WalkVisitor } from "./json-utils";
+
+// --- kanban-board ---
+export { KanbanManager, createKanban as createKanbanBoard } from "./kanban-board";
+export type { CardPriority, CardSize, KanbanLabel, KanbanCard as KbBoardCard, KanbanColumn as KbBoardColumn, KanbanSwimlane, KanbanOptions as KbBoardOptions, KanbanInstance as KbBoardInstance } from "./kanban-board";
+
+// --- kanban ---
+export { createKanbanBoard } from "./kanban";
+export type { KanbanCard as KbCard, KanbanColumn as KbCol, KanbanBoardOptions, KanbanBoardInstance } from "./kanban";
+
+// --- kbd ---
+export { createKbd } from "./kbd";
+export type { KbdSize, KbdStyle, KbdOptions } from "./kbd";
