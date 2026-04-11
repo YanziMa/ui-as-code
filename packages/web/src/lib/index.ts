@@ -22535,3 +22535,37 @@ export {
   type GraphNode,
   type GraphEdge,
 } from "./graph";
+
+// --- permission ---
+export {
+  hasPermission,
+  hasRoleLevel,
+  getPermissions,
+  ACL,
+  appACL,
+  type Role,
+  type Permission,
+} from "./permission";
+
+// --- rate-limit ---
+export {
+  TokenBucket,
+  SlidingWindowLimiter,
+  FixedWindowLimiter,
+  AdaptiveLimiter,
+  createRateLimiter,
+  type RateLimitResult,
+  type RateLimitOptions,
+  type AdaptiveOptions,
+  type CreateRateLimiterOptions,
+  type RateLimiterType,
+} from "./rate-limit";
+
+// --- circuit-breaker ---
+export {
+  CircuitBreaker,
+  createCircuitBreaker,
+  type CircuitState,
+  type CircuitBreakerConfig,
+  type CircuitBreakerStats,
+} from "./circuit-breaker";
