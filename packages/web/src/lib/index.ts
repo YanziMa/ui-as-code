@@ -38154,3 +38154,42 @@ export type {
   FsmConfig,
   FsmInstance,
 } from "./fsm-utils";
+// --- Scheduler Utilities ---
+export {
+  debounce,
+  throttle,
+  rafLoop,
+  scheduleIdle,
+  RateLimiter,
+  createScheduler,
+} from "./scheduler-utils";
+export type {
+  ScheduledJob,
+  SchedulerInstance,
+} from "./scheduler-utils";
+
+// --- Cache Utilities ---
+export {
+  LRUCache,
+  AsyncLRUCache,
+  createTimedCache,
+} from "./cache-utils";
+export type {
+  CacheEntry,
+  CacheOptions,
+  AsyncCacheOptions,
+} from "./cache-utils";
+
+// --- Event Bus Utilities ---
+export {
+  EventBus,
+  getEventBus,
+  destroyGlobalBus,
+} from "./event-bus-utils";
+export type {
+  EventKey,
+  EventHandler,
+  EventMiddleware,
+  Subscription,
+  EventBusOptions,
+} from "./event-bus-utils";
