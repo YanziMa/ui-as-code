@@ -46869,3 +46869,57 @@ export {
   quickNotify,
   requestNotificationPermission,
 } from "./notification-permissions";
+
+// --- notification-system ---
+export type {
+  NotificationType as NSysType,
+  NotificationPriority as NSysPriority,
+} from "./notification-system";
+export type {
+  Notification as NSysNotif,
+  NotificationConfig as NSysConfig,
+} from "./notification-system";
+export {
+  NotificationCenter as NSysCenter,
+  PushNotificationManager,
+} from "./notification-system";
+
+// --- notification-toast-utils ---
+export type {
+  ToastType as NTUType,
+  ToastPosition as NTUPos,
+} from "./notification-toast-utils";
+export type {
+  ToastOptions as NTUOpts,
+  ToastInstance as NTUInst,
+  ToastManagerOptions as NTUMgrOpts,
+} from "./notification-toast-utils";
+export {
+  createToastManager,
+  toast,
+  toastSuccess as toastSuccessUtil,
+  toastError as toastErrorUtil,
+  toastWarning as toastWarningUtil,
+  destroyGlobalToaster,
+} from "./notification-toast-utils";
+
+// --- notification-toast ---
+export type {
+  ToastType as NTType,
+  ToastPosition as NTPos,
+  ToastAction as NTAction,
+} from "./notification-toast";
+export type {
+  ToastOptions as NTOpts,
+  ToastInstance as NTInst,
+  ToastManagerOptions as NTMgrOpts,
+} from "./notification-toast";
+export {
+  ToastManager,
+  getToastManager,
+  showToast,
+  toastSuccess,
+  toastError,
+  toastWarning,
+  toastInfo,
+} from "./notification-toast";
