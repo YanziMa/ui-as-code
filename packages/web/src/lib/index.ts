@@ -29648,3 +29648,14 @@ export type { UserCardOptions, UserCardInstance, UserStats, SocialLink, UserCard
 // --- empty-state ---
 export { createEmptyState, EmptyStateManager } from "./empty-state";
 export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+// --- code-block ---
+export { createCodeBlock, CodeBlockManager } from "./code-block";
+export type { CodeBlockOptions, CodeBlockInstance, CodeTheme } from "./code-block";
+
+// --- markdown-renderer ---
+export { createMarkdownRenderer } from "./markdown-renderer";
+export type { MdRenderOptions, MdRendererInstance, TocEntry } from "./markdown-renderer";
+
+// --- syntax-highlighter ---
+export { createSyntaxHighlight } from "./syntax-highlighter";
+export type { SyntaxHighlightOptions, SyntaxHighlightInstance, HighlightTheme } from "./syntax-highlighter";
