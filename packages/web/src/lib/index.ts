@@ -21740,3 +21740,42 @@ export {
   createScrollSpy,
   createNavSpy,
 } from "./scroll-spy";
+
+// --- Mask ---
+export type {
+  MaskMode,
+  MaskOptions,
+  CutoutOptions,
+  MaskInstance,
+} from "./mask";
+export {
+  createMask,
+  createSpotlight,
+} from "./mask";
+
+// --- Waterfall ---
+export type {
+  PipelineStep,
+  PipelineContext,
+  PipelineResult,
+} from "./waterfall";
+export {
+  runPipeline,
+  parallel,
+  waterfall,
+  raceWithCleanup,
+} from "./waterfall";
+
+// --- Steps ---
+export type {
+  StepStatus,
+  StepItem,
+  StepsOrientation,
+  StepsVariant,
+  StepsOptions,
+  StepsInstance,
+} from "./steps";
+export {
+  StepsManager,
+  createSteps,
+} from "./steps";
