@@ -44353,3 +44353,40 @@ export type {
   SpeechManagerInstance,
 } from "./speech-synthesis";
 export { SpeechSynthesisManager, createSpeechSynthesisManager, speak } from "./speech-synthesis";
+// --- speech-utils ---
+export type {
+  VoiceInfo as SpeechUtilsVoiceInfo,
+  SpeechOptions as UtilsSpeechOptions,
+  RecognitionOptions as UtilsRecognitionOptions,
+  PronunciationScore,
+  SsmlNode,
+  VoiceActivityConfig,
+} from "./speech-utils";
+export {
+  TextToSpeech,
+  SpeechRecognizer,
+  parseSsml,
+  ssmlToSpeechCommands,
+  speakSsml,
+  scorePronunciation,
+  VoiceActivityDetector,
+  AudioRecorder,
+} from "./speech-utils";
+
+// --- spin ---
+export type {
+  SpinType,
+  SpinSize,
+  SpinOptions,
+  SpinInstance,
+} from "./spin";
+export { SpinManager, createSpin } from "./spin";
+
+// --- spinner-lite ---
+export type {
+  SpinnerVariant as LiteSpinnerVariant,
+  SpinnerSize as LiteSpinnerSize,
+  SpinnerOptions as LiteSpinnerOptions,
+  FullPageSpinnerOptions,
+} from "./spinner-lite";
+export { createSpinner as createLiteSpinner, fullPageSpinner, miniSpinner } from "./spinner-lite";
