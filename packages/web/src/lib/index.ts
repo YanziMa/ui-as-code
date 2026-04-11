@@ -34495,3 +34495,14 @@ export type { SortableListOptions, SortableListInstance, SortableItemConfig, Sor
 // --- resizable-utils (pre-existing) ---
 export { createResizable } from "./resizable-utils";
 export type { ResizableOptions, ResizableInstance, ResizeEdge } from "./resizable-utils";
+// --- anchor-utils ---
+export { createAnchor } from "./anchor-utils";
+export type { AnchorOptions, AnchorInstance, AnchorResult, AnchorPlacement, AnchorAlignment } from "./anchor-utils";
+
+// --- portal-utils ---
+export { createPortal, createPortalManager } from "./portal-utils";
+export type { PortalOptions, PortalInstance, PortalManagerConfig, PortalManagerInstance } from "./portal-utils";
+
+// --- overlay-manager-utils ---
+export { createOverlayManager } from "./overlay-manager-utils";
+export type { OverlayManagerOptions, OverlayManagerInstance, OverlayEntry, OverlayPriority, OverlayState } from "./overlay-manager-utils";
