@@ -18496,3 +18496,33 @@ export type {
   FilePreviewInstance,
   FileType,
 } from "./file-preview";
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalOptions,
+  ModalInstance,
+  ModalSize,
+  ModalPosition,
+} from "./modal";
+export {
+  AlertManager,
+  createAlert,
+} from "./alert";
+export type {
+  AlertOptions,
+  AlertInstance,
+  AlertVariant,
+  AlertSize,
+  AlertAction,
+} from "./alert";
+export {
+  createConfirmDialog,
+} from "./confirm-dialog";
+export type {
+  ConfirmDialogOptions,
+  ConfirmDialogInstance,
+  ConfirmDialogVariant,
+  ConfirmButtonVariant,
+  ConfirmButton,
+} from "./confirm-dialog";
