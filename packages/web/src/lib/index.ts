@@ -44304,3 +44304,28 @@ export type {
   SortableInstance as CoreSortableInstance,
 } from "./sortable";
 export { SortableList, createSortable } from "./sortable";
+// --- spacer-utils ---
+export type {
+  SpacerSize,
+  SpacerOptions,
+  SpacerStackOptions,
+} from "./spacer-utils";
+export { createSpacer, vSpacer, hSpacer, lineBreak, createSpacerStack } from "./spacer-utils";
+
+// --- sparkline-chart ---
+export type {
+  SparklineType as ChartSparklineType,
+  TrendIndicator,
+  SparklinePoint,
+  SparklineOptions as ChartSparklineOptions,
+  SparklineInstance as ChartSparklineInstance,
+} from "./sparkline-chart";
+export { createSparklineChart } from "./sparkline-chart";
+
+// --- sparkline ---
+export type {
+  SparklineType as SvgSparklineType,
+  SparklineOptions as SvgSparklineOptions,
+  SparklineInstance as SvgSparklineInstance,
+} from "./sparkline";
+export { createSparkline } from "./sparkline";
