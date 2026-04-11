@@ -41586,3 +41586,27 @@ export {
   type SortDirection,
   type RowSelectionMode,
 } from "./list-board";
+// --- Signature Pad ---
+export {
+  SignaturePadManager,
+  createSignaturePad,
+  type SignaturePadOptions,
+  type SignaturePadInstance,
+  type StrokePoint,
+  type Stroke,
+} from "./signature-pad";
+
+// --- Range Slider ---
+export {
+  createRangeSlider,
+  type RangeSliderOptions,
+  type RangeSliderInstance,
+} from "./range-slider";
+
+// --- Mention Input ---
+export {
+  createMentionInput,
+  type MentionOptions,
+  type MentionInputInstance,
+  type MentionUser,
+} from "./mention-input";
