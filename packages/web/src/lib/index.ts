@@ -26531,3 +26531,31 @@ export type {
   AuthTokenConfig,
   TokenInterceptorConfig,
 } from "./auth-token";
+
+// --- RBAC ---
+export {
+  RBACEngine,
+  createRBAC,
+  BUILT_IN_ROLES,
+} from "./rbac";
+export type {
+  RoleDefinition,
+  RoleAssignment,
+  PermissionCheckResult,
+  RbacConfig,
+  AuditEntry,
+} from "./rbac";
+
+// --- ACL ---
+export {
+  ACLEngine,
+  createACL,
+} from "./acl";
+export type {
+  AclResource,
+  AclEntry,
+  AclCondition,
+  AclCheckContext,
+  AclDecision,
+  AclConfig,
+} from "./acl";
