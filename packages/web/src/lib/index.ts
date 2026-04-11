@@ -49697,3 +49697,33 @@ export type {
 } from "./rich-text-toolbar";
 export { DEFAULT_BUTTONS } from "./rich-text-toolbar";
 export { createRichTextToolbar } from "./rich-text-toolbar";
+
+// --- rich-text.ts ---
+export type {
+  FormatCommand as RTxtCmd,
+  ToolbarButton as RTxtBtn,
+  RichTextOptions as RTxtOpts,
+  RichTextInstance as RTxtInst,
+} from "./rich-text";
+export { RichTextManager } from "./rich-text";
+export { createRichText } from "./rich-text";
+
+// --- richtext-editor.ts ---
+export type {
+  EditorFormat as RTEdFmt,
+  ToolbarButton as RTEdBtn,
+  RichTextEditorOptions as RTEdOpts,
+  RichTextEditorInstance as RTEdInst,
+} from "./richtext-editor";
+export { DEFAULT_BUTTONS as RTEdDefaultBtns } from "./richtext-editor";
+export { createRichTextEditor as createRichTextEditorV2 } from "./richtext-editor";
+
+// --- richtext.ts ---
+export type {
+  BlockType as RTextBlockType,
+  TextAlign as RTextAlign,
+  RichTextOptions as RTextOpts,
+  RichTextInstance as RTextInst,
+} from "./richtext";
+export { sanitizeHTML, stripHTML, extractStructuredText } from "./richtext";
+export { createRichTextEditor as createRichTextEditorV3 } from "./richtext";
