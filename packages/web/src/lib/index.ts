@@ -51579,3 +51579,69 @@ export {
   type SsMiddleware as StStr_Middleware,
   type SsSelector as StStr_Selector,
 } from "./state-store";
+
+// --- state-utils ---
+export {
+  createState,
+  createDerived,
+  createMachine as createStateUtilsMachine,
+  diffState,
+  statesEqual,
+  type StateContainerOptions,
+  type StateContainer,
+  type StateListener as StUtlListener,
+  type MachineState,
+  type MachineEvent,
+  type MachineTransition,
+  type MachineConfig,
+  type MachineInstance,
+} from "./state-utils";
+export {
+  createState as StUtl_createState,
+  createDerived as StUtl_createDerived,
+  createStateUtilsMachine as StUtl_createMachine,
+  diffState as StUtl_diffState,
+  statesEqual as StUtl_statesEqual,
+  type StateContainerOptions as StUtl_Options,
+  type StateContainer as StUtl_Container,
+  type StUtlListener as StUtl_ListenerType,
+  type MachineState as StUtl_MachineState,
+  type MachineEvent as StUtl_MachineEvent,
+  type MachineTransition as StUtl_MachineTransition,
+  type MachineConfig as StUtl_MachineConfig,
+  type MachineInstance as StUtl_MachineInstance,
+} from "./state-utils";
+
+// --- state ---
+export {
+  UndoableStore,
+  EventBus,
+  globalEvents,
+  type HistoryState,
+} from "./state";
+export {
+  UndoableStore as St_UndoableStore,
+  EventBus as St_EventBus,
+  globalEvents as St_globalEvents,
+  type HistoryState as St_HistoryState,
+} from "./state";
+
+// --- statistic ---
+export {
+  StatManager,
+  createStat,
+  type StatOptions,
+  type StatInstance,
+  type TrendDirection,
+  type StatVariant,
+  type TrendColor,
+} from "./statistic";
+export {
+  StatManager as Stt_Manager,
+  createStat as Stt_createStat,
+  type StatOptions as Stt_Options,
+  type StatInstance as Stt_Instance,
+  type TrendDirection as Stt_TrendDirection,
+  type StatVariant as Stt_Variant,
+  type TrendColor as Stt_TrendColor,
+} from "./statistic";
