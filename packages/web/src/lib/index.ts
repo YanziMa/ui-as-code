@@ -28909,3 +28909,15 @@ export type { HashHistoryEntry, HashHistoryOptions, HashHistoryInstance } from "
 // --- state-machine-viz ---
 export { visualizeStateMachine, renderMachine } from "./state-machine-viz";
 export type { StateId as VizStateId, EventLabel as VizEventLabel, StateNode as VizStateNode, TransitionEdge as VizTransitionEdge, MachineDefinition as VizMachineDefinition, VizOptions, VizColorTheme, VizInstance } from "./state-machine-viz";
+
+// --- dom-diff-patcher ---
+export { diffDom, applyPatches } from "./dom-diff-patcher";
+export type { PatchOp, Patch, DiffResult, DomDiffOptions } from "./dom-diff-patcher";
+
+// --- virtual-dom-lite ---
+export { h, text, render, createDom, diff as vdiff, patch as vpatch } from "./virtual-dom-lite";
+export type { VNode, VNodeProps, VChild, Patch as VPatch, VDomOptions } from "./virtual-dom-lite";
+
+// --- morphdom-engine ---
+export { createMorphEngine, morph, morphBetween } from "./morphdom-engine";
+export type { MorphOptions, MorphStats, MorphInstance } from "./morphdom-engine";
