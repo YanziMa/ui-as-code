@@ -27769,3 +27769,11 @@ export type { ChartOptions, ChartInstance, ChartType, ChartDataset, ChartDataPoi
 export { KanbanManager, createKanban } from "./kanban";
 export type { KanbanOptions, KanbanInstance, KanbanCard, KanbanColumn, KanbanSwimlane, KanbanLabel, CardPriority as KanbanCardPriority } from "./kanban";
 export { mdToHtml, stripMd } from "./markdown";
+
+// --- Batch 877: Calendar Picker, Slider, Notification Bell ---
+export { CalendarPickerManager, createCalendarPicker } from "./calendar-picker";
+export type { CalendarPickerOptions, CalendarPickerInstance, CalendarMode, CalendarDay, WeekStart } from "./calendar-picker";
+export { SliderManager, createSlider } from "./slider";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
+export { createNotificationBell } from "./notification-bell";
+export type { NotificationBellOptions, NotificationBellInstance, NotificationItem } from "./notification-bell";
