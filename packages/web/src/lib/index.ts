@@ -42880,3 +42880,36 @@ export {
   type AnchorComputeData,
   type AnchorInstance as AnchorPositioningInstance,
 } from "./anchor-positioning-utils";
+// --- anchor-positioning ---
+export {
+  computePosition as computeAnchorPosition,
+  createArrowStyles,
+  positionElement,
+  type Placement as AnchorPosPlacement,
+  type Alignment as AnchorPosAlignment,
+  type VirtualElement,
+  type Rect as AnchorPosRect,
+  type PositionResult as AnchorPosResult,
+} from "./anchor-positioning";
+
+// --- anchor-utils ---
+export {
+  createAnchor,
+  type AnchorOptions as AnchorUtilsOptions,
+  type AnchorResult,
+  type AnchorInstance as AnchorUtilsInstance,
+  type AnchorPlacement as AnchorUtilsPlacement,
+  type AnchorAlignment,
+  type FlipBehavior,
+} from "./anchor-utils";
+
+// --- animatable ---
+export {
+  createAnimatable,
+  type AnimatableProperty,
+  type Keyframe,
+  type AnimationTimeline,
+  type EasingFunction,
+  type AnimatableOptions,
+  type AnimatableInstance,
+} from "./animatable";
