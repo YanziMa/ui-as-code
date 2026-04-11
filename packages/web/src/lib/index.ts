@@ -49431,3 +49431,37 @@ export type {
   ResizableInstance as RzUtilInstance,
 } from "./resizable-utils";
 export { createResizable as RzUtilCreate } from "./resizable-utils";
+// --- resizable ---
+export type {
+  ResizeOptions as RszOptions,
+  ResizeState as RszState,
+  ResizableController as RszController,
+  SplitPaneOptions as RszSplitPaneOpts,
+  SplitPaneController as RszSplitPaneCtrl,
+} from "./resizable";
+export {
+  makeResizable as RszMakeResizable,
+  createSplitPane as RszCreateSplitPane,
+} from "./resizable";
+
+// --- resize-handle ---
+export type {
+  HandlePosition as RHPosition,
+  ResizeHandleOptions as RHOptions,
+  ResizeState as RHState,
+  ResizeInstance as RHInstance,
+} from "./resize-handle";
+export {
+  createResizeHandle as RHCreate,
+  makeResizable as RHMakeResizable,
+} from "./resize-handle";
+
+// --- resize-observer-utils ---
+export type {
+  SizeInfo as RObsSizeInfo,
+  SizeDiff as RObsSizeDiff,
+  Breakpoint as RObsBreakpoint,
+  ResizeObserverOptions as RObsOptions,
+  ResizeObserverInstance as RObsInstance,
+} from "./resize-observer-utils";
+export { createEnhancedResizeObserver as RObsCreate } from "./resize-observer-utils";
