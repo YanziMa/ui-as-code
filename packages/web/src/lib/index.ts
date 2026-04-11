@@ -28690,3 +28690,15 @@ export type { ProgressBarOptions, ProgressBarInstance, CircularProgressOptions, 
 // --- Back to Top ---
 export { createBackToTop } from "./back-to-top";
 export type { BackToTopOptions, BackToTopInstance, BttPosition, BttSize, BttShape } from "./back-to-top";
+
+// --- Divider ---
+export { createDivider, hDivider, vDivider, labeledDivider, sectionDivider } from "./divider";
+export type { DividerOptions, DividerOrientation, DividerStyle } from "./divider";
+
+// --- Card ---
+export { createCard } from "./card";
+export type { CardOptions, CardInstance, CardVariant, CardSize, CardHeaderOptions, CardImageOptions } from "./card";
+
+// --- Collapse ---
+export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
+export type { CollapseOptions, CollapseInstance, CollapseSize, CollapseVariant, CollapseGroupOptions, CollapseGroupInstance } from "./collapse";
