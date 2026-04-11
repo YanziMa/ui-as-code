@@ -51817,3 +51817,39 @@ export {
   Stps_StepsManager as StepsManager,
   Stps_createSteps as createSteps,
 } from "./steps";
+
+// --- sticky-header ---
+export type {
+  StkHdr_StickyBehavior as StickyBehavior,
+  StkHdr_StickyShadow as StickyShadow,
+  StkHdr_StickyHeaderOptions as StickyHeaderOptions,
+  StkHdr_StickyHeaderInstance as StickyHeaderInstance,
+} from "./sticky-header";
+export {
+  StkHdr_createStickyHeader as createStickyHeader,
+} from "./sticky-header";
+
+// --- sticky-notes ---
+export type {
+  StkNts_NoteColor as NoteColor,
+  StkNts_StickyNoteData as StickyNoteData,
+  StkNts_StickyNotesOptions as StickyNotesOptions,
+  StkNts_StickyNotesInstance as StickyNotesInstance,
+} from "./sticky-notes";
+export {
+  StkNts_createStickyNotes as createStickyNotes,
+} from "./sticky-notes";
+
+// --- sticky-utils ---
+export type {
+  StkUtl2_StickyPosition as StickyPosition,
+  StkUtl2_StickyBehavior as StickyBehavior,
+  StkUtl2_StickyOptions as StickyOptions,
+  StkUtl2_StickyInstance as StickyInstance,
+  StkUtl2_StickyStackOptions as StickyStackOptions,
+  StkUtl2_StickyStackInstance as StickyStackInstance,
+} from "./sticky-utils";
+export {
+  StkUtl2_createSticky as createSticky,
+  StkUtl2_createStickyStack as createStickyStack,
+} from "./sticky-utils";
