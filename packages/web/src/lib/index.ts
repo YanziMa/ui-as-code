@@ -21860,3 +21860,44 @@ export {
   createStepProgress,
 } from "./progress";
 export type { ProgressState, ProgressCallback, ProgressController, MultiProgressController, StepProgressController } from "./progress";
+
+// --- form-validator ---
+export {
+  FormValidator,
+  required,
+  minLength,
+  maxLength,
+  pattern,
+  email,
+  urlValidator,
+  range,
+  matchesField,
+  asyncValidator,
+  custom,
+} from "./form-validator";
+export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldConfig, FormValidatorOptions } from "./form-validator";
+
+// --- debounce-throttle ---
+export {
+  Debounced,
+  Throttled,
+  debounce,
+  throttle,
+  debouncePromise,
+  rafThrottle,
+  idleThrottle,
+} from "./debounce-throttle";
+export type { DebounceOptions, ThrottleOptions, RateLimitStats } from "./debounce-throttle";
+
+// --- local-storage ---
+export {
+  LocalStorageManager,
+  createLocalStorage,
+  lsSet,
+  lsGet,
+  lsRemove,
+  lsHas,
+  SessionStorageManager,
+  createSessionStorage,
+} from "./local-storage";
+export type { StorageItem, StorageOptions, StorageInstance } from "./local-storage";
