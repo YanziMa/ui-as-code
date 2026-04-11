@@ -46675,3 +46675,12 @@ export { createModal as mduCreateModal } from "./modal-dialog-utils";
 // --- modal-dialog ---
 export type { ModalSize as MdModalSize, ModalVariant as MdModalVariant, ModalOptions as MdModalOptions, ModalInstance as MdModalInstance } from "./modal-dialog";
 export { createModal as mdCreateModal } from "./modal-dialog";
+// --- modal-manager ---
+export type { ModalSize as MmgrModalSize, ModalAnimation as MgrModalAnimation, ModalOptions as MgrModalOptions, ModalAction as MgrModalAction, ModalInstance as MgrModalInstance, ConfirmOptions as MgrConfirmOptions } from "./modal-manager";
+export { ModalManager as MgrModalManager, getModalManager as mgrGetModalManager } from "./modal-manager";
+// --- modal-utils ---
+export type { ModalSize as MuModalSize, ModalOptions as MuModalOptions, ModalInstance as MuModalInstance, FocusTrapConfig as MuFocusTrapConfig } from "./modal-utils";
+export { createFocusTrap as muCreateFocusTrap, createModal as muCreateModal } from "./modal-utils";
+// --- modal-v2 ---
+export type { ModalV2Options, ModalV2Instance } from "./modal-v2";
+export { createModalV2 } from "./modal-v2";
