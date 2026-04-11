@@ -48675,3 +48675,44 @@ export {
   type RangeSliderInstance as RSInstance,
   createRangeSlider as RSCreate,
 } from "./range-slider";
+// --- rate-limit.ts ---
+export {
+  type RateLimitResult as RLResult,
+  type RateLimitOptions as RLOptions,
+  TokenBucket as RLTokenBucket,
+  SlidingWindowLimiter as RLSlidingWindow,
+  FixedWindowLimiter as RLFixedWindow,
+  type AdaptiveOptions as RLAdaptiveOptions,
+  AdaptiveLimiter as RLAdaptiveLimiter,
+  type RateLimiterType as RLType,
+  type CreateRateLimiterOptions as RLCreateOptions,
+  createRateLimiter as RLCreate,
+} from "./rate-limit";
+
+// --- rate-limiter-advanced.ts ---
+export {
+  type LimitAlgorithm as RLAlgorithm,
+  type RateLimitResult as RLAResult,
+  type RateLimitConfig as RLAConfig,
+  type MultiDimensionalLimit as RLAMultiDimLimit,
+  type RateLimiterMetrics as RLAMetrics,
+  type DistributedCoordinator as RLACoordinator,
+  AdvancedRateLimiter as RLAdvancedRateLimiter,
+  createRateLimitMiddleware as RLCreateMiddleware,
+  createAdvancedRateLimiter as RLACreate,
+} from "./rate-limiter-advanced";
+
+// --- rate-limiter-v2.ts ---
+export {
+  type RateLimitAlgorithm as RLV2Algorithm,
+  type LimitScope as RLV2Scope,
+  type RateLimitResult as RLV2Result,
+  type RateLimitConfig as RLV2Config,
+  type RateLimitContext as RLV2Context,
+  type RateLimitMetrics as RLV2Metrics,
+  type StorageAdapter as RLV2StorageAdapter,
+  AdvancedRateLimiter as RLV2RateLimiter,
+  createRateLimiter as RLV2Create,
+  createApiMiddleware as RLV2ApiMiddleware,
+  RATE_LIMIT_PRESETS as RLV2_PRESETS,
+} from "./rate-limiter-v2";
