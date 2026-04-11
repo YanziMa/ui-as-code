@@ -42035,3 +42035,10 @@ export type {
   CommentThreadOptions,
   CommentThreadInstance,
 } from "./comment-thread";
+// --- Batch 1332: Form Controls ---
+export { createSwitch, createLabeledSwitch } from "./switch-toggle.js";
+export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant, LabeledSwitchOptions } from "./switch-toggle.js";
+export { createRadioGroup } from "./radio-group.js";
+export type { RadioGroupOptions, RadioGroupInstance, RadioOption, RadioSize, RadioVariant } from "./radio-group.js";
+export { createCheckboxGroup } from "./checkbox-group.js";
+export type { CheckboxGroupOptions, CheckboxGroupInstance, CheckboxOption, CheckboxSize, CheckboxVariant } from "./checkbox-group.js";
