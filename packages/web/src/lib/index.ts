@@ -44593,3 +44593,29 @@ export {
   BetweenStack as suBetweenStack,
   EvenStack as suEvenStack,
 } from "./stack-utils";
+
+// --- stack ---
+export {
+  StackOptions as DsStackOptions,
+  UndoRedoState as DsUndoRedoState,
+  Stack as DataStack,
+  UndoRedoManager as DataUndoRedoManager,
+  CallTracker,
+} from "./stack";
+
+// --- star-rating ---
+export {
+  StarRatingSize as SrStarRatingSize,
+  StarIcon as SrStarIcon,
+  StarRatingOptions as SrStarRatingOptions,
+  StarRatingInstance as SrStarRatingInstance,
+  createStarRating as srCreateStarRating,
+} from "./star-rating";
+
+// --- stat-card ---
+export {
+  TrendDirection as ScTrendDirection,
+  StatCardVariant as ScStatCardVariant,
+  StatCardOptions as ScStatCardOptions,
+  createStatCard as scCreateStatCard,
+} from "./stat-card";
