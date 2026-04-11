@@ -31083,3 +31083,44 @@ export {
   LOCALE_CHANGE_EVENT,
 } from "./i18n";
 export type { Locale } from "./i18n";
+// --- Config ---
+export { ConfigManager, createConfig } from "./config";
+export type {
+  ConfigValue,
+  ConfigSchema,
+  ConfigSchemaEntry,
+  Environment,
+  ConfigOptions,
+  ConfigSource,
+  ConfigValidationResult,
+} from "./config";
+
+// --- Env ---
+export { env, envNumber, envBool, requireEnv } from "./env";
+
+// --- Constants ---
+export {
+  APP_NAME,
+  APP_VERSION,
+  APP_URL,
+  GITHUB_URL,
+  DEFAULT_PAGE,
+  DEFAULT_PAGE_SIZE,
+  MAX_PAGE_SIZE,
+  RATE_LIMIT_WINDOW,
+  RATE_LIMIT_DEFAULT_MAX,
+  RATE_LIMIT_AI_MAX,
+  CACHE_SHORT,
+  CACHE_MEDIUM,
+  CACHE_LONG,
+  CACHE_STATIC,
+  TIMEOUT_API,
+  TIMEOUT_AI,
+  TIMEOUT_UPLOAD,
+  MAX_DESCRIPTION_LENGTH,
+  MIN_DESCRIPTION_LENGTH,
+  DEBOUNCE_SEARCH_MS,
+  STATUS_COLORS,
+  VOTE_LABELS,
+  WEBHOOK_EVENTS,
+} from "./constants";
