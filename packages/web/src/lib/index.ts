@@ -43325,3 +43325,67 @@ export {
   type ValidationResult as JsonValidationResult,
   type UiHint,
 } from "./json-schema";
+
+// --- json-utils ---
+export {
+  parsePath,
+  stringifyPath,
+  get as jsonGet,
+  has,
+  set as jsonSet,
+  setImmutable,
+  remove as jsonRemove,
+  removeImmutable,
+  update,
+  deepClone as jsonDeepClone,
+  deepMerge,
+  walk,
+  mapValues,
+  filterNodes,
+  findNode,
+  flatten,
+  unflatten,
+  pickPaths,
+  omitPaths,
+  renameKeys,
+  isJsonObject,
+  isJsonArray,
+  isJsonValue,
+  type JsonValue,
+  type JsonObject,
+  type JsonArray,
+  type JsonPath,
+} from "./json-utils";
+
+// --- keyframe ---
+export {
+  createKeyframe,
+  injectKeyframes,
+  generateKeyframesCSS,
+  removeKeyframes,
+  applyAnimation,
+  animateWAAPI,
+  playSequence,
+  interpolateKeyframes,
+  keyframePresets,
+  playPreset,
+  KeyframeBuilder,
+  type KeyframeDefinition,
+  type CssProperties,
+  type KeyframeAnimation,
+  type KeyframeSequence,
+  type PresetName,
+} from "./keyframe";
+
+// --- keysequence ---
+export {
+  createKeySequenceManager,
+  parseCombo,
+  type KeyBinding,
+  type KeySequence,
+  type KeyChord,
+  type MacroStep,
+  type Macro,
+  type KeySequenceManagerConfig,
+  type KeySequenceInstance,
+} from "./keysequence";
