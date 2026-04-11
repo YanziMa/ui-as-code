@@ -27884,3 +27884,15 @@ export type { ZoomMode, ZoomLensShape, ImageZoomOptions, ImageZoomInstance } fro
 // --- Lightbox ---
 export { LightboxManager, createLightbox } from "./lightbox";
 export type { LightboxImage, LightboxOptions, LightboxInstance } from "./lightbox";
+
+// --- Carousel ---
+export { CarouselManager, createCarousel } from "./carousel";
+export type { CarouselSlide, CarouselOptions, CarouselInstance } from "./carousel";
+
+// --- Countdown Timer ---
+export { createCountdownTimer } from "./countdown-timer";
+export type { CountdownDisplayMode, CountdownUnit, CountdownTimerOptions, CountdownTimerInstance } from "./countdown-timer";
+
+// --- Infinite Scroll ---
+export { InfiniteScroll } from "./infinite-scroll";
+export type { InfiniteScrollItem, InfiniteScrollOptions, InfiniteScrollState } from "./infinite-scroll";
