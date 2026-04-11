@@ -42070,3 +42070,10 @@ export { CommandPalette } from "./command-palette.js";
 export type { Command, CommandPaletteConfig, CommandPaletteState, CommandCategory } from "./command-palette.js";
 export { TreeView } from "./tree-view.js";
 export type { TreeViewConfig, TreeNodeData, TreeNode, CheckMode } from "./tree-view.js";
+// --- Batch 1337: Context Menu, Toast Notification, Drawer ---
+export { ContextMenuManager } from "./context-menu.js";
+export type { ContextMenuOptions, ContextMenuInstance, ContextMenuItem, ContextMenuPosition } from "./context-menu.js";
+export { createToastManager } from "./toast-notification.js";
+export type { ToastManagerOptions, ToastInstance, ToastOptions, ToastType, ToastPosition } from "./toast-notification.js";
+export { createDrawer } from "./drawer.js";
+export type { DrawerOptions, DrawerInstance, DrawerSide, DrawerSize } from "./drawer.js";
