@@ -28678,3 +28678,15 @@ export type { BadgeOptions, StatusDotOptions, BadgeVariant, BadgePosition, Badge
 // --- Empty State ---
 export { EmptyStateManager, createEmptyState } from "./empty-state";
 export type { EmptyStateOptions, EmptyStateInstance, EmptyStateVariant } from "./empty-state";
+
+// --- Spinner / Loading ---
+export { createSpinner, miniSpinner, fullPageSpinner } from "./spinner";
+export type { SpinnerOptions, SpinnerVariant, SpinnerSize } from "./spinner";
+
+// --- Progress Indicator ---
+export { createProgressBar, createCircularProgress, createStepProgress } from "./progress-indicator";
+export type { ProgressBarOptions, ProgressBarInstance, CircularProgressOptions, CircularProgressInstance, StepProgressOptions, StepProgressInstance, ProgressVariant, ProgressSize } from "./progress-indicator";
+
+// --- Back to Top ---
+export { createBackToTop } from "./back-to-top";
+export type { BackToTopOptions, BackToTopInstance, BttPosition, BttSize, BttShape } from "./back-to-top";
