@@ -28143,3 +28143,15 @@ export type { ChipOptions, ChipInstance, ChipSize, ChipVariant, ChipGroupOptions
 // --- Switch ---
 export { createSwitch } from "./switch";
 export type { SwitchOptions, SwitchInstance, SwitchSize, SwitchVariant } from "./switch";
+
+// --- Input Mask ---
+export { InputMaskManager, createInputMask } from "./input-mask";
+export type { MaskOptions, MaskInstance, MaskType } from "./input-mask";
+
+// --- Typeahead ---
+export { TypeaheadManager, createTypeahead } from "./typeahead";
+export type { TypeaheadOptions, TypeaheadInstance, TypeaheadItem } from "./typeahead";
+
+// --- Color Picker Advanced ---
+export { createColorPicker } from "./color-picker-advanced";
+export type { ColorPickerOptions, ColorPickerInstance, ColorMode, PickerPlacement, RgbColor, HslColor, HsvColor, ColorSwatch } from "./color-picker-advanced";
