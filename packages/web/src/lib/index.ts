@@ -46011,3 +46011,15 @@ export {
   type InitialsSize,
   type InitialsGroupOptions,
 } from "./initials-utils";
+
+// --- inline-edit ---
+export { createInlineEdit } from "./inline-edit";
+export type { InlineEditOptions, InlineEditInstance } from "./inline-edit";
+
+// --- input-field ---
+export { createInputField } from "./input-field";
+export type { InputVariant as IfVariant, InputSize as IfSize, InputState, InputFieldOptions, InputInstance as IfInstance } from "./input-field";
+
+// --- input-group ---
+export { createInputGroup } from "./input-group";
+export type { InputSize as IgInputSize, InputVariant as IgInputVariant, ValidationState, InputGroupOptions, InputGroupInstance } from "./input-group";
