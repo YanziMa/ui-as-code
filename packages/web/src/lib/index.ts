@@ -41707,3 +41707,7 @@ export * from "./slider-input";
 export * from "./file-upload";
 export * from "./avatar-picker";
 export * from "./signature-pad";
+// --- Batch 1316: Date Picker, Time Picker, Color Input ---
+export * from "./date-picker";
+export * from "./time-picker";
+export * from "./color-input";
