@@ -40020,3 +40020,38 @@ export {
   type PageNavStyle,
   type PageNavSize,
 } from "./page-nav-utils";
+// --- Navbar Utilities ---
+export {
+  createNavbar,
+  type NavbarOptions,
+  type NavbarInstance,
+  type NavItem,
+  type UserMenuConfig,
+  type SearchConfig,
+  type NavbarStyle,
+  type NavbarSize,
+} from "./navbar-utils";
+
+// --- Sidebar Utilities ---
+export {
+  createSidebar,
+  type SidebarOptions,
+  type SidebarInstance,
+  type SidebarItem,
+  type SidebarSection,
+  type SidebarPosition,
+  type SidebarVariant,
+  type SidebarCollapseMode,
+} from "./sidebar-utils";
+
+// --- Footer Utilities ---
+export {
+  createFooter,
+  type FooterOptions,
+  type FooterInstance,
+  type FooterColumn,
+  type SocialLink,
+  type NewsletterOptions,
+  type FooterLayout,
+  type FooterSize,
+} from "./footer-utils";
