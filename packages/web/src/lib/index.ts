@@ -46023,3 +46023,16 @@ export type { InputVariant as IfVariant, InputSize as IfSize, InputState, InputF
 // --- input-group ---
 export { createInputGroup } from "./input-group";
 export type { InputSize as IgInputSize, InputVariant as IgInputVariant, ValidationState, InputGroupOptions, InputGroupInstance } from "./input-group";
+
+// --- input-mask-utils ---
+export { createInputMask as createInputMaskUtils } from "./input-mask-utils";
+export type { MaskType as MaskUtilsType, MaskOptions as MaskUtilsOptions, MaskInstance as MaskUtilsInstance } from "./input-mask-utils";
+export { formatPhone as formatPhoneMask, formatDate as formatDateMask, formatSSN, formatCreditCard, formatCurrencyStandalone, applyPatternMask } from "./input-mask-utils";
+
+// --- input-mask ---
+export { InputMaskManager, createInputMask } from "./input-mask";
+export type { MaskType, MaskOptions, MaskInstance } from "./input-mask";
+
+// --- input-number ---
+export { createNumberInput } from "./input-number";
+export type { NumberInputSize, NumberInputState, NumberInputOptions, NumberInputInstance } from "./input-number";
