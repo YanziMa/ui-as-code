@@ -28963,3 +28963,28 @@ export {
   type BatchResponse,
   type BatchStats,
 } from "./request-batcher.js";
+// --- Batch 964: Virtual Scroller, Infinite Scroll, Drag and Drop v2 ---
+
+export {
+  VirtualScroller,
+  type ScrollItem,
+  type VisibleRange,
+  type ScrollerConfig,
+  type ScrollerState,
+  type ScrollToOptions,
+} from "./virtual-scroller.js";
+
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll.js";
+
+export {
+  DragAndDropV2,
+  type DnDConfig,
+  type DragContext,
+  type DropTargetInfo,
+  type DropResult,
+} from "./drag-and-drop-v2.js";
