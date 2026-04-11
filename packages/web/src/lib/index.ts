@@ -38011,3 +38011,51 @@ export {
 export type {
   DragData, DragOptions, DropZone, SortableConfig,
 } from "./drag-utils";
+
+// --- resize-utils ---
+export {
+  EnhancedResizeObserver,
+  DEFAULT_BREAKPOINTS as RESIZE_DEFAULT_BREAKPOINTS,
+  BreakpointTracker, ViewportTracker,
+  createResizeHandle,
+  clamp as resizeClamp, isResizeObserverSupported,
+  getElementSize, hasOverflow,
+  matchMedia as resizeMatchMedia, onMediaChange,
+} from "./resize-utils";
+export type {
+  ResizeEntry, ResizeObserverConfig, Breakpoint as RBreakpoint,
+  ViewportState, ResizeHandleOptions,
+} from "./resize-utils";
+
+// --- responsive-utils ---
+export {
+  BREAKPOINTS, BREAKPOINT_ORDER,
+  subscribeMediaQuery, matchesMediaQuery, getBreakpointQuery,
+  isAtLeast, isAtMost, getCurrentBreakpoint,
+  resolveResponsive, createResponsiveValue,
+  fluidFontSize, responsiveFontSize, applyResponsiveTypography,
+  generateSrcSet, generateSizes, pickBestImageSource,
+  createContainerQuery, applyContainerClasses,
+  getDeviceInfo, isMobile, isTouch, canHover,
+  prefersReducedMotion, prefersDarkMode, prefersLightMode, prefersHighContrast,
+  watchColorScheme,
+  getOrientation, watchOrientation, lockOrientation, unlockOrientation,
+  responsiveVisibility, responsiveSwap, responsiveColumns,
+} from "./responsive-utils";
+export type {
+  BreakpointName, BreakpointDefinition, ResponsiveValue,
+  MediaQueryOptions, DeviceInfo,
+} from "./responsive-utils";
+
+// --- layout-utils ---
+export {
+  flex, applyFlex, hStack, vStack,
+  gridLayout, applyGrid, applyStack,
+  parseAspectRatio, applyAspectRatio, createAspectContainer,
+  spacing, insertDivider,
+  createAppLayout, createSidebarLayout, createCenteredLayout,
+} from "./layout-utils";
+export type {
+  FlexDirection, FlexWrap, JustifyContent, AlignItems, AlignSelf, GapSize,
+  FlexConfig, GridConfig, StackConfig,
+} from "./layout-utils";
