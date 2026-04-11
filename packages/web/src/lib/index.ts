@@ -48825,3 +48825,59 @@ export {
   BUILT_IN_ROLES as RBACBuiltInRoles,
   createRBAC as RBACCreate,
 } from "./rbac";
+// --- react-compiler-utils.ts ---
+export {
+  type MemoKey as RCMemoKey,
+  type MemoCache as RCMemoCache,
+  type DependencyTracker as RCDepTracker,
+  createMemoCache as RCCreateMemoCache,
+  createDependencyTracker as RCCreateDepTracker,
+  useStableRef as RCUseStableRef,
+  stableCompare as RCStableCompare,
+  expensive as RCExpensive,
+  useCallbackReference as RCCallbackRef,
+  type ReactiveBridge as RCReactiveBridge,
+  createReactiveBridge as RCCreateReactiveBridge,
+  createSelector as RCCreateSelector,
+  combineSelectors as RCCombineSelectors,
+} from "./react-compiler-utils";
+
+// --- react-dom-utils.ts ---
+export {
+  createPortalContainer as RDCreatePortal,
+  removePortalContainer as RDRemovePortal,
+  type ElementMeasurements as RDElementMeasurements,
+  measureElement as RDMeasureElement,
+  isInViewport as RDIsInViewport,
+  isPartiallyInViewport as RDIsPartialInViewport,
+  scrollIntoViewIfNeeded as RDScrollIntoView,
+  getScrollPosition as RDGetScrollPos,
+  lockBodyScroll as RDLockBodyScroll,
+  createFocusTrap as RDCreateFocusTrap,
+  focusNextTabbable as RDFocusNextTabbable,
+  createEventDelegator as RDCreateEventDelegator,
+  animateTransition as RDAnimateTransition,
+  fadeIn as RDFadeIn,
+  fadeOut as RDFadeOut,
+  slideUp as RDSlideUp,
+  scaleIn as RDScaleIn,
+  applyTempStyles as RDApplyTempStyles,
+  supportsCssProperty as RDSupportsCssProp,
+  getSelectionText as RDGetSelectionText,
+  selectElementText as RDSelectElementText,
+  copyToClipboard as RDCopyClipboard,
+} from "./react-dom-utils";
+
+// --- react-error-boundary.ts ---
+export {
+  type ErrorBoundaryProps as REBProps,
+  type ErrorBoundaryState as REBState,
+  type ErrorBoundaryInstance as REBInstance,
+  DefaultErrorFallback as REBDefaultFallback,
+  InlineErrorFallback as REBInlineFallback,
+  ErrorBoundary as REBErrorBoundary,
+  withErrorBoundary as REBWithErrorBoundary,
+  formatErrorForLogging as REBFormatErrorLog,
+  createRecoveryAction as REBCreateRecoveryAction,
+  IsolatedChildren as REBIsolatedChildren,
+} from "./react-error-boundary";
