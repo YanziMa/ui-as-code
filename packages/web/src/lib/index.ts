@@ -44161,3 +44161,14 @@ export type { SearchOptions, SearchResult, SearchMatch } from "./search";
 // --- selection ---
 export { SelectionManager, createSelectionManager } from "./selection";
 export type { SelectionRange as SelectionRangeType, CaretPosition, SelectionManagerOptions, SelectionManagerInstance } from "./selection";
+// --- server-utils ---
+export { getEnvInfo, isServerSide, isClientSide, parseURL, buildURL, joinPath, isAbsoluteURL, makeRelative, parseRequestContext, corsHeaders, isOriginAllowed, browserOnly, serverOnly, detectContentType } from "./server-utils";
+export type { EnvInfo, RequestContext } from "./server-utils";
+
+// --- session ---
+export { SessionManager } from "./session";
+export type { SessionData, SessionConfig, SessionState, SessionEventType, SessionListener } from "./session";
+
+// --- sharing ---
+export { share, isNativeShareAvailable, twitterShareURL, facebookShareURL, linkedInShareURL, redditShareURL, emailShareURL, telegramShareURL, whatsAppShareURL, getAllShareURLs, generateOpenGraphMeta, injectOpenGraphMeta, generateTwitterCardMeta } from "./sharing";
+export type { ShareData, ShareOptions, ShareResult } from "./sharing";
