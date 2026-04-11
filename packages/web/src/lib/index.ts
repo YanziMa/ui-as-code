@@ -50777,3 +50777,51 @@ export {
   SignaturePadManager as SigPad_SignaturePadManager,
   createSignaturePad as SigPad_createSignaturePad,
 } from "./signature-pad";
+
+// --- skeleton-lite ---
+export {
+  type SkeletonVariant as SkLt_SkeletonVariant,
+  type SkeletonSize as SkLt_SkeletonSize,
+  type SkeletonOptions as SkLt_SkeletonOptions,
+  type TextSkeletonOptions as SkLt_TextSkeletonOptions,
+  type CardSkeletonOptions as SkLt_CardSkeletonOptions,
+  type TableSkeletonOptions as SkLt_TableSkeletonOptions,
+  createSkeleton as SkLt_createSkeleton,
+  createTextSkeleton as SkLt_createTextSkeleton,
+  createHeadingSkeleton as SkLt_createHeadingSkeleton,
+  createAvatarSkeleton as SkLt_createAvatarSkeleton,
+  createCardSkeleton as SkLt_createCardSkeleton,
+  createTableSkeleton as SkLt_createTableSkeleton,
+  wrapWithSkeleton as SkLt_wrapWithSkeleton,
+} from "./skeleton-lite";
+
+// --- skeleton-loader-utils ---
+export {
+  type SkeletonVariant as SkLdUtl_SkeletonVariant,
+  type SkeletonAnimation as SkLdUtl_SkeletonAnimation,
+  type SkeletonBlockOptions as SkLdUtl_SkeletonBlockOptions,
+  type SkeletonTextOptions as SkLdUtl_SkeletonTextOptions,
+  type SkeletonAvatarOptions as SkLdUtl_SkeletonAvatarOptions,
+  type SkeletonImageOptions as SkLdUtl_SkeletonImageOptions,
+  type SkeletonCardOptions as SkLdUtl_SkeletonCardOptions,
+  type SkeletonTableOptions as SkLdUtl_SkeletonTableOptions,
+  type SkeletonListOptions as SkLdUtl_SkeletonListOptions,
+  createSkeletonBlock as SkLdUtl_createSkeletonBlock,
+  createSkeletonText as SkLdUtl_createSkeletonText,
+  createSkeletonAvatar as SkLdUtl_createSkeletonAvatar,
+  createSkeletonImage as SkLdUtl_createSkeletonImage,
+  createSkeletonCard as SkLdUtl_createSkeletonCard,
+  createSkeletonTable as SkLdUtl_createSkeletonTable,
+  createSkeletonList as SkLdUtl_createSkeletonList,
+  injectSkeletonStyles as SkLdUtl_injectSkeletonStyles,
+} from "./skeleton-loader-utils";
+
+// --- skeleton-loader ---
+export {
+  type SkeletonShape as SkLd_SkeletonShape,
+  type SkeletonAnimation as SkLd_SkeletonAnimation,
+  type SkeletonItem as SkLd_SkeletonItem,
+  type SkeletonOptions as SkLd_SkeletonOptions,
+  type SkeletonInstance as SkLd_SkeletonInstance,
+  createSkeleton as SkLd_createSkeleton,
+} from "./skeleton-loader";
