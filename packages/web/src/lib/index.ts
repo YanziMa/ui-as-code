@@ -44900,3 +44900,13 @@ export { FocusTrapManager, FocusTrapStack, createFocusTrap } from "./focus-trap"
 // --- form-builder ---
 export type { FieldType, FieldValidation, SelectOption, FormField, FormSection, FormSchema, FieldError, FormState } from "./form-builder";
 export { FormBuilder, createForm, validations } from "./form-builder";
+
+// --- form-utils ---
+export type { FormFieldConfig, FormValidationRule, FormFieldState, FormOptions, FormInstance, StepConfig, MultiStepFormOptions, MultiStepFormInstance, ConditionRule, ConditionalField } from "./form-utils";
+export { createForm as fuCreateForm, serializeForm, populateForm, clearForm, createMultiStepForm, evaluateConditionals, linkErrorToField, unlinkErrorFromField, createFormAnnouncer } from "./form-utils";
+// --- form-validator ---
+export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldConfig as FvFieldConfig, FormValidatorOptions } from "./form-validator";
+export { FormValidator, required as fvRequired, minLength, maxLength, pattern, email as fvEmail, urlValidator, range, matchesField, asyncValidator, custom as fvCustom } from "./form-validator";
+// --- form ---
+export type { FieldType as FtFieldType, ValidationRule, FormField as FtFormField, FormGroup, FormOptions as FtFormOptions, FormInstance as FtFormInstance } from "./form";
+export { createForm as ftCreateForm } from "./form";
