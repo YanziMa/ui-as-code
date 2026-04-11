@@ -27941,3 +27941,14 @@ export type { RgbColor, HslColor, Palette } from "./color-picker";
 // --- Date Picker ---
 export { DatePickerManager, createDatePicker } from "./date-picker";
 export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
+// --- File Upload ---
+export { FileUploadManager, createFileUpload } from "./file-upload";
+export type { FileUploadOptions, UploadFile, FileUploadInstance } from "./file-upload";
+
+// --- Virtual List ---
+export { createVirtualList } from "./virtual-list";
+export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from "./virtual-list";
+
+// --- Markdown Renderer ---
+export { parseMarkdown, renderToHtml, generateToc, renderToc, extractFrontMatter, extractText, countWords, readingTime, mdToHtml } from "./markdown-renderer";
+export type { MdNode, MdNodeType, MdRenderOptions, TocEntry, FrontMatter } from "./markdown-renderer";
