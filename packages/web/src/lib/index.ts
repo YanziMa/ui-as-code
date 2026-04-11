@@ -31930,3 +31930,44 @@ export {
   type PopoverTrigger,
   type PopoverPlacement,
 } from "./popover";
+
+// --- Skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions,
+  type SkeletonTextOptions,
+  type SkeletonAvatarOptions,
+  type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Avatar ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  getInitials,
+  type AvatarOptions,
+  type AvatarGroupOptions,
+  type AvatarSize,
+  type AvatarShape,
+} from "./avatar";
+
+// --- Badge ---
+export {
+  createBadge,
+  createPositionedBadge,
+  createStatusDot,
+  addDotBadge,
+  addCountBadge,
+  type BadgeOptions,
+  type BadgeVariant,
+  type BadgePosition,
+  type BadgeSize,
+  type StatusDotOptions,
+} from "./badge";
