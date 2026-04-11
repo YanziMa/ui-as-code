@@ -43863,3 +43863,31 @@ export {
   type PopoverV2Instance,
   createPopoverV2,
 } from "./popover-v2";
+
+// --- progress-ring ---
+export {
+  type ProgressRingVariant,
+  type ProgressRingSize,
+  type ProgressRingOptions,
+  type ProgressRingInstance,
+  createProgressRing,
+} from "./progress-ring";
+
+// --- qr-code-generator ---
+export {
+  type QRErrorCorrectionLevel,
+  type QRRenderFormat,
+  type QROptions,
+  type QRResult,
+  generateQR,
+  generateQRSVG,
+} from "./qr-code-generator";
+
+// --- radar-chart ---
+export {
+  type RadarAxis,
+  type RadarDataset,
+  type RadarChartOptions,
+  type RadarChartInstance,
+  createRadarChart,
+} from "./radar-chart";
