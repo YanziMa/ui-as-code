@@ -26113,3 +26113,52 @@ export {
   buildCsp,
 } from "./sanitizer";
 export type { SanitizeHtmlOptions, SanitizeUrlOptions } from "./sanitizer";
+
+// --- i18n ---
+export {
+  t,
+  getLocale as getI18nLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type { Locale } from "./i18n";
+
+// --- Locale ---
+export {
+  LOCALES,
+  getLocale as getLocaleInfo,
+  detectBrowserLocale,
+  isRtlLocale,
+  getDirection,
+  formatNumberLocale,
+  formatCurrencyLocale,
+  formatPercentLocale,
+  formatDateLocale,
+  formatTimeLocale,
+  formatRelativeLocale,
+  formatListLocale,
+  pluralizeLocale,
+  TIMEZONES,
+  getTimezone,
+  getTimezoneOffset,
+} from "./locale";
+export type { LocaleInfo, TimeZoneInfo } from "./locale";
+
+// --- Number Format ---
+export {
+  formatNumberCustom,
+  formatWithUnits,
+  formatFileSize,
+  formatOrdinal,
+  numberToWords,
+  numberToChinese,
+  toRomanNumerals,
+  fromRomanNumerals,
+  formatRange,
+  clamp,
+  lerp,
+  mapRange,
+  parseFormattedNumber,
+  parsePercent,
+} from "./number-format";
+export type { NumberPatternOptions } from "./number-format";
