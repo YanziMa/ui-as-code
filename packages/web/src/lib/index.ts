@@ -22439,3 +22439,36 @@ export {
   unescapeRegexChars,
 } from "./regex-utils";
 export type { RegexTestResult, RegexPerformance } from "./regex-utils";
+
+// --- observer ---
+export {
+  Observable,
+  ComputedValue,
+  ReactiveStore,
+  watch,
+  type Unsubscribe as ObserverUnsubscribe,
+  type Subscriber,
+  type StoreState,
+  type StoreOptions,
+  type WatchOptions,
+} from "./observer";
+
+// --- pub-sub ---
+export {
+  PubSub,
+  createPubSub,
+  type MessageHandler,
+  type TopicPattern,
+  type Message,
+  type Subscription,
+  type PubSubOptions,
+  type PubSubStats,
+} from "./pub-sub";
+
+// --- queue ---
+export {
+  AsyncQueue,
+  RateLimiter,
+  BatchingQueue,
+  type QueueTask,
+} from "./queue";
