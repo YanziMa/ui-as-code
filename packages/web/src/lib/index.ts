@@ -48552,3 +48552,42 @@ export type {
   QueueStats as QUQueueStatsType,
   BatchProcessorOptions as QUBatchOptsType,
 } from "./queue-utils";
+
+// --- queue ---
+export {
+  QueueTask as SimpleQTask,
+  AsyncQueue as SimpleAsyncQueue,
+  RateLimiter as SimpleRateLimiter,
+  BatchingQueue as SimpleBatchingQueue,
+} from "./queue";
+export type {
+  QueueTask as SimpleQTaskType,
+} from "./queue";
+
+// --- quick-switcher ---
+export {
+  SwitcherItem as QSwItem,
+  QuickSwitcherOptions,
+  QuickSwitcherInstance,
+  createQuickSwitcher,
+} from "./quick-switcher";
+export type {
+  SwitcherItem as QSwItemType,
+  QuickSwitcherOptions,
+  QuickSwitcherInstance,
+} from "./quick-switcher";
+
+// --- radar-chart ---
+export {
+  RadarAxis,
+  RadarDataset,
+  RadarChartOptions,
+  RadarChartInstance,
+  createRadarChart,
+} from "./radar-chart";
+export type {
+  RadarAxis,
+  RadarDataset,
+  RadarChartOptions,
+  RadarChartInstance,
+} from "./radar-chart";
