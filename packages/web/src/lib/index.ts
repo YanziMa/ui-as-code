@@ -51274,3 +51274,69 @@ export {
   type StarRatingSize as StrRtg_Size,
   type StarIcon as StrRtg_Icon,
 } from "./star-rating";
+
+// --- stat-card ---
+export {
+  createStatCard,
+  type StatCardOptions,
+  type TrendDirection,
+  type StatCardVariant,
+} from "./stat-card";
+export {
+  createStatCard as StCrd_createCard,
+  type StatCardOptions as StCrd_Options,
+  type TrendDirection as StCrd_TrendDirection,
+  type StatCardVariant as StCrd_Variant,
+} from "./stat-card";
+
+// --- stat-utils ---
+export {
+  createStat,
+  createStatCard,
+  createSparkline,
+  type StatOptions,
+  type StatCardOptions as StatUtilsCardOptions,
+  type StatTrend,
+  type StatSize,
+  type StatFormat,
+} from "./stat-utils";
+export {
+  createStat as StUtl_createStat,
+  createStatCard as StUtl_createCard,
+  createSparkline as StUtl_createSparkline,
+  type StatOptions as StUtl_StatOptions,
+  type StatUtilsCardOptions as StUtl_CardOptions,
+  type StatTrend as StUtl_Trend,
+  type StatSize as StUtl_Size,
+  type StatFormat as StUtl_Format,
+} from "./stat-utils";
+
+// --- state-machine-utils ---
+export {
+  createStateMachine,
+  createHierarchicalStateMachine,
+  validateConfig,
+  generateMermaidDiagram,
+  type StateMachineConfig,
+  type StateMachineInstance,
+  type StateDefinition,
+  type TransitionDefinition,
+  type StateId,
+  type EventId,
+  type GuardFn,
+  type ActionFn,
+} from "./state-machine-utils";
+export {
+  createStateMachine as StMchUtl_createMachine,
+  createHierarchicalStateMachine as StMchUtl_createHierarchical,
+  validateConfig as StMchUtl_validateConfig,
+  generateMermaidDiagram as StMchUtl_generateMermaidDiagram,
+  type StateMachineConfig as StMchUtl_Config,
+  type StateMachineInstance as StMchUtl_Instance,
+  type StateDefinition as StMchUtl_StateDef,
+  type TransitionDefinition as StMchUtl_TransitionDef,
+  type StateId as StMchUtl_StateId,
+  type EventId as StMchUtl_EventId,
+  type GuardFn as StMchUtl_GuardFn,
+  type ActionFn as StMchUtl_ActionFn,
+} from "./state-machine-utils";
