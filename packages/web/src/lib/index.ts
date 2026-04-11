@@ -34841,3 +34841,40 @@ export {
   type StatSize,
   type StatFormat,
 } from "./stat-utils";
+
+// --- Batch 1148: Chart, Marquee, Countdown ---
+export {
+  calculateAxisScale,
+  formatAxisLabel,
+  valueToPixel,
+  pixelToValue,
+  aggregateByInterval,
+  movingAverage,
+  calculatePercentChanges,
+  findExtrema,
+  generateChartColors,
+  interpolateColor,
+  getDataStats,
+  type DataPoint,
+  type DataSeries,
+  type ChartConfig,
+  type AxisScale,
+  type ColorPaletteName,
+  type DataStats,
+} from "./chart-utils";
+export {
+  createMarquee,
+  type MarqueeOptions,
+  type MarqueeInstance,
+  type MarqueeDirection,
+  type MarqueeFillMode,
+} from "./marquee-utils";
+export {
+  createCountdown,
+  type CountdownOptions,
+  type CountdownInstance,
+  type CountdownRemaining,
+  type CountdownUnit,
+  type CountdownStyle,
+  type CountdownSize,
+} from "./countdown-utils";
