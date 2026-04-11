@@ -37350,3 +37350,25 @@ export {
   type BackToTopPosition,
   type BackToTopShape,
 } from "./back-to-top-utils.js";
+// --- Batch 1196: ScrollSpy, LazyLoad, AnimateOnScroll ---
+export {
+  createScrollSpy,
+  type ScrollSpyOptions,
+  type ScrollSpyInstance,
+  type SpySection,
+} from "./scroll-spy-utils.js";
+export {
+  createLazyLoad,
+  type LazyLoadOptions,
+  type LazyLoadInstance,
+  type LazyLoadTarget,
+  type LazyLoadState,
+} from "./lazy-load-utils.js";
+export {
+  createAnimateOnScroll,
+  type AnimateOnScrollOptions,
+  type AnimateOnScrollInstance,
+  type AnimateTarget,
+  type AnimationDirection,
+  type AnimationEasing,
+} from "./animate-on-scroll-utils.js";
