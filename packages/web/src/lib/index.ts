@@ -25500,3 +25500,34 @@ export {
   TransferManager,
   createTransfer,
 } from "./transfer";
+
+// --- mention ---
+export {
+  type MentionOption,
+  type MentionOptions,
+  type MentionInstance,
+  MentionManager,
+  createMention,
+} from "./mention";
+
+// --- tag-input ---
+export {
+  type TagItem,
+  type TagInputOptions,
+  type TagInputInstance,
+  TagInputManager,
+  createTagInput,
+} from "./tag-input";
+
+// --- rate-limit ---
+export {
+  type RateLimitResult,
+  type RateLimitOptions,
+  TokenBucket,
+  SlidingWindowLimiter,
+  FixedWindowLimiter,
+  AdaptiveLimiter,
+  type AdaptiveOptions,
+  type CreateRateLimiterOptions,
+  createRateLimiter,
+} from "./rate-limit";
