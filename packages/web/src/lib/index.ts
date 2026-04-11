@@ -28714,3 +28714,15 @@ export type { GridLayoutOptions, GridLayoutInstance, GridAutoFit, GridJustify, G
 // --- Masonry Layout ---
 export { MasonryManager, createMasonry } from "./masonry";
 export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry";
+
+// --- Anchor Link Navigation ---
+export { createAnchorGroup, createBackToTop } from "./anchor-link";
+export type { AnchorLink, AnchorGroupOptions, AnchorGroupInstance, BackToTopOptions, BackToTopInstance } from "./anchor-link";
+
+// --- Custom Scrollbar ---
+export { createScrollbar, thinScrollbar, hideScrollbar, overlayScrollbar } from "./scrollbar";
+export type { ScrollbarOptions, ScrollbarInstance, ScrollbarVariant, ScrollbarAxis } from "./scrollbar";
+
+// --- Scroll Snap ---
+export { ScrollSnapManager, createScrollSnap } from "./scroll-snap";
+export type { ScrollSnapOptions, ScrollSnapInstance, SnapSection, SnapType, SnapAxis } from "./scroll-snap";
