@@ -18036,3 +18036,31 @@ export type {
   AutocompleteInstance,
   AutocompleteOption,
 } from "./autocomplete";
+export {
+  CommandPalette,
+} from "./command-palette";
+export type {
+  CommandPaletteConfig,
+  CommandPaletteState,
+  Command,
+} from "./command-palette";
+export {
+  createDialog,
+  alert as dlgAlert,
+  confirm as dlgConfirm,
+} from "./dialog-lite";
+export type {
+  DialogOptions,
+  DialogInstance,
+  DialogType,
+  DialogSize,
+} from "./dialog-lite";
+export {
+  createModal,
+} from "./modal";
+export type {
+  ModalOptions,
+  ModalInstance,
+  ModalSize,
+  ModalPosition,
+} from "./modal";
