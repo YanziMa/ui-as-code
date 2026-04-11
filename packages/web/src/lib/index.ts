@@ -32247,3 +32247,31 @@ export {
   type EmittedEvent,
   type EventBusOptions,
 } from "./event-bus";
+
+// --- virtual-list ---
+export {
+  createVirtualList,
+  type VirtualListItem,
+  type VirtualListOptions,
+  type VirtualListInstance,
+} from "./virtual-list";
+
+// --- tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+  type TooltipPlacement,
+  type TooltipTrigger,
+  type TooltipOptions,
+  type TooltipInstance,
+} from "./tooltip";
+
+// --- context-menu ---
+export {
+  ContextMenuManager,
+  type ContextMenuItem,
+  type ContextMenuPosition,
+  type ContextMenuOptions,
+  type ContextMenuInstance,
+} from "./context-menu";
