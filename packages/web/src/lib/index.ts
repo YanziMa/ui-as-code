@@ -31540,3 +31540,15 @@ export type { PortalTarget, PortalOptions, PortalInstance } from "./portal";
 // --- Focus Trap ---
 export { FocusTrapManager, createFocusTrap, FocusTrapStack } from "./focus-trap";
 export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
+
+// --- Scroll Lock ---
+export { ScrollLockManager, getScrollLockManager, lockScroll, withScrollLock, withScrollLockAsync, setupAutoResizeScrollLock } from "./scroll-lock";
+export type { ScrollLockOptions, ScrollLockInstance } from "./scroll-lock";
+
+// --- Scroll Into View ---
+export { Scroller, scrollIntoView, scrollToElement } from "./scroll-into-view";
+export type { ScrollAlignment, ScrollBehavior, ScrollIntoViewOptions, ScrollIntoViewInstance } from "./scroll-into-view";
+
+// --- Smooth Scroll ---
+export { SmoothScroller, createSmoothScroller, scrollToTop, scrollToBottom, scrollToY, scrollToElementCenter } from "./smooth-scroll";
+export type { EasingFn, SmoothScrollOptions, SmoothScrollInstance } from "./smooth-scroll";
