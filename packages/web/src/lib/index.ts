@@ -42142,3 +42142,10 @@ export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDe
 export { createPortal, PortalManager, getPortalManager, type PortalOptions, type PortalInstance, type PortalTarget } from "./portal";
 export { OverlayProvider, openModal, openDrawer, openConfirm, openAlert, closeAllOverlays, type OverlayOptions, type OverlayInstance, type OverlayType } from "./overlay";
 export { createMask, createSpotlight, type MaskOptions, type MaskInstance, type CutoutOptions, type MaskMode } from "./mask";
+// --- Batch 1352: Tour Guide, Tooltip Group, Split Button ---
+export { TourManager, createTour } from "./tour-guide";
+export type { TourStep, TourOptions, TourInstance } from "./tour-guide";
+export { TooltipGroupManager, createTooltipGroup } from "./tooltip-group";
+export type { TooltipGroupOptions, TooltipItemOptions, TooltipGroupInstance } from "./tooltip-group";
+export { createSplitButton } from "./splitter";
+export type { SplitButtonSize, SplitButtonVariant, SplitButtonItem, SplitButtonOptions, SplitButtonInstance } from "./splitter";
