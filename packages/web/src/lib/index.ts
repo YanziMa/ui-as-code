@@ -33470,3 +33470,67 @@ export {
   parseBytes as encParseBytes,
 } from "./encoding-utils";
 export type { ParsedURL, JWTPayload, DecodedJWT } from "/encoding-utils";
+
+// --- i18n-utils ---
+export {
+  LOCALES,
+  type LocaleCode,
+  type LocaleConfig,
+  type PluralRule,
+  getPluralForm,
+  formatLocaleNumber,
+  formatCurrency,
+  formatRelativeTimeLocale,
+  formatList,
+  detectLocale,
+  TranslationDict,
+} from "./i18n-utils";
+
+// --- network-utils ---
+export {
+  getNetworkStatus,
+  onNetworkChange,
+  isSlowConnection,
+  isDataSaverEnabled,
+  fetchWithRetry,
+  RequestQueue,
+  syncWhenOnline,
+  processOfflineQueue,
+  BandwidthEstimator,
+  ConnectionHealthChecker,
+  type NetworkStatus,
+  type RetryOptions,
+  type RequestQueueItem,
+} from "./network-utils";
+
+// --- clipboard-utils ---
+export {
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+  type ClipboardData,
+  type CopyOptions,
+  type PasteOptions,
+  type PasteResult,
+  type ClipboardHistoryEntry,
+  type ClipboardHistoryOptions,
+} from "./clipboard-utils";
