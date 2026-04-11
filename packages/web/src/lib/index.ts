@@ -42130,3 +42130,7 @@ export { makeResizable, createSplitPane, type ResizeOptions, type ResizeState, t
 export { FormValidator, required, minLength, maxLength, pattern, email, urlValidator, range, matchesField, asyncValidator, custom, type FieldConfig, type FieldValidationResult, type FormValidationResult, type FormValidatorOptions, type ValidatorFn } from "./form-validator";
 export { Debounced, Throttled, debounce, throttle, debouncePromise, rafThrottle, idleThrottle, type DebounceOptions, type ThrottleOptions, type RateLimitStats } from "./debounce-throttle";
 export { copyToClipboard, copyRichToClipboard, readFromClipboard, readRichFromClipboard, isClipboardAvailable, canReadClipboard, watchClipboard, type ClipboardData, type ClipboardOptions } from "./clipboard";
+// --- Batch 1349: Keyboard Navigation, Focus Trap, Hotkeys ---
+export { createKeyboardNav, type KeyboardNavOptions, type KeyboardNavInstance, type NavItem, type NavOrientation, type NavWrap } from "./keyboard-navigation";
+export { FocusTrapManager, createFocusTrap, FocusTrapStack, type FocusTrapOptions, type FocusTrapInstance } from "./focus-trap";
+export { HotkeyManager, createAppHotkeys, parseKeyCombo, eventMatchesCombo, formatKeyDisplay, areModifiersDown, getModifierString, type HotkeyBinding, type HotkeyEvent, type ParsedKeyCombo } from "./hotkeys";
