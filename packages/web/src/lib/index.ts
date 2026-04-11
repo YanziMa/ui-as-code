@@ -35206,3 +35206,36 @@ export {
   type ThemeDefinition,
   type ThemeManagerConfig,
 } from "./theme-utils";
+
+// --- Batch 1155: Storage, Cache, State ---
+export {
+  StorageManager,
+  createLocalStorage,
+  createSessionStorage,
+  createMemoryStore,
+  type StorageBackend,
+  type StorageEntry,
+  type StorageOptions,
+  type StorageStats,
+  type StorageMigration,
+} from "./storage-utils";
+export {
+  LRUCache,
+  AsyncLRUCache,
+  createTimedCache,
+  type CacheEntry,
+  type CacheOptions,
+  type AsyncCacheOptions,
+} from "./cache-utils";
+export {
+  createState,
+  createDerived,
+  createMachine,
+  diffState,
+  statesEqual,
+  type StateContainerOptions,
+  type StateContainer,
+  type MachineConfig,
+  type MachineInstance,
+  type MachineTransition,
+} from "./state-utils";
