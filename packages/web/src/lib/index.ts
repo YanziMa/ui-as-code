@@ -32303,3 +32303,33 @@ export {
   type DrawerOptions,
   type DrawerInstance,
 } from "./drawer";
+
+// --- carousel ---
+export {
+  CarouselManager,
+  createCarousel,
+  type CarouselSlide,
+  type CarouselOptions,
+  type CarouselInstance,
+} from "./carousel";
+
+// --- accordion ---
+export {
+  AccordionManager,
+  createAccordion,
+  type AccordionItem,
+  type AccordionMode,
+  type AccordionOptions,
+  type AccordionInstance,
+} from "./accordion";
+
+// --- tabs ---
+export {
+  TabsManager,
+  createTabs,
+  type TabItem,
+  type TabOrientation,
+  type TabVariant,
+  type TabsOptions,
+  type TabsInstance,
+} from "./tabs";
