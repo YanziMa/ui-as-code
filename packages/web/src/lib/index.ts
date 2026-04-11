@@ -25571,3 +25571,15 @@ export { createSkeleton } from "./skeleton-loader";
 // --- waterfall ---
 export type { PipelineStep, PipelineContext, PipelineResult } from "./waterfall";
 export { runPipeline, parallel, waterfall, raceWithCleanup } from "./waterfall";
+
+// --- progress-stepper ---
+export type { StepStatus, StepperOrientation, StepperVariant, StepItem, ProgressStepperOptions, ProgressStepperInstance } from "./progress-stepper";
+export { createProgressStepper } from "./progress-stepper";
+
+// --- breadcrumb ---
+export type { BreadcrumbItem, BreadcrumbOptions, BreadcrumbInstance } from "./breadcrumb";
+export { BreadcrumbManager, createBreadcrumb } from "./breadcrumb";
+
+// --- pagination ---
+export type { PaginationOptions, PaginationInstance } from "./pagination";
+export { PaginationManager, createPagination } from "./pagination";
