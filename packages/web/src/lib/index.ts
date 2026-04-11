@@ -25619,3 +25619,15 @@ export { createBackdrop, closeAllBackdrops, getActiveBackdropCount, showLoadingO
 // --- mask ---
 export type { MaskMode, MaskOptions, CutoutOptions, MaskInstance } from "./mask";
 export { createMask, createSpotlight } from "./mask";
+
+// --- tour-guide ---
+export type { TourStep, TourOptions, TourInstance } from "./tour-guide";
+export { TourManager, createTour } from "./tour-guide";
+
+// --- onboarding ---
+export type { OnboardingStepType, OnboardingField, OnboardingStep, OnboardingOptions, OnboardingInstance } from "./onboarding";
+export { createOnboarding } from "./onboarding";
+
+// --- feature-flag ---
+export type { FlagValueType, FlagConditionOperator, FlagCondition, FlagRule, FeatureFlag, UserContext, FeatureFlagOptions, FeatureFlagInstance } from "./feature-flag";
+export { createFeatureFlags, createBooleanFlag, createRolloutFlag } from "./feature-flag";
