@@ -28053,3 +28053,14 @@ export type { TooltipOptions, TooltipInstance, TooltipPlacement, TooltipTrigger 
 // --- Context Menu ---
 export { ContextMenuManager } from "./context-menu";
 export type { ContextMenuItem, ContextMenuOptions, ContextMenuInstance, ContextMenuPosition } from "./context-menu";
+// --- Modal ---
+export { createModal } from "./modal";
+export type { ModalOptions, ModalInstance, ModalSize, ModalPosition } from "./modal";
+
+// --- Drawer ---
+export { createDrawer } from "./drawer";
+export type { DrawerOptions, DrawerInstance, DrawerSide, DrawerSize } from "./drawer";
+
+// --- Popover ---
+export { PopoverManager, createPopover } from "./popover";
+export type { PopoverOptions, PopoverInstance, PopoverTrigger, PopoverPlacement } from "./popover";
