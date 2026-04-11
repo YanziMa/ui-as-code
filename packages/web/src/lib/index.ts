@@ -32100,3 +32100,15 @@ export type { CalendarViewOptions, CalendarViewInstance, CalendarEvent, Calendar
 // --- mention ---
 export { createMention, MentionManager } from "./mention";
 export type { MentionOptions, MentionInstance, MentionOption } from "./mention";
+
+// --- rating ---
+export { createRating, RatingManager } from "./rating";
+export type { RatingOptions, RatingInstance, StarIconType } from "./rating";
+
+// --- slider ---
+export { createSlider, SliderManager } from "./slider";
+export type { SliderOptions, SliderInstance, SliderMark } from "./slider";
+
+// --- color-picker ---
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
