@@ -29756,3 +29756,14 @@ export type { FieldValidationResult, FormValidationResult, ValidatorFn, FieldCon
 // --- virtual-scroll ---
 export { createVirtualScroll } from "./virtual-scroll";
 export type { VirtualScrollOptions, VirtualScrollInstance, VirtualItem } from "./virtual-scroll";
+// --- audio-player ---
+export { createAudioPlayer } from "./audio-player";
+export type { AudioPlayerOptions, AudioPlayerInstance, AudioTrack } from "./audio-player";
+
+// --- video-player ---
+export { createVideoPlayer } from "./video-player";
+export type { VideoPlayerOptions, VideoPlayerInstance, VideoTrack, QualityOption, Chapter, PlaylistItem } from "./video-player";
+
+// --- image-viewer ---
+export { ImageViewerManager, createImageViewer } from "./image-viewer";
+export type { ImageViewerOptions, ImageViewerInstance, ImageViewerImage, ImageViewerTool } from "./image-viewer";
