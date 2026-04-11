@@ -46194,3 +46194,15 @@ export { createLEDMatrix } from "./led-matrix";
 // --- lifecycle-manager ---
 export type { ManagedInstance, LifecycleManagerConfig, LifecycleManager } from "./lifecycle-manager";
 export { createLifecycleManager } from "./lifecycle-manager";
+
+// --- lifecycle ---
+export type { LifecyclePhase, LifecycleHook, LifecycleGuard, LifecycleConfig, LifecycleInstance } from "./lifecycle";
+export { createLifecycle, createDomLifecycle, createVisibilityLifecycle } from "./lifecycle";
+
+// --- lightbox-utils ---
+export type { LightboxImage as LbuLightboxImage, LightboxZoomMode, LightboxOptions as LbuLightboxOptions, LightboxInstance as LbuLightboxInstance } from "./lightbox-utils";
+export { createLightbox as createLightboxLbu } from "./lightbox-utils";
+
+// --- lightbox ---
+export type { LightboxImage, LightboxOptions, LightboxInstance } from "./lightbox";
+export { LightboxManager, createLightbox } from "./lightbox";
