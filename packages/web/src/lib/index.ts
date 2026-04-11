@@ -30907,3 +30907,42 @@ export {
 
 // --- Either ---
 export { Left, Right, fromNullable, tryEither, tryEitherAsync, validate, sequence, race, chain, cond, isEither } from "./either";
+
+// --- Result (UI) ---
+export { createResult } from "./result";
+export type { ResultStatus, ResultVariant, ResultOptions, ResultInstance } from "./result";
+
+// --- Option ---
+export {
+  Some,
+  None,
+  fromNullable as optionFromNullable,
+  fromPredicate,
+  tryOption,
+  tryOptionAsync,
+  liftA2,
+  sequence as optionSequence,
+  firstSome,
+  lastSome,
+  at as optionAt,
+  prop,
+  coalesce,
+} from "./option";
+export type { Option } from "./option";
+
+// --- Box ---
+export {
+  box,
+  lazyBox,
+  ensureBox,
+  unbox,
+  mapBox,
+  chainBox,
+  tupleBox,
+  flattenBox,
+  nAry,
+  zipBoxes,
+  unzipBoxes,
+  foldBox,
+} from "./box";
+export type { Box } from "./box";
