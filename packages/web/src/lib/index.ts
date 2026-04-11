@@ -38965,3 +38965,64 @@ export {
 export {
   // Re-export from the pre-written format-utils (already has i18n/locale helpers)
 } from "./format-utils";
+// --- event-utils ---
+export {
+  createCustomEvent,
+  dispatchCustomEvent,
+  onCustomEvent,
+  throttleEvent,
+  debounceEvent,
+  once,
+  waitForEvent,
+  delegateEvent,
+  preventDefault,
+  stopPropagation,
+  stopEvent,
+} from "./event-utils";
+
+// --- keyboard-utils ---
+export {
+  KEY_ALIASES,
+  resolveKey,
+  normalizeKeyEvent,
+  eventMatchesBinding,
+  HotkeyManager,
+  KeySequenceDetector,
+  RovingTabIndex,
+  formatHotkey,
+  parseHotkeyString,
+  isTypingInInput,
+} from "./keyboard-utils";
+export type {
+  ModifierKey,
+  KeyBinding,
+  KeySequence,
+  NormalizedKeyEvent,
+  KeyboardState,
+  NavigationConfig,
+} from "./keyboard-utils";
+
+// --- gesture-utils ---
+export {
+  distance as gestureDistance,
+  angleBetween,
+  midpoint,
+  getDirection,
+  isInsideRect,
+  isInsideElement,
+  createTapDebounce,
+  detectSwipe,
+  GestureRecognizer,
+} from "./gesture-utils";
+export type {
+  Point,
+  SwipeGesture,
+  PinchGesture,
+  RotateGesture,
+  TapGesture,
+  LongPressGesture,
+  PanGesture,
+  Gesture,
+  GestureConfig,
+  GestureHandlers,
+} from "./gesture-utils";
