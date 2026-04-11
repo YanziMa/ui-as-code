@@ -34099,3 +34099,38 @@ export {
   type FocusTrapState,
   type FocusableInfo,
 } from "./focus-trap-utils";
+
+// --- scroll-lock-utils ---
+export {
+  lockScroll,
+  unlockAllScroll,
+  getActiveLockCount,
+  isScrollLocked,
+  getScrollbarWidth,
+  clearScrollbarCache,
+  saveScrollPosition,
+  restoreScrollPosition,
+  lockScrollIOS,
+  type ScrollLockOptions,
+  type ScrollLockInstance,
+} from "./scroll-lock-utils";
+
+// --- body-scroll-lock-utils ---
+export {
+  lockBodyScroll,
+  isBodyScrollLocked,
+  getBodyScrollLockCount,
+  forceUnlockAll,
+  type BodyScrollLockOptions,
+} from "./body-scroll-lock-utils";
+
+// --- overlay-utils ---
+export {
+  createOverlay,
+  getNextZIndex,
+  resetZIndexCounter,
+  type OverlayPlacement,
+  type OverlayAnimation,
+  type OverlayOptions,
+  type OverlayInstance,
+} from "./overlay-utils";
