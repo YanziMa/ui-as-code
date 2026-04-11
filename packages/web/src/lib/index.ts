@@ -39342,3 +39342,36 @@ export type {
   TreeOptions,
   TreeInstance,
 } from "./tree-utils";
+// --- virtual-list-utils ---
+export {
+  createVirtualList,
+} from "./virtual-list-utils";
+export type {
+  VirtualListItem,
+  VirtualListOptions,
+  VirtualListInstance,
+} from "./virtual-list-utils";
+
+// --- splitter-utils ---
+export {
+  createSplitter,
+} from "./splitter-utils";
+export type {
+  SplitterOrientation,
+  SplitterUnit,
+  SplitterPane,
+  SplitterOptions,
+  SplitterInstance,
+} from "./splitter-utils";
+
+// --- tabs-utils ---
+export {
+  createTabs,
+} from "./tabs-utils";
+export type {
+  TabOrientation,
+  TabActivation,
+  TabItem,
+  TabsOptions,
+  TabsInstance,
+} from "./tabs-utils";
