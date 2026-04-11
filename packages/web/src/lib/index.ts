@@ -25595,3 +25595,15 @@ export { RatingManager, createRating } from "./rating";
 // --- empty-state ---
 export type { EmptyStateVariant, EmptyStateOptions, EmptyStateInstance } from "./empty-state";
 export { EmptyStateManager, createEmptyState } from "./empty-state";
+
+// --- skeleton-screen ---
+export type { ScreenTemplate, RevealMode, SkeletonSection, SkeletonBlock, SkeletonScreenOptions, SkeletonScreenInstance } from "./skeleton-screen";
+export { createSkeletonScreen } from "./skeleton-screen";
+
+// --- shimmer ---
+export type { ShimmerDirection, ShimmerEasing, ShimmerOptions, ShimmerInstance } from "./shimmer";
+export { createShimmer } from "./shimmer";
+
+// --- spinner ---
+export type { SpinnerVariant, SpinnerSize, SpinnerOptions } from "./spinner";
+export { createSpinner, miniSpinner, fullPageSpinner } from "./spinner";
