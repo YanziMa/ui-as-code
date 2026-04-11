@@ -24992,3 +24992,39 @@ export {
   type StepperOptions,
   type StepperInstance,
 } from "./stepper";
+
+// --- Progress Bar ---
+export {
+  createProgressBar,
+  createCircleProgress,
+  type ProgressBarOptions,
+  type CircleProgressOptions,
+  type ProgressVariant,
+  type ProgressSize,
+} from "./progress-bar";
+
+// --- Skeleton ---
+export {
+  createSkeleton,
+  createTextSkeleton,
+  createHeadingSkeleton,
+  createAvatarSkeleton,
+  createCardSkeleton,
+  createTableSkeleton,
+  wrapWithSkeleton,
+  type SkeletonOptions,
+  type SkeletonTextOptions,
+  type SkeletonAvatarOptions,
+  type SkeletonCardOptions,
+  type SkeletonTableOptions,
+} from "./skeleton";
+
+// --- Loading Dots ---
+export {
+  LoadingDotsManager,
+  createLoadingDots,
+  type LoadingDotsOptions,
+  type LoadingInstance,
+  type LoaderType,
+  type LoaderSize,
+} from "./loading-dots";
