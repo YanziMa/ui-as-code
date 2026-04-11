@@ -24724,3 +24724,14 @@ export type { RatingReviewOptions, RatingReviewInstance, Review, ReviewAuthor, R
 // --- activity-feed ---
 export { ActivityFeedManager, createActivityFeed } from "./activity-feed";
 export type { ActivityFeedOptions, ActivityFeedInstance, ActivityItem, ActivityType, ActivityGroupBy, FeedDensity } from "./activity-feed";
+// --- chat-widget ---
+export { createChatWidget } from "./chat-widget";
+export type { ChatWidgetOptions, ChatWidgetInstance, ChatMessage, ChatParticipant } from "./chat-widget";
+
+// --- help-center ---
+export { createHelpCenter } from "./help-center";
+export type { HelpCenterOptions, HelpCenterInstance, HelpArticle, HelpCategory } from "./help-center";
+
+// --- onboarding-wizard ---
+export { createOnboarding } from "./onboarding-wizard";
+export type { OnboardingOptions, OnboardingInstance, OnboardingStep } from "./onboarding-wizard";
