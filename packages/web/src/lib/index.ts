@@ -46622,3 +46622,12 @@ export { createMediaGallery as mgCreateMediaGallery } from "./media-gallery";
 // --- media-query ---
 export type { BreakpointName as MqBreakpointName, Breakpoint as MqBreakpoint, BreakpointConfig as MqBreakpointConfig, MediaQueryOptions as MqMediaQueryOptions, MediaQueryInstance as MqMediaQueryInstance, ResponsiveManagerInstance as MqResponsiveManagerInstance } from "./media-query";
 export { ResponsiveManager as MqResponsiveManager, createResponsiveManager as mqCreateResponsiveManager, matchesQuery as mqMatchesQuery, getCurrentBreakpoint as mqGetCurrentBreakpoint } from "./media-query";
+// --- media-session ---
+export type { MediaMetadata as MssMetadata, MediaSessionAction as MssSessionAction, MediaSessionOptions as MssSessionOptions, MediaSessionInstance as MssSessionInstance } from "./media-session";
+export { createMediaSession as mssCreateMediaSession, isMediaSessionSupported as mssIsSupported } from "./media-session";
+// --- media ---
+export type { BreakpointName as MdBreakpointName, Breakpoint as MdBreakpoint, BreakpointConfig as MdBreakpointConfig, MediaQueryOptions as MdMediaQueryOptions, MediaQueryInstance as MdMediaQueryInstance } from "./media";
+export { getBreakpoints as mdGetBreakpoints, getCurrentBreakpoint as mdGetCurrentBreakpoint, matchesMedia as mdMatchesMedia, watchMedia as mdWatchMedia, isMinSm as mdIsMinSm, isMinMd as mdIsMinMd, isMinLg as mdIsMinLg, isMinXl as mdIsMinXl, isMaxXs as mdIsMaxXs, isMaxSm as mdIsMaxSm, isMaxMd as mdIsMaxMd, isMobile as mdIsMobile, isTablet as mdIsTablet, isDesktop as mdIsDesktop, onBreakpointChange as mdOnBreakpointChange, isPrinting as mdIsPrinting, onPrintStart as mdOnPrintStart, onPrintEnd as mdOnPrintEnd, isDarkMode as mdIsDarkMode, isLightMode as mdIsLightMode, onColorSchemeChange as mdOnColorSchemeChange, getOrientation as mdGetOrientation, onOrientationChange as mdOnOrientationChange } from "./media";
+// --- mediator ---
+export type { RequestHandler, Middleware, MediatorContext, HandlerRegistration, MediatorOptions, MediatorStats } from "./mediator";
+export { Mediator, createMediator } from "./mediator";
