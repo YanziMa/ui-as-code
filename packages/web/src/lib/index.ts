@@ -48483,3 +48483,72 @@ export {
 export type {
   QrOptions as QrcOptionsType,
 } from "./qrcode";
+
+// --- query-string ---
+export {
+  QueryStringOptions as QSOpts,
+  StringifyOptions as QSStrOpts,
+  parse as QSParse,
+  parseUrlQuery,
+  stringify as QSStringify,
+  getParam as QSGetParam,
+  setParam as QSSetParam,
+  removeParam as QSRemoveParam,
+  toggleParam as QSToggleParam,
+  mergeParams as QSMergeParams,
+  pickParams as QSPickParams,
+  omitParams as QSOmitParams,
+} from "./query-string";
+export type {
+  QueryStringOptions as QSOptsType,
+  StringifyOptions as QSStrOptsType,
+} from "./query-string";
+
+// --- queue-ds ---
+export {
+  QueueItem as QDSQueueItem,
+  QueueStats as QDSQueueStats,
+  BatchProcessorOptions as QDSBatchOpts,
+  ArrayQueue,
+  LinkedListQueue,
+  ArrayStack,
+  LinkedStack,
+  Deque as QDSDeque,
+  OverwriteMode,
+  CircularBuffer as CDSCircularBuffer,
+  PriorityQueue as CDSPriorityQueue,
+  HeapOrder,
+  MinMaxStack,
+  LRUCache,
+  Trie,
+  BloomFilter,
+  SkipList,
+  UnionFind,
+} from "./queue-ds";
+export type {
+  QueueItem as QDSQueueItemType,
+  QueueStats as QDSQueueStatsType,
+  BatchProcessorOptions as QDSBatchOptsType,
+  OverwriteMode,
+  HeapOrder,
+} from "./queue-ds";
+
+// --- queue-utils ---
+export {
+  QueueItem as QUQueueItem,
+  QueueStats as QUQueueStats,
+  BatchProcessorOptions as QUBatchOpts,
+  Queue,
+  PriorityQueue as QUPriorityQueue,
+  CircularBuffer as QUCircularBuffer,
+  RateLimitedQueue,
+  ObservableQueue,
+  DebounceQueue,
+  AsyncTaskQueue,
+  BatchProcessor as QUBatchProcessor,
+} from "./queue-utils";
+export type {
+  QueueItem as QUQueueItemType,
+  QueueStats as QUQueueStatsType,
+  BatchProcessorOptions as QUBatchOptsType,
+} from "./queue-utils";
