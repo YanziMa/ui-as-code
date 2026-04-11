@@ -39375,3 +39375,40 @@ export type {
   TabsOptions,
   TabsInstance,
 } from "./tabs-utils";
+// --- command-palette-utils ---
+export {
+  createCommandPalette,
+} from "./command-palette-utils";
+export type {
+  PaletteItem,
+  CommandPaletteOptions,
+  CommandPaletteInstance,
+} from "./command-palette-utils";
+
+// --- avatar-utils ---
+export {
+  createAvatar,
+  createAvatarGroup,
+  generateAvatarColor,
+  getInitials,
+} from "./avatar-utils";
+export type {
+  AvatarSize,
+  AvatarShape,
+  AvatarOptions,
+  AvatarGroupOptions,
+} from "./avatar-utils";
+
+// --- markdown-utils ---
+export {
+  parseMarkdown,
+  renderMarkdown,
+  extractHeadings,
+  generateToc,
+  extractCodeBlocks,
+  extractNamedBlock,
+} from "./markdown-utils";
+export type {
+  MarkdownOptions,
+  HeadingInfo,
+} from "./markdown-utils";
