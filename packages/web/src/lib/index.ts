@@ -46696,3 +46696,15 @@ export { createModel } from "./model";
 // --- monitor.ts ---
 export type { FpsSample, FpsStats, MemoryInfo, LongTaskEntry, MetricValue as MonMetricValue, MonitorConfig, MonitorInstance } from "./monitor";
 export { createMonitor, FpsMonitor } from "./monitor";
+
+// --- monitoring-dashboard.ts ---
+export type { MetricPoint as MonDashPoint, MetricSeries as MonDashSeries, AlertRule as MonDashAlertRule, AlertEvent as MonDashAlertEvent, HealthCheckResult as MonDashHealthResult, DashboardWidget as MonDashWidget, WidgetType, WidgetConfig } from "./monitoring-dashboard";
+export { TimeSeriesStore, AlertManager, HealthChecker, DashboardLayout, MonitoringChartRenderer, formatMetricBytes, formatUptime, calcPercentChange, getTrendIndicator, emaSmooth } from "./monitoring-dashboard";
+
+// --- morphdom-engine.ts ---
+export type { MorphOptions as MorphDomOptions, MorphStats as MorphDomStats, MorphInstance as MorphDomInstance } from "./morphdom-engine";
+export { createMorphEngine as createMorphDomEngine, morph as morphDom, morphBetween as morphDomBetween } from "./morphdom-engine";
+
+// --- mosaic-plot.ts ---
+export type { MosaicCategory, MosaicCell, MosaicPlotOptions, MosaicInstance } from "./mosaic-plot";
+export { createMosaicPlot } from "./mosaic-plot";
