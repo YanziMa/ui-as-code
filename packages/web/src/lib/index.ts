@@ -47141,3 +47141,59 @@ export {
   daysToMs,
   msToReadable,
 } from "./number-utils-v2";
+
+// --- number-utils ---
+export {
+  round as roundNU,
+  clamp as clampNU,
+  lerp as lerpNU,
+  mapRange as mapRangeNU,
+  formatBytes as formatBytesNU,
+  formatCompact as formatCompactNU,
+  percentOf,
+  randomInt as randomIntNU,
+  approximately,
+  parseNumber as parseNumberNU,
+} from "./number-utils";
+
+// --- number.ts (advanced) ---
+export {
+  clampNumber,
+  lerpNumber,
+  mapRangeNumber,
+  roundTo as roundToNum,
+  roundToMultiple,
+  floorToMultiple,
+  ceilToMultiple,
+  formatBytesAuto,
+  formatCompactNumber,
+  formatWithSeparators,
+  percentChange,
+  approximatelyEqual,
+  randomIntInRange,
+  randomFloatInRange,
+  normalizeAngleDeg,
+  normalizeAngleRad,
+  degToRad as degToRadNum,
+  radToDeg as radToDegNum,
+  gcd,
+  lcm,
+  isInRange as isInRangeNum,
+  wrapNumber,
+} from "./number";
+
+// --- oauth-client ---
+export type {
+  OAuthFlow,
+  ResponseType as OAuthResponseType,
+  GrantType as OAuthGrantType,
+} from "./oauth-client";
+export type {
+  OAuthProviderConfig,
+  OAuthToken,
+  OAuthSession,
+  OAuthOptions,
+} from "./oauth-client";
+export {
+  OAuthClient,
+} from "./oauth-client";
