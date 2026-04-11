@@ -49821,3 +49821,37 @@ export {
   generateSecureId,
   buildCsp,
 } from "./sanitizer";
+
+// --- sankey.ts ---
+export type {
+  SankeyNode,
+  SankeyLink,
+  SankeyOptions as SkOpts,
+  SankeyInstance as SkInst,
+} from "./sankey";
+export { createSankey } from "./sankey";
+
+// --- scatter-plot.ts ---
+export type {
+  ScatterPoint as SctPoint,
+  ScatterSeries as SctSeries,
+  ScatterOptions as SctOpts,
+  ScatterInstance as SctInst,
+} from "./scatter-plot";
+export { createScatterPlot } from "./scatter-plot";
+
+// --- scheduler-advanced.ts ---
+export type {
+  PriorityLevel,
+  RetryConfig as SchAdvRetryCfg,
+  JobDefinition as SchAdvJobDef,
+  LogEntry as SchAdvLogEntry,
+  JobExecution as SchAdvExec,
+  SchedulerStats as SchAdvStats,
+  TimelineEvent as SchAdvTimelineEvt,
+} from "./scheduler-advanced";
+export { Priority } from "./scheduler-advanced";
+export { AdvancedScheduler, ScheduleVisualizer } from "./scheduler-advanced";
+export { parseEnhancedCron, convertSchedule } from "./scheduler-advanced";
+export { Scheduler, ScheduledJob, JobStatus, CronExpression } from "./scheduler-advanced";
+export { baseParseCron } from "./scheduler-advanced";
