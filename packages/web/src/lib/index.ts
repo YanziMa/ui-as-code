@@ -39745,3 +39745,10 @@ export { createTour } from "./tour-utils";
 export type { TourOptions, TourInstance, TourStep } from "./tour-utils";
 export { createSkeletonScreen } from "./skeleton-screen-utils";
 export type { SkeletonScreenOptions, SkeletonScreenInstance, SkeletonLayout, SkeletonBlock } from "./skeleton-screen-utils";
+// --- Batch 1247: Carousel, Masonry, Virtual Scroller ---
+export { createCarousel } from "./carousel-utils";
+export type { CarouselOptions, CarouselInstance, CarouselSlide, CarouselTransition, CarouselNavStyle } from "./carousel-utils";
+export { createMasonry } from "./masonry-utils";
+export type { MasonryOptions, MasonryInstance, MasonryItem } from "./masonry-utils";
+export { createVirtualScroller } from "./virtual-scroller-utils";
+export type { VirtualScrollerOptions, VirtualScrollerInstance, VirtualItem } from "./virtual-scroller-utils";
