@@ -45467,3 +45467,37 @@ export type {
 export {
   createHeatmap as hmCreate,
 } from "./heatmap-chart";
+
+// --- heatmap-utils ---
+export type {
+  HeatmapColorScale as HmuColorScale,
+  HeatmapDataPoint as HmuDataPoint,
+  HeatmapOptions as HmuOptions,
+  HeatmapInstance as HmuInstance,
+} from "./heatmap-utils";
+export {
+  createHeatmap as hmuCreate,
+} from "./heatmap-utils";
+
+// --- heatmap ---
+export type {
+  HeatmapType as HmType,
+  ColorScale as HmColorScale,
+  HeatmapCell as HmCell,
+  HeatmapOptions as HmOptions,
+  HeatmapInstance as HmInstance,
+} from "./heatmap";
+export {
+  createHeatmap as hmCreate,
+} from "./heatmap";
+
+// --- help-center ---
+export type {
+  HelpArticle as HcArticle,
+  HelpCategory as HcCategory,
+  HelpCenterOptions as HcOptions,
+  HelpCenterInstance as HcInstance,
+} from "./help-center";
+export {
+  createHelpCenter as hcCreate,
+} from "./help-center";
