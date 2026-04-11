@@ -41610,3 +41610,29 @@ export {
   type MentionInputInstance,
   type MentionUser,
 } from "./mention-input";
+// --- File Upload ---
+export {
+  createFileUpload,
+  type FileUploadOptions,
+  type FileUploadInstance,
+  type FileUploadItem,
+} from "./file-upload";
+
+// --- Dropzone ---
+export {
+  createDropzone,
+  type DropzoneOptions,
+  type DropzoneInstance,
+  type DropzoneFile,
+  type FileValidationRule,
+} from "./dropzone";
+
+// --- Copy Block / Code Snippet ---
+export {
+  createCopyBlock,
+  type CopyBlockOptions,
+  type CopyBlockInstance,
+  type CopyBlockTheme,
+  type LineNumberMode,
+  type CodeLanguage,
+} from "./copy-block";
