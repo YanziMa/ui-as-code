@@ -28988,3 +28988,42 @@ export {
   type DropTargetInfo,
   type DropResult,
 } from "./drag-and-drop-v2.js";
+// --- Batch 965: Form Validator, Data Table, Toast Notification ---
+
+export {
+  FormValidator,
+  required,
+  minLength,
+  maxLength,
+  pattern,
+  email,
+  urlValidator as url,
+  range,
+  matchesField,
+  asyncValidator,
+  custom as customValidator,
+  type FieldValidationResult,
+  type FormValidationResult,
+  type FieldConfig,
+  type ValidatorFn,
+} from "./form-validator.js";
+
+export {
+  DataTableManager,
+  createDataTable,
+  type Column,
+  type SortDirection,
+  type SortState,
+  type FilterState,
+  type DataTableOptions,
+  type DataTableInstance,
+} from "./data-table.js";
+
+export {
+  createToastManager,
+  type ToastOptions,
+  type ToastManagerOptions,
+  type ToastInstance,
+  type ToastType,
+  type ToastPosition,
+} from "./toast-notification.js";
