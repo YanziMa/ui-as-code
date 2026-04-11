@@ -24137,3 +24137,15 @@ export type { SheetSnapPoint, SheetOptions, SheetInstance } from "./sheet";
 // --- offcanvas ---
 export { createOffcanvas, bindOffcanvas } from "./offcanvas";
 export type { OffcanvasSide, OffcanvasMode, OffcanvasOptions, OffcanvasInstance } from "./offcanvas";
+
+// --- accordion ---
+export { AccordionManager, createAccordion } from "./accordion";
+export type { AccordionItem, AccordionMode, AccordionOptions, AccordionInstance } from "./accordion";
+
+// --- tabs ---
+export { TabsManager, createTabs } from "./tabs";
+export type { TabItem, TabOrientation, TabVariant, TabsOptions, TabsInstance } from "./tabs";
+
+// --- collapse ---
+export { CollapseManager, createCollapse, createCollapseGroup } from "./collapse";
+export type { CollapseSize, CollapseVariant, CollapseOptions, CollapseInstance, CollapseGroupOptions, CollapseGroupInstance } from "./collapse";
