@@ -27052,3 +27052,34 @@ export {
   type MultiProgressController,
   type StepProgressController,
 } from "./progress";
+// --- Drawer ---
+export {
+  createDrawer,
+  type DrawerOptions,
+  type DrawerInstance,
+  type DrawerSide,
+  type DrawerSize,
+} from "./drawer";
+
+// --- Popover ---
+export {
+  PopoverManager,
+  createPopover,
+  type PopoverOptions,
+  type PopoverInstance,
+  type PopoverTrigger,
+  type PopoverPlacement,
+} from "./popover";
+
+// --- Collapse ---
+export {
+  CollapseManager,
+  createCollapse,
+  createCollapseGroup,
+  type CollapseOptions,
+  type CollapseInstance,
+  type CollapseSize,
+  type CollapseVariant,
+  type CollapseGroupOptions,
+  type CollapseGroupInstance,
+} from "./collapse";
