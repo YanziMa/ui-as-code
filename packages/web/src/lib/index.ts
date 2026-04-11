@@ -40221,3 +40221,34 @@ export {
   type TreeViewInstance,
   type TreeNode,
 } from "./tree-view-utils";
+// --- Masonry ---
+export {
+  createMasonry,
+  type MasonryOptions,
+  type MasonryInstance,
+  type MasonryItem,
+} from "./masonry-utils";
+
+// --- Color Picker ---
+export {
+  createColorPicker,
+  parseColor,
+  hslToRgb,
+  rgbToHsl,
+  rgbToHex,
+  formatColor,
+  type ColorPickerOptions,
+  type ColorPickerInstance,
+  type ColorValue,
+  type ColorPreset,
+  type ColorFormat,
+} from "./color-picker-utils";
+
+// --- Date Picker ---
+export {
+  createDatePicker,
+  type DatePickerOptions,
+  type DatePickerInstance,
+  type DatePickerSize,
+  type DatePickerVariant,
+} from "./date-picker-utils";
