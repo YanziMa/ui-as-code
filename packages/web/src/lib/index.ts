@@ -44890,3 +44890,13 @@ export { applyCriteria, getFieldValue, filterItems, createFilterManager, fuzzySc
 // --- floating-label ---
 export type { FloatingLabelVariant, FloatingLabelSize, AnimationStyle, FloatingLabelOptions, FloatingLabelInstance } from "./floating-label";
 export { createFloatingLabel, createFloatingLabels } from "./floating-label";
+
+// --- focus-utils ---
+export { hasFocus, hasFocusWithin, getActiveElement, isKeyboardUser, initKeyboardDetection, addFocusRing, addFocusRings, focus, focusFirst, focusLast, getFocusableChildren, saveFocus, announceToScreenReader, makeTabbable, makeUntabbable, restoreTabbable, createArrowNavigation } from "./focus-utils";
+export type { FocusRingOptions } from "./focus-utils";
+// --- focus-trap ---
+export type { FocusTrapOptions, FocusTrapInstance } from "./focus-trap";
+export { FocusTrapManager, FocusTrapStack, createFocusTrap } from "./focus-trap";
+// --- form-builder ---
+export type { FieldType, FieldValidation, SelectOption, FormField, FormSection, FormSchema, FieldError, FormState } from "./form-builder";
+export { FormBuilder, createForm, validations } from "./form-builder";
