@@ -41331,3 +41331,38 @@ export {
   diffState,
   statesEqual,
 } from "./state-utils";
+
+// --- virtual-list-utils ---
+export type { VirtualListItem, VirtualListOptions, VirtualListInstance } from "./virtual-list-utils";
+export { createVirtualList } from "./virtual-list-utils";
+
+// --- drag-drop-utils ---
+export type { DragAxis, DragConstraint, DragData, DropZoneOptions, DraggableOptions, SortableOptions, DragEvent, DraggableInstance, DropZoneInstance, SortableInstance } from "./drag-drop-utils";
+export { createDraggable, createSortable } from "./drag-drop-utils";
+
+// --- clipboard-utils ---
+export type { ClipboardData, CopyOptions, PasteOptions, PasteResult, ClipboardHistoryEntry, ClipboardHistoryOptions } from "./clipboard-utils";
+export {
+  requestClipboardPermission,
+  checkClipboardReadPermission,
+  isClipboardSupported,
+  copyToClipboard,
+  copyRich,
+  copyImage,
+  copyFiles,
+  readClipboardText,
+  readClipboard,
+  cutToClipboard,
+  selectAll,
+  selectRange,
+  clearSelection,
+  getSelectedText,
+  getSelectionTarget,
+  ClipboardHistory,
+  detectClipboardFormats,
+  hasImageInClipboard,
+  hasFilesInClipboard,
+  copyWithFeedback,
+  copySelection,
+  onClipboardChange,
+} from "./clipboard-utils";
