@@ -27930,3 +27930,14 @@ export type { UndoItem, UndoBranch, UndoHistoryOptions, UndoState, UndoChangeLis
 // --- Shortcuts Guide ---
 export { createShortcutsGuide, createShortcutHint } from "./shortcuts-guide";
 export type { ShortcutItem, ShortcutCategory, ShortcutsGuideOptions, ShortcutsGuideInstance } from "./shortcuts-guide";
+// --- Clipboard Manager ---
+export { ClipboardManager, requestClipboardPermission, requestReadPermission, isClipboardApiAvailable, sanitizeHtml } from "./clipboard-manager";
+export type { ClipboardData, ClipboardDataType, ClipboardPermission, ClipboardHistoryEntry, ClipboardConfig, CopyOptions, PasteOptions } from "./clipboard-manager";
+
+// --- Color Picker ---
+export { hexToRgb, rgbToHex, rgbToHsl, hslToRgb, hslToHex, parseColor, getLuminance, getContrastRatio, getWcagLevel, getContrastingText, complementary, analogous, triadic, splitComplementary, tetradic, monochromatic, blendColors, lighten, darken, saturate, desaturate, invertColor, withOpacity, generatePaletteAdvanced } from "./color-picker";
+export type { RgbColor, HslColor, Palette } from "./color-picker";
+
+// --- Date Picker ---
+export { DatePickerManager, createDatePicker } from "./date-picker";
+export type { DatePickerOptions, DatePickerInstance } from "./date-picker";
