@@ -26162,3 +26162,48 @@ export {
   parsePercent,
 } from "./number-format";
 export type { NumberPatternOptions } from "./number-format";
+
+// --- Async Utils ---
+export {
+  retry,
+  withTimeoutPromise,
+  poll,
+  runWithConcurrency,
+  memoizeAsync,
+  memoize,
+  createDeferred,
+  asyncIterate,
+  batchProcess,
+  allSuccessful,
+  allOrThrow,
+} from "./async-utils";
+export type { RetryOptions, PollOptions, ConcurrencyOptions, MemoizeOptions } from "./async-utils";
+
+// --- Promise Helpers ---
+export {
+  abortable,
+  createCancellable,
+  withTimeout,
+  raceWithIndex,
+  anyResolved,
+  waterfall,
+  parallelPool,
+  mapConcurrent,
+  conditional,
+  retryPromise,
+  sleep,
+  sleepUntil,
+  debounceAsync,
+  throttleAsync,
+  using,
+  isThenable,
+  promiseState,
+} from "./promise-helpers";
+export type { PromiseOptions, RaceResult } from "./promise-helpers";
+
+// --- Task Queue ---
+export {
+  TaskQueue,
+  createTaskQueue,
+} from "./task-queue";
+export type { Task, TaskResult, WorkerPoolOptions, QueueStats, TaskPriority, TaskStatus } from "./task-queue";
