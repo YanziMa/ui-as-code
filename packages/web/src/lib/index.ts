@@ -45267,3 +45267,54 @@ export {
   swipeGestures,
   tapGesture,
 } from "./gesture";
+
+// --- graph-utils ---
+export type {
+  GraphNodeId as GpuNodeId,
+  GraphEdge as GpuEdge,
+  GraphPath as GpuPath,
+  TraversalResult as GpuTraversalResult,
+  CentralityResult as GpuCentralityResult,
+} from "./graph-utils";
+export {
+  Graph as GpuGraph,
+  bfs as gpuBfs,
+  bfsShortestPath as gpuBfsShortestPath,
+  dfs as gpuDfs,
+  dfsRecursive as gpuDfsRecursive,
+  dijkstra as gpuDijkstra,
+  dijkstraShortestPath as gpuDijkstraShortestPath,
+  astar as gpuAstar,
+  topologicalSort as gpuTopoSort,
+  findConnectedComponents as gpuConnectedComponents,
+  hasCycle as gpuHasCycle,
+  findCycle as gpuFindCycle,
+  UnionFind,
+  hasCycleUnionFind as gpuHasCycleUF,
+  primMST as gpuPrimMST,
+  mstTotalWeight as gpuMstWeight,
+  computeCentrality as gpuCentrality,
+} from "./graph-utils";
+
+// --- graph ---
+export type {
+  GraphNode as GrGraphNode,
+  GraphEdge as GrGraphEdge,
+} from "./graph";
+export {
+  Graph as GrGraph,
+} from "./graph";
+
+// --- graphql ---
+export type {
+  GqlVariable as QlVariable,
+  GqlRequest as QlRequest,
+} from "./graphql";
+export {
+  gql,
+  parseGqlOperation as qlParseOp,
+  extractVariables as qlExtractVars,
+  extractFields as qlExtractFields,
+  executeGql as qlExecute,
+  fragment as qlFragment,
+} from "./graphql";
