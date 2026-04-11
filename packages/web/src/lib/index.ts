@@ -28933,3 +28933,33 @@ export type { StoreOptions, StoreInstance, SelectorFn, Listener } from "./signal
 // --- reactive-signals ---
 export { signal, computed, effect, batch, isSignal, isComputed, untrack, peek, not as sigNot, mapSignal, filterSignal, asyncEffect, getDependencyGraph, getPendingCount, getBatchDepth, shallowEqual, deepEqual } from "./reactive-signals";
 export type { SignalOptions, ComputedOptions, EffectOptions, ReactionNode, EffectContext } from "./reactive-signals";
+// --- Batch 963: Web Worker Pool, Task Scheduler v2, Request Batcher ---
+
+export {
+  WebWorkerPool,
+  createWorkerPool,
+  type WorkerPoolConfig,
+  type PoolTask,
+  type PoolTaskResult,
+  type WorkerStats,
+  type PoolEvent,
+} from "./web-worker-pool.js";
+
+export {
+  TaskSchedulerV2,
+  createTaskSchedulerV2,
+  type SchedulerConfig,
+  type ScheduledTask,
+  type TaskResult as SchedulerTaskResult,
+  type SchedulerStats,
+  type SchedulerEvent,
+} from "./task-scheduler-v2.js";
+
+export {
+  RequestBatcher,
+  createRequestBatcher,
+  type BatchConfig,
+  type BatchableRequest,
+  type BatchResponse,
+  type BatchStats,
+} from "./request-batcher.js";
