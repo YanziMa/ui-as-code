@@ -30784,3 +30784,58 @@ export {
   binarySearch,
 } from "./comparators";
 export type { Comparator, SortDirection, SortSpec } from "./comparators";
+
+// --- DOM Observer ---
+export { DomObserverManager, takeSnapshot, compareSnapshots, createRouteChangeDetector, createLazyLoader } from "./dom-observer";
+export type { ObserveTarget, MutationOptions, IntersectionOptions, ResizeOptions, MutationRecordEx, DomSnapshot, ObserverCallbacks, ObserverStats } from "./dom-observer";
+
+// --- CSS Utilities ---
+export {
+  cssVar,
+  setCssVar,
+  getCssVar,
+  setCssVars,
+  removeCssVar,
+  getAllCssVars,
+  injectCSS,
+  removeInjectedCSS,
+  addCSSRule,
+  clearDynamicStyles,
+  styleObjectToString,
+  cssStringToObject,
+  applyStyles as applyCSSStyles,
+  bem,
+  createBem,
+  cn,
+  mergeClasses,
+  mediaQuery,
+  matchesMedia,
+  isAtLeast,
+  isBelow,
+  subscribeMedia,
+  subscribeBreakpoint,
+  getCurrentBreakpoint,
+  media,
+  cssTransition,
+  EASING_CSS,
+  keyframes,
+  ANIMATIONS,
+  animateOnce,
+  hexToRgb,
+  rgbToHex,
+  mixColors,
+  transparentize,
+  lightenColor,
+  darkenColor,
+  parseCssColor,
+  pxToRem,
+  remToPx,
+  ensureUnit,
+  cssClamp,
+  fluidFontSize,
+} from "./css-utils";
+export type { BreakpointName } from "./css-utils";
+
+// --- HTML Builder ---
+export { tag, html, htmlString, applyAttributes, appendChildren, fragment, repeat, when, switchOn, $, $$ } from "./html-builder";
+export type { Child, AttrValue, BuildOptions } from "./html-builder";
