@@ -16629,3 +16629,52 @@ export {
   getBatteryInfo,
 } from "./platform";
 export type { PlatformInfo, OSType } from "./platform";
+export {
+  KeyboardManager,
+  createKeyboardManager,
+  formatShortcut,
+  matchesShortcut,
+} from "./keyboard";
+export type {
+  KeyBinding,
+  KeyChord,
+  KeyboardManagerOptions,
+  KeyboardManagerInstance,
+} from "./keyboard";
+export {
+  getPointerPosition,
+  createPositionTracker,
+  onClickOutside,
+  makeDraggable,
+  onLongPress,
+  trackScrollDirection,
+  requestPointerLock,
+  exitPointerLock,
+  isPointerLocked,
+  pointDistance,
+  pointAngle,
+  pointInRect,
+} from "./mouse";
+export type {
+  Point as MousePoint,
+  MousePosition,
+  ClickOutsideOptions,
+  DragOptions,
+  DragInstance,
+  LongPressOptions,
+  ScrollDirectionInfo,
+} from "./mouse";
+export {
+  GestureManager,
+  createGesture,
+  swipeGestures,
+  tapGesture,
+} from "./gesture";
+export type {
+  GestureType,
+  SwipeDirection,
+  GestureConfig,
+  GestureHandlerConfig,
+  GestureEvent,
+  GestureInstance,
+} from "./gesture";
