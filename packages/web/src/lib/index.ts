@@ -23648,3 +23648,59 @@ export type {
   Token,
   TokenType,
 } from "./syntax-highlight";
+
+// --- undo-redo ---
+export { UndoHistory } from "./undo-redo";
+export type {
+  UndoItem,
+  UndoBranch,
+  UndoHistoryOptions,
+  UndoState,
+  UndoChangeListener,
+} from "./undo-redo";
+
+// --- debounce-throttle ---
+export {
+  Debounced,
+  Throttled,
+  debounce,
+  throttle,
+  debouncePromise,
+  rafThrottle,
+  idleThrottle,
+} from "./debounce-throttle";
+export type {
+  DebounceOptions,
+  ThrottleOptions,
+  RateLimitStats,
+} from "./debounce-throttle";
+
+// --- promise-utils ---
+export {
+  retry,
+  withTimeout,
+  sleep,
+  runConcurrent,
+  processInBatches,
+  raceSuccess,
+  firstN,
+  makeCancellable,
+  collectAsync,
+  mapAsyncIterable,
+  filterAsyncIterable,
+  reduceAsyncIterable,
+  memoizeAsync,
+  createDeferred,
+  createOnceEvent,
+  poll,
+  TaskQueue,
+} from "./promise-utils";
+export type {
+  RetryOptions,
+  TimeoutOptions,
+  ConcurrencyOptions,
+  BatchOptions,
+  MemoizeOptions,
+  PollOptions,
+  TaskQueueOptions,
+} from "./promise-utils";
