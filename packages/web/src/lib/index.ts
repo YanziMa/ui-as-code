@@ -24878,3 +24878,28 @@ export { createRadioGroup } from "./radio-group";
 // --- Select Menu ---
 export type { SelectOption, SelectGroup, SelectMode, SelectMenuOptions, SelectMenuInstance } from "./select-menu";
 export { createSelectMenu } from "./select-menu";
+
+// --- Text Input ---
+export type { InputSize, InputState, TextInputOptions, TextInputInstance } from "./text-input";
+export { createTextInput } from "./text-input";
+
+// --- Textarea ---
+export type { TextareaSize, TextareaState, TextareaOptions, TextareaInstance } from "./textarea";
+export { createTextarea } from "./textarea";
+
+// --- Form Field ---
+export type {
+  FieldSize, InputType,
+  BaseFieldOptions, TextFieldOptions, TextAreaOptions, SelectFieldOptions,
+  CheckboxFieldOptions, SwitchFieldOptions, RadioGroupOptions as FormRadioGroupOptions,
+  FileUploadOptions, RangeSliderOptions, RatingFieldOptions, ColorPickerOptions,
+  TextFieldInstance, TextAreaInstance, SelectFieldInstance, CheckboxInstance,
+  SwitchInstance, RadioGroupInstance as FormRadioGroupInstance,
+  FileUploadInstance, RangeSliderInstance, RatingInstance, ColorPickerInstance
+} from "./form-field";
+export {
+  createTextField, createTextArea, createSelectField,
+  createCheckbox, createSwitch, createRadioGroup as createFormRadioGroup,
+  createFileUpload, createRangeSlider, createRating as createRatingField,
+  createColorPicker
+} from "./form-field";
