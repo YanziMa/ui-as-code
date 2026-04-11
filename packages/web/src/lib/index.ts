@@ -17176,3 +17176,30 @@ export type {
   CreatePRInput,
   VoteInput,
 } from "./validation";
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+} from "./i18n";
+export type { Locale } from "./i18n";
+export {
+  Router,
+  createRouter,
+  getRouter,
+} from "./router";
+export type {
+  RouteMode,
+  RouteParams,
+  QueryParams,
+  RouteDefinition,
+  RouterConfig,
+  RouteInfo,
+  NavigationResult,
+} from "./router";
+export {
+  Cache,
+  defaultCache,
+  memoize,
+} from "./cache";
+export type { CacheOptions } from "./cache";
