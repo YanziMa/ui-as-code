@@ -29523,3 +29523,15 @@ export type { ViolinOptions, ViolinInstance, ViolinData } from "./violin-plot";
 // --- area-chart ---
 export { createAreaChart } from "./area-chart";
 export type { AreaChartOptions, AreaChartInstance, AreaSeries, DataPoint } from "./area-chart";
+
+// --- bubble-chart ---
+export { createBubbleChart } from "./bubble-chart";
+export type { BubbleChartOptions, BubbleChartInstance, Bubble, BubbleSeries } from "./bubble-chart";
+
+// --- bullet-chart ---
+export { createBulletChart } from "./bullet-chart";
+export type { BulletChartOptions, BulletChartInstance, BulletMeasure, RangeType } from "./bullet-chart";
+
+// --- radial-bar-chart ---
+export { createRadialBarChart } from "./radial-bar-chart";
+export type { RadialBarOptions, RadialBarInstance, RadialBarData } from "./radial-bar-chart";
