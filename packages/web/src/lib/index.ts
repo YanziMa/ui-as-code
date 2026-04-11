@@ -42042,3 +42042,10 @@ export { createRadioGroup } from "./radio-group.js";
 export type { RadioGroupOptions, RadioGroupInstance, RadioOption, RadioSize, RadioVariant } from "./radio-group.js";
 export { createCheckboxGroup } from "./checkbox-group.js";
 export type { CheckboxGroupOptions, CheckboxGroupInstance, CheckboxOption, CheckboxSize, CheckboxVariant } from "./checkbox-group.js";
+// --- Batch 1333: Input Controls ---
+export { createInputField } from "./input-field.js";
+export type { InputFieldOptions, InputInstance, InputVariant, InputSize, InputState } from "./input-field.js";
+export { createSelectDropdown } from "./select-dropdown.js";
+export type { SelectDropdownOptions, SelectDropdownInstance, SelectOption, SelectGroup, SelectDropdownSize, SelectTriggerMode } from "./select-dropdown.js";
+export { createTextareaAutosize } from "./textarea-autosize.js";
+export type { TextareaAutosizeOptions, TextareaAutosizeInstance } from "./textarea-autosize.js";
