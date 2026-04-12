@@ -57887,3 +57887,35 @@ export {
   ClipboardManager,
   createClipboardManager,
 } from "./clipboard-manager";
+
+// --- clipboard-utils ---
+export {
+  copyToClipboard as clipboardCopy,
+  readFromClipboard,
+  copyHTML as clipboardCopyHTML,
+  copyImage as clipboardCopyImage,
+  getClipboardFormats,
+  hasClipboardPermission,
+  requestClipboardWrite,
+} from "./clipboard-utils";
+
+// --- clipboard ---
+export type {
+  ClipboardOptions,
+  ClipboardInstance,
+} from "./clipboard";
+export {
+  Clipboard as ClipboardComponent,
+  createClipboardComponent,
+} from "./clipboard";
+
+// --- clock ---
+export type {
+  ClockOptions,
+  ClockTheme,
+  ClockInstance,
+} from "./clock";
+export {
+  Clock,
+  createClock,
+} from "./clock";
