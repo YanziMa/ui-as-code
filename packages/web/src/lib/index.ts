@@ -54686,3 +54686,43 @@ export {
   type NotificationPriority,
   type NotificationConfig,
 } from "./notification-system";
+
+// --- Tooltip Manager ---
+export {
+  TooltipManager,
+  type Placement,
+  type TriggerMode,
+  type TooltipOptions,
+  type VirtualElement,
+  type TooltipInstance,
+} from "./tooltip-manager";
+
+// --- Animation Engine ---
+export {
+  easings,
+  getEasing,
+  springAnimate,
+  AnimationTimeline,
+  createScrollAnimation,
+  staggerElements,
+  animateCounter,
+  createParallax,
+  type EasingFunction,
+  type SpringConfig,
+  type SpringState,
+  type Keyframe,
+  type AnimationTrack,
+  type ScrollAnimationConfig,
+} from "./animation-engine";
+
+// --- Fuzzy Search ---
+export {
+  fuzzySearch,
+  multiTermSearch,
+  filterBySubstring,
+  rerank,
+  highlightMatches,
+  foldDiacritics,
+  type FuzzyResult,
+  type FuzzyOptions,
+} from "./fuzzy-search";
