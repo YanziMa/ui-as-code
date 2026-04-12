@@ -55926,3 +55926,37 @@ export {
   ActionBar,
   createActionBar,
 } from "./action-bar";
+
+// --- action-sheet ---
+export type {
+  ActionSheetItem,
+  ActionSheetProps,
+  ActionSheetInstance,
+} from "./action-sheet";
+export {
+  ActionSheet,
+  createActionSheet,
+} from "./action-sheet";
+
+// --- activity-feed ---
+export type {
+  ActivityItem,
+  ActivityGroup,
+  ActivityFeedProps,
+  ActivityFeedInstance,
+} from "./activity-feed";
+export {
+  ActivityFeed,
+  createActivityFeed,
+} from "./activity-feed";
+
+// --- affix-utils ---
+export type {
+  AffixOptions,
+  AffixState,
+  AffixInstance,
+} from "./affix-utils";
+export {
+  createAffix,
+  destroyAffix,
+} from "./affix-utils";
