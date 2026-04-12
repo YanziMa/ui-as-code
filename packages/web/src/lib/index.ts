@@ -58388,3 +58388,44 @@ export {
   CommandMenu,
   createCommandMenu,
 } from "./command-menu";
+
+// --- command-palette-utils ---
+export type {
+  PaletteItem,
+  PaletteUtilsOptions,
+} from "./command-palette-utils";
+export {
+  setupCommandPaletteUtils,
+  openPalette,
+  closePalette,
+  searchItems,
+  navigatePalette,
+} from "./command-palette-utils";
+
+// --- command-palette ---
+export type {
+  CommandPaletteItem,
+  CommandPaletteOptions,
+  CommandPaletteInstance,
+} from "./command-palette";
+export {
+  CommandPalette,
+  createCommandPalette,
+} from "./command-palette";
+
+// --- command (pattern) ---
+export type {
+  Command as CmdPattern,
+  CommandHistory,
+  CommandExecutor,
+  MacroCommand,
+} from "./command";
+export {
+  createCommand,
+  executeCommand as cmdExecute,
+  undoCommand,
+  redoCommand,
+  createMacroCommand,
+  getCommandHistory,
+  clearCommandHistory,
+} from "./command";
