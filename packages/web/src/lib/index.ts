@@ -61823,3 +61823,12 @@ export * from "./html-sanitizer";
 
 // --- http-client ---
 export * from "./http-client";
+
+// --- http-utils ---
+export * from "./http-utils";
+
+// --- i18n-advanced ---
+export * from "./i18n-advanced";
+
+// --- i18n-utils ---
+export * from "./i18n-utils";
