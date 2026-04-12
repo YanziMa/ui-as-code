@@ -59622,3 +59622,55 @@ export {
   DescriptionList,
   createDescriptionList,
 } from "./description-list";
+
+// --- design-tokens ---
+export type {
+  DesignToken as DTToken,
+  DesignTokenSet,
+  DesignTheme,
+  TokenResolver,
+} from "./design-tokens";
+export {
+  defineTokens,
+  resolveToken,
+  getTokenValue,
+  setTheme as dtSetTheme,
+  getTheme,
+  mergeThemes as dtMergeThemes,
+  generateCSSVars,
+  registerAlias,
+} from "./design-tokens";
+
+// --- device-orientation ---
+export type {
+  OrientationData,
+  MotionData,
+  DeviceOrientationOptions,
+} from "./device-orientation";
+export {
+  getDeviceOrientation,
+  getDeviceMotion,
+  requestOrientationPermission,
+  watchOrientation,
+  unwatchOrientation,
+  detectShake,
+  detectTilt,
+} from "./device-orientation";
+
+// --- device (detection) ---
+export type {
+  DeviceInfo as DevInfo,
+  DeviceType as DevType,
+  ScreenInfo as DevScreen,
+} from "./device";
+export {
+  detectDevice,
+  isMobileDevice,
+  isTabletDevice,
+  isDesktopDevice,
+  isTouchCapable,
+  isRetinaDisplay,
+  getConnectionInfo,
+  getMemoryInfo,
+  getCoresCount,
+} from "./device";
