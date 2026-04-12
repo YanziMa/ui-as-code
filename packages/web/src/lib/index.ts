@@ -61454,3 +61454,12 @@ export * from "./progress";
 
 // --- radio-group ---
 export * from "./radio-group";
+
+// --- rating ---
+export * from "./rating";
+
+// --- select ---
+export * from "./select";
+
+// --- skeleton ---
+export * from "./skeleton";
