@@ -56542,3 +56542,57 @@ export {
   AudioProcessor,
   createAudioProcessor,
 } from "./audio-processor";
+
+// --- audio-recorder ---
+export type {
+  AudioRecorderOptions,
+  AudioRecorderState,
+  AudioRecorderInstance,
+} from "./audio-recorder";
+export {
+  AudioRecorder,
+  createAudioRecorder,
+} from "./audio-recorder";
+
+// --- audio-utils ---
+export type {
+  AudioContextManagerOptions,
+  GainNodeConfig,
+  FilterNodeConfig,
+  CompressorConfig,
+  DelayConfig,
+  ReverbConfig,
+  AnalyserConfig,
+} from "./audio-utils";
+export {
+  createAudioContext,
+  createGainNode,
+  createBiquadFilter,
+  createCompressor,
+  createDelayNode,
+  createReverbConvolver,
+  createAnalyserNode,
+  getFrequencyData,
+  getTimeDomainData,
+  getPeakLevel,
+  getRMS,
+  detectPitch,
+  applyNoiseGate,
+  normalizeAudioBuffer,
+  convertToWavBlob,
+  convertToMp3Blob,
+  mixAudioBuffers,
+  trimAudioBuffer,
+  fadeAudioBuffer,
+} from "./audio-utils";
+
+// --- audio-visualizer ---
+export type {
+  VisualizerType,
+  VisualizerOptions,
+  VisualizerInstance,
+} from "./audio-visualizer";
+export {
+  AudioVisualizer,
+  createAudioVisualizer,
+} from "./audio-visualizer";
