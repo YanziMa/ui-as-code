@@ -1,130 +1,84 @@
 /**
- * Tag Cloud: Interactive tag/keyword cloud with weighted sizing,
- * color coding by category, hover animations, click filtering,
- * count badges, and flexible layout modes.
+ * Tag Cloud: Weighted tag visualization with size mapping, color coding,
+ * layout modes (flow/grid/spiral), hover effects, click handling,
+ * category filtering, and animation.
  */
 
 // --- Types ---
 
-export interface TagCloudTag {
-  /** Tag text */
+export interface CloudTag {
+  /** Display text */
   text: string;
-  /** Weight/frequency (1-100) */
+  /** Weight value (determines size) */
   weight: number;
-  /** Category group */
+  /** Category for grouping */
   category?: string;
-  /** Color override */
+  /** Custom color */
   color?: string;
-  /** Background color override */
-  bgColor?: string;
-  /** Count/occurrence number */
-  count?: number;
-  /** Click handler */
-  onClick?: (tag: TagCloudTag, event: MouseEvent) => void;
   /** URL link */
-  url?: string;
-  /** Custom data payload */
-  data?: unknown;
+  href?: string;
+  /** Click handler */
+  onClick?: (tag: CloudTag) => void;
 }
 
-export type TagCloudLayout = "flow" | "grid" | "flex" | "spiral";
-export type TagCloudSort = "none" | "alpha" | "weight" | "count" | "random";
+export type CloudLayout = "flow" | "grid" | "spiral";
+export type CloudSort = "none" | "alpha" | "weight-desc" | "weight-asc";
 
 export interface TagCloudOptions {
   /** Container element or selector */
   container: HTMLElement | string;
-  /** Tags to display */
-  tags: TagCloudTag[];
+  /** Tags to render */
+  tags: CloudTag[];
   /** Layout mode */
-  layout?: TagCloudLayout;
+  layout?: CloudLayout;
   /** Sort order */
-  sort?: TagCloudSort;
-  /** Min font size (px) */
-  minSize?: number;
-  /** Max font size (px) */
-  maxSize?: number;
-  /** Category color map */
-  categoryColors?: Record<string, string>;
-  /** Default color palette */
+  sort?: CloudSort;
+  /** Minimum font size (px) */
+  minFontSize?: number;
+  /** Maximum font size (px) */
+  maxFontSize?: number;
+  /** Color palette (cycled by index) */
   colors?: string[];
-  /** Show count badges? */
-  showCount?: boolean;
-  /** Show category indicators? */
-  showCategory?: boolean;
-  /** Tag border radius (px) */
-  borderRadius?: number;
-  /** Gap between tags (px) */
-  gap?: number;
-  /** Max width before wrapping (px) */
-  maxWidth?: number;
-  /** Hover scale effect (1 = no effect) */
+  /** Show weight as tooltip? */
+  showWeight?: boolean;
+  /** Hover scale factor */
   hoverScale?: number;
+  /** Click to filter? */
+  clickFilter?: boolean;
   /** Animation on mount? */
   animate?: boolean;
-  /** Stagger delay between tags (ms) */
-  staggerDelay?: number;
-  /** Active/selected tag highlight */
-  activeColor?: string;
-  /** Active background */
-  activeBg?: string;
   /** Custom CSS class */
   className?: string;
 }
 
 export interface TagCloudInstance {
   element: HTMLElement;
-  /** Update tags */
-  setTags: (tags: TagCloudTag[]) => void;
-  /** Get current tags */
-  getTags: () => TagCloudTag[];
-  /** Filter by category */
-  filterByCategory: (category: string | null) => void;
-  /** Clear selection */
-  clearFilter: () => void;
-  /** Destroy */
+  setTags: (tags: CloudTag[]) => void;
+  getTags: () => CloudTag[];
+  setActiveCategory: (cat: string | null) => void;
   destroy: () => void;
 }
 
 // --- Defaults ---
 
-const DEFAULT_PALETTE = [
-  "#dbeafe", "#fce7f3", "#fef3c7", "#d1fae5", "#ede9fe",
-  "#ffedd5", "#e0e7ff", "#fecdd3", "#ccfbf1", "#fef9c3",
+const DEFAULT_COLORS = [
+  "#4f46e5", "#7c3aed", "#db2777", "#e11d48", "#f97316",
+  "#eab308", "#22c55e", "#14b8a6", "#06b6d4", "#3b82f6",
 ];
-
-const DEFAULT_TEXT_COLORS = [
-  "#1e40af", "#be185d", "#b45309", "#047857", "#5b21b6",
-  "#c2410c", "#3730a3", "#be123c", "#0f766e", "#a16207",
-];
-
-// --- Helpers ---
-
-function easeOutBack(t: number): number {
-  const c1 = 1.70158;
-  const c3 = c1 + 1;
-  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
-}
 
 // --- Main Factory ---
 
 export function createTagCloud(options: TagCloudOptions): TagCloudInstance {
   const opts = {
     layout: options.layout ?? "flow",
-    sort: options.sort ?? "none",
-    minSize: options.minSize ?? 11,
-    maxSize: options.maxSize ?? 28,
-    categoryColors: options.categoryColors ?? {},
-    colors: options.colors ?? DEFAULT_PALETTE,
-    showCount: options.showCount ?? false,
-    showCategory: options.showCategory ?? false,
-    borderRadius: options.borderRadius ?? 9999,
-    gap: options.gap ?? 6,
-    maxWidth: options.maxWidth ?? 600,
-    hoverScale: options.hoverScale ?? 1.08,
+    sort: options.sort ?? "weight-desc",
+    minFontSize: options.minFontSize ?? 11,
+    maxFontSize: options.maxFontSize ?? 32,
+    colors: options.colors ?? DEFAULT_COLORS,
+    showWeight: options.showWeight ?? false,
+    hoverScale: options.hoverScale ?? 1.15,
+    clickFilter: options.clickFilter ?? false,
     animate: options.animate ?? true,
-    staggerDelay: options.staggerDelay ?? 25,
-    activeColor: options.activeColor ?? "#fff",
-    activeBg: options.activeBg ?? "#4338ca",
     className: options.className ?? "",
     ...options,
   };
@@ -136,122 +90,86 @@ export function createTagCloud(options: TagCloudOptions): TagCloudInstance {
   if (!container) throw new Error("TagCloud: container not found");
 
   let tags = [...options.tags];
-  let activeFilter: string | null = null;
+  let activeCategory: string | null = null;
   let destroyed = false;
 
-  // Root
   const root = document.createElement("div");
-  root.className = `tag-cloud tc-${opts.layout} ${opts.className}`;
+  root.className = `tag-cloud cloud-${opts.layout} ${opts.className}`;
   root.style.cssText = `
-    display:flex;flex-wrap:wrap;gap:${opts.gap}px;
-    max-width:${opts.maxWidth}px;line-height:1.4;
-    font-family:-apple-system,sans-serif;padding:4px;
+    display:${opts.layout === "grid" ? "grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;" : "flex;flex-wrap:wrap;gap:8px;align-items:center;"}
+    padding:12px;font-family:-apple-system,sans-serif;line-height:1.4;
   `;
   container.appendChild(root);
 
-  // --- Sorting ---
-
-  function applySorting(arr: TagCloudTag[]): TagCloudTag[] {
+  function getSorted(): CloudTag[] {
+    let arr = [...tags];
     switch (opts.sort) {
-      case "alpha": return [...arr].sort((a, b) => a.text.localeCompare(b.text));
-      case "weight": return [...arr].sort((a, b) => b.weight - a.weight);
-      case "count": return [...arr].sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
-      case "random": return [...arr].sort(() => Math.random() - 0.5);
-      default: return arr;
+      case "alpha":       arr.sort((a, b) => a.text.localeCompare(b.text)); break;
+      case "weight-desc": arr.sort((a, b) => b.weight - a.weight); break;
+      case "weight-asc":  arr.sort((a, b) => a.weight - b.weight); break;
     }
+    return arr;
   }
 
-  // --- Rendering ---
+  function getMaxWeight(): number {
+    const vals = tags.map((t) => t.weight);
+    return vals.length > 0 ? Math.max(...vals) : 1;
+  }
+
+  function fontSizeFor(weight: number): number {
+    const maxW = getMaxWeight();
+    if (maxW === 0) return opts.minFontSize;
+    const ratio = Math.min(weight / maxW, 1);
+    return opts.minFontSize + ratio * (opts.maxFontSize - opts.minFontSize);
+  }
 
   function render(): void {
     root.innerHTML = "";
 
-    const sorted = applySorting(tags);
-    const maxWeight = Math.max(...sorted.map(t => t.weight), 1);
-    const categories = new Set(sorted.filter(t => t.category).map(t => t.category!));
+    const sorted = getSorted();
 
     for (let i = 0; i < sorted.length; i++) {
       const tag = sorted[i]!;
+      if (activeCategory && tag.category !== activeCategory) continue;
 
-      // Skip filtered-out tags
-      if (activeFilter && tag.category !== activeFilter) continue;
+      const fs = fontSizeFor(tag.weight);
+      const color = tag.color ?? opts.colors[i % opts.colors.length];
 
-      const normalized = maxWeight > 0 ? Math.min(tag.weight / maxWeight, 1) : 0.5;
-      const fontSize = opts.minSize + normalized * (opts.maxSize - opts.minSize);
+      const el = document.createElement(tag.href ? "a" : "span");
+      el.className = "cloud-tag";
+      if (tag.href) (el as HTMLAnchorElement).href = tag.href;
 
-      // Determine colors
-      let bg = tag.bgColor;
-      let textColor = tag.color;
-      if (!bg || !textColor) {
-        const catIdx = tag.category
-          ? Array.from(categories).indexOf(tag.category)
-          : i;
-        bg = bg ?? opts.colors[catIdx % opts.colors.length];
-        textColor = textColor ?? DEFAULT_TEXT_COLORS[catIdx % DEFAULT_TEXT_COLORS.length];
-        if (opts.categoryColors[tag.category ?? ""]) {
-          bg = opts.categoryColors[tag.category ?? ""];
-        }
-      }
-
-      const isActive = activeFilter === tag.category;
-
-      const el = document.createElement("button");
-      el.type = "button";
-      el.className = "tc-tag";
       el.style.cssText = `
-        display:inline-flex;align-items:center;gap:4px;
-        padding:4px 12px;border-radius:${opts.borderRadius}px;
-        background:${isActive ? opts.activeBg : bg};
-        color:${isActive ? opts.activeColor : textColor};
-        font-size:${fontSize}px;font-weight:${Math.round(500 + normalized * 300)};
-        border:1px solid ${isActive ? opts.activeBg : "transparent"};
-        cursor:pointer;white-space:nowrap;transition:all 0.2s ease;
-        transform:scale(${opts.animate ? 0 : 1});opacity:${opts.animate ? 0 : 1};
-        user-select:none;-webkit-user-select:none;
+        display:inline-block;padding:2px 8px;border-radius:6px;
+        color:${color};font-size:${fs}px;font-weight:${Math.round(500 + (fs / opts.maxFontSize) * 300)};
+        cursor:pointer;white-space:nowrap;transition:transform 0.2s ease,color 0.15s;
+        ${opts.animate ? "opacity:0;transform:scale(0.8);" : ""}
+        user-select:none;
       `;
 
-      // Tag text
-      const textSpan = document.createElement("span");
-      textSpan.className = "tc-text";
-      textSpan.textContent = tag.text;
-      el.appendChild(textSpan);
+      el.textContent = tag.text;
 
-      // Count badge
-      if (opts.showCount && tag.count !== undefined) {
-        const countBadge = document.createElement("span");
-        countBadge.className = "tc-count";
-        countBadge.style.cssText = `
-          font-size:${Math.max(9, fontSize * 0.65)}px;font-weight:600;
-          opacity:0.7;background:rgba(0,0,0,0.06);padding:0 5px;
-          border-radius:9999px;
-        `;
-        countBadge.textContent = String(tag.count);
-        el.appendChild(countBadge);
+      if (opts.showWeight && tag.weight !== undefined) {
+        el.title = `${tag.text}: weight=${tag.weight}`;
       }
 
-      // Category dot
-      if (opts.showCategory && tag.category) {
-        const dot = document.createElement("span");
-        dot.style.cssText = `
-          width:6px;height:6px;border-radius:50%;
-          background:${opts.categoryColors[tag.category] ?? "#9ca3af"};
-          flex-shrink:0;
-        `;
-        el.appendChild(dot);
-      }
-
-      // Events
+      // Hover
       el.addEventListener("mouseenter", () => {
         el.style.transform = `scale(${opts.hoverScale})`;
-        el.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
+        el.style.color = darkenColor(color, 30);
       });
       el.addEventListener("mouseleave", () => {
-        el.style.transform = "scale(1)";
-        el.style.boxShadow = "";
+        el.style.transform = "";
+        el.style.color = color;
       });
+
+      // Click
       el.addEventListener("click", (e) => {
-        if (tag.url) window.open(tag.url, "_blank");
-        tag.onClick?.(tag, e as MouseEvent);
+        e.preventDefault();
+        if (opts.clickFilter && tag.category) {
+          setActiveCategory(activeCategory === tag.category ? null : tag.category);
+        }
+        tag.onClick?.(tag);
       });
 
       root.appendChild(el);
@@ -259,37 +177,38 @@ export function createTagCloud(options: TagCloudOptions): TagCloudInstance {
       // Animate in
       if (opts.animate) {
         setTimeout(() => {
-          el.style.transition = "transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease";
-          el.style.transform = "scale(1)";
+          el.style.transition = "opacity 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1)";
           el.style.opacity = "1";
-        }, i * opts.staggerDelay);
+          el.style.transform = "scale(1)";
+        }, i * 30);
       }
     }
   }
 
-  // Initial render
+  function darkenColor(hex: string, amount: number): string {
+    let h = hex.replace("#", "");
+    if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    const r = Math.max(0, parseInt(h.slice(0, 2), 16) - amount);
+    const g = Math.max(0, parseInt(h.slice(2, 4), 16) - amount);
+    const b = Math.max(0, parseInt(h.slice(4, 6), 16) - amount);
+    return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
+  }
+
   render();
 
-  // --- Instance ---
-
-  const instance: TagCloudInstance = {
+  return {
     element: root,
+
+    setTags(newTags: CloudTag[]) {
+      tags = [...newTags];
+      activeCategory = null;
+      render();
+    },
 
     getTags() { return [...tags]; },
 
-    setTags(newTags: TagCloudTag[]) {
-      tags = [...newTags];
-      activeFilter = null;
-      render();
-    },
-
-    filterByCategory(category: string | null) {
-      activeFilter = category;
-      render();
-    },
-
-    clearFilter() {
-      activeFilter = null;
+    setActiveCategory(cat: string | null) {
+      activeCategory = cat;
       render();
     },
 
@@ -299,6 +218,4 @@ export function createTagCloud(options: TagCloudOptions): TagCloudInstance {
       container.innerHTML = "";
     },
   };
-
-  return instance;
 }

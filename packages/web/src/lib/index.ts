@@ -52644,3 +52644,32 @@ export {
   type TabSize as Tbs_TabSize,
   type TabVariant as Tbs_TabVariant,
 } from "./tabs";
+
+// --- tag-cloud ---
+export {
+  createTagCloud,
+  type CloudTag as TgCld_CloudTag,
+  type CloudLayout as TgCld_CloudLayout,
+  type CloudSort as TgCld_CloudSort,
+  type TagCloudOptions as TgCld_TagCloudOptions,
+  type TagCloudInstance as TgCld_TagCloudInstance,
+} from "./tag-cloud";
+
+// --- tag-input-utils ---
+export {
+  TagInputManager,
+  createTagInput as TgInpUtl_createTagInput,
+  type TagItem as TgInpUtl_TagItem,
+  type TagInputOptions as TgInpUtl_TagInputOptions,
+  type TagInputInstance as TgInpUtl_TagInputInstance,
+} from "./tag-input-utils";
+
+// --- tag-input ---
+export {
+  createTagCloud as TgInp_createTagCloud,
+  type CloudTag as TgInp_CloudTag,
+  type CloudLayout as TgInp_CloudLayout,
+  type CloudSort as TgInp_CloudSort,
+  type TagCloudOptions as TgInp_TagCloudOptions,
+  type TagCloudInstance as TgInp_TagCloudInstance,
+} from "./tag-input";
