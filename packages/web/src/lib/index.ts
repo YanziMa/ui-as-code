@@ -52173,3 +52173,52 @@ export {
   log as StrLog_log,
 } from "./structured-logger";
 // Aliases: StrLog_*
+
+// --- style-injection.ts ---
+export {
+  type InjectedStyle,
+  type StyleInjectionOptions as StlInj_Options,
+  type StyleInjectionInstance as StlInj_Instance,
+  createStyleInjection,
+  injectStyles as StlInj_injectStyles,
+  injectStylesheet as StlInj_injectStylesheet,
+  ejectStyles as StlInj_ejectStyles,
+} from "./style-injection";
+// Aliases: StlInj_*
+
+// --- style-injector.ts ---
+export {
+  type StyleRule as StlInj2_Rule,
+  type StyleSheet as StlInj2_Sheet,
+  type InjectOptions as StlInj2_Options,
+  type StyleElement as StlInj2_Element,
+  injectStyle as StlInj2_injectStyle,
+  injectLink as StlInj2_injectLink,
+  buildStyleSheet as StlInj2_buildStyleSheet,
+  injectStyleSheet as StlInj2_injectStyleSheet,
+  createScope as StlInj2_createScope,
+  setCSSVars as StlInj2_setCSSVars,
+  getCSSVars as StlInj2_getCSSVars,
+  createTokenMap as StlInj2_createTokenMap,
+  DynamicStyleManager,
+  extractCriticalCSS as StlInj2_extractCriticalCSS,
+} from "./style-injector";
+// Aliases: StlInj2_*
+
+// --- style-runtime.ts ---
+export {
+  type StyleProperty as StlRt_Property,
+  type StyleValue as StlRt_Value,
+  type Selector as StlRt_Selector,
+  type StyleDeclaration as StlRt_Declaration,
+  type StyleRule as StlRt_Rule,
+  type ThemeVariable as StlRt_ThemeVar,
+  type ScopeSelector as StlRt_ScopeSel,
+  type ThemeDefinition as StlRt_ThemeDef,
+  type RuntimeStyleOptions as StlRt_Options,
+  type BreakpointInfo as StlRt_Breakpoint,
+  type ComputedStyle as StlRt_Computed,
+  StyleRuntime,
+  createStyleRuntime,
+} from "./style-runtime";
+// Aliases: StlRt_*
