@@ -53862,3 +53862,42 @@ export {
   type WaveformDisplayOptions,
   type WaveformDisplayInstance,
 } from "./waveform-display.js";
+
+// --- web-animations ---
+export {
+  animate,
+  createOrchestrator,
+  isWebAnimationsSupported,
+  animateOrTransition,
+  type KeyframeProps,
+  type AnimationKeyframe,
+  type AnimationOptions,
+  type AnimationInstance,
+  type OrchestratorInstance,
+} from "./web-animations.js";
+
+// --- web-socket-manager ---
+export {
+  createWebSocket as Wsm_createWebSocket,
+  quickConnect as Wsm_quickConnect,
+  WebSocketManager as Wsm_WebSocketManager,
+  type WSReadyState as Wsm_WSReadyState,
+  type WSMessage as Wsm_WSMessage,
+  type WSOptions as Wsm_WSOptions,
+  type WSSendOptions as Wsm_WSSendOptions,
+  type WSChannel as Wsm_WSChannel,
+  type WSInstance as Wsm_WSInstance,
+  type WSStats as Wsm_WSStats,
+} from "./web-socket-manager.js";
+
+// --- web-socket ---
+export {
+  WebSocketManager,
+  type WsState,
+  type WebSocketOptions,
+  type WsMessage,
+  type WsRequest,
+  type RoomInfo,
+  type PresenceEntry,
+  type WsMetrics,
+} from "./web-socket.js";
