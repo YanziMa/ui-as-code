@@ -61382,3 +61382,12 @@ export * from "./fuzzy-search";
 
 // --- geometry ---
 export * from "./geometry";
+
+// --- grid ---
+export * from "./grid";
+
+// --- header ---
+export * from "./header";
+
+// --- hotkeys ---
+export * from "./hotkeys";
