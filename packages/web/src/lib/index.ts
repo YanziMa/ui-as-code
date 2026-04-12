@@ -59922,3 +59922,83 @@ export {
   DOMObserver,
   createDOMObserver,
 } from "./dom-observer";
+
+// --- dom-utils-v2 ---
+export {
+  querySelector as v2Query,
+  querySelectorAll as v2QueryAll,
+  closest as v2Closest,
+  matches as v2Matches,
+  createElement as v2CreateEl,
+  createFragment as v2CreateFrag,
+  setAttribute as v2SetAttr,
+  getAttribute as v2GetAttr,
+  removeAttribute as v2RemoveAttr,
+  addClass as v2AddClass,
+  removeClass as v2RemoveClass,
+  toggleClass as v2ToggleClass,
+  hasClass as v2HasClass,
+  setStyle as v2SetStyle,
+  getStyle as v2GetStyle,
+  on as v2On,
+  off as v2Off,
+  delegate as v2Delegate,
+  ready,
+} from "./dom-utils-v2";
+
+// --- dom-utils ---
+export {
+  qs,
+  qsa,
+  one,
+  all,
+  create as duCreate,
+  remove as duRemove,
+  before as duBefore,
+  after as duAfter,
+  prepend as duPrepend,
+  append as duAppend,
+  replace as duReplace,
+  html as duHtml,
+  text as duText,
+  cls as duCls,
+  css as duCss,
+  attr as duAttr,
+  data as duData,
+  on as duOn,
+  off as duOff,
+  delegate as duDelegate,
+} from "./dom-utils";
+
+// --- dom (core) ---
+export type {
+  DOMNode as DomNode,
+  DOMElement as DomElement,
+  DOMSelector,
+} from "./dom";
+export {
+  find as domFind,
+  findAll as domFindAll,
+  first as domFirst,
+  last as domLast,
+  parent as domParent,
+  children as domChildren,
+  siblings as domSiblings,
+  next as domNext,
+  prev as domPrev,
+  index as domIndex,
+  contains as domContains,
+  isVisible,
+  isHidden,
+  isInViewport,
+  offset as domOffset,
+  position as domPosition,
+  width as domWidth,
+  height as domHeight,
+  outerWidth,
+  outerHeight,
+  scrollIntoViewFn,
+  scrollTo,
+  scrollTop,
+  scrollLeft,
+} from "./dom";
