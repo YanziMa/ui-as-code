@@ -59580,3 +59580,45 @@ export {
   createDebounceManager,
   createThrottleManager,
 } from "./debounce-throttle";
+
+// --- debounce ---
+export {
+  debounce as simpleDebounce,
+  throttle as simpleThrottle,
+  debounceAsync,
+  throttleAsync,
+  cancelDebounce,
+  cancelThrottle,
+  flushDebounce,
+  flushThrottle,
+} from "./debounce";
+
+// --- debug ---
+export type {
+  DebugOptions,
+  DebugLevel,
+  AssertionOptions,
+} from "./debug";
+export {
+  createDebugger,
+  isDebugMode,
+  setDebugMode,
+  assert,
+  assertEqual,
+  assertNotNull,
+  assertType,
+  devOnly,
+  prodGuard,
+  measurePerformance,
+} from "./debug";
+
+// --- description-list ---
+export type {
+  DescriptionListItem,
+  DescriptionListOptions,
+  DescriptionListInstance,
+} from "./description-list";
+export {
+  DescriptionList,
+  createDescriptionList,
+} from "./description-list";
