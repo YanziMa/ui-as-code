@@ -56916,3 +56916,37 @@ export {
   BadgeManager,
   createBadgeManager,
 } from "./badge-manager";
+
+// --- badge-utils ---
+export {
+  createBadge,
+  createCountBadge,
+  createDotBadge,
+  createStatusBadge,
+  createProgressBadge,
+  createVerificationBadge,
+} from "./badge-utils";
+
+// --- badge ---
+export type {
+  BadgeOptions,
+  BadgeVariant,
+  BadgeSize,
+  BadgeInstance,
+} from "./badge";
+export {
+  Badge as BadgeComponent,
+  createBadgeComponent,
+} from "./badge";
+
+// --- barcode ---
+export type {
+  BarcodeType,
+  BarcodeOptions,
+  BarcodeResult,
+} from "./barcode";
+export {
+  generateBarcode,
+  renderBarcodeSVG,
+  renderBarcodeCanvas,
+} from "./barcode";
