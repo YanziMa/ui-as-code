@@ -62336,3 +62336,12 @@ export * from "./sunburst-chart";
 
 // --- supabase ---
 export * from "./supabase";
+
+// --- svg ---
+export * from "./svg";
+
+// --- swipe-utils ---
+export * from "./swipe-utils";
+
+// --- tab-bar ---
+export * from "./tab-bar";
