@@ -61472,3 +61472,12 @@ export * from "./spinner";
 
 // --- switch ---
 export * from "./switch";
+
+// --- table ---
+export * from "./table";
+
+// --- tag ---
+export * from "./tag";
+
+// --- tabs ---
+export * from "./tabs";
