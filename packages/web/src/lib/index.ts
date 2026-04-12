@@ -53153,3 +53153,38 @@ export type {
   TourOptions as TrUtl_Options,
   TourInstance as TrUtl_Instance,
 } from "./tour-utils";
+
+// --- tour ---
+export {
+  createTour as Tr_createTour,
+} from "./tour";
+export type {
+  TourStep as Tr_Step,
+  TourOptions as Tr_Options,
+  TourInstance as Tr_Instance,
+} from "./tour";
+
+// --- transfer ---
+export {
+  TransferManager,
+  createTransfer,
+} from "./transfer";
+export type {
+  TransferItem as Trsfr_Item,
+  TransferOptions as Trsfr_Options,
+  TransferInstance as Trsfr_Instance,
+} from "./transfer";
+
+// --- transform ---
+export {
+  mapValues as Trnsfm_mapValues,
+  groupAndAggregate as Trnsfm_groupAndAggregate,
+  pivot as Trnsfm_pivot,
+  unpivot as Trnsfm_unpivot,
+  flattenObject as Trnsfm_flattenObject,
+  unflattenObject as Trnsfm_unflattenObject,
+  deepMergeCustom as Trnsfm_deepMergeCustom,
+} from "./transform";
+export type {
+  PivotOptions as Trnsfm_PivotOptions,
+} from "./transform";
