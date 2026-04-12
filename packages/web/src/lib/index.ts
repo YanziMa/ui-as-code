@@ -60742,3 +60742,48 @@ export {
   EventTracker,
   createEventTracker,
 } from "./event-tracker";
+
+// --- event-utils ---
+export {
+  createCustomEvent as euCreateCustomEvent,
+  dispatchCustomEvent as euDispatchCustomEvent,
+  on as euOn,
+  off as euOff,
+  once as euOnce,
+  removeAllListeners as euRemoveAll,
+} from "./event-utils";
+
+// --- events ---
+export {
+  on as eventsOn,
+  off as eventsOff,
+  once as eventsOnce,
+  emit as eventsEmit,
+  createEventBus as eventsCreateBus,
+  createTypedEvent,
+} from "./events";
+
+// --- excel-export (already exported, skip duplicate) ---
+// excel-export was already exported in a prior batch
+
+// --- executor ---
+export type {
+  ExecutorOptions,
+  Task as ExTask,
+  ExecutorInstance,
+} from "./executor";
+export {
+  createExecutor,
+} from "/executor";
+
+// --- exif-reader ---
+export type {
+  EXIFOptions,
+  EXIFTags,
+  EXIFResult,
+} from "./exif-reader";
+export {
+  readEXIF,
+  extractEXIFData,
+  stripEXIF,
+} from "./exif-reader";
