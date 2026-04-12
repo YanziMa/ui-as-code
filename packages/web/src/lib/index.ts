@@ -59006,3 +59006,44 @@ export {
   compareConstantTime,
   pbkdf2,
 } from "./crypto-utils";
+
+// --- crypto-wallet ---
+export type {
+  WalletKeyPair,
+  WalletAddress,
+  WalletOptions,
+  WalletInstance,
+} from "./crypto-wallet";
+export {
+  CryptoWallet,
+  createCryptoWallet,
+} from "./crypto-wallet";
+
+// --- crypto (lightweight) ---
+export {
+  uuid as cryptoUUID,
+  randomInt,
+  randomFloat,
+  randomBytes as cryptoRandomBytes,
+  hash as cryptoHash,
+  hmac as cryptoHmac,
+} from "./crypto";
+
+// --- cryptography-toolkit ---
+export type {
+  CryptoToolkitOptions,
+  KeyFormat,
+  CipherAlgorithm,
+  HashAlgorithm,
+} from "./cryptography-toolkit";
+export {
+  CryptographyToolkit,
+  createCryptoToolkit,
+  generateKeyPair as ctGenerateKeyPair,
+  encrypt as ctEncrypt,
+  decrypt as ctDecrypt,
+  sign as ctSign,
+  verify as ctVerify,
+  hash as ctHash,
+  deriveKey as ctDeriveKey,
+} from "./cryptography-toolkit";
