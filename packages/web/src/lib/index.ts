@@ -61787,3 +61787,12 @@ export * from "./fuzzy-finder";
 
 // --- gamepad ---
 export * from "./gamepad";
+
+// --- gantt-chart ---
+export * from "./gantt-chart";
+
+// --- gauge ---
+export * from "./gauge";
+
+// --- geo-spatial ---
+export * from "./geo-spatial";
