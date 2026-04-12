@@ -52999,3 +52999,38 @@ export type {
   TooltipOptions as Ttp_Options,
   TooltipInstance as Ttp_Instance,
 } from "./tooltip";
+
+// --- tooltip-anchor-utils ---
+export {
+  createTooltipAnchor,
+} from "./tooltip-anchor-utils";
+export type {
+  TooltipPlacement as TtpAnc_Placement,
+  TooltipStrategy as TtpAnc_Strategy,
+  AnchorOptions as TtpAnc_Options,
+  AnchorInstance as TtpAnc_Instance,
+} from "./tooltip-anchor-utils";
+
+// --- tooltip-engine ---
+export {
+  TooltipEngine,
+  getTooltipEngine,
+} from "./tooltip-engine";
+export type {
+  TooltipPlacement as TtpEng_Placement,
+  TooltipTrigger as TtpEng_Trigger,
+  TooltipOptions as TtpEng_Options,
+  PositionedTooltip as TtpEng_PositionedTooltip,
+  TooltipInstance as TtpEng_Instance,
+} from "./tooltip-engine";
+
+// --- tooltip-group ---
+export {
+  TooltipGroupManager,
+  createTooltipGroup,
+} from "./tooltip-group";
+export type {
+  TooltipGroupOptions as TtpGrp_Options,
+  TooltipItemOptions as TtpGrp_ItemOptions,
+  TooltipGroupInstance as TtpGrp_Instance,
+} from "./tooltip-group";
