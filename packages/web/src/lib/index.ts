@@ -57849,3 +57849,41 @@ export {
   setupClickOutside,
   destroyClickOutside,
 } from "./click-outside";
+
+// --- clipboard-advanced ---
+export type {
+  AdvancedClipboardOptions,
+  ClipboardFormat,
+  ClipboardHistoryEntry,
+} from "./clipboard-advanced";
+export {
+  AdvancedClipboard,
+  createAdvancedClipboard,
+} from "./clipboard-advanced";
+
+// --- clipboard-api ---
+export type {
+  ClipboardAPIOptions,
+  ClipboardPermission,
+} from "./clipboard-api";
+export {
+  ClipboardAPI,
+  createClipboardAPI,
+  copyText,
+  copyHTML,
+  copyRichText,
+  copyImage,
+  readText,
+  readImage,
+  requestClipboardPermission,
+} from "./clipboard-api";
+
+// --- clipboard-manager ---
+export type {
+  ClipboardManagerOptions,
+  ClipboardManagerInstance,
+} from "./clipboard-manager";
+export {
+  ClipboardManager,
+  createClipboardManager,
+} from "./clipboard-manager";
