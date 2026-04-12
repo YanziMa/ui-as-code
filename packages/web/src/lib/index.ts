@@ -61661,3 +61661,12 @@ export * from "./divider-utils";
 
 // --- dom-builder ---
 export * from "./dom-builder";
+
+// --- dom-creator ---
+export * from "./dom-creator";
+
+// --- dom-diff ---
+export * from "./dom-diff";
+
+// --- dom-fragment ---
+export * from "./dom-fragment";
