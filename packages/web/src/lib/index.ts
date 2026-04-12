@@ -57750,3 +57750,34 @@ export {
   ChipLite,
   createChipLite,
 } from "./chip-lite";
+
+// --- chip-utils ---
+export {
+  createChip,
+  createFilterChip,
+  createChoiceChip,
+  createSuggestionChip,
+  setupChipSet,
+} from "./chip-utils";
+
+// --- chip ---
+export type {
+  ChipOptions,
+  ChipVariant,
+  ChipSize,
+  ChipInstance,
+} from "./chip";
+export {
+  Chip as ChipComponent,
+  createChipComponent,
+} from "./chip";
+
+// --- chips-input ---
+export type {
+  ChipsInputOptions,
+  ChipsInputInstance,
+} from "./chips-input";
+export {
+  ChipsInput,
+  createChipsInput,
+} from "./chips-input";
