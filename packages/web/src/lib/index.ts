@@ -54271,3 +54271,50 @@ export {
   type TokenUsage, type StreamChunk, type ConversationOptions, type ConversationState,
   type ModerationResult, type ModerationCategory,
 } from "./ai-assistant.js";
+
+export {
+  type ChartType,
+  type DataPoint,
+  type BubblePoint,
+  type SeriesData,
+  type ChartAxis,
+  type ChartLegend,
+  type ChartTooltip,
+  type AnimationConfig,
+  type ChartOptions,
+  type ChartInstance,
+  createChart,
+} from "./chart-engine.js";
+
+export {
+  type UploadStatus,
+  type FileValidationOptions,
+  type FileValidationError,
+  type ChunkInfo,
+  type UploadProgress,
+  type UploadResult,
+  type UploaderOptions,
+  type UploadError,
+  type FileEntry,
+  type QueueOptions,
+  type DropZoneOptions,
+  type PasteOptions,
+  FileValidator,
+  FileUploader,
+  createDropZone,
+  createPasteHandler,
+  generatePreview,
+  getFileIcon,
+} from "./file-uploader.js";
+
+export {
+  type ErrorCorrectionLevel,
+  type QRMode,
+  type QRRenderFormat,
+  type QROptions,
+  type QRResult,
+  generateQR,
+  estimateVersion,
+  getQRCapacity,
+  validateQRContent,
+} from "./qr-generator.js";
