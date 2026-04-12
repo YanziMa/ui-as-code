@@ -58542,3 +58542,45 @@ export {
   createCelebrationEffect,
   stopConfetti,
 } from "./confetti-utils";
+
+// --- confetti ---
+export type {
+  ConfettiComponentOptions,
+  ConfettiComponentInstance,
+} from "./confetti";
+export {
+  Confetti as ConfettiComponent,
+  createConfettiComponent,
+} from "./confetti";
+
+// --- config-provider ---
+export type {
+  ConfigProviderOptions,
+  DesignTokens as CPTokens,
+  ThemeConfig as CPThemeConfig,
+  ConfigProviderInstance,
+} from "./config-provider";
+export {
+  ConfigProvider,
+  createConfigProvider,
+  useConfig,
+  getConfig,
+  setConfig,
+} from "./config-provider";
+
+// --- config ---
+export type {
+  ConfigSchema,
+  ConfigSource,
+  ConfigManagerOptions,
+  ConfigManagerInstance,
+} from "./config";
+export {
+  ConfigManager,
+  createConfigManager,
+  loadConfig,
+  saveConfig,
+  getConfigValue,
+  setConfigValue,
+  watchConfig,
+} from "./config";
