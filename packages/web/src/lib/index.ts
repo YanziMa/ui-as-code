@@ -58171,3 +58171,47 @@ export {
   AdvancedColorPicker,
   createAdvancedColorPicker,
 } from "./color-picker-advanced";
+
+// --- color-picker-ui ---
+export type {
+  ColorPickerUIOptions,
+  ColorPickerUIInstance,
+} from "./color-picker-ui";
+export {
+  ColorPickerUI,
+  createColorPickerUI,
+} from "./color-picker-ui";
+
+// --- color-picker-utils ---
+export type {
+  ColorPickerUtilsFormat,
+  ColorPickerUtilsPreset,
+} from "./color-picker-utils";
+export {
+  hexToRgb,
+  rgbToHex,
+  hslToRgb,
+  rgbToHsl,
+  hsvToRgb,
+  rgbToHsv,
+  parseColorString,
+  formatColor,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  rotateHue,
+  generateSwatches,
+  getContrastTextColor,
+} from "./color-picker-utils";
+
+// --- color-picker ---
+export type {
+  ColorPickerOptions,
+  ColorPickerInstance,
+} from "./color-picker";
+export {
+  ColorPicker as ColorPickerComponent,
+  createColorPickerComponent,
+} from "./color-picker";
