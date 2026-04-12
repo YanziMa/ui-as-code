@@ -54640,3 +54640,49 @@ export {
   type ScrollerState,
   type ScrollToOptions,
 } from "./virtual-scroller";
+
+// --- Drag & Drop ---
+export {
+  createDropZone,
+  createSortableList,
+  readFileAsText,
+  readFileAsDataURL,
+  readFileAsArrayBuffer,
+  getFileInfo,
+  type DropZoneController,
+  type SortableController,
+  type DragItem,
+  type DropZoneConfig,
+  type DndState,
+  type SortableItem,
+  type SortableConfig,
+  type FileInfo,
+} from "./drag-drop";
+
+// --- Keyboard Shortcuts ---
+export {
+  ShortcutManager,
+  ShortcutRecorder,
+  ShortcutOverlay,
+  eventToCombo,
+  normalizeKey,
+  comboToString,
+  parseCombo,
+  comboMatches,
+  comboHash,
+  commonShortcuts,
+  type KeyCombo,
+  type ShortcutBinding,
+  type ShortcutScope,
+  type RecordedSequence,
+} from "./keyboard-shortcuts";
+
+// --- Notification System ---
+export {
+  NotificationCenter,
+  PushNotificationManager,
+  type Notification,
+  type NotificationType,
+  type NotificationPriority,
+  type NotificationConfig,
+} from "./notification-system";
