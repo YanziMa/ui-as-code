@@ -58464,3 +58464,37 @@ export {
   CommentThread,
   createCommentThread,
 } from "./comment-thread";
+
+// --- comment-utils ---
+export {
+  setupCommentThread,
+  renderComment,
+  renderReplyForm,
+  collapseThread,
+  expandThread,
+  formatCommentTime,
+} from "./comment-utils";
+
+// --- comment ---
+export type {
+  CommentComponentOptions,
+  CommentComponentInstance,
+} from "./comment";
+export {
+  Comment as CommentComponent,
+  createCommentComponent,
+} from "./comment";
+
+// --- comparators ---
+export {
+  naturalSort,
+  numericSort,
+  stringSort,
+  dateSort,
+  booleanSort,
+  multiKeySort,
+  localeSort,
+  caseInsensitiveSort,
+  createComparator,
+  reverseComparator,
+} from "./comparators";
