@@ -61904,3 +61904,12 @@ export * from "./marquee";
 
 // --- mask-input ---
 export * from "./mask-input";
+
+// --- math-3d ---
+export * from "./math-3d";
+
+// --- math-advanced ---
+export * from "./math-advanced";
+
+// --- media-editor ---
+export * from "./media-editor";
