@@ -56787,3 +56787,34 @@ export {
   AvatarPicker,
   createAvatarPicker,
 } from "./avatar-picker";
+
+// --- avatar-stack ---
+export type {
+  AvatarStackOptions,
+  AvatarStackInstance,
+} from "./avatar-stack";
+export {
+  AvatarStack,
+  createAvatarStack,
+} from "./avatar-stack";
+
+// --- avatar-uploader ---
+export type {
+  AvatarUploaderOptions,
+  AvatarUploaderState,
+  AvatarUploaderInstance,
+} from "./avatar-uploader";
+export {
+  AvatarUploader,
+  createAvatarUploader,
+} from "./avatar-uploader";
+
+// --- avatar-utils ---
+export {
+  getInitials,
+  getAvatarColor,
+  generateAvatarURL,
+  createInitialsAvatar,
+  createGradientAvatar,
+  createPatternAvatar,
+} from "./avatar-utils";
