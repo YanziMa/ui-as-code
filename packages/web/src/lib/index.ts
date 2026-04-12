@@ -56818,3 +56818,38 @@ export {
   createGradientAvatar,
   createPatternAvatar,
 } from "./avatar-utils";
+
+// --- avatar ---
+export type {
+  AvatarComponentOptions,
+  AvatarStatus,
+  AvatarSize,
+  AvatarInstance,
+} from "./avatar";
+export {
+  Avatar as AvatarComponent,
+  createAvatar,
+} from "./avatar";
+
+// --- back-to-top-utils ---
+export type {
+  BackToTopUtilsOptions,
+  BackToTopState,
+} from "./back-to-top-utils";
+export {
+  setupBackToTop,
+  destroyBackToTop,
+  scrollToTop,
+  showBackToTop,
+  hideBackToTop,
+} from "./back-to-top-utils";
+
+// --- back-to-top ---
+export type {
+  BackToTopOptions,
+  BackToTopInstance,
+} from "./back-to-top";
+export {
+  BackToTop,
+  createBackToTop,
+} from "./back-to-top";
