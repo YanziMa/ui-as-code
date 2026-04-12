@@ -61616,3 +61616,12 @@ export * from "./constants";
 
 // --- content-visibility ---
 export * from "./content-visibility";
+
+// --- context-menu-v2 ---
+export * from "./context-menu-v2";
+
+// --- copy-paste ---
+export * from "./copy-paste";
+
+// --- cors ---
+export * from "./cors";
