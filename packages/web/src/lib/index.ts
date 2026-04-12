@@ -57100,3 +57100,33 @@ export {
   BreadcrumbNav,
   createBreadcrumbNav,
 } from "./breadcrumb-nav";
+
+// --- breadcrumb-utils ---
+export {
+  setupBreadcrumb,
+  renderBreadcrumb,
+  truncateBreadcrumb,
+  getBreadcrumbFromPath,
+} from "./breadcrumb-utils";
+
+// --- breadcrumb ---
+export type {
+  BreadcrumbItem,
+  BreadcrumbOptions,
+  BreadcrumbInstance,
+} from "./breadcrumb";
+export {
+  Breadcrumb as BreadcrumbComponent,
+  createBreadcrumbComponent,
+} from "./breadcrumb";
+
+// --- breadcrumbs ---
+export type {
+  BreadcrumbsItem,
+  BreadcrumbsOptions,
+  BreadcrumbsInstance,
+} from "./breadcrumbs";
+export {
+  Breadcrumbs,
+  createBreadcrumbs,
+} from "./breadcrumbs";
