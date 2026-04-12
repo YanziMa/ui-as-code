@@ -52713,3 +52713,41 @@ export {
   type TaskPriority as TskQ_TaskPriority,
   type TaskStatus as TskQ_TaskStatus,
 } from "./task-queue";
+
+// --- task-runner ---
+export {
+  TaskRunner,
+  CancellationToken,
+  type Task as TskRnr_Task,
+  type TaskResult as TskRnr_TaskResult,
+  type ConcurrencyOptions as TskRnr_ConcurrencyOptions,
+  type RunnerStats as TskRnr_RunnerStats,
+  type ProgressCallback as TskRnr_ProgressCallback,
+  type TaskFilter as TskRnr_TaskFilter,
+} from "./task-runner";
+
+// --- task-scheduler-advanced ---
+export {
+  AdvancedTaskScheduler,
+  createAdvancedScheduler,
+  type Task as TskSchAdv_Task,
+  type TaskResult as TskSchAdv_TaskResult,
+  type WorkerPoolOptions as TskSchAdv_WorkerPoolOptions,
+  type SchedulerConfig as TskSchAdv_SchedulerConfig,
+  type SchedulerStats as TskSchAdv_SchedulerStats,
+  type DeadLetterEntry as TskSchAdv_DeadLetterEntry,
+  type TaskId as TskSchAdv_TaskId,
+  type TaskPriority as TskSchAdv_TaskPriority,
+  type TaskStatus as TskSchAdv_TaskStatus,
+} from "./task-scheduler-advanced";
+
+// --- task-scheduler-v2 ---
+export {
+  TaskSchedulerV2,
+  createTaskSchedulerV2,
+  type ScheduledTask as TskSchV2_ScheduledTask,
+  type TaskResult as TskSchV2_TaskResult,
+  type SchedulerConfig as TskSchV2_SchedulerConfig,
+  type SchedulerStats as TskSchV2_SchedulerStats,
+  type SchedulerEvent as TskSchV2_SchedulerEvent,
+} from "./task-scheduler-v2";
