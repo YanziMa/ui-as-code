@@ -60829,3 +60829,45 @@ export {
   createExpressionParser,
   registerExpressionFunction,
 } from "./expression-parser";
+
+// --- face-detection ---
+export type {
+  FaceDetectionOptions,
+  FaceResult,
+  FaceLandmark,
+  FaceExpression,
+} from "./face-detection";
+export {
+  FaceDetector,
+  createFaceDetector,
+  detectFaces,
+  detectLandmarks,
+  estimateEmotion,
+} from "./face-detection";
+
+// --- feature-flag-system ---
+export type {
+  FeatureFlagSystemOptions,
+  FeatureFlagDefinition,
+  TargetingRule,
+  FlagEvaluationContext,
+  FeatureFlagSystemInstance,
+} from "./feature-flag-system";
+export {
+  FeatureFlagSystem,
+  createFeatureFlagSystem,
+} from "./feature-flag-system";
+
+// --- feature-flag ---
+export type {
+  FeatureFlagDef as FFFlagDef,
+  FeatureFlagOptions as FFOptions,
+  FeatureFlagInstance,
+} from "./feature-flag";
+export {
+  FeatureFlag,
+  isFeatureEnabled,
+  getFeatureVariant,
+  createFeatureFlags,
+  onFeatureChange,
+} from "./feature-flag";
