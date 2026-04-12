@@ -61805,3 +61805,12 @@ export * from "./grid-layout";
 
 // --- grid-utils ---
 export * from "./grid-utils";
+
+// --- heatmap ---
+export * from "./heatmap";
+
+// --- help-center ---
+export * from "./help-center";
+
+// --- hero-section ---
+export * from "./hero-section";
