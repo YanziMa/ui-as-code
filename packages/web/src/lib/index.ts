@@ -57536,3 +57536,41 @@ export {
   startAutoPlay,
   stopAutoPlay,
 } from "./carousel-utils";
+
+// --- carousel ---
+export type {
+  CarouselOptions,
+  CarouselInstance,
+} from "./carousel";
+export {
+  Carousel as CarouselComponent,
+  createCarouselComponent,
+} from "./carousel";
+
+// --- cascader ---
+export type {
+  CascaderOption,
+  CascaderOptions,
+  CascaderInstance,
+} from "./cascader";
+export {
+  Cascader,
+  createCascader,
+} from "./cascader";
+
+// --- change-detector ---
+export type {
+  ChangeInfo,
+  ChangePath,
+  ChangeDetectorOptions,
+  Snapshot,
+} from "./change-detector";
+export {
+  ChangeDetector,
+  createChangeDetector,
+  detectChanges,
+  deepEqual,
+  shallowEqual,
+  getPathValue,
+  setPathValue,
+} from "./change-detector";
