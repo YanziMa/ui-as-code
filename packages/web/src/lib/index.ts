@@ -52903,3 +52903,14 @@ export { createTimeline as TlLt_create } from "./timeline-lite";
 // --- timeline-utils ---
 export type { TimelineVariant as TlUtl_Variant, TimelineSide as TlUtl_Side, TimelineNode as TlUtl_Node, TimelineOptions as TlUtl_Options, TimelineInstance as TlUtl_Instance } from "./timeline-utils";
 export { createTimeline as TlUtl_create } from "./timeline-utils";
+// --- timeline-v2 ---
+export type { TimelineOrientation as TlV2_Orientation, TimelineVariant as TlV2_Variant, TimelineAlign, TimelineEvent as TlV2_Event, TimelineV2Options, TimelineV2Instance } from "./timeline-v2";
+export { createTimelineV2 } from "./timeline-v2";
+
+// --- timeline-viewer ---
+export type { TimelineEvent as TlView_Event, TimelineGroup, TimelineOptions as TlView_Options, TimelineInstance as TlView_Instance } from "./timeline-viewer";
+export { createTimeline as TlView_create } from "./timeline-viewer";
+
+// --- timeline ---
+export type { TimelineItemStatus as Tl_ItemStatus, TimelineItem as Tl_Item, TimelineOptions as Tl_Options, TimelineInstance as Tl_Instance } from "./timeline";
+export { TimelineManager, createTimeline } from "./timeline";
