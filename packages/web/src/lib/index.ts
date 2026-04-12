@@ -52532,3 +52532,50 @@ export {
   type RowData as TblMgr_RowData,
   type CellValue as TblMgr_CellValue,
 } from "./table-manager";
+
+// --- table-of-contents ---
+export {
+  TableOfContentsManager,
+  createTableOfContents,
+  type TocEntry as Toc_TocEntry,
+  type TableOfContentsOptions as Toc_TableOfContentsOptions,
+  type TocInstance as Toc_TocInstance,
+} from "./table-of-contents";
+
+// --- table-utils ---
+export {
+  createTableState as TblUtl_createTableState,
+  getSortedData as TblUtl_getSortedData,
+  getFilteredData as TblUtl_getFilteredData,
+  getPaginatedData as TblUtl_getPaginatedData,
+  getCellValue as TblUtl_getCellValue,
+  applyFilterOperator as TblUtl_applyFilterOperator,
+  toggleSort as TblUtl_toggleSort,
+  setSearchTerm as TblUtl_setSearchTerm,
+  toggleFilter as TblUtl_toggleFilter,
+  goToPage as TblUtl_goToPage,
+  setPageSize as TblUtl_setPageSize,
+  toggleRowSelection as TblUtl_toggleRowSelection,
+  toggleSelectAll as TblUtl_toggleSelectAll,
+  toggleRowExpand as TblUtl_toggleRowExpand,
+  resetTable as TblUtl_resetTable,
+  exportTableAsCsv as TblUtl_exportTableAsCsv,
+  type Column as TblUtl_Column,
+  type TableState as TblUtl_TableState,
+  type SortState as TblUtl_SortState,
+  type FilterState as TblUtl_FilterState,
+  type FilterOperator as TblUtl_FilterOperator,
+  type PaginationState as TblUtl_PaginationState,
+  type SelectionState as TblUtl_SelectionState,
+} from "./table-utils";
+
+// --- table ---
+export {
+  createTable as Tbl_createTable,
+  type TableColumn as Tbl_TableColumn,
+  type TableRow as Tbl_TableRow,
+  type TableOptions as Tbl_TableOptions,
+  type TableInstance as Tbl_TableInstance,
+  type TableSize as Tbl_TableSize,
+  type TableVariant as Tbl_TableVariant,
+} from "./table";
