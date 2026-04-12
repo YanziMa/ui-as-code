@@ -59867,3 +59867,58 @@ export {
   toggleClass as dhToggleClass,
   hasClass as dhHasClass,
 } from "./dom-helper";
+
+// --- dom-helpers ---
+export {
+  $ as domQuery,
+  $$ as domQueryAll,
+  createEl as domCreateEl,
+  removeEl as domRemoveEl,
+  setAttr as domSetAttr,
+  getAttr as domGetAttr,
+  setStyle as domSetStyle,
+  getStyle as domGetStyle,
+  addClass as domAddClass,
+  removeClass as domRemoveClass,
+  toggleClass as domToggleClass,
+  hasClass as domHasClass,
+  before as domBefore,
+  after as domAfter,
+  prepend as domPrepend,
+  append as domAppend,
+  replaceWith as domReplaceWith,
+  empty as domEmpty,
+  html as domHtml,
+  text as domText,
+  on as domOn,
+  off as domOff,
+  delegate as domDelegate,
+} from "./dom-helpers";
+
+// --- dom-observer-utils ---
+export type {
+  MutationObserverOptions as MOUOptions,
+  ResizeObserverEntry as MOUResizeEntry,
+  ObserverCallback,
+} from "./dom-observer-utils";
+export {
+  observeMutations,
+  unobserveMutations,
+  observeResize,
+  unobserveResize,
+  observeIntersection,
+  unobserveIntersection,
+  createDebouncedObserver,
+  createSizeObserver,
+} from "./dom-observer-utils";
+
+// --- dom-observer ---
+export type {
+  DOMObserverConfig,
+  DOMObserverInstance,
+  ObservationRecord,
+} from "./dom-observer";
+export {
+  DOMObserver,
+  createDOMObserver,
+} from "./dom-observer";
