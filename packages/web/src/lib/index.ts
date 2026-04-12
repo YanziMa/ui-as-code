@@ -62309,3 +62309,12 @@ export * from "./storage-persistent";
 
 // --- stream ---
 export * from "./stream";
+
+// --- string-utils ---
+export * from "./string-utils";
+
+// --- string-v2 ---
+export * from "./string-v2";
+
+// --- structs ---
+export * from "./structs";
