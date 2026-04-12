@@ -53496,3 +53496,39 @@ export {
   UndoStats,
   UndoManager,
 } from "./undo-manager";
+
+// --- undo-redo-manager ---
+export {
+  UndoState as URMgr_UndoState,
+  UndoRedoOptions,
+  UndoRedoStats,
+  UndoGroupHandle,
+  UndoRedoManager,
+  createUndoRedoManager,
+} from "./undo-redo-manager";
+
+// --- undo-redo-system ---
+export {
+  Command as URSys_Command,
+  HistoryBranch,
+  UndoRedoState,
+  UndoRedoConfig,
+  BatchOptions,
+  UndoRedoManager as URSys_UndoRedoManager,
+  createCommand,
+  createPropertyCommand,
+} from "./undo-redo-system";
+
+// --- undo-redo-v2 ---
+export {
+  Command as URV2_Command,
+  BranchInfo,
+  UndoState as URV2_UndoState,
+  UndoListener,
+  RedoResult,
+  ApplyFn,
+  InvertFn,
+  UndoManager as URV2_UndoManager,
+  TransformOperation,
+  transform,
+} from "./undo-redo-v2";
