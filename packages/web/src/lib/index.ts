@@ -52871,3 +52871,14 @@ export { ThemeManager as ThmUtl_Manager, getSystemColorScheme, onSystemColorSche
 // --- theme-v2 ---
 export type { ThemeMode as ThmV2_Mode, ColorScheme, DesignToken as ThmV2_DesignToken, ThemeTokens, ThemeConfig as ThmV2_Config } from "./theme-v2";
 export { ThemeManager as ThmV2_Manager, createThemeManager as ThmV2_createManager, getThemeManager as ThmV2_getManager, readCSSVar, hexToRgb, luminance, contrastRatio } from "./theme-v2";
+// --- theme ---
+export type { ThemeColors as Thm_Colors, ThemeConfig as Thm_Config } from "./theme";
+export { LIGHT_THEME as Thm_LIGHT_THEME, DARK_THEME as Thm_DARK_THEME, BUILT_IN_THEMES as Thm_BUILT_IN, ThemeManager as Thm_Manager, getThemeManager as Thm_getManager, useTheme } from "./theme";
+
+// --- time-picker-utils ---
+export type { TimePickerSize as TmPkUtl_Size, TimeFormat as TmPkUtl_Format, TimeValue, TimePickerOptions as TmPkUtl_Options, TimePickerInstance as TmPkUtl_Instance } from "./time-picker-utils";
+export { createTimePicker as TmPkUtl_create } from "./time-picker-utils";
+
+// --- time-picker ---
+export type { TimeFormat as TmPk_Format, TimePickerMode, TimePickerOptions, TimePickerInstance } from "./time-picker";
+export { createTimePicker } from "./time-picker";
