@@ -61175,3 +61175,12 @@ export * from "./avatar";
 
 // --- avatar-group ---
 export * from "./avatar-group";
+
+// --- back-to-top ---
+export * from "./back-to-top";
+
+// --- backdrop ---
+export * from "./backdrop";
+
+// --- badge ---
+export * from "./badge";
