@@ -53746,3 +53746,32 @@ export { createElement as VDom_createElement, applyProps as Vdom_applyProps, com
 
 // --- virtual-keyboard ---
 export { KeyboardLayout, VirtualKeyboardOptions, VirtualKeyboardInstance, VirtualKeyboardManager, createVirtualKeyboard } from "./virtual-keyboard";
+
+// --- virtual-list-utils ---
+export {
+  createVirtualList as Vlu_createVirtualList,
+  type VirtualListItem as Vlu_VirtualListItem,
+  type VirtualListOptions as Vlu_VirtualListOptions,
+  type VirtualListInstance as Vlu_VirtualListInstance,
+} from "./virtual-list-utils.js";
+
+// --- virtual-list ---
+export {
+  createVirtualList,
+  type VirtualListItem,
+  type VirtualListOptions,
+  type VirtualListInstance,
+} from "./virtual-list.js";
+
+// --- virtual-scroll-utils ---
+export {
+  VirtualScroller,
+  DynamicHeightEstimator,
+  VirtualGridScroller,
+  type VirtualItem,
+  type VirtualScrollConfig,
+  type VisibleRange,
+  type ScrollToOptions,
+  type VirtualGridConfig,
+  type GridVisibleRange,
+} from "./virtual-scroll-utils.js";
