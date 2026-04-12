@@ -56721,3 +56721,37 @@ export {
   AutomationFramework,
   createAutomationFramework,
 } from "./automation-framework";
+
+// --- avatar-crop-utils ---
+export type {
+  AvatarCropOptions,
+  AvatarCropResult,
+  AvatarCropInstance,
+} from "./avatar-crop-utils";
+export {
+  createAvatarCropper,
+  destroyAvatarCropper,
+} from "./avatar-crop-utils";
+
+// --- avatar-editor ---
+export type {
+  AvatarEditorOptions,
+  AvatarEditorState,
+  AvatarEditorInstance,
+} from "./avatar-editor";
+export {
+  AvatarEditor,
+  createAvatarEditor,
+} from "./avatar-editor";
+
+// --- avatar-generator ---
+export type {
+  AvatarGeneratorOptions,
+  AvatarStyle,
+  AvatarOutputFormat,
+  AvatarGeneratorInstance,
+} from "./avatar-generator";
+export {
+  AvatarGenerator,
+  createAvatarGenerator,
+} from "./avatar-generator";
