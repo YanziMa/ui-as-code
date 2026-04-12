@@ -61274,3 +61274,12 @@ export * from "./color-picker";
 
 // --- color-utils ---
 export * from "./color-utils";
+
+// --- command-palette ---
+export * from "./command-palette";
+
+// --- comment ---
+export * from "./comment";
+
+// --- confetti ---
+export * from "./confetti";
