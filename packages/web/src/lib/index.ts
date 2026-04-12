@@ -53188,3 +53188,51 @@ export {
 export type {
   PivotOptions as Trnsfm_PivotOptions,
 } from "./transform";
+
+// --- transition-utils ---
+export {
+  easings as TrsUtl_easings,
+  cssTransition as TrsUtl_cssTransition,
+  fadeTo as TrsUtl_fadeTo,
+  fadeIn as TrsUtl_fadeIn,
+  fadeOut as TrsUtl_fadeOut,
+  slideBy as TrsUtl_slideBy,
+  runClassTransition as TrsUtl_runClassTransition,
+  runLeaveTransition as TrsUtl_runLeaveTransition,
+  flip as TrsUtl_flip,
+  staggerEnter as TrsUtl_staggerEnter,
+  staggerLeave as TrsUtl_staggerLeave,
+  createTransitionGroup as TrsUtl_createTransitionGroup,
+  layoutTransition as TrsUtl_layoutTransition,
+} from "./transition-utils";
+export type {
+  EasingFunction as TrsUtl_EasingFunction,
+  TransitionOptions as TrsUtl_Options,
+  ClassTransitionConfig as TrsUtl_ClassConfig,
+  TransitionGroupOptions as TrsUtl_GroupOptions,
+} from "./transition-utils";
+
+// --- transition ---
+export {
+  createTransition,
+  createTransitionGroup as Trs_createTransitionGroup,
+} from "./transition";
+export type {
+  TransitionMode as Trs_Mode,
+  TransitionPhase as Trs_Phase,
+  TransitionOptions as Trs_Options,
+  TransitionInstance as Trs_Instance,
+  TransitionGroupOptions as Trs_GroupOptions,
+  TransitionGroupInstance as Trs_GroupInstance,
+} from "./transition";
+
+// --- tree-select ---
+export {
+  TreeSelectManager,
+  createTreeSelect,
+} from "./tree-select";
+export type {
+  TreeNodeData as Trsel_NodeData,
+  TreeSelectOptions as Trsel_Options,
+  TreeSelectInstance as Trsel_Instance,
+} from "./tree-select";
