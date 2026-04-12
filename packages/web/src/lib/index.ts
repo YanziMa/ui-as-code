@@ -61112,3 +61112,12 @@ export * from "./activity-feed";
 
 // --- affix-utils ---
 export * from "./affix-utils";
+
+// --- affix ---
+export * from "./affix";
+
+// --- ai-assistant ---
+export * from "./ai-assistant";
+
+// --- ai-pipeline ---
+export * from "./ai-pipeline";
