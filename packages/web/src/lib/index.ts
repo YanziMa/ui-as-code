@@ -56039,3 +56039,36 @@ export {
   AnchorPositioningEngine,
   createAnchorPositioning,
 } from "./anchor-positioning";
+
+// --- anchor-utils ---
+export {
+  anchorToElement,
+  anchorToMouse,
+  anchorToViewport,
+  getAnchorRect,
+  getAnchorOverflow,
+  flipAnchorIfNeeded,
+  shiftAnchorIntoView,
+} from "./anchor-utils";
+
+// --- anchor ---
+export type {
+  AnchorComponentItem,
+  AnchorComponentProps,
+  AnchorComponentInstance,
+} from "./anchor";
+export {
+  Anchor as AnchorComponent,
+  createAnchorComponent,
+} from "./anchor";
+
+// --- anchored-position ---
+export type {
+  AnchoredPositionOptions,
+  AnchoredPositionResult,
+  AnchoredPositionInstance,
+} from "./anchored-position";
+export {
+  AnchoredPosition,
+  createAnchoredPosition,
+} from "./anchored-position";
