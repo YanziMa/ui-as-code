@@ -61238,3 +61238,12 @@ export * from "./chart";
 
 // --- chat-bubble ---
 export * from "./chat-bubble";
+
+// --- checkbox ---
+export * from "./checkbox";
+
+// --- chip ---
+export * from "./chip";
+
+// --- chip-group ---
+export * from "./chip-group";
