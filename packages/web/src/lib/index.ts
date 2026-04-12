@@ -56986,3 +56986,46 @@ export {
   BiometricsManager,
   createBiometricsManager,
 } from "./biometrics";
+
+// --- blob-utils ---
+export {
+  createBlob,
+  blobToText,
+  blobToDataURL,
+  blobToArrayBuffer,
+  blobToUint8Array,
+  textToBlob,
+  arrayBufferToBlob,
+  uint8ArrayToBlob,
+  base64ToBlob,
+  blobToBase64,
+  sliceBlob,
+  concatBlobs,
+  getBlobSize,
+  getBlobType,
+  downloadBlob,
+} from "./blob-utils";
+
+// --- board ---
+export type {
+  BoardColumn,
+  BoardCard,
+  BoardOptions,
+  BoardInstance,
+} from "./board";
+export {
+  Board as KanbanBoard,
+  createBoard,
+} from "./board";
+
+// --- body-scroll-lock-utils ---
+export type {
+  ScrollLockOptions,
+  ScrollLockRef,
+} from "./body-scroll-lock-utils";
+export {
+  lockBodyScroll,
+  unlockBodyScroll,
+  isBodyLocked,
+  clearAllScrollLocks,
+} from "./body-scroll-lock-utils";
