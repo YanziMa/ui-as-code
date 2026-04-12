@@ -60594,3 +60594,41 @@ export {
   createNetworkError,
   createValidationError,
 } from "./error-handler";
+
+// --- error-logger ---
+export type {
+  ErrorLoggerOptions,
+  ErrorLogEntry as ELEntry,
+  ErrorLogLevel,
+} from "./error-logger";
+export {
+  ErrorLogger,
+  createErrorLogger,
+} from "./error-logger";
+
+// --- error-utils ---
+export {
+  AppError,
+  NetworkError as EUtNetworkError,
+  ValidationError as EUtValidationError,
+  AuthError as EUtAuthError,
+  NotFoundError as EUtNotFoundError,
+  ServerError as EUtServerError,
+  isRetryableError,
+  parseStackTrace,
+  getErrorMessage,
+  groupErrors,
+  enrichErrorContext,
+} from "./error-utils";
+
+// --- error (utilities) ---
+export {
+  createError as errCreateError,
+  isError,
+  isNetworkError as errIsNetworkError,
+  isAuthError as errIsAuthError,
+  isNotFoundError as errIsNotFound,
+  getStackFrames,
+  parseStackFrame,
+  formatStack,
+} from "./error";
