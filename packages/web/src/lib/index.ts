@@ -53681,3 +53681,12 @@ export { formatRelativeTime as Ut_formatRelativeTime, truncate as Ut_truncate, s
 
 // --- uuid ---
 export { uuidv4, uuidv7, nanoId, shortId as Uuid_shortId, prefixedId, isUuid, getUuidVersion } from "./uuid";
+
+// --- validate ---
+export { ValidationResult as Val_ValidationResult, ValidatorFn as Val_ValidatorFn, ValidationRule as Val_ValidationRule, required as Val_required, isEmail as Val_isEmail, isUrl as Val_isUrl, isPhone as Val_isPhone, minLength as Val_minLength, maxLength as Val_maxLength, minValue as Val_minValue, maxValue as Val_maxValue, matches as Val_matches, oneOf as Val_oneOf, isNumber as Val_isNumber, isBoolean as Val_isBoolean, isDate as Val_isDate, custom as Val_custom, validate as Val_validate, validateSync as Val_validateSync, check as Val_check } from "./validate";
+
+// --- validation-advanced ---
+export { ValidationResult as ValAdv_ValidationResult, Validator as ValAdv_Validator, valid as ValAdv_valid, invalid as ValAdv_invalid, required as ValAdv_required, minLength as ValAdv_minLength, maxLength as ValAdv_maxLength, range as ValAdv_range, pattern as ValAdv_pattern, emailValidator as ValAdv_emailValidator, urlValidator as ValAdv_urlValidator, oneOf as ValAdv_oneOf, allOf as ValAdv_allOf, anyOf as ValAdv_anyOf, not as ValAdv_not, when as ValAdv_when, FieldValidators as ValAdv_FieldValidators, validateObject as ValAdv_validateObject } from "./validation-advanced";
+
+// --- validation-feedback ---
+export { ValidationSeverity as Vf_Severity, ValidationResult as Vf_ValidationResult, ValidationFeedbackOptions, ValidationFeedbackInstance, createValidationFeedback, showError as Vf_showError, showSuccess as Vf_showSuccess } from "./validation-feedback";
