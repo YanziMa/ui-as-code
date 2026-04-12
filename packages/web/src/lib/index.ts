@@ -61256,3 +61256,12 @@ export * from "./clipboard-utils";
 
 // --- clock ---
 export * from "./clock";
+
+// --- code-block ---
+export * from "./code-block";
+
+// --- code-editor ---
+export * from "./code-editor";
+
+// --- code-highlighter ---
+export * from "./code-highlighter";
