@@ -56639,3 +56639,47 @@ export {
   AuthManager,
   createAuthManager,
 } from "./auth-manager";
+
+// --- auth-token ---
+export type {
+  TokenPair,
+  TokenPayload,
+  TokenStorageStrategy,
+  TokenManagerOptions,
+  TokenManagerState,
+} from "./auth-token";
+export {
+  AuthTokenManager,
+  createAuthTokenManager,
+} from "./auth-token";
+
+// --- auth ---
+export {
+  parseJWT,
+  validateJWT,
+  isTokenExpired,
+  getExpiryTime,
+  generateCodeVerifier,
+  generateCodeChallenge,
+  buildAuthURL,
+  exchangeCodeForTokens,
+  refreshAccessToken,
+  revokeToken,
+  hashPassword,
+  checkPasswordStrength,
+  generateTOTPSecret,
+  verifyTOTP,
+  createAuthHeaders,
+} from "./auth";
+
+// --- auto-complete ---
+export type {
+  AutoCompleteItem,
+  AutoCompleteGroup,
+  AutoCompleteOptions,
+  AutoCompleteInstance,
+} from "./auto-complete";
+export {
+  AutoComplete,
+  createAutoComplete,
+} from "./auto-complete";
