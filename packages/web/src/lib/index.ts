@@ -60871,3 +60871,43 @@ export {
   createFeatureFlags,
   onFeatureChange,
 } from "./feature-flag";
+
+// --- feature-tour ---
+export type {
+  TourStep,
+  TourOptions,
+  TourInstance,
+} from "./feature-tour";
+export {
+  FeatureTour,
+  createFeatureTour,
+  startTour,
+  endTour,
+  nextStep,
+  prevStep,
+  goToStep,
+} from "./feature-tour";
+
+// --- file-download ---
+export type {
+  DownloadOptions,
+  DownloadProgress,
+  DownloadInstance,
+} from "./file-download";
+export {
+  downloadFile,
+  createDownloadManager,
+  abortDownload,
+  resumeDownload,
+} from "./file-download";
+
+// --- file-dropzone ---
+export type {
+  FileDropzoneOptions as FDZOptions,
+  FileDropzoneState as FDZState,
+  FileDropzoneInstance,
+} from "./file-dropzone";
+export {
+  FileDropzone as FDZComponent,
+  createFileDropzone,
+} from "./file-dropzone";
