@@ -55852,3 +55852,37 @@ export {
   AccordionList,
   createAccordionList,
 } from "./accordion-list";
+
+// --- accordion-lite ---
+export type {
+  AccordionLiteItem,
+  AccordionLiteProps,
+  AccordionLiteInstance,
+} from "./accordion-lite";
+export {
+  AccordionLite,
+  createAccordionLite,
+} from "./accordion-lite";
+
+// --- accordion-manager ---
+export type {
+  AccordionPanel as AccordionMgrPanel,
+  AccordionManagerOptions,
+  AccordionManagerInstance,
+} from "./accordion-manager";
+export {
+  AccordionManager,
+  createAccordionManager,
+} from "./accordion-manager";
+
+// --- accordion-utils ---
+export {
+  setupAccordionARIA,
+  handleAccordionKeydown,
+  expandAccordionPanel,
+  collapseAccordionPanel,
+  toggleAccordionPanel,
+  getExpandedPanels,
+  setAccordionMode,
+  syncAccordionWithURL,
+} from "./accordion-utils";
