@@ -54458,3 +54458,47 @@ export {
   AnalyticsTracker,
   createAnalyticsTracker,
 } from "./analytics-tracker.js";
+
+export {
+  type OAuthProvider,
+  type OAuthGrantType,
+  type OAuthResponseType,
+  type OAuthConfig,
+  type OAuthTokens,
+  type OAuthUserInfo,
+  type OAuthSession,
+  type OAuthError,
+  OAuthHelper,
+  createOAuthHelper,
+} from "./oauth-helper.js";
+
+export {
+  type ImageFormat,
+  type ResizeMode,
+  type CropMode,
+  type FilterType,
+  type ImageProcessorOptions,
+  type CropOptions,
+  type FilterOptions,
+  type WatermarkOptions,
+  type HistogramData,
+  type ImageMetadata,
+  ImageProcessor,
+  createImageProcessor,
+  quickResize,
+  generateThumbnail,
+} from "./image-processor.js";
+
+export {
+  type OrgNodeType,
+  type OrgNode,
+  type PositionInfo,
+  type DocumentMetadata,
+  type OrgParseOptions,
+  type OrgExportOptions,
+  type OrgDocument,
+  OrgParser,
+  parseOrg,
+  orgToHTML,
+  orgToMarkdown,
+} from "./org-parser.js";
