@@ -62174,3 +62174,12 @@ export * from "./scroll-spy";
 
 // --- scrollbar ---
 export * from "./scrollbar";
+
+// --- scroll-utilities ---
+export * from "./scroll-utilities";
+
+// --- search-autocomplete ---
+export * from "./search-autocomplete";
+
+// --- search-dialog ---
+export * from "./search-dialog";
