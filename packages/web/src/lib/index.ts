@@ -58079,3 +58079,55 @@ export {
   setToArray,
   arrayToSet,
 } from "./collection";
+
+// --- color-contrast ---
+export type {
+  ContrastResult as ColorContrastResult,
+  ContrastLevel,
+  ColorBlindnessType,
+} from "./color-contrast";
+export {
+  calculateContrastRatio,
+  getRelativeLuminance,
+  meetsWCAGAA as colorMeetsAA,
+  meetsWCAGAAA as colorMeetsAAA,
+  findContrastingColor,
+  simulateColorBlindness,
+  generateAccessiblePalette,
+} from "./color-contrast";
+
+// --- color-design-tokens ---
+export type {
+  DesignToken,
+  TokenColorScale,
+  TokenTheme,
+  TokenSet,
+} from "./color-design-tokens";
+export {
+  createDesignToken,
+  createColorScale,
+  createTokenTheme,
+  generateCSSVariables,
+  resolveTokens,
+  mergeThemes,
+  exportTokensJSON,
+} from "./color-design-tokens";
+
+// --- color-gradient ---
+export type {
+  GradientStop,
+  GradientDefinition,
+  GradientOptions,
+} from "./color-gradient";
+export {
+  createLinearGradient,
+  createRadialGradient,
+  createConicGradient,
+  parseGradient,
+  serializeGradient,
+  addGradientStop,
+  removeGradientStop,
+  reverseGradient,
+  interpolateGradient,
+  previewGradientCSS,
+} from "./color-gradient";
