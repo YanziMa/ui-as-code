@@ -1637,9 +1637,9 @@ export class AudioAnalyzer {
     this._analyser = ctx.createAnalyser();
     this._analyser.fftSize = fftSize;
     this._analyser.smoothingTimeConstant = 0.8;
-    this._freqData = new Uint8Array(this._analyser.frequencyBinCount);
-    this._timeData = new Uint8Array(this._analyser.fftSize);
-    this._floatFreqData = new Float32Array(this._analyser.frequencyBinCount);
+    this._freqData = new Uint8Array<ArrayBuffer>(new ArrayBuffer(this._analyser.frequencyBinCount));
+    this._timeData = new Uint8Array<ArrayBuffer>(new ArrayBuffer(this._analyser.fftSize));
+    this._floatFreqData = new Float32Array<ArrayBuffer>(new ArrayBuffer(this._analyser.frequencyBinCount * 4));
   }
 
   /** The underlying AnalyserNode for direct access. */
@@ -1690,9 +1690,9 @@ export class AudioAnalyzer {
     const rms = Math.sqrt(sumSquares / this._timeData.length);
 
     return {
-      frequencyData: Uint8Array.from(this._freqData as unknown as number[]),
-      timeDomainData: Uint8Array.from(this._timeData as unknown as number[]),
-      floatFrequencyData: Float32Array.from(this._floatFreqData as unknown as number[]),
+      frequencyData: this._freqData.slice(),
+      timeDomainData: this._timeData.slice(),
+      floatFrequencyData: this._floatFreqData.slice(),
       rms,
       peak,
     };
@@ -1703,7 +1703,7 @@ export class AudioAnalyzer {
    */
   getFrequencyData(): Uint8Array {
     this._analyser.getByteFrequencyData(this._freqData);
-    return Uint8Array.from(this._freqData as unknown as number[]);
+    return this._freqData.slice();
   }
 
   /**
@@ -1711,7 +1711,7 @@ export class AudioAnalyzer {
    */
   getTimeDomainData(): Uint8Array {
     this._analyser.getByteTimeDomainData(this._timeData);
-    return Uint8Array.from(this._timeData as unknown as number[]);
+    return this._timeData.slice();
   }
 
   /**
@@ -1778,9 +1778,9 @@ export class AudioAnalyzer {
     if (fftSize) this._analyser.fftSize = fftSize;
     if (smoothingTimeConstant !== undefined) this._analyser.smoothingTimeConstant = smoothingTimeConstant;
     // Resize backing arrays
-    this._freqData = new Uint8Array(this._analyser.frequencyBinCount);
-    this._timeData = new Uint8Array(this._analyser.fftSize);
-    this._floatFreqData = new Float32Array(this._analyser.frequencyBinCount);
+    this._freqData = new Uint8Array<ArrayBuffer>(new ArrayBuffer(this._analyser.frequencyBinCount));
+    this._timeData = new Uint8Array<ArrayBuffer>(new ArrayBuffer(this._analyser.fftSize));
+    this._floatFreqData = new Float32Array<ArrayBuffer>(new ArrayBuffer(this._analyser.frequencyBinCount * 4));
   }
 }
 
@@ -2274,7 +2274,7 @@ export class MidiManager {
     this._enumerateDevices();
     this._access.onstatechange = (e) => {
       this._enumerateDevices();
-      this.onStateChange?.(e.port);
+      this.onStateChange?.(e.port!);
     };
     return this._access;
   }
@@ -2412,7 +2412,7 @@ export class MidiManager {
     if (exact) return exact;
     // Fallback to name substring match
     for (const output of this._outputs.values()) {
-      if (output.name.toLowerCase().includes(idOrName.toLowerCase())) return output;
+      if (output.name?.toLowerCase().includes(idOrName.toLowerCase())) return output;
     }
     return undefined;
   }
