@@ -56755,3 +56755,35 @@ export {
   AvatarGenerator,
   createAvatarGenerator,
 } from "./avatar-generator";
+
+// --- avatar-group-utils ---
+export type {
+  AvatarGroupUtilsOptions,
+  AvatarGroupItem,
+} from "./avatar-group-utils";
+export {
+  setupAvatarGroup,
+  renderAvatarStack,
+  getOverflowCount,
+} from "./avatar-group-utils";
+
+// --- avatar-group ---
+export type {
+  AvatarGroupOptions,
+  AvatarGroupInstance,
+} from "./avatar-group";
+export {
+  AvatarGroup,
+  createAvatarGroup,
+} from "./avatar-group";
+
+// --- avatar-picker ---
+export type {
+  AvatarPickerOption,
+  AvatarPickerOptions,
+  AvatarPickerInstance,
+} from "./avatar-picker";
+export {
+  AvatarPicker,
+  createAvatarPicker,
+} from "./avatar-picker";
