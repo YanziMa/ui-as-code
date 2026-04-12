@@ -52957,3 +52957,45 @@ export type {
   DelayOptions as Tmg_DelayOptions,
   IntervalHandle as Tmg_IntervalHandle,
 } from "./timing";
+
+// --- toast ---
+export {
+  ToastManager,
+  getToastManager as TstMgr_getToastManager,
+  showToast as TstMgr_showToast,
+} from "./toast";
+export type {
+  ToastType as TstMgr_ToastType,
+  ToastPosition as TstMgr_ToastPosition,
+  ToastOptions as TstMgr_ToastOptions,
+  ToastInstance as TstMgr_ToastInstance,
+  ToastManagerConfig as TstMgr_ToastManagerConfig,
+} from "./toast";
+
+// --- toast-utils ---
+export {
+  createToastManager,
+  getToastManager as TstUtl_getToastManager,
+  destroyToastManager,
+  showToast as TstUtl_showToast,
+} from "./toast-utils";
+export type {
+  ToastPosition as TstUtl_ToastPosition,
+  ToastType as TstUtl_ToastType,
+  ToastOptions as TstUtl_ToastOptions,
+  ToastManagerConfig as TstUtl_ToastManagerConfig,
+  ToastManagerInstance as TstUtl_ToastManagerInstance,
+} from "./toast-utils";
+
+// --- tooltip ---
+export {
+  TooltipManager,
+  getTooltipManager,
+  tooltip,
+} from "./tooltip";
+export type {
+  TooltipPlacement as Ttp_Placement,
+  TooltipTrigger as Ttp_Trigger,
+  TooltipOptions as Ttp_Options,
+  TooltipInstance as Ttp_Instance,
+} from "./tooltip";
