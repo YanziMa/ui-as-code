@@ -59778,3 +59778,48 @@ export {
   DockLayout,
   createDockLayout,
 } from "./dock-layout";
+
+// --- dom-builder ---
+export type {
+  DOMBuilder,
+  DOMBuilderElement,
+  BuilderOptions,
+} from "./dom-builder";
+export {
+  domBuilder,
+  createElement as dbCreateElement,
+  createFragment,
+  buildHTML,
+  setAttributes,
+  addStyles,
+  addClasses,
+  bindEvents,
+} from "./dom-builder";
+
+// --- dom-creator ---
+export {
+  el,
+  frag,
+  text,
+  svgEl,
+  mount,
+  unmount,
+  setAttr as dcSetAttr,
+  setStyle as dcSetStyle,
+  addClass as dcAddClass,
+  on as dcOn,
+  off as dcOff,
+} from "./dom-creator";
+
+// --- dom-diff-patcher ---
+export type {
+  DOMDiff,
+  PatchOperation,
+  DiffOptions,
+  PatcherOptions,
+} from "./dom-diff-patcher";
+export {
+  diffDOM,
+  patchDOM,
+  createDOMPatcher,
+} from "./dom-diff-patcher";
