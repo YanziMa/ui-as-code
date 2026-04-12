@@ -57068,3 +57068,35 @@ export {
   BoxPlot,
   createBoxPlot,
 } from "./box-plot";
+
+// --- box ---
+export type {
+  Box as ImmutableBox,
+} from "./box";
+export {
+  Box,
+  isBox,
+  getBoxValue,
+} from "./box";
+
+// --- breadcrumb-lite ---
+export type {
+  BreadcrumbLiteItem,
+  BreadcrumbLiteOptions,
+  BreadcrumbLiteInstance,
+} from "./breadcrumb-lite";
+export {
+  BreadcrumbLite,
+  createBreadcrumbLite,
+} from "./breadcrumb-lite";
+
+// --- breadcrumb-nav ---
+export type {
+  BreadcrumbNavItem,
+  BreadcrumbNavOptions,
+  BreadcrumbNavInstance,
+} from "./breadcrumb-nav";
+export {
+  BreadcrumbNav,
+  createBreadcrumbNav,
+} from "./breadcrumb-nav";
