@@ -51898,3 +51898,39 @@ export type {
 export {
   StgMgr_StorageManager as StorageManager,
 } from "./storage-manager";
+
+// --- storage-persistent ---
+export type {
+  StgPrst_StorageBackend as StorageBackend,
+  StgPrst_StorageItem as StorageItem,
+  StgPrst_PersistentStorageOptions as PersistentStorageOptions,
+  StgPrst_PersistentStorageInstance as PersistentStorageInstance,
+} from "./storage-persistent";
+export {
+  StgPrst_PersistentStorageManager as PersistentStorageManager,
+  StgPrst_createPersistentStorage as createPersistentStorage,
+} from "./storage-persistent";
+
+// --- storage-utils ---
+export type {
+  StgUtl_StorageBackend as StorageBackend,
+  StgUtl_StorageEntry3 as StorageEntry,
+  StgUtl_StorageOptions3 as StorageOptions,
+  StgUtl_StorageStats3 as StorageStats,
+  StgUtl_StorageMigration2 as StorageMigration,
+} from "./storage-utils";
+export {
+  StgUtl_StorageManager2 as StorageManager,
+  StgUtl_createLocalStorage as createLocalStorage,
+  StgUtl_createSessionStorage as createSessionStorage,
+  StgUtl_createMemoryStore as createMemoryStore,
+} from "./storage-utils";
+
+// --- storage ---
+export {
+  Stg_storageGet as storageGet,
+  Stg_storageSet as storageSet,
+  Stg_storageRemove as storageRemove,
+  Stg_storageKeys as storageKeys,
+  Stg_storageClear as storageClear,
+} from "./storage";
