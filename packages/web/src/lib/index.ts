@@ -53265,3 +53265,65 @@ export {
   TreeViewInstance,
   createTreeView,
 } from "./tree-view-utils";
+
+// --- treemap ---
+export {
+  TreemapNode,
+  TreemapColorScale,
+  TreemapOptions,
+  TreemapInstance,
+  createTreemap,
+} from "./treemap";
+
+// --- tuple ---
+export {
+  TupleOf,
+  tuple2,
+  tuple3,
+  tuple4,
+  fromArray as Tpl_fromArray,
+  singleton,
+  empty,
+  first,
+  last,
+  head,
+  tail,
+  at,
+  match,
+  mapTuple,
+  zipMap,
+  reverse,
+  flatten as Tpl_flatten,
+  sortTuple,
+  concat,
+  prepend,
+  append,
+  zip,
+  unzip,
+  splitAt,
+  take,
+  drop,
+  includes,
+  indexOf,
+  every,
+  some,
+  find as Tpl_find,
+  countIf,
+  reduce,
+  reduce1,
+} from "./tuple";
+
+// --- tween-engine ---
+export {
+  TweenProp,
+  TweenValue,
+  Tweenable,
+  TweenProps,
+  TweenInstance,
+  createTween,
+  tweenAll,
+  tweenSequence,
+  fadeIn as TwEng_fadeIn,
+  fadeOut as TwEng_fadeOut,
+  slideIn,
+} from "./tween-engine";
