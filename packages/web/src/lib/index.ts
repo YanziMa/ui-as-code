@@ -61463,3 +61463,12 @@ export * from "./select";
 
 // --- skeleton ---
 export * from "./skeleton";
+
+// --- slider ---
+export * from "./slider";
+
+// --- spinner ---
+export * from "./spinner";
+
+// --- switch ---
+export * from "./switch";
