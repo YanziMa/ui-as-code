@@ -58429,3 +58429,38 @@ export {
   getCommandHistory,
   clearCommandHistory,
 } from "./command";
+
+// --- comment-section ---
+export type {
+  CommentSectionOptions,
+  CommentItem,
+  CommentSectionInstance,
+} from "./comment-section";
+export {
+  CommentSection,
+  createCommentSection,
+} from "./comment-section";
+
+// --- comment-system ---
+export type {
+  CommentSystemOptions,
+  Comment as Cmt,
+  CommentUser,
+  CommentModerationAction,
+  CommentSystemInstance,
+} from "./comment-system";
+export {
+  CommentSystem,
+  createCommentSystem,
+} from "./comment-system";
+
+// --- comment-thread ---
+export type {
+  CommentThreadOptions,
+  ThreadComment,
+  CommentThreadInstance,
+} from "./comment-thread";
+export {
+  CommentThread,
+  createCommentThread,
+} from "./comment-thread";
