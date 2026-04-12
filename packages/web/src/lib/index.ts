@@ -57499,3 +57499,40 @@ export {
   setupCardHover,
   setupCardCollapse,
 } from "./card-utils";
+
+// --- card ---
+export type {
+  CardOptions,
+  CardVariant as CardComponentVariant,
+  CardSize,
+  CardInstance,
+} from "./card";
+export {
+  Card as CardComponent,
+  createCardComponent,
+} from "./card";
+
+// --- carousel-lite ---
+export type {
+  CarouselLiteOptions,
+  CarouselLiteInstance,
+} from "./carousel-lite";
+export {
+  CarouselLite,
+  createCarouselLite,
+} from "./carousel-lite";
+
+// --- carousel-utils ---
+export type {
+  CarouselUtilsOptions,
+  CarouselSlide,
+} from "./carousel-utils";
+export {
+  setupCarousel,
+  destroyCarousel,
+  goToSlide,
+  nextSlide,
+  prevSlide,
+  startAutoPlay,
+  stopAutoPlay,
+} from "./carousel-utils";
