@@ -56853,3 +56853,34 @@ export {
   BackToTop,
   createBackToTop,
 } from "./back-to-top";
+
+// --- back-top ---
+export type {
+  BackTopOptions,
+  BackTopInstance,
+} from "./back-top";
+export {
+  BackTop,
+  createBackTop,
+} from "./back-top";
+
+// --- backdrop ---
+export type {
+  BackdropOptions,
+  BackdropState,
+  BackdropInstance,
+} from "./backdrop";
+export {
+  Backdrop,
+  createBackdrop,
+} from "./backdrop";
+
+// --- badge-card-utils ---
+export type {
+  BadgeCardOptions,
+  BadgeCardAction,
+} from "./badge-card-utils";
+export {
+  createBadgeCard,
+  setupBadgeCardHover,
+} from "./badge-card-utils";
