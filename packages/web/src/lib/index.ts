@@ -52222,3 +52222,56 @@ export {
   createStyleRuntime,
 } from "./style-runtime";
 // Aliases: StlRt_*
+
+// --- style-utils.ts ---
+export {
+  type StyleMap as StlUtl_Map,
+  type StyleDiff as StlUtl_Diff,
+  type ShorthandExpansion as StlUtl_ShortExp,
+  getComputedStyleValue,
+  getComputedStyles,
+  hasComputedStyle,
+  setStyles,
+  getInlineStyles,
+  removeStyles,
+  withTemporaryStyles,
+  diffStyles,
+  styleToCSS,
+  cssToStyle,
+  camelToKebab,
+  kebabToCamel,
+  expandShorthand,
+  collapseShorthand,
+  parseCSSValue,
+  pxToRem,
+  remToPx,
+  pxToEm,
+  withUnit,
+  stripUnit,
+  responsiveStyle,
+  injectResponsiveStyles,
+  createStyleSheet as StlUtl_createSheet,
+  insertRule as StlUtl_insertRule,
+  removeRule as StlUtl_removeRule,
+  findRules,
+  clearSheet as StlUtl_clearSheet,
+  isInheritedProperty,
+  getStyleOrigin,
+  copyComputedStyles,
+  extractVisualStyles,
+  StyleManager,
+} from "./style-utils";
+// Aliases: StlUtl_*
+
+// --- sunburst-chart.ts ---
+export {
+  type SunburstNode,
+  type SunburstOptions,
+  type SunburstInstance,
+  createSunburstChart,
+} from "./sunburst-chart";
+// Aliases: Snbst_*
+
+// --- supabase.ts ---
+export { supabase } from "./supabase";
+// Aliases: Sup_*
