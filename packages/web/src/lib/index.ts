@@ -58131,3 +58131,43 @@ export {
   interpolateGradient,
   previewGradientCSS,
 } from "./color-gradient";
+
+// --- color-input ---
+export type {
+  ColorInputOptions,
+  ColorInputFormat,
+  ColorInputInstance,
+} from "./color-input";
+export {
+  ColorInput,
+  createColorInput,
+} from "./color-input";
+
+// --- color-palette ---
+export type {
+  PaletteScheme,
+  PaletteShade,
+  PaletteOptions,
+  PaletteResult,
+} from "./color-palette";
+export {
+  generatePalette,
+  generateComplementary,
+  generateAnalogous,
+  generateTriadic,
+  generateSplitComplementary,
+  generateTetradic,
+  generateMonochromatic,
+  generateShades,
+  checkPaletteContrast,
+} from "./color-palette";
+
+// --- color-picker-advanced ---
+export type {
+  AdvancedColorPickerOptions,
+  AdvancedColorPickerInstance,
+} from "./color-picker-advanced";
+export {
+  AdvancedColorPicker,
+  createAdvancedColorPicker,
+} from "./color-picker-advanced";
