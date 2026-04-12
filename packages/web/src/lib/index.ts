@@ -62165,3 +62165,12 @@ export * from "./scroll-into-view";
 
 // --- scroll-lock ---
 export * from "./scroll-lock";
+
+// --- scroll-progress ---
+export * from "./scroll-progress";
+
+// --- scroll-spy ---
+export * from "./scroll-spy";
+
+// --- scrollbar ---
+export * from "./scrollbar";
