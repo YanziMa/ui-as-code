@@ -52785,3 +52785,35 @@ export {
   Template,
   type TemplateBlock as Tmp_TemplateBlock,
 } from "./template";
+
+// --- terminal-emulator ---
+export {
+  TerminalEmulator,
+  AnsiParser,
+  TerminalBuffer,
+  resolveColor as TrmEmu_resolveColor,
+  unpackRgb,
+  type TerminalConfig as TrmEmu_TerminalConfig,
+  type TerminalTheme as TrmEmu_TerminalTheme,
+  type Cell as TrmEmu_Cell,
+  type CursorState as TrmEmu_CursorState,
+} from "./terminal-emulator";
+
+// --- terminal ---
+export {
+  createTerminal,
+  type TerminalOptions as Trm_TerminalOptions,
+  type TerminalInstance as Trm_TerminalInstance,
+  type TerminalLine as Trm_TerminalLine,
+  type TerminalCommand as Trm_TerminalCommand,
+} from "./terminal";
+
+// --- testimonial-utils ---
+export {
+  createTestimonials,
+  type Testimonial as TstUtl_Testimonial,
+  type TestimonialAuthor as TstUtl_TestimonialAuthor,
+  type TestimonialOptions as TstUtl_TestimonialOptions,
+  type TestimonialInstance as TstUtl_TestimonialInstance,
+  type TestimonialLayout as TstUtl_TestimonialLayout,
+} from "./testimonial-utils";
