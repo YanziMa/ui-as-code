@@ -53618,3 +53618,48 @@ export {
   isValidUrl as UrlBld_isValidUrl,
   sanitizeUrl,
 } from "./url-builder";
+
+// --- url-pattern-matcher ---
+export {
+  RouteMatch as UrlPM_RouteMatch,
+  RoutePattern,
+  MatchOptions,
+  RouterConfig as UrlPM_RouterConfig,
+  compilePattern,
+  matchUrl as UrlPM_matchUrl,
+  quickMatch,
+  UrlRouter,
+  generatePath,
+  validateParams,
+} from "./url-pattern-matcher";
+
+// --- url-pattern-router ---
+export {
+  RouteParams as UrlPR_RouteParams,
+  RouteMatch as UrlPR_RouteMatch,
+  RouteHandler,
+  RouteGuard,
+  RouteMiddleware,
+  RouteDefinition as UrlPR_RouteDefinition,
+  RouterOptions,
+  RouterInstance,
+  createRouter,
+  matchUrl as UrlPR_matchUrl,
+} from "./url-pattern-router";
+
+// --- url-router ---
+export {
+  RouteMethod,
+  RouteParams as UrlRtr_RouteParams,
+  QueryParams,
+  RouteMatch as UrlRtr_RouteMatch,
+  RouteDefinition as UrlRtr_RouteDefinition,
+  NavigationResult,
+  RouterState,
+  RouterConfig as UrlRtr_RouterConfig,
+  UrlRouter,
+  parseQueryString,
+  buildQueryString as UrlRtr_buildQueryString,
+  joinPath as UrlRtr_joinPath,
+  normalizePath,
+} from "./url-router";
