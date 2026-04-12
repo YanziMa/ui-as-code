@@ -61006,3 +61006,46 @@ export {
 
 // --- file-upload (already exported, skip) ---
 // file-upload was already exported in a prior batch
+
+// --- file-utils ---
+export {
+  getExtension,
+  getFilename,
+  getBasename,
+  changeExtension,
+  joinPath,
+  normalizePath,
+  isAbsolutePath,
+  getMimeType,
+  formatFileSize,
+  sanitizeFilename,
+  categorizeFile,
+} from "./file-utils";
+
+// --- file (system) ---
+export type {
+  FileSystemEntry as FSEntry,
+  FileSystemOptions as FSOptions,
+  ReadFileOptions,
+  WriteFileOptions,
+  FSCoreInstance as FSInstance,
+} from "./file";
+export {
+  readFile as fsReadFile,
+  writeFile as fsWriteFile,
+  deleteFile as fsDeleteFile,
+  exists as fsExists,
+  stat as fsStat,
+  listDir as fsListDir,
+  mkdir as fsMkdir,
+  copyFile as fsCopyFile,
+  moveFile as fsMoveFile,
+} from "./file";
+
+// --- filesystem ---
+export type {
+  FilesystemOptions as FSOpts,
+} from "./filesystem";
+export {
+  createFilesystem,
+} from "./filesystem";
