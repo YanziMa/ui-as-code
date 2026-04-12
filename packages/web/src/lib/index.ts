@@ -53532,3 +53532,32 @@ export {
   TransformOperation,
   transform,
 } from "./undo-redo-v2";
+
+// --- undo-redo ---
+export {
+  UndoItem,
+  UndoBranch,
+  UndoHistoryOptions,
+  UndoState as UR_UndoState,
+  UndoChangeListener,
+  UndoHistory,
+} from "./undo-redo";
+
+// --- upload ---
+export {
+  UploadStatus,
+  UploadFile,
+  UploadOptions,
+  UploadInstance,
+  createUpload,
+} from "./upload";
+
+// --- upload-zone ---
+export {
+  FileValidationRule,
+  UploadedFile,
+  UploadZoneOptions,
+  UploadZoneInstance,
+  UploadZoneManager,
+  createUploadZone,
+} from "./upload-zone";
