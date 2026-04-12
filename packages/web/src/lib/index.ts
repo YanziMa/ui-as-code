@@ -56498,3 +56498,47 @@ export {
   asyncSemaphore,
   asyncMutex,
 } from "./async";
+
+// --- atom ---
+export type {
+  Atom,
+  AtomOptions,
+  PrimitiveAtom,
+  DerivedAtom,
+  AtomFamily,
+  AtomEffect,
+} from "./atom";
+export {
+  atom,
+  useAtom,
+  useAtomValue,
+  useSetAtom,
+  useResetAtom,
+  createAtomStore,
+} from "./atom";
+
+// --- audio-player ---
+export type {
+  AudioPlayerTrack,
+  AudioPlayerPlaylist,
+  AudioPlayerOptions,
+  AudioPlayerState,
+  AudioPlayerInstance,
+} from "./audio-player";
+export {
+  AudioPlayer,
+  createAudioPlayer,
+} from "./audio-player";
+
+// --- audio-processor ---
+export type {
+  AudioProcessorOptions,
+  AudioEffectType,
+  AudioAnalysisResult,
+  AudioProcessorNode,
+  AudioProcessorInstance,
+} from "./audio-processor";
+export {
+  AudioProcessor,
+  createAudioProcessor,
+} from "./audio-processor";
