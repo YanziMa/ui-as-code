@@ -52914,3 +52914,46 @@ export { createTimeline as TlView_create } from "./timeline-viewer";
 // --- timeline ---
 export type { TimelineItemStatus as Tl_ItemStatus, TimelineItem as Tl_Item, TimelineOptions as Tl_Options, TimelineInstance as Tl_Instance } from "./timeline";
 export { TimelineManager, createTimeline } from "./timeline";
+
+// --- timer-utils ---
+export {
+  createTimer,
+} from "./timer-utils";
+export type {
+  TimerMode as TmrUtl_TimerMode,
+  TimerState as TmrUtl_TimerState,
+  TimerSession as TmrUtl_TimerSession,
+  TimerOptions as TmrUtl_TimerOptions,
+  TimerInstance as TmrUtl_TimerInstance,
+} from "./timer-utils";
+
+// --- timer ---
+export {
+  Timer as Tmr_Timer,
+  debounce as Tmr_debounce,
+  throttle as Tmr_throttle,
+  delay as Tmr_delay,
+  retry as Tmr_retry,
+  withTimeout as Tmr_withTimeout,
+} from "./timer";
+
+// --- timing ---
+export {
+  debounce as Tmg_debounce,
+  throttle as Tmg_throttle,
+  delay as Tmg_delay,
+  withTimeout as Tmg_withTimeout,
+  retry as Tmg_retry,
+  raf as Tmg_raf,
+  nextFrame as Tmg_nextFrame,
+  whenIdle as Tmg_whenIdle,
+  createInterval as Tmg_createInterval,
+  Stopwatch as Tmg_Stopwatch,
+  createBatchScheduler as Tmg_createBatchScheduler,
+} from "./timing";
+export type {
+  DebounceOptions as Tmg_DebounceOptions,
+  ThrottleOptions as Tmg_ThrottleOptions,
+  DelayOptions as Tmg_DelayOptions,
+  IntervalHandle as Tmg_IntervalHandle,
+} from "./timing";
