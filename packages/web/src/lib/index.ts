@@ -61409,3 +61409,12 @@ export * from "./input-otp";
 
 // --- json-editor ---
 export * from "./json-editor";
+
+// --- kbd ---
+export * from "./kbd";
+
+// --- label ---
+export * from "./label";
+
+// --- layout ---
+export * from "./layout";
