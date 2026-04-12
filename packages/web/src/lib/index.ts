@@ -53663,3 +53663,12 @@ export {
   joinPath as UrlRtr_joinPath,
   normalizePath,
 } from "./url-router";
+
+// --- url-state-manager ---
+export { ParamKey as Usm_ParamKey, ParamValue as Usm_ParamValue, ParamDefinition as Usm_ParamDefinition, UrlStateConfig as Usm_UrlStateConfig, UrlStateManager as Usm_UrlStateManager, StateDiff as Usm_StateDiff, UrlStateManagerImpl, createUrlStateManager as Usm_createUrlStateManager, createTypedUrlStateManager as Usm_createTypedUrlStateManager } from "./url-state-manager";
+
+// --- url-utils ---
+export { ParsedUrl as UrlUtils_ParsedUrl, parseUrl as UrlUtils_parseUrl, buildUrlFromParts as UrlUtils_buildUrlFromParts, updateSearchParams as UrlUtils_updateSearchParams, removeSearchParams as UrlUtils_removeSearchParams, getQueryParams as UrlUtils_getQueryParams, isSameOrigin as UrlUtils_isSameOrigin, normalizeUrl as UrlUtils_normalizeUrl, isAbsoluteUrl as UrlUtils_isAbsoluteUrl, makeAbsoluteUrl as UrlUtils_makeAbsoluteUrl, getDomainFromUrl as UrlUtils_getDomainFromUrl, getPathnameFromUrl as UrlUtils_getPathnameFromUrl, joinPathSegments as UrlUtils_joinPathSegments, encodeUriComponentSafe as UrlUtils_encodeUriComponentSafe, decodeUriComponentSafe as UrlUtils_decodeUriComponentSafe, urlsEqual as UrlUtils_urlsEqual } from "./url-utils";
+
+// --- user-card ---
+export { UserCardVariant, UserCardSize, UserStats, SocialLink, UserCardOptions, UserCardInstance, createUserCard } from "./user-card";
