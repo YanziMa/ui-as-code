@@ -61634,3 +61634,12 @@ export * from "./css-variables";
 
 // --- data-pipeline ---
 export * from "./data-pipeline";
+
+// --- data-table-advanced ---
+export * from "./data-table-advanced";
+
+// --- data-validator ---
+export * from "./data-validator";
+
+// --- date-range-picker ---
+export * from "./date-range-picker";
