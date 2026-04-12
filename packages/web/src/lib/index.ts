@@ -52454,3 +52454,37 @@ export {
   createSyntaxHighlight,
 } from "./syntax-highlighter";
 // Aliases: SynHltr_*
+
+// --- tab-bar-utils.ts ---
+export {
+  type TabBarPosition,
+  type TabBarStyle,
+  type TabBarSize as TbrUtl_Size,
+  type TabBarItem as TbrUtl_Item,
+  type TabBarOptions as TbrUtl_Options,
+  type TabBarInstance as TbrUtl_Instance,
+  createTabBar as createTabBarUtil,
+} from "./tab-bar-utils";
+// Aliases: TbrUtl_*
+
+// --- tab-bar.ts ---
+export {
+  type TabItem as TabBr_Item,
+  type TabSize as TabBr_Size,
+  type TabVariant,
+  type TabBarOptions as TabBr_Options,
+  type TabBarInstance as TabBr_Instance,
+  createTabBar,
+} from "./tab-bar";
+// Aliases: TabBr_*
+
+// --- tab-utils.ts ---
+export {
+  type TabOrientation,
+  type TabActivation,
+  type TabItem as TabUtl_Item,
+  type TabOptions as TabUtl_Options,
+  type TabInstance as TabUtl_Instance,
+  createTabs,
+} from "./tab-utils";
+// Aliases: TabUtl_*
