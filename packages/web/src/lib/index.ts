@@ -52612,3 +52612,35 @@ export {
   type TabVariant as TbsNav_TabVariant,
   type TabSize as TbsNav_TabSize,
 } from "./tabs-nav";
+
+// --- tabs-system ---
+export {
+  TabsManager as TbsSys_TabsManager,
+  createTabs as TbsSys_createTabs,
+  type TabItem as TbsSys_TabItem,
+  type TabsOptions as TbsSys_TabsOptions,
+  type TabsInstance as TbsSys_TabsInstance,
+  type TabOrientation as TbsSys_TabOrientation,
+  type TabVariant as TbsSys_TabVariant,
+} from "./tabs-system";
+
+// --- tabs-utils ---
+export {
+  createTabs as TbsUtl_createTabs,
+  type TabItem as TbsUtl_TabItem,
+  type TabsOptions as TbsUtl_TabsOptions,
+  type TabsInstance as TbsUtl_TabsInstance,
+  type TabOrientation as TbsUtl_TabOrientation,
+  type TabActivation as TbsUtl_TabActivation,
+} from "./tabs-utils";
+
+// --- tabs ---
+export {
+  createTabs as Tbs_createTabs,
+  type TabItem as Tbs_TabItem,
+  type TabsOptions as Tbs_TabsOptions,
+  type TabsInstance as Tbs_TabsInstance,
+  type TabOrientation as Tbs_TabOrientation,
+  type TabSize as Tbs_TabSize,
+  type TabVariant as Tbs_TabVariant,
+} from "./tabs";
