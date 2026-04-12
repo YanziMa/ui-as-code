@@ -53236,3 +53236,32 @@ export type {
   TreeSelectOptions as Trsel_Options,
   TreeSelectInstance as Trsel_Instance,
 } from "./tree-select";
+
+// --- tree-table ---
+export {
+  TreeNode as TrTbl_TreeNode,
+  TreeColumn,
+  TreeTableOptions,
+  TreeTableInstance,
+  TreeTableManager,
+  createTreeTable,
+} from "./tree-table";
+
+// --- tree-utils ---
+export {
+  TreeNode as TrUtl_TreeNode,
+  TreeSelectionMode as TrUtl_TreeSelectionMode,
+  TreeCheckboxMode as TrUtl_TreeCheckboxMode,
+  TreeExpandMode as TrUtl_TreeExpandMode,
+  TreeOptions as TrUtl_TreeOptions,
+  TreeInstance as TrUtl_TreeInstance,
+  createTree as TrUtl_createTree,
+} from "./tree-utils";
+
+// --- tree-view-utils ---
+export {
+  TreeNode as TrVwUtl_TreeNode,
+  TreeViewOptions,
+  TreeViewInstance,
+  createTreeView,
+} from "./tree-view-utils";
