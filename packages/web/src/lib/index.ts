@@ -59264,3 +59264,46 @@ export {
   DataGrid,
   createDataGrid,
 } from "./data-grid-utils";
+
+// --- data-grid ---
+export type {
+  DataGridComponentOptions,
+  DataGridComponentInstance,
+} from "./data-grid";
+export {
+  DataGrid as DataGridComponent,
+  createDataGridComponent,
+} from "./data-grid";
+
+// --- data-pipeline ---
+export type {
+  PipelineStep,
+  PipelineConfig as DPPipelineConfig,
+  PipelineResult as DPResult,
+  TransformFn,
+} from "./data-pipeline";
+export {
+  DataPipeline,
+  createDataPipeline,
+  mapStep,
+  filterStep,
+  reduceStep,
+  validateStep,
+  transformStep,
+} from "./data-pipeline";
+
+// --- data-query-engine ---
+export type {
+  QueryEngineOptions,
+  QueryResult,
+  QueryAST,
+  SelectClause,
+  WhereClause,
+} from "./data-query-engine";
+export {
+  DataQueryEngine,
+  createQueryEngine,
+  executeQuery,
+  parseQuery,
+  buildQuery,
+} from "./data-query-engine";
