@@ -61931,3 +61931,12 @@ export * from "./metrics";
 
 // --- mind-map ---
 export * from "./mind-map";
+
+// --- modal-dialog ---
+export * from "./modal-dialog";
+
+// --- modal-manager ---
+export * from "./modal-manager";
+
+// --- modal-utils ---
+export * from "./modal-utils";
