@@ -57381,3 +57381,35 @@ export {
   CalendarView,
   createCalendarView,
 } from "./calendar-view";
+
+// --- calendar ---
+export type {
+  CalendarComponentOptions,
+  CalendarComponentInstance,
+} from "./calendar";
+export {
+  Calendar as CalendarComponent,
+  createCalendarComponent,
+} from "./calendar";
+
+// --- callout ---
+export type {
+  CalloutVariant,
+  CalloutOptions,
+  CalloutInstance,
+} from "./callout";
+export {
+  Callout,
+  createCallout,
+} from "./callout";
+
+// --- candlestick-chart ---
+export type {
+  CandlestickData,
+  CandlestickChartOptions,
+  CandlestickChartInstance,
+} from "./candlestick-chart";
+export {
+  CandlestickChart,
+  createCandlestickChart,
+} from "./candlestick-chart";
