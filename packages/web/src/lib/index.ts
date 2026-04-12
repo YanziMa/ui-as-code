@@ -52488,3 +52488,47 @@ export {
   createTabs,
 } from "./tab-utils";
 // Aliases: TabUtl_*
+
+// --- table-engine ---
+export {
+  TableEngine,
+  type TableEngineOptions,
+  type TableEngineState,
+  type SortConfig,
+  type FilterRule,
+  type FilterOperator,
+  type PaginationState,
+  type SelectionState,
+  type ColumnVisibility,
+  type TableEngineEventMap,
+  type TableEngineSubscriber,
+} from "./table-engine";
+
+// --- table-lite ---
+export {
+  createTable as TblLt_createTable,
+  type TableColumn as TblLt_TableColumn,
+  type TableRow as TblLt_TableRow,
+  type TableLiteOptions as TblLt_TableLiteOptions,
+  type TableLiteInstance as TblLt_TableLiteInstance,
+  type CellRenderer as TblLt_CellRenderer,
+  type RowRenderer as TblLt_RowRenderer,
+  type TableVariant as TblLt_TableVariant,
+  type TableSize as TblLt_TableSize,
+  type SelectionMode as TblLt_SelectionMode,
+} from "./table-lite";
+
+// --- table-manager ---
+export {
+  createTable as TblMgr_createTable,
+  type ColumnDef as TblMgr_ColumnDef,
+  type TableManagerOptions as TblMgr_TableManagerOptions,
+  type TableManagerInstance as TblMgr_TableManagerInstance,
+  type SortDirection as TblMgr_SortDirection,
+  type FilterConfig as TblMgr_FilterConfig,
+  type PaginationConfig as TblMgr_PaginationConfig,
+  type SelectionConfig as TblMgr_SelectionConfig,
+  type ColumnConfig as TblMgr_ColumnConfig,
+  type RowData as TblMgr_RowData,
+  type CellValue as TblMgr_CellValue,
+} from "./table-manager";
