@@ -61166,3 +61166,12 @@ export * from "./audio-recorder";
 
 // --- auth ---
 export * from "./auth";
+
+// --- autocomplete ---
+export * from "./autocomplete";
+
+// --- avatar ---
+export * from "./avatar";
+
+// --- avatar-group ---
+export * from "./avatar-group";
