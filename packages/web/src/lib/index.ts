@@ -57614,3 +57614,40 @@ export {
   ChartBase,
   createChartBase,
 } from "./chart-base";
+
+// --- chart-renderer ---
+export type {
+  ChartRendererOptions,
+  ChartRendererDataSet,
+  ChartRendererConfig,
+  ChartRendererInstance,
+} from "./chart-renderer";
+export {
+  ChartRenderer,
+  createChartRenderer,
+} from "./chart-renderer";
+
+// --- chart-utils ---
+export {
+  formatChartNumber,
+  formatChartDate,
+  formatChartPercent,
+  calculateAxisTicks,
+  calculateNiceMin,
+  calculateNiceMax,
+  generateColorScale,
+  generatePalette,
+  interpolateColor,
+  hexToRgb,
+  rgbToHex,
+} from "./chart-utils";
+
+// --- chart (components) ---
+export type {
+  ChartComponentOptions,
+  ChartComponentInstance,
+} from "./chart";
+export {
+  Chart as ChartComponent,
+  createChartComponent,
+} from "./chart";
