@@ -58314,3 +58314,42 @@ export {
   contrastRatio as colorUtilsContrastRatio,
   ensureContrast,
 } from "./color-utils";
+
+// --- color (advanced) ---
+export {
+  rgb as advRgb,
+  hsl as advHsl,
+  hsv,
+  hwb,
+  lab,
+  oklch,
+  parseColor as advParseColor,
+  formatColor as advFormatColor,
+  convertColor,
+  mixColors as advMixColors,
+  palette as advPalette,
+  scale as advScale,
+  ramp,
+} from "./color";
+
+// --- combo-box ---
+export type {
+  ComboBoxOption,
+  ComboBoxOptions,
+  ComboBoxInstance,
+} from "./combo-box";
+export {
+  ComboBox,
+  createComboBox,
+} from "./combo-box";
+
+// --- combobox ---
+export type {
+  ComboboxItem,
+  ComboboxOptions,
+  ComboboxInstance,
+} from "./combobox";
+export {
+  Combobox,
+  createCombobox,
+} from "./combobox";
