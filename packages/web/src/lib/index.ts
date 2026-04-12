@@ -58849,3 +58849,36 @@ export {
   copyHTMLToClipboard,
   copyRichTextToClipboard,
 } from "./copy-to-clipboard";
+
+// --- cors ---
+export type {
+  CORSOptions,
+  CORSConfig,
+} from "./cors";
+export {
+  corsMiddleware,
+  createCORSHandler,
+  isOriginAllowed,
+  buildCORSHeaders,
+} from "./cors";
+
+// --- count-up ---
+export type {
+  CountUpOptions,
+  CountUpInstance,
+} from "./count-up";
+export {
+  CountUp,
+  createCountUp,
+} from "./count-up";
+
+// --- countdown-timer-v2 ---
+export type {
+  CountdownV2Options,
+  CountdownV2Instance,
+  CountdownV2Preset,
+} from "./countdown-timer-v2";
+export {
+  CountdownTimerV2,
+  createCountdownTimerV2,
+} from "./countdown-timer-v2";
