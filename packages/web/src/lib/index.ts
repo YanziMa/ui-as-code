@@ -59168,3 +59168,51 @@ export {
   getModernResetCSS,
   getPrintStyles,
 } from "./css-reset";
+
+// --- css-transform ---
+export type {
+  CSSTransformOptions,
+  TransformPipeline,
+  TransformResult,
+} from "./css-transform";
+export {
+  CSSTransformEngine,
+  transformCSS,
+  prefixCSS,
+  minifyCSS,
+  resolveVariables,
+  mergeMediaQueries,
+  optimizeSelectors,
+} from "./css-transform";
+
+// --- css-utils ---
+export {
+  injectStyle as cssUtilsInject,
+  removeStyle as cssUtilsRemove,
+  createClassName as cssUtilsCreateClass,
+  createMediaQuery as cssUtilsCreateMQ,
+  cssVar as cssUtilsVar,
+  setCSSVar as cssUtilsSetVar,
+  getBreakpoint,
+  isMobile as cssIsMobile,
+  isTablet as cssIsTablet,
+  isDesktop as cssIsDesktop,
+} from "./css-utils";
+
+// --- css-variables ---
+export type {
+  CSSVariableDef,
+  CSSVariableSet,
+  CSSVariablesOptions,
+} from "./css-variables";
+export {
+  getCSSVariable,
+  setCSSVariable,
+  deleteCSSVariable,
+  getAllCSSVariables,
+  watchCSSVariable,
+  batchSetCSSVariables,
+  exportCSSVariables,
+  importCSSVariables,
+  generateTokenCSS,
+} from "./css-variables";
