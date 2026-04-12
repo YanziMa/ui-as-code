@@ -61247,3 +61247,12 @@ export * from "./chip";
 
 // --- chip-group ---
 export * from "./chip-group";
+
+// --- clipboard ---
+export * from "./clipboard";
+
+// --- clipboard-utils ---
+export * from "./clipboard-utils";
+
+// --- clock ---
+export * from "./clock";
