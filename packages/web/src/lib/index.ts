@@ -52849,3 +52849,14 @@ export { createTextareaAutosize } from "./textarea-autosize";
 // --- textarea-utils ---
 export type { TextareaSize as TaUtl_Size, TextareaVariant as TaUtl_Variant, TextareaOptions, TextareaInstance } from "./textarea-utils";
 export { createTextarea } from "./textarea-utils";
+// --- textarea ---
+export type { TextareaSize as Ta_Size, TextareaState as Ta_State, TextareaOptions as Ta_Options, TextareaInstance as Ta_Instance } from "./textarea";
+export { createTextarea } from "./textarea";
+
+// --- theme-engine ---
+export type { ThemeMode as ThmEng_Mode, DesignToken as ThmEng_DesignToken, TokenCategory as ThmEng_TokenCategory, ThemeDefinition as ThmEng_Definition, ThemeEngineOptions } from "./theme-engine";
+export { ThemeEngine, getThemeEngine, setTheme as ThmEng_setTheme, toggleTheme as ThmEng_toggleTheme, getCurrentTheme, isDarkMode as ThmEng_isDarkMode } from "./theme-engine";
+
+// --- theme-manager ---
+export type { ThemeMode as ThmMgr_Mode, DesignToken as ThmMgr_DesignToken, ThemeDefinition as ThmMgr_Definition, ThemeManagerInstance } from "./theme-manager";
+export { ThemeManager, createThemeManager, toggleTheme as ThmMgr_toggleTheme, isDarkMode as ThmMgr_isDarkMode } from "./theme-manager";
