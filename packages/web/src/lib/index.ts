@@ -61391,3 +61391,12 @@ export * from "./header";
 
 // --- hotkeys ---
 export * from "./hotkeys";
+
+// --- html-parser ---
+export * from "./html-parser";
+
+// --- i18n ---
+export * from "./i18n";
+
+// --- image ---
+export * from "./image";
