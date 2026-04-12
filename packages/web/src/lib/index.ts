@@ -57956,3 +57956,37 @@ export {
   getHighlightedHTML,
   tokenizeLine,
 } from "./code-highlight";
+
+// --- code-highlighter ---
+export type {
+  CodeHighlighterOptions,
+  CodeHighlighterLanguage,
+  CodeHighlighterTheme,
+} from "./code-highlighter";
+export {
+  CodeHighlighter,
+  highlight as codeHighlight,
+  registerLanguage as regHighlightLang,
+} from "./code-highlighter";
+
+// --- code-snippet ---
+export type {
+  CodeSnippet,
+  CodeSnippetManagerOptions,
+  CodeSnippetInstance,
+} from "./code-snippet";
+export {
+  CodeSnippetManager,
+  createCodeSnippetManager,
+} from "./code-snippet";
+
+// --- code-utils ---
+export {
+  renderCodeBlock,
+  addLineNumbers,
+  detectLanguage,
+  copyCodeToClipboard,
+  formatCodeDiff,
+  escapeHTML,
+  unescapeHTML,
+} from "./code-utils";
