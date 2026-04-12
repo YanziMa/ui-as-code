@@ -60911,3 +60911,35 @@ export {
   FileDropzone as FDZComponent,
   createFileDropzone,
 } from "./file-dropzone";
+
+// --- file-explorer ---
+export type {
+  FileExplorerOptions,
+  FileExplorerInstance,
+} from "./file-explorer";
+export {
+  FileExplorer,
+  createFileExplorer,
+} from "./file-explorer";
+
+// --- file-manager ---
+export type {
+  FileManagerOptions,
+  FileManagerInstance,
+} from "./file-manager";
+export {
+  FileManager,
+  createFileManager,
+} from "./file-manager";
+
+// --- file-preview ---
+export type {
+  FilePreviewOptions,
+  PreviewResult,
+  FilePreviewInstance,
+} from "./file-preview";
+export {
+  FilePreviewer,
+  createFilePreviewer,
+  previewFile,
+} from "./file-preview";
