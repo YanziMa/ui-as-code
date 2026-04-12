@@ -58215,3 +58215,39 @@ export {
   ColorPicker as ColorPickerComponent,
   createColorPickerComponent,
 } from "./color-picker";
+
+// --- color-scheme ---
+export type {
+  ColorSchemeMode,
+  ColorSchemeOptions,
+  ColorSchemeInstance,
+} from "./color-scheme";
+export {
+  ColorScheme,
+  createColorSchemeManager,
+  getColorScheme,
+  setColorScheme,
+  watchColorScheme,
+  toggleColorScheme,
+} from "./color-scheme";
+
+// --- color-swatch ---
+export type {
+  SwatchOptions,
+  SwatchInstance,
+} from "./color-swatch";
+export {
+  ColorSwatch,
+  createColorSwatch,
+} from "./color-swatch";
+
+// --- color-swatches ---
+export type {
+  SwatchesPalette,
+  SwatchesOptions,
+  SwatchesInstance,
+} from "./color-swatches";
+export {
+  ColorSwatches,
+  createColorSwatches,
+} from "./color-swatches";
