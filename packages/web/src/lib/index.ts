@@ -60106,3 +60106,41 @@ export {
   DragList,
   createDragList,
 } from "./drag-list";
+
+// --- drag-resize ---
+export type {
+  DragResizeOptions,
+  ResizeHandle,
+  DragResizeInstance,
+} from "./drag-resize";
+export {
+  makeDragResizable,
+  setupResizeHandles,
+} from "./drag-resize";
+
+// --- draggable-utils ---
+export type {
+  DraggableOptions as DgUtilsOptions,
+  DraggableConstraints,
+  SnapConfig,
+} from "./draggable-utils";
+export {
+  makeDraggable as dgMakeDraggable,
+  destroyDraggable,
+  setDragConstraints,
+  setSnapGrid,
+  enableInertia,
+  disableInertia,
+} from "./draggable-utils";
+
+// --- draggable-window ---
+export type {
+  WindowState,
+  WindowControls,
+  DraggableWindowOptions,
+  DraggableWindowInstance,
+} from "./draggable-window";
+export {
+  DraggableWindow,
+  createDraggableWindow,
+} from "./draggable-window";
