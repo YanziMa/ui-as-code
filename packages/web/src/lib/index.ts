@@ -61994,3 +61994,12 @@ export * from "./offline";
 
 // --- onboarding-tour ---
 export * from "./onboarding-tour";
+
+// --- overlay-manager ---
+export * from "./overlay-manager";
+
+// --- overlay-utils ---
+export * from "./overlay-utils";
+
+// --- pagination-lite ---
+export * from "./pagination-lite";
