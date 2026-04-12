@@ -53983,3 +53983,62 @@ export {
   type WebhookEventHandler,
   type DeliveryQueryFilter,
 } from "./webhook-utils.js";
+
+// --- webhook ---
+export {
+  isWebhookRequest,
+  getWebhookSource,
+  WebhookSignatureVerifier,
+  WebhookParser,
+  GitHubWebhookParser,
+  StripeWebhookParser,
+  WebhookRouter,
+  WebhookDeliveryLog,
+  createLoggingMiddleware,
+  createRateLimitMiddleware,
+  GITHUB_EVENT_TYPES,
+  type WebhookHeaders as Wh_WebhookHeaders,
+  type WebhookEvent as Wh_WebhookEvent,
+  type WebhookResponse as Wh_WebhookResponse,
+  type WebhookSource as Wh_WebhookSource,
+  type WebhookHandler as Wh_WebhookHandler,
+  type WebhookMiddleware as Wh_WebhookMiddleware,
+  type WebhookDeliveryLogEntry as Wh_WebhookDeliveryLogEntry,
+  type GitHubWebhookEvent as Wh_GitHubWebhookEvent,
+  type StripeSignatureComponents as Wh_StripeSignatureComponents,
+  type StripeWebhookEvent as Wh_StripeWebhookEvent,
+} from "./webhook.js";
+
+// --- websocket-manager ---
+export {
+  WebSocketManager as Wsmgr_WebSocketManager,
+  type ConnectionState as Wsmgr_ConnectionState,
+  type MessageType as Wsmgr_MessageType,
+  type WsMessage as Wsmgr_WsMessage,
+  type WsConfig as Wsmgr_WsConfig,
+  type ChannelSubscription as Wsmgr_ChannelSubscription,
+  type PendingRequest as Wsmgr_PendingRequest,
+  type WsStats as Wsmgr_WsStats,
+} from "./websocket-manager.js";
+
+// --- websocket-realtime ---
+export {
+  RealtimeClient,
+  RoomManager,
+  PresenceSystem,
+  SyncEngine,
+  createRealtimeClient,
+  signMessage,
+  verifySignature,
+  rateLimitByConnection,
+  type ConnectionState as Wsr_ConnectionState,
+  type ConnectionMetrics as Wsr_ConnectionMetrics,
+  type ReconnectStrategy as Wsr_ReconnectStrategy,
+  type RoomInfo as Wsr_RoomInfo,
+  type PresenceData as Wsr_PresenceData,
+  type SyncOperation as Wsr_SyncOperation,
+  type MessageEnvelope as Wsr_MessageEnvelope,
+  type MessageType as Wsr_MessageType,
+  type RealtimeClientOptions,
+  type RoomEvent,
+} from "./websocket-realtime.js";
