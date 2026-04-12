@@ -58727,3 +58727,41 @@ export {
   useContext as useCtxContext,
   Provider as CtxProviderComponent,
 } from "./context-provider";
+
+// --- context-view-utils ---
+export type {
+  ViewStackEntry,
+  ViewTransitionOptions,
+  ContextViewUtilsInstance,
+} from "./context-view-utils";
+export {
+  createViewStack,
+  pushView,
+  popView,
+  replaceView,
+  getCurrentView,
+  getViewHistory,
+  setupViewTransitions,
+} from "./context-view-utils";
+
+// --- cookie-consent ---
+export type {
+  CookieConsentOptions,
+  CookieConsentCategory,
+  CookieConsentInstance,
+} from "./cookie-consent";
+export {
+  CookieConsent,
+  createCookieConsent,
+} from "./cookie-consent";
+
+// --- cookie-manager ---
+export type {
+  CookieManagerOptions,
+  CookieAttributes,
+  CookieJar,
+} from "./cookie-manager";
+export {
+  CookieManager,
+  createCookieManager,
+} from "./cookie-manager";
