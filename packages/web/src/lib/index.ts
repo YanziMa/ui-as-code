@@ -57308,3 +57308,36 @@ export {
   hasInCache,
   clearSimpleCache,
 } from "./cache";
+
+// --- calendar-grid ---
+export type {
+  CalendarGridOptions,
+  CalendarGridDay,
+  CalendarGridEvent,
+  CalendarGridInstance,
+} from "./calendar-grid";
+export {
+  CalendarGrid,
+  createCalendarGrid,
+} from "./calendar-grid";
+
+// --- calendar-heatmap ---
+export type {
+  HeatmapDataPoint,
+  HeatmapOptions,
+  HeatmapInstance,
+} from "./calendar-heatmap";
+export {
+  CalendarHeatmap,
+  createCalendarHeatmap,
+} from "./calendar-heatmap";
+
+// --- calendar-picker ---
+export type {
+  CalendarPickerOptions,
+  CalendarPickerInstance,
+} from "./calendar-picker";
+export {
+  CalendarPicker,
+  createCalendarPicker,
+} from "./calendar-picker";
