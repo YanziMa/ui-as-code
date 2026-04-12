@@ -57130,3 +57130,51 @@ export {
   Breadcrumbs,
   createBreadcrumbs,
 } from "./breadcrumbs";
+
+// --- breakpoint-utils ---
+export type {
+  Breakpoint,
+  BreakpointMatch,
+  BreakpointOptions,
+} from "./breakpoint-utils";
+export {
+  getBreakpoint,
+  matchBreakpoint,
+  useBreakpoint,
+  getResponsiveValue,
+  createBreakpointObserver,
+} from "./breakpoint-utils";
+
+// --- broadcast-channel ---
+export type {
+  ChannelMessage,
+  ChannelOptions,
+  ChannelInstance,
+} from "./broadcast-channel";
+export {
+  BroadcastChannelManager,
+  createBroadcastChannel,
+} from "./broadcast-channel";
+
+// --- browser-detection ---
+export type {
+  BrowserInfo,
+  OSInfo,
+  DeviceInfo,
+  FeatureSupport,
+} from "./browser-detection";
+export {
+  detectBrowser,
+  detectOS,
+  detectDevice,
+  detectFeatures,
+  isMobile,
+  isTablet,
+  isDesktop,
+  isTouchDevice,
+  isWebkit,
+  isFirefox,
+  isChrome,
+  isSafari,
+  isEdge,
+} from "./browser-detection";
