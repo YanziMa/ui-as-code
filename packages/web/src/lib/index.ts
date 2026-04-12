@@ -60314,3 +60314,76 @@ export {
   toHours,
   toDays,
 } from "./duration";
+
+// --- easing ---
+export {
+  linear,
+  easeInQuad,
+  easeOutQuad,
+  easeInOutQuad,
+  easeInCubic,
+  easeOutCubic,
+  easeInOutCubic,
+  easeInQuart,
+  easeOutQuart,
+  easeInOutQuart,
+  easeInQuint,
+  easeOutQuint,
+  easeInOutQuint,
+  easeInSine,
+  easeOutSine,
+  easeInOutSine,
+  easeInExpo,
+  easeOutExpo,
+  easeInOutExpo,
+  easeInCirc,
+  easeOutCirc,
+  easeInOutCirc,
+  easeInBack,
+  easeOutBack,
+  easeInOutBack,
+  elastic,
+  bounceIn,
+  bounceOut,
+  bounceInOut,
+  createBezier,
+  createStep,
+  generateCSS,
+} from "./easing";
+
+// --- either ---
+export type {
+  Either as EitherType,
+  Left as EitherLeft,
+  Right as EitherRight,
+} from "./either";
+export {
+  left,
+  right,
+  isLeft,
+  isRight,
+  mapEither,
+  flatMapEither,
+  foldEither,
+  getOrElse,
+  orElse,
+  chain,
+  tap,
+  swap,
+} from "./either";
+
+// --- electron-bridge ---
+export type {
+  ElectronBridgeOptions,
+  IPCChannel,
+  IPCMessage,
+  IPCResponse,
+} from "./electron-bridge";
+export {
+  ElectronBridge,
+  createElectronBridge,
+  sendToMain,
+  sendToRenderer,
+  invokeMain,
+  onIPCMessage,
+} from "./electron-bridge";
