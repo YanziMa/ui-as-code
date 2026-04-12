@@ -57815,3 +57815,37 @@ export {
   CircuitBoard,
   createCircuitBoard,
 } from "./circuit-board";
+
+// --- circuit-breaker-advanced ---
+export type {
+  AdvancedCircuitBreakerOptions,
+  AdvancedCBState,
+  AdvancedCBMetrics,
+  AdvancedCBEvent,
+} from "./circuit-breaker-advanced";
+export {
+  AdvancedCircuitBreaker,
+  createAdvancedCircuitBreaker,
+} from "./circuit-breaker-advanced";
+
+// --- circuit-breaker ---
+export type {
+  CircuitBreakerOptions,
+  CircuitBreakerState,
+  CBState,
+} from "./circuit-breaker";
+export {
+  CircuitBreaker,
+  createCircuitBreaker,
+} from "./circuit-breaker";
+
+// --- click-outside ---
+export type {
+  ClickOutsideOptions,
+  ClickOutsideInstance,
+} from "./click-outside";
+export {
+  onClickOutside,
+  setupClickOutside,
+  destroyClickOutside,
+} from "./click-outside";
