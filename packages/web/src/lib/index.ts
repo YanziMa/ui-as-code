@@ -59381,3 +59381,61 @@ export {
   DataTable,
   createDataTable,
 } from "./data-table";
+
+// --- data-transform-utils ---
+export {
+  transformMap,
+  transformFilter,
+  transformGroupBy,
+  transformSort,
+  transformFlatten,
+  transformPick,
+  transformOmit,
+  transformMerge,
+  transformNormalize,
+  transformRenameKeys,
+  transformCamelCase,
+  transformSnakeCase,
+  getPathValue as dtGetPath,
+  setPathValue as dtSetPath,
+} from "./data-transform-utils";
+
+// --- data-validator ---
+export type {
+  ValidatorSchema,
+  ValidatorRule,
+  ValidationResult,
+  ValidatorOptions,
+} from "./data-validator";
+export {
+  createValidator,
+  object as vObject,
+  string as vString,
+  number as vNumber,
+  boolean as vBoolean,
+  array as vArray,
+  enum as vEnum,
+  custom as vCustom,
+  refine,
+  transform as vTransform,
+} from "./data-validator";
+
+// --- data-visualization ---
+export type {
+  DVChartType,
+  DVChartData,
+  DVChartOptions,
+  DVVisualizationInstance,
+} from "./data-visualization";
+export {
+  DataVisualization,
+  createVisualization,
+  renderBarChart,
+  renderLineChart,
+  renderPieChart,
+  renderScatterChart,
+  renderAreaChart,
+  renderRadarChart,
+  renderHeatmap,
+  renderTreemap,
+} from "./data-visualization";
