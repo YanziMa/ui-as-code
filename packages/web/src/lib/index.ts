@@ -56167,3 +56167,56 @@ export {
   animatePath,
   createTimeline,
 } from "./animation-library";
+
+// --- animation-timeline ---
+export type {
+  TimelineOptions,
+  TimelineTrack as TimelineAnimTrack,
+  TimelineLabel,
+  TimelinePlaybackState,
+  TimelineInstance,
+} from "./animation-timeline";
+export {
+  AnimationTimeline,
+  createTimeline as createAnimationTimeline,
+} from "./animation-timeline";
+
+// --- animation-utils ---
+export type {
+  SpringConfig as AnimSpringConfig,
+  TweenConfig,
+  ScrollAnimConfig,
+  ParallaxConfig,
+} from "./animation-utils";
+export {
+  createSpring,
+  createTween,
+  setupScrollAnimation,
+  setupParallax,
+  staggerElements,
+  animateTo,
+  animateFrom,
+  animateFromTo,
+  pauseAnimation,
+  resumeAnimation,
+  reverseAnimation,
+  killAnimation,
+} from "./animation-utils";
+
+// --- animation (css helpers) ---
+export {
+  easeInQuad,
+  easeOutQuad,
+  easeInOutQuad,
+  easeInCubic,
+  easeOutCubic,
+  easeInOutCubic,
+  easeInExpo,
+  easeOutExpo,
+  easeInOutExpo,
+  createCSSKeyframe,
+  applyCSSAnimation,
+  removeCSSAnimation,
+  getAnimationDuration,
+  setAnimationDuration,
+} from "./animation";
