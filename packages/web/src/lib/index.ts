@@ -61724,3 +61724,12 @@ export * from "./error-logger";
 
 // --- error-utils ---
 export * from "./error-utils";
+
+// --- event-aggregator ---
+export * from "./event-aggregator";
+
+// --- event-delegate ---
+export * from "./event-delegate";
+
+// --- event-emitter ---
+export * from "./event-emitter";
