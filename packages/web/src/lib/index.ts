@@ -53736,3 +53736,13 @@ export { ViewportSize, ScrollPosition, VisibilityOptions, ViewportObserverInstan
 
 // --- violin-plot ---
 export { ViolinData, ViolinOptions, ViolinInstance, createViolinPlot } from "./violin-plot";
+
+// --- virtual-dom-lite ---
+export { VNodeProps as Vdl_VNodeProps, VNode as Vdl_VNode, VChild as Vdl_VChild, Patch as Vdl_Patch, VDomOptions as Vdl_VDomOptions, h as Vdl_h, text as Vdl_text, render as Vdl_render, createDom as Vdl_createDom, diff as Vdl_diff, patch as Vdl_patch } from "./virtual-dom-lite";
+
+// --- virtual-dom ---
+export { VNodeType as VDom_VNodeType, Priority as VDom_Priority, PatchType as VDom_PatchType, PROPERTY_ATTRIBUTES as VDom_PROPERTY_ATTRIBUTES, EVENT_HANDLER_RE as VDom_EVENT_HANDLER_RE, VNodeProps as VDom_VNodeProps, VNode as VDom_VNode, VNodeWork as VDom_VNodeWork, ComponentFunction as VDom_ComponentFunction, ComponentLifecycle as VDom_ComponentLifecycle, ComponentInstance as VDom_ComponentInstance, ErrorInfo as VDom_ErrorInfo, Patch as VDom_Patch, PropsDiff as VDom_PropsDiff, SyntheticEvent as VDom_SyntheticEvent, Context as VDom_Context, MemoCompareFunction as VDom_MemoCompareFunction, MemoizedComponent as VDom_MemoizedComponent, DevToolsHook as VDom_DevToolsHook, ScheduledWork as VDom_ScheduledWork, RendererConfig as VDom_RendererConfig, VDOMRendererOptions as VDom_VDOMRendererOptions } from "./virtual-dom";
+export { createElement as VDom_createElement, applyProps as Vdom_applyProps, computePropsDiff as VDom_computePropsDiff, patch as Vdom_patch, mount as Vdom_mount, updateTree as Vdom_updateTree, unmount as Vdom_unmount, beginFiberWork as Vdom_beginFiberWork, createDevToolsHook as Vdom_createDevToolsHook, registerRendererWithDevTools as Vdom_registerRendererWithDevTools, createRenderer as Vdom_createRenderer, enqueueUpdate as Vdom_enqueueUpdate, startBatch as Vdom_startBatch, endBatch as Vdom_endBatch, createComponentInstance as Vdom_createComponentInstance, renderWithErrorBoundary as Vdom_renderWithError, readContext as Vdom_readContext, subscribeToContext as Vdom_subscribeToContext, memo as Vdom_memo, shallowEqual as Vdom_shallowEqual, Fragment as Vdom_Fragment } from "./virtual-dom";
+
+// --- virtual-keyboard ---
+export { KeyboardLayout, VirtualKeyboardOptions, VirtualKeyboardInstance, VirtualKeyboardManager, createVirtualKeyboard } from "./virtual-keyboard";
