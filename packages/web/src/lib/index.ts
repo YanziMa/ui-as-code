@@ -53073,3 +53073,38 @@ export type {
   PopoverOptions as TtpPop_PopoverOptions,
   TooltipInstance as TtpPop_Instance,
 } from "./tooltip-popover";
+
+// --- tooltip-system ---
+export {
+  TooltipManager as TtpSys_TooltipManager,
+  getTooltipManager as TtpSys_getTooltipManager,
+  tooltip as TtpSys_tooltip,
+} from "./tooltip-system";
+export type {
+  TooltipPlacement as TtpSys_Placement,
+  TooltipTrigger as TtpSys_Trigger,
+  TooltipOptions as TtpSys_Options,
+  TooltipInstance as TtpSys_Instance,
+} from "./tooltip-system";
+
+// --- tooltip-utils ---
+export {
+  createTooltip as TtpUtl_createTooltip,
+} from "./tooltip-utils";
+export type {
+  TooltipPlacement as TtpUtl_Placement,
+  TooltipTrigger as TtpUtl_Trigger,
+  TooltipOptions as TtpUtl_Options,
+  TooltipInstance as TtpUtl_Instance,
+} from "./tooltip-utils";
+
+// --- tooltip-v2 ---
+export {
+  createTooltipV2,
+} from "./tooltip-v2";
+export type {
+  TooltipPlacement as TtpV2_Placement,
+  TooltipTrigger as TtpV2_Trigger,
+  TooltipV2Options as TtpV2_Options,
+  TooltipV2Instance as TtpV2_Instance,
+} from "./tooltip-v2";
