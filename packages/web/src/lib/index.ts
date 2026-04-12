@@ -56072,3 +56072,39 @@ export {
   AnchoredPosition,
   createAnchoredPosition,
 } from "./anchored-position";
+
+// --- animatable ---
+export type {
+  AnimatableOptions,
+  AnimationKeyframe,
+  AnimationTimeline,
+  AnimatableInstance,
+} from "./animatable";
+export {
+  Animatable,
+  createAnimatable,
+} from "./animatable";
+
+// --- animate-on-scroll-utils ---
+export type {
+  ScrollAnimationOptions,
+  ScrollAnimationEntry,
+  ScrollAnimationInstance,
+} from "./animate-on-scroll-utils";
+export {
+  setupScrollAnimations,
+  destroyScrollAnimations,
+  observeScrollAnimation,
+} from "./animate-on-scroll-utils";
+
+// --- animate ---
+export type {
+  AnimateEngineOptions,
+  AnimateKeyframeDef,
+  AnimateTimelineDef,
+  AnimateInstance,
+} from "./animate";
+export {
+  AnimateEngine,
+  createAnimateEngine,
+} from "./animate";
