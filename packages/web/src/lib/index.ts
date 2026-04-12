@@ -51934,3 +51934,71 @@ export {
   Stg_storageKeys as storageKeys,
   Stg_storageClear as storageClear,
 } from "./storage";
+
+// --- store ---
+export type {
+  Str_Listener as Listener,
+  Str_Selector as Selector,
+  Str_EqualityFn as EqualityFn,
+  Str_PartialState as PartialState,
+  Str_Middleware as Middleware,
+  Str_StoreOptions as StoreOptions,
+  Str_StoreApi as StoreApi,
+  Str_PersistOptions as PersistOptions,
+} from "./store";
+export {
+  Str_Store as Store,
+  Str_createStore as createStore,
+  Str_createComputed as createComputed,
+  Str_persistMiddleware as persistMiddleware,
+  Str_connectDevTools as connectDevTools,
+  Str_registerStore as registerStore,
+  Str_getStore as getStore,
+  Str_unregisterStore as unregisterStore,
+} from "./store";
+
+// --- stream-utils ---
+export type {
+  StrmUtl_StreamOptions as StreamOptions,
+  StrmUtl_TransformOptions as TransformOptions,
+} from "./stream-utils";
+export {
+  StrmUtl_readableFromAsync as readableFromAsync,
+  StrmUtl_readableFromArray as readableFromArray,
+  StrmUtl_writableToArray as writableToArray,
+  StrmUtl_mapStream as mapStream,
+  StrmUtl_filterStream as filterStream,
+  StrmUtl_batchStream as batchStream,
+  StrmUtl_flattenStream as flattenStream,
+  StrmUtl_throttleStream as throttleStream,
+  StrmUtl_dedupStream as dedupStream,
+  StrmUtl_pipeThrough as pipeThrough,
+  StrmUtl_consumeStream as consumeStream,
+  StrmUtl_streamToIterable as streamToIterable,
+  StrmUtl_iterableToStream as iterableToStream,
+  StrmUtl_pipeToPromise as pipeToPromise,
+  StrmUtl_teeStream as teeStream,
+  StrmUtl_textToStream as textToStream,
+  StrmUtl_collectText as collectText,
+  StrmUtl_streamToArrayBuffer as streamToArrayBuffer,
+  StrmUtl_streamToBlob as streamToBlob,
+  StrmUtl_mergeStreams as mergeStreams,
+  StrmUtl_concatStreams as concatStreams,
+} from "./stream-utils";
+
+// --- stream ---
+export type {
+  Strm_StreamSubscriber as StreamSubscriber,
+  Strm_StreamErrorHandler as StreamErrorHandler,
+  Strm_StreamCompleteHandler as StreamCompleteHandler,
+  Strm_TeardownLogic as TeardownLogic,
+  Strm_OperatorFunction as OperatorFunction,
+  Strm_Observer as Observer,
+  Strm_Subscription as Subscription,
+} from "./stream";
+export {
+  Strm_Stream as Stream,
+  Strm_Subject as Subject,
+  Strm_BehaviorSubject as BehaviorSubject,
+  Strm_ReplaySubject as ReplaySubject,
+} from "./stream";
