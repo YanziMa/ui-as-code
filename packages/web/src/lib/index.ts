@@ -61157,3 +61157,12 @@ export * from "./array-utils";
 
 // --- async-utils ---
 export * from "./async-utils";
+
+// --- audio-player ---
+export * from "./audio-player";
+
+// --- audio-recorder ---
+export * from "./audio-recorder";
+
+// --- auth ---
+export * from "./auth";
