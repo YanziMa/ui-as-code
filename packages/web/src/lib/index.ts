@@ -61841,3 +61841,12 @@ export * from "./id-generator";
 
 // --- image-optimizer ---
 export * from "./image-optimizer";
+
+// --- inline-edit ---
+export * from "./inline-edit";
+
+// --- interval ---
+export * from "./interval";
+
+// --- inverted-index ---
+export * from "./inverted-index";
