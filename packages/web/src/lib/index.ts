@@ -61679,3 +61679,12 @@ export * from "./dom-observer";
 
 // --- dom-utils ---
 export * from "./dom-utils";
+
+// --- dock-layout ---
+export * from "./dock-layout";
+
+// --- donut-chart ---
+export * from "./donut-chart";
+
+// --- drawing-board ---
+export * from "./drawing-board";
