@@ -52892,3 +52892,14 @@ export { parseDuration as TmUtl_parseDuration, formatDuration as TmUtl_formatDur
 
 // --- time ---
 export { now, nowSeconds, delay, measureTime, toISOString, parseISODate, isToday, isYesterday, isWithinLastDays, timeAgo, startOfDay, endOfDay, startOfWeek, endOfWeek, startOfMonth, endOfMonth, addDays, addWeeks, addMonths, diffDays, diffHours, isSameDay, formatDateLocale, formatTimeLocale, getTimezoneOffset as Tm_getTimezoneOffset } from "./time";
+// --- timeline-component ---
+export type { TimelineEvent as TlCmp_Event, TimelineMode as TlCmp_Mode, TimelineVariant as TlCmp_Variant, TimelineOptions as TlCmp_Options, TimelineInstance as TlCmp_Instance } from "./timeline-component";
+export { createTimeline as TlCmp_create } from "./timeline-component";
+
+// --- timeline-lite ---
+export type { TimelineLayout as TlLt_Layout, TimelineItemStatus, TimelineItem, TimelineOptions as TlLt_Options, TimelineInstance as TlLt_Instance } from "./timeline-lite";
+export { createTimeline as TlLt_create } from "./timeline-lite";
+
+// --- timeline-utils ---
+export type { TimelineVariant as TlUtl_Variant, TimelineSide as TlUtl_Side, TimelineNode as TlUtl_Node, TimelineOptions as TlUtl_Options, TimelineInstance as TlUtl_Instance } from "./timeline-utils";
+export { createTimeline as TlUtl_create } from "./timeline-utils";
