@@ -62021,3 +62021,12 @@ export * from "./perf-monitor";
 
 // --- permissions ---
 export * from "./permissions";
+
+// --- photo-editor ---
+export * from "./photo-editor";
+
+// --- pivot-table ---
+export * from "./pivot-table";
+
+// --- platform ---
+export * from "./platform";
