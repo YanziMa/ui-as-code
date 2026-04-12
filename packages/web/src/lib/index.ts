@@ -53775,3 +53775,30 @@ export {
   type VirtualGridConfig,
   type GridVisibleRange,
 } from "./virtual-scroll-utils.js";
+
+// --- virtual-scroller-utils ---
+export {
+  createVirtualScroller as Vsu_createVirtualScroller,
+  type VirtualItem as Vsu_VirtualItem,
+  type VirtualScrollerOptions as Vsu_VirtualScrollerOptions,
+  type VirtualScrollerInstance as Vsu_VirtualScrollerInstance,
+} from "./virtual-scroller-utils.js";
+
+// --- virtual-scroller ---
+export {
+  VirtualScroller as Vs_VirtualScroller,
+  type ScrollItem as Vs_ScrollItem,
+  type VisibleRange as Vs_VisibleRange,
+  type ScrollerConfig as Vs_ScrollerConfig,
+  type ScrollerState as Vs_ScrollerState,
+  type ScrollToOptions as Vs_ScrollToOptions,
+} from "./virtual-scroller.js";
+
+// --- virtual-table ---
+export {
+  createVirtualTable,
+  VirtualTableManager,
+  type VirtualColumn,
+  type VirtualTableOptions,
+  type VirtualTableInstance,
+} from "./virtual-table.js";
