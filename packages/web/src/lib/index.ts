@@ -56950,3 +56950,39 @@ export {
   renderBarcodeSVG,
   renderBarcodeCanvas,
 } from "./barcode";
+
+// --- base64 ---
+export {
+  base64Encode,
+  base64Decode,
+  base64UrlEncode,
+  base64UrlDecode,
+  uint8ToBase64,
+  base64ToUint8,
+  stringToBase64,
+  base64ToString,
+} from "./base64";
+
+// --- battery-api ---
+export type {
+  BatteryInfo,
+  BatteryStatus,
+  BatteryOptions,
+  BatteryInstance,
+} from "./battery-api";
+export {
+  BatteryAPI,
+  createBatteryMonitor,
+} from "./battery-api";
+
+// --- biometrics ---
+export type {
+  BiometricCredential,
+  BiometricOptions,
+  BiometricResult,
+  BiometricInstance,
+} from "./biometrics";
+export {
+  BiometricsManager,
+  createBiometricsManager,
+} from "./biometrics";
