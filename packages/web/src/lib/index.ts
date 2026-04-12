@@ -53453,3 +53453,46 @@ export {
   createTypingIndicator,
   createTextReveal,
 } from "./typing-indicator-utils";
+
+// --- typing-indicator ---
+export {
+  TypingAnimation as Tig_TypingAnimation,
+  TypingSize as Tig_TypingSize,
+  TypingIndicatorOptions as Tig_TypingIndicatorOptions,
+  TypingIndicatorInstance as Tig_TypingIndicatorInstance,
+  createTypingIndicator as Tig_createTypingIndicator,
+} from "./typing-indicator";
+
+// --- typography ---
+export {
+  HeadingLevel,
+  TextSize,
+  TextWeight,
+  TextColor,
+  TypographyOptions,
+  HeadingOptions,
+  ParagraphOptions,
+  createTypography,
+  createHeading,
+  createParagraph,
+  h,
+  body,
+  caption,
+  createBlockquote,
+  code,
+  createCodeBlock,
+  highlightText,
+} from "./typography";
+
+// --- undo-manager ---
+export {
+  CommandId,
+  BranchId,
+  GroupId,
+  Command,
+  HistoryEntry,
+  Branch,
+  UndoManagerConfig,
+  UndoStats,
+  UndoManager,
+} from "./undo-manager";
