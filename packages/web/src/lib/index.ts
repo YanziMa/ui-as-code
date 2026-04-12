@@ -60038,3 +60038,39 @@ export {
   makeDroppableV2,
   setupDropZoneV2,
 } from "./drag-and-drop-v2";
+
+// --- drag-and-drop ---
+export type {
+  DnDOptions,
+  DnDContext,
+  DnDResult,
+} from "./drag-and-drop";
+export {
+  makeDraggable as dndMakeDraggable,
+  makeDroppable as dndMakeDroppable,
+  getDragData,
+  setDragData,
+} from "./drag-and-drop";
+
+// --- drag-drop-list ---
+export type {
+  SortableListItem,
+  SortableListOptions,
+  SortableListInstance,
+} from "./drag-drop-list";
+export {
+  SortableList,
+  createSortableList,
+} from "./drag-drop-list";
+
+// --- drag-drop-system ---
+export type {
+  DragDropSystemOptions,
+  DragItem,
+  DropZone as DDSDropZone,
+  DDSInstance,
+} from "./drag-drop-system";
+export {
+  DragDropSystem,
+  createDragDropSystem,
+} from "./drag-drop-system";
