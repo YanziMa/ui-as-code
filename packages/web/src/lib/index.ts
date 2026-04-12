@@ -62354,3 +62354,12 @@ export * from "./table-engine";
 
 // --- table-lite ---
 export * from "./table-lite";
+
+// --- table-manager ---
+export * from "./table-manager";
+
+// --- table-of-contents ---
+export * from "./table-of-contents";
+
+// --- task-queue ---
+export * from "./task-queue";
