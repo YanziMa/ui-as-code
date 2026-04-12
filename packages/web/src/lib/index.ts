@@ -61670,3 +61670,12 @@ export * from "./dom-diff";
 
 // --- dom-fragment ---
 export * from "./dom-fragment";
+
+// --- dom-helper ---
+export * from "./dom-helper";
+
+// --- dom-observer ---
+export * from "./dom-observer";
+
+// --- dom-utils ---
+export * from "./dom-utils";
