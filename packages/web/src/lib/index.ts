@@ -52860,3 +52860,14 @@ export { ThemeEngine, getThemeEngine, setTheme as ThmEng_setTheme, toggleTheme a
 // --- theme-manager ---
 export type { ThemeMode as ThmMgr_Mode, DesignToken as ThmMgr_DesignToken, ThemeDefinition as ThmMgr_Definition, ThemeManagerInstance } from "./theme-manager";
 export { ThemeManager, createThemeManager, toggleTheme as ThmMgr_toggleTheme, isDarkMode as ThmMgr_isDarkMode } from "./theme-manager";
+// --- theme-system ---
+export type { ThemeColors as ThmSys_Colors, ThemeConfig as ThmSys_Config } from "./theme-system";
+export { LIGHT_THEME as ThmSys_LIGHT_THEME, DARK_THEME as ThmSys_DARK_THEME, BUILT_IN_THEMES, getThemeManager as ThmSys_getThemeManager, useTheme } from "./theme-system";
+
+// --- theme-utils ---
+export type { ThemeMode as ThmUtl_Mode, DesignToken as ThmUtl_DesignToken, ThemeDefinition as ThmUtl_Definition, ThemeManagerConfig } from "./theme-utils";
+export { ThemeManager as ThmUtl_Manager, getSystemColorScheme, onSystemColorSchemeChange, prefersReducedMotion, prefersHighContrast, prefersLightColor, generateDesignTokens, generateDarkTokens, createLightDarkTheme } from "./theme-utils";
+
+// --- theme-v2 ---
+export type { ThemeMode as ThmV2_Mode, ColorScheme, DesignToken as ThmV2_DesignToken, ThemeTokens, ThemeConfig as ThmV2_Config } from "./theme-v2";
+export { ThemeManager as ThmV2_Manager, createThemeManager as ThmV2_createManager, getThemeManager as ThmV2_getManager, readCSSVar, hexToRgb, luminance, contrastRatio } from "./theme-v2";
