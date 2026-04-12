@@ -55886,3 +55886,43 @@ export {
   setAccordionMode,
   syncAccordionWithURL,
 } from "./accordion-utils";
+
+// --- accordion ---
+export type {
+  AccordionItem,
+  AccordionProps,
+  AccordionInstance,
+} from "./accordion";
+export {
+  Accordion,
+  createAccordion,
+} from "./accordion";
+
+// --- acl ---
+export type {
+  Permission,
+  ACLPolicy,
+  ACLCondition,
+  ACLEffect,
+  ACLResource,
+  ACLCheckResult,
+ ACLEngineOptions,
+} from "./acl";
+export {
+  ACLEngine,
+  createACLEngine,
+} from "./acl";
+
+// --- action-bar ---
+export type {
+  ActionBarAction,
+  ActionBarGroup,
+  ActionBarSeparator,
+  ActionBarOverflowItem,
+  ActionBarProps,
+  ActionBarInstance,
+} from "./action-bar";
+export {
+  ActionBar,
+  createActionBar,
+} from "./action-bar";
