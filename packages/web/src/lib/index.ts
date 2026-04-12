@@ -62219,3 +62219,12 @@ export * from "./shortcuts-guide";
 
 // --- shortcuts-manager ---
 export * from "./shortcuts-manager";
+
+// --- side-panel ---
+export * from "./side-panel";
+
+// --- sidebar ---
+export * from "./sidebar";
+
+// --- skeleton-lite ---
+export * from "./skeleton-lite";
