@@ -52116,3 +52116,60 @@ export {
   Str_repeat as repeatStrV3,
   Str_stripHtml as stripHtml,
 } from "./string";
+
+// --- structs.ts (Structured Data Types) ---
+export {
+  Struct,
+  type FieldDef,
+  type StructSchema,
+  type StructOptions,
+  type PickStruct,
+  type OmitStruct,
+  defineStruct,
+  lens as Strct_lens,
+  composeLens as Strct_composeLens,
+} from "./structs";
+// Aliases: Strct_*
+
+// --- structured-data.ts (JSON-LD / OG / RSS / Sitemap) ---
+export {
+  type JsonLdContext,
+  generateWebsiteSchema as StrData_generateWebsiteSchema,
+  generateArticleSchema as StrData_generateArticleSchema,
+  generateBreadcrumbSchema as StrData_generateBreadcrumbSchema,
+  generateOrganizationSchema as StrData_generateOrganizationSchema,
+  generateFaqSchema as StrData_generateFaqSchema,
+  generateSoftwareSchema as StrData_generateSoftwareSchema,
+  type OpenGraphData,
+  generateOpenGraph as StrData_generateOpenGraph,
+  type TwitterCardData,
+  generateTwitterCard as StrData_generateTwitterCard,
+  type RssItem,
+  type RssFeedOptions,
+  generateRssFeed as StrData_generateRssFeed,
+  type SitemapEntry,
+  generateSitemap as StrData_generateSitemap,
+  generateSitemapIndex as StrData_generateSitemapIndex,
+  type RobotsTxtRules,
+  generateRobotsTxt as StrData_generateRobotsTxt,
+  type WebAppManifest,
+  generateManifest as StrData_generateManifest,
+  injectStructuredData as StrData_injectStructuredData,
+  removeStructuredData as StrData_removeStructuredData,
+} from "./structured-data";
+// Aliases: StrData_*
+
+// --- structured-logger.ts ---
+export {
+  type LogLevel as StrLog_Level,
+  type LogFormat as StrLog_Format,
+  type LogEntry as StrLog_Entry,
+  type LoggerConfig as StrLog_Config,
+  type LogSearchQuery as StrLog_SearchQuery,
+  type LogStats as StrLog_Stats,
+  StructuredLogger,
+  createStructuredLogger,
+  getLogger as StrLog_getLogger,
+  log as StrLog_log,
+} from "./structured-logger";
+// Aliases: StrLog_*
