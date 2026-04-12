@@ -52387,3 +52387,35 @@ export {
   createSwipeableCards,
 } from "./swipe-utils";
 // Aliases: Swp_*
+
+// --- switch-group-utils.ts ---
+export {
+  type SwitchGroupLayout,
+  type SwitchItemConfig,
+  type SwitchGroupOptions,
+  type SwitchGroupInstance,
+  createSwitchGroup,
+} from "./switch-group-utils";
+// Aliases: SwGrp_*
+
+// --- switch-toggle.ts ---
+export {
+  type SwitchSize as SwTgl_Size,
+  type SwitchVariant as SwTgl_Variant,
+  type SwitchOptions as SwTgl_Options,
+  type SwitchInstance as SwTgl_Instance,
+  createSwitch as createSwitchToggle,
+  type LabeledSwitchOptions,
+  createLabeledSwitch,
+} from "./switch-toggle";
+// Aliases: SwTgl_*
+
+// --- switch-utils.ts ---
+export {
+  type SwitchSize as SwUtl_Size,
+  type SwitchVariant as SwUtl_Variant,
+  type SwitchOptions as SwUtl_Options,
+  type SwitchInstance as SwUtl_Instance,
+  createSwitch as createSwitchUtil,
+} from "./switch-utils";
+// Aliases: SwUtl_*
