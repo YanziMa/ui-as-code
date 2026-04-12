@@ -61580,3 +61580,12 @@ export * from "./circuit-board";
 
 // --- clipboard-api ---
 export * from "./clipboard-api";
+
+// --- clipboard-manager ---
+export * from "./clipboard-manager";
+
+// --- cohort-analysis ---
+export * from "./cohort-analysis";
+
+// --- color-contrast ---
+export * from "./color-contrast";
