@@ -54540,3 +54540,65 @@ export {
   ARCodeDetector,
   createARDetector,
 } from "./ar-code.js";
+
+// --- Face Detection ---
+export {
+  FaceDetector,
+  createFaceDetector,
+  type DetectionBackend,
+  type FaceDetectionOptions,
+  type BoundingBox,
+  type LandmarkPoint,
+  type FacialExpression,
+  type HeadPose,
+  type DetectedFace,
+  type DetectionResult,
+} from "./face-detection";
+
+// --- Color Picker ---
+export {
+  hexToRgb,
+  rgbToHex,
+  rgbToHsl,
+  hslToRgb,
+  hslToHex,
+  parseColor,
+  getLuminance,
+  getContrastRatio,
+  getWcagLevel,
+  getContrastingText,
+  complementary,
+  analogous,
+  triadic,
+  splitComplementary,
+  tetradic,
+  monochromatic,
+  blendColors,
+  lighten,
+  darken,
+  saturate,
+  desaturate,
+  invertColor,
+  withOpacity,
+  generatePaletteAdvanced,
+  type RgbColor,
+  type HslColor,
+  type Palette,
+} from "./color-picker";
+
+// --- Diff Viewer ---
+export {
+  computeDiff,
+  toUnifiedDiff,
+  applyPatch,
+  renderInlineDiffHtml,
+  renderSideBySideDiffHtml,
+  wordDiff,
+  renderWordDiffHtml,
+  getDiffStyles,
+  textSimilarity,
+  formatDiffStats,
+  type DiffChunk,
+  type DiffResult,
+  type FileDiff,
+} from "./diff-viewer";
