@@ -59823,3 +59823,47 @@ export {
   patchDOM,
   createDOMPatcher,
 } from "./dom-diff-patcher";
+
+// --- dom-diff ---
+export type {
+  DOMDiffResult,
+  DOMDiffOptions,
+  PatchOp,
+} from "./dom-diff";
+export {
+  diffTrees,
+  applyPatches,
+  createDiffer,
+} from "./dom-diff";
+
+// --- dom-fragment ---
+export {
+  createFragment as dfCreateFragment,
+  cloneTemplate,
+  batchDOMUpdates,
+  extractRange,
+  safeInsertHTML,
+  measureLayout,
+} from "./dom-fragment";
+
+// --- dom-helper ---
+export {
+  createElement as dhCreateEl,
+  createElementNS,
+  removeElement,
+  replaceElement,
+  insertBefore as dhInsertBefore,
+  insertAfter,
+  appendChild as dhAppendChild,
+  prependTo,
+  setHTML,
+  getHTML,
+  queryOne as dhQueryOne,
+  queryAll as dhQueryAll,
+  closest as dhClosest,
+  matches,
+  addClass as dhAddClass,
+  removeClass as dhRemoveClass,
+  toggleClass as dhToggleClass,
+  hasClass as dhHasClass,
+} from "./dom-helper";
