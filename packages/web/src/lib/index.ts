@@ -52751,3 +52751,37 @@ export {
   type SchedulerStats as TskSchV2_SchedulerStats,
   type SchedulerEvent as TskSchV2_SchedulerEvent,
 } from "./task-scheduler-v2";
+
+// --- task-scheduler ---
+export {
+  TaskScheduler,
+  type Task as TskSch_Task,
+  type SchedulerConfig as TskSch_SchedulerConfig,
+  type SchedulerMetrics as TskSch_SchedulerMetrics,
+  type WorkerPoolOptions as TskSch_WorkerPoolOptions,
+  type TaskStatus as TskSch_TaskStatus,
+  type TaskPriority as TskSch_TaskPriority,
+  type RetryStrategy as TskSch_RetryStrategy,
+} from "./task-scheduler";
+
+// --- template-engine ---
+export {
+  TemplateEngine,
+  createTemplateEngine,
+  renderTemplate as TmpEng_renderTemplate,
+  registerBuiltinHelpers,
+  unescapeHtml,
+  type TemplateContext as TmpEng_TemplateContext,
+  type TemplateOptions as TmpEng_TemplateOptions,
+  type TemplateError as TmpEng_TemplateError,
+  type PartialTemplate as TmpEng_PartialTemplate,
+  type HelperFunction as TmpEng_HelperFunction,
+} from "./template-engine";
+
+// --- template ---
+export {
+  renderTemplate as Tmp_renderTemplate,
+  parseConditionalBlocks,
+  Template,
+  type TemplateBlock as Tmp_TemplateBlock,
+} from "./template";
