@@ -53672,3 +53672,12 @@ export { ParsedUrl as UrlUtils_ParsedUrl, parseUrl as UrlUtils_parseUrl, buildUr
 
 // --- user-card ---
 export { UserCardVariant, UserCardSize, UserStats, SocialLink, UserCardOptions, UserCardInstance, createUserCard } from "./user-card";
+
+// --- user-journey ---
+export { JourneyEvent, JourneyPage, UserJourney, JourneyConfig, JourneyStats, PathAnalysis, JourneyTracker, createJourneyTracker } from "./user-journey";
+
+// --- utils ---
+export { formatRelativeTime as Ut_formatRelativeTime, truncate as Ut_truncate, shortId as Ut_shortId, debounce as Ut_debounce, cn as Ut_cn, isBrowser as Ut_isBrowser, isServer as Ut_isServer, getBaseUrl as Ut_getBaseUrl, pluralize as Ut_pluralize } from "./utils";
+
+// --- uuid ---
+export { uuidv4, uuidv7, nanoId, shortId as Uuid_shortId, prefixedId, isUuid, getUuidVersion } from "./uuid";
