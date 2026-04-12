@@ -59047,3 +59047,51 @@ export {
   hash as ctHash,
   deriveKey as ctDeriveKey,
 } from "./cryptography-toolkit";
+
+// --- css-containment ---
+export type {
+  ContainmentStrategy,
+  ContainmentOptions,
+  ContainmentMetrics,
+} from "./css-containment";
+export {
+  applyContainment,
+  removeContainment,
+  measureContainmentCost,
+  detectOptimalContainment,
+  setupLayoutStability,
+} from "./css-containment";
+
+// --- css-custom-properties ---
+export type {
+  CSSVarDefinition,
+  CSSVarWatcher,
+  CSSCustomPropertiesOptions,
+} from "./css-custom-properties";
+export {
+  getCSSVar,
+  setCSSVar,
+  removeCSSVar,
+  watchCSSVar,
+  unwatchCSSVar,
+  animateCSSVar,
+  batchCSSVars,
+  getComputedCSSVar,
+  setCSSTheme,
+} from "./css-custom-properties";
+
+// --- css-grid-system ---
+export type {
+  GridTrackDef,
+  GridAreaDef,
+  GridSystemOptions,
+  GridSystemInstance,
+} from "./css-grid-system";
+export {
+  CSSGridSystem,
+  createGridSystem,
+  defineGridTracks,
+  defineGridAreas,
+  generateGridCSS,
+  getGridLayoutInfo,
+} from "./css-grid-system";
