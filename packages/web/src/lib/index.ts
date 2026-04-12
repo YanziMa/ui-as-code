@@ -59738,3 +59738,43 @@ export {
   createVerticalDivider,
   createHorizontalDivider,
 } from "./divider-utils";
+
+// --- divider ---
+export type {
+  DividerOptions as DivOptions,
+  DividerVariant,
+  DividerInstance,
+} from "./divider";
+export {
+  Divider as DividerComponent,
+  createDividerComponent,
+} from "./divider";
+
+// --- dnd ---
+export type {
+  DnDOptions,
+  DnDDataTransfer,
+  DropZoneOptions,
+  DragHandleOptions,
+  DnDInstance,
+} from "./dnd";
+export {
+  DnDSystem,
+  createDnDSystem,
+  makeDraggable,
+  makeDroppable,
+  setupDropZone,
+  setupDragHandle,
+} from "./dnd";
+
+// --- dock-layout ---
+export type {
+  DockPanel,
+  DockContainer,
+  DockLayoutOptions,
+  DockLayoutInstance,
+} from "./dock-layout";
+export {
+  DockLayout,
+  createDockLayout,
+} from "./dock-layout";
