@@ -57781,3 +57781,37 @@ export {
   ChipsInput,
   createChipsInput,
 } from "./chips-input";
+
+// --- chips ---
+export type {
+  ChipsOptions,
+  ChipsInstance,
+} from "./chips";
+export {
+  Chips as ChipsComponent,
+  createChipsComponent,
+} from "./chips";
+
+// --- chord-diagram ---
+export type {
+  ChordData,
+  ChordDiagramOptions,
+  ChordDiagramInstance,
+} from "./chord-diagram";
+export {
+  ChordDiagram,
+  createChordDiagram,
+} from "./chord-diagram";
+
+// --- circuit-board ---
+export type {
+  CircuitNode,
+  CircuitConnection,
+  CircuitPort,
+  CircuitBoardOptions,
+  CircuitBoardInstance,
+} from "./circuit-board";
+export {
+  CircuitBoard,
+  createCircuitBoard,
+} from "./circuit-board";
