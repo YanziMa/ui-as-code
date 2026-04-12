@@ -60242,3 +60242,34 @@ export {
   toggleDropdown,
   navigateDropdown,
 } from "./dropdown-menu-utils";
+
+// --- dropdown-menu ---
+export type {
+  DropdownMenuItem as DDMMenuItem,
+  DropdownMenuOptions,
+  DropdownMenuInstance,
+} from "./dropdown-menu";
+export {
+  DropdownMenu as DropdownMenuComponent,
+  createDropdownMenuComponent,
+} from "./dropdown-menu";
+
+// --- dropdown-utils ---
+export {
+  createDropdown,
+  openDropdown as duOpenDropdown,
+  closeDropdown as duCloseDropdown,
+  toggleDropdown as duToggleDropdown,
+  positionDropdown,
+} from "./dropdown-utils";
+
+// --- dropdown ---
+export type {
+  DropdownOption,
+  DropdownOptions,
+  DropdownInstance,
+} from "./dropdown";
+export {
+  Dropdown as DropdownComponent,
+  createDropdownComponent,
+} from "./dropdown";
