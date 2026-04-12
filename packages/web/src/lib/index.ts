@@ -57029,3 +57029,42 @@ export {
   isBodyLocked,
   clearAllScrollLocks,
 } from "./body-scroll-lock-utils";
+
+// --- bottom-sheet ---
+export type {
+  BottomSheetOptions,
+  BottomSheetSnapPoint,
+  BottomSheetInstance,
+} from "./bottom-sheet";
+export {
+  BottomSheet,
+  createBottomSheet,
+} from "./bottom-sheet";
+
+// --- box-model ---
+export type {
+  BoxModelResult,
+  BoxModelDimensions,
+} from "./box-model";
+export {
+  getBoxModel,
+  getMarginBox,
+  getBorderBox,
+  getPaddingBox,
+  getContentBox,
+  setOuterSize,
+  setInnerSize,
+  getElementOffset,
+  getElementRect,
+} from "./box-model";
+
+// --- box-plot ---
+export type {
+  BoxPlotData,
+  BoxPlotOptions,
+  BoxPlotInstance,
+} from "./box-plot";
+export {
+  BoxPlot,
+  createBoxPlot,
+} from "./box-plot";
