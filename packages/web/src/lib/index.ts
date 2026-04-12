@@ -60702,3 +60702,43 @@ export {
   setupDelegationRoot,
   teardownDelegationRoot,
 } from "./event-delegation";
+
+// --- event-emitter ---
+export type {
+  EmitterOptions,
+  Listener as EEListener,
+  EventEmitterInstance,
+} from "./event-emitter";
+export {
+  EventEmitter,
+  createEventEmitter,
+} from "./event-emitter";
+
+// --- event-sourcing ---
+export type {
+  EventStore,
+  EventProjection,
+  AggregateRoot,
+  SagaOrchestrator,
+  EventSourcingOptions,
+} from "./event-sourcing";
+export {
+  EventSourcingEngine,
+  createEventStore,
+  appendEvent,
+  projectEvents,
+  replayEvents,
+  createSnapshot,
+  restoreFromSnapshot,
+} from "./event-sourcing";
+
+// --- event-tracker ---
+export type {
+  TrackerOptions,
+  TrackingEvent,
+  TrackerInstance,
+} from "./event-tracker";
+export {
+  EventTracker,
+  createEventTracker,
+} from "./event-tracker";
