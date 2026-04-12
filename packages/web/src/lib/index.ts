@@ -53834,3 +53834,31 @@ export {
   type WaterfallChartOptions,
   type WaterfallChartInstance,
 } from "./waterfall-chart.js";
+
+// --- waterfall ---
+export {
+  runPipeline,
+  parallel,
+  waterfall,
+  raceWithCleanup,
+  type PipelineStep,
+  type PipelineContext,
+  type PipelineResult,
+} from "./waterfall.js";
+
+// --- watermark ---
+export {
+  createWatermark,
+  type WatermarkOptions,
+  type WatermarkInstance,
+} from "./watermark.js";
+
+// --- waveform-display ---
+export {
+  createWaveformDisplay,
+  type WaveformPoint,
+  type WaveformChannel,
+  type WaveformSelection,
+  type WaveformDisplayOptions,
+  type WaveformDisplayInstance,
+} from "./waveform-display.js";
