@@ -55410,3 +55410,62 @@ export type {
   FieldMeta,
   CSVWriterOptions,
 } from "./csv-parse";
+// --- Excel Export ---
+export {
+  ExcelExporter,
+  quickExport,
+  createExcelExporter,
+} from "./excel-export";
+export type {
+  CellValue,
+  CellStyle,
+  FontStyle,
+  FillStyle,
+  BorderStyle,
+  BorderEdge,
+  AlignmentStyle,
+  RowData,
+  SheetData,
+  ExcelOptions,
+  PrintSettings,
+  DocumentProperties,
+} from "./excel-export";
+
+// --- GraphQL Client ---
+export {
+  GraphQLClient,
+  createGraphQLClient,
+  extractOperationType,
+  extractOperationNames,
+  extractVariableNames,
+  hashQuery,
+} from "./graphql-client";
+export type {
+  GraphQLOperationType,
+  GraphQLVariableValues,
+  GraphQLRequest,
+  GraphQLResponse,
+  GraphQLErrorResponse,
+  GraphQLClientOptions,
+  SubscriptionOptions,
+} from "./graphql-client";
+
+// --- Image Processor ---
+export {
+  ImageProcessor,
+  createImageProcessor,
+  quickResize,
+  generateThumbnail,
+} from "./image-processor";
+export type {
+  ImageFormat,
+  ResizeMode,
+  CropMode,
+  FilterType,
+  ImageProcessorOptions,
+  CropOptions,
+  FilterOptions,
+  WatermarkOptions,
+  HistogramData,
+  ImageMetadata,
+} from "./image-processor";
