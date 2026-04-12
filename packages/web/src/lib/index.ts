@@ -55803,3 +55803,52 @@ export {
   generateA11yTree,
   simulateScreenReader,
 } from "./accessibility-utils";
+
+// --- accessibility-v3 ---
+export type {
+  A11yV3Config,
+  A11yV3FocusTrapOptions,
+  A11yV3LiveRegionOptions,
+  A11yV3KeyboardNavConfig,
+  A11yV3ContrastCheckResult,
+  A11yV3AuditResult,
+  A11yV3AuditIssue,
+} from "./accessibility-v3";
+export {
+  createA11yV3Engine,
+  setupFocusTrapV3,
+  setupLiveRegionV3,
+  setupKeyboardNavigationV3,
+  checkContrastV3,
+  runAccessibilityAuditV3,
+  generateAccessibleLabelV3,
+  setupSkipLinkV3,
+  setupReducedMotionV3,
+  announceToScreenReaderV3,
+} from "./accessibility-v3";
+
+// --- accessibility ---
+export {
+  generateProgressAria,
+  generateSliderAria,
+  generateSwitchAria,
+  generateDialogAria,
+  generateMenuAria,
+  generateTablistAria,
+  generateComboboxAria,
+  generateListboxAria,
+  generateTreeAria,
+  generateGridAria,
+  generateTooltipAria,
+} from "./accessibility";
+
+// --- accordion-list ---
+export type {
+  AccordionListItem,
+  AccordionListProps,
+  AccordionListInstance,
+} from "./accordion-list";
+export {
+  AccordionList,
+  createAccordionList,
+} from "./accordion-list";
