@@ -60943,3 +60943,38 @@ export {
   createFilePreviewer,
   previewFile,
 } from "./file-preview";
+
+// --- file-system-abstraction ---
+export type {
+  FileSystemBackend,
+  FileSystemOptions,
+  FileSystemInstance,
+  FileEntry,
+  DirectoryEntry,
+} from "./file-system-abstraction";
+export {
+  FileSystem,
+  createFileSystem,
+} from "./file-system-abstraction";
+
+// --- file-system-access ---
+export type {
+  FileSystemAccessOptions as FSAOptions,
+  FilePickerOptions as FSAPickerOpts,
+  FSAInstance,
+} from "./file-system-access";
+export {
+  FileSystemAccess,
+  createFileSystemAccess,
+} from "./file-system-access";
+
+// --- file-system-v2 ---
+export type {
+  FileSystemV2Options,
+  FSV2Entry,
+  WatcherCallback as FSV2Watcher,
+} from "./file-system-v2";
+export {
+  FileSystemV2,
+  createFileSystemV2,
+} from "./file-system-v2";
