@@ -61742,3 +61742,12 @@ export * from "./events-utils";
 
 // --- executor ---
 export * from "./executor";
+
+// --- exif-reader ---
+export * from "./exif-reader";
+
+// --- expression-parser ---
+export * from "./expression-parser";
+
+// --- face-detection ---
+export * from "./face-detection";
