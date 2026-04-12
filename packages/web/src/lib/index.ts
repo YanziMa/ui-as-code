@@ -61913,3 +61913,12 @@ export * from "./math-advanced";
 
 // --- media-editor ---
 export * from "./media-editor";
+
+// --- media-gallery ---
+export * from "./media-gallery";
+
+// --- mediator ---
+export * from "./mediator";
+
+// --- mentions ---
+export * from "./mentions";
