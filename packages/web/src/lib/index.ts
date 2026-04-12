@@ -59484,3 +59484,56 @@ export {
   DatePicker as DatePickerComponent,
   createDatePickerComponent,
 } from "./date-picker";
+
+// --- date-range-picker ---
+export type {
+  DateRangePickerOptions,
+  DateRangePickerPreset,
+  DateRangePickerInstance,
+} from "./date-range-picker";
+export {
+  DateRangePicker,
+  createDateRangePicker,
+} from "./date-range-picker";
+
+// --- date-utils ---
+export {
+  formatDate as duFormatDate,
+  parseDate as duParseDate,
+  formatRelativeTime,
+  formatDuration,
+  addDays,
+  addWeeks,
+  addMonths,
+  addYears,
+  diffInDays,
+  diffInHours,
+  diffInMinutes,
+  isToday,
+  isYesterday,
+  isTomorrow,
+  isInPast,
+  isInFuture,
+  startOfDay,
+  endOfDay,
+  startOfWeek,
+  endOfWeek,
+  startOfMonth,
+  endOfMonth,
+  getQuarter,
+  getWeekOfYear,
+} from "./date-utils";
+
+// --- date (simple) ---
+export {
+  isToday as dateIsToday,
+  isYesterday as dateIsYesterday,
+  isTomorrow as dateIsTomorrow,
+  formatDate as dateFormatDate,
+  formatTime,
+  formatDateTime,
+  formatRelative as dateFormatRelative,
+  toISODate,
+  fromISODate,
+  now,
+} from "./date";
