@@ -57651,3 +57651,38 @@ export {
   Chart as ChartComponent,
   createChartComponent,
 } from "./chart";
+
+// --- chartjs-adapter ---
+export type {
+  ChartJSAdapterOptions,
+  ChartJSConfig,
+  ChartJSDataset,
+} from "./chartjs-adapter";
+export {
+  createChartJSConfig,
+  adaptDataToChartJS,
+  createChartJSDataset,
+  setupChartJSTheme,
+} from "./chartjs-adapter";
+
+// --- chat-bubble ---
+export type {
+  ChatBubbleMessage,
+  ChatBubbleOptions,
+  ChatBubbleInstance,
+} from "./chat-bubble";
+export {
+  ChatBubble,
+  createChatBubble,
+} from "./chat-bubble";
+
+// --- chat-widget ---
+export type {
+  ChatWidgetMessage,
+  ChatWidgetOptions,
+  ChatWidgetInstance,
+} from "./chat-widget";
+export {
+  ChatWidget,
+  createChatWidget,
+} from "./chat-widget";
