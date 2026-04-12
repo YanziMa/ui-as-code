@@ -57686,3 +57686,34 @@ export {
   ChatWidget,
   createChatWidget,
 } from "./chat-widget";
+
+// --- checkbox-group ---
+export type {
+  CheckboxGroupOption,
+  CheckboxGroupOptions,
+  CheckboxGroupInstance,
+} from "./checkbox-group";
+export {
+  CheckboxGroup,
+  createCheckboxGroup,
+} from "./checkbox-group";
+
+// --- checkbox-utils ---
+export {
+  setupCheckbox,
+  setupIndeterminate,
+  setupCheckboxCard,
+  setupSwitchToggle,
+} from "./checkbox-utils";
+
+// --- checkbox ---
+export type {
+  CheckboxOptions,
+  CheckboxSize,
+  CheckboxVariant,
+  CheckboxInstance,
+} from "./checkbox";
+export {
+  Checkbox as CheckboxComponent,
+  createCheckboxComponent,
+} from "./checkbox";
