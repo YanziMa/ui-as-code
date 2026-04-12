@@ -54602,3 +54602,41 @@ export {
   type DiffResult,
   type FileDiff,
 } from "./diff-viewer";
+
+// --- Markdown Renderer ---
+export {
+  createMarkdownRenderer,
+  type MdRenderOptions,
+  type MdRendererInstance,
+  type TocEntry,
+} from "./markdown-renderer";
+
+// --- Form Validator ---
+export {
+  FormValidator,
+  required,
+  minLength,
+  maxLength,
+  pattern,
+  email as emailValidator,
+  urlValidator,
+  range,
+  matchesField,
+  asyncValidator,
+  custom as customValidator,
+  type FieldValidationResult,
+  type FormValidationResult,
+  type ValidatorFn,
+  type FieldConfig,
+  type FormValidatorOptions,
+} from "./form-validator";
+
+// --- Virtual Scroller ---
+export {
+  VirtualScroller,
+  type ScrollItem,
+  type VisibleRange,
+  type ScrollerConfig,
+  type ScrollerState,
+  type ScrollToOptions,
+} from "./virtual-scroller";
