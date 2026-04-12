@@ -54726,3 +54726,37 @@ export {
   type FuzzyResult,
   type FuzzyOptions,
 } from "./fuzzy-search";
+
+// --- i18n ---
+export {
+  t,
+  getLocale,
+  setLocale,
+  LOCALE_CHANGE_EVENT,
+  type Locale,
+} from "./i18n";
+
+// --- Clipboard Manager ---
+export {
+  ClipboardManager,
+  requestClipboardPermission,
+  requestReadPermission,
+  isClipboardApiAvailable,
+  sanitizeHtml,
+  type ClipboardData,
+  type ClipboardPermission,
+  type CopyOptions,
+  type PasteOptions,
+  type ClipboardHistoryEntry,
+  type ClipboardConfig,
+  type ClipboardDataType,
+} from "./clipboard-manager";
+
+// --- Split Pane ---
+export {
+  createSplitPane,
+  type SplitOrientation,
+  type SplitCollapseDirection,
+  type SplitPaneOptions,
+  type SplitPaneInstance,
+} from "./split-pane";

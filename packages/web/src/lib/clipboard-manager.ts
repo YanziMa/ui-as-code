@@ -35,7 +35,7 @@ export interface ClipboardPermission {
   reason?: string;
 }
 
-type PermissionState = "granted" | "denied" "prompt";
+type PermissionState = "granted" | "denied" | "prompt";
 
 export interface CopyOptions {
   /** Text content */
