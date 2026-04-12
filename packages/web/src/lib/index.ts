@@ -58765,3 +58765,51 @@ export {
   CookieManager,
   createCookieManager,
 } from "./cookie-manager";
+
+// --- cookie-utils ---
+export {
+  setCookie,
+  getCookie,
+  deleteCookie,
+  getAllCookies,
+  hasCookie,
+  setSubCookie,
+  getSubCookie,
+  parseCookies,
+  serializeCookie,
+  isCookieAllowed,
+  checkConsent,
+} from "./cookie-utils";
+
+// --- coordinate ---
+export type {
+  Point,
+  Rect,
+  Box,
+  Size,
+  Transform2D,
+} from "./coordinate";
+export {
+  createPoint,
+  createRect,
+  createBox,
+  pointInRect,
+  rectIntersect,
+  rectUnion,
+  transformPoint,
+  getViewportRect,
+  getElementRect,
+  offsetPoint,
+  distanceBetweenPoints,
+  lerpPoint,
+} from "./coordinate";
+
+// --- copy-block ---
+export type {
+  CopyBlockOptions,
+  CopyBlockInstance,
+} from "./copy-block";
+export {
+  CopyBlock,
+  createCopyBlock,
+} from "./copy-block";
