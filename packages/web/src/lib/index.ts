@@ -61949,3 +61949,12 @@ export * from "./morphdom-engine";
 
 // --- motion-utils ---
 export * from "./motion-utils";
+
+// --- mouse-gestures ---
+export * from "./mouse-gestures";
+
+// --- mouse-utils ---
+export * from "./mouse-utils";
+
+// --- mutation-observer ---
+export * from "./mutation-observer";
