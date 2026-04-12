@@ -61976,3 +61976,12 @@ export * from "./number-utils";
 
 // --- object-utils ---
 export * from "./object-utils";
+
+// --- observer-pattern ---
+export * from "./observer-pattern";
+
+// --- observer-utils ---
+export * from "./observer-utils";
+
+// --- ocr-engine ---
+export * from "./ocr-engine";
