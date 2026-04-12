@@ -57990,3 +57990,42 @@ export {
   escapeHTML,
   unescapeHTML,
 } from "./code-utils";
+
+// --- cohort-analysis ---
+export type {
+  CohortDefinition,
+  CohortData,
+  RetentionTable,
+  CohortAnalysisOptions,
+} from "./cohort-analysis";
+export {
+  defineCohort,
+  calculateRetention,
+  calculateRollingRetention,
+  compareCohorts,
+  calculateChurnRate,
+  calculateLTV,
+  generateCohortReport,
+} from "./cohort-analysis";
+
+// --- collapse-lite ---
+export type {
+  CollapseLiteItem,
+  CollapseLiteOptions,
+  CollapseLiteInstance,
+} from "./collapse-lite";
+export {
+  CollapseLite,
+  createCollapseLite,
+} from "./collapse-lite";
+
+// --- collapse-utils ---
+export {
+  setupCollapse,
+  destroyCollapse,
+  expandCollapse,
+  collapsePanel,
+  toggleCollapse,
+  isCollapsed,
+  syncCollapseWithURL,
+} from "./collapse-utils";
