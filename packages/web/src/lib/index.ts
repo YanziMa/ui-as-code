@@ -62156,3 +62156,12 @@ export * from "./screen-capture";
 
 // --- screen-full ---
 export * from "./screen-full";
+
+// --- screen-orientation ---
+export * from "./screen-orientation";
+
+// --- scroll-into-view ---
+export * from "./scroll-into-view";
+
+// --- scroll-lock ---
+export * from "./scroll-lock";
