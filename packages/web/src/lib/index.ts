@@ -54791,3 +54791,36 @@ export {
   type RecorderStats,
   type ScreenRecorderInstance,
 } from "./screen-recorder";
+
+// --- Tree View ---
+export {
+  TreeView,
+  type TreeNodeData,
+  type TreeNode,
+  type CheckMode,
+  type TreeViewConfig,
+} from "./tree-view";
+
+// --- Data Table ---
+export {
+  DataTableManager,
+  createDataTable,
+  type Column,
+  type SortDirection,
+  type SortState,
+  type FilterState,
+  type DataTableOptions,
+  type DataTableInstance,
+} from "./data-table";
+
+// --- PDF Viewer ---
+export {
+  createPDFViewer,
+  generateSimplePDF,
+  createPrintableView,
+  type FitMode,
+  type ZoomMode,
+  type ScrollMode,
+  type PDFViewerOptions,
+  type PDFViewerInstance,
+} from "./pdf-viewer";
