@@ -55993,3 +55993,49 @@ export {
   AnchorNav,
   createAnchorNav,
 } from "./anchor-nav";
+
+// --- anchor-position ---
+export type {
+  AnchorPosition,
+  Placement,
+  PositionStrategy,
+  BoundaryElement,
+  VirtualAnchor,
+  ComputePositionResult,
+} from "./anchor-position";
+export {
+  computePosition,
+  computeAutoUpdate,
+  flipPlacement,
+  shiftPosition,
+  offsetPosition,
+  arrowPosition,
+  sizePosition,
+  hidePosition,
+  createVirtualAnchor,
+} from "./anchor-position";
+
+// --- anchor-positioning-utils ---
+export type {
+  AnchorPosUtilsOptions,
+  AnchorPosUtilsResult,
+} from "./anchor-positioning-utils";
+export {
+  positionElement,
+  positionPopover,
+  positionTooltip,
+  positionDropdown,
+  getBestPlacement,
+  createPositionObserver,
+} from "./anchor-positioning-utils";
+
+// --- anchor-positioning ---
+export type {
+  AnchorPositioningConfig,
+  AnchorPositioningResult,
+  AnchorPositioningInstance,
+} from "./anchor-positioning";
+export {
+  AnchorPositioningEngine,
+  createAnchorPositioning,
+} from "./anchor-positioning";
