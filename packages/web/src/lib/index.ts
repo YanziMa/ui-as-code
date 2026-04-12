@@ -58917,3 +58917,48 @@ export {
   Countdown as CountdownComponent,
   createCountdownComponent,
 } from "./countdown";
+
+// --- countup-utils ---
+export type {
+  CountUpUtilsOptions,
+  LapTime,
+} from "./countup-utils";
+export {
+  createStopwatch,
+  startStopwatch,
+  pauseStopwatch,
+  resumeStopwatch,
+  resetStopwatch,
+  lapTime,
+  getElapsedTime,
+  formatStopwatchTime,
+} from "./countup-utils";
+
+// --- cron-parser ---
+export type {
+  CronField as CPField,
+  ParsedCron as CPParsedCron,
+  CronParseResult,
+} from "./cron-parser";
+export {
+  parseCronExpression,
+  getNextRunTime as cpGetNextRun,
+  getPrevRunTime,
+  validateCron,
+  describeCron as cpDescribeCron,
+  getCronFields,
+} from "./cron-parser";
+
+// --- cropper-utils ---
+export type {
+  CropperOptions,
+  CropRegion,
+  CropperInstance,
+} from "./cropper-utils";
+export {
+  createImageCropper,
+  setCropRegion,
+  getCropResult,
+  resetCropper,
+  destroyCropper,
+} from "./cropper-utils";
