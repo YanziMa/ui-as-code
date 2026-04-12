@@ -58584,3 +58584,43 @@ export {
   setConfigValue,
   watchConfig,
 } from "./config";
+
+// --- confirm-dialog-utils ---
+export type {
+  ConfirmDialogUtilsOptions,
+  ConfirmButtonConfig,
+} from "./confirm-dialog-utils";
+export {
+  showConfirmDialog,
+  showDangerConfirm,
+  showDeleteConfirm,
+  showAsyncConfirm,
+} from "./confirm-dialog-utils";
+
+// --- confirm-dialog ---
+export type {
+  ConfirmDialogOptions,
+  ConfirmDialogInstance,
+} from "./confirm-dialog";
+export {
+  ConfirmDialog,
+  createConfirmDialog,
+} from "./confirm-dialog";
+
+// --- console-enhance ---
+export type {
+  ConsoleEnhanceOptions,
+  ConsoleGroup,
+  LogEntry as CLEntry,
+} from "./console-enhance";
+export {
+  createEnhancedConsole,
+  consoleTable,
+  consoleTrace,
+  consoleTime,
+  consoleTimeStamp,
+  consoleGroupStart,
+  consoleGroupEnd,
+  suppressConsoleInProduction,
+  restoreConsole,
+} from "./console-enhance";
