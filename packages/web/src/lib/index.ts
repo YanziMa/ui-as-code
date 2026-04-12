@@ -61076,3 +61076,12 @@ export * from "./accessibility-engine";
 
 // --- accessibility-utils ---
 export * from "./accessibility-utils";
+
+// --- accessibility-v3 ---
+export * from "./accessibility-v3";
+
+// --- accessibility ---
+export * from "./accessibility";
+
+// --- accordion-list ---
+export * from "./accordion-list";
