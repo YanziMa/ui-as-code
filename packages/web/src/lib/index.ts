@@ -57413,3 +57413,38 @@ export {
   CandlestickChart,
   createCandlestickChart,
 } from "./candlestick-chart";
+
+// --- canvas-draw ---
+export type {
+  CanvasDrawOptions,
+  CanvasDrawTool,
+  CanvasDrawInstance,
+} from "./canvas-draw";
+export {
+  CanvasDrawManager,
+  createCanvasDraw,
+} from "./canvas-draw";
+
+// --- canvas-drawing ---
+export type {
+  CanvasDrawingOptions,
+  CanvasDrawingTool as CDT,
+  CanvasDrawingInstance,
+} from "./canvas-drawing";
+export {
+  CanvasDrawingBoard,
+  createCanvasDrawing,
+} from "./canvas-drawing";
+
+// --- canvas-engine ---
+export type {
+  CanvasEngineOptions,
+  SceneNode as CESceneNode,
+  RenderLayer,
+  AnimationState as CEAnimState,
+  CanvasEngineInstance,
+} from "./canvas-engine";
+export {
+  CanvasEngine as Canvas2DEngine,
+  createCanvasEngine,
+} from "./canvas-engine";
