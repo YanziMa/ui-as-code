@@ -61049,3 +61049,12 @@ export type {
 export {
   createFilesystem,
 } from "./filesystem";
+
+// --- 3d-graphics ---
+export * from "./3d-graphics";
+
+// --- a11y-announcer-utils ---
+export * from "./a11y-announcer-utils";
+
+// --- a11y-helpers ---
+export * from "./a11y-helpers";
