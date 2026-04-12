@@ -54042,3 +54042,65 @@ export {
   type RealtimeClientOptions,
   type RoomEvent,
 } from "./websocket-realtime.js";
+
+// --- websocket-utils (Batch 1706) ---
+export {
+  WSConnectionState as Wsu_WSConnectionState,
+  WSLogLevel as Wsu_WSLogLevel,
+  WSBinaryData as Wsu_WSBinaryData,
+  CorrelationId as Wsu_CorrelationId,
+  WebSocketManagerOptions as Wsu_WebSocketManagerOptions,
+  RateLimiterOptions as Wsu_RateLimiterOptions,
+  AckOptions as Wsu_AckOptions,
+  RoomSubscriptionOptions as Wsu_RoomSubscriptionOptions,
+  PresenceUser as Wsu_PresenceUser,
+  PresenceEvent as Wsu_PresenceEvent,
+  PresenceSnapshot as Wsu_PresenceSnapshot,
+  WSStatistics as Wsu_WSStatistics,
+  ConnectionQuality as Wsu_ConnectionQuality,
+  ShutdownResult as Wsu_ShutdownResult,
+  WSEnvelope as Wsu_WSEnvelope,
+  WSAckEnvelope as Wsu_WSAckEnvelope,
+  WSEventMap as Wsu_WSEventMap,
+  WSEventName as Wsu_WSEventName,
+  WSEventListener as Wsu_WSEventListener,
+  WSEventEmitter,
+  RateLimiter as Wsu_RateLimiter,
+  RoomManager as Wsu_RoomManager2,
+  PresenceSystem as Wsu_PresenceSystem2,
+  ConnectionPool,
+  WebSocketManager as Wsu_WebSocketManager2,
+  generateMessageId as Wsu_generateMessageId,
+  buildEnvelope as Wsu_buildEnvelope,
+  buildAck as Wsu_buildAck,
+  calculateBackoff as Wsu_calculateBackoff,
+  isRecoverableClose as Wsu_isRecoverableClose,
+  createWebSocket as Wsu_createWebSocket,
+} from "./websocket-utils.js";
+// --- will-change-manager (Batch 1706) ---
+export type {
+  WillChangeProperty,
+} from "./will-change-manager.js";
+export type {
+  WillChangeRule,
+  WillChangeManagerOptions,
+  WillChangeManagerInstance,
+} from "./will-change-manager.js";
+export {
+  createWillChangeManager,
+  gpuPromote,
+  isWillChangeSupported,
+} from "./will-change-manager.js";
+// --- wizard-stepper (Batch 1706) ---
+export type {
+  StepStatus,
+  StepLayout,
+} from "./wizard-stepper.js";
+export type {
+  WizardStep,
+  WizardOptions,
+  WizardInstance,
+} from "./wizard-stepper.js";
+export {
+  createWizard,
+} from "./wizard-stepper.js";
