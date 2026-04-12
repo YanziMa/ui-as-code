@@ -56386,3 +56386,55 @@ export {
   zip as arrZip,
   zipObject,
 } from "./array";
+
+// --- aside ---
+export type {
+  AsideProps,
+  AsideInstance,
+} from "./aside";
+export {
+  Aside,
+  createAside,
+} from "./aside";
+
+// --- async-iterator ---
+export type {
+  AsyncBatchOptions,
+  AsyncThrottleOptions,
+} from "./async-iterator";
+export {
+  asyncToArray,
+  asyncBatch,
+  asyncTake,
+  asyncDrop,
+  asyncFilter,
+  asyncMap,
+  asyncReduce,
+  asyncFlatten,
+  asyncThrottle,
+  asyncRetry,
+  asyncTimeout,
+  asyncCollect,
+  asyncParallelMap,
+  asyncRace,
+  createAsyncIterator,
+} from "./async-iterator";
+
+// --- async-pipeline ---
+export type {
+  PipelineStage,
+  PipelineOptions,
+  PipelineResult,
+  PipelineContext,
+} from "./async-pipeline";
+export {
+  AsyncPipeline,
+  createPipeline,
+  pipeline,
+  waterfall,
+  parallel,
+  race,
+  each,
+  eachSeries,
+  series,
+} from "./async-pipeline";
