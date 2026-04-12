@@ -54760,3 +54760,34 @@ export {
   type SplitPaneOptions,
   type SplitPaneInstance,
 } from "./split-pane";
+
+// --- Command Palette ---
+export {
+  CommandPalette,
+  type Command,
+  type CommandCategory,
+  type CommandPaletteConfig,
+  type CommandPaletteState,
+} from "./command-palette";
+
+// --- Infinite Scroll ---
+export {
+  InfiniteScroll,
+  type InfiniteScrollItem,
+  type InfiniteScrollOptions,
+  type InfiniteScrollState,
+} from "./infinite-scroll";
+
+// --- Screen Recorder ---
+export {
+  createScreenRecorder,
+  isScreenRecordingSupported,
+  isCameraAvailable,
+  type RecorderSource,
+  type OutputFormat,
+  type RecorderStatus,
+  type RecorderConstraints,
+  type RecorderOptions,
+  type RecorderStats,
+  type ScreenRecorderInstance,
+} from "./screen-recorder";
