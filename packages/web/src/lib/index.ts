@@ -58692,3 +58692,38 @@ export {
   ContextMenuV2,
   createContextMenuV2,
 } from "./context-menu-v2";
+
+// --- context-menu ---
+export type {
+  ContextMenuItem as CMItem,
+  ContextMenuOptions,
+  ContextMenuInstance,
+} from "./context-menu";
+export {
+  ContextMenu as ContextMenuComponent,
+  createContextMenuComponent,
+} from "./context-menu";
+
+// --- context-panel ---
+export type {
+  ContextPanelSection,
+  ContextPanelOptions,
+  ContextPanelInstance,
+} from "./context-panel";
+export {
+  ContextPanel,
+  createContextPanel,
+} from "./context-panel";
+
+// --- context-provider ---
+export type {
+  Context as CtxContext,
+  Provider as CtxProvider,
+  Consumer as CtxConsumer,
+  ContextOptions,
+} from "./context-provider";
+export {
+  createContext as createCtxContext,
+  useContext as useCtxContext,
+  Provider as CtxProviderComponent,
+} from "./context-provider";
