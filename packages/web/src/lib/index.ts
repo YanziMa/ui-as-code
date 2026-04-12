@@ -56683,3 +56683,41 @@ export {
   AutoComplete,
   createAutoComplete,
 } from "./auto-complete";
+
+// --- autocomplete-utils ---
+export type {
+  AutocompleteUtilsOptions,
+  AutocompleteMatchResult,
+} from "./autocomplete-utils";
+export {
+  setupAutocomplete,
+  destroyAutocomplete,
+  highlightMatch,
+  fuzzyMatch,
+  filterSuggestions,
+  navigateList,
+} from "./autocomplete-utils";
+
+// --- autocomplete ---
+export type {
+  AutocompleteItem,
+  AutocompleteOptions,
+  AutocompleteInstance,
+} from "./autocomplete";
+export {
+  Autocomplete,
+  createAutocomplete,
+} from "./autocomplete";
+
+// --- automation-framework ---
+export type {
+  AutomationStep,
+  AutomationWorkflow,
+  AutomationOptions,
+  AutomationReport,
+  AutomationInstance,
+} from "./automation-framework";
+export {
+  AutomationFramework,
+  createAutomationFramework,
+} from "./automation-framework";
