@@ -56220,3 +56220,42 @@ export {
   getAnimationDuration,
   setAnimationDuration,
 } from "./animation";
+
+// --- api-client ---
+export type {
+  APIClientOptions,
+  APIRequestConfig,
+  APIResponse,
+  APIError as APIClientError,
+  RequestInterceptor,
+  ResponseInterceptor,
+} from "./api-client";
+export {
+  APIClient,
+  createAPIClient,
+} from "./api-client";
+
+// --- api-gateway-client ---
+export type {
+  GatewayClientOptions,
+  GatewayRequestConfig,
+  GatewayResponse,
+  GatewayCacheEntry,
+} from "./api-gateway-client";
+export {
+  APIGatewayClient,
+  createGatewayClient,
+} from "./api-gateway-client";
+
+// --- api-gateway ---
+export type {
+  GatewayService,
+  GatewayRoute,
+  GatewayOptions,
+  GatewayMetrics,
+  GatewayInstance,
+} from "./api-gateway";
+export {
+  APIGateway,
+  createAPIGateway,
+} from "./api-gateway";
