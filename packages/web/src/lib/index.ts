@@ -55523,3 +55523,56 @@ export type {
   QROptions,
   QRResult,
 } from "./qr-generator";
+
+// --- org-parser ---
+export {
+  OrgDocument,
+  OrgNode,
+  OrgHeading,
+  OrgParagraph,
+  OrgList,
+  OrgListItem,
+  OrgLink,
+  OrgBlock,
+  OrgDrawer,
+  OrgTable,
+  OrgTableRow,
+  OrgTableCell,
+  OrgKeyword,
+  OrgComment,
+  OrgHorizontalRule,
+  OrgParserOptions,
+  OrgParser,
+  parseOrg,
+  orgToHtml,
+  orgToMarkdown,
+} from "./org-parser";
+
+// --- rest-client ---
+export {
+  RestClientOptions,
+  RequestConfig,
+  ResponseWrapper,
+  Interceptor,
+  RetryPolicy,
+  CacheEntry,
+  CacheOptions,
+  RestClient,
+  createRestClient,
+} from "./rest-client";
+
+// --- router-lite ---
+export type {
+  RouteDefinition,
+  RouteMatch,
+  RouteParams,
+  NavigationGuard,
+  BreadcrumbItem,
+  RouterListener,
+  RouterOptions,
+  RouterState,
+} from "./router-lite";
+export {
+  Router,
+  createRouter,
+} from "./router-lite";
