@@ -60002,3 +60002,39 @@ export {
   scrollTop,
   scrollLeft,
 } from "./dom";
+
+// --- donut-chart ---
+export type {
+  DonutChartData,
+  DonutChartOptions,
+  DonutChartInstance,
+} from "./donut-chart";
+export {
+  DonutChart,
+  createDonutChart,
+} from "./donut-chart";
+
+// --- drag-and-drop-file ---
+export type {
+  FileDropZoneOptions,
+  FileDropZoneState,
+  FileDropZoneInstance,
+} from "./drag-and-drop-file";
+export {
+  FileDropZone,
+  createFileDropZone,
+} from "./drag-and-drop-file";
+
+// --- drag-and-drop-v2 ---
+export type {
+  DnDv2Options,
+  DnDv2DataTransfer as DnDv2DT,
+  DropZoneOptions as DnDv2DZ,
+} from "./drag-and-drop-v2";
+export {
+  DnDSystemV2,
+  createDnDV2,
+  makeDraggableV2,
+  makeDroppableV2,
+  setupDropZoneV2,
+} from "./drag-and-drop-v2";
