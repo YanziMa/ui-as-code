@@ -60667,3 +60667,38 @@ export {
   EventBusV2,
   createEventBusV2,
 } from "./event-bus-v2";
+
+// --- event-bus ---
+export type {
+  EventBusOptions,
+  EventSubscription,
+  EventBusInstance,
+} from "./event-bus";
+export {
+  EventBus,
+  createEventBus,
+} from "./event-bus";
+
+// --- event-delegate ---
+export type {
+  DelegationConfig,
+  DelegationPool,
+  DelegateEntry,
+} from "./event-delegate";
+export {
+  createDelegator,
+  delegate as edDelegate,
+  undelegate,
+  destroyDelegator,
+  delegateOnce,
+} from "./event-delegate";
+
+// --- event-delegation ---
+export {
+  delegateEvent,
+  undelegateEvent,
+  delegateMany,
+  getDelegateTarget,
+  setupDelegationRoot,
+  teardownDelegationRoot,
+} from "./event-delegation";
