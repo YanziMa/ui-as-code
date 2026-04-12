@@ -56884,3 +56884,35 @@ export {
   createBadgeCard,
   setupBadgeCardHover,
 } from "./badge-card-utils";
+
+// --- badge-list ---
+export type {
+  BadgeListItem,
+  BadgeListOptions,
+  BadgeListInstance,
+} from "./badge-list";
+export {
+  BadgeList,
+  createBadgeList,
+} from "./badge-list";
+
+// --- badge-lite ---
+export type {
+  BadgeLiteOptions,
+  BadgeLiteVariant,
+} from "./badge-lite";
+export {
+  BadgeLite,
+  createBadgeLite,
+} from "./badge-lite";
+
+// --- badge-manager ---
+export type {
+  BadgeManagerOptions,
+  BadgeEntry,
+  BadgeManagerInstance,
+} from "./badge-manager";
+export {
+  BadgeManager,
+  createBadgeManager,
+} from "./badge-manager";
