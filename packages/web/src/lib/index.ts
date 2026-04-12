@@ -58353,3 +58353,38 @@ export {
   Combobox,
   createCombobox,
 } from "./combobox";
+
+// --- command-log ---
+export type {
+  CommandLogEntry,
+  CommandLogOptions,
+  CommandLogInstance,
+} from "./command-log";
+export {
+  CommandLog,
+  createCommandLog,
+} from "./command-log";
+
+// --- command-menu-utils ---
+export type {
+  CommandMenuItem,
+  CommandMenuUtilsOptions,
+} from "./command-menu-utils";
+export {
+  setupCommandPalette,
+  openCommandPalette,
+  closeCommandPalette,
+  registerCommands,
+  executeCommand,
+} from "./command-menu-utils";
+
+// --- command-menu ---
+export type {
+  CommandMenuOption,
+  CommandMenuOptions,
+  CommandMenuInstance,
+} from "./command-menu";
+export {
+  CommandMenu,
+  createCommandMenu,
+} from "./command-menu";
