@@ -60547,3 +60547,50 @@ export {
   isWorker,
   getEnvironmentName,
 } from "./env-detection";
+
+// --- env ---
+export {
+  getEnv,
+  getEnvInt,
+  getEnvBool,
+  getEnvFloat,
+  getEnvList,
+  getEnvJSON,
+  hasEnv,
+  setEnv as envSetEnv,
+  getAllEnv,
+} from "./env";
+
+// --- error-boundary ---
+export type {
+  ErrorBoundaryOptions,
+  ErrorBoundaryState,
+  FallbackRenderer,
+  ErrorReportHandler,
+  ErrorBoundaryInstance,
+} from "./error-boundary";
+export {
+  ErrorBoundary,
+  createErrorBoundary,
+  tryCatch,
+  withErrorBoundary,
+} from "./error-boundary";
+
+// --- error-handler ---
+export type {
+  ErrorHandlerOptions,
+  ErrorCategory,
+  RecoveryStrategy,
+  ErrorContext,
+} from "./error-handler";
+export {
+  createErrorHandler,
+  classifyError,
+  getRecoveryStrategy,
+  formatErrorMessage,
+  reportError,
+  createUserError,
+  createSystemError,
+  createNetworkError,
+  createValidationError,
+} from "./error-handler";
