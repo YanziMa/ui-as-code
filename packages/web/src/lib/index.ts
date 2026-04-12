@@ -58029,3 +58029,53 @@ export {
   isCollapsed,
   syncCollapseWithURL,
 } from "./collapse-utils";
+
+// --- collapse ---
+export type {
+  CollapseOptions,
+  CollapseInstance,
+} from "./collapse";
+export {
+  Collapse as CollapseComponent,
+  createCollapseComponent,
+} from "./collapse";
+
+// --- collection-utils ---
+export {
+  groupBy as collGroupBy,
+  indexBy,
+  partition as collPartition,
+  frequencyCount,
+  mode,
+  median,
+  percentile,
+  deepClone,
+  deepMerge,
+  deepEqual as collDeepEqual,
+  pick,
+  omit,
+  mapKeys,
+  mapValues,
+  invert,
+  flattenObject,
+  unflattenObject,
+  toPairs,
+  fromPairs,
+  treeToList,
+  listToTree,
+  findInTree,
+  pruneTree,
+} from "./collection-utils";
+
+// --- collection ---
+export {
+  createMapFromArray,
+  createMapFromObject,
+  createSetFromArray,
+  createWeakMap,
+  createWeakSet,
+  mapToRecord,
+  recordToMap,
+  setToArray,
+  arrayToSet,
+} from "./collection";
