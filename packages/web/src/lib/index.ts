@@ -55469,3 +55469,57 @@ export type {
   HistogramData,
   ImageMetadata,
 } from "./image-processor";
+// --- File Uploader ---
+export {
+  FileUploader,
+  FileValidator,
+  createDropZone,
+  createPasteHandler,
+  generatePreview,
+  getFileIcon,
+} from "./file-uploader";
+export type {
+  UploadStatus,
+  FileValidationOptions,
+  FileValidationError,
+  ChunkInfo,
+  UploadProgress,
+  UploadResult,
+  UploaderOptions,
+  UploadError,
+  FileEntry,
+  QueueOptions,
+  DropZoneOptions,
+  PasteOptions,
+} from "./file-uploader";
+
+// --- OAuth Helper ---
+export {
+  OAuthHelper,
+  createOAuthHelper,
+} from "./oauth-helper";
+export type {
+  OAuthProvider,
+  OAuthGrantType,
+  OAuthResponseType,
+  OAuthConfig,
+  OAuthTokens,
+  OAuthUserInfo,
+  OAuthSession,
+  OAuthError,
+} from "./oauth-helper";
+
+// --- QR Generator ---
+export {
+  generateQR,
+  estimateVersion,
+  getQRCapacity,
+  validateQRContent,
+} from "./qr-generator";
+export type {
+  ErrorCorrectionLevel,
+  QRMode,
+  QRRenderFormat,
+  QROptions,
+  QRResult,
+} from "./qr-generator";
