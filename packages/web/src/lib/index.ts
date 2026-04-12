@@ -59705,3 +59705,36 @@ export {
   DialogV2,
   createDialogV2,
 } from "./dialog-v2";
+
+// --- dialog ---
+export type {
+  DialogOptions,
+  DialogInstance,
+} from "./dialog";
+export {
+  Dialog as DialogComponent,
+  createDialogComponent,
+} from "./dialog";
+
+// --- digital-clock ---
+export type {
+  DigitalClockOptions,
+  DigitalClockInstance,
+} from "./digital-clock";
+export {
+  DigitalClock,
+  createDigitalClock,
+} from "./digital-clock";
+
+// --- divider-utils ---
+export type {
+  DividerOrientation,
+  DividerStyle,
+  DividerOptions,
+} from "./divider-utils";
+export {
+  createDivider,
+  createLabeledDivider,
+  createVerticalDivider,
+  createHorizontalDivider,
+} from "./divider-utils";
