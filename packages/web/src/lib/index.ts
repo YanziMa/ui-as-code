@@ -58962,3 +58962,47 @@ export {
   resetCropper,
   destroyCropper,
 } from "./cropper-utils";
+
+// --- cropper ---
+export type {
+  CropperComponentOptions,
+  CropperComponentInstance,
+} from "./cropper";
+export {
+  ImageCropper,
+  createImageCropper,
+} from "./cropper";
+
+// --- crypto-advanced ---
+export type {
+  CryptoAdvancedOptions,
+  KeyPairOptions,
+  SignatureOptions,
+} from "./crypto-advanced";
+export {
+  generateRSAKeyPair,
+  generateECKeyPair,
+  signData,
+  verifySignature,
+  encryptAES,
+  decryptAES,
+  deriveKeyFromPassword,
+  generateSecureRandom,
+  hashSHA256 as advHashSHA256,
+  hashSHA512,
+} from "./crypto-advanced";
+
+// --- crypto-utils ---
+export {
+  generateUUID,
+  generateRandomString,
+  generateRandomBytes,
+  hashString,
+  hmacDigest,
+  encodeBase64 as cryptoEncodeBase64,
+  decodeBase64 as cryptoDecodeBase64,
+  encodeHex,
+  decodeHex,
+  compareConstantTime,
+  pbkdf2,
+} from "./crypto-utils";
