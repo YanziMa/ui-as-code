@@ -57341,3 +57341,43 @@ export {
   CalendarPicker,
   createCalendarPicker,
 } from "./calendar-picker";
+
+// --- calendar-scheduler ---
+export type {
+  SchedulerEvent,
+  SchedulerOptions,
+  SchedulerInstance,
+} from "./calendar-scheduler";
+export {
+  CalendarScheduler,
+  createCalendarScheduler,
+} from "./calendar-scheduler";
+
+// --- calendar-utils ---
+export type {
+  CalendarUtilsOptions,
+  CalendarUtilsDate,
+} from "./calendar-utils";
+export {
+  setupCalendar,
+  renderMonthGrid,
+  renderWeekGrid,
+  renderDayGrid,
+  getWeekDates,
+  getMonthDates,
+  isSameDay,
+  isInRange,
+  formatCalendarDate,
+  parseCalendarDate,
+} from "./calendar-utils";
+
+// --- calendar-view ---
+export type {
+  CalendarViewOptions,
+  CalendarViewEvent,
+  CalendarViewInstance,
+} from "./calendar-view";
+export {
+  CalendarView,
+  createCalendarView,
+} from "./calendar-view";
