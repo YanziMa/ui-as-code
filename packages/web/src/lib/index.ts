@@ -54196,3 +54196,64 @@ export {
   WsClient,
   createWsClient,
 } from "./ws-protocol.js";
+
+// --- websocket-reconnection (Batch 1709) ---
+export type {
+  ConnectionState as Wsrc_ConnectionState2,
+} from "./websocket-reconnection.js";
+export type {
+  ReconnectOptions,
+  HeartbeatOptions,
+  WsReconnectConfig,
+} from "./websocket-reconnection.js";
+export type {
+  WsEventListener as Wsrc_WsEventListener,
+  ConnectionStats as Wsrc_ConnectionStats,
+} from "./websocket-reconnection.js";
+export {
+  WebSocketManager as Wsrc_WebSocketManager3,
+  createWebSocket as Wsrc_createWebSocket2,
+  createChatWebSocket,
+  createStreamWebSocket,
+} from "./websocket-reconnection.js";
+// --- websocket (Batch 1709) ---
+export type {
+  WsEvent as Ws_WsEvent,
+  WebSocketData,
+} from "./websocket.js";
+export type {
+  OpenHandler,
+  CloseHandler,
+  ErrorHandler,
+  MessageHandler,
+  ReconnectingHandler,
+  WsEventHandler,
+} from "./websocket.js";
+export type {
+  WebSocketState as Ws_WebSocketState,
+  WebSocketStats as Ws_WebSocketStats,
+  ReconnectConfig as Ws_ReconnectConfig,
+  HeartbeatConfig as Ws_HeartbeatConfig,
+  WebSocketOptions as Ws_WebSocketOptions,
+} from "./websocket.js";
+export {
+  WebSocketManager as Ws_WebSocketManager4,
+  WsRoomManager,
+  isWebSocketSupported,
+  getWebSocketUrl,
+  createWebSocketUrl,
+  parseWsUrl,
+} from "./websocket.js";
+// --- zoom-pan (Batch 1709) ---
+export type {
+  PanConstraint,
+  ZoomOrigin,
+} from "./zoom-pan.js";
+export type {
+  ZoomPanOptions,
+  ZoomPanState,
+  ZoomPanInstance,
+} from "./zoom-pan.js";
+export {
+  createZoomPan,
+} from "./zoom-pan.js";
