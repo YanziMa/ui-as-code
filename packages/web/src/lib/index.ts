@@ -60387,3 +60387,39 @@ export {
   invokeMain,
   onIPCMessage,
 } from "./electron-bridge";
+
+// --- ellipsis-text ---
+export type {
+  EllipsisTextOptions,
+  EllipsisTextInstance,
+} from "./ellipsis-text";
+export {
+  EllipsisText,
+  createEllipsisText,
+} from "./ellipsis-text";
+
+// --- email ---
+export {
+  validateEmail,
+  parseEmail,
+  formatEmail,
+  normalizeEmail,
+  isEmailDisposable,
+  isEmailFreeProvider,
+  obfuscateEmail,
+  extractEmails,
+  generateGravatarURL,
+  generateEmailTemplate,
+} from "./email";
+
+// --- emoji-picker ---
+export type {
+  EmojiPickerOptions,
+  EmojiCategory,
+  EmojiSkinTone,
+  EmojiPickerInstance,
+} from "./emoji-picker";
+export {
+  EmojiPicker,
+  createEmojiPicker,
+} from "./emoji-picker";
