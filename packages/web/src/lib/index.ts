@@ -60501,3 +60501,49 @@ export {
   arrayBufferToBase64,
   base64ToArrayBuffer,
 } from "./encoding-utils";
+
+// --- encoding ---
+export {
+  base64 as encBase64,
+  atob as encAtob,
+  btoa as encBtoa,
+  utf8Encode,
+  utf8Decode,
+  encodeURIComponent as encEncodeURIComponent,
+  decodeURIComponent as encDecodeURIComponent,
+} from "./encoding";
+
+// --- encryption ---
+export type {
+  EncryptionOptions,
+  KeyPairOptions as EncKeyOptions,
+  EncryptedData,
+} from "./encryption";
+export {
+  generateKey as encGenerateKey,
+  encrypt as encEncrypt,
+  decrypt as encDecrypt,
+  sign as encSign,
+  verify as encVerify,
+  hash as encHash,
+  deriveKey as encDeriveKey,
+  generateRandomBytes as encGenBytes,
+} from "./encryption";
+
+// --- env-detection ---
+export {
+  isDev as envIsDev,
+  isProd as envIsProd,
+  isTest as envIsTest,
+  isBrowser,
+  isNode,
+  isDeno,
+  getPlatform,
+  getOS,
+  getArch,
+  getRuntimeVersion,
+  isMobileWeb,
+  isDesktopWeb,
+  isWorker,
+  getEnvironmentName,
+} from "./env-detection";
