@@ -59307,3 +59307,43 @@ export {
   parseQuery,
   buildQuery,
 } from "./data-query-engine";
+
+// --- data-structures ---
+export {
+  LinkedList,
+  DoublyLinkedList,
+  Stack as DSStack,
+  Queue as DSQueue,
+  BinaryHeap,
+  MinHeap,
+  MaxHeap,
+  Trie,
+  LRUCache as DSLRUCache,
+  BloomFilter,
+  RingBuffer,
+} from "./data-structures";
+
+// --- data-sync-engine ---
+export type {
+  SyncEngineOptions,
+  SyncConflict,
+  SyncResolutionStrategy,
+  SyncOperation,
+  SyncState,
+} from "./data-sync-engine";
+export {
+  DataSyncEngine,
+  createDataSyncEngine,
+} from "./data-sync-engine";
+
+// --- data-table-advanced ---
+export type {
+  AdvancedTableColumn,
+  AdvancedTableRow,
+  AdvancedTableOptions,
+  AdvancedTableInstance,
+} from "./data-table-advanced";
+export {
+  AdvancedDataTable,
+  createAdvancedDataTable,
+} from "./data-table-advanced";
