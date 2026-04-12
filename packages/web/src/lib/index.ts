@@ -57717,3 +57717,36 @@ export {
   Checkbox as CheckboxComponent,
   createCheckboxComponent,
 } from "./checkbox";
+
+// --- chip-group ---
+export type {
+  ChipGroupOption,
+  ChipGroupOptions,
+  ChipGroupInstance,
+} from "./chip-group";
+export {
+  ChipGroup,
+  createChipGroup,
+} from "./chip-group";
+
+// --- chip-input ---
+export type {
+  ChipInputOptions,
+  ChipInputInstance,
+} from "./chip-input";
+export {
+  ChipInput,
+  createChipInput,
+} from "./chip-input";
+
+// --- chip-lite ---
+export type {
+  ChipLiteOptions,
+  ChipLiteVariant,
+  ChipLiteSize,
+  ChipLiteInstance,
+} from "./chip-lite";
+export {
+  ChipLite,
+  createChipLite,
+} from "./chip-lite";
