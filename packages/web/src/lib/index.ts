@@ -62003,3 +62003,12 @@ export * from "./overlay-utils";
 
 // --- pagination-lite ---
 export * from "./pagination-lite";
+
+// --- pagination-utils ---
+export * from "./pagination-utils";
+
+// --- parallax-scroller ---
+export * from "./parallax-scroller";
+
+// --- password ---
+export * from "./password";
