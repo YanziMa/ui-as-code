@@ -56259,3 +56259,41 @@ export {
   APIGateway,
   createAPIGateway,
 } from "./api-gateway";
+
+// --- api-logger ---
+export type {
+  APILogEntry,
+  APILoggerOptions,
+} from "./api-logger";
+export {
+  APIRequestLogger,
+  createAPIRequestLogger,
+} from "./api-logger";
+
+// --- api-middleware ---
+export type {
+  RateLimitEntry,
+  APIContext,
+} from "./api-middleware";
+export {
+  rateLimiter,
+  withAuth,
+  withRateLimit,
+  handleAPIError,
+  createSuccessResponse,
+  createErrorResponse,
+} from "./api-middleware";
+
+// --- api-utils ---
+export {
+  buildQueryString,
+  parsePaginationHeaders,
+  retryWithBackoff,
+  debounceAPICall,
+  createAPIClientFactory,
+  normalizeAPIError,
+  isNetworkError,
+  isAuthError,
+  isServerError,
+  isClientError,
+} from "./api-utils";
