@@ -53034,3 +53034,42 @@ export type {
   TooltipItemOptions as TtpGrp_ItemOptions,
   TooltipGroupInstance as TtpGrp_Instance,
 } from "./tooltip-group";
+
+// --- tooltip-lite ---
+export {
+  createTooltip as TtpLt_createTooltip,
+  attachTooltip as TtpLt_attachTooltip,
+  attachClickTooltip as TtpLt_attachClickTooltip,
+  attachHtmlTooltip as TtpLt_attachHtmlTooltip,
+} from "./tooltip-lite";
+export type {
+  TooltipPlacement as TtpLt_Placement,
+  TooltipTrigger as TtpLt_Trigger,
+  TooltipOptions as TtpLt_Options,
+  TooltipInstance as TtpLt_Instance,
+} from "./tooltip-lite";
+
+// --- tooltip-manager ---
+export {
+  TooltipManager,
+} from "./tooltip-manager";
+export type {
+  Placement as TtpMgr_Placement,
+  TriggerMode as TtpMgr_TriggerMode,
+  TooltipOptions as TtpMgr_Options,
+  VirtualElement as TtpMgr_VirtualElement,
+  TooltipInstance as TtpMgr_Instance,
+} from "./tooltip-manager";
+
+// --- tooltip-popover ---
+export {
+  createTooltip as TtpPop_createTooltip,
+  createPopover,
+} from "./tooltip-popover";
+export type {
+  Placement as TtpPop_Placement,
+  TriggerMode as TtpPop_TriggerMode,
+  TooltipOptions as TtpPop_Options,
+  PopoverOptions as TtpPop_PopoverOptions,
+  TooltipInstance as TtpPop_Instance,
+} from "./tooltip-popover";
