@@ -57178,3 +57178,58 @@ export {
   isSafari,
   isEdge,
 } from "./browser-detection";
+
+// --- browser-utils ---
+export type {
+  BrowserInfo as BrowserUtilsInfo,
+  ScreenInfo,
+} from "./browser-utils";
+export {
+  getBrowserInfo as getBrowserUtilsInfo,
+  getScreenInfo,
+  isOnline,
+  isOffline,
+  getLanguage,
+  getTimezone,
+  getCookiesEnabled,
+  getDoNotTrack,
+  copyToClipboard as browserCopyClipboard,
+  shareContent,
+  fullscreenEnter,
+  fullscreenExit,
+  isFullscreen,
+  printPage,
+} from "./browser-utils";
+
+// --- browser ---
+export type {
+  BrowserInfo as AdvancedBrowserInfo,
+  DeviceType,
+  EngineType,
+} from "./browser";
+export {
+  detectBrowser as advancedDetectBrowser,
+  detectEngine,
+  detectDeviceType,
+  getBrowserVersion,
+  compareVersions,
+  supportsWebGL,
+  supportsWebGPU,
+  supportsServiceWorker,
+  supportsNotification,
+  supportsPushAPI,
+  supportsBluetooth,
+  supportsUSB,
+  supportsSerial,
+} from "./browser";
+
+// --- bubble-chart ---
+export type {
+  BubbleChartData,
+  BubbleChartOptions,
+  BubbleChartInstance,
+} from "./bubble-chart";
+export {
+  BubbleChart,
+  createBubbleChart,
+} from "./bubble-chart";
