@@ -52817,3 +52817,14 @@ export {
   type TestimonialInstance as TstUtl_TestimonialInstance,
   type TestimonialLayout as TstUtl_TestimonialLayout,
 } from "./testimonial-utils";
+// --- testimonial ---
+export type { TestimonialLayout, TestimonialSize, TestimonialItem, TestimonialOptions, TestimonialInstance } from "./testimonial";
+export { createTestimonial } from "./testimonial";
+
+// --- testing-utils ---
+export type { TestFn, TestCase, TestSuite, TestResult, SuiteResult, AssertionContext, Spy } from "./testing-utils";
+export { AssertionError, Assert, expect, doesNotThrow, spyOn, createMock, TestRunner, saveSnapshot, matchSnapshot, clearSnapshots } from "./testing-utils";
+
+// --- text-diff ---
+export type { DiffFormat, DiffOp, DiffHunk, DiffResult, DiffStats, TextDiffOptions, MergeResult, Patch } from "./text-diff";
+export { diffText, merge3Way, applyPatch, reversePatch } from "./text-diff";
