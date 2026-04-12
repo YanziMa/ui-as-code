@@ -54366,3 +54366,46 @@ export {
   jsonToCsv,
   mergeCSV,
 } from "./csv-parse.js";
+
+export {
+  type WorkerStatus,
+  type TaskPriority,
+  type WorkerTask,
+  type TaskResult,
+  type TaskError,
+  type WorkerInfo,
+  type PoolStatistics,
+  type PoolOptions,
+  WorkerPool,
+  createWorkerPool,
+} from "./worker-pool.js";
+
+export {
+  type WSState,
+  type MessageType,
+  type WSMessage,
+  type WSRoomConfig,
+  type WSPresence,
+  type WSConnectionOptions,
+  type RoomMessageHandler,
+  WebSocketRoomClient,
+  createWSRoom,
+} from "./websocket-room.js";
+
+export {
+  type CellValue,
+  type CellStyle,
+  type FontStyle,
+  type FillStyle,
+  type BorderStyle,
+  type BorderEdge,
+  type AlignmentStyle,
+  type RowData,
+  type SheetData,
+  type ExcelOptions,
+  type PrintSettings,
+  type DocumentProperties,
+  ExcelExporter,
+  quickExport,
+  createExcelExporter,
+} from "./excel-export.js";
