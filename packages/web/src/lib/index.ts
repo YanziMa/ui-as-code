@@ -61553,3 +61553,12 @@ export * from "./candlestick-chart";
 
 // --- canvas-draw ---
 export * from "./canvas-draw";
+
+// --- canvas-engine ---
+export * from "./canvas-engine";
+
+// --- canvas-utils ---
+export * from "./canvas-utils";
+
+// --- carousel-utils ---
+export * from "./carousel-utils";
