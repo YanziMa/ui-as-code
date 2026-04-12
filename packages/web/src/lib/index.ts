@@ -53108,3 +53108,48 @@ export type {
   TooltipV2Options as TtpV2_Options,
   TooltipV2Instance as TtpV2_Instance,
 } from "./tooltip-v2";
+
+// --- touch-utils ---
+export {
+  isTouchDevice,
+  getMaxTouchPoints,
+  hasForceTouch,
+  hasRotationTouch,
+  getTouchCount,
+  extractTouches,
+  extractChangedTouches,
+  createTouchListener,
+  disablePinchZoom,
+  preventContextMenu,
+  getTouchCentroid,
+  touchDistance,
+  initialTouchDistance,
+  currentTouchDistance,
+  getPinchScale,
+} from "./touch-utils";
+export type {
+  TouchPoint as TchUtl_TouchPoint,
+  TouchConfig as TchUtl_Config,
+  TouchHandler as TchUtl_Handler,
+} from "./touch-utils";
+
+// --- tour-guide ---
+export {
+  TourManager,
+  createTour as TrGd_createTour,
+} from "./tour-guide";
+export type {
+  TourStep as TrGd_Step,
+  TourOptions as TrGd_Options,
+  TourInstance as TrGd_Instance,
+} from "./tour-guide";
+
+// --- tour-utils ---
+export {
+  createTour as TrUtl_createTour,
+} from "./tour-utils";
+export type {
+  TourStep as TrUtl_Step,
+  TourOptions as TrUtl_Options,
+  TourInstance as TrUtl_Instance,
+} from "./tour-utils";
