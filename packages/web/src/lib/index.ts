@@ -60175,3 +60175,33 @@ export {
   DrawerManager,
   createDrawerManager,
 } from "./drawer-manager";
+
+// --- drawer-panel ---
+export type {
+  DrawerPanelOptions,
+  DrawerPanelInstance,
+} from "./drawer-panel";
+export {
+  DrawerPanel,
+  createDrawerPanel,
+} from "./drawer-panel";
+
+// --- drawer-utils ---
+export {
+  openDrawer,
+  closeDrawer,
+  toggleDrawer,
+  isDrawerOpen,
+  setDrawerSize,
+  setupDrawerKeyboardNav,
+} from "./drawer-utils";
+
+// --- drawer-v2 ---
+export type {
+  DrawerV2Options,
+  DrawerV2Instance,
+} from "./drawer-v2";
+export {
+  DrawerV2,
+  createDrawerV2,
+} from "./drawer-v2";
