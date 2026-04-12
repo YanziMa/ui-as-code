@@ -60074,3 +60074,35 @@ export {
   DragDropSystem,
   createDragDropSystem,
 } from "./drag-drop-system";
+
+// --- drag-drop-utils ---
+export {
+  setupDraggable,
+  setupDroppable,
+  setupSortable,
+  setupDragHandle,
+  getDragState,
+  setDragConstraints,
+} from "./drag-drop-utils";
+
+// --- drag-drop (core) ---
+export type {
+  DragDropOptions as DDCoreOptions,
+  DragDropConfig as DDCoreConfig,
+  DDCoreInstance,
+} from "./drag-drop";
+export {
+  DragDropCore,
+  createDragDropCore,
+} from "./drag-drop";
+
+// --- drag-list ---
+export type {
+  DragListItem,
+  DragListOptions,
+  DragListInstance,
+} from "./drag-list";
+export {
+  DragList,
+  createDragList,
+} from "./drag-list";
