@@ -60787,3 +60787,45 @@ export {
   extractEXIFData,
   stripEXIF,
 } from "./exif-reader";
+
+// --- expansion-panel-utils ---
+export type {
+  ExpansionPanelOptions,
+  ExpansionPanelInstance,
+} from "./expansion-panel-utils";
+export {
+  createExpansionPanel,
+  togglePanel,
+  expandPanel,
+  collapsePanel,
+  setPanelPriority,
+} from "./expansion-panel-utils";
+
+// --- experiment ---
+export type {
+  ExperimentOptions,
+  ExperimentVariant,
+  ExperimentResult,
+  ExperimentInstance,
+} from "./experiment";
+export {
+  ExperimentFramework,
+  createExperiment,
+  assignVariant,
+  trackExposure,
+  getExperimentMetrics,
+} from "./experiment";
+
+// --- expression-parser ---
+export type {
+  ExpressionAST,
+  ExpressionParserOptions,
+  ExpressionContext,
+  ExpressionFunction,
+} from "./expression-parser";
+export {
+  parseExpression,
+  evaluateExpression,
+  createExpressionParser,
+  registerExpressionFunction,
+} from "./expression-parser";
