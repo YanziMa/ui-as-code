@@ -58813,3 +58813,39 @@ export {
   CopyBlock,
   createCopyBlock,
 } from "./copy-block";
+
+// --- copy-button ---
+export type {
+  CopyButtonOptions,
+  CopyButtonInstance,
+} from "./copy-button";
+export {
+  CopyButton,
+  createCopyButton,
+} from "./copy-button";
+
+// --- copy-paste ---
+export {
+  copy as cpCopy,
+  paste,
+  cut,
+  copyText as cpCopyText,
+  copyHTML as cpCopyHTML,
+  copyImage as cpCopyImage,
+  readText as cpReadText,
+  readImage as cpReadImage,
+  getClipboardFormats as cpGetFormats,
+  onPasteEvent,
+} from "./copy-paste";
+
+// --- copy-to-clipboard ---
+export type {
+  CopyToClipboardOptions,
+  CopyResult,
+} from "./copy-to-clipboard";
+export {
+  copyToClipboard,
+  copyTextToClipboard,
+  copyHTMLToClipboard,
+  copyRichTextToClipboard,
+} from "./copy-to-clipboard";
