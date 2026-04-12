@@ -52828,3 +52828,13 @@ export { AssertionError, Assert, expect, doesNotThrow, spyOn, createMock, TestRu
 // --- text-diff ---
 export type { DiffFormat, DiffOp, DiffHunk, DiffResult, DiffStats, TextDiffOptions, MergeResult, Patch } from "./text-diff";
 export { diffText, merge3Way, applyPatch, reversePatch } from "./text-diff";
+// --- text-input ---
+export type { InputSize as TxtInp_InputSize, InputState as TxtInp_InputState, TextInputOptions, TextInputInstance } from "./text-input";
+export { createTextInput } from "./text-input";
+
+// --- text-processing ---
+export { toTitleCase as TxtProc_toTitleCase, toSentenceCase as TxtProc_toSentenceCase, toKebabCase as TxtProc_toKebabCase, toSnakeCase as TxtProc_toSnakeCase, toCamelCase as TxtProc_toCamelCase, toPascalCase as TxtProc_toPascalCase, truncateText as TxtProc_truncateText, wordWrap as TxtProc_wordWrap, removeWhitespace as TxtProc_removeWhitespace, normalizeWhitespace as TxtProc_normalizeWhitespace, reverseString as TxtProc_reverseString, countWords as TxtProc_countWords, countChars as TxtProc_countChars, estimateReadingTime as TxtProc_estimateReadingTime, getInitials as TxtProc_getInitials, slugifyText as TxtProc_slugifyText, stripAnsiCodes as TxtProc_stripAnsiCodes, isHtml as TxtProc_isHtml, stripHtmlTags as TxtProc_stripHtmlTags, padText as TxtProc_padText, repeatText as TxtProc_repeatText } from "./text-processing";
+
+// --- text-selection ---
+export type { SelectionRange as TxtSel_SelectionRange, CursorPosition as TxtSel_CursorPosition, TextBoundaryOptions as TxtSel_TextBoundaryOptions } from "./text-selection";
+export { getSelection as TxtSel_getSelection, setSelection as TxtSel_setSelection, clearSelection as TxtSel_clearSelection, collapseSelection as TxtSel_collapseSelection, selectAll as TxtSel_selectAll, selectText as TxtSel_selectText, getSelectedText as TxtSel_getSelectedText, getSelectedHtml as TxtSel_getSelectedHtml, saveSelection as TxtSel_saveSelection, restoreSelection as TxtSel_restoreSelection, clearSavedSelection as TxtSel_clearSavedSelection, getCursorPosition as TxtSel_getCursorPosition, setCursorPosition as TxtSel_setCursorPosition, moveCursor as TxtSel_moveCursor, selectWord as TxtSel_selectWord, selectLine as TxtSel_selectLine, selectSentence as TxtSel_selectSentence, selectAllOccurrences as TxtSel_selectAllOccurrences, highlightSelection as TxtSel_highlightSelection, removeHighlights as TxtSel_removeHighlights, highlightText as TxtSel_highlightText, observeSelection as TxtSel_observeSelection } from "./text-selection";
