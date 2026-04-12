@@ -62183,3 +62183,12 @@ export * from "./search-autocomplete";
 
 // --- search-dialog ---
 export * from "./search-dialog";
+
+// --- search-engine ---
+export * from "./search-engine";
+
+// --- search-fuzzy ---
+export * from "./search-fuzzy";
+
+// --- search-highlight ---
+export * from "./search-highlight";
