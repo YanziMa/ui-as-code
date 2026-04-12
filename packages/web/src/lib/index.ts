@@ -58624,3 +58624,40 @@ export {
   suppressConsoleInProduction,
   restoreConsole,
 } from "./console-enhance";
+
+// --- constants ---
+export {
+  APP_NAME,
+  APP_VERSION,
+  ENVIRONMENT,
+  API_BASE_URL,
+  DEFAULT_LOCALE,
+  DEFAULT_TIMEZONE,
+  BREAKPOINTS as CONST_BREAKPOINTS,
+  ANIMATION_DURATION,
+  DEBOUNCE_DELAY,
+  THROTTLE_DELAY,
+} from "./constants";
+
+// --- content-visibility ---
+export type {
+  ContentVisibilityOptions,
+  ContentVisibilityState,
+} from "./content-visibility";
+export {
+  setupContentVisibility,
+  destroyContentVisibility,
+  observeContentVisibility,
+} from "./content-visibility";
+
+// --- context-menu-lite ---
+export type {
+  ContextMenuItemLite,
+  ContextMenuSeparatorLite,
+  ContextMenuLiteOptions,
+  ContextMenuLiteInstance,
+} from "./context-menu-lite";
+export {
+  ContextMenuLite,
+  createContextMenuLite,
+} from "./context-menu-lite";
