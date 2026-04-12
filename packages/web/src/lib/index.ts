@@ -61265,3 +61265,12 @@ export * from "./code-editor";
 
 // --- code-highlighter ---
 export * from "./code-highlighter";
+
+// --- collapse ---
+export * from "./collapse";
+
+// --- color-picker ---
+export * from "./color-picker";
+
+// --- color-utils ---
+export * from "./color-utils";
