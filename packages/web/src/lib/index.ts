@@ -60632,3 +60632,38 @@ export {
   parseStackFrame,
   formatStack,
 } from "./error";
+
+// --- event-aggregator ---
+export type {
+  EventAggregatorOptions,
+  EventCounter,
+  EventGauge,
+  EventHistogram,
+  AggregatedEvent,
+} from "./event-aggregator";
+export {
+  EventAggregator,
+  createEventAggregator,
+} from "./event-aggregator";
+
+// --- event-bus-utils ---
+export {
+  createEventBus as ebuCreate,
+  publish as ebuPublish,
+  subscribe as ebuSubscribe,
+  unsubscribe as ebuUnsubscribe,
+  once as ebuOnce,
+  clearAll as ebuClearAll,
+} from "./event-bus-utils";
+
+// --- event-bus-v2 ---
+export type {
+  EventBusV2Options,
+  EventBusV2Channel,
+  MiddlewareFn as EBVMiddleware,
+  SubscriptionHandle as EBVSubscription,
+} from "./event-bus-v2";
+export {
+  EventBusV2,
+  createEventBusV2,
+} from "./event-bus-v2";
