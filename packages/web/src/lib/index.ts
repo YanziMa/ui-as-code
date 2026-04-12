@@ -52882,3 +52882,13 @@ export { createTimePicker as TmPkUtl_create } from "./time-picker-utils";
 // --- time-picker ---
 export type { TimeFormat as TmPk_Format, TimePickerMode, TimePickerOptions, TimePickerInstance } from "./time-picker";
 export { createTimePicker } from "./time-picker";
+// --- time-range-picker ---
+export type { TimeFormat as TmRngPk_Format, TimeStep, TimeValue as TmRngPk_TimeValue, TimeRangePreset, TimeRangePickerOptions, TimeRangePickerInstance } from "./time-range-picker";
+export { createTimeRangePicker } from "./time-range-picker";
+
+// --- time-utils ---
+export type { ParsedDuration as TmUtl_ParsedDuration, CountdownOptions as TmUtl_CountdownOpts, StopwatchLap, RateLimitResult } from "./time-utils";
+export { parseDuration as TmUtl_parseDuration, formatDuration as TmUtl_formatDuration, formatDurationCompact, CountdownTimer, Stopwatch, RateLimiter, FixedWindowRateLimiter, debounce as TmUtl_debounce, throttle as TmUtl_throttle, addTime, diffDates, isSameDay as TmUtl_isSameDay, isToday as TmUtl_isToday, isYesterday as TmUtl_isYesterday, isTomorrow, getDayOfYear, getWeekNumber, getQuarter, startOfDay as TmUtl_startOfDay, endOfDay as TmUtl_endOfDay, startOfWeek as TmUtl_startOfWeek, endOfWeek as TmUtl_endOfWeek, startOfMonth as TmUtl_startOfMonth, endOfMonth as TmUtl_endOfMonth, daysInMonth, isLeapYear, getMonthDays, formatDateRange, getUserTimezone, getTimezoneOffset as TmUtl_getTimezoneOffset, toTimezone, TIMEZONE_ALIASES, scheduleAt, IntervalScheduler } from "./time-utils";
+
+// --- time ---
+export { now, nowSeconds, delay, measureTime, toISOString, parseISODate, isToday, isYesterday, isWithinLastDays, timeAgo, startOfDay, endOfDay, startOfWeek, endOfWeek, startOfMonth, endOfMonth, addDays, addWeeks, addMonths, diffDays, diffHours, isSameDay, formatDateLocale, formatTimeLocale, getTimezoneOffset as Tm_getTimezoneOffset } from "./time";
