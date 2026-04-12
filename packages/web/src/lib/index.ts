@@ -56596,3 +56596,46 @@ export {
   AudioVisualizer,
   createAudioVisualizer,
 } from "./audio-visualizer";
+
+// --- audio ---
+export {
+  playAudio,
+  stopAudio,
+  pauseAudio,
+  resumeAudio,
+  setVolume,
+  getDuration,
+  getCurrentTime,
+  seekTo,
+  isPlaying,
+  loadAudio,
+  createAudioPlayer as simpleAudioPlayer,
+} from "./audio";
+
+// --- audit-log ---
+export type {
+  AuditEvent,
+  AuditLogOptions,
+  AuditQuery,
+  AuditStatistics,
+  AuditExportFormat,
+} from "./audit-log";
+export {
+  AuditLog,
+  createAuditLog,
+} from "./audit-log";
+
+// --- auth-manager ---
+export type {
+  AuthSession,
+  AuthUser,
+  AuthCredentials,
+  AuthProvider,
+  AuthMFAConfig,
+  AuthManagerOptions,
+  AuthState,
+} from "./auth-manager";
+export {
+  AuthManager,
+  createAuthManager,
+} from "./auth-manager";
