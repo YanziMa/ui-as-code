@@ -55736,3 +55736,70 @@ export {
   hideVisual,
   showVisual,
 } from "./a11y";
+
+// --- ab-test ---
+export type {
+  ABVariant,
+  ABExperiment,
+  ABResult,
+  ABConfig,
+  ABStats,
+} from "./ab-test";
+export {
+  createABTest,
+  getVariant,
+  trackConversion,
+  getResults,
+  isSignificant,
+  calculateSampleSize,
+  getWinner,
+  resetExperiment,
+} from "./ab-test";
+
+// --- accessibility-engine ---
+export type {
+  A11yEngineOptions,
+  FocusTrap as A11yFocusTrap,
+  LiveRegion as A11yLiveRegion,
+  AnnouncerQueue,
+  KeyboardNavState,
+  WCAGLevel,
+  AuditResult,
+  AuditIssue,
+  AuditReport,
+} from "./accessibility-engine";
+export {
+  AccessibilityEngine,
+  createAccessibilityEngine,
+} from "./accessibility-engine";
+
+// --- accessibility-utils ---
+export type {
+  AriaRole,
+  AriaProperty,
+  AriaState,
+  FocusableSelector,
+  TabOrderItem,
+} from "./accessibility-utils";
+export {
+  setAria,
+  getAria,
+  removeAria,
+  setRole,
+  getRole,
+  announceToSR,
+  trapFocusInElement,
+  releaseFocusFromElement,
+  manageFocusForDialog,
+  manageFocusForModal,
+  setupRovingTabIndex,
+  destroyRovingTabIndex,
+  detectReducedMotion,
+  detectHighContrast,
+  detectForcedColors,
+  checkColorContrast,
+  findHeadingHierarchyIssues,
+  findLandmarkRegions,
+  generateA11yTree,
+  simulateScreenReader,
+} from "./accessibility-utils";
