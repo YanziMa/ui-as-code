@@ -58498,3 +58498,47 @@ export {
   createComparator,
   reverseComparator,
 } from "./comparators";
+
+// --- component-utils ---
+export {
+  createComponent,
+  mountComponent,
+  unmountComponent,
+  updateProps,
+  diffProps,
+  createRef,
+  forwardRef,
+  createContext,
+  useContext,
+  createPortal,
+  createSuspense,
+} from "./component-utils";
+
+// --- component ---
+export type {
+  ComponentDefinition,
+  ComponentInstance as CompInst,
+  ComponentLifecycle,
+} from "./component";
+export {
+  defineComponent,
+  renderComponent,
+  destroyComponent,
+  getComponentState,
+  setComponentState,
+  forceUpdate,
+} from "./component";
+
+// --- confetti-utils ---
+export type {
+  ConfettiOptions,
+  ParticleConfig,
+  ConfettiInstance,
+} from "./confetti-utils";
+export {
+  fireConfetti,
+  createConfettiCannon,
+  createParticleBurst,
+  createCelebrationEffect,
+  stopConfetti,
+} from "./confetti-utils";
