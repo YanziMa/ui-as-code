@@ -60144,3 +60144,34 @@ export {
   DraggableWindow,
   createDraggableWindow,
 } from "./draggable-window";
+
+// --- drawer-layout ---
+export type {
+  DrawerLayoutOptions,
+  DrawerLayoutInstance,
+} from "./drawer-layout";
+export {
+  DrawerLayout,
+  createDrawerLayout,
+} from "./drawer-layout";
+
+// --- drawer-lite ---
+export type {
+  DrawerLiteOptions,
+  DrawerLiteInstance,
+} from "./drawer-lite";
+export {
+  DrawerLite,
+  createDrawerLite,
+} from "./drawer-lite";
+
+// --- drawer-manager ---
+export type {
+  DrawerManagerOptions,
+  DrawerConfig,
+  DrawerManagerInstance,
+} from "./drawer-manager";
+export {
+  DrawerManager,
+  createDrawerManager,
+} from "./drawer-manager";
