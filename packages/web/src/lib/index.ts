@@ -55960,3 +55960,36 @@ export {
   createAffix,
   destroyAffix,
 } from "./affix-utils";
+
+// --- affix ---
+export type {
+  AffixComponentOptions,
+  AffixComponentState,
+  AffixComponentInstance,
+} from "./affix";
+export {
+  Affix,
+  createAffixComponent,
+} from "./affix";
+
+// --- anchor-link ---
+export type {
+  AnchorLinkItem,
+  AnchorLinkProps,
+  AnchorLinkInstance,
+} from "./anchor-link";
+export {
+  AnchorLink,
+  createAnchorLink,
+} from "./anchor-link";
+
+// --- anchor-nav ---
+export type {
+  AnchorNavItem,
+  AnchorNavProps,
+  AnchorNavInstance,
+} from "./anchor-nav";
+export {
+  AnchorNav,
+  createAnchorNav,
+} from "./anchor-nav";
