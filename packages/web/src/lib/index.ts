@@ -54147,3 +54147,52 @@ export {
   isWorkerContext as Wku_isWorkerContext,
   getWorkerConcurrency as Wku_getWorkerConcurrency,
 } from "./worker-utils.js";
+
+// --- worker (Batch 1708) ---
+export {
+  createInlineWorker as Wkr_createInlineWorker2,
+  runInWorker,
+  TaskQueue as Wkr_TaskQueue,
+  BatchingProcessor,
+  requestIdleCallback,
+  cancelIdleCallback,
+} from "./worker.js";
+// --- workflow (Batch 1708) ---
+export type {
+  TaskId,
+  WorkflowId,
+  WorkflowStatus,
+} from "./workflow.js";
+export type {
+  TaskDefinition,
+  WorkflowContext,
+  TaskResult,
+  WorkflowResult,
+  WorkflowHook,
+  WorkflowOptions,
+} from "./workflow.js";
+export {
+  WorkflowDefinition,
+  WorkflowExecutor,
+  runWorkflow,
+  sequentialWorkflow,
+  parallelWorkflow,
+} from "./workflow.js";
+// --- ws-protocol (Batch 1708) ---
+export type {
+  WsConfig as Wsp_WsConfig,
+} from "./ws-protocol.js";
+export type {
+  WsMessage as Wsp_WsMessage,
+  WsConnectionState as Wsp_WsConnectionState2,
+} from "./ws-protocol.js";
+export type {
+  WsMessageHandler as Wsp_WsMessageHandler,
+  WsRawHandler as Wsp_WsRawHandler,
+  WsStateHandler as Wsp_WsStateHandler,
+  WsErrorHandler as Wsp_WsErrorHandler,
+} from "./ws-protocol.js";
+export {
+  WsClient,
+  createWsClient,
+} from "./ws-protocol.js";
