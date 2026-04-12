@@ -54856,3 +54856,33 @@ export {
   type StorageQuotaOptions,
   type StorageType,
 } from "./storage-quota";
+
+// --- Undo/Redo ---
+export {
+  UndoHistory,
+  type UndoItem,
+  type UndoBranch,
+  type UndoHistoryOptions,
+  type UndoState,
+  type UndoChangeListener,
+} from "./undo-redo";
+
+// --- Event Bus ---
+export {
+  EventBus,
+  createEventBus,
+  type EventCallback,
+  type EventMiddleware,
+  type Subscription,
+  type EmittedEvent,
+  type EventBusOptions,
+} from "./event-bus";
+
+// --- Idle Detector ---
+export {
+  IdleDetector,
+  createAutoPause,
+  type UserActivity,
+  type ActivityState,
+  type IdleDetectorOptions,
+} from "./idle-detector";
