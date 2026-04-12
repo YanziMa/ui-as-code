@@ -57448,3 +57448,54 @@ export {
   CanvasEngine as Canvas2DEngine,
   createCanvasEngine,
 } from "./canvas-engine";
+
+// --- canvas-utils ---
+export type {
+  CanvasContextManager,
+  DrawOptions,
+  ShapeStyle,
+  TextStyle,
+  GradientDef,
+} from "./canvas-utils";
+export {
+  createCanvasContext,
+  drawRect,
+  drawCircle,
+  drawLine,
+  drawPolygon,
+  drawText,
+  drawImage,
+  createLinearGradient,
+  createRadialGradient,
+  clearCanvas,
+  saveContext,
+  restoreContext,
+  setTransform,
+  toDataURL,
+  toBlob,
+} from "./canvas-utils";
+
+// --- canvas ---
+export type {
+  CanvasRenderingContext,
+  CanvasDrawCommand,
+} from "./canvas";
+export {
+  setupCanvas,
+  teardownCanvas,
+  resizeCanvas,
+  getPixelRatio,
+  getCanvasSize,
+  setCanvasSize,
+} from "./canvas";
+
+// --- card-utils ---
+export type {
+  CardUtilsOptions,
+  CardVariant,
+} from "./card-utils";
+export {
+  createCard,
+  setupCardHover,
+  setupCardCollapse,
+} from "./card-utils";
