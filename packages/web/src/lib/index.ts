@@ -58661,3 +58661,34 @@ export {
   ContextMenuLite,
   createContextMenuLite,
 } from "./context-menu-lite";
+
+// --- context-menu-manager ---
+export type {
+  ContextMenuItem as CMMItem,
+  ContextMenuManagerOptions,
+  ContextMenuManagerInstance,
+} from "./context-menu-manager";
+export {
+  ContextMenuManager,
+  createContextMenuManager,
+} from "./context-menu-manager";
+
+// --- context-menu-utils ---
+export {
+  showContextMenu,
+  hideContextMenu,
+  setupContextMenu,
+  destroyContextMenu,
+  navigateContextMenu,
+} from "./context-menu-utils";
+
+// --- context-menu-v2 ---
+export type {
+  ContextMenuItemV2,
+  ContextMenuV2Options,
+  ContextMenuV2Instance,
+} from "./context-menu-v2";
+export {
+  ContextMenuV2,
+  createContextMenuV2,
+} from "./context-menu-v2";
