@@ -61922,3 +61922,12 @@ export * from "./mediator";
 
 // --- mentions ---
 export * from "./mentions";
+
+// --- merge ---
+export * from "./merge";
+
+// --- metrics ---
+export * from "./metrics";
+
+// --- mind-map ---
+export * from "./mind-map";
