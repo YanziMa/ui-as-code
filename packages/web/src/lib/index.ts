@@ -56108,3 +56108,62 @@ export {
   AnimateEngine,
   createAnimateEngine,
 } from "./animate";
+
+// --- animation-engine ---
+export type {
+  AnimationEngineOptions,
+  KeyframeAnimation,
+  SpringConfig,
+  EasingFunction,
+  TimelineTrack,
+  AnimationEngineInstance,
+} from "./animation-engine";
+export {
+  AnimationEngine,
+  createAnimationEngine,
+} from "./animation-engine";
+
+// --- animation-frame-utils ---
+export type {
+  RAFLoopOptions,
+  TweenOptions,
+  SpringOptions,
+  FrameStats,
+} from "./animation-frame-utils";
+export {
+  rAF,
+  cancelRAF,
+  createLoop,
+  tween,
+  spring,
+  easeIn,
+  easeOut,
+  easeInOut,
+  getFrameRate,
+  throttleRAF,
+} from "./animation-frame-utils";
+
+// --- animation-library ---
+export type {
+  PresetAnimation,
+  StaggerConfig,
+  PathAnimationOptions,
+} from "./animation-library";
+export {
+  fadeIn,
+  fadeOut,
+  slideUp,
+  slideDown,
+  slideLeft,
+  slideRight,
+  scaleIn,
+  scaleOut,
+  bounce,
+  shake,
+  flip,
+  rotateIn,
+  pulse,
+  stagger,
+  animatePath,
+  createTimeline,
+} from "./animation-library";
