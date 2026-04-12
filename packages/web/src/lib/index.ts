@@ -61535,3 +61535,12 @@ export * from "./badge-utils";
 
 // --- base64 ---
 export * from "./base64";
+
+// --- biometrics ---
+export * from "./biometrics";
+
+// --- bottom-sheet ---
+export * from "./bottom-sheet";
+
+// --- box-model ---
+export * from "./box-model";
