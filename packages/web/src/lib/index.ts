@@ -61598,3 +61598,12 @@ export * from "./color-picker-advanced";
 
 // --- command-log ---
 export * from "./command-log";
+
+// --- command-menu ---
+export * from "./command-menu";
+
+// --- component-utils ---
+export * from "./component-utils";
+
+// --- config ---
+export * from "./config";
