@@ -62210,3 +62210,12 @@ export * from "./session-manager";
 
 // --- sharing ---
 export * from "./sharing";
+
+// --- shimmer ---
+export * from "./shimmer";
+
+// --- shortcuts-guide ---
+export * from "./shortcuts-guide";
+
+// --- shortcuts-manager ---
+export * from "./shortcuts-manager";
