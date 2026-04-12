@@ -60205,3 +60205,40 @@ export {
   DrawerV2,
   createDrawerV2,
 } from "./drawer-v2";
+
+// --- drawer ---
+export type {
+  DrawerOptions,
+  DrawerInstance,
+} from "./drawer";
+export {
+  Drawer as DrawerComponent,
+  createDrawerComponent,
+} from "./drawer";
+
+// --- drawing-board ---
+export type {
+  DrawingBoardOptions,
+  DrawingTool,
+  DrawingLayer,
+  DrawingBoardInstance,
+} from "./drawing-board";
+export {
+  DrawingBoard,
+  createDrawingBoard,
+} from "./drawing-board";
+
+// --- dropdown-menu-utils ---
+export type {
+  DropdownMenuItem as DDMItem,
+  DropdownMenuUtilsOptions,
+  DropdownPosition as DDMPosition,
+} from "./dropdown-menu-utils";
+export {
+  setupDropdownMenu,
+  destroyDropdownMenu,
+  openDropdown,
+  closeDropdown,
+  toggleDropdown,
+  navigateDropdown,
+} from "./dropdown-menu-utils";
