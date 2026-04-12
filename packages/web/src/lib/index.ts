@@ -52673,3 +52673,43 @@ export {
   type TagCloudOptions as TgInp_TagCloudOptions,
   type TagCloudInstance as TgInp_TagCloudInstance,
 } from "./tag-input";
+
+// --- tag-utils ---
+export {
+  createTag as TgUtl_createTag,
+  createTagInput as TgUtl_createTagInput,
+  createTagCloud as TgUtl_createTagCloud,
+  type TagOptions as TgUtl_TagOptions,
+  type TagInputOptions as TgUtl_TagInputOptions,
+  type TagCloudOptions as TgUtl_TagCloudOptions,
+  type TagInputInstance as TgUtl_TagInputInstance,
+  type TagVariant as TgUtl_TagVariant,
+  type TagSize as TgUtl_TagSize,
+  type TagShape as TgUtl_TagShape,
+} from "./tag-utils";
+
+// --- tag ---
+export {
+  TagManager,
+  createTag as Tg_createTag,
+  createTagGroup,
+  type TagOptions as Tg_TagOptions,
+  type TagInstance as Tg_TagInstance,
+  type TagGroupOptions as Tg_TagGroupOptions,
+  type TagGroupInstance as Tg_TagGroupInstance,
+  type TagVariant as Tg_TagVariant,
+  type TagSize as Tg_TagSize,
+  type TagShape as Tg_TagShape,
+} from "./tag";
+
+// --- task-queue ---
+export {
+  TaskQueue,
+  createTaskQueue,
+  type Task as TskQ_Task,
+  type TaskResult as TskQ_TaskResult,
+  type WorkerPoolOptions as TskQ_WorkerPoolOptions,
+  type QueueStats as TskQ_QueueStats,
+  type TaskPriority as TskQ_TaskPriority,
+  type TaskStatus as TskQ_TaskStatus,
+} from "./task-queue";
