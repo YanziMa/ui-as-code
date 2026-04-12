@@ -55352,3 +55352,61 @@ export type {
   ModerationResult,
   ModerationCategory,
 } from "./ai-assistant";
+// --- Analytics Tracker ---
+export {
+  AnalyticsTracker,
+  createAnalyticsTracker,
+} from "./analytics-tracker";
+export type {
+  EventType,
+  AnalyticsEvent,
+  UserIdentity,
+  SessionInfo,
+  FunnelStep,
+  FunnelDefinition,
+  FunnelResult,
+  ABTestVariant,
+  ProviderAdapter,
+  TrackerOptions,
+} from "./analytics-tracker";
+
+// --- Chart Engine ---
+export { createChart } from "./chart-engine";
+export type {
+  ChartType,
+  AxisPosition,
+  DataPoint,
+  BubblePoint,
+  SeriesData,
+  ChartAxis,
+  ChartLegend,
+  ChartTooltip,
+  AnimationConfig,
+  ChartOptions,
+  ChartInstance,
+} from "./chart-engine";
+
+// --- CSV Parse ---
+export {
+  CSVParser,
+  CSVWriter,
+  parseCSV,
+  writeCSV,
+  csvToJson,
+  jsonToCsv,
+  mergeCSV,
+} from "./csv-parse";
+export type {
+  CSVDelimiter,
+  CSVQuoteChar,
+  LineEnding as CSVLineEnding,
+  CSVParserOptions,
+  CSVSchema,
+  CSVColumnSchema,
+  CSVRow,
+  CSVResult,
+  ParseError,
+  CSVMeta,
+  FieldMeta,
+  CSVWriterOptions,
+} from "./csv-parse";
