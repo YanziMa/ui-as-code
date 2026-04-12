@@ -53718,3 +53718,12 @@ export { VennSetType, VennSet, VennOverlap, VennDiagramOptions, VennInstance, cr
 
 // --- vibration ---
 export { VibrationPreset, VibrationPattern, VibrationManagerOptions, VibrationManagerInstance, VibrationManager, createVibrationManager, vibrate, vibratePreset, cancelVibration } from "./vibration";
+
+// --- video-player ---
+export { VideoQuality as Vp_VideoQuality, VideoAspectRatio as Vp_VideoAspectRatio, VideoPlayerOptions as Vp_VideoPlayerOptions, VideoPlayerInstance as Vp_VideoPlayerInstance, createVideoPlayer as Vp_createVideoPlayer, supportsVideoCodec as Vp_supportsVideoCodec, getOptimalResolution as Vp_getOptimalResolution, formatVideoDuration as Vp_formatVideoDuration, estimateBandwidth as Vp_estimateBandwidth } from "./video-player";
+
+// --- video-utils ---
+export { VideoConstraints as Vu_VideoConstraints, RecordingConfig as Vu_RecordingConfig, ThumbnailOptions as Vu_ThumbnailOptions, FrameExtractResult as Vu_FrameExtractResult, VideoDeviceInfo as Vu_VideoDeviceInfo, StreamStats as Vu_StreamStats, PlaybackState as Vu_PlaybackState, enumerateVideoDevices as Vu_enumerateVideoDevices, getCameraStream as Vu_getCameraStream, getScreenCaptureStream as Vu_getScreenCaptureStream, switchCamera as Vu_switchCamera, checkCameraPermission as Vu_checkCameraPermission, VideoRecorder, extractFrame as Vu_extractFrame, extractFrames as Vu_extractFrames, generateThumbnailGrid as Vu_generateThumbnailGrid, captureSnapshotFromStream as Vu_captureSnapshotFromStream, VideoController, applyVideoFilter as Vu_applyVideoFilter, VIDEO_FILTERS as Vu_VIDEO_FILTERS, mirrorVideo as Vu_mirrorVideo, rotateVideoFrame as Vu_rotateVideoFrame, resizeVideoFrame as Vu_resizeVideoFrame, cropVideoFrame as Vu_cropVideoFrame, getStreamResolution as Vu_getStreamResolution, isStreamActive as Vu_isStreamActive, stopStream as Vu_stopStream, cloneStream as Vu_cloneStream, mixStreamsSideBySide as Vu_mixStreamsSideBySide, stopMixedStream as Vu_stopMixedStream, detectVideoFormat as Vu_detectVideoFormat, isVideoMimeType as Vu_isVideoMimeType, formatVideoDuration as Vu_formatVideoDuration, estimateFileSize as Vu_estimateFileSize, estimateOptimalBitrate as Vu_estimateOptimalBitrate } from "./video-utils";
+
+// --- video ---
+export { VideoTrack as Vid_VideoTrack, QualityOption as Vid_QualityOption, Chapter as Vid_Chapter, PlaylistItem as Vid_PlaylistItem, VideoPlayerOptions as Vid_VideoPlayerOptions, VideoPlayerInstance as Vid_VideoPlayerInstance, createVideoPlayer as Vid_createVideoPlayer } from "./video";
