@@ -52579,3 +52579,36 @@ export {
   type TableSize as Tbl_TableSize,
   type TableVariant as Tbl_TableVariant,
 } from "./table";
+
+// --- tabs-lite ---
+export {
+  createTabs as TbsLt_createTabs,
+  type TabItem as TbsLt_TabItem,
+  type TabsOptions as TbsLt_TabsOptions,
+  type TabsInstance as TbsLt_TabsInstance,
+  type TabsVariant as TbsLt_TabsVariant,
+  type TabsDirection as TbsLt_TabsDirection,
+} from "./tabs-lite";
+
+// --- tabs-manager ---
+export {
+  createTabs as TbsMgr_createTabs,
+  TabsNavManager as TbsMgr_TabsNavManager,
+  type TabPanel as TbsMgr_TabPanel,
+  type TabsOptions as TbsMgr_TabsOptions,
+  type TabsInstance as TbsMgr_TabsInstance,
+  type TabVariant as TbsMgr_TabVariant,
+  type TabPosition as TbsMgr_TabPosition,
+  type TabOverflowMode as TbsMgr_TabOverflowMode,
+} from "./tabs-manager";
+
+// --- tabs-nav ---
+export {
+  TabsNavManager,
+  createTabsNav,
+  type TabItem as TbsNav_TabItem,
+  type TabsNavOptions as TbsNav_TabsNavOptions,
+  type TabsNavInstance as TbsNav_TabsNavInstance,
+  type TabVariant as TbsNav_TabVariant,
+  type TabSize as TbsNav_TabSize,
+} from "./tabs-nav";
