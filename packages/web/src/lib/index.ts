@@ -62264,3 +62264,12 @@ export * from "./sparkline-chart";
 
 // --- spectrum-analyzer ---
 export * from "./spectrum-analyzer";
+
+// --- speech-recognition ---
+export * from "./speech-recognition";
+
+// --- speech-synthesis ---
+export * from "./speech-synthesis";
+
+// --- split-button ---
+export * from "./split-button";
