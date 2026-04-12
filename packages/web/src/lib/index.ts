@@ -61778,3 +61778,12 @@ export * from "./framer-motion";
 
 // --- fullscreen ---
 export * from "./fullscreen";
+
+// --- funnel-chart ---
+export * from "./funnel-chart";
+
+// --- fuzzy-finder ---
+export * from "./fuzzy-finder";
+
+// --- gamepad ---
+export * from "./gamepad";
