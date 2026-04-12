@@ -59674,3 +59674,34 @@ export {
   getMemoryInfo,
   getCoresCount,
 } from "./device";
+
+// --- dialog-lite ---
+export type {
+  DialogLiteOptions,
+  DialogLiteInstance,
+} from "./dialog-lite";
+export {
+  DialogLite,
+  createDialogLite,
+} from "./dialog-lite";
+
+// --- dialog-utils ---
+export {
+  showDialog,
+  showAlertDialog,
+  showConfirmDialog,
+  showPromptDialog,
+  closeDialog,
+  closeAllDialogs,
+  setDefaultDialogOptions,
+} from "./dialog-utils";
+
+// --- dialog-v2 ---
+export type {
+  DialogV2Options,
+  DialogV2Instance,
+} from "./dialog-v2";
+export {
+  DialogV2,
+  createDialogV2,
+} from "./dialog-v2";
