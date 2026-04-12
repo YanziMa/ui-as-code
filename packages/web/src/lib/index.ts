@@ -56438,3 +56438,63 @@ export {
   eachSeries,
   series,
 } from "./async-pipeline";
+
+// --- async-queue ---
+export type {
+  AsyncTask,
+  AsyncTaskQueueOptions,
+  AsyncTaskQueueState,
+  AsyncTaskQueueInstance,
+} from "./async-queue";
+export {
+  AsyncTaskQueue,
+  createAsyncTaskQueue,
+} from "./async-queue";
+
+// --- async-utils ---
+export type {
+  RetryOptions as AsyncRetryOptions,
+  PollOptions,
+  ConcurrencyOptions,
+  MemoizeOptions,
+} from "./async-utils";
+export {
+  retryWithBackoff as asyncRetryBackoff,
+  timeout as asyncTimeout,
+  poll,
+  pLimit,
+  pMap,
+  pSeries,
+  pWaterfall,
+  memoize as asyncMemoize,
+  defer,
+  delay,
+  sleep,
+  isPromise,
+  promisify,
+  callbackify,
+  allSettledFiltered,
+  retryUntil,
+  withAbortSignal,
+} from "./async-utils";
+
+// --- async ---
+export type {
+  AsyncRetryConfig,
+  AsyncPollConfig,
+  AsyncMemoizeConfig,
+} from "./async";
+export {
+  asyncRetry,
+  asyncPoll,
+  asyncDebounce,
+  asyncThrottle,
+  asyncMemoize,
+  createTaskPool,
+  waitForAll,
+  waitForAny,
+  waitForCondition,
+  asyncLock,
+  asyncSemaphore,
+  asyncMutex,
+} from "./async";
