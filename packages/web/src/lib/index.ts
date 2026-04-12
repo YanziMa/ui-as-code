@@ -55284,3 +55284,71 @@ export type {
   AROptions,
   ARDetectorResult,
 } from "./ar-code";
+// --- WebSocket Room ---
+export {
+  WebSocketRoomClient,
+  createWSRoom,
+} from "./websocket-room";
+export type {
+  WSState,
+  MessageType,
+  WSMessage,
+  WSRoomConfig,
+  WSPresence,
+  WSConnectionOptions,
+  RoomMessageHandler,
+} from "./websocket-room";
+
+// --- Worker Pool ---
+export {
+  WorkerPool,
+  createWorkerPool,
+} from "./worker-pool";
+export type {
+  WorkerStatus,
+  TaskPriority,
+  WorkerTask,
+  TaskResult,
+  TaskError,
+  WorkerInfo,
+  PoolStatistics,
+  PoolOptions,
+} from "./worker-pool";
+
+// --- AI Assistant ---
+export {
+  estimateTokens,
+  estimateMessagesTokens,
+  truncateToTokens,
+  buildSystemPrompt,
+  buildFewShotPrompt,
+  chainOfThoughtPrompt,
+  extractThinking,
+  ConversationManager,
+  parseJSONFromResponse,
+  extractCodeBlocks,
+  isRefusal,
+  calculateBackoff,
+  withRetry,
+  RateLimiter,
+  moderateContent,
+  generateCompletionId,
+} from "./ai-assistant";
+export type {
+  AIProvider,
+  MessageRole,
+  ChatMessage,
+  ToolDefinition,
+  ToolResult,
+  CompletionOptions,
+  CompletionResponse,
+  ToolCall,
+  TokenUsage,
+  StreamChunk,
+  ConversationOptions,
+  ConversationState,
+  FewShotExample,
+  CodeBlock,
+  ModerationResult,
+  ModerationCategory,
+} from "./ai-assistant";
