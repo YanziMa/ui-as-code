@@ -55675,3 +55675,64 @@ export {
   getAccessibleLabel,
   getAccessibleDescription,
 } from "./a11y-helpers";
+
+// --- a11y-utils ---
+export type {
+  FocusTrapConfig,
+  LiveRegionOptions,
+  A11yContextValue,
+} from "./a11y-utils";
+export {
+  createFocusTrap,
+  destroyFocusTrap,
+  createLiveRegion,
+  announcePolite,
+  announceAssertive,
+  clearLiveRegion,
+  prefersReducedMotion,
+  getFocusableElements,
+  getTabbableElements,
+  focusFirstDescendant,
+  focusLastDescendant,
+  setupKeyboardNav,
+  setupA11yTree,
+  A11yProvider,
+  useA11y,
+} from "./a11y-utils";
+
+// --- a11y-v2 ---
+export type {
+  AnnounceOptions as A11yV2AnnounceOptions,
+  FocusManagerOptions,
+  KeyboardNavigatorConfig,
+  ScreenReaderConfig,
+  ContrastResult,
+} from "./a11y-v2";
+export {
+  createAnnouncerV2,
+  createFocusManagerV2,
+  createKeyboardNavigator,
+  createScreenReaderHelper,
+  checkContrast,
+  generateAccessibleName,
+  setupA11yFeatures,
+} from "./a11y-v2";
+
+// --- a11y ---
+export {
+  announce,
+  setFocus as a11ySetFocus,
+  trapFocus as a11yTrapFocus,
+  escapeFocus,
+  getReducedMotion,
+  contrastRatio,
+  isAccessible,
+  aria,
+  role,
+  label,
+  describedBy,
+  liveRegion,
+  skipToContent,
+  hideVisual,
+  showVisual,
+} from "./a11y";
