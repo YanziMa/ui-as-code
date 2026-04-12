@@ -62012,3 +62012,12 @@ export * from "./parallax-scroller";
 
 // --- password ---
 export * from "./password";
+
+// --- patterns ---
+export * from "./patterns";
+
+// --- perf-monitor ---
+export * from "./perf-monitor";
+
+// --- permissions ---
+export * from "./permissions";
