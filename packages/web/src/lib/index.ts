@@ -59537,3 +59537,46 @@ export {
   fromISODate,
   now,
 } from "./date";
+
+// --- datetime-utils ---
+export {
+  formatDateTime as dtuFormat,
+  parseDateTime as dtuParse,
+  toLocalTime,
+  toUTC,
+  getTimezoneOffset,
+  getTimezoneName,
+  convertTimezone,
+  formatISO8601,
+  parseISO8601,
+  formatRFC2822,
+  getCalendarDate,
+} from "./datetime-utils";
+
+// --- debounce-advanced ---
+export type {
+  AdvancedDebounceOptions,
+  AdvancedThrottleOptions,
+  DebouncedFn as AdvDebouncedFn,
+  ThrottledFn as AdvThrottledFn,
+} from "./debounce-advanced";
+export {
+  advancedDebounce,
+  advancedThrottle,
+  debouncePromise,
+  throttlePromise,
+} from "./debounce-advanced";
+
+// --- debounce-throttle ---
+export type {
+  DebounceOptions as DTDebounceOptions,
+  ThrottleOptions as DTThrottleOptions,
+  DebounceResult,
+  ThrottleResult,
+} from "./debounce-throttle";
+export {
+  debounce as dtDebounce,
+  throttle as dtThrottle,
+  createDebounceManager,
+  createThrottleManager,
+} from "./debounce-throttle";
