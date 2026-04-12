@@ -57919,3 +57919,40 @@ export {
   Clock,
   createClock,
 } from "./clock";
+
+// --- code-block ---
+export type {
+  CodeBlockOptions,
+  CodeBlockTheme,
+  CodeBlockInstance,
+} from "./code-block";
+export {
+  CodeBlock,
+  createCodeBlock,
+} from "./code-block";
+
+// --- code-editor ---
+export type {
+  CodeEditorOptions,
+  CodeEditorTheme,
+  CodeEditorLanguage,
+  CodeEditorInstance,
+} from "./code-editor";
+export {
+  CodeEditor,
+  createCodeEditor,
+} from "./code-editor";
+
+// --- code-highlight ---
+export type {
+  HighlightToken,
+  HighlightLanguage,
+  HighlightOptions,
+  HighlightResult,
+} from "./code-highlight";
+export {
+  highlightCode,
+  registerLanguage,
+  getHighlightedHTML,
+  tokenizeLine,
+} from "./code-highlight";
