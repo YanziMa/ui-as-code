@@ -52419,3 +52419,38 @@ export {
   createSwitch as createSwitchUtil,
 } from "./switch-utils";
 // Aliases: SwUtl_*
+
+// --- switch.ts ---
+export {
+  type SwitchSize as Sw_Size,
+  type SwitchVariant as Sw_Variant,
+  type SwitchOptions as Sw_Options,
+  type SwitchInstance as Sw_Instance,
+  createSwitch as createSwitchBase,
+} from "./switch";
+// Aliases: Sw_*
+
+// --- syntax-highlight.ts ---
+export {
+  type HighlightOptions,
+  type HighlightTheme as SynHlt_Theme,
+  type Token as SynHlt_Token,
+  type TokenType,
+  highlightCode,
+  highlightToHtml,
+  registerLanguage,
+  registerTheme,
+  getAvailableLanguages,
+  getAvailableThemes,
+} from "./syntax-highlight";
+// Aliases: SynHlt_*
+
+// --- syntax-highlighter.ts ---
+export {
+  type HighlightTheme as SynHltr_Theme,
+  type Token as SynHltr_Token,
+  type SyntaxHighlightOptions,
+  type SyntaxHighlightInstance,
+  createSyntaxHighlight,
+} from "./syntax-highlighter";
+// Aliases: SynHltr_*
