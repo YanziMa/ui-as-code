@@ -61832,3 +61832,12 @@ export * from "./i18n-advanced";
 
 // --- i18n-utils ---
 export * from "./i18n-utils";
+
+// --- icon-picker ---
+export * from "./icon-picker";
+
+// --- id-generator ---
+export * from "./id-generator";
+
+// --- image-optimizer ---
+export * from "./image-optimizer";
