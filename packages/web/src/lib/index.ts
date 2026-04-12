@@ -54886,3 +54886,52 @@ export {
   type ActivityState,
   type IdleDetectorOptions,
 } from "./idle-detector";
+
+// --- Share API ---
+export {
+  createShareApi,
+  shareContent,
+  isShareSupported,
+  generateShareTarget,
+  parseShareTargetFromUrl,
+  type ShareData,
+  type ShareOptions,
+  type ShareTargetRegistration,
+  type ShareInstance,
+} from "./share-api";
+
+// --- Gesture Handler ---
+export {
+  GestureHandler,
+  setupGestures,
+  type GestureType,
+  type GestureEvent,
+  type GestureOptions,
+  type GestureHandlerInstance,
+} from "./gesture-handler";
+
+// --- Number Formatter ---
+export {
+  NumberFormatter,
+  formatNumber,
+  formatCompact,
+  formatBytes,
+  formatOrdinal,
+  toRomanNumeral,
+  toScientific,
+  convertUnit,
+  smartConvert,
+  LENGTH_UNITS,
+  WEIGHT_UNITS,
+  VOLUME_UNITS,
+  DATA_UNITS,
+  TEMP_UNITS,
+  type FormatNumberOptions,
+  type CurrencyFormatOptions,
+  type UnitConversion,
+  type CompactStyle,
+  type CurrencyDisplay,
+  type NotationStyle,
+  type RoundingMode,
+  type ConversionTable,
+} from "./number-formatter";
