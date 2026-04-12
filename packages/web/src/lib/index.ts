@@ -61967,3 +61967,12 @@ export * from "./navbar-utils";
 
 // --- notification-utils ---
 export * from "./notification-utils";
+
+// --- number-formatter ---
+export * from "./number-formatter";
+
+// --- number-utils ---
+export * from "./number-utils";
+
+// --- object-utils ---
+export * from "./object-utils";
