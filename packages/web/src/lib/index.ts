@@ -53727,3 +53727,12 @@ export { VideoConstraints as Vu_VideoConstraints, RecordingConfig as Vu_Recordin
 
 // --- video ---
 export { VideoTrack as Vid_VideoTrack, QualityOption as Vid_QualityOption, Chapter as Vid_Chapter, PlaylistItem as Vid_PlaylistItem, VideoPlayerOptions as Vid_VideoPlayerOptions, VideoPlayerInstance as Vid_VideoPlayerInstance, createVideoPlayer as Vid_createVideoPlayer } from "./video";
+
+// --- viewer ---
+export { ViewerMode, ViewerOptions, ViewerInstance, createViewer } from "./viewer";
+
+// --- viewport ---
+export { ViewportSize, ScrollPosition, VisibilityOptions, ViewportObserverInstance, ResizeObserverOptions, getViewportSize, getVisualViewportSize, getDocumentSize, isLandscape, isPortrait, createScrollTracker, getScrollProgress, scrollToElement, scrollToTop, scrollToBottom, observeVisibility, whenVisible, observeResize, requestFullscreen, exitFullscreen, isFullscreen, onFullscreenChange } from "./viewport";
+
+// --- violin-plot ---
+export { ViolinData, ViolinOptions, ViolinInstance, createViolinPlot } from "./violin-plot";
