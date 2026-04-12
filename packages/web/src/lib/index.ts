@@ -54502,3 +54502,41 @@ export {
   orgToHTML,
   orgToMarkdown,
 } from "./org-parser.js";
+
+export {
+  type AudioFormat,
+  type RecordingState,
+  type RecorderOptions,
+  type RecorderError,
+  type RecordingResult,
+  type WaveformData,
+  type DeviceInfo,
+  VoiceRecorder,
+  createVoiceRecorder,
+} from "./voice-recorder.js";
+
+export {
+  type ToolType,
+  type StrokeCap,
+  type StrokeJoin,
+  type Point as WhiteboardPoint,
+  type WhiteboardTool,
+  type DrawnShape,
+  type Transform,
+  type Layer,
+  type WhiteboardOptions,
+  type WhiteboardInstance,
+  createWhiteboard,
+} from "./whiteboard.js";
+
+export {
+  type MarkerType,
+  type MarkerDefinition,
+  type DetectedMarker,
+  type PoseEstimate,
+  type CameraParameters,
+  type AROptions,
+  type ARDetectorResult,
+  ARCodeDetector,
+  createARDetector,
+} from "./ar-code.js";
