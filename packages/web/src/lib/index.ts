@@ -57574,3 +57574,43 @@ export {
   getPathValue,
   setPathValue,
 } from "./change-detector";
+
+// --- changelog ---
+export type {
+  ChangelogEntry,
+  ChangelogOptions,
+  ChangelogInstance,
+} from "./changelog";
+export {
+  Changelog,
+  createChangelog,
+} from "./changelog";
+
+// --- chart-adapter ---
+export type {
+  ChartDataAdapter,
+  ChartDataFormat,
+  NormalizedChartData,
+  AdapterResult,
+} from "./chart-adapter";
+export {
+  createChartAdapter,
+  normalizeChartData,
+  transformToSeries,
+  aggregateData,
+  pivotData,
+} from "./chart-adapter";
+
+// --- chart-base ---
+export type {
+  ChartBaseOptions,
+  ChartBaseDataSet,
+  ChartBaseAxis,
+  ChartBaseLegend,
+  ChartBaseTooltip,
+  ChartBaseInstance,
+} from "./chart-base";
+export {
+  ChartBase,
+  createChartBase,
+} from "./chart-base";
