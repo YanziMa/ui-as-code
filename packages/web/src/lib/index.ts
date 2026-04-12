@@ -61085,3 +61085,12 @@ export * from "./accessibility";
 
 // --- accordion-list ---
 export * from "./accordion-list";
+
+// --- accordion-lite ---
+export * from "./accordion-lite";
+
+// --- accordion-manager ---
+export * from "./accordion-manager";
+
+// --- accordion-utils ---
+export * from "./accordion-utils";
