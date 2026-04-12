@@ -54257,3 +54257,17 @@ export type {
 export {
   createZoomPan,
 } from "./zoom-pan.js";
+
+// --- ai-assistant (Batch 1711) ---
+export {
+  estimateTokens, estimateMessagesTokens, truncateToTokens,
+  buildSystemPrompt, buildFewShotPrompt, chainOfThoughtPrompt, extractThinking,
+  ConversationManager,
+  parseJSONFromResponse, extractCodeBlocks, isRefusal,
+  calculateBackoff, withRetry, RateLimiter,
+  moderateContent, generateCompletionId,
+  type AIProvider, type MessageRole, type ChatMessage, type ToolDefinition,
+  type ToolResult, type CompletionOptions, type CompletionResponse, type ToolCall,
+  type TokenUsage, type StreamChunk, type ConversationOptions, type ConversationState,
+  type ModerationResult, type ModerationCategory,
+} from "./ai-assistant.js";
