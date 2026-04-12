@@ -59347,3 +59347,37 @@ export {
   AdvancedDataTable,
   createAdvancedDataTable,
 } from "./data-table-advanced";
+
+// --- data-table-engine ---
+export type {
+  TableEngineOptions,
+  TableColumn as TEColumn,
+  TableRow as TERow,
+  TableEngineInstance,
+} from "./data-table-engine";
+export {
+  DataTableEngine,
+  createDataTableEngine,
+} from "./data-table-engine";
+
+// --- data-table-v2 ---
+export type {
+  DataTableV2Options,
+  DataTableV2Column,
+  DataTableV2Instance,
+} from "./data-table-v2";
+export {
+  DataTableV2,
+  createDataTableV2,
+} from "./data-table-v2";
+
+// --- data-table ---
+export type {
+  DataTableOptions,
+  DataTableColumn,
+  DataTableInstance,
+} from "./data-table";
+export {
+  DataTable,
+  createDataTable,
+} from "./data-table";
