@@ -54104,3 +54104,46 @@ export type {
 export {
   createWizard,
 } from "./wizard-stepper.js";
+
+// --- wizard (Batch 1707) ---
+export type {
+  WizardStepStatus,
+} from "./wizard.js";
+export type {
+  WizardStep as Wiz_WizardStep,
+  WizardOptions as Wiz_WizardOptions,
+  WizardInstance as Wiz_WizardInstance,
+} from "./wizard.js";
+export {
+  WizardManager,
+  createWizard as Wiz_createWizard2,
+} from "./wizard.js";
+// --- word-cloud (Batch 1707) ---
+export type {
+  WordCloudItem,
+  WordCloudShape,
+  WordCloudSpiral,
+} from "./word-cloud.js";
+export type {
+  WordCloudOptions,
+  WordCloudInstance,
+} from "./word-cloud.js";
+export {
+  createWordCloud,
+} from "./word-cloud.js";
+// --- worker-utils (Batch 1707) ---
+export type {
+  WorkerMessage as Wku_WorkerMessage,
+  WorkerResponse as Wku_WorkerResponse,
+  WorkerPoolOptions as Wku_WorkerPoolOptions,
+  PooledTask as Wku_PooledTask,
+} from "./worker-utils.js";
+export {
+  createInlineWorker as Wku_createInlineWorker,
+  createInlineModuleWorker as Wku_createInlineModuleWorker,
+  WorkerChannel,
+  WorkerPool as Wku_WorkerPool,
+  isWorkerAvailable as Wku_isWorkerAvailable,
+  isWorkerContext as Wku_isWorkerContext,
+  getWorkerConcurrency as Wku_getWorkerConcurrency,
+} from "./worker-utils.js";
