@@ -57265,3 +57265,46 @@ export {
   Button as ButtonComponent,
   createButtonComponent,
 } from "./button";
+
+// --- cache-manager ---
+export type {
+  CacheManagerOptions,
+  CacheEntry as CacheMgrEntry,
+  CacheStats,
+  CacheAdapter,
+} from "./cache-manager";
+export {
+  CacheManager,
+  createCacheManager,
+} from "./cache-manager";
+
+// --- cache-utils ---
+export type {
+  LRUCacheOptions,
+  TTLCacheOptions,
+  AsyncCacheOptions,
+} from "./cache-utils";
+export {
+  LRUCache,
+  TTLCache,
+  AsyncCache,
+  createMemoizedFn,
+  createDebouncedCache,
+  invalidateCache,
+  clearAllCaches,
+} from "./cache-utils";
+
+// --- cache ---
+export type {
+  CacheOptions as SimpleCacheOptions,
+  CacheEntry as SimpleCacheEntry,
+} from "./cache";
+export {
+  Cache as SimpleCache,
+  createSimpleCache,
+  getFromCache,
+  setToCache,
+  removeFromCache,
+  hasInCache,
+  clearSimpleCache,
+} from "./cache";
