@@ -58251,3 +58251,66 @@ export {
   ColorSwatches,
   createColorSwatches,
 } from "./color-swatches";
+
+// --- color-system ---
+export type {
+  ColorSystemColor,
+  ColorSystemPalette,
+  ColorSystemHarmony,
+} from "./color-system";
+export {
+  hexToHsl,
+  hslToHex,
+  rgbToHsl as colorSysRgbToHsl,
+  hslToRgb as colorSysHslToRgb,
+  parseColor as colorSysParseColor,
+  stringifyColor,
+  mixColors as colorSysMixColors,
+  lighten as colorSysLighten,
+  darken as colorSysDarken,
+  saturate as colorSysSaturate,
+  desaturate as colorSysDesaturate,
+  rotateHue as colorSysRotateHue,
+  getContrast as colorSysGetContrast,
+  generatePalette as colorSysGeneratePalette,
+  getComplementary,
+  getAnalogous,
+  getTriadic,
+  getSplitComplementary,
+  getColorTemperature,
+  adjustTemperature,
+} from "./color-system";
+
+// --- color-thief ---
+export type {
+  ColorThiefResult,
+  ColorThiefOptions,
+} from "./color-thief";
+export {
+  getColorThief,
+  extractDominantColor,
+  extractPalette,
+  extractColorStats,
+  getImageColors,
+} from "./color-thief";
+
+// --- color-utils ---
+export {
+  parseColor as colorUtilsParseColor,
+  toHex,
+  toRgb,
+  toHsl,
+  toHsv,
+  blend,
+  opacity,
+  invert,
+  grayscale,
+  sepia,
+  isDark,
+  isLight,
+  randomColor,
+  generateScale,
+  getLuminance,
+  contrastRatio as colorUtilsContrastRatio,
+  ensureContrast,
+} from "./color-utils";
