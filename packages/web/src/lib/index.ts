@@ -53802,3 +53802,35 @@ export {
   type VirtualTableOptions,
   type VirtualTableInstance,
 } from "./virtual-table.js";
+
+// --- virtualization ---
+export {
+  calculateVisibleItems as Virt_calculateVisibleItems,
+  DynamicVirtualizer as Virt_DynamicVirtualizer,
+  calculateGridCells as Virt_calculateGridCells,
+  type VirtualItem as Virt_VirtualItem,
+  type VirtualizerOptions as Virt_VirtualizerOptions,
+  type VirtualizerResult as Virt_VirtualizerResult,
+  type GridVirtualizerOptions as Virt_GridVirtualizerOptions,
+  type GridVirtualizerResult as Virt_GridVirtualizerResult,
+} from "./virtualization.js";
+
+// --- virtualized-list ---
+export {
+  VirtualList as Vl_VirtualList,
+  type VirtualItem as Vl_VirtualItem,
+  type VirtualListConfig as Vl_VirtualListConfig,
+  type VisibleRange as Vl_VisibleRange,
+  type RenderState as Vl_RenderState,
+  type ScrollPosition as Vl_ScrollPosition,
+  type VirtualListMetrics as Vl_VirtualListMetrics,
+} from "./virtualized-list.js";
+
+// --- waterfall-chart ---
+export {
+  createWaterfallChart,
+  type WaterfallDataPoint,
+  type WaterfallBarStyle,
+  type WaterfallChartOptions,
+  type WaterfallChartInstance,
+} from "./waterfall-chart.js";
