@@ -51853,3 +51853,48 @@ export {
   StkUtl2_createSticky as createSticky,
   StkUtl2_createStickyStack as createStickyStack,
 } from "./sticky-utils";
+
+// --- stopwatch ---
+export type {
+  Stw_LapRecord as LapRecord,
+  Stw_StopwatchOptions as StopwatchOptions,
+  Stw_StopwatchInstance as StopwatchInstance,
+} from "./stopwatch";
+export {
+  Stw_createStopwatch as createStopwatch,
+} from "./stopwatch";
+
+// --- storage-helper ---
+export type {
+  StgHlp_StorageOptions as StorageOptions,
+  StgHlp_StorageEntry as StorageEntry,
+  StgHlp_StorageStats as StorageStats,
+  StgHlp_StorageMigration as StorageMigration,
+  StgHlp_CrossTabMessage as CrossTabMessage,
+  StgHlp_StorageManagerInstance as StorageManagerInstance,
+} from "./storage-helper";
+export {
+  StgHlp_StorageHelper as StorageHelper,
+  StgHlp_createStorageHelper as createStorageHelper,
+  StgHlp_isLocalStorageAvailable as isLocalStorageAvailable,
+  StgHlp_isSessionStorageAvailable as isSessionStorageAvailable,
+  StgHlp_storageGet as storageGet,
+  StgHlp_storageSet as storageSet,
+  StgHlp_storageRemove as storageRemove,
+  StgHlp_storageRemainingSpace as storageRemainingSpace,
+  StgHlp_setCookie as setCookie,
+  StgHlp_getCookie as getCookie,
+  StgHlp_deleteCookie as deleteCookie,
+} from "./storage-helper";
+
+// --- storage-manager ---
+export type {
+  StgMgr_StorageBackend as StorageBackend,
+  StgMgr_StorageEntry2 as StorageEntry,
+  StgMgr_StorageOptions2 as StorageOptions,
+  StgMgr_StorageStats2 as StorageStats,
+  StgMgr_MigrationPlan as MigrationPlan,
+} from "./storage-manager";
+export {
+  StgMgr_StorageManager as StorageManager,
+} from "./storage-manager";
