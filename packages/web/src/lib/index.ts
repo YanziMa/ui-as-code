@@ -55239,3 +55239,48 @@ export type {
   SyncMessageType,
   ActivityEvent,
 } from "./realtime-collab";
+// --- Voice Recorder ---
+export {
+  VoiceRecorder,
+  createVoiceRecorder,
+} from "./voice-recorder";
+export type {
+  AudioFormat,
+  RecordingState,
+  RecorderOptions,
+  RecorderError,
+  RecordingResult,
+  WaveformData,
+  DeviceInfo,
+} from "./voice-recorder";
+
+// --- Whiteboard ---
+export { createWhiteboard } from "./whiteboard";
+export type {
+  ToolType,
+  StrokeCap,
+  StrokeJoin,
+  WhiteboardTool,
+  StrokePoint,
+  DrawnShape,
+  Transform,
+  Layer,
+  WhiteboardOptions,
+  WhiteboardInstance,
+} from "./whiteboard";
+
+// --- AR Code ---
+export {
+  ARCodeDetector,
+  createARDetector,
+} from "./ar-code";
+export type {
+  MarkerType,
+  MarkerDefinition,
+  DetectedMarker,
+  Point as ARPoint,
+  PoseEstimate,
+  CameraParameters,
+  AROptions,
+  ARDetectorResult,
+} from "./ar-code";
