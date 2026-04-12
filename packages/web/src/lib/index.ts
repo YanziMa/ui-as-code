@@ -53709,3 +53709,12 @@ export { ValidationError as Vdu_ValidationError, ValidationResult as Vdu_Validat
 
 // --- validator ---
 export { ValidationError as Vdr_ValidationError, ValidationResult as Vdr_ValidationResult, ValidationRule as Vdr_ValidationRule, ValidationContext as Vdr_ValidationContext, FieldSchema as Vdr_FieldSchema, SchemaDefinition as Vdr_SchemaDefinition, required as Vdr_required, minLength as Vdr_minLength, maxLength as Vdr_maxLength, minValue as Vdr_minValue, maxValue as Vdr_maxValue, matches as Vdr_matches, isEmail as Vdr_isEmail, isUrl as Vdr_isUrl, oneOf as Vdr_oneOf, custom as Vdr_custom, when as Vdr_when, SchemaValidator, validateField as Vdr_validateField, isValid as Vdr_isValid, firstError as Vdr_firstError, usernameRules as Vdr_usernameRules, passwordRules as Vdr_passwordRules, phoneRules as Vdr_phoneRules, creditCardRules as Vdr_creditCardRules, ipRules as Vdr_ipRules, formatValidationErrors as Vdr_formatValidationErrors, groupErrorsByField as Vdr_groupErrorsByField, errorMessages as Vdr_errorMessages, createDebouncedValidator as Vdr_createDebouncedValidator, combineAsyncValidators as Vdr_combineAsyncValidators } from "./validator";
+
+// --- validators ---
+export { isValidEmail as Vs_isValidEmail, isValidUrl as Vs_isValidUrl, isValidUuid as Vs_isValidUuid, sanitizeHtml as Vs_sanitizeHtml, isBlank as Vs_isBlank, clamp as Vs_clamp, slugify as Vs_slugify } from "./validators";
+
+// --- venn-diagram ---
+export { VennSetType, VennSet, VennOverlap, VennDiagramOptions, VennInstance, createVennDiagram } from "./venn-diagram";
+
+// --- vibration ---
+export { VibrationPreset, VibrationPattern, VibrationManagerOptions, VibrationManagerInstance, VibrationManager, createVibrationManager, vibrate, vibratePreset, cancelVibration } from "./vibration";
