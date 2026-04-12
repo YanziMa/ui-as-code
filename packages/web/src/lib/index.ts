@@ -60978,3 +60978,31 @@ export {
   FileSystemV2,
   createFileSystemV2,
 } from "./file-system-v2";
+
+// --- file-system ---
+export type {
+  FileSystemCoreOptions,
+  FSCoreInstance,
+} from "./file-system";
+export {
+  FileSystemCore,
+  createFileSystemCore,
+} from "./file-system";
+
+// --- file-tree-utils ---
+export type {
+  FileTreeOptions,
+  FileTreeNode,
+  TreeSelection,
+  FileTreeInstance,
+} from "./file-tree-utils";
+export {
+  createFileTree,
+  expandNode,
+  collapseNode,
+  selectNode,
+  searchTree,
+} from "./file-tree-utils";
+
+// --- file-upload (already exported, skip) ---
+// file-upload was already exported in a prior batch
