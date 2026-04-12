@@ -61184,3 +61184,12 @@ export * from "./backdrop";
 
 // --- badge ---
 export * from "./badge";
+
+// --- breadcrumb ---
+export * from "./breadcrumb";
+
+// --- breadcrumb-utils ---
+export * from "./breadcrumb-utils";
+
+// --- breakpoint-utils ---
+export * from "./breakpoint-utils";
