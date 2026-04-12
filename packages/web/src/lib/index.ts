@@ -59133,3 +59133,38 @@ export {
   CSSInJSEngine,
   createCSSInJSEngine,
 } from "./css-in-js";
+
+// --- css-injs ---
+export {
+  injectCSS as cssinjsInject,
+  removeCSS as cssinjsRemove,
+  createStylesheet,
+  addCSSRule,
+  getStyleSheet,
+  clearStylesheet,
+} from "./css-injs";
+
+// --- css-modules-helper ---
+export type {
+  CSSModulesOptions,
+  ClassMapping,
+} from "./css-modules-helper";
+export {
+  generateScopedName,
+  composeClasses,
+  parseModuleMapping,
+  createClassMap,
+} from "./css-modules-helper";
+
+// --- css-reset ---
+export type {
+  CSSResetVariant,
+  CSSResetOptions,
+} from "./css-reset";
+export {
+  getCSSReset,
+  applyCSSReset,
+  getNormalizeCSS,
+  getModernResetCSS,
+  getPrintStyles,
+} from "./css-reset";
